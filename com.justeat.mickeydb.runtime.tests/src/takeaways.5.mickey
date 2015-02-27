@@ -1,0 +1,84 @@
+database com.justeat.TakeawaysDB
+
+migration 15 {
+	alter table restaurants add column rating_average real;
+}
+
+migration 16 {
+	alter table restaurants add column show_smiley boolean;
+	alter table restaurants add column smiley_date integer;
+	alter table restaurants add column smiley_result integer;
+	alter table restaurants add column smiley_elite boolean;
+	alter table restaurants add column smiley_url text;
+}
+
+migration 17 {
+	alter table cuisine_types add column count integer;
+}
+
+migration 18 {
+   create table sys_events (
+       _id integer primary key autoincrement,
+       session_id integer,
+       event_type integer,
+       content text,
+       timestamp integer
+   );
+}
+
+migration 19 {
+
+    create table restaurant_deals (
+        _id integer primary key autoincrement,
+        restaurant_jeid integer,
+        display_text text,
+        deal_type text,
+        discount_percent real,
+        qualifying_price real
+    );
+
+    alter table restaurants add column
+    deal_display_rank integer;
+
+    alter table restaurants add column
+    has_deals boolean;
+    
+    alter table restaurants add column max_discount_percent integer;
+}
+
+migration 20 {
+    /*
+     * Rebuild menu table since we have new/redundant columns
+     */
+    drop table menus;
+    
+    create table menus (
+        _id integer primary key autoincrement,
+        jeid integer,
+        restaurant_jeid integer,
+        description text,
+        service_type text,
+        menu_type text,
+        delivery_cost_above_threshold real,
+        delivery_cost_below_threshold real,
+        delivery_threshold_order_amount real,
+        unique (jeid) on conflict replace
+    );
+}
+
+migration 21 {
+    /*
+     * Rebuild categories table since we have new/redundant columns
+     */
+    drop table product_categories;
+    
+    create table product_categories (
+        _id integer primary key autoincrement,
+        jeid integer,
+        restaurant_jeid integer,
+        menu_jeid integer,
+        name text,
+        description text,
+        special_offer text
+    );
+}

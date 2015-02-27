@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="com.justeat.mickeydb.sdk"
+	label="MickeyLang SDK Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="com.justeat.mickeydb"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="com.justeat.mickeydb.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>

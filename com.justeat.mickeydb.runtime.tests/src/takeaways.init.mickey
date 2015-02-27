@@ -1,0 +1,454 @@
+database com.justeat.TakeawaysDB
+
+action AccessoriesSelected /accessories_selected
+
+create temp view products_in_basket as
+    select 
+           c._id as _id,
+           c.restaurant_jeid as restaurant_jeid,
+           c.menu_jeid as menu_jeid,
+           c.jeid as category_jeid,
+           null as product_jeid,
+           null as group_key,
+           c.name as name,
+           c.description as description,
+           null as price,
+           null as is_complex,
+           null as has_synonyms,
+           null as contains_nuts,
+           null as is_spicy,
+           null as is_vegetarian, 
+           cast(0 as integer) as quantity,
+           c.special_offer as special_offer,
+           null as synonyms,
+           null as all_descriptions,
+           null as result, 
+           null as status, 
+           c.sort_key || "-" || c.restaurant_jeid || "--" || c.jeid as menu_sort_key,
+           cast(0 as integer) as descriptor
+      from product_categories as c
+    union
+    select p._id as _id,
+           p.restaurant_jeid as restaurant_jeid,
+           p.menu_jeid as menu_jeid,
+           p.category_jeid as category_jeid,
+           p.jeid as product_jeid,
+           p.group_key as group_key,
+           p.name as name,
+           max(p.description) as description,
+           min(p.price) as price,
+           p.is_complex as is_complex,
+           count(p._id) as has_synonyms,
+           max(p.contains_nuts) as contains_nuts,
+           max(p.is_spicy) as is_spicy,
+           max(p.is_vegetarian) as is_vegetarian, 
+           max(cast((
+             select count(*) from basket_items as b
+             where 
+                b.restaurant_jeid = p.restaurant_jeid and
+                b.category_jeid = p.category_jeid and
+                b.menu_jeid = p.menu_jeid and
+                b.product_jeid = p.jeid and
+                b.status != 3
+            ) as integer)) as quantity,
+           null as special_offer,
+           group_concat(p.synonym) as synonyms,
+           group_concat(p.description) as all_descriptions,
+           null as result,
+           null as status,
+           c.sort_key || "-" || p.menu_sort_key as menu_sort_key,
+           cast(1 as integer) as descriptor
+      from products as p
+      left outer join product_categories as c
+           on p.category_jeid = c.jeid and p.menu_jeid = c.menu_jeid
+      group by p.restaurant_jeid, p.menu_jeid, p.category_jeid, group_key
+    union
+    select b._id as _id,
+           b.restaurant_jeid as restaurant_jeid,
+           b.menu_jeid as menu_jeid,
+           b.category_jeid as category_jeid,
+           b.product_jeid as product_jeid,
+           b.group_key as group_key,
+           b.product_name as name,
+           b.description as description,
+           b.total_price as price,
+           b.is_complex as is_complex,
+           null as has_synonyms,
+           null as contains_nuts,
+           null as is_spicy,
+           null as is_vegetarian,
+           cast(1 as integer) as quantity,
+           null as special_offer,
+           (select group_concat(p.synonym) 
+                from products as p
+                where b.restaurant_jeid = restaurant_jeid and
+                b.menu_jeid = menu_jeid and
+                b.group_key = group_key
+                group by group_key) as synonyms,
+           (select group_concat(description) 
+                from products
+                where b.restaurant_jeid = restaurant_jeid and
+                b.menu_jeid = menu_jeid and
+                b.group_key = group_key
+                group by group_key) as all_descriptions,
+           b.result as result,
+           b.status as status,
+           c.sort_key || "-" || b.menu_sort_key as menu_sort_key,
+           cast(2 as integer) as descriptor
+      from basket_items as b
+      left outer join product_categories as c
+           on b.category_jeid = c.jeid and b.menu_jeid = c.menu_jeid
+     where b.is_complex = 1
+         and b.status != 3
+    union
+    select b._id as _id,
+           b.restaurant_jeid as restaurant_jeid,
+           b.menu_jeid as menu_jeid,
+           b.category_jeid as category_jeid,
+           b.product_jeid as product_jeid,
+           b.group_key as group_key,
+           b.product_name as name,
+           b.description as description,
+           sum( b.total_price ) as price,
+           b.is_complex as is_complex,
+           null as has_synonyms,
+           null as contains_nuts,
+           null as is_spicy,
+           null as is_vegetarian,
+           cast(count( b._id ) as integer) as quantity,
+           null as special_offer,
+           (select group_concat(p.synonym) 
+                from products as p
+                where b.restaurant_jeid = restaurant_jeid and
+                b.menu_jeid = menu_jeid and
+                b.group_key = group_key
+                group by group_key) as synonyms,
+           (select group_concat(description) 
+                from products
+                where b.restaurant_jeid = restaurant_jeid and
+                b.menu_jeid = menu_jeid and
+                b.group_key = group_key
+                group by group_key) as all_descriptions,
+           b.result as result,
+           b.status as status,
+           c.sort_key || "-" || b.menu_sort_key as menu_sort_key,
+           cast(3 as integer) as descriptor
+      from basket_items as b
+      left outer join product_categories as c
+           on b.category_jeid = c.jeid and b.menu_jeid = c.menu_jeid
+     where is_complex = 0
+         and b.status != 3
+     group by b.product_jeid
+     order by menu_sort_key
+
+create temp view product_categories_with_count as
+    select 
+        pc._id as _id,
+        pc.jeid as jeid,
+        pc.restaurant_jeid as restaurant_jeid,
+        pc.menu_jeid as menu_jeid,
+        pc.name as name,
+        pc.special_offer as special_offer,
+        pc.description as description,
+        (
+             select count(*) from basket_items as b
+             where 
+                b.restaurant_jeid = pc.restaurant_jeid and
+                b.category_jeid = pc.jeid and
+                b.menu_jeid = pc.menu_jeid and
+                b.status != 3
+        ) as quantity_in_basket,
+        pc.sort_key as sort_key
+    from product_categories as pc
+    order by sort_key
+
+create temp view product_accessory_types as
+	select 
+		pa.restaurant_jeid as restaurant_jeid, 
+		pa.product_jeid as product_jeid, 
+		pa.required as required, 
+		pa.selection_id as selection_id
+	from product_accessories as pa
+	group by restaurant_jeid, product_jeid, required, selection_id
+	order by required desc, selection_id asc
+		
+create temp view order_summary as
+   select 
+         bi._id as _id,
+         bi.product_jeid as product_jeid,
+         bi.product_name as item_name,
+         bi.product_price as unit_price,
+         count(bi._id) as quantity,
+         bi.menu_sort_key || '-' || bi._id as sort_key,
+         1 as descriptor,
+         bi.is_tips as is_tips,
+         bi.result as result
+    from basket_items as bi
+    where
+        bi.is_complex=0 and bi.status !=3
+    group by product_jeid
+    union
+    select 
+         bi._id as _id,
+         bi.product_jeid as product_jeid,
+         bi.product_name || ' ' || bi.product_synonym as item_name,
+         bi.product_price as unit_price,
+         count(bi._id) as quantity,
+         bi.menu_sort_key || '-' || bi._id || '-1' as sort_key,
+         1 as descriptor,
+         bi.is_tips as is_tips,
+         bi.result as result
+    from basket_items as bi
+    where
+        bi.is_complex=1 and bi.status !=3
+    group by product_jeid
+    having bi.product_has_accessories=0 and bi.product_has_combo_options=0
+    union
+    select 
+         bi._id as _id,
+         bi.product_jeid as product_jeid,
+         bi.product_name || ' ' ||  bi.product_synonym as item_name,
+         bi.product_price as unit_price,
+         1 as quantity,
+         bi.menu_sort_key || '-' || bi._id || '-1' as sort_key,
+         1 as descriptor,
+         bi.is_tips as is_tips,
+         bi.result as result
+    from basket_items as bi
+    where
+        bi.is_complex=1 and bi.product_has_accessories > 0 or bi.product_has_combo_options > 0 and bi.status !=3
+    union
+    select 
+         null as _id,
+         null as product_jeid,
+         a.accessory_name as item_name,
+         a.unit_price as unit_price,
+         a.quantity as quantity,
+         bi.menu_sort_key || '-' || bi._id || '-2-' || a.accessory_required as sort_key,
+         2 as descriptor,
+         bi.is_tips as is_tips,
+         bi.result as result
+    from basket_item_accessories as a
+    left join basket_items as bi
+        on bi._id = a.basket_item_id
+    where
+        a.mealpart_jeid = 0 and bi.status !=3 and a.quantity > 0
+    union
+    select 
+         null as _id,
+         null as product_jeid,
+         a.mealpart_name as item_name,
+         null as unit_price,
+         null as quantity,
+         bi.menu_sort_key || '-' || bi._id || '-3-' || a.mealpart_jeid || '-' || a.mealpart_group_jeid as sort_key,
+         3 as descriptor,
+         bi.is_tips as is_tips,
+         bi.result as result
+    from basket_item_mealparts as a
+    left join basket_items as bi
+        on bi._id = a.basket_item_id
+    where bi.status !=3
+    union
+    select 
+         null as _id,
+         null as product_jeid,
+         a.accessory_name as item_name,
+         a.unit_price as unit_price,
+         a.quantity as quantity,
+         bi.menu_sort_key || '-' || bi._id || '-3-' || a.mealpart_jeid || '-' || a.mealpart_group_jeid || '-' || (1-a.accessory_required) as sort_key,
+         4 as descriptor,
+         bi.is_tips as is_tips,
+         bi.result as result
+    from basket_item_accessories as a
+    left join basket_items as bi
+        on bi._id = a.basket_item_id
+    where
+        a.mealpart_jeid > 1 and bi.status !=3 and a.quantity > 0
+	order by sort_key
+	
+create temp view order_history_summary as
+   select 
+         bi._id as _id,
+         bi.basket_jeid as basket_jeid,
+         bi.product_jeid as product_jeid,
+         bi.product_name as item_name,
+         bi.product_price as unit_price,
+         count(bi._id) as quantity,
+         bi.menu_sort_key || '-' || bi.basket_item_jeid as sort_key,
+         1 as descriptor
+    from order_history_items as bi
+    where
+        bi.is_complex=0
+    group by basket_jeid, product_jeid
+    union
+    select 
+         bi._id as _id,
+         bi.basket_jeid as basket_jeid,
+         bi.product_jeid as product_jeid,
+         bi.product_name || ' ' || bi.product_synonym as item_name,
+         bi.product_price as unit_price,
+         count(bi._id) as quantity,
+         bi.menu_sort_key || '-' || bi.basket_item_jeid || '-1' as sort_key,
+         1 as descriptor
+    from order_history_items as bi
+    where
+        bi.is_complex=1
+    group by basket_jeid, product_jeid
+    having bi.product_has_accessories=0 and bi.product_has_combo_options=0
+    union
+    select 
+         bi._id as _id,
+         bi.basket_jeid as basket_jeid,
+         bi.product_jeid as product_jeid,
+         bi.product_name || ' ' ||  bi.product_synonym as item_name,
+         bi.product_price as unit_price,
+         1 as quantity,
+         bi.menu_sort_key || '-' || bi.basket_item_jeid || '-1' as sort_key,
+         1 as descriptor
+    from order_history_items as bi
+    where
+        bi.is_complex=1 and bi.product_has_accessories > 0 or bi.product_has_combo_options > 0
+    union
+    select 
+         null as _id,
+         a.basket_jeid as basket_jeid,
+         null as product_jeid,
+         a.accessory_name as item_name,
+         a.unit_price as unit_price,
+         a.quantity as quantity,
+         bi.menu_sort_key || '-' || bi.basket_item_jeid || '-2-' || a.accessory_required as sort_key,
+         2 as descriptor
+    from order_history_item_accessories as a
+    left join order_history_items as bi
+        on bi.basket_item_jeid = a.basket_item_jeid
+    where
+        a.mealpart_jeid = 0 and a.quantity > 0
+    union
+    select 
+         null as _id,
+         a.basket_jeid as basket_jeid,
+         null as product_jeid,
+         a.mealpart_name as item_name,
+         null as unit_price,
+         null as quantity,
+         bi.menu_sort_key || '-' || bi.basket_item_jeid || '-3-' || a.mealpart_jeid || '-' || a.mealpart_group_jeid as sort_key,
+         3 as descriptor
+    from order_history_item_mealparts as a
+    left join order_history_items as bi
+        on bi.basket_item_jeid = a.basket_item_jeid
+    union
+    select 
+         null as _id,
+         a.basket_jeid as basket_jeid,
+         null as product_jeid,
+         a.accessory_name as item_name,
+         a.unit_price as unit_price,
+         a.quantity as quantity,
+         bi.menu_sort_key || '-' || bi.basket_item_jeid || '-3-' || a.mealpart_jeid || '-' || a.mealpart_group_jeid || '-' || (1-a.accessory_required) as sort_key,
+         4 as descriptor
+    from order_history_item_accessories as a
+    left join order_history_items as bi
+        on bi.basket_item_jeid = a.basket_item_jeid
+    where
+        a.mealpart_jeid > 1 and a.quantity > 0
+	order by sort_key
+	
+create temp view restaurants_and_basket as
+	select 
+		r._id as _id,
+		r.jeid as jeid,
+		r.name as name,
+		r.unique_name as unique_name,
+		r.description as description,
+		r.address as address,
+		r.city as city,
+		r.postcode as postcode,
+		r.latitude as latitude,
+		r.longitude as longitude,
+		r.logo_standard_res_url as logo_standard_res_url,
+		r.cuisines as cuisines,
+		r.deals as deals,
+		r.max_discount_percent as max_discount,
+		r.default_display_rank as default_display_rank,
+		r.drive_distance as drive_distance,
+		r.is_halal as is_halal,
+		r.is_new as is_new,
+		r.is_open_now as is_open_now,
+		r.is_open_now_for_collection as is_open_now_for_collection,
+		r.is_open_now_for_delivery as is_open_now_for_delivery,
+		r.is_sponsored as is_sponsored,
+		r.is_temporarily_offline as is_temporarily_offline,
+		r.rating as rating,
+		r.num_ratings as num_ratings,
+		r.opening_time as opening_time,
+		r.reason_why_temporarily_offline as reason_why_temporarily_offline,
+		r.search_query as search_query,
+		r.has_deals as has_deals,
+		r.deal_display_rank as deal_display_rank,
+		b._id as basket_id,
+		b.basket_jeid as basket_jeid,
+		b.total as basket_total,
+		b.sub_total as basket_sub_total,
+		b.discount as basket_discount,
+		b.multibuy_discount as basket_multibuy_discount,
+		b.delivery_charge as basket_delivery_charge,
+		b.orderable as basket_orderable,
+		cast( 
+			(select 
+		    count(bi._id) 
+		    from basket_items  as bi
+		    where bi.basket_id=b._id and bi.status !=3
+		    ) 
+		as integer) as basket_item_count,
+		rv._id as recently_viewed_id,
+		rv.last_accessed as recently_viewed_last_accessed,
+		rv.query as recently_viewed_query
+	from restaurants as r
+	left join baskets as b
+	on b.restaurant_jeid = r.jeid
+	left join recently_viewed_restaurants as rv
+	on rv.restaurant_jeid = r.jeid
+	
+create temp view products_in_categories as
+    select
+           c._id as _id,
+           c.restaurant_jeid as restaurant_jeid,
+           c.menu_jeid as menu_jeid,
+           c.jeid as category_jeid,
+           null as product_jeid,
+           null as group_key,
+           c.name as name,
+           c.description as description,
+           null as price,
+           null as is_complex,
+           null as has_synonyms,
+           null as contains_nuts,
+           null as is_spicy,
+           null as is_vegetarian, 
+           null as quantity,
+           c._id as sort_key,
+           0 as descriptor
+      from product_categories as c
+    union
+    select p._id as _id,
+           p.restaurant_jeid as restaurant_jeid,
+           p.menu_jeid as menu_jeid,
+           p.category_jeid as category_jeid,
+           p.jeid as product_jeid,
+           p.group_key as group_key,
+           p.name as name,
+           max(p.description) as description,
+           min(p.price) as price,
+           p.is_complex as is_complex,
+           count(p._id) as has_synonyms,
+           max(p.contains_nuts) as contains_nuts,
+           max(p.is_spicy) as is_spicy,
+           max(p.is_vegetarian) as is_vegetarian, 
+           cast(sum(p.quantity_in_basket) as integer) as quantity,
+           pc._id as sort_key,
+           1 as descriptor
+      from products as p
+      left outer join product_categories as pc
+      on p.category_jeid = pc.jeid
+      group by p.restaurant_jeid, p.menu_jeid, p.category_jeid, group_key
+     order by sort_key	

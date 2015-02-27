@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.justeat.mickeydb/src-gen" editDirectory="/com.justeat.mickeydb.edit/src"
+    editorDirectory="/com.justeat.mickeydb.editor/src" modelPluginID="com.justeat.mickeydb"
+    forceOverwrite="true" modelName="MickeyLang" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="com.justeat.mickeydb.edit"
+    editorPluginID="com.justeat.mickeydb.editor" runtimeVersion="2.10">
+  <genPackages prefix="MickeyLang" basePackage="com.justeat.mickeydb" disposableProviderFactory="true"
+      fileExtensions="mickey" ecorePackage="MickeyLang.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MickeyLang.ecore#//CompoundOperator">
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//CompoundOperator/unionall"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//CompoundOperator/union"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//CompoundOperator/intersect"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//CompoundOperator/except"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MickeyLang.ecore#//SqliteDataType">
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//SqliteDataType/text"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//SqliteDataType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//SqliteDataType/real"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//SqliteDataType/blob"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//SqliteDataType/none"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//SqliteDataType/numeric"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MickeyLang.ecore#//ColumnType">
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ColumnType/text"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ColumnType/integer"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ColumnType/real"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ColumnType/blob"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ColumnType/boolean"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MickeyLang.ecore#//ConflictResolution">
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ConflictResolution/rollback"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ConflictResolution/abort"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ConflictResolution/fail"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ConflictResolution/ignore"/>
+      <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ConflictResolution/replace"/>
+    </genEnums>
+    <genClasses ecoreClass="MickeyLang.ecore#//Model">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Model/databaseName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Model/blocks"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//MickeyBlock"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Function/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Function/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Function/statements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Function/all"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Function/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ActionStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ActionStatement/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ActionStatement/uri"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//FunctionArg">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//FunctionArg/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//FunctionArg/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ContentUri">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUri/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ContentUri/segments"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ContentUriSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUriSegment/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//MigrationBlock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//MigrationBlock/version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MigrationBlock/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//Expression"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//Case">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Case/whenExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Case/thenExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SelectStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectStatement/core"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectStatement/orderby"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectStatement/limit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectStatement/limitOffset"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//OrderingTermList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//OrderingTermList/orderingTerms"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SelectCoreExpression"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//SelectList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectList/resultColumns"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//WhereExpressions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//WhereExpressions/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//GroupByExpressions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//GroupByExpressions/groupByExpressions"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//HavingExpressions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//HavingExpressions/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//OrderingTerm">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//OrderingTerm/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//OrderingTerm/asc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//OrderingTerm/desc"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//JoinSource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//JoinSource/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//JoinSource/joinStatements"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SingleSource"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//SelectSource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//SelectSource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SingleSourceJoin">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SingleSourceJoin/joinSource"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//JoinStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//JoinStatement/natural"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//JoinStatement/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//JoinStatement/outer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//JoinStatement/inner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//JoinStatement/cross"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//JoinStatement/singleSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//JoinStatement/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ColumnSource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ColumnSource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//LiteralValue"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//DDLStatement"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//TableDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//TableDefinition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CreateTriggerStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateTriggerStatement/temporary"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateTriggerStatement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateTriggerStatement/when"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateTriggerStatement/eventType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateTriggerStatement/updateColumnNames"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateTriggerStatement/table"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateTriggerStatement/forEachRow"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateTriggerStatement/whenExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateTriggerStatement/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//AlterTableAddColumnStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//AlterTableAddColumnStatement/table"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//AlterTableAddColumnStatement/columnDef"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//DropTableStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//DropTableStatement/ifExists"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//DropTableStatement/table"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//DropTriggerStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//DropTriggerStatement/ifExists"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//DropTriggerStatement/trigger"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//DropViewStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//DropViewStatement/ifExists"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//DropViewStatement/view"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CreateIndexStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateIndexStatement/unique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateIndexStatement/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateIndexStatement/table"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateIndexStatement/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//DropIndexStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//DropIndexStatement/ifExists"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//DropIndexStatement/index"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ColumnConstraint"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//TableConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//TableConstraint/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//UniqueTableConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UniqueTableConstraint/columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UniqueTableConstraint/conflictClause"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//PrimaryConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//PrimaryConstraint/columns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//PrimaryConstraint/conflictClause"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CheckTableConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CheckTableConstraint/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//IndexedColumn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//IndexedColumn/columnReference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//IndexedColumn/collationName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//IndexedColumn/asc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//IndexedColumn/desc"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//DefaultValue"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//ConflictClause">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ConflictClause/resolution"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//DMLStatement"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//DeleteStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//DeleteStatement/table"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//DeleteStatement/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//InsertStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//InsertStatement/conflictResolution"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//InsertStatement/table"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//InsertStatement/columnNames"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//InsertStatement/expressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//InsertStatement/selectStatement"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//UpdateStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//UpdateStatement/conflictResolution"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateStatement/table"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateStatement/updateColumnExpressions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateStatement/whereExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//UpdateColumnExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateColumnExpression/columnName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateColumnExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ContentUriParamSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUriParamSegment/num"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUriParamSegment/text"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprConcat">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprConcat/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprConcat/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprConcat/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprMult">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprMult/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprMult/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprMult/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprAdd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprAdd/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprAdd/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprAdd/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprBit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprBit/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprBit/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprBit/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprRelate">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprRelate/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprRelate/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprRelate/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprEqual">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprEqual/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprEqual/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprEqual/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprAnd">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprAnd/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprAnd/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprAnd/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExprOr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprOr/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ExprOr/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprOr/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NullCheckExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//NullCheckExpression/left"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//NullCheckExpression/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//IsNull"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//NotNull"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//NewColumn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//NewColumn/column"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//OldColumn">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//OldColumn/column"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ColumnSourceRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ColumnSourceRef/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ColumnSourceRef/all"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ColumnSourceRef/column"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//Literal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Literal/literalValue"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NestedExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//NestedExpression/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SelectStatementExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//SelectStatementExpression/not"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//SelectStatementExpression/exists"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectStatementExpression/select"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CaseExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CaseExpression/caseExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CaseExpression/cases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CaseExpression/elseExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CastExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CastExpression/expression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CastExpression/type"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//FunctionArgument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//FunctionArgument/arg"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SelectCore">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectCore/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//SelectCore/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectCore/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SelectExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//SelectExpression/distinct"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//SelectExpression/all"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//SelectExpression/allColumns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectExpression/selectList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectExpression/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectExpression/where"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectExpression/groupBy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SelectExpression/having"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SingleSourceTable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SingleSourceTable/tableReference"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//SingleSourceSelectStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//SingleSourceSelectStatement/selectStatement"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ResultColumn">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ResultColumn/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NumericLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//NumericLiteral/number"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//StringLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NullLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//NullLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CurrentTimeLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CurrentTimeLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CurrentDateLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CurrentDateLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CurrentTimeStampLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CurrentTimeStampLiteral/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CreateTableStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateTableStatement/temporary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateTableStatement/columnDefs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateTableStatement/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CreateViewStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//CreateViewStatement/temporary"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CreateViewStatement/selectStatement"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//AlterTableRenameStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//AlterTableRenameStatement/table"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ColumnDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ColumnDef/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ColumnDef/constraints"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//PrimaryKeyColumnConstraint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//PrimaryKeyColumnConstraint/asc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//PrimaryKeyColumnConstraint/desc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//PrimaryKeyColumnConstraint/autoincrement"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NotNullConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//NotNullConstraint/conflictClause"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//UniqueConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UniqueConstraint/conflictClause"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//DefaultConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//DefaultConstraint/defaultValue"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//CheckConstraint">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CheckConstraint/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//LiteralDefaultValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//LiteralDefaultValue/literal"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ExpressionDefaultValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExpressionDefaultValue/expression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
