@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <bundle id="com.justeat.mickeydb" version="1.0.0.qualifier">
+      <category name="mickeydb"/>
+   </bundle>
+<!--    <bundle id="com.justeat.mickeydb.lib" version="1.0.0.qualifier">
+      <category name="mickeydb"/>
+   </bundle> -->
+   <bundle id="com.justeat.mickeydb.ui" version="1.0.0.qualifier">
+      <category name="mickeydb"/>
+   </bundle>
+   <category-def name="mickeydb" label="Mickey DB"/>
+</site>
