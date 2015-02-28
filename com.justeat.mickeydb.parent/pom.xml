@@ -12,11 +12,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<modules>
-		<module>../com.justeat.mickeydb.target</module>
-		<module>../com.justeat.mickeydb.ui</module>
-		<module>../com.justeat.mickeydb.tests</module>
+<!-- 		<module>../com.justeat.mickeydb.target</module> -->
+<!-- 		<module>../com.justeat.mickeydb.ui</module> -->
+<!-- 		<module>../com.justeat.mickeydb.tests</module> -->
 		<module>../com.justeat.mickeydb</module>
-		<module>../com.justeat.mickeydb.repository</module>
+<!-- 		<module>../com.justeat.mickeydb.repository</module> -->
 	</modules>
 	<build>
 		<plugins>
@@ -31,13 +31,13 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<target>
-						<artifact>
-							<groupId>com.justeat.mickeydb</groupId>
-							<artifactId>com.justeat.mickeydb.target</artifactId>
-							<version>1.0.0-SNAPSHOT</version>
-						</artifact>
-					</target>
+<!-- 					<target> -->
+<!-- 						<artifact> -->
+<!-- 							<groupId>com.justeat.mickeydb</groupId> -->
+<!-- 							<artifactId>com.justeat.mickeydb.target</artifactId> -->
+<!-- 							<version>1.0.0-SNAPSHOT</version> -->
+<!-- 						</artifact> -->
+<!-- 					</target> -->
 					<environments>
 						<environment>
 							<os>macosx</os>
