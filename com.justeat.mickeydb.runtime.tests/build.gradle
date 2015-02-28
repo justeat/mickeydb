@@ -1,5 +1,6 @@
 buildscript {
   repositories {
+  	mavenLocal()
     jcenter()
   }
   dependencies {
@@ -14,13 +15,16 @@ dependencies {
 }
 
 xtext {
-  version = '2.7.3' // the current default, can be omitted
   encoding = 'UTF-8' //the default, can be omitted
 
+	sources {
+    srcDir 'src'
+  }
+  
   languages{
-    mickeydb {
+    mickey {
       setup = 'com.justeat.mickeydb.MickeyLangStandaloneSetup'
-      consumesJava = true
+      consumesJava = false
       outputs {
         DEFAULT_OUTPUT.dir = 'build/mickey'
       }
