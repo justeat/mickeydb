@@ -4,10 +4,10 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.xtext.generator.*
 import org.eclipse.xtext.ui.generator.*
 
-var grammarURI = "classpath:/com/justeat/mickeydb/MickeyLang.xtext"
 var fileExtensions = "mickey"
-var projectName = "com.justeat.mickeydb"
+var projectName = "com.justeat.mickeydb" 
 var runtimeProject = "../${projectName}"
+var grammarURI = "platform:/resource/${projectName}/src/com/justeat/mickeydb/MickeyLang.xtext"
 var generateXtendStub = true
 var encoding = "UTF-8"
 
