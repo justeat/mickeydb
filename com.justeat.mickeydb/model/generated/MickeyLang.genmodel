@@ -40,12 +40,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Model/blocks"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//MickeyBlock"/>
-    <genClasses ecoreClass="MickeyLang.ecore#//Function">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Function/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Function/args"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Function/statements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Function/all"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Function/arguments"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//MickeyFunction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//MickeyFunction/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MickeyFunction/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MickeyFunction/statements"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//ActionStatement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ActionStatement/name"/>
@@ -286,6 +284,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CaseExpression/caseExpression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CaseExpression/cases"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CaseExpression/elseExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Function/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Function/all"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Function/arguments"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//CastExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//CastExpression/expression"/>

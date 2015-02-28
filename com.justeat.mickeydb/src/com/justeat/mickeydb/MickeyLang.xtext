@@ -13,10 +13,10 @@ Model:
 	 blocks+=MickeyBlock*;
 
 MickeyBlock:
-	Function | ActionStatement | DDLStatement | MigrationBlock
+	MickeyFunction | ActionStatement | DDLStatement | MigrationBlock
 ;
 
-Function: 'function' name=ID '(' (args+=FunctionArg (',' args+=FunctionArg)*)? ')' '{'
+MickeyFunction: 'function' name=ID '(' (args+=FunctionArg (',' args+=FunctionArg)*)? ')' '{'
 	(statements+=DMLStatement ';')*
 '}' ;
 

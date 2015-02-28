@@ -1,10 +1,10 @@
 database com.justeat.TakeawaysDB
 
-migration 15 {
+migration 20 {
 	alter table restaurants add column rating_average real;
 }
 
-migration 16 {
+migration 21 {
 	alter table restaurants add column show_smiley boolean;
 	alter table restaurants add column smiley_date integer;
 	alter table restaurants add column smiley_result integer;
@@ -12,11 +12,11 @@ migration 16 {
 	alter table restaurants add column smiley_url text;
 }
 
-migration 17 {
+migration 22 {
 	alter table cuisine_types add column count integer;
 }
 
-migration 18 {
+migration 23 {
    create table sys_events (
        _id integer primary key autoincrement,
        session_id integer,
@@ -26,7 +26,7 @@ migration 18 {
    );
 }
 
-migration 19 {
+migration 24 {
 
     create table restaurant_deals (
         _id integer primary key autoincrement,
@@ -46,7 +46,7 @@ migration 19 {
     alter table restaurants add column max_discount_percent integer;
 }
 
-migration 20 {
+migration 25 {
     /*
      * Rebuild menu table since we have new/redundant columns
      */
@@ -66,7 +66,7 @@ migration 20 {
     );
 }
 
-migration 21 {
+migration 26 {
     /*
      * Rebuild categories table since we have new/redundant columns
      */

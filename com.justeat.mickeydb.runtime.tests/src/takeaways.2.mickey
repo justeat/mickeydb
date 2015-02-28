@@ -2,9 +2,9 @@ database com.justeat.TakeawaysDB
 
 migration 2 {
 	alter table baskets add column user_prompt_status text;
-}
+} 
 
-migration 2 {
+migration 3 {
 	alter table restaurants add column num_ratings integer;
 }
 

@@ -12,7 +12,7 @@ migration 1 {
 		cuisines text,
 		deals text,
 		default_display_rank integer,
-		is_halal boolean,
+		is_halal boolean, 
 		is_new boolean,
 		is_open_now_for_delivery boolean,
 		is_open_now_for_collection boolean,
@@ -138,7 +138,7 @@ migration 1 {
 		multibuy_discount real,
 		total real,
 		orderable boolean,
-		user_prompt text,
+		user_prompt text, 
 		status integer,
 		result integer,
 		unique (restaurant_jeid, menu_jeid) on conflict replace

@@ -26,10 +26,21 @@ import com.justeat.mickeydb.mickeyLang.SelectStatement
 import com.justeat.mickeydb.mickeyLang.MickeyLangFactory
 import com.justeat.mickeydb.mickeyLang.InsertStatement
 import com.justeat.mickeydb.mickeyLang.UpdateColumnExpression
+import org.eclipse.emf.ecore.EObject
+import com.justeat.mickeydb.mickeyLang.Model
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 	@Inject IQualifiedNameProvider nameProvider;
+	
+	// HACK: Need a better solution to get the whole scope without a reference
+	override getScope(EObject context, EReference reference) {
+		if(context instanceof Model && reference == null) {
+			delegateGetScope(context, MickeyLangPackage.Literals.MODEL__BLOCKS)
+		} else {
+			super.getScope(context, reference)
+		}	
+	}
 	
 	def IScope scope_AlterTableAddColumnStatement_table(AlterTableAddColumnStatement context, EReference ref) {
 		var scope = delegateGetScope(context, ref)

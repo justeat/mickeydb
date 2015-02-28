@@ -12,6 +12,8 @@ import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement;
 import com.justeat.mickeydb.mickeyLang.ColumnDef;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
+import com.justeat.mickeydb.mickeyLang.MickeyBlock;
+import com.justeat.mickeydb.mickeyLang.MickeyFunction;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
 import com.justeat.mickeydb.mickeyLang.Model;
@@ -19,6 +21,17 @@ import com.justeat.mickeydb.mickeyLang.ResultColumn;
 import com.justeat.mickeydb.mickeyLang.TableDefinition;
 
 public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider {
+	protected QualifiedName qualifiedName(Model ele){
+		return QualifiedName.create(
+				ele.getDatabaseName());
+	}
+	
+	protected QualifiedName qualifiedName(MickeyBlock ele){
+		Model model = getModel(ele);
+		return QualifiedName.create(
+				model.getDatabaseName());
+	}
+	
 	protected QualifiedName qualifiedName(MigrationBlock ele){
 		Model model = getModel(ele);
 		return QualifiedName.create(
@@ -44,6 +57,13 @@ public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider 
 	}
 	
 	protected QualifiedName qualifiedName(TableDefinition ele){
+		Model model = getModel(ele);
+		return QualifiedName.create(
+				model.getDatabaseName(),
+				ele.getName());
+	}
+	
+	protected QualifiedName qualifiedName(MickeyFunction ele){
 		Model model = getModel(ele);
 		return QualifiedName.create(
 				model.getDatabaseName(),

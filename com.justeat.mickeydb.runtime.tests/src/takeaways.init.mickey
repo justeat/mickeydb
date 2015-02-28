@@ -1,23 +1,23 @@
 database com.justeat.TakeawaysDB
 
 action AccessoriesSelected /accessories_selected
-
+ 
 create temp view products_in_basket as
-    select 
-           c._id as _id,
+    select   
+           c._id as _id, 
            c.restaurant_jeid as restaurant_jeid,
            c.menu_jeid as menu_jeid,
-           c.jeid as category_jeid,
-           null as product_jeid,
-           null as group_key,
-           c.name as name,
-           c.description as description,
+           c.jeid as category_jeid,  
+           null as product_jeid, 
+           null as group_key, 
+           c.name as name, 
+           c.description as description, 
            null as price,
-           null as is_complex,
-           null as has_synonyms,
+           null as is_complex,  
+           null as has_synonyms,      
            null as contains_nuts,
-           null as is_spicy,
-           null as is_vegetarian, 
+           null as is_spicy,  
+           null as is_vegetarian,  
            cast(0 as integer) as quantity,
            c.special_offer as special_offer,
            null as synonyms,
@@ -451,4 +451,4 @@ create temp view products_in_categories as
       left outer join product_categories as pc
       on p.category_jeid = pc.jeid
       group by p.restaurant_jeid, p.menu_jeid, p.category_jeid, group_key
-     order by sort_key	
+     order by sort_key	 

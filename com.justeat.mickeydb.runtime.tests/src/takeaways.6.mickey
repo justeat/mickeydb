@@ -1,6 +1,6 @@
 database com.justeat.TakeawaysDB
 
-migration 22 {
+migration 27 {
     /*
      * No need for these anymore
      */
@@ -10,11 +10,11 @@ migration 22 {
         drop trigger update_product_basket_quantity_on_products_inserted;
     }
     
-migration 23 {
+migration 28 {
     alter table basket_items add column group_key text;
 }
     
-migration 24 {
+migration 29 {
     
     alter table basket_items add column product_synonym text;
     alter table basket_items add column product_has_accessories boolean;
@@ -94,7 +94,7 @@ migration 24 {
     );
 }
     
-migration 25 {
+migration 30 {
     drop table product_categories;
     
     create table product_categories (
@@ -109,27 +109,27 @@ migration 25 {
 	);
 }
     
-migration 26 {
+migration 31 {
 	alter table recently_viewed_restaurants add column query text;
 }
 
-migration 27 {
+migration 32 {
     alter table basket_items add column user text;
 	alter table order_history_items add column user text;
 }
 
-migration 28 {
+migration 33 {
 	alter table orders add column order_id text;
 	alter table orders add column order_status text;
 }
 
-migration 29 {
+migration 34 {
 	alter table orders add column delivery_address text;
 	alter table orders add column delivery_city text;
 	alter table orders add column delivery_postcode text;
 }
 
-migration 30 {
+migration 35 {
 	alter table orders add column initial_estimated_delivery_time text;
 	alter table orders add column placed_date text;
 
@@ -139,11 +139,11 @@ migration 30 {
     alter table orders add column payment_card_charge real;
 }
 
-migration 31 {
+migration 36 {
     alter table orders add column estimated_delivery_date integer;
 }
 
-migration 32 {
+migration 37 {
 	alter table orders add column is_restaurant_open_now boolean;
 	alter table orders add column is_restaurant_offline boolean;
 	alter table orders add column is_restaurant_new boolean;
@@ -151,11 +151,11 @@ migration 32 {
 	alter table orders add column restaurant_description text;
 }
 
-migration 33 {
+migration 38 {
 	alter table orders add column is_reordable boolean;
 }
 
-migration 34 {
+migration 39 {
 	create table user_details (
 		_id integer primary key autoincrement,
 		tracking_id text,
@@ -170,7 +170,7 @@ migration 34 {
 	);
 }
     
-migration 35 {
+migration 40 {
 	create table payment_lines (
 	    _id integer primary key autoincrement,
 	    order_id text,
@@ -183,10 +183,10 @@ migration 35 {
 	);
 }
 
-migration 36 {
+migration 41 {
     alter table orders add column total_complementary real;
 }
 
-migration 37 {
+migration 42 {
     alter table product_categories add column sort_key text;
 }

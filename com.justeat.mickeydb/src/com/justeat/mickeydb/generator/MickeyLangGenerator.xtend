@@ -18,6 +18,9 @@ import org.eclipse.xtext.generator.IGenerator
 import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*
 import java.math.BigDecimal
+import org.eclipse.xtext.scoping.IScopeProvider
+import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
+import org.eclipse.emf.ecore.EReference
 
 /**
  * Generates code from your model files on save.
@@ -28,17 +31,20 @@ class MickeyLangGenerator implements IGenerator {
 	
 	@Inject SqliteOpenHelperGenerator mOpenHelperGenerator
 	@Inject ContentProviderContractGenerator mContentProviderContractGenerator
-	@Inject Provider<SqliteDatabaseSnapshot.Builder> mDbSnapshotBuilderProvider
 	@Inject ContentProviderGenerator mContentProviderGenerator
 	@Inject Provider<SqliteMigrationGenerator> mMigrationGenerator
 	@Inject ActiveRecordGenerator mActiveRecordGenerator
 	
 	@Inject MickeyAssembler assembler;
+
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		
-		var model = resource.contents.head as Model
-		var mickeyModel = assembler.assemble(resource.resourceSet)
+		if(!resource.URI.toString.contains("init.mickey")) {
+			return;
+		}
+		
+		var mickeyModel = assembler.assemble(resource)
 		
 		val stubOutput = "" //MechanoidOutputConfigurationProvider::DEFAULT_STUB_OUTPUT;
 		

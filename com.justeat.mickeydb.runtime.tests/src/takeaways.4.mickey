@@ -1,6 +1,6 @@
 database com.justeat.TakeawaysDB
 
-migration 9 {
+migration 14 {
 	create table address_search_result (
 		_id integer primary key autoincrement,
 		zipcode text,
@@ -13,7 +13,7 @@ migration 9 {
 	);
 }
 
-migration 10 {
+migration 15 {
 	drop table address_search_result;
 	
 	create table address_search_result (
@@ -27,12 +27,12 @@ migration 10 {
 		) on conflict ignore
 	);
 }
-
-migration 11 {
+ 
+migration 16 {
 	alter table restaurants add column unique_name text;
 }
 
-migration 12 {
+migration 17 {
 	drop table orders;
 	
 	create table orders (
@@ -56,11 +56,11 @@ migration 12 {
 	);
 }
 
-migration 13 {
+migration 18 {
 	alter table restaurants add column drive_distance real;
 }
 
-migration 14 {
+migration 19 {
 	create table recently_viewed_restaurants (
 		_id integer primary key autoincrement,
 		restaurant_jeid integer,
