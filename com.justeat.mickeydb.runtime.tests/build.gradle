@@ -1,0 +1,29 @@
+buildscript {
+  repositories {
+    jcenter()
+  }
+  dependencies {
+    classpath "org.xtext:xtext-gradle-plugin:0.1.1"
+  }
+}
+
+apply plugin: "org.xtext.xtext"
+
+dependencies {
+  xtextTooling 'com.justeat.mickeydb:com.justeat.mickeydb:1.0.0-SNAPSHOT'
+}
+
+xtext {
+  version = '2.7.3' // the current default, can be omitted
+  encoding = 'UTF-8' //the default, can be omitted
+
+  languages{
+    mickeydb {
+      setup = 'com.justeat.mickeydb.MickeyLangStandaloneSetup'
+      consumesJava = true
+      outputs {
+        DEFAULT_OUTPUT.dir = 'build/mickey'
+      }
+    }
+  }
+}
