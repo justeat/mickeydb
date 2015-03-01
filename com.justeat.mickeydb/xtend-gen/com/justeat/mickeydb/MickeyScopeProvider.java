@@ -37,7 +37,6 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   @Inject
   private IQualifiedNameProvider nameProvider;
   
-  @Override
   public IScope getScope(final EObject context, final EReference reference) {
     IScope _xifexpression = null;
     boolean _and = false;
@@ -64,9 +63,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       QualifiedName _create = QualifiedName.create(_databaseName, tableName);
       Iterable<IEObjectDescription> _elements = scope.getElements(_create);
-      final Function1<IEObjectDescription, EObject> _function = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_elements, _function);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
@@ -83,9 +84,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       QualifiedName _create = QualifiedName.create(_databaseName, tableName);
       Iterable<IEObjectDescription> _elements = scope.getElements(_create);
-      final Function1<IEObjectDescription, EObject> _function = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_elements, _function);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
@@ -116,14 +119,18 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       final QualifiedName name = QualifiedName.create(_databaseName, tableName);
       Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = (IEObjectDescription e) -> {
-        QualifiedName _name = e.getName();
-        return Boolean.valueOf(_name.startsWith(name));
+      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
+        public Boolean apply(final IEObjectDescription e) {
+          QualifiedName _name = e.getName();
+          return Boolean.valueOf(_name.startsWith(name));
+        }
       };
       Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
@@ -141,14 +148,18 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       final QualifiedName name = QualifiedName.create(_databaseName, tableName);
       Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = (IEObjectDescription e) -> {
-        QualifiedName _name = e.getName();
-        return Boolean.valueOf(_name.startsWith(name));
+      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
+        public Boolean apply(final IEObjectDescription e) {
+          QualifiedName _name = e.getName();
+          return Boolean.valueOf(_name.startsWith(name));
+        }
       };
       Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
@@ -166,14 +177,18 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       final QualifiedName name = QualifiedName.create(_databaseName, tableName);
       Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = (IEObjectDescription e) -> {
-        QualifiedName _name = e.getName();
-        return Boolean.valueOf(_name.startsWith(name));
+      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
+        public Boolean apply(final IEObjectDescription e) {
+          QualifiedName _name = e.getName();
+          return Boolean.valueOf(_name.startsWith(name));
+        }
       };
       Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
@@ -191,14 +206,18 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       final QualifiedName name = QualifiedName.create(_databaseName, tableName);
       Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = (IEObjectDescription e) -> {
-        QualifiedName _name = e.getName();
-        return Boolean.valueOf(_name.startsWith(name));
+      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
+        public Boolean apply(final IEObjectDescription e) {
+          QualifiedName _name = e.getName();
+          return Boolean.valueOf(_name.startsWith(name));
+        }
       };
       Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
@@ -226,9 +245,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       QualifiedName _create = QualifiedName.create(_databaseName, viewName);
       Iterable<IEObjectDescription> _elements = scope.getElements(_create);
-      final Function1<IEObjectDescription, EObject> _function = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_elements, _function);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
@@ -245,9 +266,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       String _databaseName = model.getDatabaseName();
       QualifiedName _create = QualifiedName.create(_databaseName, triggerName);
       Iterable<IEObjectDescription> _elements = scope.getElements(_create);
-      final Function1<IEObjectDescription, EObject> _function = (IEObjectDescription e) -> {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        return EcoreUtil.resolve(_eObjectOrProxy, context);
+      final Function1<IEObjectDescription, EObject> _function = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_elements, _function);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);

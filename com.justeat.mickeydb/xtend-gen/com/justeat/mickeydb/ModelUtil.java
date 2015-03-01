@@ -434,19 +434,21 @@ public class ModelUtil {
       boolean _notEquals = (!Objects.equal(selectList, null));
       if (_notEquals) {
         EList<ColumnSource> _resultColumns = selectList.getResultColumns();
-        final Function1<ColumnSource, Boolean> _function = (ColumnSource it) -> {
-          boolean _and = false;
-          String _name = it.getName();
-          boolean _notEquals_1 = (!Objects.equal(_name, null));
-          if (!_notEquals_1) {
-            _and = false;
-          } else {
-            String _name_1 = it.getName();
-            boolean _equals = _name_1.equals("");
-            boolean _not = (!_equals);
-            _and = _not;
+        final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
+          public Boolean apply(final ColumnSource it) {
+            boolean _and = false;
+            String _name = it.getName();
+            boolean _notEquals = (!Objects.equal(_name, null));
+            if (!_notEquals) {
+              _and = false;
+            } else {
+              String _name_1 = it.getName();
+              boolean _equals = _name_1.equals("");
+              boolean _not = (!_equals);
+              _and = _not;
+            }
+            return Boolean.valueOf(_and);
           }
-          return Boolean.valueOf(_and);
         };
         Iterable<ColumnSource> _filter = IterableExtensions.<ColumnSource>filter(_resultColumns, _function);
         Iterables.<ColumnSource>addAll(result, _filter);
@@ -456,19 +458,21 @@ public class ModelUtil {
       boolean _notEquals_1 = (!Objects.equal(selectList_1, null));
       if (_notEquals_1) {
         EList<ColumnSource> _resultColumns_1 = selectList_1.getResultColumns();
-        final Function1<ColumnSource, Boolean> _function_1 = (ColumnSource it) -> {
-          boolean _and = false;
-          String _name = it.getName();
-          boolean _notEquals_2 = (!Objects.equal(_name, null));
-          if (!_notEquals_2) {
-            _and = false;
-          } else {
-            String _name_1 = it.getName();
-            boolean _equals = _name_1.equals("");
-            boolean _not = (!_equals);
-            _and = _not;
+        final Function1<ColumnSource, Boolean> _function_1 = new Function1<ColumnSource, Boolean>() {
+          public Boolean apply(final ColumnSource it) {
+            boolean _and = false;
+            String _name = it.getName();
+            boolean _notEquals = (!Objects.equal(_name, null));
+            if (!_notEquals) {
+              _and = false;
+            } else {
+              String _name_1 = it.getName();
+              boolean _equals = _name_1.equals("");
+              boolean _not = (!_equals);
+              _and = _not;
+            }
+            return Boolean.valueOf(_and);
           }
-          return Boolean.valueOf(_and);
         };
         Iterable<ColumnSource> _filter_1 = IterableExtensions.<ColumnSource>filter(_resultColumns_1, _function_1);
         Iterables.<ColumnSource>addAll(result, _filter_1);
@@ -502,52 +506,58 @@ public class ModelUtil {
   
   public static boolean isDefinitionReferencedByView(final TableDefinition tableDef, final CreateViewStatement view) {
     TreeIterator<EObject> _eAllContents = view.eAllContents();
-    final Function1<EObject, Boolean> _function = (EObject obj) -> {
-      if ((obj instanceof SingleSourceTable)) {
-        SingleSourceTable sourceTable = ((SingleSourceTable) obj);
-        TableDefinition _tableReference = sourceTable.getTableReference();
-        if ((!(_tableReference instanceof CreateViewStatement))) {
-          TableDefinition _tableReference_1 = sourceTable.getTableReference();
-          String _name = _tableReference_1.getName();
-          String _name_1 = tableDef.getName();
-          boolean _equals = _name.equals(_name_1);
-          if (_equals) {
-            return Boolean.valueOf(true);
+    final Function1<EObject, Boolean> _function = new Function1<EObject, Boolean>() {
+      public Boolean apply(final EObject obj) {
+        if ((obj instanceof SingleSourceTable)) {
+          SingleSourceTable sourceTable = ((SingleSourceTable) obj);
+          TableDefinition _tableReference = sourceTable.getTableReference();
+          if ((!(_tableReference instanceof CreateViewStatement))) {
+            TableDefinition _tableReference_1 = sourceTable.getTableReference();
+            String _name = _tableReference_1.getName();
+            String _name_1 = tableDef.getName();
+            boolean _equals = _name.equals(_name_1);
+            if (_equals) {
+              return Boolean.valueOf(true);
+            }
+          } else {
+            TableDefinition _tableReference_2 = sourceTable.getTableReference();
+            return Boolean.valueOf(ModelUtil.isDefinitionReferencedByView(tableDef, ((CreateViewStatement) _tableReference_2)));
           }
-        } else {
-          TableDefinition _tableReference_2 = sourceTable.getTableReference();
-          return Boolean.valueOf(ModelUtil.isDefinitionReferencedByView(tableDef, ((CreateViewStatement) _tableReference_2)));
         }
+        return Boolean.valueOf(false);
       }
-      return Boolean.valueOf(false);
     };
     return IteratorExtensions.<EObject>exists(_eAllContents, _function);
   }
   
   public static boolean hasAndroidPrimaryKey(final CreateTableStatement stmt) {
     EList<ColumnSource> _columnDefs = stmt.getColumnDefs();
-    final Function1<ColumnSource, Boolean> _function = (ColumnSource it) -> {
-      String _name = it.getName();
-      return Boolean.valueOf(_name.equals("_id"));
+    final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
+      public Boolean apply(final ColumnSource it) {
+        String _name = it.getName();
+        return Boolean.valueOf(_name.equals("_id"));
+      }
     };
     return IterableExtensions.<ColumnSource>exists(_columnDefs, _function);
   }
   
   public static boolean hasAndroidPrimaryKey(final CreateViewStatement stmt) {
     ArrayList<ColumnSource> _viewResultColumns = ModelUtil.getViewResultColumns(stmt);
-    final Function1<ColumnSource, Boolean> _function = (ColumnSource it) -> {
-      boolean _and = false;
-      String _name = it.getName();
-      boolean _isEmpty = Strings.isEmpty(_name);
-      boolean _not = (!_isEmpty);
-      if (!_not) {
-        _and = false;
-      } else {
-        String _name_1 = it.getName();
-        boolean _equals = _name_1.equals("_id");
-        _and = _equals;
+    final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
+      public Boolean apply(final ColumnSource it) {
+        boolean _and = false;
+        String _name = it.getName();
+        boolean _isEmpty = Strings.isEmpty(_name);
+        boolean _not = (!_isEmpty);
+        if (!_not) {
+          _and = false;
+        } else {
+          String _name_1 = it.getName();
+          boolean _equals = _name_1.equals("_id");
+          _and = _equals;
+        }
+        return Boolean.valueOf(_and);
       }
-      return Boolean.valueOf(_and);
     };
     return IterableExtensions.<ColumnSource>exists(_viewResultColumns, _function);
   }

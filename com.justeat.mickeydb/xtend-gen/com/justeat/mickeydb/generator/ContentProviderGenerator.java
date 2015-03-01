@@ -63,8 +63,10 @@ public class ContentProviderGenerator {
     _builder.newLineIfNotEmpty();
     {
       ArrayList<CreateTableStatement> _tables = snapshot.getTables();
-      final Function1<CreateTableStatement, Boolean> _function = (CreateTableStatement it) -> {
-        return Boolean.valueOf(ModelUtil.hasAndroidPrimaryKey(it));
+      final Function1<CreateTableStatement, Boolean> _function = new Function1<CreateTableStatement, Boolean>() {
+        public Boolean apply(final CreateTableStatement it) {
+          return Boolean.valueOf(ModelUtil.hasAndroidPrimaryKey(it));
+        }
       };
       Iterable<CreateTableStatement> _filter = IterableExtensions.<CreateTableStatement>filter(_tables, _function);
       for(final CreateTableStatement tbl : _filter) {

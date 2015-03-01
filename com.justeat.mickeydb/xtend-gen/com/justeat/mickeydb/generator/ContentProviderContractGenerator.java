@@ -163,10 +163,12 @@ public class ContentProviderContractGenerator {
         _builder.newLineIfNotEmpty();
         {
           EList<ColumnSource> _columnDefs = tbl.getColumnDefs();
-          final Function1<ColumnSource, Boolean> _function = (ColumnSource it) -> {
-            String _name_1 = it.getName();
-            boolean _equals = _name_1.equals("_id");
-            return Boolean.valueOf((!_equals));
+          final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
+            public Boolean apply(final ColumnSource it) {
+              String _name = it.getName();
+              boolean _equals = _name.equals("_id");
+              return Boolean.valueOf((!_equals));
+            }
           };
           Iterable<ColumnSource> _filter = IterableExtensions.<ColumnSource>filter(_columnDefs, _function);
           for(final ColumnSource col : _filter) {
@@ -203,10 +205,12 @@ public class ContentProviderContractGenerator {
         _builder.newLineIfNotEmpty();
         {
           ArrayList<ColumnSource> _viewResultColumns = ModelUtil.getViewResultColumns(vw);
-          final Function1<ColumnSource, Boolean> _function_1 = (ColumnSource it) -> {
-            String _name_4 = it.getName();
-            boolean _equals = _name_4.equals("_id");
-            return Boolean.valueOf((!_equals));
+          final Function1<ColumnSource, Boolean> _function_1 = new Function1<ColumnSource, Boolean>() {
+            public Boolean apply(final ColumnSource it) {
+              String _name = it.getName();
+              boolean _equals = _name.equals("_id");
+              return Boolean.valueOf((!_equals));
+            }
           };
           Iterable<ColumnSource> _filter_1 = IterableExtensions.<ColumnSource>filter(_viewResultColumns, _function_1);
           for(final ColumnSource col_1 : _filter_1) {
@@ -233,10 +237,12 @@ public class ContentProviderContractGenerator {
         _builder.newLineIfNotEmpty();
         {
           EList<ColumnSource> _columnDefs_1 = tbl_1.getColumnDefs();
-          final Function1<ColumnSource, Boolean> _function_2 = (ColumnSource it) -> {
-            String _name_5 = it.getName();
-            boolean _equals = _name_5.equals("_id");
-            return Boolean.valueOf((!_equals));
+          final Function1<ColumnSource, Boolean> _function_2 = new Function1<ColumnSource, Boolean>() {
+            public Boolean apply(final ColumnSource it) {
+              String _name = it.getName();
+              boolean _equals = _name.equals("_id");
+              return Boolean.valueOf((!_equals));
+            }
           };
           Iterable<ColumnSource> _filter_2 = IterableExtensions.<ColumnSource>filter(_columnDefs_1, _function_2);
           for(final ColumnSource col_2 : _filter_2) {
@@ -272,10 +278,12 @@ public class ContentProviderContractGenerator {
         _builder.newLineIfNotEmpty();
         {
           ArrayList<ColumnSource> _viewResultColumns_1 = ModelUtil.getViewResultColumns(vw_1);
-          final Function1<ColumnSource, Boolean> _function_3 = (ColumnSource it) -> {
-            String _name_8 = it.getName();
-            boolean _equals = _name_8.equals("_id");
-            return Boolean.valueOf((!_equals));
+          final Function1<ColumnSource, Boolean> _function_3 = new Function1<ColumnSource, Boolean>() {
+            public Boolean apply(final ColumnSource it) {
+              String _name = it.getName();
+              boolean _equals = _name.equals("_id");
+              return Boolean.valueOf((!_equals));
+            }
           };
           Iterable<ColumnSource> _filter_3 = IterableExtensions.<ColumnSource>filter(_viewResultColumns_1, _function_3);
           for(final ColumnSource col_3 : _filter_3) {
@@ -479,11 +487,13 @@ public class ContentProviderContractGenerator {
   public CharSequence generateContractItemsForActions(final MickeyDatabaseModel model, final SqliteDatabaseSnapshot snapshot) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      final Function1<ActionStatement, Boolean> _function = (ActionStatement it) -> {
-        ContentUri _uri = it.getUri();
-        String _type = _uri.getType();
-        boolean _containsDefinition = snapshot.containsDefinition(_type);
-        return Boolean.valueOf((!_containsDefinition));
+      final Function1<ActionStatement, Boolean> _function = new Function1<ActionStatement, Boolean>() {
+        public Boolean apply(final ActionStatement it) {
+          ContentUri _uri = it.getUri();
+          String _type = _uri.getType();
+          boolean _containsDefinition = snapshot.containsDefinition(_type);
+          return Boolean.valueOf((!_containsDefinition));
+        }
       };
       Iterable<ActionStatement> _filter = IterableExtensions.<ActionStatement>filter(model.actions, _function);
       for(final ActionStatement action : _filter) {
@@ -598,10 +608,12 @@ public class ContentProviderContractGenerator {
    * associated to recipes
    */
   public Iterable<ActionStatement> findActionsForDefinition(final MickeyDatabaseModel model, final String defName) {
-    final Function1<ActionStatement, Boolean> _function = (ActionStatement action) -> {
-      ContentUri _uri = action.getUri();
-      String _type = _uri.getType();
-      return Boolean.valueOf(_type.equals(defName));
+    final Function1<ActionStatement, Boolean> _function = new Function1<ActionStatement, Boolean>() {
+      public Boolean apply(final ActionStatement action) {
+        ContentUri _uri = action.getUri();
+        String _type = _uri.getType();
+        return Boolean.valueOf(_type.equals(defName));
+      }
     };
     return IterableExtensions.<ActionStatement>filter(model.actions, _function);
   }
@@ -609,16 +621,18 @@ public class ContentProviderContractGenerator {
   public String toMethodArgs(final ContentUri uri) {
     EList<ContentUriSegment> _segments = uri.getSegments();
     Iterable<ContentUriParamSegment> _filter = Iterables.<ContentUriParamSegment>filter(_segments, ContentUriParamSegment.class);
-    final Function1<ContentUriParamSegment, CharSequence> _function = (ContentUriParamSegment seg) -> {
-      boolean _isNum = seg.isNum();
-      if (_isNum) {
-        String _name = seg.getName();
-        String _camelize = Strings.camelize(_name);
-        return ("long " + _camelize);
-      } else {
-        String _name_1 = seg.getName();
-        String _camelize_1 = Strings.camelize(_name_1);
-        return ("String " + _camelize_1);
+    final Function1<ContentUriParamSegment, CharSequence> _function = new Function1<ContentUriParamSegment, CharSequence>() {
+      public CharSequence apply(final ContentUriParamSegment seg) {
+        boolean _isNum = seg.isNum();
+        if (_isNum) {
+          String _name = seg.getName();
+          String _camelize = Strings.camelize(_name);
+          return ("long " + _camelize);
+        } else {
+          String _name_1 = seg.getName();
+          String _camelize_1 = Strings.camelize(_name_1);
+          return ("String " + _camelize_1);
+        }
       }
     };
     return IterableExtensions.<ContentUriParamSegment>join(_filter, ", ", _function);
@@ -907,8 +921,10 @@ public class ContentProviderContractGenerator {
     _builder.newLine();
     {
       HashSet<CreateViewStatement> _allViewsReferencingTable = ModelUtil.getAllViewsReferencingTable(snapshot, stmt);
-      final Function1<CreateViewStatement, String> _function = (CreateViewStatement x) -> {
-        return x.getName();
+      final Function1<CreateViewStatement, String> _function = new Function1<CreateViewStatement, String>() {
+        public String apply(final CreateViewStatement x) {
+          return x.getName();
+        }
       };
       List<CreateViewStatement> _sortBy = IterableExtensions.<CreateViewStatement, String>sortBy(_allViewsReferencingTable, _function);
       for(final CreateViewStatement ref : _sortBy) {
@@ -923,8 +939,10 @@ public class ContentProviderContractGenerator {
     }
     {
       HashSet<CreateViewStatement> _allViewsInConfigInitReferencingTable = ModelUtil.getAllViewsInConfigInitReferencingTable(model, stmt);
-      final Function1<CreateViewStatement, String> _function_1 = (CreateViewStatement x) -> {
-        return x.getName();
+      final Function1<CreateViewStatement, String> _function_1 = new Function1<CreateViewStatement, String>() {
+        public String apply(final CreateViewStatement x) {
+          return x.getName();
+        }
       };
       List<CreateViewStatement> _sortBy_1 = IterableExtensions.<CreateViewStatement, String>sortBy(_allViewsInConfigInitReferencingTable, _function_1);
       for(final CreateViewStatement ref_1 : _sortBy_1) {
@@ -954,10 +972,12 @@ public class ContentProviderContractGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       EList<ColumnSource> _columnDefs = stmt.getColumnDefs();
-      final Function1<ColumnSource, Boolean> _function = (ColumnSource it) -> {
-        String _name = it.getName();
-        boolean _equals = _name.equals("_id");
-        return Boolean.valueOf((!_equals));
+      final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
+        public Boolean apply(final ColumnSource it) {
+          String _name = it.getName();
+          boolean _equals = _name.equals("_id");
+          return Boolean.valueOf((!_equals));
+        }
       };
       Iterable<ColumnSource> _filter = IterableExtensions.<ColumnSource>filter(_columnDefs, _function);
       for(final ColumnSource item : _filter) {
@@ -1000,10 +1020,12 @@ public class ContentProviderContractGenerator {
     ArrayList<ColumnSource> cols = ModelUtil.getViewResultColumns(stmt);
     _builder.newLineIfNotEmpty();
     {
-      final Function1<ColumnSource, Boolean> _function = (ColumnSource it) -> {
-        String _name = it.getName();
-        boolean _equals = _name.equals("_id");
-        return Boolean.valueOf((!_equals));
+      final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
+        public Boolean apply(final ColumnSource it) {
+          String _name = it.getName();
+          boolean _equals = _name.equals("_id");
+          return Boolean.valueOf((!_equals));
+        }
       };
       Iterable<ColumnSource> _filter = IterableExtensions.<ColumnSource>filter(cols, _function);
       for(final ColumnSource item : _filter) {
@@ -1062,10 +1084,12 @@ public class ContentProviderContractGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       EList<ColumnSource> _columnDefs = tbl.getColumnDefs();
-      final Function1<ColumnSource, Boolean> _function = (ColumnSource it) -> {
-        String _name = it.getName();
-        boolean _equals = _name.equals("_id");
-        return Boolean.valueOf((!_equals));
+      final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
+        public Boolean apply(final ColumnSource it) {
+          String _name = it.getName();
+          boolean _equals = _name.equals("_id");
+          return Boolean.valueOf((!_equals));
+        }
       };
       Iterable<ColumnSource> _filter = IterableExtensions.<ColumnSource>filter(_columnDefs, _function);
       boolean _hasElements = false;
