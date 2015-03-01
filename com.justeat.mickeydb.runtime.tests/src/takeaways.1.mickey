@@ -10,7 +10,7 @@ migration 1 {
 		postcode text,
 		search_query text,
 		cuisines text,
-		deals text,
+		deals text, 
 		default_display_rank integer,
 		is_halal boolean, 
 		is_new boolean,

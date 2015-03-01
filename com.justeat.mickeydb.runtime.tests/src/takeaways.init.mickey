@@ -9,7 +9,7 @@ create temp view products_in_basket as
            c.menu_jeid as menu_jeid,
            c.jeid as category_jeid,  
            null as product_jeid, 
-           null as group_key, 
+           null as group_key,  
            c.name as name, 
            c.description as description, 
            null as price,

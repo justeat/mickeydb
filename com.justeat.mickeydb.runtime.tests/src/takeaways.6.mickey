@@ -8,8 +8,8 @@ migration 27 {
         drop trigger update_product_basket_quantity_on_basket_items_inserted;
         drop trigger update_product_basket_quantity_on_basket_items_updated;
         drop trigger update_product_basket_quantity_on_products_inserted;
-    }
-    
+    } 
+     
 migration 28 {
     alter table basket_items add column group_key text;
 }

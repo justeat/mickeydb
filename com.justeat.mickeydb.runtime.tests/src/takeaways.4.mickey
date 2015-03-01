@@ -10,7 +10,7 @@ migration 14 {
 		unique (
 			zipcode
 		) on conflict ignore
-	);
+	); 
 }
 
 migration 15 {

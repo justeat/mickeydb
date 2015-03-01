@@ -120,7 +120,7 @@ public class SqliteDatabaseSnapshot {
 		}
 
 		private void buildSnapshotModel() {
-			XtextResource resource = (XtextResource) mSnapshotResourceSet.createResource(URI.createURI("platform:/resource/app1/temp.mechdb"));
+			XtextResource resource = (XtextResource) mSnapshotResourceSet.createResource(URI.createURI("platform:/resource/app1/temp.mickey"));
 			
 			mSnapshotModel = (Model) MickeyLangFactory.eINSTANCE.createModel();
 			mSnapshotModel.setDatabaseName(mSourceModel.getDatabaseName());

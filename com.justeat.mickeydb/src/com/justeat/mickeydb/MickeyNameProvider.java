@@ -11,6 +11,7 @@ import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement;
 import com.justeat.mickeydb.mickeyLang.ColumnDef;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
+import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
 import com.justeat.mickeydb.mickeyLang.MickeyBlock;
 import com.justeat.mickeydb.mickeyLang.MickeyFunction;
@@ -26,11 +27,11 @@ public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider 
 				ele.getDatabaseName());
 	}
 	
-	protected QualifiedName qualifiedName(MickeyBlock ele){
-		Model model = getModel(ele);
-		return QualifiedName.create(
-				model.getDatabaseName());
-	}
+//	protected QualifiedName qualifiedName(MickeyBlock ele){
+//		Model model = getModel(ele);
+//		return QualifiedName.create(
+//				model.getDatabaseName());
+//	}
 	
 	protected QualifiedName qualifiedName(MigrationBlock ele){
 		Model model = getModel(ele);
@@ -74,6 +75,13 @@ public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider 
 		Model model = getModel(ele);
 		return QualifiedName.create(
 				model.getDatabaseName());
+	}
+	
+	protected QualifiedName qualifiedName(CreateTriggerStatement ele){
+		Model model = getModel(ele);
+		return QualifiedName.create(
+				model.getDatabaseName(),
+				ele.getName());
 	}
 	
 	protected QualifiedName qualifiedName(ResultColumn e) {
