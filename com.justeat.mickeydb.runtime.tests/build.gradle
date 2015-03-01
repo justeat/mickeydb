@@ -1,7 +1,7 @@
 buildscript {
   repositories {
-  	mavenLocal()
-    jcenter()
+    	mavenLocal()
+    mavenCentral()
   }
   dependencies {
     classpath "org.xtext:xtext-gradle-plugin:0.1.1"
@@ -10,24 +10,25 @@ buildscript {
 
 apply plugin: "org.xtext.xtext"
 
+repositories {
+  	mavenLocal()
+    mavenCentral()
+}
+  
 dependencies {
   xtextTooling 'com.justeat.mickeydb:com.justeat.mickeydb:1.0.0-SNAPSHOT'
 }
-
+ 
 xtext {
-  encoding = 'UTF-8' //the default, can be omitted
 
-	sources {
+  sources {
     srcDir 'src'
   }
   
   languages{
     mickey {
       setup = 'com.justeat.mickeydb.MickeyLangStandaloneSetup'
-      consumesJava = false
-      outputs {
-        DEFAULT_OUTPUT.dir = 'build/mickey'
-      }
+      output.dir = 'build/mickey'
     }
   }
 }
