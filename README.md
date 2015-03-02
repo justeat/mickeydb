@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.org/justeat/mickeydb.svg)
+
 # mickeydb
 
 ##Provisional documentation, in order for this to work you need to ```mvn install``` mickeydb into your local repo
