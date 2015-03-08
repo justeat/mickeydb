@@ -11,8 +11,10 @@ buildscript {
 apply plugin: "org.xtext.xtext"
 
 repositories {
-  	mavenLocal()
     mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
 }
   
 dependencies {
