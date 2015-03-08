@@ -27,14 +27,14 @@ class SqliteOpenHelperGenerator {
 				
 				«IF model.migrations.size > 0»
 				«FOR migration : model.migrations»
-				import «model.packageName».migrations.Default«model.databaseName.pascalize»MigrationV«migration.version»;
+				import «model.packageName».migrations.Default«model.databaseName.pascalize»MigrationV«migration.name»;
 				«ENDFOR»
 				«ENDIF»
 				
 				public abstract class Abstract«model.databaseName.pascalize()»OpenHelper extends MechanoidSQLiteOpenHelper {
 					private static final String DATABASE_NAME = "«model.databaseName».db";
 				
-					public static final int VERSION = «model.migrations.last?.version»;
+					public static final int VERSION = «model.migrations.last?.name»;
 				
 					public interface Sources {
 						«FOR table : snapshot.tables»
@@ -81,7 +81,7 @@ class SqliteOpenHelperGenerator {
 						switch(version) {
 							«FOR migration : model.migrations»
 							case «version=version+1»:
-								return create«model.databaseName.pascalize»MigrationV«migration.version»();
+								return create«model.databaseName.pascalize»MigrationV«migration.name»();
 							«ENDFOR»
 							default:
 								throw new IllegalStateException("No migration for version " + version);
@@ -93,8 +93,8 @@ class SqliteOpenHelperGenerator {
 					
 					«IF model.migrations.size > 0»
 					«FOR migration : model.migrations»
-					protected SQLiteMigration create«model.databaseName.pascalize»MigrationV«migration.version»() {
-						return new Default«model.databaseName.pascalize»MigrationV«migration.version»();
+					protected SQLiteMigration create«model.databaseName.pascalize»MigrationV«migration.name»() {
+						return new Default«model.databaseName.pascalize»MigrationV«migration.name»();
 					}
 					«ENDFOR»
 					«ENDIF»

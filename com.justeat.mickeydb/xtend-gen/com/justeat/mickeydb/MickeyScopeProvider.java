@@ -4,6 +4,7 @@ import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import com.justeat.mickeydb.ModelUtil;
 import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement;
+import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
 import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.DMLStatement;
@@ -20,6 +21,9 @@ import com.justeat.mickeydb.mickeyLang.SingleSourceTable;
 import com.justeat.mickeydb.mickeyLang.UpdateColumnExpression;
 import com.justeat.mickeydb.mickeyLang.UpdateStatement;
 import java.util.ArrayList;
+import java.util.function.Consumer;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -38,23 +42,57 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   private IQualifiedNameProvider nameProvider;
   
   public IScope getScope(final EObject context, final EReference reference) {
-    IScope _xifexpression = null;
-    boolean _and = false;
-    if (!(context instanceof Model)) {
-      _and = false;
-    } else {
-      boolean _equals = Objects.equal(reference, null);
-      _and = _equals;
+    IScope _xblockexpression = null;
+    {
+      IScope scope = this.delegateGetScope(context, reference);
+      Iterable<IEObjectDescription> _allElements = scope.getAllElements();
+      final Consumer<IEObjectDescription> _function = new Consumer<IEObjectDescription>() {
+        public void accept(final IEObjectDescription element) {
+          MickeyScopeProvider.this.boop(element);
+        }
+      };
+      _allElements.forEach(_function);
+      _xblockexpression = super.getScope(context, reference);
     }
-    if (_and) {
-      _xifexpression = this.delegateGetScope(context, MickeyLangPackage.Literals.MODEL__BLOCKS);
-    } else {
-      _xifexpression = super.getScope(context, reference);
-    }
-    return _xifexpression;
+    return _xblockexpression;
+  }
+  
+  public void boop(final IEObjectDescription description) {
+    QualifiedName name = description.getName();
+    EObject obj = description.getEObjectOrProxy();
+    EClass clazz = description.getEClass();
+    URI uri = description.getEObjectURI();
+    String _plus = (name + ":");
+    Class<? extends EObject> _class = obj.getClass();
+    String _name = _class.getName();
+    String _plus_1 = (_plus + _name);
+    System.out.println(_plus_1);
+    int qux = 0;
+    qux = (qux + 1);
   }
   
   public IScope scope_AlterTableAddColumnStatement_table(final AlterTableAddColumnStatement context, final EReference ref) {
+    IScope _xblockexpression = null;
+    {
+      IScope scope = this.delegateGetScope(context, ref);
+      Model model = ModelUtil.getModel(context);
+      String tableName = ModelUtil.getFeatureNodeText(context, ref);
+      String _databaseName = model.getDatabaseName();
+      QualifiedName _create = QualifiedName.create(_databaseName, tableName);
+      Iterable<IEObjectDescription> _elements = scope.getElements(_create);
+      final Function1<IEObjectDescription, EObject> _function = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
+      };
+      Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_elements, _function);
+      _xblockexpression = Scopes.scopeFor(scopedElements, scope);
+    }
+    return _xblockexpression;
+  }
+  
+  public IScope scope_AlterTableRenameStatement_table(final AlterTableRenameStatement context, final EReference ref) {
     IScope _xblockexpression = null;
     {
       IScope scope = this.delegateGetScope(context, ref);

@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl#getVersion <em>Version</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl#getStatements <em>Statements</em>}</li>
  * </ul>
  *
@@ -40,24 +40,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBlock
 {
   /**
-   * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVersion()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final BigDecimal VERSION_EDEFAULT = null;
+  protected static final BigDecimal NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVersion()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected BigDecimal version = VERSION_EDEFAULT;
+  protected BigDecimal name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
@@ -95,9 +95,9 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
    * <!-- end-user-doc -->
    * @generated
    */
-  public BigDecimal getVersion()
+  public BigDecimal getName()
   {
-    return version;
+    return name;
   }
 
   /**
@@ -105,12 +105,12 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVersion(BigDecimal newVersion)
+  public void setName(BigDecimal newName)
   {
-    BigDecimal oldVersion = version;
-    version = newVersion;
+    BigDecimal oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.MIGRATION_BLOCK__VERSION, oldVersion, version));
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.MIGRATION_BLOCK__NAME, oldName, name));
   }
 
   /**
@@ -153,8 +153,8 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MIGRATION_BLOCK__VERSION:
-        return getVersion();
+      case MickeyLangPackage.MIGRATION_BLOCK__NAME:
+        return getName();
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         return getStatements();
     }
@@ -172,8 +172,8 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MIGRATION_BLOCK__VERSION:
-        setVersion((BigDecimal)newValue);
+      case MickeyLangPackage.MIGRATION_BLOCK__NAME:
+        setName((BigDecimal)newValue);
         return;
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         getStatements().clear();
@@ -193,8 +193,8 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MIGRATION_BLOCK__VERSION:
-        setVersion(VERSION_EDEFAULT);
+      case MickeyLangPackage.MIGRATION_BLOCK__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         getStatements().clear();
@@ -213,8 +213,8 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MIGRATION_BLOCK__VERSION:
-        return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
+      case MickeyLangPackage.MIGRATION_BLOCK__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         return statements != null && !statements.isEmpty();
     }
@@ -232,8 +232,8 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (version: ");
-    result.append(version);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

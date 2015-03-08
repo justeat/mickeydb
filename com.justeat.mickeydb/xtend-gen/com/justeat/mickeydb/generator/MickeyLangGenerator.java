@@ -126,8 +126,8 @@ public class MickeyLangGenerator implements IGenerator {
           public void apply(final MigrationBlock item, final Integer index) {
             String _packageName = it.getPackageName();
             String _databaseName = it.getDatabaseName();
-            BigDecimal _version = item.getVersion();
-            MickeyLangGenerator.this.generateMigration(_packageName, _databaseName, resource, fsa, item, _version);
+            BigDecimal _name = item.getName();
+            MickeyLangGenerator.this.generateMigration(_packageName, _databaseName, resource, fsa, item, _name);
           }
         };
         IterableExtensions.<MigrationBlock>forEach(it.migrations, _function_4);

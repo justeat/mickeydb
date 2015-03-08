@@ -37,7 +37,7 @@ ContentUriSegment:
 
 MigrationBlock:
 	{MigrationBlock}
-	'migration' version=NUMBER '{' (statements+=DDLStatement ';')* '}';
+	'migration' name=NUMBER '{' (statements+=DDLStatement ';')* '}';
 	
 /***********************************************************************
  *                                                                     *

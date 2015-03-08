@@ -42,7 +42,7 @@
 	</profiles>
 	
 	<parent>
-		<groupId>com.justeat.mickeydb</groupId>
+		<groupId>com.justeat</groupId>
 		<artifactId>com.justeat.mickeydb.parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../com.justeat.mickeydb.parent</relativePath>

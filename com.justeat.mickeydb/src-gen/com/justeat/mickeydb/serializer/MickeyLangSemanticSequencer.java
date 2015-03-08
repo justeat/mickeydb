@@ -1534,7 +1534,7 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (version=NUMBER statements+=DDLStatement*)
+	 *     (name=NUMBER statements+=DDLStatement*)
 	 */
 	protected void sequence_MigrationBlock(EObject context, MigrationBlock semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -4339,9 +4339,9 @@ rule__MigrationBlock__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getMigrationBlockAccess().getVersionAssignment_2()); }
-(rule__MigrationBlock__VersionAssignment_2)
-{ after(grammarAccess.getMigrationBlockAccess().getVersionAssignment_2()); }
+{ before(grammarAccess.getMigrationBlockAccess().getNameAssignment_2()); }
+(rule__MigrationBlock__NameAssignment_2)
+{ after(grammarAccess.getMigrationBlockAccess().getNameAssignment_2()); }
 )
 
 ;
@@ -17275,14 +17275,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__MigrationBlock__VersionAssignment_2
+rule__MigrationBlock__NameAssignment_2
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getMigrationBlockAccess().getVersionNUMBERTerminalRuleCall_2_0()); }
-	RULE_NUMBER{ after(grammarAccess.getMigrationBlockAccess().getVersionNUMBERTerminalRuleCall_2_0()); }
+{ before(grammarAccess.getMigrationBlockAccess().getNameNUMBERTerminalRuleCall_2_0()); }
+	RULE_NUMBER{ after(grammarAccess.getMigrationBlockAccess().getNameNUMBERTerminalRuleCall_2_0()); }
 )
 
 ;

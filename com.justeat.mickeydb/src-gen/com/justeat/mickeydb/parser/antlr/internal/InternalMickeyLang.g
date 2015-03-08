@@ -622,9 +622,9 @@ ruleMigrationBlock returns [EObject current=null]
     }
 (
 (
-		lv_version_2_0=RULE_NUMBER
+		lv_name_2_0=RULE_NUMBER
 		{
-			newLeafNode(lv_version_2_0, grammarAccess.getMigrationBlockAccess().getVersionNUMBERTerminalRuleCall_2_0()); 
+			newLeafNode(lv_name_2_0, grammarAccess.getMigrationBlockAccess().getNameNUMBERTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -632,8 +632,8 @@ ruleMigrationBlock returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"version",
-        		lv_version_2_0, 
+       			"name",
+        		lv_name_2_0, 
         		"NUMBER");
 	    }
 

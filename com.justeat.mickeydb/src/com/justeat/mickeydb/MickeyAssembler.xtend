@@ -20,7 +20,7 @@ class MickeyAssembler {
 		]
 		
 		mickeyModel.databases.values.forEach[db|		
-			db.migrations.sortInplaceBy[m|m.version]
+			db.migrations.sortInplaceBy[m|m.name]
 			db.initTables.sortInplaceBy[x|x.name]
 			db.initViews.sortInplaceBy[x|x.name]
 			

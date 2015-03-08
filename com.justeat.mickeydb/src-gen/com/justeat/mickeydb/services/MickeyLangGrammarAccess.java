@@ -339,8 +339,8 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMigrationBlockAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cMigrationKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cVersionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cVersionNUMBERTerminalRuleCall_2_0 = (RuleCall)cVersionAssignment_2.eContents().get(0);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameNUMBERTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Assignment cStatementsAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
@@ -349,10 +349,10 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//MigrationBlock:
-		//	{MigrationBlock} "migration" version=NUMBER "{" (statements+=DDLStatement ";")* "}";
+		//	{MigrationBlock} "migration" name=NUMBER "{" (statements+=DDLStatement ";")* "}";
 		public ParserRule getRule() { return rule; }
 
-		//{MigrationBlock} "migration" version=NUMBER "{" (statements+=DDLStatement ";")* "}"
+		//{MigrationBlock} "migration" name=NUMBER "{" (statements+=DDLStatement ";")* "}"
 		public Group getGroup() { return cGroup; }
 
 		//{MigrationBlock}
@@ -361,11 +361,11 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		//"migration"
 		public Keyword getMigrationKeyword_1() { return cMigrationKeyword_1; }
 
-		//version=NUMBER
-		public Assignment getVersionAssignment_2() { return cVersionAssignment_2; }
+		//name=NUMBER
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
 		//NUMBER
-		public RuleCall getVersionNUMBERTerminalRuleCall_2_0() { return cVersionNUMBERTerminalRuleCall_2_0; }
+		public RuleCall getNameNUMBERTerminalRuleCall_2_0() { return cNameNUMBERTerminalRuleCall_2_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
@@ -4388,7 +4388,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MigrationBlock:
-	//	{MigrationBlock} "migration" version=NUMBER "{" (statements+=DDLStatement ";")* "}";
+	//	{MigrationBlock} "migration" name=NUMBER "{" (statements+=DDLStatement ";")* "}";
 	public MigrationBlockElements getMigrationBlockAccess() {
 		return pMigrationBlock;
 	}

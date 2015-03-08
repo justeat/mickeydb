@@ -1,53 +1,5 @@
 database com.justeat.TakeawaysDB
 
-migration 8 {
-	create table orders (
-		_id integer primary key autoincrement,
-		restaurant_jeid integer,
-		restaurant_name text,
-		restaurant_address text,
-		restaurant_city text,
-		restaurant_postcode text,
-		restaurant_logo_standard_res_url text,
-		menu_jeid integer,
-		is_delivery boolean,
-		basket_jeid text,
-		order_number text,
-		estimated_delivery_time text,
-		total real,
-		created integer
-	);
-}
-
-migration 9 {
-	create table basket_taxes (
-		_id integer primary key autoincrement,
-		basket_jeid text,
-		tax_name text,
-		tax_rate real,
-		tax_rate_amount real
-	);
-
-	alter table baskets add column total_tips_amount real;
-	alter table basket_items add column is_tips boolean;
-}
-
-migration 10 {
-	alter table products add column is_tips boolean;
-}
-
-migration 11 { 
-	drop view if exists order_summary;
-	drop view if exists product_accessory_types;
-	drop view if exists product_categories_with_count;
-	drop view if exists products_in_basket;
-}
-
-migration 12 {
-	alter table orders add column quantity integer;
-	alter table orders add column restaurant_phone text;
-}
-
-migration 13 {
-	alter table restaurants add column opening_time integer;
-}
+migration 2 {
+	alter table takeaways add column has_vegetarian boolean;
+} 

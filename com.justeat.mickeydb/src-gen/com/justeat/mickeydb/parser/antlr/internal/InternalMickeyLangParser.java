@@ -1726,12 +1726,12 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMigrationBlock"
-    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:609:1: ruleMigrationBlock returns [EObject current=null] : ( () otherlv_1= 'migration' ( (lv_version_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' ) ;
+    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:609:1: ruleMigrationBlock returns [EObject current=null] : ( () otherlv_1= 'migration' ( (lv_name_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' ) ;
     public final EObject ruleMigrationBlock() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
-        Token lv_version_2_0=null;
+        Token lv_name_2_0=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
@@ -1741,11 +1741,11 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:612:28: ( ( () otherlv_1= 'migration' ( (lv_version_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' ) )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:613:1: ( () otherlv_1= 'migration' ( (lv_version_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:612:28: ( ( () otherlv_1= 'migration' ( (lv_name_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' ) )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:613:1: ( () otherlv_1= 'migration' ( (lv_name_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' )
             {
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:613:1: ( () otherlv_1= 'migration' ( (lv_version_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:613:2: () otherlv_1= 'migration' ( (lv_version_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:613:1: ( () otherlv_1= 'migration' ( (lv_name_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:613:2: () otherlv_1= 'migration' ( (lv_name_2_0= RULE_NUMBER ) ) otherlv_3= '{' ( ( (lv_statements_4_0= ruleDDLStatement ) ) otherlv_5= ';' )* otherlv_6= '}'
             {
             // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:613:2: ()
             // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:614:5: 
@@ -1766,16 +1766,16 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_1, grammarAccess.getMigrationBlockAccess().getMigrationKeyword_1());
                   
             }
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:623:1: ( (lv_version_2_0= RULE_NUMBER ) )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:624:1: (lv_version_2_0= RULE_NUMBER )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:623:1: ( (lv_name_2_0= RULE_NUMBER ) )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:624:1: (lv_name_2_0= RULE_NUMBER )
             {
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:624:1: (lv_version_2_0= RULE_NUMBER )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:625:3: lv_version_2_0= RULE_NUMBER
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:624:1: (lv_name_2_0= RULE_NUMBER )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:625:3: lv_name_2_0= RULE_NUMBER
             {
-            lv_version_2_0=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleMigrationBlock1315); if (state.failed) return current;
+            lv_name_2_0=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleMigrationBlock1315); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(lv_version_2_0, grammarAccess.getMigrationBlockAccess().getVersionNUMBERTerminalRuleCall_2_0()); 
+              			newLeafNode(lv_name_2_0, grammarAccess.getMigrationBlockAccess().getNameNUMBERTerminalRuleCall_2_0()); 
               		
             }
             if ( state.backtracking==0 ) {
@@ -1785,8 +1785,8 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
               	        }
                      		setWithLastConsumed(
                      			current, 
-                     			"version",
-                      		lv_version_2_0, 
+                     			"name",
+                      		lv_name_2_0, 
                       		"NUMBER");
               	    
             }

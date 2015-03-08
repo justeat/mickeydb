@@ -1049,7 +1049,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMigrationBlock_Version()
+  public EAttribute getMigrationBlock_Name()
   {
     return (EAttribute)migrationBlockEClass.getEStructuralFeatures().get(0);
   }
@@ -3571,7 +3571,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     createEAttribute(contentUriSegmentEClass, CONTENT_URI_SEGMENT__NAME);
 
     migrationBlockEClass = createEClass(MIGRATION_BLOCK);
-    createEAttribute(migrationBlockEClass, MIGRATION_BLOCK__VERSION);
+    createEAttribute(migrationBlockEClass, MIGRATION_BLOCK__NAME);
     createEReference(migrationBlockEClass, MIGRATION_BLOCK__STATEMENTS);
 
     expressionEClass = createEClass(EXPRESSION);
@@ -4028,7 +4028,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEAttribute(getContentUriSegment_Name(), ecorePackage.getEString(), "name", null, 0, 1, ContentUriSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(migrationBlockEClass, MigrationBlock.class, "MigrationBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMigrationBlock_Version(), ecorePackage.getEBigDecimal(), "version", null, 0, 1, MigrationBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMigrationBlock_Name(), ecorePackage.getEBigDecimal(), "name", null, 0, 1, MigrationBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMigrationBlock_Statements(), this.getDDLStatement(), null, "statements", null, 0, -1, MigrationBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

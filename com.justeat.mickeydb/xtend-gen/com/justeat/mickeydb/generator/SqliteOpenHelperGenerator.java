@@ -63,8 +63,8 @@ public class SqliteOpenHelperGenerator {
             String _pascalize = Strings.pascalize(_databaseName);
             _builder.append(_pascalize, "");
             _builder.append("MigrationV");
-            BigDecimal _version = migration.getVersion();
-            _builder.append(_version, "");
+            BigDecimal _name = migration.getName();
+            _builder.append(_name, "");
             _builder.append(";");
             _builder.newLineIfNotEmpty();
           }
@@ -88,11 +88,11 @@ public class SqliteOpenHelperGenerator {
     _builder.append("\t");
     _builder.append("public static final int VERSION = ");
     MigrationBlock _last = IterableExtensions.<MigrationBlock>last(model.migrations);
-    BigDecimal _version_1 = null;
+    BigDecimal _name_1 = null;
     if (_last!=null) {
-      _version_1=_last.getVersion();
+      _name_1=_last.getName();
     }
-    _builder.append(_version_1, "\t");
+    _builder.append(_name_1, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -104,13 +104,13 @@ public class SqliteOpenHelperGenerator {
       for(final CreateTableStatement table : _tables) {
         _builder.append("\t\t");
         _builder.append("String ");
-        String _name = table.getName();
-        String _underscore = Strings.underscore(_name);
+        String _name_2 = table.getName();
+        String _underscore = Strings.underscore(_name_2);
         String _upperCase = _underscore.toUpperCase();
         _builder.append(_upperCase, "\t\t");
         _builder.append(" = \"");
-        String _name_1 = table.getName();
-        _builder.append(_name_1, "\t\t");
+        String _name_3 = table.getName();
+        _builder.append(_name_3, "\t\t");
         _builder.append("\";");
         _builder.newLineIfNotEmpty();
       }
@@ -120,13 +120,13 @@ public class SqliteOpenHelperGenerator {
       for(final CreateViewStatement view : _views) {
         _builder.append("\t\t");
         _builder.append("String ");
-        String _name_2 = view.getName();
-        String _underscore_1 = Strings.underscore(_name_2);
+        String _name_4 = view.getName();
+        String _underscore_1 = Strings.underscore(_name_4);
         String _upperCase_1 = _underscore_1.toUpperCase();
         _builder.append(_upperCase_1, "\t\t");
         _builder.append(" = \"");
-        String _name_3 = view.getName();
-        _builder.append(_name_3, "\t\t");
+        String _name_5 = view.getName();
+        _builder.append(_name_5, "\t\t");
         _builder.append("\";");
         _builder.newLineIfNotEmpty();
       }
@@ -135,13 +135,13 @@ public class SqliteOpenHelperGenerator {
       for(final CreateTableStatement table_1 : model.initTables) {
         _builder.append("\t\t");
         _builder.append("String ");
-        String _name_4 = table_1.getName();
-        String _underscore_2 = Strings.underscore(_name_4);
+        String _name_6 = table_1.getName();
+        String _underscore_2 = Strings.underscore(_name_6);
         String _upperCase_2 = _underscore_2.toUpperCase();
         _builder.append(_upperCase_2, "\t\t");
         _builder.append(" = \"");
-        String _name_5 = table_1.getName();
-        _builder.append(_name_5, "\t\t");
+        String _name_7 = table_1.getName();
+        _builder.append(_name_7, "\t\t");
         _builder.append("\";");
         _builder.newLineIfNotEmpty();
       }
@@ -150,13 +150,13 @@ public class SqliteOpenHelperGenerator {
       for(final CreateViewStatement view_1 : model.initViews) {
         _builder.append("\t\t");
         _builder.append("String ");
-        String _name_6 = view_1.getName();
-        String _underscore_3 = Strings.underscore(_name_6);
+        String _name_8 = view_1.getName();
+        String _underscore_3 = Strings.underscore(_name_8);
         String _upperCase_3 = _underscore_3.toUpperCase();
         _builder.append(_upperCase_3, "\t\t");
         _builder.append(" = \"");
-        String _name_7 = view_1.getName();
-        _builder.append(_name_7, "\t\t");
+        String _name_9 = view_1.getName();
+        _builder.append(_name_9, "\t\t");
         _builder.append("\";");
         _builder.newLineIfNotEmpty();
       }
@@ -282,8 +282,8 @@ public class SqliteOpenHelperGenerator {
             String _pascalize_4 = Strings.pascalize(_databaseName_5);
             _builder.append(_pascalize_4, "\t\t\t\t");
             _builder.append("MigrationV");
-            BigDecimal _version_2 = migration_1.getVersion();
-            _builder.append(_version_2, "\t\t\t\t");
+            BigDecimal _name_10 = migration_1.getName();
+            _builder.append(_name_10, "\t\t\t\t");
             _builder.append("();");
             _builder.newLineIfNotEmpty();
           }
@@ -322,8 +322,8 @@ public class SqliteOpenHelperGenerator {
             String _pascalize_5 = Strings.pascalize(_databaseName_6);
             _builder.append(_pascalize_5, "\t");
             _builder.append("MigrationV");
-            BigDecimal _version_3 = migration_2.getVersion();
-            _builder.append(_version_3, "\t");
+            BigDecimal _name_11 = migration_2.getName();
+            _builder.append(_name_11, "\t");
             _builder.append("() {");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
@@ -333,8 +333,8 @@ public class SqliteOpenHelperGenerator {
             String _pascalize_6 = Strings.pascalize(_databaseName_7);
             _builder.append(_pascalize_6, "\t\t");
             _builder.append("MigrationV");
-            BigDecimal _version_4 = migration_2.getVersion();
-            _builder.append(_version_4, "\t\t");
+            BigDecimal _name_12 = migration_2.getName();
+            _builder.append(_name_12, "\t\t");
             _builder.append("();");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");

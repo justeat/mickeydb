@@ -95,7 +95,7 @@ class MickeyLangGenerator implements IGenerator {
 				];
 				
 				it.migrations.forEach[
-					item,index|generateMigration(packageName, databaseName, resource, fsa, item, item.version)
+					item,index|generateMigration(packageName, databaseName, resource, fsa, item, item.name)
 				];			 	
 		 ]
 	}

@@ -309,13 +309,13 @@ public interface MickeyLangPackage extends EPackage
   int MIGRATION_BLOCK = 7;
 
   /**
-   * The feature id for the '<em><b>Version</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MIGRATION_BLOCK__VERSION = MICKEY_BLOCK_FEATURE_COUNT + 0;
+  int MIGRATION_BLOCK__NAME = MICKEY_BLOCK_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
@@ -3687,15 +3687,15 @@ public interface MickeyLangPackage extends EPackage
   EClass getMigrationBlock();
 
   /**
-   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.MigrationBlock#getVersion <em>Version</em>}'.
+   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.MigrationBlock#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Version</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.MigrationBlock#getVersion()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.MigrationBlock#getName()
    * @see #getMigrationBlock()
    * @generated
    */
-  EAttribute getMigrationBlock_Version();
+  EAttribute getMigrationBlock_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.MigrationBlock#getStatements <em>Statements</em>}'.
@@ -6516,12 +6516,12 @@ public interface MickeyLangPackage extends EPackage
     EClass MIGRATION_BLOCK = eINSTANCE.getMigrationBlock();
 
     /**
-     * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MIGRATION_BLOCK__VERSION = eINSTANCE.getMigrationBlock_Version();
+    EAttribute MIGRATION_BLOCK__NAME = eINSTANCE.getMigrationBlock_Name();
 
     /**
      * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.

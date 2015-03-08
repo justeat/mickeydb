@@ -14352,26 +14352,26 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MigrationBlock__Group__2__Impl"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4336:1: rule__MigrationBlock__Group__2__Impl : ( ( rule__MigrationBlock__VersionAssignment_2 ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4336:1: rule__MigrationBlock__Group__2__Impl : ( ( rule__MigrationBlock__NameAssignment_2 ) ) ;
     public final void rule__MigrationBlock__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4340:1: ( ( ( rule__MigrationBlock__VersionAssignment_2 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4341:1: ( ( rule__MigrationBlock__VersionAssignment_2 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4340:1: ( ( ( rule__MigrationBlock__NameAssignment_2 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4341:1: ( ( rule__MigrationBlock__NameAssignment_2 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4341:1: ( ( rule__MigrationBlock__VersionAssignment_2 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4342:1: ( rule__MigrationBlock__VersionAssignment_2 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4341:1: ( ( rule__MigrationBlock__NameAssignment_2 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4342:1: ( rule__MigrationBlock__NameAssignment_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMigrationBlockAccess().getVersionAssignment_2()); 
+               before(grammarAccess.getMigrationBlockAccess().getNameAssignment_2()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4343:1: ( rule__MigrationBlock__VersionAssignment_2 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4343:2: rule__MigrationBlock__VersionAssignment_2
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4343:1: ( rule__MigrationBlock__NameAssignment_2 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4343:2: rule__MigrationBlock__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__MigrationBlock__VersionAssignment_2_in_rule__MigrationBlock__Group__2__Impl9389);
-            rule__MigrationBlock__VersionAssignment_2();
+            pushFollow(FOLLOW_rule__MigrationBlock__NameAssignment_2_in_rule__MigrationBlock__Group__2__Impl9389);
+            rule__MigrationBlock__NameAssignment_2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14379,7 +14379,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMigrationBlockAccess().getVersionAssignment_2()); 
+               after(grammarAccess.getMigrationBlockAccess().getNameAssignment_2()); 
             }
 
             }
@@ -49386,9 +49386,9 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__ContentUriSegment__TextAssignment_1_4_1"
 
 
-    // $ANTLR start "rule__MigrationBlock__VersionAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17278:1: rule__MigrationBlock__VersionAssignment_2 : ( RULE_NUMBER ) ;
-    public final void rule__MigrationBlock__VersionAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__MigrationBlock__NameAssignment_2"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17278:1: rule__MigrationBlock__NameAssignment_2 : ( RULE_NUMBER ) ;
+    public final void rule__MigrationBlock__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -49400,11 +49400,11 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17284:1: RULE_NUMBER
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getMigrationBlockAccess().getVersionNUMBERTerminalRuleCall_2_0()); 
+               before(grammarAccess.getMigrationBlockAccess().getNameNUMBERTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__MigrationBlock__VersionAssignment_234819); if (state.failed) return ;
+            match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__MigrationBlock__NameAssignment_234819); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getMigrationBlockAccess().getVersionNUMBERTerminalRuleCall_2_0()); 
+               after(grammarAccess.getMigrationBlockAccess().getNameNUMBERTerminalRuleCall_2_0()); 
             }
 
             }
@@ -49424,7 +49424,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__MigrationBlock__VersionAssignment_2"
+    // $ANTLR end "rule__MigrationBlock__NameAssignment_2"
 
 
     // $ANTLR start "rule__MigrationBlock__StatementsAssignment_4_0"
@@ -58186,7 +58186,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_69_in_rule__MigrationBlock__Group__1__Impl9328 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MigrationBlock__Group__2__Impl_in_rule__MigrationBlock__Group__29359 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
     public static final BitSet FOLLOW_rule__MigrationBlock__Group__3_in_rule__MigrationBlock__Group__29362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MigrationBlock__VersionAssignment_2_in_rule__MigrationBlock__Group__2__Impl9389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MigrationBlock__NameAssignment_2_in_rule__MigrationBlock__Group__2__Impl9389 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__MigrationBlock__Group__3__Impl_in_rule__MigrationBlock__Group__39419 = new BitSet(new long[]{0x0000000000000000L,0x0000001208000002L});
     public static final BitSet FOLLOW_rule__MigrationBlock__Group__4_in_rule__MigrationBlock__Group__39422 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_64_in_rule__MigrationBlock__Group__3__Impl9450 = new BitSet(new long[]{0x0000000000000002L});
@@ -59235,7 +59235,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_RULE_ID_in_rule__ContentUriSegment__NameAssignment_1_234700 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_116_in_rule__ContentUriSegment__NumAssignment_1_4_034736 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_12_in_rule__ContentUriSegment__TextAssignment_1_4_134780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__MigrationBlock__VersionAssignment_234819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__MigrationBlock__NameAssignment_234819 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDDLStatement_in_rule__MigrationBlock__StatementsAssignment_4_034850 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_117_in_rule__ExprConcat__OpAssignment_1_134886 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExprMult_in_rule__ExprConcat__RightAssignment_1_234925 = new BitSet(new long[]{0x0000000000000002L});

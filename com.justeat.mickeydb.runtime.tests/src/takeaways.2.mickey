@@ -1,48 +1,6 @@
 database com.justeat.TakeawaysDB
 
 migration 2 {
-	alter table baskets add column user_prompt_status text;
-} 
-
-migration 3 {
-	alter table restaurants add column num_ratings integer;
-}
-
-migration 4 {
-	create table reviews (
-		_id integer primary key autoincrement,
-		restaurant_id integer,
-		user_id integer,
-		customer_city text,
-		customer_comments text,
-		customer_name text,
-		rate_date integer,
-		rating_average real,
-		rating_average_stars real,
-		restaurant_comments text
-	);
-}
-
-migration 5 {
-	create table restaurant_opening_times (
-		_id integer primary key autoincrement,
-		restaurant_jeid integer,
-		day integer,
-		day_text text,
-		open text,
-		closed text,
-		rank integer,
-		unique(restaurant_jeid, day) on conflict replace
-	);
-	
 	alter table restaurants add column description text;
-}
-
-migration 6 {
-	alter table restaurants add column latitude real;
-	alter table restaurants add column longitude real;
-}
-
-migration 7 {
-	// LEGACY, Do not touch
-}
+	alter table restaurants rename to takeaways;
+} 

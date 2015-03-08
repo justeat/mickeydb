@@ -61,7 +61,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUriSegment/name"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//MigrationBlock">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//MigrationBlock/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//MigrationBlock/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MigrationBlock/statements"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//Expression"/>

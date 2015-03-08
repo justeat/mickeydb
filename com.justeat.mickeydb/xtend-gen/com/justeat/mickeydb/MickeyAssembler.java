@@ -47,7 +47,7 @@ public class MickeyAssembler {
       public void accept(final MickeyDatabaseModel db) {
         final Function1<MigrationBlock, BigDecimal> _function = new Function1<MigrationBlock, BigDecimal>() {
           public BigDecimal apply(final MigrationBlock m) {
-            return m.getVersion();
+            return m.getName();
           }
         };
         ListExtensions.<MigrationBlock, BigDecimal>sortInplaceBy(db.migrations, _function);
