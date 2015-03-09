@@ -1,4 +1,4 @@
 language: java
 jdk:
   - oraclejdk8
-script: mvn -f com.justeat.mickeydb.parent/pom.xml clean verify
+script: mvn -f com.justeat.mickeydb.parent/pom.xml clean verify -DskipTests=true -Dgpg.skip=true
