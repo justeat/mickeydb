@@ -30,9 +30,12 @@ Then in a gradle script we can invoke the assembler that will generate code (ope
 ````gradle
 buildscript {
   repositories {
-    mavenLocal()
-    mavenCentral()
+      mavenCentral()
+      maven {
+          url "https://oss.sonatype.org/content/repositories/snapshots"
+      }
   }
+  
   dependencies {
     classpath "org.xtext:xtext-gradle-plugin:0.1.1"
   }
