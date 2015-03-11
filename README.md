@@ -2,8 +2,6 @@
 
 # mickeydb
 
-##Provisional documentation, in order for this to work you need to ```mvn install``` mickeydb into your local repo
-
 A DSL powered code generator for Android sqlite databases. With MickeyDB you can define your migrations like this:
 
 **src/books.1.mickey**
