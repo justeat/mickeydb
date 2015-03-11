@@ -31,9 +31,6 @@ Then in a gradle script we can invoke the assembler that will generate code (ope
 buildscript {
   repositories {
       mavenCentral()
-      maven {
-          url "https://oss.sonatype.org/content/repositories/snapshots"
-      }
   }
   
   dependencies {
@@ -44,8 +41,10 @@ buildscript {
 apply plugin: "org.xtext.xtext"
 
 repositories {
-  	mavenLocal()
     mavenCentral()
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
 }
   
 dependencies {
