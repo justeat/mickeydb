@@ -65,7 +65,7 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
   {
     switch (eClass.getClassifierID())
     {
-      case MickeyLangPackage.MODEL: return createModel();
+      case MickeyLangPackage.MICKEY_FILE: return createMickeyFile();
       case MickeyLangPackage.MICKEY_BLOCK: return createMickeyBlock();
       case MickeyLangPackage.MICKEY_FUNCTION: return createMickeyFunction();
       case MickeyLangPackage.ACTION_STATEMENT: return createActionStatement();
@@ -212,10 +212,10 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public MickeyFile createMickeyFile()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
+    MickeyFileImpl mickeyFile = new MickeyFileImpl();
+    return mickeyFile;
   }
 
   /**

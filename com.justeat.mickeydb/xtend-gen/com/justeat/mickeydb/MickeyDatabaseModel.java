@@ -7,6 +7,7 @@ import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
 import com.justeat.mickeydb.mickeyLang.MickeyFunction;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import org.eclipse.xtend.lib.annotations.Accessors;
 import org.eclipse.xtext.xbase.lib.Pure;
 
@@ -22,6 +23,10 @@ public class MickeyDatabaseModel {
   private SqliteDatabaseSnapshot snapshot;
   
   public ArrayList<MigrationBlock> migrations = new ArrayList<MigrationBlock>();
+  
+  public Hashtable<String, MigrationBlock> migrationsByName = new Hashtable<String, MigrationBlock>();
+  
+  public Hashtable<String, MigrationBlock> migrationsByFromName = new Hashtable<String, MigrationBlock>();
   
   public ArrayList<CreateTableStatement> initTables = new ArrayList<CreateTableStatement>();
   

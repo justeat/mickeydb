@@ -1,5 +1,5 @@
 database com.justeat.TakeawaysDB
 
-migration 2 {
-	alter table takeaways add column has_vegetarian boolean;
+migrate vegetarian_migration from description_migration  {
+	alter table restaurants add column has_vegetarian boolean;
 } 

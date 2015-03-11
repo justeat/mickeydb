@@ -3,8 +3,8 @@
 package com.justeat.mickeydb.mickeyLang.impl;
 
 import com.justeat.mickeydb.mickeyLang.MickeyBlock;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
-import com.justeat.mickeydb.mickeyLang.Model;
 
 import java.util.Collection;
 
@@ -24,19 +24,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Model</b></em>'.
+ * An implementation of the model object '<em><b>Mickey File</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ModelImpl#getDatabaseName <em>Database Name</em>}</li>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ModelImpl#getBlocks <em>Blocks</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFileImpl#getDatabaseName <em>Database Name</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFileImpl#getBlocks <em>Blocks</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ModelImpl extends MinimalEObjectImpl.Container implements Model
+public class MickeyFileImpl extends MinimalEObjectImpl.Container implements MickeyFile
 {
   /**
    * The default value of the '{@link #getDatabaseName() <em>Database Name</em>}' attribute.
@@ -73,7 +73,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModelImpl()
+  protected MickeyFileImpl()
   {
     super();
   }
@@ -86,7 +86,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   @Override
   protected EClass eStaticClass()
   {
-    return MickeyLangPackage.Literals.MODEL;
+    return MickeyLangPackage.Literals.MICKEY_FILE;
   }
 
   /**
@@ -109,7 +109,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     String oldDatabaseName = databaseName;
     databaseName = newDatabaseName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.MODEL__DATABASE_NAME, oldDatabaseName, databaseName));
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.MICKEY_FILE__DATABASE_NAME, oldDatabaseName, databaseName));
   }
 
   /**
@@ -121,7 +121,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     if (blocks == null)
     {
-      blocks = new EObjectContainmentEList<MickeyBlock>(MickeyBlock.class, this, MickeyLangPackage.MODEL__BLOCKS);
+      blocks = new EObjectContainmentEList<MickeyBlock>(MickeyBlock.class, this, MickeyLangPackage.MICKEY_FILE__BLOCKS);
     }
     return blocks;
   }
@@ -136,7 +136,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MODEL__BLOCKS:
+      case MickeyLangPackage.MICKEY_FILE__BLOCKS:
         return ((InternalEList<?>)getBlocks()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -152,9 +152,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MODEL__DATABASE_NAME:
+      case MickeyLangPackage.MICKEY_FILE__DATABASE_NAME:
         return getDatabaseName();
-      case MickeyLangPackage.MODEL__BLOCKS:
+      case MickeyLangPackage.MICKEY_FILE__BLOCKS:
         return getBlocks();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -171,10 +171,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MODEL__DATABASE_NAME:
+      case MickeyLangPackage.MICKEY_FILE__DATABASE_NAME:
         setDatabaseName((String)newValue);
         return;
-      case MickeyLangPackage.MODEL__BLOCKS:
+      case MickeyLangPackage.MICKEY_FILE__BLOCKS:
         getBlocks().clear();
         getBlocks().addAll((Collection<? extends MickeyBlock>)newValue);
         return;
@@ -192,10 +192,10 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MODEL__DATABASE_NAME:
+      case MickeyLangPackage.MICKEY_FILE__DATABASE_NAME:
         setDatabaseName(DATABASE_NAME_EDEFAULT);
         return;
-      case MickeyLangPackage.MODEL__BLOCKS:
+      case MickeyLangPackage.MICKEY_FILE__BLOCKS:
         getBlocks().clear();
         return;
     }
@@ -212,9 +212,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case MickeyLangPackage.MODEL__DATABASE_NAME:
+      case MickeyLangPackage.MICKEY_FILE__DATABASE_NAME:
         return DATABASE_NAME_EDEFAULT == null ? databaseName != null : !DATABASE_NAME_EDEFAULT.equals(databaseName);
-      case MickeyLangPackage.MODEL__BLOCKS:
+      case MickeyLangPackage.MICKEY_FILE__BLOCKS:
         return blocks != null && !blocks.isEmpty();
     }
     return super.eIsSet(featureID);
@@ -237,4 +237,4 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     return result.toString();
   }
 
-} //ModelImpl
+} //MickeyFileImpl

@@ -10,7 +10,7 @@ import com.justeat.mickeydb.MickeyDatabaseModel
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement
 import com.justeat.mickeydb.mickeyLang.MigrationBlock
-import com.justeat.mickeydb.mickeyLang.Model
+import com.justeat.mickeydb.mickeyLang.MickeyFile
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
@@ -122,16 +122,16 @@ class MickeyLangGenerator implements IGenerator {
 		}	
 	}
 
-	def void generateMigration(String packageName, String databaseName, Resource resource, IFileSystemAccess fsa, MigrationBlock migration, BigDecimal version) { 
+	def void generateMigration(String packageName, String databaseName, Resource resource, IFileSystemAccess fsa, MigrationBlock migration, String version) { 
 		
-		var model = resource.contents.head as Model;
+		var model = resource.contents.head as MickeyFile;
 		
-		var genFileName = packageName.concat(".migrations").resolveFileName("Default".concat(databaseName.pascalize).concat("MigrationV").concat(String::valueOf(version)))
+		var genFileName = packageName.concat(".migrations").resolveFileName("Default".concat(databaseName.pascalize).concat("MigrationV").concat(String::valueOf(version.pascalize)))
 			
 		var generator = mMigrationGenerator.get()
 		
 		fsa.generateFile(genFileName, 
-			generator.generate(model, packageName, databaseName, migration, version)
+			generator.generate(model, packageName, databaseName, migration, version.pascalize)
 		)
 	}
 }

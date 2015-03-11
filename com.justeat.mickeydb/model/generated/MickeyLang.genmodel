@@ -35,9 +35,9 @@
       <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ConflictResolution/ignore"/>
       <genEnumLiterals ecoreEnumLiteral="MickeyLang.ecore#//ConflictResolution/replace"/>
     </genEnums>
-    <genClasses ecoreClass="MickeyLang.ecore#//Model">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//Model/databaseName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//Model/blocks"/>
+    <genClasses ecoreClass="MickeyLang.ecore#//MickeyFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//MickeyFile/databaseName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MickeyFile/blocks"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//MickeyBlock"/>
     <genClasses ecoreClass="MickeyLang.ecore#//MickeyFunction">
@@ -62,6 +62,7 @@
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//MigrationBlock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//MigrationBlock/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MigrationBlock/from"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MigrationBlock/statements"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//Expression"/>

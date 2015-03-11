@@ -25,7 +25,7 @@ public class MickeyLangParser extends org.eclipse.xtext.parser.antlr.AbstractAnt
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "MickeyFile";
 	}
 	
 	public MickeyLangGrammarAccess getGrammarAccess() {

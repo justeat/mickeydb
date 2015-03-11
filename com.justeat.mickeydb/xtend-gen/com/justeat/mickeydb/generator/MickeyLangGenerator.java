@@ -18,9 +18,8 @@ import com.justeat.mickeydb.generator.SqliteMigrationGenerator;
 import com.justeat.mickeydb.generator.SqliteOpenHelperGenerator;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import com.justeat.mickeydb.mickeyLang.Model;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.Consumer;
@@ -126,7 +125,7 @@ public class MickeyLangGenerator implements IGenerator {
           public void apply(final MigrationBlock item, final Integer index) {
             String _packageName = it.getPackageName();
             String _databaseName = it.getDatabaseName();
-            BigDecimal _name = item.getName();
+            String _name = item.getName();
             MickeyLangGenerator.this.generateMigration(_packageName, _databaseName, resource, fsa, item, _name);
           }
         };
@@ -166,19 +165,21 @@ public class MickeyLangGenerator implements IGenerator {
     }
   }
   
-  public void generateMigration(final String packageName, final String databaseName, final Resource resource, final IFileSystemAccess fsa, final MigrationBlock migration, final BigDecimal version) {
+  public void generateMigration(final String packageName, final String databaseName, final Resource resource, final IFileSystemAccess fsa, final MigrationBlock migration, final String version) {
     EList<EObject> _contents = resource.getContents();
     EObject _head = IterableExtensions.<EObject>head(_contents);
-    Model model = ((Model) _head);
+    MickeyFile model = ((MickeyFile) _head);
     String _concat = packageName.concat(".migrations");
     String _pascalize = Strings.pascalize(databaseName);
     String _concat_1 = "Default".concat(_pascalize);
     String _concat_2 = _concat_1.concat("MigrationV");
-    String _valueOf = String.valueOf(version);
+    String _pascalize_1 = Strings.pascalize(version);
+    String _valueOf = String.valueOf(_pascalize_1);
     String _concat_3 = _concat_2.concat(_valueOf);
     String genFileName = Strings.resolveFileName(_concat, _concat_3);
     SqliteMigrationGenerator generator = this.mMigrationGenerator.get();
-    CharSequence _generate = generator.generate(model, packageName, databaseName, migration, version);
+    String _pascalize_2 = Strings.pascalize(version);
+    CharSequence _generate = generator.generate(model, packageName, databaseName, migration, _pascalize_2);
     fsa.generateFile(genFileName, _generate);
   }
 }

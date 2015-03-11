@@ -10,7 +10,6 @@ import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
 import com.justeat.mickeydb.mickeyLang.DDLStatement;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Extension;
@@ -63,7 +62,7 @@ public class SqliteOpenHelperGenerator {
             String _pascalize = Strings.pascalize(_databaseName);
             _builder.append(_pascalize, "");
             _builder.append("MigrationV");
-            BigDecimal _name = migration.getName();
+            String _name = migration.getName();
             _builder.append(_name, "");
             _builder.append(";");
             _builder.newLineIfNotEmpty();
@@ -88,7 +87,7 @@ public class SqliteOpenHelperGenerator {
     _builder.append("\t");
     _builder.append("public static final int VERSION = ");
     MigrationBlock _last = IterableExtensions.<MigrationBlock>last(model.migrations);
-    BigDecimal _name_1 = null;
+    String _name_1 = null;
     if (_last!=null) {
       _name_1=_last.getName();
     }
@@ -282,7 +281,7 @@ public class SqliteOpenHelperGenerator {
             String _pascalize_4 = Strings.pascalize(_databaseName_5);
             _builder.append(_pascalize_4, "\t\t\t\t");
             _builder.append("MigrationV");
-            BigDecimal _name_10 = migration_1.getName();
+            String _name_10 = migration_1.getName();
             _builder.append(_name_10, "\t\t\t\t");
             _builder.append("();");
             _builder.newLineIfNotEmpty();
@@ -322,7 +321,7 @@ public class SqliteOpenHelperGenerator {
             String _pascalize_5 = Strings.pascalize(_databaseName_6);
             _builder.append(_pascalize_5, "\t");
             _builder.append("MigrationV");
-            BigDecimal _name_11 = migration_2.getName();
+            String _name_11 = migration_2.getName();
             _builder.append(_name_11, "\t");
             _builder.append("() {");
             _builder.newLineIfNotEmpty();
@@ -333,7 +332,7 @@ public class SqliteOpenHelperGenerator {
             String _pascalize_6 = Strings.pascalize(_databaseName_7);
             _builder.append(_pascalize_6, "\t\t");
             _builder.append("MigrationV");
-            BigDecimal _name_12 = migration_2.getName();
+            String _name_12 = migration_2.getName();
             _builder.append(_name_12, "\t\t");
             _builder.append("();");
             _builder.newLineIfNotEmpty();

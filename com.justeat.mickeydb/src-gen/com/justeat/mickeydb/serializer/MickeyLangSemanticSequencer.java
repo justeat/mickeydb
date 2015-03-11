@@ -50,10 +50,10 @@ import com.justeat.mickeydb.mickeyLang.JoinSource;
 import com.justeat.mickeydb.mickeyLang.JoinStatement;
 import com.justeat.mickeydb.mickeyLang.Literal;
 import com.justeat.mickeydb.mickeyLang.LiteralDefaultValue;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.MickeyFunction;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import com.justeat.mickeydb.mickeyLang.Model;
 import com.justeat.mickeydb.mickeyLang.NestedExpression;
 import com.justeat.mickeydb.mickeyLang.NewColumn;
 import com.justeat.mickeydb.mickeyLang.NotNull;
@@ -600,6 +600,12 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
+			case MickeyLangPackage.MICKEY_FILE:
+				if(context == grammarAccess.getMickeyFileRule()) {
+					sequence_MickeyFile(context, (MickeyFile) semanticObject); 
+					return; 
+				}
+				else break;
 			case MickeyLangPackage.MICKEY_FUNCTION:
 				if(context == grammarAccess.getMickeyBlockRule() ||
 				   context == grammarAccess.getMickeyFunctionRule()) {
@@ -611,12 +617,6 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 				if(context == grammarAccess.getMickeyBlockRule() ||
 				   context == grammarAccess.getMigrationBlockRule()) {
 					sequence_MigrationBlock(context, (MigrationBlock) semanticObject); 
-					return; 
-				}
-				else break;
-			case MickeyLangPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1525,6 +1525,15 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
+	 *     (databaseName=QualifiedName blocks+=MickeyBlock*)
+	 */
+	protected void sequence_MickeyFile(EObject context, MickeyFile semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=ID (args+=FunctionArg args+=FunctionArg*)? statements+=DMLStatement*)
 	 */
 	protected void sequence_MickeyFunction(EObject context, MickeyFunction semanticObject) {
@@ -1534,18 +1543,9 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (name=NUMBER statements+=DDLStatement*)
+	 *     (name=ID from=[MigrationBlock|QualifiedName]? statements+=DDLStatement*)
 	 */
 	protected void sequence_MigrationBlock(EObject context, MigrationBlock semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (databaseName=QualifiedName blocks+=MickeyBlock*)
-	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

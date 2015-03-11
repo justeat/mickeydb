@@ -22,9 +22,9 @@ import com.justeat.mickeydb.mickeyLang.Function;
 import com.justeat.mickeydb.mickeyLang.InsertStatement;
 import com.justeat.mickeydb.mickeyLang.JoinSource;
 import com.justeat.mickeydb.mickeyLang.JoinStatement;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import com.justeat.mickeydb.mickeyLang.Model;
 import com.justeat.mickeydb.mickeyLang.ResultColumn;
 import com.justeat.mickeydb.mickeyLang.SelectCore;
 import com.justeat.mickeydb.mickeyLang.SelectCoreExpression;
@@ -579,13 +579,13 @@ public class ModelUtil {
     return refs;
   }
   
-  public static Model getModel(final EObject ele) {
+  public static MickeyFile getModel(final EObject ele) {
     EObject e = ele;
     do {
       EObject _eContainer = e.eContainer();
       e = _eContainer;
-    } while((!(e instanceof Model)));
-    return ((Model) e);
+    } while((!(e instanceof MickeyFile)));
+    return ((MickeyFile) e);
   }
   
   public static <T extends Object> T getContainerOfType(final EObject element, final Class<T> type) {

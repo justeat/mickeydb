@@ -8,6 +8,7 @@ import com.justeat.mickeydb.mickeyLang.MickeyFunction
 import com.justeat.mickeydb.mickeyLang.MigrationBlock
 import java.util.ArrayList
 import org.eclipse.xtend.lib.annotations.Accessors
+import java.util.Hashtable
 
 class MickeyDatabaseModel {
 		
@@ -15,6 +16,8 @@ class MickeyDatabaseModel {
 	@Accessors String databaseName
 	@Accessors SqliteDatabaseSnapshot snapshot
 	public var migrations = new ArrayList<MigrationBlock>();
+	public var migrationsByName = new Hashtable<String, MigrationBlock>();
+	public var migrationsByFromName = new Hashtable<String, MigrationBlock>();
 	public var initTables = new ArrayList<CreateTableStatement>();
 	public var initViews = new ArrayList<CreateViewStatement>();
 	public var functions = new ArrayList<MickeyFunction>();

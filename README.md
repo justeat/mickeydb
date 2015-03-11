@@ -1,19 +1,32 @@
 ![Build Status](https://travis-ci.org/justeat/mickeydb.svg)
 
-# mickeydb
+# mickeydb [PREVIEW]
 
-A DSL powered code generator for Android sqlite databases. With MickeyDB you can define your migrations like this:
+With MickeyDB you can use a Sqlite like DSL to generate Android sqlite database backed content providers.
 
-**src/books.1.mickey**
+#Usage
+
+Add your migrations in the same file or across seperate files as follows.
+
+**src/books1.mickey**
 ````
 database com.justeat.Books
 
-migration 1 {
+migrate first_migration {
 	create table books (_id integer primary key, name text);
 }
 ````
 
-You need to add a file ending in init.mickey, this is the mickey assemblers entry point, for now we just need to define the database name.
+**src/books2.mickey**
+````
+database com.justeat.Books
+
+migrate second_migration from first_migration {
+  alter table books add column author text;
+}
+````
+
+You need to add a file ending in init.mickey to satisfy the mickey assembler, for now we just need to define the database name.
 
 **src/books.init.mickey**
 ````

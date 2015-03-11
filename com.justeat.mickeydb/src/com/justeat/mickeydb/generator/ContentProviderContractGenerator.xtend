@@ -9,7 +9,7 @@ import com.justeat.mickeydb.mickeyLang.ContentUri
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement
-import com.justeat.mickeydb.mickeyLang.Model
+import com.justeat.mickeydb.mickeyLang.MickeyFile
 import com.justeat.mickeydb.mickeyLang.ResultColumn
 import com.justeat.mickeydb.mickeyLang.TableDefinition
 import java.util.ArrayList

@@ -17,12 +17,12 @@ import com.justeat.mickeydb.mickeyLang.MickeyBlock;
 import com.justeat.mickeydb.mickeyLang.MickeyFunction;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import com.justeat.mickeydb.mickeyLang.Model;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.ResultColumn;
 import com.justeat.mickeydb.mickeyLang.TableDefinition;
 
 public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider {
-	protected QualifiedName qualifiedName(Model ele){
+	protected QualifiedName qualifiedName(MickeyFile ele){
 		return QualifiedName.create(
 				ele.getDatabaseName());
 	}
@@ -34,13 +34,14 @@ public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider 
 //	}
 	
 	protected QualifiedName qualifiedName(MigrationBlock ele){
-		Model model = getModel(ele);
+		MickeyFile model = getModel(ele);
 		return QualifiedName.create(
-				model.getDatabaseName());
+				model.getDatabaseName(),
+				ele.getName());
 	}
 	
 	protected QualifiedName qualifiedName(ColumnDef def) {
-		Model model = getModel(def);
+		MickeyFile model = getModel(def);
 		if(def.eContainer() instanceof AlterTableAddColumnStatement) {
 			List<INode> nodes = NodeModelUtils.findNodesForFeature(def.eContainer(), MickeyLangPackage.Literals.ALTER_TABLE_ADD_COLUMN_STATEMENT__TABLE);
 			String tableName = NodeModelUtils.getTokenText(nodes.get(0));
@@ -58,34 +59,34 @@ public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider 
 	}
 	
 	protected QualifiedName qualifiedName(TableDefinition ele){
-		Model model = getModel(ele);
+		MickeyFile model = getModel(ele);
 		return QualifiedName.create(
 				model.getDatabaseName(),
 				ele.getName());
 	}
 	
 	protected QualifiedName qualifiedName(MickeyFunction ele){
-		Model model = getModel(ele);
+		MickeyFile model = getModel(ele);
 		return QualifiedName.create(
 				model.getDatabaseName(),
 				ele.getName());
 	}
 	
 	protected QualifiedName qualifiedName(AlterTableAddColumnStatement ele){
-		Model model = getModel(ele);
+		MickeyFile model = getModel(ele);
 		return QualifiedName.create(
 				model.getDatabaseName());
 	}
 	
 	protected QualifiedName qualifiedName(CreateTriggerStatement ele){
-		Model model = getModel(ele);
+		MickeyFile model = getModel(ele);
 		return QualifiedName.create(
 				model.getDatabaseName(),
 				ele.getName());
 	}
 	
 	protected QualifiedName qualifiedName(ResultColumn e) {
-		Model model = getContainerOfType(e, Model.class);
+		MickeyFile model = getContainerOfType(e, MickeyFile.class);
 		CreateViewStatement s = getContainerOfType(e, CreateViewStatement.class);
 		if(s != null) {
 			return QualifiedName.create(
@@ -97,12 +98,12 @@ public class MickeyNameProvider extends DefaultDeclarativeQualifiedNameProvider 
 		return null;
 	}
 
-	private Model getModel(EObject ele) {
+	private MickeyFile getModel(EObject ele) {
 		do {
 			ele = ele.eContainer();
-		} while (!(ele instanceof Model));
+		} while (!(ele instanceof MickeyFile));
 		
-		return (Model) ele;
+		return (MickeyFile) ele;
 	}
 	
 	private <T> T getContainerOfType(EObject ele, Class<T> type) {

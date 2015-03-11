@@ -58,14 +58,14 @@ public interface MickeyLangPackage extends EPackage
   MickeyLangPackage eINSTANCE = com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFileImpl <em>Mickey File</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.justeat.mickeydb.mickeyLang.impl.ModelImpl
-   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getModel()
+   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyFileImpl
+   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getMickeyFile()
    * @generated
    */
-  int MODEL = 0;
+  int MICKEY_FILE = 0;
 
   /**
    * The feature id for the '<em><b>Database Name</b></em>' attribute.
@@ -74,7 +74,7 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__DATABASE_NAME = 0;
+  int MICKEY_FILE__DATABASE_NAME = 0;
 
   /**
    * The feature id for the '<em><b>Blocks</b></em>' containment reference list.
@@ -83,16 +83,16 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL__BLOCKS = 1;
+  int MICKEY_FILE__BLOCKS = 1;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The number of structural features of the '<em>Mickey File</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 2;
+  int MICKEY_FILE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.MickeyBlockImpl <em>Mickey Block</em>}' class.
@@ -318,13 +318,22 @@ public interface MickeyLangPackage extends EPackage
   int MIGRATION_BLOCK__NAME = MICKEY_BLOCK_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>From</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MIGRATION_BLOCK__FROM = MICKEY_BLOCK_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MIGRATION_BLOCK__STATEMENTS = MICKEY_BLOCK_FEATURE_COUNT + 1;
+  int MIGRATION_BLOCK__STATEMENTS = MICKEY_BLOCK_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Migration Block</em>' class.
@@ -333,7 +342,7 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MIGRATION_BLOCK_FEATURE_COUNT = MICKEY_BLOCK_FEATURE_COUNT + 2;
+  int MIGRATION_BLOCK_FEATURE_COUNT = MICKEY_BLOCK_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ExpressionImpl <em>Expression</em>}' class.
@@ -3475,36 +3484,36 @@ public interface MickeyLangPackage extends EPackage
 
 
   /**
-   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.Model <em>Model</em>}'.
+   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.MickeyFile <em>Mickey File</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.Model
+   * @return the meta object for class '<em>Mickey File</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.MickeyFile
    * @generated
    */
-  EClass getModel();
+  EClass getMickeyFile();
 
   /**
-   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.Model#getDatabaseName <em>Database Name</em>}'.
+   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.MickeyFile#getDatabaseName <em>Database Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Database Name</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.Model#getDatabaseName()
-   * @see #getModel()
+   * @see com.justeat.mickeydb.mickeyLang.MickeyFile#getDatabaseName()
+   * @see #getMickeyFile()
    * @generated
    */
-  EAttribute getModel_DatabaseName();
+  EAttribute getMickeyFile_DatabaseName();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.Model#getBlocks <em>Blocks</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.MickeyFile#getBlocks <em>Blocks</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Blocks</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.Model#getBlocks()
-   * @see #getModel()
+   * @see com.justeat.mickeydb.mickeyLang.MickeyFile#getBlocks()
+   * @see #getMickeyFile()
    * @generated
    */
-  EReference getModel_Blocks();
+  EReference getMickeyFile_Blocks();
 
   /**
    * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.MickeyBlock <em>Mickey Block</em>}'.
@@ -3696,6 +3705,17 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    */
   EAttribute getMigrationBlock_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link com.justeat.mickeydb.mickeyLang.MigrationBlock#getFrom <em>From</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>From</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.MigrationBlock#getFrom()
+   * @see #getMigrationBlock()
+   * @generated
+   */
+  EReference getMigrationBlock_From();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.MigrationBlock#getStatements <em>Statements</em>}'.
@@ -6340,14 +6360,14 @@ public interface MickeyLangPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFileImpl <em>Mickey File</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.justeat.mickeydb.mickeyLang.impl.ModelImpl
-     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getModel()
+     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyFileImpl
+     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getMickeyFile()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass MICKEY_FILE = eINSTANCE.getMickeyFile();
 
     /**
      * The meta object literal for the '<em><b>Database Name</b></em>' attribute feature.
@@ -6355,7 +6375,7 @@ public interface MickeyLangPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute MODEL__DATABASE_NAME = eINSTANCE.getModel_DatabaseName();
+    EAttribute MICKEY_FILE__DATABASE_NAME = eINSTANCE.getMickeyFile_DatabaseName();
 
     /**
      * The meta object literal for the '<em><b>Blocks</b></em>' containment reference list feature.
@@ -6363,7 +6383,7 @@ public interface MickeyLangPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__BLOCKS = eINSTANCE.getModel_Blocks();
+    EReference MICKEY_FILE__BLOCKS = eINSTANCE.getMickeyFile_Blocks();
 
     /**
      * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.MickeyBlockImpl <em>Mickey Block</em>}' class.
@@ -6522,6 +6542,14 @@ public interface MickeyLangPackage extends EPackage
      * @generated
      */
     EAttribute MIGRATION_BLOCK__NAME = eINSTANCE.getMigrationBlock_Name();
+
+    /**
+     * The meta object literal for the '<em><b>From</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MIGRATION_BLOCK__FROM = eINSTANCE.getMigrationBlock_From();
 
     /**
      * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.

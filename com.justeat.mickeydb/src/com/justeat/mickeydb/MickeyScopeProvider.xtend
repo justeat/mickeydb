@@ -9,7 +9,7 @@ import com.justeat.mickeydb.mickeyLang.DMLStatement
 import com.justeat.mickeydb.mickeyLang.DropTriggerStatement
 import com.justeat.mickeydb.mickeyLang.DropViewStatement
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
-import com.justeat.mickeydb.mickeyLang.Model
+import com.justeat.mickeydb.mickeyLang.MickeyFile
 import com.justeat.mickeydb.mickeyLang.NewColumn
 import com.justeat.mickeydb.mickeyLang.OldColumn
 import com.justeat.mickeydb.mickeyLang.SelectExpression
@@ -27,29 +27,30 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 
 import static extension com.justeat.mickeydb.ModelUtil.*
 import org.eclipse.xtext.resource.IEObjectDescription
+import com.justeat.mickeydb.mickeyLang.MigrationBlock
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 	@Inject IQualifiedNameProvider nameProvider;
 	
 	override getScope(EObject context, EReference reference) {
-		var scope = delegateGetScope(context, reference)
-		scope.allElements.forEach[element | element.boop]
+//		var scope = delegateGetScope(context, reference)
+//		scope.allElements.forEach[element | element.boop]
 		super.getScope(context, reference)	
 	}
 	
-	def void boop(IEObjectDescription description) {
-		var name = description.name
-		var obj = description.EObjectOrProxy
-		var clazz = description.EClass
-		var uri = description.EObjectURI
-		
-		System.out.println(name + ":" + obj.class.name)
-		
-		var qux = 0;
-		qux = qux + 1
-		
-	}
+//	def void boop(IEObjectDescription description) {
+//		var name = description.name
+//		var obj = description.EObjectOrProxy
+//		var clazz = description.EClass
+//		var uri = description.EObjectURI
+//		
+//		System.out.println(name + ":" + obj.class.name)
+//		
+//		var qux = 0;
+//		qux = qux + 1
+//		
+//	}
 	
 	def IScope scope_AlterTableAddColumnStatement_table(AlterTableAddColumnStatement context, EReference ref) {
 		var scope = delegateGetScope(context, ref)
@@ -171,6 +172,17 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 		var triggerName = context.getFeatureNodeText(ref)
 		var scopedElements = 
 					scope.getElements(QualifiedName.create(model.databaseName, triggerName))
+					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
+
+		Scopes.scopeFor(scopedElements, scope)
+	}
+	
+	def IScope scope_MigrationBlock_from(MigrationBlock context, EReference ref) {
+		var scope = delegateGetScope(context, ref)
+		var model = context.model
+		var migrationName = context.getFeatureNodeText(ref)
+		var scopedElements = 
+					scope.getElements(QualifiedName.create(model.databaseName, migrationName))
 					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
 
 		Scopes.scopeFor(scopedElements, scope)

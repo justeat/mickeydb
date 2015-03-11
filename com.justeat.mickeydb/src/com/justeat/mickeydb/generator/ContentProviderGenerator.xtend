@@ -4,7 +4,7 @@ import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot
 import com.justeat.mickeydb.mickeyLang.ActionStatement
 import com.justeat.mickeydb.mickeyLang.ContentUri
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
-import com.justeat.mickeydb.mickeyLang.Model
+import com.justeat.mickeydb.mickeyLang.MickeyFile
 
 import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*

@@ -18,8 +18,8 @@ import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
 public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class ModelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
+	public class MickeyFileElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MickeyFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDatabaseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cDatabaseNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -31,7 +31,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		// *                                                                     *
 		// * CORE                                                                *
 		// *                                                                     *
-		// *********************************************************************** / Model:
+		// *********************************************************************** / MickeyFile:
 		//	"database" databaseName=QualifiedName blocks+=MickeyBlock*;
 		public ParserRule getRule() { return rule; }
 
@@ -338,52 +338,73 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MigrationBlock");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cMigrationBlockAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cMigrationKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cMigrateKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameNUMBERTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Assignment cStatementsAssignment_4_0 = (Assignment)cGroup_4.eContents().get(0);
-		private final RuleCall cStatementsDDLStatementParserRuleCall_4_0_0 = (RuleCall)cStatementsAssignment_4_0.eContents().get(0);
-		private final Keyword cSemicolonKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cFromKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cFromAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cFromMigrationBlockCrossReference_3_1_0 = (CrossReference)cFromAssignment_3_1.eContents().get(0);
+		private final RuleCall cFromMigrationBlockQualifiedNameParserRuleCall_3_1_0_1 = (RuleCall)cFromMigrationBlockCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Assignment cStatementsAssignment_5_0 = (Assignment)cGroup_5.eContents().get(0);
+		private final RuleCall cStatementsDDLStatementParserRuleCall_5_0_0 = (RuleCall)cStatementsAssignment_5_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//MigrationBlock:
-		//	{MigrationBlock} "migration" name=NUMBER "{" (statements+=DDLStatement ";")* "}";
+		//	{MigrationBlock} "migrate" name=ID ("from" from=[MigrationBlock|QualifiedName])? "{" (statements+=DDLStatement ";")*
+		//	"}";
 		public ParserRule getRule() { return rule; }
 
-		//{MigrationBlock} "migration" name=NUMBER "{" (statements+=DDLStatement ";")* "}"
+		//{MigrationBlock} "migrate" name=ID ("from" from=[MigrationBlock|QualifiedName])? "{" (statements+=DDLStatement ";")* "}"
 		public Group getGroup() { return cGroup; }
 
 		//{MigrationBlock}
 		public Action getMigrationBlockAction_0() { return cMigrationBlockAction_0; }
 
-		//"migration"
-		public Keyword getMigrationKeyword_1() { return cMigrationKeyword_1; }
+		//"migrate"
+		public Keyword getMigrateKeyword_1() { return cMigrateKeyword_1; }
 
-		//name=NUMBER
+		//name=ID
 		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 
-		//NUMBER
-		public RuleCall getNameNUMBERTerminalRuleCall_2_0() { return cNameNUMBERTerminalRuleCall_2_0; }
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+
+		//("from" from=[MigrationBlock|QualifiedName])?
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"from"
+		public Keyword getFromKeyword_3_0() { return cFromKeyword_3_0; }
+
+		//from=[MigrationBlock|QualifiedName]
+		public Assignment getFromAssignment_3_1() { return cFromAssignment_3_1; }
+
+		//[MigrationBlock|QualifiedName]
+		public CrossReference getFromMigrationBlockCrossReference_3_1_0() { return cFromMigrationBlockCrossReference_3_1_0; }
+
+		//QualifiedName
+		public RuleCall getFromMigrationBlockQualifiedNameParserRuleCall_3_1_0_1() { return cFromMigrationBlockQualifiedNameParserRuleCall_3_1_0_1; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//(statements+=DDLStatement ";")*
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_5() { return cGroup_5; }
 
 		//statements+=DDLStatement
-		public Assignment getStatementsAssignment_4_0() { return cStatementsAssignment_4_0; }
+		public Assignment getStatementsAssignment_5_0() { return cStatementsAssignment_5_0; }
 
 		//DDLStatement
-		public RuleCall getStatementsDDLStatementParserRuleCall_4_0_0() { return cStatementsDDLStatementParserRuleCall_4_0_0; }
+		public RuleCall getStatementsDDLStatementParserRuleCall_5_0_0() { return cStatementsDDLStatementParserRuleCall_5_0_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_4_1() { return cSemicolonKeyword_4_1; }
+		public Keyword getSemicolonKeyword_5_1() { return cSemicolonKeyword_5_1; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class SqlExpressionElements extends AbstractParserRuleElementFinder {
@@ -4130,7 +4151,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getReplaceReplaceKeyword_4_0() { return cReplaceReplaceKeyword_4_0; }
 	}
 	
-	private final ModelElements pModel;
+	private final MickeyFileElements pMickeyFile;
 	private final MickeyBlockElements pMickeyBlock;
 	private final MickeyFunctionElements pMickeyFunction;
 	private final ActionStatementElements pActionStatement;
@@ -4212,7 +4233,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		TerminalsGrammarAccess gaTerminals) {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
-		this.pModel = new ModelElements();
+		this.pMickeyFile = new MickeyFileElements();
 		this.pMickeyBlock = new MickeyBlockElements();
 		this.pMickeyFunction = new MickeyFunctionElements();
 		this.pActionStatement = new ActionStatementElements();
@@ -4317,14 +4338,14 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	// *                                                                     *
 	// * CORE                                                                *
 	// *                                                                     *
-	// *********************************************************************** / Model:
+	// *********************************************************************** / MickeyFile:
 	//	"database" databaseName=QualifiedName blocks+=MickeyBlock*;
-	public ModelElements getModelAccess() {
-		return pModel;
+	public MickeyFileElements getMickeyFileAccess() {
+		return pMickeyFile;
 	}
 	
-	public ParserRule getModelRule() {
-		return getModelAccess().getRule();
+	public ParserRule getMickeyFileRule() {
+		return getMickeyFileAccess().getRule();
 	}
 
 	//MickeyBlock:
@@ -4388,7 +4409,8 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MigrationBlock:
-	//	{MigrationBlock} "migration" name=NUMBER "{" (statements+=DDLStatement ";")* "}";
+	//	{MigrationBlock} "migrate" name=ID ("from" from=[MigrationBlock|QualifiedName])? "{" (statements+=DDLStatement ";")*
+	//	"}";
 	public MigrationBlockElements getMigrationBlockAccess() {
 		return pMigrationBlock;
 	}

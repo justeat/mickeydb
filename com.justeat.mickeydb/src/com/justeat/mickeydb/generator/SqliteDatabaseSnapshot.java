@@ -30,9 +30,10 @@ import com.justeat.mickeydb.mickeyLang.DropTableStatement;
 import com.justeat.mickeydb.mickeyLang.DropTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.DropViewStatement;
 import com.justeat.mickeydb.mickeyLang.IndexedColumn;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.MickeyLangFactory;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import com.justeat.mickeydb.mickeyLang.Model;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.PrimaryConstraint;
 import com.justeat.mickeydb.mickeyLang.TableConstraint;
 import com.justeat.mickeydb.mickeyLang.UniqueTableConstraint;
@@ -47,7 +48,7 @@ public class SqliteDatabaseSnapshot {
 		private LinkedHashMap<String, CreateViewStatement> mViews = new LinkedHashMap<String, CreateViewStatement>();
 		private LinkedHashMap<String, CreateTriggerStatement> mTriggers = new LinkedHashMap<String, CreateTriggerStatement>();
 		private LinkedHashMap<String, CreateIndexStatement> mIndexes = new LinkedHashMap<String, CreateIndexStatement>();
-		private Model mSnapshotModel;
+		private MickeyFile mSnapshotModel;
 	
 		private MickeyDatabaseModel mSourceModel;
 		
@@ -122,7 +123,7 @@ public class SqliteDatabaseSnapshot {
 		private void buildSnapshotModel() {
 			XtextResource resource = (XtextResource) mSnapshotResourceSet.createResource(URI.createURI("platform:/resource/app1/temp.mickey"));
 			
-			mSnapshotModel = (Model) MickeyLangFactory.eINSTANCE.createModel();
+			mSnapshotModel = (MickeyFile) MickeyLangFactory.eINSTANCE.createMickeyFile();
 			mSnapshotModel.setDatabaseName(mSourceModel.getDatabaseName());
 			
 			resource.getContents().add(mSnapshotModel);

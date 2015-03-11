@@ -74,7 +74,7 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSqliteDataTypeAccess().getAlternatives(), "rule__SqliteDataType__Alternatives");
 					put(grammarAccess.getColumnTypeAccess().getAlternatives(), "rule__ColumnType__Alternatives");
 					put(grammarAccess.getConflictResolutionAccess().getAlternatives(), "rule__ConflictResolution__Alternatives");
-					put(grammarAccess.getModelAccess().getGroup(), "rule__Model__Group__0");
+					put(grammarAccess.getMickeyFileAccess().getGroup(), "rule__MickeyFile__Group__0");
 					put(grammarAccess.getMickeyFunctionAccess().getGroup(), "rule__MickeyFunction__Group__0");
 					put(grammarAccess.getMickeyFunctionAccess().getGroup_3(), "rule__MickeyFunction__Group_3__0");
 					put(grammarAccess.getMickeyFunctionAccess().getGroup_3_1(), "rule__MickeyFunction__Group_3_1__0");
@@ -85,7 +85,8 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getContentUriAccess().getGroup_2(), "rule__ContentUri__Group_2__0");
 					put(grammarAccess.getContentUriSegmentAccess().getGroup_1(), "rule__ContentUriSegment__Group_1__0");
 					put(grammarAccess.getMigrationBlockAccess().getGroup(), "rule__MigrationBlock__Group__0");
-					put(grammarAccess.getMigrationBlockAccess().getGroup_4(), "rule__MigrationBlock__Group_4__0");
+					put(grammarAccess.getMigrationBlockAccess().getGroup_3(), "rule__MigrationBlock__Group_3__0");
+					put(grammarAccess.getMigrationBlockAccess().getGroup_5(), "rule__MigrationBlock__Group_5__0");
 					put(grammarAccess.getExprConcatAccess().getGroup(), "rule__ExprConcat__Group__0");
 					put(grammarAccess.getExprConcatAccess().getGroup_1(), "rule__ExprConcat__Group_1__0");
 					put(grammarAccess.getExprMultAccess().getGroup(), "rule__ExprMult__Group__0");
@@ -212,8 +213,8 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSignedNumberAccess().getGroup(), "rule__SignedNumber__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup(), "rule__QualifiedName__Group__0");
 					put(grammarAccess.getQualifiedNameAccess().getGroup_1(), "rule__QualifiedName__Group_1__0");
-					put(grammarAccess.getModelAccess().getDatabaseNameAssignment_1(), "rule__Model__DatabaseNameAssignment_1");
-					put(grammarAccess.getModelAccess().getBlocksAssignment_2(), "rule__Model__BlocksAssignment_2");
+					put(grammarAccess.getMickeyFileAccess().getDatabaseNameAssignment_1(), "rule__MickeyFile__DatabaseNameAssignment_1");
+					put(grammarAccess.getMickeyFileAccess().getBlocksAssignment_2(), "rule__MickeyFile__BlocksAssignment_2");
 					put(grammarAccess.getMickeyFunctionAccess().getNameAssignment_1(), "rule__MickeyFunction__NameAssignment_1");
 					put(grammarAccess.getMickeyFunctionAccess().getArgsAssignment_3_0(), "rule__MickeyFunction__ArgsAssignment_3_0");
 					put(grammarAccess.getMickeyFunctionAccess().getArgsAssignment_3_1_1(), "rule__MickeyFunction__ArgsAssignment_3_1_1");
@@ -229,7 +230,8 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getContentUriSegmentAccess().getNumAssignment_1_4_0(), "rule__ContentUriSegment__NumAssignment_1_4_0");
 					put(grammarAccess.getContentUriSegmentAccess().getTextAssignment_1_4_1(), "rule__ContentUriSegment__TextAssignment_1_4_1");
 					put(grammarAccess.getMigrationBlockAccess().getNameAssignment_2(), "rule__MigrationBlock__NameAssignment_2");
-					put(grammarAccess.getMigrationBlockAccess().getStatementsAssignment_4_0(), "rule__MigrationBlock__StatementsAssignment_4_0");
+					put(grammarAccess.getMigrationBlockAccess().getFromAssignment_3_1(), "rule__MigrationBlock__FromAssignment_3_1");
+					put(grammarAccess.getMigrationBlockAccess().getStatementsAssignment_5_0(), "rule__MigrationBlock__StatementsAssignment_5_0");
 					put(grammarAccess.getExprConcatAccess().getOpAssignment_1_1(), "rule__ExprConcat__OpAssignment_1_1");
 					put(grammarAccess.getExprConcatAccess().getRightAssignment_1_2(), "rule__ExprConcat__RightAssignment_1_2");
 					put(grammarAccess.getExprMultAccess().getOpAssignment_1_1(), "rule__ExprMult__OpAssignment_1_1");
@@ -409,7 +411,7 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			com.justeat.mickeydb.ui.contentassist.antlr.internal.InternalMickeyLangParser typedParser = (com.justeat.mickeydb.ui.contentassist.antlr.internal.InternalMickeyLangParser) parser;
-			typedParser.entryRuleModel();
+			typedParser.entryRuleMickeyFile();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

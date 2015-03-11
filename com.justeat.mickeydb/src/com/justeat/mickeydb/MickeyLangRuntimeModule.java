@@ -20,5 +20,4 @@ public class MickeyLangRuntimeModule extends com.justeat.mickeydb.AbstractMickey
     public Class<? extends IScopeProvider> bindIScopeProvider() {
     	return MickeyScopeProvider.class;
     }
-
 }

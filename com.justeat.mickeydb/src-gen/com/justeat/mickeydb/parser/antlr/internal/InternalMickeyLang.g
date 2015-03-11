@@ -45,7 +45,7 @@ import com.justeat.mickeydb.services.MickeyLangGrammarAccess;
     
     @Override
     protected String getFirstRuleName() {
-    	return "Model";	
+    	return "MickeyFile";	
    	}
    	
    	@Override
@@ -64,32 +64,32 @@ import com.justeat.mickeydb.services.MickeyLangGrammarAccess;
 
 
 
-// Entry rule entryRuleModel
-entryRuleModel returns [EObject current=null] 
+// Entry rule entryRuleMickeyFile
+entryRuleMickeyFile returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getModelRule()); }
-	 iv_ruleModel=ruleModel 
-	 { $current=$iv_ruleModel.current; } 
+	{ newCompositeNode(grammarAccess.getMickeyFileRule()); }
+	 iv_ruleMickeyFile=ruleMickeyFile 
+	 { $current=$iv_ruleMickeyFile.current; } 
 	 EOF 
 ;
 
-// Rule Model
-ruleModel returns [EObject current=null] 
+// Rule MickeyFile
+ruleMickeyFile returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (	otherlv_0='database' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getDatabaseKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getMickeyFileAccess().getDatabaseKeyword_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getDatabaseNameQualifiedNameParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getMickeyFileAccess().getDatabaseNameQualifiedNameParserRuleCall_1_0()); 
 	    }
 		lv_databaseName_1_0=ruleQualifiedName		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	            $current = createModelElementForParent(grammarAccess.getMickeyFileRule());
 	        }
        		set(
        			$current, 
@@ -103,11 +103,11 @@ ruleModel returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getBlocksMickeyBlockParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getMickeyFileAccess().getBlocksMickeyBlockParserRuleCall_2_0()); 
 	    }
 		lv_blocks_2_0=ruleMickeyBlock		{
 	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	            $current = createModelElementForParent(grammarAccess.getMickeyFileRule());
 	        }
        		add(
        			$current, 
@@ -616,15 +616,15 @@ ruleMigrationBlock returns [EObject current=null]
             grammarAccess.getMigrationBlockAccess().getMigrationBlockAction_0(),
             $current);
     }
-)	otherlv_1='migration' 
+)	otherlv_1='migrate' 
     {
-    	newLeafNode(otherlv_1, grammarAccess.getMigrationBlockAccess().getMigrationKeyword_1());
+    	newLeafNode(otherlv_1, grammarAccess.getMigrationBlockAccess().getMigrateKeyword_1());
     }
 (
 (
-		lv_name_2_0=RULE_NUMBER
+		lv_name_2_0=RULE_ID
 		{
-			newLeafNode(lv_name_2_0, grammarAccess.getMigrationBlockAccess().getNameNUMBERTerminalRuleCall_2_0()); 
+			newLeafNode(lv_name_2_0, grammarAccess.getMigrationBlockAccess().getNameIDTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -634,39 +634,58 @@ ruleMigrationBlock returns [EObject current=null]
        			$current, 
        			"name",
         		lv_name_2_0, 
-        		"NUMBER");
+        		"ID");
 	    }
 
 )
-)	otherlv_3='{' 
+)(	otherlv_3='from' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getMigrationBlockAccess().getLeftCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getMigrationBlockAccess().getFromKeyword_3_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMigrationBlockRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getMigrationBlockAccess().getFromMigrationBlockCrossReference_3_1_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?	otherlv_5='{' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getMigrationBlockAccess().getLeftCurlyBracketKeyword_4());
     }
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMigrationBlockAccess().getStatementsDDLStatementParserRuleCall_4_0_0()); 
+	        newCompositeNode(grammarAccess.getMigrationBlockAccess().getStatementsDDLStatementParserRuleCall_5_0_0()); 
 	    }
-		lv_statements_4_0=ruleDDLStatement		{
+		lv_statements_6_0=ruleDDLStatement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMigrationBlockRule());
 	        }
        		add(
        			$current, 
        			"statements",
-        		lv_statements_4_0, 
+        		lv_statements_6_0, 
         		"DDLStatement");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_5=';' 
+)	otherlv_7=';' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getMigrationBlockAccess().getSemicolonKeyword_4_1());
+    	newLeafNode(otherlv_7, grammarAccess.getMigrationBlockAccess().getSemicolonKeyword_5_1());
     }
-)*	otherlv_6='}' 
+)*	otherlv_8='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getMigrationBlockAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_8, grammarAccess.getMigrationBlockAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;

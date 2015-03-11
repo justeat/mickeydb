@@ -1,48 +1,41 @@
 package com.justeat.mickeydb
 
 import com.google.common.collect.Lists
-import java.util.ArrayList
-import java.util.HashSet
-import org.eclipse.emf.ecore.EObject
-import org.eclipse.xtext.EcoreUtil2
-import org.eclipse.xtext.util.Strings
-import org.eclipse.xtext.xbase.lib.Functions
-import java.util.LinkedList
-import java.util.Collection
-import com.justeat.mickeydb.mickeyLang.DDLStatement
-import com.justeat.mickeydb.mickeyLang.MigrationBlock
-import com.justeat.mickeydb.mickeyLang.CreateTableStatement
-import com.justeat.mickeydb.mickeyLang.Model
-import com.justeat.mickeydb.mickeyLang.CreateViewStatement
-import com.justeat.mickeydb.mickeyLang.SelectExpression
-import com.justeat.mickeydb.mickeyLang.SingleSourceTable
-import com.justeat.mickeydb.mickeyLang.SelectCoreExpression
-import com.justeat.mickeydb.mickeyLang.SelectCore
-import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement
-import com.justeat.mickeydb.mickeyLang.TableDefinition
-import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot
-import com.justeat.mickeydb.mickeyLang.ColumnSource
-import com.justeat.mickeydb.mickeyLang.ColumnType
-import com.justeat.mickeydb.mickeyLang.ResultColumn
+import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement
 import com.justeat.mickeydb.mickeyLang.CastExpression
-import com.justeat.mickeydb.mickeyLang.ColumnSourceRef
 import com.justeat.mickeydb.mickeyLang.ColumnDef
+import com.justeat.mickeydb.mickeyLang.ColumnSource
+import com.justeat.mickeydb.mickeyLang.ColumnSourceRef
+import com.justeat.mickeydb.mickeyLang.ColumnType
+import com.justeat.mickeydb.mickeyLang.CreateTableStatement
+import com.justeat.mickeydb.mickeyLang.CreateViewStatement
+import com.justeat.mickeydb.mickeyLang.DDLStatement
+import com.justeat.mickeydb.mickeyLang.DMLStatement
+import com.justeat.mickeydb.mickeyLang.DeleteStatement
 import com.justeat.mickeydb.mickeyLang.ExprConcat
 import com.justeat.mickeydb.mickeyLang.Function
-import com.justeat.mickeydb.mickeyLang.SqliteDataType
-import com.justeat.mickeydb.mickeyLang.SingleSource
-import org.eclipse.emf.ecore.resource.ResourceSet
-import com.justeat.mickeydb.mickeyLang.Model
-import java.util.List
-import org.eclipse.xtext.nodemodel.INode
-import org.eclipse.xtext.nodemodel.util.NodeModelUtils
-import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
-import org.eclipse.emf.ecore.EReference
-import com.justeat.mickeydb.mickeyLang.DMLStatement
-import com.justeat.mickeydb.mickeyLang.UpdateStatement
 import com.justeat.mickeydb.mickeyLang.InsertStatement
-import com.justeat.mickeydb.mickeyLang.DeleteStatement
+import com.justeat.mickeydb.mickeyLang.MickeyFile
+import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
+import com.justeat.mickeydb.mickeyLang.MigrationBlock
+import com.justeat.mickeydb.mickeyLang.ResultColumn
+import com.justeat.mickeydb.mickeyLang.SelectCore
+import com.justeat.mickeydb.mickeyLang.SelectCoreExpression
+import com.justeat.mickeydb.mickeyLang.SelectExpression
+import com.justeat.mickeydb.mickeyLang.SingleSource
+import com.justeat.mickeydb.mickeyLang.SingleSourceTable
+import com.justeat.mickeydb.mickeyLang.SqliteDataType
+import com.justeat.mickeydb.mickeyLang.TableDefinition
+import com.justeat.mickeydb.mickeyLang.UpdateStatement
+import java.util.ArrayList
+import java.util.HashSet
+import java.util.LinkedList
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EReference
+import org.eclipse.xtext.EcoreUtil2
+import org.eclipse.xtext.nodemodel.util.NodeModelUtils
+import org.eclipse.xtext.util.Strings
 
 class ModelUtil {
 	/*
@@ -489,13 +482,13 @@ class ModelUtil {
 //		}
 //	}
 	
-	def static Model getModel(EObject ele) {
+	def static MickeyFile getModel(EObject ele) {
 		var e = ele;
 		do {
 			e = e.eContainer();
-		} while (!(e instanceof Model));
+		} while (!(e instanceof MickeyFile));
 		
-		return e as Model;
+		return e as MickeyFile;
 	}
 	
 	def static <T> T getContainerOfType(EObject element, Class<T> type) {

@@ -61,11 +61,11 @@ import com.justeat.mickeydb.mickeyLang.Literal;
 import com.justeat.mickeydb.mickeyLang.LiteralDefaultValue;
 import com.justeat.mickeydb.mickeyLang.LiteralValue;
 import com.justeat.mickeydb.mickeyLang.MickeyBlock;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.MickeyFunction;
 import com.justeat.mickeydb.mickeyLang.MickeyLangFactory;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import com.justeat.mickeydb.mickeyLang.Model;
 import com.justeat.mickeydb.mickeyLang.NestedExpression;
 import com.justeat.mickeydb.mickeyLang.NewColumn;
 import com.justeat.mickeydb.mickeyLang.NotNull;
@@ -121,7 +121,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass modelEClass = null;
+  private EClass mickeyFileEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -849,9 +849,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModel()
+  public EClass getMickeyFile()
   {
-    return modelEClass;
+    return mickeyFileEClass;
   }
 
   /**
@@ -859,9 +859,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getModel_DatabaseName()
+  public EAttribute getMickeyFile_DatabaseName()
   {
-    return (EAttribute)modelEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)mickeyFileEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -869,9 +869,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Blocks()
+  public EReference getMickeyFile_Blocks()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(1);
+    return (EReference)mickeyFileEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1059,9 +1059,19 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMigrationBlock_Statements()
+  public EReference getMigrationBlock_From()
   {
     return (EReference)migrationBlockEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMigrationBlock_Statements()
+  {
+    return (EReference)migrationBlockEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -3544,9 +3554,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     isCreated = true;
 
     // Create classes and their features
-    modelEClass = createEClass(MODEL);
-    createEAttribute(modelEClass, MODEL__DATABASE_NAME);
-    createEReference(modelEClass, MODEL__BLOCKS);
+    mickeyFileEClass = createEClass(MICKEY_FILE);
+    createEAttribute(mickeyFileEClass, MICKEY_FILE__DATABASE_NAME);
+    createEReference(mickeyFileEClass, MICKEY_FILE__BLOCKS);
 
     mickeyBlockEClass = createEClass(MICKEY_BLOCK);
 
@@ -3572,6 +3582,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
 
     migrationBlockEClass = createEClass(MIGRATION_BLOCK);
     createEAttribute(migrationBlockEClass, MIGRATION_BLOCK__NAME);
+    createEReference(migrationBlockEClass, MIGRATION_BLOCK__FROM);
     createEReference(migrationBlockEClass, MIGRATION_BLOCK__STATEMENTS);
 
     expressionEClass = createEClass(EXPRESSION);
@@ -4001,9 +4012,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     expressionDefaultValueEClass.getESuperTypes().add(this.getDefaultValue());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getModel_DatabaseName(), ecorePackage.getEString(), "databaseName", null, 0, 1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModel_Blocks(), this.getMickeyBlock(), null, "blocks", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(mickeyFileEClass, MickeyFile.class, "MickeyFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMickeyFile_DatabaseName(), ecorePackage.getEString(), "databaseName", null, 0, 1, MickeyFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMickeyFile_Blocks(), this.getMickeyBlock(), null, "blocks", null, 0, -1, MickeyFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(mickeyBlockEClass, MickeyBlock.class, "MickeyBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4028,7 +4039,8 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEAttribute(getContentUriSegment_Name(), ecorePackage.getEString(), "name", null, 0, 1, ContentUriSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(migrationBlockEClass, MigrationBlock.class, "MigrationBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getMigrationBlock_Name(), ecorePackage.getEBigDecimal(), "name", null, 0, 1, MigrationBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMigrationBlock_Name(), ecorePackage.getEString(), "name", null, 0, 1, MigrationBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMigrationBlock_From(), this.getMigrationBlock(), null, "from", null, 0, 1, MigrationBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMigrationBlock_Statements(), this.getDDLStatement(), null, "statements", null, 0, -1, MigrationBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

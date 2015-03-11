@@ -23,13 +23,13 @@ public interface MickeyLangFactory extends EFactory
   MickeyLangFactory eINSTANCE = com.justeat.mickeydb.mickeyLang.impl.MickeyLangFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Mickey File</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Mickey File</em>'.
    * @generated
    */
-  Model createModel();
+  MickeyFile createMickeyFile();
 
   /**
    * Returns a new object of class '<em>Mickey Block</em>'.

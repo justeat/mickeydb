@@ -3,7 +3,7 @@ package com.justeat.mickeydb.generator
 import com.google.inject.Inject
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot
 import com.justeat.mickeydb.generator.SqliteDatabaseStatementGenerator
-import com.justeat.mickeydb.mickeyLang.Model
+import com.justeat.mickeydb.mickeyLang.MickeyFile
 
 import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*

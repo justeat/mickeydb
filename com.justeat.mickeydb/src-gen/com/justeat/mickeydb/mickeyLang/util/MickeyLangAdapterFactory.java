@@ -75,9 +75,9 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
     new MickeyLangSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter caseMickeyFile(MickeyFile object)
       {
-        return createModelAdapter();
+        return createMickeyFileAdapter();
       }
       @Override
       public Adapter caseMickeyBlock(MickeyBlock object)
@@ -552,16 +552,16 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.MickeyFile <em>Mickey File</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.justeat.mickeydb.mickeyLang.Model
+   * @see com.justeat.mickeydb.mickeyLang.MickeyFile
    * @generated
    */
-  public Adapter createModelAdapter()
+  public Adapter createMickeyFileAdapter()
   {
     return null;
   }

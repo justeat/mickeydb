@@ -8,7 +8,7 @@ generate mickeyLang "http://www.justeat.com/mickeydb/MickeyLang"
  * CORE                                                                *
  *                                                                     *
  ***********************************************************************/
-Model:
+MickeyFile:
 	'database' databaseName=QualifiedName
 	 blocks+=MickeyBlock*;
 
@@ -37,7 +37,7 @@ ContentUriSegment:
 
 MigrationBlock:
 	{MigrationBlock}
-	'migration' name=NUMBER '{' (statements+=DDLStatement ';')* '}';
+	'migrate' name=ID ('from' from=[MigrationBlock|QualifiedName])? '{' (statements+=DDLStatement ';')* '}';
 	
 /***********************************************************************
  *                                                                     *

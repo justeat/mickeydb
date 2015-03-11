@@ -4,9 +4,8 @@ import com.google.inject.Inject;
 import com.justeat.mickeydb.Strings;
 import com.justeat.mickeydb.generator.SqliteDatabaseStatementGenerator;
 import com.justeat.mickeydb.mickeyLang.DDLStatement;
+import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
-import com.justeat.mickeydb.mickeyLang.Model;
-import java.math.BigDecimal;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Extension;
@@ -17,7 +16,7 @@ public class SqliteMigrationGenerator {
   @Extension
   private SqliteDatabaseStatementGenerator _sqliteDatabaseStatementGenerator;
   
-  public CharSequence generate(final Model model, final String packageName, final String databaseName, final MigrationBlock migration, final BigDecimal version) {
+  public CharSequence generate(final MickeyFile model, final String packageName, final String databaseName, final MigrationBlock migration, final String version) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("/*");
     _builder.newLine();
@@ -41,7 +40,8 @@ public class SqliteMigrationGenerator {
     String _pascalize = Strings.pascalize(databaseName);
     _builder.append(_pascalize, "");
     _builder.append("MigrationV");
-    _builder.append(version, "");
+    String _pascalize_1 = Strings.pascalize(version);
+    _builder.append(_pascalize_1, "");
     _builder.append(" extends SQLiteMigration {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");

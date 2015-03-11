@@ -6,8 +6,6 @@ import com.justeat.mickeydb.mickeyLang.DDLStatement;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
 
-import java.math.BigDecimal;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -32,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl#getFrom <em>From</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl#getStatements <em>Statements</em>}</li>
  * </ul>
  *
@@ -47,7 +46,7 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
    * @generated
    * @ordered
    */
-  protected static final BigDecimal NAME_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -57,7 +56,17 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
    * @generated
    * @ordered
    */
-  protected BigDecimal name = NAME_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFrom()
+   * @generated
+   * @ordered
+   */
+  protected MigrationBlock from;
 
   /**
    * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
@@ -95,7 +104,7 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
    * <!-- end-user-doc -->
    * @generated
    */
-  public BigDecimal getName()
+  public String getName()
   {
     return name;
   }
@@ -105,12 +114,55 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(BigDecimal newName)
+  public void setName(String newName)
   {
-    BigDecimal oldName = name;
+    String oldName = name;
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.MIGRATION_BLOCK__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MigrationBlock getFrom()
+  {
+    if (from != null && from.eIsProxy())
+    {
+      InternalEObject oldFrom = (InternalEObject)from;
+      from = (MigrationBlock)eResolveProxy(oldFrom);
+      if (from != oldFrom)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MickeyLangPackage.MIGRATION_BLOCK__FROM, oldFrom, from));
+      }
+    }
+    return from;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MigrationBlock basicGetFrom()
+  {
+    return from;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFrom(MigrationBlock newFrom)
+  {
+    MigrationBlock oldFrom = from;
+    from = newFrom;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.MIGRATION_BLOCK__FROM, oldFrom, from));
   }
 
   /**
@@ -155,6 +207,9 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
     {
       case MickeyLangPackage.MIGRATION_BLOCK__NAME:
         return getName();
+      case MickeyLangPackage.MIGRATION_BLOCK__FROM:
+        if (resolve) return getFrom();
+        return basicGetFrom();
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         return getStatements();
     }
@@ -173,7 +228,10 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
     switch (featureID)
     {
       case MickeyLangPackage.MIGRATION_BLOCK__NAME:
-        setName((BigDecimal)newValue);
+        setName((String)newValue);
+        return;
+      case MickeyLangPackage.MIGRATION_BLOCK__FROM:
+        setFrom((MigrationBlock)newValue);
         return;
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         getStatements().clear();
@@ -196,6 +254,9 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
       case MickeyLangPackage.MIGRATION_BLOCK__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case MickeyLangPackage.MIGRATION_BLOCK__FROM:
+        setFrom((MigrationBlock)null);
+        return;
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         getStatements().clear();
         return;
@@ -215,6 +276,8 @@ public class MigrationBlockImpl extends MickeyBlockImpl implements MigrationBloc
     {
       case MickeyLangPackage.MIGRATION_BLOCK__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MickeyLangPackage.MIGRATION_BLOCK__FROM:
+        return from != null;
       case MickeyLangPackage.MIGRATION_BLOCK__STATEMENTS:
         return statements != null && !statements.isEmpty();
     }

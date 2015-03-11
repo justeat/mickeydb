@@ -1,6 +1,6 @@
 database com.justeat.TakeawaysDB
 
-migration 1 {
+migrate initial_migration {
 	create table restaurants (
 		_id integer primary key autoincrement,
 		name text,
@@ -8,4 +8,4 @@ migration 1 {
 		cuisines text,
 		rating real 
 	);
-} 
+}
