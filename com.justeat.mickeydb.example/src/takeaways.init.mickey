@@ -1,0 +1,12 @@
+database com.justeat.TakeawaysDB
+
+create temp view all_restaurants as
+	select 
+		t._id as takeaway_id,
+		t.name as takeaway_name,
+		t.description as takeaway_description,
+		t.city as takeaway_city,
+		t.cuisines as takeaway_cuisines,
+		t.rating as takeaway_rating
+	from restaurants as t
+ 

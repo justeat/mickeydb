@@ -46,18 +46,18 @@ class MickeyLangGenerator implements IGenerator {
 		
 		var mickeyModel = assembler.assemble(resource)
 		
-		val stubOutput = "" //MechanoidOutputConfigurationProvider::DEFAULT_STUB_OUTPUT;
+		val stubOutput = MickeyOutputConfigurationProvider.DEFAULT_STUB_OUTPUT
 		
 		 mickeyModel.databases.values.forEach[				
 				fsa.generateFile(
 					packageName.resolveFileName("Abstract".concat(databaseName.pascalize).concat("OpenHelper")), 
 					mOpenHelperGenerator.generate(it)
 				);
-//				fsa.generateFile(
-//					packageName.resolveFileName(databaseName.pascalize.concat("OpenHelper")), 
-//					stubOutput, 
-//					mOpenHelperGenerator.generateStub(it, snapshot)
-//				);
+				fsa.generateFile(
+					packageName.resolveFileName(databaseName.pascalize.concat("OpenHelper")), 
+					stubOutput, 
+					mOpenHelperGenerator.generateStub(it, snapshot)
+				);
 				fsa.generateFile(
 					packageName.resolveFileName(databaseName.pascalize.concat("Contract")), 
 					mContentProviderContractGenerator.generate(it)
@@ -68,11 +68,11 @@ class MickeyLangGenerator implements IGenerator {
 					mContentProviderGenerator.generate(it)
 				);
 				
-//				fsa.generateFile(
-//					packageName.resolveFileName(databaseName.pascalize.concat("ContentProvider")), 
-//					stubOutput, 
-//					mContentProviderGenerator.generateStub(it, snapshot)
-//				);
+				fsa.generateFile(
+					packageName.resolveFileName(databaseName.pascalize.concat("ContentProvider")), 
+					stubOutput, 
+					mContentProviderGenerator.generateStub(it, snapshot)
+				);
 				
 				snapshot.tables.forEach[
 					statement|
@@ -95,7 +95,7 @@ class MickeyLangGenerator implements IGenerator {
 				];
 				
 				it.migrations.forEach[
-					item,index|generateMigration(packageName, databaseName, resource, fsa, item, item.name)
+					item,index|generateMigration(packageName, databaseName, resource, fsa, item)
 				];			 	
 		 ]
 	}
@@ -122,16 +122,16 @@ class MickeyLangGenerator implements IGenerator {
 		}	
 	}
 
-	def void generateMigration(String packageName, String databaseName, Resource resource, IFileSystemAccess fsa, MigrationBlock migration, String version) { 
+	def void generateMigration(String packageName, String databaseName, Resource resource, IFileSystemAccess fsa, MigrationBlock migration) { 
 		
 		var model = resource.contents.head as MickeyFile;
 		
-		var genFileName = packageName.concat(".migrations").resolveFileName("Default".concat(databaseName.pascalize).concat("MigrationV").concat(String::valueOf(version.pascalize)))
+		var genFileName = packageName.concat(".migrations").resolveFileName("Default".concat(databaseName.pascalize).concat("Migration").concat(String::valueOf(migration.name.pascalize)))
 			
 		var generator = mMigrationGenerator.get()
 		
 		fsa.generateFile(genFileName, 
-			generator.generate(model, packageName, databaseName, migration, version.pascalize)
+			generator.generate(model, packageName, databaseName, migration)
 		)
 	}
 }

@@ -1,0 +1,6 @@
+database com.justeat.TakeawaysDB
+
+migrate description_migration from initial_migration {
+	alter table restaurants add column description text;
+	//alter table restaurants rename to takeaways;
+} 

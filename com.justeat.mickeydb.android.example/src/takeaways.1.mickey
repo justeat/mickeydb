@@ -1,0 +1,11 @@
+database com.example.mickeydbexample.TakeawaysDB
+
+migrate initial_migration {
+	create table restaurants (
+		_id integer primary key autoincrement,
+		name text,
+		city text,
+		cuisines text,
+		rating real 
+	);
+}

@@ -31,6 +31,7 @@
 <!-- 		<module>../com.justeat.mickeydb.ui</module> -->
 <!-- 		<module>../com.justeat.mickeydb.tests</module> -->
 		<module>../com.justeat.mickeydb</module>
+		<module>../com.justeat.mickeydb.lib</module>
 <!-- 		<module>../com.justeat.mickeydb.repository</module> -->
 	</modules>
 	<repositories>

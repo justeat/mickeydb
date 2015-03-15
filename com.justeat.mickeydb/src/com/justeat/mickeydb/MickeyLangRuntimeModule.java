@@ -3,15 +3,26 @@
  */
 package com.justeat.mickeydb;
 
+import org.eclipse.xtext.generator.IOutputConfigurationProvider;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
-import org.eclipse.xtext.scoping.IGlobalScopeProvider;
 import org.eclipse.xtext.scoping.IScopeProvider;
+
+import com.google.inject.Binder;
+import com.justeat.mickeydb.generator.MickeyOutputConfigurationProvider;
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class MickeyLangRuntimeModule extends com.justeat.mickeydb.AbstractMickeyLangRuntimeModule {
+ 
     @Override
+    public void configure(Binder binder) {
+        super.configure(binder);
+
+        binder.bind(IOutputConfigurationProvider.class).to(MickeyOutputConfigurationProvider.class);
+    }
+    
+	@Override
     public Class<? extends IQualifiedNameProvider> bindIQualifiedNameProvider() {
         return MickeyNameProvider.class;
     }

@@ -13,6 +13,7 @@ import com.justeat.mickeydb.Strings;
 import com.justeat.mickeydb.generator.ActiveRecordGenerator;
 import com.justeat.mickeydb.generator.ContentProviderContractGenerator;
 import com.justeat.mickeydb.generator.ContentProviderGenerator;
+import com.justeat.mickeydb.generator.MickeyOutputConfigurationProvider;
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot;
 import com.justeat.mickeydb.generator.SqliteMigrationGenerator;
 import com.justeat.mickeydb.generator.SqliteOpenHelperGenerator;
@@ -66,7 +67,7 @@ public class MickeyLangGenerator implements IGenerator {
       return;
     }
     MickeyModel mickeyModel = this.assembler.assemble(resource);
-    final String stubOutput = "";
+    final String stubOutput = MickeyOutputConfigurationProvider.DEFAULT_STUB_OUTPUT;
     Collection<MickeyDatabaseModel> _values = mickeyModel.databases.values();
     final Consumer<MickeyDatabaseModel> _function = new Consumer<MickeyDatabaseModel>() {
       public void accept(final MickeyDatabaseModel it) {
@@ -81,28 +82,44 @@ public class MickeyLangGenerator implements IGenerator {
         String _packageName_1 = it.getPackageName();
         String _databaseName_1 = it.getDatabaseName();
         String _pascalize_1 = Strings.pascalize(_databaseName_1);
-        String _concat_2 = _pascalize_1.concat("Contract");
+        String _concat_2 = _pascalize_1.concat("OpenHelper");
         String _resolveFileName_1 = Strings.resolveFileName(_packageName_1, _concat_2);
-        CharSequence _generate_1 = MickeyLangGenerator.this.mContentProviderContractGenerator.generate(it);
-        fsa.generateFile(_resolveFileName_1, _generate_1);
+        SqliteDatabaseSnapshot _snapshot = it.getSnapshot();
+        CharSequence _generateStub = MickeyLangGenerator.this.mOpenHelperGenerator.generateStub(it, _snapshot);
+        fsa.generateFile(_resolveFileName_1, stubOutput, _generateStub);
         String _packageName_2 = it.getPackageName();
         String _databaseName_2 = it.getDatabaseName();
         String _pascalize_2 = Strings.pascalize(_databaseName_2);
-        String _concat_3 = "Abstract".concat(_pascalize_2);
-        String _concat_4 = _concat_3.concat("ContentProvider");
-        String _resolveFileName_2 = Strings.resolveFileName(_packageName_2, _concat_4);
+        String _concat_3 = _pascalize_2.concat("Contract");
+        String _resolveFileName_2 = Strings.resolveFileName(_packageName_2, _concat_3);
+        CharSequence _generate_1 = MickeyLangGenerator.this.mContentProviderContractGenerator.generate(it);
+        fsa.generateFile(_resolveFileName_2, _generate_1);
+        String _packageName_3 = it.getPackageName();
+        String _databaseName_3 = it.getDatabaseName();
+        String _pascalize_3 = Strings.pascalize(_databaseName_3);
+        String _concat_4 = "Abstract".concat(_pascalize_3);
+        String _concat_5 = _concat_4.concat("ContentProvider");
+        String _resolveFileName_3 = Strings.resolveFileName(_packageName_3, _concat_5);
         CharSequence _generate_2 = MickeyLangGenerator.this.mContentProviderGenerator.generate(it);
-        fsa.generateFile(_resolveFileName_2, _generate_2);
-        SqliteDatabaseSnapshot _snapshot = it.getSnapshot();
-        ArrayList<CreateTableStatement> _tables = _snapshot.getTables();
+        fsa.generateFile(_resolveFileName_3, _generate_2);
+        String _packageName_4 = it.getPackageName();
+        String _databaseName_4 = it.getDatabaseName();
+        String _pascalize_4 = Strings.pascalize(_databaseName_4);
+        String _concat_6 = _pascalize_4.concat("ContentProvider");
+        String _resolveFileName_4 = Strings.resolveFileName(_packageName_4, _concat_6);
+        SqliteDatabaseSnapshot _snapshot_1 = it.getSnapshot();
+        CharSequence _generateStub_1 = MickeyLangGenerator.this.mContentProviderGenerator.generateStub(it, _snapshot_1);
+        fsa.generateFile(_resolveFileName_4, stubOutput, _generateStub_1);
+        SqliteDatabaseSnapshot _snapshot_2 = it.getSnapshot();
+        ArrayList<CreateTableStatement> _tables = _snapshot_2.getTables();
         final Consumer<CreateTableStatement> _function = new Consumer<CreateTableStatement>() {
           public void accept(final CreateTableStatement statement) {
             MickeyLangGenerator.this.generateActiveRecordEntity(it, resource, fsa, ((CreateTableStatement) statement));
           }
         };
         _tables.forEach(_function);
-        SqliteDatabaseSnapshot _snapshot_1 = it.getSnapshot();
-        ArrayList<CreateViewStatement> _views = _snapshot_1.getViews();
+        SqliteDatabaseSnapshot _snapshot_3 = it.getSnapshot();
+        ArrayList<CreateViewStatement> _views = _snapshot_3.getViews();
         final Consumer<CreateViewStatement> _function_1 = new Consumer<CreateViewStatement>() {
           public void accept(final CreateViewStatement statement) {
             MickeyLangGenerator.this.generateActiveRecordEntity(it, resource, fsa, ((CreateViewStatement) statement));
@@ -125,8 +142,7 @@ public class MickeyLangGenerator implements IGenerator {
           public void apply(final MigrationBlock item, final Integer index) {
             String _packageName = it.getPackageName();
             String _databaseName = it.getDatabaseName();
-            String _name = item.getName();
-            MickeyLangGenerator.this.generateMigration(_packageName, _databaseName, resource, fsa, item, _name);
+            MickeyLangGenerator.this.generateMigration(_packageName, _databaseName, resource, fsa, item);
           }
         };
         IterableExtensions.<MigrationBlock>forEach(it.migrations, _function_4);
@@ -165,21 +181,21 @@ public class MickeyLangGenerator implements IGenerator {
     }
   }
   
-  public void generateMigration(final String packageName, final String databaseName, final Resource resource, final IFileSystemAccess fsa, final MigrationBlock migration, final String version) {
+  public void generateMigration(final String packageName, final String databaseName, final Resource resource, final IFileSystemAccess fsa, final MigrationBlock migration) {
     EList<EObject> _contents = resource.getContents();
     EObject _head = IterableExtensions.<EObject>head(_contents);
     MickeyFile model = ((MickeyFile) _head);
     String _concat = packageName.concat(".migrations");
     String _pascalize = Strings.pascalize(databaseName);
     String _concat_1 = "Default".concat(_pascalize);
-    String _concat_2 = _concat_1.concat("MigrationV");
-    String _pascalize_1 = Strings.pascalize(version);
+    String _concat_2 = _concat_1.concat("Migration");
+    String _name = migration.getName();
+    String _pascalize_1 = Strings.pascalize(_name);
     String _valueOf = String.valueOf(_pascalize_1);
     String _concat_3 = _concat_2.concat(_valueOf);
     String genFileName = Strings.resolveFileName(_concat, _concat_3);
     SqliteMigrationGenerator generator = this.mMigrationGenerator.get();
-    String _pascalize_2 = Strings.pascalize(version);
-    CharSequence _generate = generator.generate(model, packageName, databaseName, migration, _pascalize_2);
+    CharSequence _generate = generator.generate(model, packageName, databaseName, migration);
     fsa.generateFile(genFileName, _generate);
   }
 }

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.justeat.mickeydb.lib
+Bundle-SymbolicName: com.justeat.mickeydb.lib
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: JUSTEAT
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -29,8 +29,8 @@ class ContentProviderContractGenerator {
 			
 			import android.net.Uri;
 			import android.provider.BaseColumns;
-			import com.robotoworks.mechanoid.Mechanoid;
-			import com.robotoworks.mechanoid.db.AbstractValuesBuilder;
+			import com.justeat.mickeydb.AbstractValuesBuilder;
+			import com.justeat.mickeydb.Mickey;
 			import java.lang.reflect.Field;			
 			import java.util.Collections;
 			import java.util.HashSet;
@@ -250,11 +250,11 @@ class ContentProviderContractGenerator {
 			«ENDFOR»
 			«ENDIF»
 			public static int delete() {
-				return Mechanoid.getContentResolver().delete(«stmt.name.pascalize».CONTENT_URI, null, null);
+				return Mickey.getContentResolver().delete(«stmt.name.pascalize».CONTENT_URI, null, null);
 			}
 			
 			public static int delete(String where, String[] selectionArgs) {
-				return Mechanoid.getContentResolver().delete(«stmt.name.pascalize».CONTENT_URI, where, selectionArgs);
+				return Mickey.getContentResolver().delete(«stmt.name.pascalize».CONTENT_URI, where, selectionArgs);
 			}
 			
 			/**
@@ -271,7 +271,7 @@ class ContentProviderContractGenerator {
 			 */
 			public static class Builder extends AbstractValuesBuilder {
 				private Builder() {
-					super(Mechanoid.getApplicationContext(), «stmt.name.pascalize».CONTENT_URI);
+					super(Mickey.getApplicationContext(), «stmt.name.pascalize».CONTENT_URI);
 				}
 				
 				«generateBuilderSetters(stmt)»

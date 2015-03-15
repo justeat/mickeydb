@@ -50,9 +50,9 @@ public class ContentProviderContractGenerator {
     _builder.newLine();
     _builder.append("import android.provider.BaseColumns;");
     _builder.newLine();
-    _builder.append("import com.robotoworks.mechanoid.Mechanoid;");
+    _builder.append("import com.justeat.mickeydb.AbstractValuesBuilder;");
     _builder.newLine();
-    _builder.append("import com.robotoworks.mechanoid.db.AbstractValuesBuilder;");
+    _builder.append("import com.justeat.mickeydb.Mickey;");
     _builder.newLine();
     _builder.append("import java.lang.reflect.Field;\t\t\t");
     _builder.newLine();
@@ -807,7 +807,7 @@ public class ContentProviderContractGenerator {
     _builder.append("public static int delete() {");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("return Mechanoid.getContentResolver().delete(");
+    _builder.append("return Mickey.getContentResolver().delete(");
     String _name_11 = stmt.getName();
     String _pascalize_6 = Strings.pascalize(_name_11);
     _builder.append(_pascalize_6, "\t\t");
@@ -822,7 +822,7 @@ public class ContentProviderContractGenerator {
     _builder.append("public static int delete(String where, String[] selectionArgs) {");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("return Mechanoid.getContentResolver().delete(");
+    _builder.append("return Mickey.getContentResolver().delete(");
     String _name_12 = stmt.getName();
     String _pascalize_7 = Strings.pascalize(_name_12);
     _builder.append(_pascalize_7, "\t\t");
@@ -887,7 +887,7 @@ public class ContentProviderContractGenerator {
     _builder.append("private Builder() {");
     _builder.newLine();
     _builder.append("\t\t\t");
-    _builder.append("super(Mechanoid.getApplicationContext(), ");
+    _builder.append("super(Mickey.getApplicationContext(), ");
     String _name_16 = stmt.getName();
     String _pascalize_11 = Strings.pascalize(_name_16);
     _builder.append(_pascalize_11, "\t\t\t");
