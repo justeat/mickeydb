@@ -1399,4 +1399,8 @@ public class Query {
     public boolean exists(Uri uri) {
     	return count(uri) > 0;
     }
+
+	public Query eq(String column, boolean value) {
+		return expr(column, Op.EQ, value);
+	}
 }
