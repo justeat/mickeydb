@@ -1403,4 +1403,96 @@ public class Query {
 	public Query eq(String column, boolean value) {
 		return expr(column, Op.EQ, value);
 	}
+
+	public Query eq(String column, int value) {
+		return expr(column, Op.EQ, value);
+	}
+
+	public Query eq(String column, long value) {
+		return expr(column, Op.EQ, value);
+	}
+
+	public Query eq(String column, float value) {
+		return expr(column, Op.EQ, value);
+	}
+
+	public Query eq(String column, double value) {
+		return expr(column, Op.EQ, value);
+	}
+
+	public Query eq(String column, String value) {
+		return expr(column, Op.EQ, value);
+	}
+	
+	public Query neq(String column, boolean value) {
+		return expr(column, Op.NEQ, value);
+	}
+
+	public Query neq(String column, int value) {
+		return expr(column, Op.NEQ, value);
+	}
+
+	public Query neq(String column, long value) {
+		return expr(column, Op.NEQ, value);
+	}
+
+	public Query neq(String column, float value) {
+		return expr(column, Op.NEQ, value);
+	}
+
+	public Query neq(String column, double value) {
+		return expr(column, Op.NEQ, value);
+	}
+
+	public Query neq(String column, String value) {
+		return expr(column, Op.NEQ, value);
+	}
+
+	public Query gt(String column, boolean value) {
+		return expr(column, Op.GT, value);
+	}
+
+	public Query gt(String column, int value) {
+		return expr(column, Op.GT, value);
+	}
+
+	public Query gt(String column, long value) {
+		return expr(column, Op.GT, value);
+	}
+
+	public Query gt(String column, float value) {
+		return expr(column, Op.GT, value);
+	}
+
+	public Query gt(String column, double value) {
+		return expr(column, Op.GT, value);
+	}
+
+	public Query gt(String column, String value) {
+		return expr(column, Op.GT, value);
+	}
+
+	public Query lt(String column, boolean value) {
+		return expr(column, Op.LT, value);
+	}
+
+	public Query lt(String column, int value) {
+		return expr(column, Op.LT, value);
+	}
+
+	public Query lt(String column, long value) {
+		return expr(column, Op.LT, value);
+	}
+
+	public Query lt(String column, float value) {
+		return expr(column, Op.LT, value);
+	}
+
+	public Query lt(String column, double value) {
+		return expr(column, Op.LT, value);
+	}
+
+	public Query lt(String column, String value) {
+		return expr(column, Op.LT, value);
+	}
 }
