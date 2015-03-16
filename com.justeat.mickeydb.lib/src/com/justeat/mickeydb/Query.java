@@ -157,17 +157,12 @@ public class Query {
 	 */
 	private static final String OR = " OR ";
 	
-	
 	private StringBuilder mBuilder;
-	private List<String> mArgs = new ArrayList<String>();
+	private List<String> mArgs;
 	private String mNextOp = null;
-
 	private MickeyContentProvider mProvider;
-
 	private AsyncQueryManager mAsync;
-
 	private ContentResolver mResolver;
-
 	private Context mContext;
 	
 	/**
@@ -188,6 +183,15 @@ public class Query {
 		mContext = context.getApplicationContext();
 		mResolver = mContext.getContentResolver();
 		mAsync = async;
+		reset();
+	}
+	
+	public Query(AsyncQueryManager async) {
+		this(Mickey.getApplicationContext(), async);
+	}
+	
+	public void reset() {
+		mArgs = new ArrayList<String>();
 		mBuilder = new StringBuilder();
 	}
 	
@@ -223,7 +227,7 @@ public class Query {
 	public Query expr(String column, String op, Literal arg) {
 		ensureOp();
 		
-		mBuilder.append(column).append(op).append(" ").append(arg.value);
+		mBuilder.append(column).append(op).append(arg.value);
 		mNextOp = null;
 		
 		return this;
@@ -234,7 +238,7 @@ public class Query {
 	 * @param column Usually the column name
 	 * @return
 	 */
-	public Query exprIsNull(String column) {
+	public Query isNull(String column) {
 		ensureOp();
 		mBuilder.append(column).append(" ISNULL");
 		mNextOp = null;
@@ -244,10 +248,10 @@ public class Query {
 	
 	/**
 	 * A NOTNULL expression on the given column name, ie:- NOTNULL
-	 * @param column Usually the colum name
+	 * @param column Usually the column name
 	 * @return
 	 */
-	public Query exprNotNull(String column) {
+	public Query notNull(String column) {
 		ensureOp();
 		mBuilder.append(column).append(" NOTNULL");
 		mNextOp = null;
@@ -355,6 +359,18 @@ public class Query {
 		return expr(column, op, arg);
 	}
 	
+	/**
+	 * <p>Fallthrough method to append an arbitrary query section,
+	 * you must provide your selection as you normally would with
+	 * Android content provider selection queries, ie:-</p>
+	 * <p><code>a = ? AND b = ?</code></p>
+	 * <p>Failing to not provide the same number of arguments as ? will cause
+	 * unexpected behavior</p>
+	 * 
+	 * @param query The content provider style selection, ie:- a = ? AND b = ?
+	 * @param args The arguments, they must match the number of ? in the selection
+	 * @return
+	 */
 	public Query append(String query, String... args) {
 
 		if(query != null && query.length() > 0) {
@@ -1424,6 +1440,10 @@ public class Query {
 		return expr(column, Op.EQ, value);
 	}
 	
+	public Query eq(String column, Literal value) {
+		return expr(column, Op.EQ, value);
+	}
+	
 	public Query neq(String column, boolean value) {
 		return expr(column, Op.NEQ, value);
 	}
@@ -1445,6 +1465,10 @@ public class Query {
 	}
 
 	public Query neq(String column, String value) {
+		return expr(column, Op.NEQ, value);
+	}
+	
+	public Query neq(String column, Literal value) {
 		return expr(column, Op.NEQ, value);
 	}
 
@@ -1471,6 +1495,10 @@ public class Query {
 	public Query gt(String column, String value) {
 		return expr(column, Op.GT, value);
 	}
+	
+	public Query gt(String column, Literal value) {
+		return expr(column, Op.GT, value);
+	}
 
 	public Query lt(String column, boolean value) {
 		return expr(column, Op.LT, value);
@@ -1494,5 +1522,129 @@ public class Query {
 
 	public Query lt(String column, String value) {
 		return expr(column, Op.LT, value);
+	}
+	
+	public Query lt(String column, Literal value) {
+		return expr(column, Op.LT, value);
+	}
+
+	public Query gteq(String column, boolean value) {
+		return expr(column, Op.GTEQ, value);
+	}
+	
+	public Query gteq(String column, int value) {
+		return expr(column, Op.GTEQ, value);
+	}
+	
+	public Query gteq(String column, long value) {
+		return expr(column, Op.GTEQ, value);
+	}
+	
+	public Query gteq(String column, float value) {
+		return expr(column, Op.GTEQ, value);
+	}
+	
+	public Query gteq(String column, double value) {
+		return expr(column, Op.GTEQ, value);
+	}
+	
+	public Query gteq(String column, String value) {
+		return expr(column, Op.GTEQ, value);
+	}
+	
+	public Query gteq(String column, Literal value) {
+		return expr(column, Op.GTEQ, value);
+	}
+	
+	public Query lteq(String column, boolean value) {
+		return expr(column, Op.LTEQ, value);
+	}
+	
+	public Query lteq(String column, int value) {
+		return expr(column, Op.LTEQ, value);
+	}
+	
+	public Query lteq(String column, long value) {
+		return expr(column, Op.LTEQ, value);
+	}
+	
+	public Query lteq(String column, float value) {
+		return expr(column, Op.LTEQ, value);
+	}
+	
+	public Query lteq(String column, double value) {
+		return expr(column, Op.LTEQ, value);
+	}
+	
+	public Query lteq(String column, String value) {
+		return expr(column, Op.LTEQ, value);
+	}
+	
+	public Query lteq(String column, Literal value) {
+		return expr(column, Op.LTEQ, value);
+	}
+
+	public Query like(String column, String value) {
+		return expr(column, Op.LIKE, value);
+	}
+	
+	public Query is(String column, boolean value) {
+		return expr(column, Op.IS, value);
+	}
+	
+	public Query is(String column, int value) {
+		return expr(column, Op.IS, value);
+	}
+	
+	public Query is(String column, long value) {
+		return expr(column, Op.IS, value);
+	}
+	
+	public Query is(String column, float value) {
+		return expr(column, Op.IS, value);
+	}
+	
+	public Query is(String column, double value) {
+		return expr(column, Op.IS, value);
+	}
+	
+	public Query is(String column, String value) {
+		return expr(column, Op.IS, value);
+	}
+	
+	public Query is(String column, Literal value) {
+		return expr(column, Op.IS, value);
+	}
+	
+	public Query isNot(String column, boolean value) {
+		return expr(column, Op.ISNOT, value);
+	}
+	
+	public Query isNot(String column, int value) {
+		return expr(column, Op.ISNOT, value);
+	}
+	
+	public Query isNot(String column, long value) {
+		return expr(column, Op.ISNOT, value);
+	}
+	
+	public Query isNot(String column, float value) {
+		return expr(column, Op.ISNOT, value);
+	}
+	
+	public Query isNot(String column, double value) {
+		return expr(column, Op.ISNOT, value);
+	}
+	
+	public Query isNot(String column, String value) {
+		return expr(column, Op.ISNOT, value);
+	}
+	
+	public Query isNot(String column, Literal value) {
+		return expr(column, Op.ISNOT, value);
+	}
+
+	public Query regexp(String column, String value) {
+		return expr(column, Op.REGEXP, value);
 	}
 }
