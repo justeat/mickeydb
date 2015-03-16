@@ -18,18 +18,11 @@ import android.content.Context;
 
 public class Mickey {
 	
-	Context mApplicationContext;
-	QueryProvider mQueryProvider;
-	
-	public static Context getApplicationContext() {
-		return get().mApplicationContext;
-	}
-	public static ContentResolver getContentResolver() {
-		return get().mApplicationContext.getContentResolver();
-	}
-	
 	private static Mickey sInstance;
-	
+
+	private Context mApplicationContext;
+	private AsyncQueryManager mAsyncManager;
+		
 	public static Mickey get() {
 		if(sInstance == null) {
 			throw new MickeyNotInitializedException();
@@ -39,7 +32,7 @@ public class Mickey {
 	
 	private Mickey(Context context){
 		mApplicationContext = context.getApplicationContext();
-		mQueryProvider = new QueryProvider(mApplicationContext);
+		mAsyncManager = new AsyncQueryManager(mApplicationContext);
 	}
 	
 	/**
@@ -48,13 +41,41 @@ public class Mickey {
 	 * 
 	 * @param context
 	 */
-	public static void init(Context context) {
+	public static void initMickey(Context context) {
 		if(sInstance == null) {
 			sInstance = new Mickey(context);
 		}
 	}
 	
+	protected Query _query() {
+		return new Query(mApplicationContext, mAsyncManager);
+	}
+	
 	public static Query query() {
-		return get().mQueryProvider.query();
+		return get()._query();
+	}
+
+	protected Context _getApplicationContext() {
+		return mApplicationContext;
+	}
+	
+	public static Context getApplicationContext() {
+		return get()._getApplicationContext();
+	}
+
+	protected ContentResolver _getContentResolver() {
+		return mApplicationContext.getContentResolver();
+	}
+	
+	public static ContentResolver getContentResolver() {
+		return get()._getContentResolver();
+	}
+	
+	protected AsyncQueryManager _getAsyncQueryManager() {
+		return mAsyncManager;
+	}
+	
+	public static AsyncQueryManager getAsyncQueryManager() {
+		return get()._getAsyncQueryManager();
 	}
 }

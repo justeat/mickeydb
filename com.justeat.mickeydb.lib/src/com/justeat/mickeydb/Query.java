@@ -51,7 +51,7 @@ import com.justeat.mickeydb.util.Closeables;
  */
 public class Query {
 	/**
-	 * Used to represent Sqlite literal types used in expressions.
+	 * Used to represent sqlite literal types in expressions.
 	 * 
 	 * @see Query#NULL
 	 * @see Query#CURRENT_TIME
@@ -186,8 +186,8 @@ public class Query {
 		reset();
 	}
 	
-	public Query(AsyncQueryManager async) {
-		this(Mickey.getApplicationContext(), async);
+	public Query() {
+		this(Mickey.getApplicationContext(), Mickey.getAsyncQueryManager());
 	}
 	
 	public void reset() {
@@ -316,49 +316,6 @@ public class Query {
 		return expr(column, op, String.valueOf(arg));
 	}
 	
-	public Query opt(String column, String op, String arg) {
-		if(arg == null) {
-			return this;
-		}
-		
-		return expr(column, op, arg);
-	}
-		
-	public Query opt(String column, String op, int arg) {
-		if(arg == 0) {
-			return this;
-		}
-		return expr(column, op, String.valueOf(arg));
-	}
-	
-	public Query opt(String column, String op, boolean arg) {
-		if(!arg) {
-			return this;
-		}
-		return expr(column, op, arg);
-	}
-	
-	public Query opt(String column, String op, long arg) {
-		if(arg == 0) {
-			return this;
-		}
-		return expr(column, op, arg);
-	}
-	
-	public Query opt(String column, String op, float arg) {
-		if(arg == 0) {
-			return this;
-		}
-		return expr(column, op, arg);
-	}
-	
-	public Query opt(String column, String op, double arg) {
-		if(arg == 0) {
-			return this;
-		}
-		return expr(column, op, arg);
-	}
-	
 	/**
 	 * <p>Fallthrough method to append an arbitrary query section,
 	 * you must provide your selection as you normally would with
@@ -378,10 +335,8 @@ public class Query {
 	
 			mBuilder.append(query);
 	
-			if(args != null && args.length > 0) {
-				for(String arg : args) {
-					mArgs.add(arg);
-				}
+			for(String arg : args) {
+				mArgs.add(arg);
 			}
 			
 			mNextOp = null;
