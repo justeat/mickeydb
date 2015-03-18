@@ -2,40 +2,48 @@
 
 # MickeyDB [PREVIEW]
 
-With MickeyDB you can use a Sqlite like DSL to generate Android sqlite database backed content providers.
+With MickeyDB you can use a Sqlite like language to define and generate core Android database components to access and query your database.
 
-## Usage
+MickeyDB generates implementations of SqliteOpenHelper, ContentProvider and a Contract class to help you access your data.
 
-Add your migrations in the same file or across seperate files as follows.
+Additionally MickeyDB generates active record classes for each of your tables and views which allows you to access your data, in a strongly-typed way if you choose to do so.
 
-**src/books1.mickey**
+Finally MickeyDB also generates useful ContentValues builders and also provides a useful fluent query API to make content provider queries a snap.
+
+## Quick Start
+
+You can start creating your database by adding a migration.
+
+**src/takeaways1.mickey**
 ```none
-database com.justeat.Books
+database com.justeat.data.TakeawayDB
 
-migrate first_migration {
-	create table books (_id integer primary key, name text);
+migrate initial {
+	create table takeaways (_id integer primary key, name text);
 }
 ```
 
-**src/books2.mickey**
-```
-database com.justeat.Books
+Then later you might want to upgrade it
 
-migrate second_migration from first_migration {
-  alter table books add column author text;
+**src/takaways2.mickey**
+```
+database com.justeat.data.TakeawayDB
+
+migrate add_cuisines from initial {
+  alter table takeaways add column cuisine text;
 }
 ```
 
 You need to add a file ending in init.mickey to satisfy the mickey assembler, for now we just need to define the database name.
 
-**src/books.init.mickey**
+**src/takeaways.init.mickey**
 ```none
-database com.justeat.Books
+database com.justeat.data.TakeawayDB
 ```
 
-Note that both the above mickey files should be in an src folder by default from your root folder (you can change this in the gradle build file that follows).
+Note: the ``mickey`` files should be in an ``src`` folder by default from your root folder (you can change this in the gradle build file that follows).
 
-Then in a gradle script we can invoke the assembler that will generate code (open helper, contract, content provider + more) that we can use to easily interact with an android sqlite database.
+With our mickey files we can use a gradle script to generate our code.
 
 **build.gradle**
 ```gradle
