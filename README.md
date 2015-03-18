@@ -4,7 +4,7 @@
 
 With MickeyDB you can use a Sqlite like DSL to generate Android sqlite database backed content providers.
 
-#Usage
+## Usage
 
 Add your migrations in the same file or across seperate files as follows.
 
@@ -79,16 +79,16 @@ xtext {
 
 Run ```gradle assemble```, code should be generated into the ```build/mickey``` output folder as specified in the gradle build file.
 
-# License
+## License
 
-## Eclipse Plugin Components
+### Eclipse Plugin Components
     All rights reserved. This program and the accompanying materials
     are made available under the terms of the Eclipse Public License v1.0
     which accompanies this distribution, and is available at
        
        http://www.eclipse.org/legal/epl-v10.html
 
-## Mickey Android Runtime Library
+### Mickey Android Runtime Library
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
