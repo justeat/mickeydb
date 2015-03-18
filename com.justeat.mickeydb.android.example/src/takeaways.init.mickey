@@ -1,4 +1,4 @@
-database com.example.mickeydbexample.TakeawaysDB
+database com.example.mickeydbexample.data.TakeawaysDB
 
 create temp view all_restaurants as
 	select 
@@ -8,5 +8,5 @@ create temp view all_restaurants as
 		t.city as takeaway_city,
 		t.cuisines as takeaway_cuisines,
 		t.rating as takeaway_rating
-	from restaurants as t 
+	from restaurants as t
  

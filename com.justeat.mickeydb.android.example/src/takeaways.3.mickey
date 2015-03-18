@@ -1,4 +1,4 @@
-database com.example.mickeydbexample.TakeawaysDB
+database com.example.mickeydbexample.data.TakeawaysDB
 
 migrate vegetarian_migration from description_migration  {
 	alter table restaurants add column has_vegetarian boolean;

@@ -1,15 +1,18 @@
 package com.example.mickeydbexample;
 
-import android.app.Application;
+import com.example.mickeydbexample.data.TakeawaysDBContract.Restaurants;
 
-import com.justeat.mickeydb.Mickey;
+import android.app.Application;
+import static com.justeat.mickeydb.Mickey.*;
 
 public class ExampleApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
 		
-		Mickey.init(this);
+		initMickey(this);
+		
+		query().select(Restaurants.CONTENT_URI);
 		
 	}
 }

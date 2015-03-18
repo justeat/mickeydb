@@ -11,7 +11,6 @@ import com.justeat.mickeydb.mickeyLang.DMLStatement;
 import com.justeat.mickeydb.mickeyLang.DropTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.DropViewStatement;
 import com.justeat.mickeydb.mickeyLang.MickeyFile;
-import com.justeat.mickeydb.mickeyLang.MickeyLangFactory;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.MigrationBlock;
 import com.justeat.mickeydb.mickeyLang.NewColumn;
@@ -29,6 +28,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
@@ -39,6 +39,9 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   @Inject
   private IQualifiedNameProvider nameProvider;
+  
+  @Inject
+  private IResourceDescriptions resourceDescriptions;
   
   public IScope getScope(final EObject context, final EReference reference) {
     return super.getScope(context, reference);
@@ -144,32 +147,8 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
         }
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
+      Iterable<IEObjectDescription> migrations = this.resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MIGRATION_BLOCK);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
-    }
-    return _xblockexpression;
-  }
-  
-  public Iterable<EObject> getMigrations(final MickeyFile model) {
-    Iterable<EObject> _xblockexpression = null;
-    {
-      MigrationBlock dummy = MickeyLangFactory.eINSTANCE.createMigrationBlock();
-      IScope scope = this.delegateGetScope(dummy, MickeyLangPackage.Literals.MIGRATION_BLOCK__FROM);
-      String _databaseName = model.getDatabaseName();
-      final QualifiedName name = QualifiedName.create(_databaseName);
-      Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
-        public Boolean apply(final IEObjectDescription e) {
-          QualifiedName _name = e.getName();
-          return Boolean.valueOf(_name.startsWith(name));
-        }
-      };
-      Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
-        public EObject apply(final IEObjectDescription e) {
-          return e.getEObjectOrProxy();
-        }
-      };
-      _xblockexpression = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
     }
     return _xblockexpression;
   }

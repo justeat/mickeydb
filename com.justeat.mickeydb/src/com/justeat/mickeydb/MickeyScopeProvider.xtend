@@ -8,8 +8,10 @@ import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement
 import com.justeat.mickeydb.mickeyLang.DMLStatement
 import com.justeat.mickeydb.mickeyLang.DropTriggerStatement
 import com.justeat.mickeydb.mickeyLang.DropViewStatement
-import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
 import com.justeat.mickeydb.mickeyLang.MickeyFile
+import com.justeat.mickeydb.mickeyLang.MickeyLangFactory
+import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
+import com.justeat.mickeydb.mickeyLang.MigrationBlock
 import com.justeat.mickeydb.mickeyLang.NewColumn
 import com.justeat.mickeydb.mickeyLang.OldColumn
 import com.justeat.mickeydb.mickeyLang.SelectExpression
@@ -26,15 +28,13 @@ import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 
 import static extension com.justeat.mickeydb.ModelUtil.*
-import org.eclipse.xtext.resource.IEObjectDescription
-import com.justeat.mickeydb.mickeyLang.MigrationBlock
-import com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl
-import com.justeat.mickeydb.mickeyLang.MickeyLangFactory
+import org.eclipse.xtext.resource.IResourceDescriptions
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 	@Inject IQualifiedNameProvider nameProvider;
-	
+	@Inject IResourceDescriptions resourceDescriptions;
+			
 	override getScope(EObject context, EReference reference) {
 //		var scope = delegateGetScope(context, reference)
 //		scope.allElements.forEach[element | element.boop]
@@ -107,18 +107,9 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 					scope.allElements.filter[e|e.name.startsWith(name)]
 					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
 					
-	    //var migrations = model.getMigrations()
+	    var migrations = resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MIGRATION_BLOCK)
 	    
 		Scopes.scopeFor(scopedElements, scope)			
-	}
-	
-	def getMigrations(MickeyFile model) {
-		var dummy = MickeyLangFactory.eINSTANCE.createMigrationBlock();
-		var scope = delegateGetScope(dummy, MickeyLangPackage.Literals.MIGRATION_BLOCK__FROM);
-		val name = QualifiedName.create(model.databaseName)
-
-		scope.allElements.filter[e|e.name.startsWith(name)]
-					.map[e|e.EObjectOrProxy]
 	}
 	
 	def IScope scope_NewColumn_column(NewColumn context, EReference ref) {

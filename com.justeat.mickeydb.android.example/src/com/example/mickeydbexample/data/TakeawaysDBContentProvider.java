@@ -6,8 +6,8 @@
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  *******************************************************************************/
-package com.example.mickeydbexample;
+package com.example.mickeydbexample.data;
 
-import com.example.mickeydbexample.AbstractTakeawaysDBContentProvider;
+import com.example.mickeydbexample.data.AbstractTakeawaysDBContentProvider;
 
 public class TakeawaysDBContentProvider extends AbstractTakeawaysDBContentProvider {}

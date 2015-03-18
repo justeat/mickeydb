@@ -1,4 +1,4 @@
-database com.example.mickeydbexample.TakeawaysDB
+database com.example.mickeydbexample.data.TakeawaysDB
 
 migrate initial_migration {
 	create table restaurants (

@@ -1,4 +1,4 @@
-database com.example.mickeydbexample.TakeawaysDB
+database com.example.mickeydbexample.data.TakeawaysDB
 
 migrate description_migration from initial_migration {
 	alter table restaurants add column description text;
