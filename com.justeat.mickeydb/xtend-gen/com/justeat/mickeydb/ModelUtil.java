@@ -588,6 +588,19 @@ public class ModelUtil {
     return ((MickeyFile) e);
   }
   
+  public static Iterable<MigrationBlock> previousMigrations(final EObject ele) {
+    MigrationBlock migration = ModelUtil.<MigrationBlock>getContainerOfType(ele, MigrationBlock.class);
+    ArrayList<MigrationBlock> migrations = new ArrayList<MigrationBlock>();
+    do {
+      {
+        migrations.add(migration);
+        MigrationBlock _from = migration.getFrom();
+        migration = _from;
+      }
+    } while((!Objects.equal(migration, null)));
+    return migrations;
+  }
+  
   public static <T extends Object> T getContainerOfType(final EObject element, final Class<T> type) {
     EObject ele = element;
     do {

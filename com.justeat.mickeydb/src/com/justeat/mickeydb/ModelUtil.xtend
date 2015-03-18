@@ -491,6 +491,19 @@ class ModelUtil {
 		return e as MickeyFile;
 	}
 	
+	def static Iterable<MigrationBlock> previousMigrations(EObject ele) {
+		var migration = ele.getContainerOfType(MigrationBlock)
+		var migrations = new ArrayList<MigrationBlock>();
+		
+		
+		do {
+			migrations.add(migration)
+			migration = migration.from
+		} while (migration != null);
+		
+		return migrations;
+	}
+	
 	def static <T> T getContainerOfType(EObject element, Class<T> type) {
 		var ele = element
 		do {

@@ -28,6 +28,8 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 import static extension com.justeat.mickeydb.ModelUtil.*
 import org.eclipse.xtext.resource.IEObjectDescription
 import com.justeat.mickeydb.mickeyLang.MigrationBlock
+import com.justeat.mickeydb.mickeyLang.impl.MigrationBlockImpl
+import com.justeat.mickeydb.mickeyLang.MickeyLangFactory
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
@@ -87,6 +89,7 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 	def IScope scope_ColumnSourceRef_column(ColumnSourceRef context, EReference ref) {
 		var scope = delegateGetScope(context, ref)
+
 		var model = context.model
 		var selectExpression = context.getAncestorOfType(SelectExpression)
 		var tableName = ""
@@ -103,8 +106,19 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 		var scopedElements = 
 					scope.allElements.filter[e|e.name.startsWith(name)]
 					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
-
+					
+	    //var migrations = model.getMigrations()
+	    
 		Scopes.scopeFor(scopedElements, scope)			
+	}
+	
+	def getMigrations(MickeyFile model) {
+		var dummy = MickeyLangFactory.eINSTANCE.createMigrationBlock();
+		var scope = delegateGetScope(dummy, MickeyLangPackage.Literals.MIGRATION_BLOCK__FROM);
+		val name = QualifiedName.create(model.databaseName)
+
+		scope.allElements.filter[e|e.name.startsWith(name)]
+					.map[e|e.EObjectOrProxy]
 	}
 	
 	def IScope scope_NewColumn_column(NewColumn context, EReference ref) {

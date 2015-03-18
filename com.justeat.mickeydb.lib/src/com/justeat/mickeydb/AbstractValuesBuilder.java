@@ -139,7 +139,8 @@ public abstract class AbstractValuesBuilder {
 	 */
 	public ContentProviderOperation.Builder toDeleteOperationBuilder() {
 		return ContentProviderOperation
-				.newDelete(mContentUri);
+				.newDelete(mContentUri)
+				.withValues(mValues);
 	}
 	
 	/**
