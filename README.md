@@ -9,36 +9,36 @@ With MickeyDB you can use a Sqlite like DSL to generate Android sqlite database 
 Add your migrations in the same file or across seperate files as follows.
 
 **src/books1.mickey**
-````
+```none
 database com.justeat.Books
 
 migrate first_migration {
 	create table books (_id integer primary key, name text);
 }
-````
+```
 
 **src/books2.mickey**
-````
+```
 database com.justeat.Books
 
 migrate second_migration from first_migration {
   alter table books add column author text;
 }
-````
+```
 
 You need to add a file ending in init.mickey to satisfy the mickey assembler, for now we just need to define the database name.
 
 **src/books.init.mickey**
-````
+```none
 database com.justeat.Books
-````
+```
 
 Note that both the above mickey files should be in an src folder by default from your root folder (you can change this in the gradle build file that follows).
 
 Then in a gradle script we can invoke the assembler that will generate code (open helper, contract, content provider + more) that we can use to easily interact with an android sqlite database.
 
 **build.gradle**
-````gradle
+```gradle
 buildscript {
   repositories {
       mavenCentral()
@@ -75,7 +75,7 @@ xtext {
     }
   }
 }
-````
+```
 
 Run ```gradle assemble```, code should be generated into the ```build/mickey``` output folder as specified in the gradle build file.
 
