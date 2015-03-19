@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IEObjectDescription;
@@ -148,6 +149,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       };
       Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
       Iterable<IEObjectDescription> migrations = this.resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MIGRATION_BLOCK);
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("Migrations: ");
+      int _size = IterableExtensions.size(migrations);
+      _builder.append(_size, "");
+      System.out.println(_builder);
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
     }
     return _xblockexpression;

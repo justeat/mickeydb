@@ -109,6 +109,8 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 					
 	    var migrations = resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MIGRATION_BLOCK)
 	    
+	    System.out.println('''Migrations: «migrations.size»''')
+	    
 		Scopes.scopeFor(scopedElements, scope)			
 	}
 	

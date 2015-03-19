@@ -110,7 +110,7 @@ public class QueryTests {
 	}
 	
 	@Test
-	public void testLteq() {
+	public void testLteq() {		
 		assertQuery(query().lteq("a", true), "a <= ?", new String[] { "1" });
 		assertQuery(query().lteq("b", false), "b <= ?", new String[] { "0" });
 		assertQuery(query().lteq("c", 42), "c <= ?", new String[] { "42" });
