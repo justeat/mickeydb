@@ -36,6 +36,7 @@ import com.justeat.mickeydb.mickeyLang.MigrationBlock;
 import com.justeat.mickeydb.mickeyLang.MickeyFile;
 import com.justeat.mickeydb.mickeyLang.PrimaryConstraint;
 import com.justeat.mickeydb.mickeyLang.TableConstraint;
+import com.justeat.mickeydb.mickeyLang.TableDefinition;
 import com.justeat.mickeydb.mickeyLang.UniqueTableConstraint;
 
 
@@ -176,8 +177,16 @@ public class SqliteDatabaseSnapshot {
 		public SqliteDatabaseSnapshot build(MickeyDatabaseModel model) {
 			mSourceModel = model;
 			
-			buildSnapshot(model);
+			//buildSnapshot(model);
+			
+			try {
+				buildSnapshot(model);
 					
+			} catch(Exception e) {
+				e.printStackTrace();
+				throw e;
+			}
+			
 			buildSnapshotModel();
 			
 			return new SqliteDatabaseSnapshot(mTables, mViews, mTriggers, mIndexes);
@@ -188,12 +197,21 @@ public class SqliteDatabaseSnapshot {
 	private ArrayList<CreateViewStatement> mViews= new ArrayList<>();
 	private ArrayList<CreateTriggerStatement> mTriggers= new ArrayList<>();
 	private ArrayList<CreateIndexStatement> mIndexes= new ArrayList<>();
+	private LinkedHashMap<String, CreateTableStatement> mTableMap;
+	private LinkedHashMap<String, CreateViewStatement> mViewMap;
+	private LinkedHashMap<String, CreateTriggerStatement> mTriggerMap;
+	private LinkedHashMap<String, CreateIndexStatement> mCreateIndexMap;
 	
 	public SqliteDatabaseSnapshot(
 			LinkedHashMap<String, CreateTableStatement> tables,
 			LinkedHashMap<String, CreateViewStatement> views,
 			LinkedHashMap<String, CreateTriggerStatement> triggers,
 			LinkedHashMap<String, CreateIndexStatement> indexes) {
+		
+		mTableMap = tables;
+		mViewMap = views;
+		mTriggerMap = triggers;
+		mCreateIndexMap = indexes;
 		
 		mTables.addAll(tables.values());
 		mViews.addAll(views.values());
@@ -241,5 +259,14 @@ public class SqliteDatabaseSnapshot {
         }
         
         return false;
+    }
+    
+    public TableDefinition getTableDefinition(String name) {
+    	TableDefinition tbl =  mTableMap.get(name);
+    	if(tbl == null) {
+    		tbl = mViewMap.get(name);
+    	}
+    	
+    	return tbl;
     }
 }

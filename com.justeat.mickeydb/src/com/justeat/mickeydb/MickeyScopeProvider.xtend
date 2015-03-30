@@ -4,12 +4,13 @@ import com.google.inject.Inject
 import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement
 import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef
+import com.justeat.mickeydb.mickeyLang.CreateTableStatement
 import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement
+import com.justeat.mickeydb.mickeyLang.CreateViewStatement
 import com.justeat.mickeydb.mickeyLang.DMLStatement
 import com.justeat.mickeydb.mickeyLang.DropTriggerStatement
 import com.justeat.mickeydb.mickeyLang.DropViewStatement
 import com.justeat.mickeydb.mickeyLang.MickeyFile
-import com.justeat.mickeydb.mickeyLang.MickeyLangFactory
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
 import com.justeat.mickeydb.mickeyLang.MigrationBlock
 import com.justeat.mickeydb.mickeyLang.NewColumn
@@ -23,36 +24,22 @@ import org.eclipse.emf.ecore.EReference
 import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.xtext.naming.IQualifiedNameProvider
 import org.eclipse.xtext.naming.QualifiedName
+import org.eclipse.xtext.resource.IResourceDescriptions
 import org.eclipse.xtext.scoping.IScope
 import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 
 import static extension com.justeat.mickeydb.ModelUtil.*
-import org.eclipse.xtext.resource.IResourceDescriptions
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 	@Inject IQualifiedNameProvider nameProvider;
 	@Inject IResourceDescriptions resourceDescriptions;
-			
+	@Inject MickeyAssembler assembler
+	
 	override getScope(EObject context, EReference reference) {
-//		var scope = delegateGetScope(context, reference)
-//		scope.allElements.forEach[element | element.boop]
 		super.getScope(context, reference)	
 	}
-	
-//	def void boop(IEObjectDescription description) {
-//		var name = description.name
-//		var obj = description.EObjectOrProxy
-//		var clazz = description.EClass
-//		var uri = description.EObjectURI
-//		
-//		System.out.println(name + ":" + obj.class.name)
-//		
-//		var qux = 0;
-//		qux = qux + 1
-//		
-//	}
 	
 	def IScope scope_AlterTableAddColumnStatement_table(AlterTableAddColumnStatement context, EReference ref) {
 		var scope = delegateGetScope(context, ref)
@@ -88,12 +75,10 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 	
 	def IScope scope_ColumnSourceRef_column(ColumnSourceRef context, EReference ref) {
-		var scope = delegateGetScope(context, ref)
-
-		var model = context.model
-		var selectExpression = context.getAncestorOfType(SelectExpression)
-		var tableName = ""
-		if(selectExpression != null) {
+		var dbName = context.model.databaseName
+		
+		var tableName = "";
+		if(context.source != null) {
 			tableName = context.source.getFeatureNodeText(MickeyLangPackage.Literals.SINGLE_SOURCE_TABLE__TABLE_REFERENCE)
 		} else {
 			var updateStatement = context.getAncestorOfType(UpdateStatement)
@@ -101,58 +86,31 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 				tableName = updateStatement.getFeatureNodeText(MickeyLangPackage.Literals.UPDATE_STATEMENT__TABLE)
 			}
 		}
-		val name = QualifiedName.create(model.databaseName, tableName)
-
-		var scopedElements = 
-					scope.allElements.filter[e|e.name.startsWith(name)]
-					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
-					
-	    var migrations = resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MIGRATION_BLOCK)
-	    
-	    System.out.println('''Migrations: «migrations.size»''')
-	    
-		Scopes.scopeFor(scopedElements, scope)			
+		
+	    scopeTableColumns(context, dbName, tableName)	
 	}
-	
+		
 	def IScope scope_NewColumn_column(NewColumn context, EReference ref) {
-		var scope = delegateGetScope(context, ref)
-		var model = context.model
+		var dbName = context.model.databaseName
 		var statement = context.getAncestorOfType(CreateTriggerStatement)
 		var tableName = statement.getFeatureNodeText(MickeyLangPackage.Literals.CREATE_TRIGGER_STATEMENT__TABLE)
-		val name = QualifiedName.create(model.databaseName, tableName)
 
-		var scopedElements = 
-					scope.allElements.filter[e|e.name.startsWith(name)]
-					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
-
-		Scopes.scopeFor(scopedElements, scope)			
+		scopeTableColumns(context, dbName, tableName)		
 	}
 	
 	def IScope scope_OldColumn_column(OldColumn context, EReference ref) {
-		var scope = delegateGetScope(context, ref)
-		var model = context.model
+		var dbName = context.model.databaseName
 		var statement = context.getAncestorOfType(CreateTriggerStatement)
 		var tableName = statement.getFeatureNodeText(MickeyLangPackage.Literals.CREATE_TRIGGER_STATEMENT__TABLE)
-		val name = QualifiedName.create(model.databaseName, tableName)
 		
-		var scopedElements = 
-					scope.allElements.filter[e|e.name.startsWith(name)]
-					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
-
-		Scopes.scopeFor(scopedElements, scope)			
+		scopeTableColumns(context, dbName, tableName)
+				
 	}
 	def IScope scope_UpdateColumnExpression_columnName(UpdateColumnExpression context, EReference ref) {
-		var scope = delegateGetScope(context, ref)
-		var model = context.model
+		var dbName = context.model.databaseName
 		var statement = context.getAncestorOfType(DMLStatement)
 		var tableName = statement.targetTableName
-		val name = QualifiedName.create(model.databaseName, tableName)
-		
-		var scopedElements = 
-					scope.allElements.filter[e|e.name.startsWith(name)]
-					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
-
-		Scopes.scopeFor(scopedElements, scope)			
+		scopeTableColumns(context, dbName, tableName)	
 	}
 	
 	def IScope scope_ColumnSourceRef_source(ColumnSourceRef context, EReference ref) {
@@ -193,5 +151,36 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
 
 		Scopes.scopeFor(scopedElements, scope)
+	}
+	
+	def MickeyModel getMickeyModelInScope(EObject context) {
+			    var files = resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MICKEY_FILE)
+	    				.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context) as MickeyFile].toList
+	    				
+	    if(files.size > 0) {
+	    	var migration = context.getAncestorOfType(MigrationBlock)
+	    	return assembler.assemble(files, migration)
+	    }
+	    
+	    return null
+	}
+	
+	def scopeTableColumns(EObject context, String dbName, String tableName) {
+		var mickeyModel = context.getMickeyModelInScope
+			    
+			    if(mickeyModel != null) {
+			    	var definition = mickeyModel.databases.get(dbName).snapshot.getTableDefinition(tableName)
+			    	if(definition instanceof CreateTableStatement) {
+			    		var table = definition as CreateTableStatement
+				    	var columnScope = Scopes.scopeFor(table.columnDefs, IScope.NULLSCOPE);
+			    		return columnScope    	
+			    	} else {
+			    		var view = definition as CreateViewStatement
+			    		var columnScope = Scopes.scopeFor(view.viewResultColumns, IScope.NULLSCOPE);
+			    		return columnScope    
+			    	}
+			    }
+			    
+			   	return IScope.NULLSCOPE
 	}
 }

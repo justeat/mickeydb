@@ -44,18 +44,26 @@ public class MickeyAssembler {
         return ((MickeyFile) _head);
       }
     };
-    List<MickeyFile> allFiles = ListExtensions.<Resource, MickeyFile>map(_resources, _function);
+    List<MickeyFile> _map = ListExtensions.<Resource, MickeyFile>map(_resources, _function);
+    return this.assemble(_map, null);
+  }
+  
+  public MickeyModel assemble(final List<MickeyFile> files) {
+    return this.assemble(files, null);
+  }
+  
+  public MickeyModel assemble(final List<MickeyFile> files, final MigrationBlock upToMigration) {
     final MickeyModel mickeyModel = new MickeyModel();
-    final Consumer<MickeyFile> _function_1 = new Consumer<MickeyFile>() {
+    final Consumer<MickeyFile> _function = new Consumer<MickeyFile>() {
       public void accept(final MickeyFile file) {
         MickeyAssembler.this.registerFile(mickeyModel, file);
       }
     };
-    allFiles.forEach(_function_1);
+    files.forEach(_function);
     Collection<MickeyDatabaseModel> _values = mickeyModel.databases.values();
-    final Consumer<MickeyDatabaseModel> _function_2 = new Consumer<MickeyDatabaseModel>() {
+    final Consumer<MickeyDatabaseModel> _function_1 = new Consumer<MickeyDatabaseModel>() {
       public void accept(final MickeyDatabaseModel db) {
-        MickeyAssembler.this.sortMigrations(db);
+        MickeyAssembler.this.sortMigrations(db, upToMigration);
         final Function1<CreateTableStatement, String> _function = new Function1<CreateTableStatement, String>() {
           public String apply(final CreateTableStatement x) {
             return x.getName();
@@ -97,11 +105,11 @@ public class MickeyAssembler {
         ListExtensions.<CreateTriggerStatement, String>sortInplaceBy(_triggers, _function_4);
       }
     };
-    _values.forEach(_function_2);
+    _values.forEach(_function_1);
     return mickeyModel;
   }
   
-  private void sortMigrations(final MickeyDatabaseModel db) {
+  private void sortMigrations(final MickeyDatabaseModel db, final MigrationBlock upToMigration) {
     Collection<MigrationBlock> _values = db.migrationsByName.values();
     final Function1<MigrationBlock, Boolean> _function = new Function1<MigrationBlock, Boolean>() {
       public Boolean apply(final MigrationBlock it) {
@@ -110,16 +118,29 @@ public class MickeyAssembler {
       }
     };
     MigrationBlock migration = IterableExtensions.<MigrationBlock>findFirst(_values, _function);
-    db.migrations.add(migration);
+    boolean _equals = Objects.equal(migration, null);
+    if (_equals) {
+      return;
+    }
     while ((!Objects.equal(migration, null))) {
       {
-        String _name = migration.getName();
-        MigrationBlock _get = db.migrationsByFromName.get(_name);
-        migration = _get;
-        boolean _notEquals = (!Objects.equal(migration, null));
-        if (_notEquals) {
-          db.migrations.add(migration);
+        db.migrations.add(migration);
+        boolean _and = false;
+        boolean _notEquals = (!Objects.equal(upToMigration, null));
+        if (!_notEquals) {
+          _and = false;
+        } else {
+          String _name = upToMigration.getName();
+          String _name_1 = migration.getName();
+          boolean _equals_1 = _name.equals(_name_1);
+          _and = _equals_1;
         }
+        if (_and) {
+          return;
+        }
+        String _name_2 = migration.getName();
+        MigrationBlock _get = db.migrationsByFromName.get(_name_2);
+        migration = _get;
       }
     }
   }

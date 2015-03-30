@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.EReference
 import org.eclipse.xtext.EcoreUtil2
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils
 import org.eclipse.xtext.util.Strings
+import com.justeat.mickeydb.mickeyLang.Expression
 
 class ModelUtil {
 	/*
@@ -266,13 +267,21 @@ class ModelUtil {
 	
 	def static ColumnType getInferredColumnType(ResultColumn col) { 
 		var expr = col.expression
+		return getInferredColumnType(expr)
+	}
+	
+	def static ColumnType getInferredColumnType(Expression expr) {
 		switch expr {
 			CastExpression: {
 				return toColumnType(expr.type)
 			}
 			ColumnSourceRef: {
 				if(expr.column instanceof ResultColumn) {
-					return getInferredColumnType(expr.column as ResultColumn) as ColumnType
+					if(expr.source == null) {
+						return ColumnType::TEXT
+					} 
+					
+					return getInferredColumnType((expr.column as ResultColumn).expression) as ColumnType
 				} else {
 					return (expr.column as ColumnDef).type
 				}

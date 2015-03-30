@@ -7,6 +7,7 @@ create temp view all_restaurants as
 		t.description as takeaway_description,
 		t.city as takeaway_city,
 		t.cuisines as takeaway_cuisines,
-		t.rating as takeaway_rating
+		t.rating as takeaway_rating,
+		t.has_vegetarian as has_vegetarian
+		
 	from restaurants as t
- 

@@ -2,11 +2,18 @@ package com.justeat.mickeydb;
 
 import com.google.common.base.Objects;
 import com.google.inject.Inject;
+import com.justeat.mickeydb.MickeyAssembler;
+import com.justeat.mickeydb.MickeyDatabaseModel;
+import com.justeat.mickeydb.MickeyModel;
 import com.justeat.mickeydb.ModelUtil;
+import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot;
 import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement;
 import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement;
+import com.justeat.mickeydb.mickeyLang.ColumnSource;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
+import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement;
+import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
 import com.justeat.mickeydb.mickeyLang.DMLStatement;
 import com.justeat.mickeydb.mickeyLang.DropTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.DropViewStatement;
@@ -19,13 +26,15 @@ import com.justeat.mickeydb.mickeyLang.SelectExpression;
 import com.justeat.mickeydb.mickeyLang.SelectSource;
 import com.justeat.mickeydb.mickeyLang.SingleSource;
 import com.justeat.mickeydb.mickeyLang.SingleSourceTable;
+import com.justeat.mickeydb.mickeyLang.TableDefinition;
 import com.justeat.mickeydb.mickeyLang.UpdateColumnExpression;
 import com.justeat.mickeydb.mickeyLang.UpdateStatement;
 import java.util.ArrayList;
+import java.util.List;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IEObjectDescription;
@@ -43,6 +52,9 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   
   @Inject
   private IResourceDescriptions resourceDescriptions;
+  
+  @Inject
+  private MickeyAssembler assembler;
   
   public IScope getScope(final EObject context, final EReference reference) {
     return super.getScope(context, reference);
@@ -114,14 +126,14 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_ColumnSourceRef_column(final ColumnSourceRef context, final EReference ref) {
     IScope _xblockexpression = null;
     {
-      IScope scope = this.delegateGetScope(context, ref);
-      MickeyFile model = ModelUtil.getModel(context);
-      SelectExpression selectExpression = ModelUtil.<SelectExpression>getAncestorOfType(context, SelectExpression.class);
+      MickeyFile _model = ModelUtil.getModel(context);
+      String dbName = _model.getDatabaseName();
       String tableName = "";
-      boolean _notEquals = (!Objects.equal(selectExpression, null));
+      SelectSource _source = context.getSource();
+      boolean _notEquals = (!Objects.equal(_source, null));
       if (_notEquals) {
-        SelectSource _source = context.getSource();
-        String _featureNodeText = ModelUtil.getFeatureNodeText(_source, MickeyLangPackage.Literals.SINGLE_SOURCE_TABLE__TABLE_REFERENCE);
+        SelectSource _source_1 = context.getSource();
+        String _featureNodeText = ModelUtil.getFeatureNodeText(_source_1, MickeyLangPackage.Literals.SINGLE_SOURCE_TABLE__TABLE_REFERENCE);
         tableName = _featureNodeText;
       } else {
         UpdateStatement updateStatement = ModelUtil.<UpdateStatement>getAncestorOfType(context, UpdateStatement.class);
@@ -131,30 +143,7 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
           tableName = _featureNodeText_1;
         }
       }
-      String _databaseName = model.getDatabaseName();
-      final QualifiedName name = QualifiedName.create(_databaseName, tableName);
-      Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
-        public Boolean apply(final IEObjectDescription e) {
-          QualifiedName _name = e.getName();
-          return Boolean.valueOf(_name.startsWith(name));
-        }
-      };
-      Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
-        public EObject apply(final IEObjectDescription e) {
-          EObject _eObjectOrProxy = e.getEObjectOrProxy();
-          return EcoreUtil.resolve(_eObjectOrProxy, context);
-        }
-      };
-      Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
-      Iterable<IEObjectDescription> migrations = this.resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MIGRATION_BLOCK);
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("Migrations: ");
-      int _size = IterableExtensions.size(migrations);
-      _builder.append(_size, "");
-      System.out.println(_builder);
-      _xblockexpression = Scopes.scopeFor(scopedElements, scope);
+      _xblockexpression = this.scopeTableColumns(context, dbName, tableName);
     }
     return _xblockexpression;
   }
@@ -162,28 +151,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_NewColumn_column(final NewColumn context, final EReference ref) {
     IScope _xblockexpression = null;
     {
-      IScope scope = this.delegateGetScope(context, ref);
-      MickeyFile model = ModelUtil.getModel(context);
+      MickeyFile _model = ModelUtil.getModel(context);
+      String dbName = _model.getDatabaseName();
       CreateTriggerStatement statement = ModelUtil.<CreateTriggerStatement>getAncestorOfType(context, CreateTriggerStatement.class);
       String tableName = ModelUtil.getFeatureNodeText(statement, MickeyLangPackage.Literals.CREATE_TRIGGER_STATEMENT__TABLE);
-      String _databaseName = model.getDatabaseName();
-      final QualifiedName name = QualifiedName.create(_databaseName, tableName);
-      Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
-        public Boolean apply(final IEObjectDescription e) {
-          QualifiedName _name = e.getName();
-          return Boolean.valueOf(_name.startsWith(name));
-        }
-      };
-      Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
-        public EObject apply(final IEObjectDescription e) {
-          EObject _eObjectOrProxy = e.getEObjectOrProxy();
-          return EcoreUtil.resolve(_eObjectOrProxy, context);
-        }
-      };
-      Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
-      _xblockexpression = Scopes.scopeFor(scopedElements, scope);
+      _xblockexpression = this.scopeTableColumns(context, dbName, tableName);
     }
     return _xblockexpression;
   }
@@ -191,28 +163,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_OldColumn_column(final OldColumn context, final EReference ref) {
     IScope _xblockexpression = null;
     {
-      IScope scope = this.delegateGetScope(context, ref);
-      MickeyFile model = ModelUtil.getModel(context);
+      MickeyFile _model = ModelUtil.getModel(context);
+      String dbName = _model.getDatabaseName();
       CreateTriggerStatement statement = ModelUtil.<CreateTriggerStatement>getAncestorOfType(context, CreateTriggerStatement.class);
       String tableName = ModelUtil.getFeatureNodeText(statement, MickeyLangPackage.Literals.CREATE_TRIGGER_STATEMENT__TABLE);
-      String _databaseName = model.getDatabaseName();
-      final QualifiedName name = QualifiedName.create(_databaseName, tableName);
-      Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
-        public Boolean apply(final IEObjectDescription e) {
-          QualifiedName _name = e.getName();
-          return Boolean.valueOf(_name.startsWith(name));
-        }
-      };
-      Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
-        public EObject apply(final IEObjectDescription e) {
-          EObject _eObjectOrProxy = e.getEObjectOrProxy();
-          return EcoreUtil.resolve(_eObjectOrProxy, context);
-        }
-      };
-      Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
-      _xblockexpression = Scopes.scopeFor(scopedElements, scope);
+      _xblockexpression = this.scopeTableColumns(context, dbName, tableName);
     }
     return _xblockexpression;
   }
@@ -220,28 +175,11 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   public IScope scope_UpdateColumnExpression_columnName(final UpdateColumnExpression context, final EReference ref) {
     IScope _xblockexpression = null;
     {
-      IScope scope = this.delegateGetScope(context, ref);
-      MickeyFile model = ModelUtil.getModel(context);
+      MickeyFile _model = ModelUtil.getModel(context);
+      String dbName = _model.getDatabaseName();
       DMLStatement statement = ModelUtil.<DMLStatement>getAncestorOfType(context, DMLStatement.class);
       String tableName = ModelUtil.getTargetTableName(statement);
-      String _databaseName = model.getDatabaseName();
-      final QualifiedName name = QualifiedName.create(_databaseName, tableName);
-      Iterable<IEObjectDescription> _allElements = scope.getAllElements();
-      final Function1<IEObjectDescription, Boolean> _function = new Function1<IEObjectDescription, Boolean>() {
-        public Boolean apply(final IEObjectDescription e) {
-          QualifiedName _name = e.getName();
-          return Boolean.valueOf(_name.startsWith(name));
-        }
-      };
-      Iterable<IEObjectDescription> _filter = IterableExtensions.<IEObjectDescription>filter(_allElements, _function);
-      final Function1<IEObjectDescription, EObject> _function_1 = new Function1<IEObjectDescription, EObject>() {
-        public EObject apply(final IEObjectDescription e) {
-          EObject _eObjectOrProxy = e.getEObjectOrProxy();
-          return EcoreUtil.resolve(_eObjectOrProxy, context);
-        }
-      };
-      Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_filter, _function_1);
-      _xblockexpression = Scopes.scopeFor(scopedElements, scope);
+      _xblockexpression = this.scopeTableColumns(context, dbName, tableName);
     }
     return _xblockexpression;
   }
@@ -318,5 +256,47 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       _xblockexpression = Scopes.scopeFor(scopedElements, scope);
     }
     return _xblockexpression;
+  }
+  
+  public MickeyModel getMickeyModelInScope(final EObject context) {
+    Iterable<IEObjectDescription> _exportedObjectsByType = this.resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MICKEY_FILE);
+    final Function1<IEObjectDescription, MickeyFile> _function = new Function1<IEObjectDescription, MickeyFile>() {
+      public MickeyFile apply(final IEObjectDescription e) {
+        EObject _eObjectOrProxy = e.getEObjectOrProxy();
+        EObject _resolve = EcoreUtil.resolve(_eObjectOrProxy, context);
+        return ((MickeyFile) _resolve);
+      }
+    };
+    Iterable<MickeyFile> _map = IterableExtensions.<IEObjectDescription, MickeyFile>map(_exportedObjectsByType, _function);
+    List<MickeyFile> files = IterableExtensions.<MickeyFile>toList(_map);
+    int _size = files.size();
+    boolean _greaterThan = (_size > 0);
+    if (_greaterThan) {
+      MigrationBlock migration = ModelUtil.<MigrationBlock>getAncestorOfType(context, MigrationBlock.class);
+      return this.assembler.assemble(files, migration);
+    }
+    return null;
+  }
+  
+  public IScope scopeTableColumns(final EObject context, final String dbName, final String tableName) {
+    MickeyModel mickeyModel = this.getMickeyModelInScope(context);
+    boolean _notEquals = (!Objects.equal(mickeyModel, null));
+    if (_notEquals) {
+      MickeyDatabaseModel _get = mickeyModel.databases.get(dbName);
+      SqliteDatabaseSnapshot _snapshot = _get.getSnapshot();
+      TableDefinition definition = _snapshot.getTableDefinition(tableName);
+      if ((definition instanceof CreateTableStatement)) {
+        CreateTableStatement table = ((CreateTableStatement) definition);
+        EList<ColumnSource> _columnDefs = table.getColumnDefs();
+        IScope columnScope = Scopes.scopeFor(_columnDefs, IScope.NULLSCOPE);
+        return columnScope;
+      } else {
+        CreateViewStatement view = ((CreateViewStatement) definition);
+        ArrayList<ColumnSource> _viewResultColumns = ModelUtil.getViewResultColumns(view);
+        IScope columnScope_1 = Scopes.scopeFor(_viewResultColumns, IScope.NULLSCOPE);
+        return columnScope_1;
+      }
+    }
+    return IScope.NULLSCOPE;
   }
 }

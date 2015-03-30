@@ -3,30 +3,35 @@ package com.justeat.mickeydb
 import com.google.inject.Inject
 import com.google.inject.Provider
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot
-import com.justeat.mickeydb.mickeyLang.MickeyFile
-import org.eclipse.emf.ecore.resource.Resource
-import java.util.ArrayList
-import com.justeat.mickeydb.mickeyLang.MigrationBlock
-import org.eclipse.xtext.EcoreUtil2
 import com.justeat.mickeydb.mickeyLang.ActionStatement
-import com.justeat.mickeydb.mickeyLang.MickeyFunction
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement
+import com.justeat.mickeydb.mickeyLang.MickeyFile
+import com.justeat.mickeydb.mickeyLang.MickeyFunction
+import com.justeat.mickeydb.mickeyLang.MigrationBlock
+import java.util.List
+import org.eclipse.emf.ecore.resource.Resource
 
 class MickeyAssembler {
 	
 	@Inject Provider<SqliteDatabaseSnapshot.Builder> mDbSnapshotBuilderProvider
 	
 	def MickeyModel assemble(Resource resource) {
-
-		var allFiles = resource.resourceSet.resources.map[it.allContents.head as MickeyFile]
+		return assemble(resource.resourceSet.resources.map[it.allContents.head as MickeyFile], null)
+	}
+		
+	def MickeyModel assemble(List<MickeyFile> files) {
+		return assemble(files, null)
+	}
+	
+	def MickeyModel assemble(List<MickeyFile> files, MigrationBlock upToMigration) {
 
 		val mickeyModel = new MickeyModel();
 		
-		allFiles.forEach[file|mickeyModel.registerFile(file)]
+		files.forEach[file|mickeyModel.registerFile(file)]
 		
 		mickeyModel.databases.values.forEach[db|		
-			db.sortMigrations
+			db.sortMigrations(upToMigration)
 			db.initTables.sortInplaceBy[x|x.name]
 			db.initViews.sortInplaceBy[x|x.name]
 			
@@ -38,18 +43,22 @@ class MickeyAssembler {
 		return mickeyModel;
 	}
 	
-	private def sortMigrations(MickeyDatabaseModel db) {
+	private def sortMigrations(MickeyDatabaseModel db, MigrationBlock upToMigration) {
 		var migration = db.migrationsByName.values.findFirst[from==null]
 		
-		db.migrations.add(migration)
-		
-		while(migration != null) {
-			migration = db.migrationsByFromName.get(migration.name)
-			if(migration != null) {
-				db.migrations.add(migration)
-			}
+		if(migration == null) {
+			return
 		}
 		
+		while(migration != null) {	
+				db.migrations.add(migration)
+				
+				if(upToMigration != null && upToMigration.name.equals(migration.name)) {
+					return
+				}
+				
+				migration = db.migrationsByFromName.get(migration.name)
+		}		
 	}
 	
 	private def registerFile(MickeyModel model, MickeyFile file) {

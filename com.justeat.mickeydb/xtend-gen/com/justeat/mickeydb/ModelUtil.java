@@ -30,6 +30,7 @@ import com.justeat.mickeydb.mickeyLang.SelectCore;
 import com.justeat.mickeydb.mickeyLang.SelectCoreExpression;
 import com.justeat.mickeydb.mickeyLang.SelectExpression;
 import com.justeat.mickeydb.mickeyLang.SelectList;
+import com.justeat.mickeydb.mickeyLang.SelectSource;
 import com.justeat.mickeydb.mickeyLang.SelectStatement;
 import com.justeat.mickeydb.mickeyLang.SingleSource;
 import com.justeat.mickeydb.mickeyLang.SingleSourceTable;
@@ -281,6 +282,10 @@ public class ModelUtil {
   
   public static ColumnType getInferredColumnType(final ResultColumn col) {
     Expression expr = col.getExpression();
+    return ModelUtil.getInferredColumnType(expr);
+  }
+  
+  public static ColumnType getInferredColumnType(final Expression expr) {
     boolean _matched = false;
     if (!_matched) {
       if (expr instanceof CastExpression) {
@@ -294,8 +299,14 @@ public class ModelUtil {
         _matched=true;
         ColumnSource _column = ((ColumnSourceRef)expr).getColumn();
         if ((_column instanceof ResultColumn)) {
+          SelectSource _source = ((ColumnSourceRef)expr).getSource();
+          boolean _equals = Objects.equal(_source, null);
+          if (_equals) {
+            return ColumnType.TEXT;
+          }
           ColumnSource _column_1 = ((ColumnSourceRef)expr).getColumn();
-          ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(((ResultColumn) _column_1));
+          Expression _expression = ((ResultColumn) _column_1).getExpression();
+          ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_expression);
           return ((ColumnType) _inferredColumnType);
         } else {
           ColumnSource _column_2 = ((ColumnSourceRef)expr).getColumn();
