@@ -30,12 +30,18 @@ import org.eclipse.xtext.scoping.Scopes
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 
 import static extension com.justeat.mickeydb.ModelUtil.*
+import org.apache.log4j.Logger
+import java.util.List
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
+	
+	static final Logger LOG = Logger.getLogger(MickeyScopeProvider);
 	
 	@Inject IQualifiedNameProvider nameProvider;
 	@Inject IResourceDescriptions resourceDescriptions;
 	@Inject MickeyAssembler assembler
+	
+	@Inject MickeyEnvironment mickeyEnvironment
 	
 	override getScope(EObject context, EReference reference) {
 		super.getScope(context, reference)	
@@ -154,13 +160,29 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 	
 	def MickeyModel getMickeyModelInScope(EObject context) {
-			    var files = resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MICKEY_FILE)
-	    				.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context) as MickeyFile].toList
-	    				
-	    if(files.size > 0) {
-	    	var migration = context.getAncestorOfType(MigrationBlock)
-	    	return assembler.assemble(files, migration)
+		
+		var List<MickeyFile> files;
+		
+		LOG.debug("[Get Model In Scope] Standalone: " +mickeyEnvironment.isStandalone())
+		
+		if(mickeyEnvironment.isStandalone()) {
+			files = context.eResource.resourceSet.resources.map[it.allContents.head as MickeyFile]
+	    } else {
+	    	files = resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MICKEY_FILE)
+				.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context) as MickeyFile].toList	    	
 	    }
+	    		
+	    if(files.size > 0) {
+	    	LOG.debug("[Get Model In Scope] Files: " + files.size)
+	    	var migration = context.getAncestorOfType(MigrationBlock)
+	    	try {
+	    		return assembler.assemble(files, migration)
+	    	} catch(Exception e) {
+	    		LOG.debug("[Get Model In Scope] Failed with error ", e)
+	    	}
+	    }
+	    
+	    LOG.debug("[Get Model In Scope] Failed ")
 	    
 	    return null
 	}

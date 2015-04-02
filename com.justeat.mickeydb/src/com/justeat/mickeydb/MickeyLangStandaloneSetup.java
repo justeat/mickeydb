@@ -3,14 +3,34 @@
  */
 package com.justeat.mickeydb;
 
+import org.apache.log4j.Logger;
+
+import com.google.inject.Inject;
+import com.google.inject.Injector;
+
 /**
  * Initialization support for running Xtext languages 
  * without equinox extension registry
  */
 public class MickeyLangStandaloneSetup extends MickeyLangStandaloneSetupGenerated{
-
+	static final Logger LOG = Logger.getLogger(MickeyLangStandaloneSetup.class);
+	
+	@Inject MickeyEnvironment mEnvironment;
+	
 	public static void doSetup() {
-		new MickeyLangStandaloneSetup().createInjectorAndDoEMFRegistration();
+		MickeyLangStandaloneSetup setup = new MickeyLangStandaloneSetup();
+		Injector i =  setup.createInjectorAndDoEMFRegistration();
+	}
+	
+	@Override
+	public Injector createInjector() {
+		Injector injector = super.createInjector();
+		
+		LOG.debug("[Mickey Standalone]");
+		injector.injectMembers(this);
+		mEnvironment.setStandalone(true);
+		
+		return injector;
 	}
 }
 

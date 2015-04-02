@@ -4,6 +4,7 @@ import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import com.justeat.mickeydb.MickeyAssembler;
 import com.justeat.mickeydb.MickeyDatabaseModel;
+import com.justeat.mickeydb.MickeyEnvironment;
 import com.justeat.mickeydb.MickeyModel;
 import com.justeat.mickeydb.ModelUtil;
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot;
@@ -31,9 +32,13 @@ import com.justeat.mickeydb.mickeyLang.UpdateColumnExpression;
 import com.justeat.mickeydb.mickeyLang.UpdateStatement;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.xtext.naming.IQualifiedNameProvider;
 import org.eclipse.xtext.naming.QualifiedName;
@@ -42,11 +47,16 @@ import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.eclipse.xtext.xbase.lib.ListExtensions;
 
 @SuppressWarnings("all")
 public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
+  private final static Logger LOG = Logger.getLogger(MickeyScopeProvider.class);
+  
   @Inject
   private IQualifiedNameProvider nameProvider;
   
@@ -55,6 +65,9 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   
   @Inject
   private MickeyAssembler assembler;
+  
+  @Inject
+  private MickeyEnvironment mickeyEnvironment;
   
   public IScope getScope(final EObject context, final EReference reference) {
     return super.getScope(context, reference);
@@ -259,22 +272,56 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public MickeyModel getMickeyModelInScope(final EObject context) {
-    Iterable<IEObjectDescription> _exportedObjectsByType = this.resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MICKEY_FILE);
-    final Function1<IEObjectDescription, MickeyFile> _function = new Function1<IEObjectDescription, MickeyFile>() {
-      public MickeyFile apply(final IEObjectDescription e) {
-        EObject _eObjectOrProxy = e.getEObjectOrProxy();
-        EObject _resolve = EcoreUtil.resolve(_eObjectOrProxy, context);
-        return ((MickeyFile) _resolve);
-      }
-    };
-    Iterable<MickeyFile> _map = IterableExtensions.<IEObjectDescription, MickeyFile>map(_exportedObjectsByType, _function);
-    List<MickeyFile> files = IterableExtensions.<MickeyFile>toList(_map);
+    List<MickeyFile> files = null;
+    boolean _isStandalone = this.mickeyEnvironment.isStandalone();
+    String _plus = ("[Get Model In Scope] Standalone: " + Boolean.valueOf(_isStandalone));
+    MickeyScopeProvider.LOG.debug(_plus);
+    boolean _isStandalone_1 = this.mickeyEnvironment.isStandalone();
+    if (_isStandalone_1) {
+      Resource _eResource = context.eResource();
+      ResourceSet _resourceSet = _eResource.getResourceSet();
+      EList<Resource> _resources = _resourceSet.getResources();
+      final Function1<Resource, MickeyFile> _function = new Function1<Resource, MickeyFile>() {
+        public MickeyFile apply(final Resource it) {
+          TreeIterator<EObject> _allContents = it.getAllContents();
+          EObject _head = IteratorExtensions.<EObject>head(_allContents);
+          return ((MickeyFile) _head);
+        }
+      };
+      List<MickeyFile> _map = ListExtensions.<Resource, MickeyFile>map(_resources, _function);
+      files = _map;
+    } else {
+      Iterable<IEObjectDescription> _exportedObjectsByType = this.resourceDescriptions.getExportedObjectsByType(MickeyLangPackage.Literals.MICKEY_FILE);
+      final Function1<IEObjectDescription, MickeyFile> _function_1 = new Function1<IEObjectDescription, MickeyFile>() {
+        public MickeyFile apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          EObject _resolve = EcoreUtil.resolve(_eObjectOrProxy, context);
+          return ((MickeyFile) _resolve);
+        }
+      };
+      Iterable<MickeyFile> _map_1 = IterableExtensions.<IEObjectDescription, MickeyFile>map(_exportedObjectsByType, _function_1);
+      List<MickeyFile> _list = IterableExtensions.<MickeyFile>toList(_map_1);
+      files = _list;
+    }
     int _size = files.size();
     boolean _greaterThan = (_size > 0);
     if (_greaterThan) {
+      int _size_1 = files.size();
+      String _plus_1 = ("[Get Model In Scope] Files: " + Integer.valueOf(_size_1));
+      MickeyScopeProvider.LOG.debug(_plus_1);
       MigrationBlock migration = ModelUtil.<MigrationBlock>getAncestorOfType(context, MigrationBlock.class);
-      return this.assembler.assemble(files, migration);
+      try {
+        return this.assembler.assemble(files, migration);
+      } catch (final Throwable _t) {
+        if (_t instanceof Exception) {
+          final Exception e = (Exception)_t;
+          MickeyScopeProvider.LOG.debug("[Get Model In Scope] Failed with error ", e);
+        } else {
+          throw Exceptions.sneakyThrow(_t);
+        }
+      }
     }
+    MickeyScopeProvider.LOG.debug("[Get Model In Scope] Failed ");
     return null;
   }
   

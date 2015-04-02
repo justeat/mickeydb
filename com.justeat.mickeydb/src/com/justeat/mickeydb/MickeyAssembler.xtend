@@ -19,6 +19,10 @@ class MickeyAssembler {
 	def MickeyModel assemble(Resource resource) {
 		return assemble(resource.resourceSet.resources.map[it.allContents.head as MickeyFile], null)
 	}
+	
+		def MickeyModel assemble(Resource resource, MigrationBlock upToMigration) {
+		return assemble(resource.resourceSet.resources.map[it.allContents.head as MickeyFile], upToMigration)
+	}
 		
 	def MickeyModel assemble(List<MickeyFile> files) {
 		return assemble(files, null)

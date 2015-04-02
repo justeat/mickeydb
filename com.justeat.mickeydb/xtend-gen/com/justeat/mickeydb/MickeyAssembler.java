@@ -48,6 +48,20 @@ public class MickeyAssembler {
     return this.assemble(_map, null);
   }
   
+  public MickeyModel assemble(final Resource resource, final MigrationBlock upToMigration) {
+    ResourceSet _resourceSet = resource.getResourceSet();
+    EList<Resource> _resources = _resourceSet.getResources();
+    final Function1<Resource, MickeyFile> _function = new Function1<Resource, MickeyFile>() {
+      public MickeyFile apply(final Resource it) {
+        TreeIterator<EObject> _allContents = it.getAllContents();
+        EObject _head = IteratorExtensions.<EObject>head(_allContents);
+        return ((MickeyFile) _head);
+      }
+    };
+    List<MickeyFile> _map = ListExtensions.<Resource, MickeyFile>map(_resources, _function);
+    return this.assemble(_map, upToMigration);
+  }
+  
   public MickeyModel assemble(final List<MickeyFile> files) {
     return this.assemble(files, null);
   }

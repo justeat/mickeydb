@@ -20,6 +20,7 @@ public class MickeyLangRuntimeModule extends com.justeat.mickeydb.AbstractMickey
         super.configure(binder);
 
         binder.bind(IOutputConfigurationProvider.class).to(MickeyOutputConfigurationProvider.class);
+        binder.bind(MickeyEnvironment.class);
     }
     
 	@Override
