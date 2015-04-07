@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'org.xtext.xtext'
+
+repositories {
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    xtextTooling 'com.justeat:com.justeat.mickeydb:1.0.0-SNAPSHOT'
+    compile 'com.justeat:com.justeat.mickeydb.lib:1.0.0-SNAPSHOT'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src/main/java", 'src/main/java-gen']
+        }
+    }
+}
+
+xtext {
+    version = '2.8.0'
+
+    sources {
+        srcDir 'src/main/model'
+    }
+
+    languages {
+        mickey {
+            setup = 'com.justeat.mickeydb.MickeyLangStandaloneSetup'
+            outputs {
+                DEFAULT_OUTPUT.dir = 'src/main/java-gen'
+                DEFAULT_STUB_OUTPUT.dir = 'src/main/java'
+            }
+        }
+    }
+}

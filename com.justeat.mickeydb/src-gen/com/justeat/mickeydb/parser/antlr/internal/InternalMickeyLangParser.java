@@ -25,141 +25,141 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_NUMBER", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'database'", "'function'", "'('", "','", "')'", "'{'", "';'", "'}'", "'action'", "'/'", "':'", "'#'", "'*'", "'migrate'", "'from'", "'||'", "'%'", "'+'", "'-'", "'<<'", "'>>'", "'&'", "'|'", "'<'", "'<='", "'>'", "'>='", "'='", "'=='", "'!='", "'<>'", "'is'", "'is not'", "'in'", "'not in'", "'like'", "'glob'", "'match'", "'regexp'", "'and'", "'or'", "'is null'", "'not null'", "'notnull'", "'new.'", "'old.'", "'.'", "'not'", "'exists'", "'case'", "'else'", "'end'", "'cast'", "'as'", "'$'", "'when'", "'then'", "'order by'", "'limit'", "'offset'", "'select'", "'distinct'", "'all'", "'where'", "'group by'", "'having'", "'asc'", "'desc'", "'natural'", "'left'", "'outer'", "'inner'", "'cross'", "'join'", "'on'", "'null'", "'current_time'", "'current_date'", "'current_timestamp'", "'create'", "'temp'", "'table'", "'view'", "'trigger'", "'before'", "'after'", "'instead of'", "'delete'", "'insert'", "'update'", "'of'", "'for each row'", "'begin'", "'alter'", "'rename to'", "'add column'", "'drop'", "'if exists'", "'unique'", "'index'", "'primary key'", "'autoincrement'", "'default'", "'check'", "'constraint'", "'collate'", "'conflict'", "'replace'", "'into'", "'values'", "'set'", "'union all'", "'union'", "'intersect'", "'except'", "'text'", "'integer'", "'real'", "'blob'", "'none'", "'numeric'", "'boolean'", "'rollback'", "'abort'", "'fail'", "'ignore'"
     };
-    public static final int T__50=50;
-    public static final int T__59=59;
+    public static final int RULE_ID=4;
+    public static final int T__29=29;
+    public static final int T__28=28;
+    public static final int T__27=27;
+    public static final int T__26=26;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int EOF=-1;
+    public static final int T__93=93;
+    public static final int T__19=19;
+    public static final int T__94=94;
+    public static final int T__91=91;
+    public static final int T__92=92;
+    public static final int T__16=16;
+    public static final int T__15=15;
+    public static final int T__90=90;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int T__12=12;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int T__99=99;
+    public static final int T__98=98;
+    public static final int T__97=97;
+    public static final int T__96=96;
+    public static final int T__95=95;
+    public static final int T__137=137;
+    public static final int T__136=136;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
+    public static final int T__85=85;
+    public static final int T__84=84;
+    public static final int T__87=87;
+    public static final int T__86=86;
+    public static final int T__89=89;
+    public static final int T__88=88;
+    public static final int RULE_ML_COMMENT=8;
+    public static final int T__126=126;
+    public static final int T__125=125;
+    public static final int T__128=128;
+    public static final int RULE_STRING=5;
+    public static final int T__127=127;
+    public static final int T__71=71;
+    public static final int T__129=129;
+    public static final int T__72=72;
+    public static final int T__70=70;
+    public static final int T__76=76;
+    public static final int T__75=75;
+    public static final int T__130=130;
+    public static final int T__74=74;
+    public static final int T__131=131;
+    public static final int T__73=73;
+    public static final int T__132=132;
+    public static final int T__133=133;
+    public static final int T__79=79;
+    public static final int T__134=134;
+    public static final int T__78=78;
+    public static final int T__135=135;
+    public static final int T__77=77;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int T__66=66;
+    public static final int T__67=67;
+    public static final int T__64=64;
+    public static final int T__65=65;
+    public static final int T__62=62;
+    public static final int T__63=63;
+    public static final int T__118=118;
+    public static final int T__119=119;
+    public static final int T__116=116;
+    public static final int T__117=117;
+    public static final int T__114=114;
+    public static final int T__115=115;
+    public static final int T__124=124;
+    public static final int T__123=123;
+    public static final int T__122=122;
+    public static final int T__121=121;
+    public static final int T__120=120;
+    public static final int T__61=61;
+    public static final int T__60=60;
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
     public static final int T__51=51;
-    public static final int T__137=137;
     public static final int T__52=52;
-    public static final int T__136=136;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int T__133=133;
-    public static final int T__132=132;
-    public static final int T__60=60;
-    public static final int T__135=135;
-    public static final int T__61=61;
-    public static final int T__134=134;
-    public static final int RULE_ID=4;
-    public static final int T__131=131;
-    public static final int T__130=130;
+    public static final int RULE_NUMBER=6;
+    public static final int T__107=107;
+    public static final int T__108=108;
+    public static final int T__109=109;
+    public static final int T__103=103;
+    public static final int T__59=59;
+    public static final int T__104=104;
+    public static final int T__105=105;
+    public static final int T__106=106;
+    public static final int T__111=111;
+    public static final int T__110=110;
     public static final int RULE_INT=7;
-    public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=8;
-    public static final int T__67=67;
-    public static final int T__129=129;
-    public static final int T__68=68;
-    public static final int T__69=69;
-    public static final int T__62=62;
-    public static final int T__126=126;
-    public static final int T__63=63;
-    public static final int T__125=125;
-    public static final int T__64=64;
-    public static final int T__128=128;
-    public static final int T__65=65;
-    public static final int T__127=127;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int T__113=113;
+    public static final int T__112=112;
+    public static final int T__50=50;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__102=102;
+    public static final int T__101=101;
+    public static final int T__100=100;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__91=91;
-    public static final int T__100=100;
-    public static final int T__92=92;
-    public static final int T__93=93;
-    public static final int T__102=102;
-    public static final int T__94=94;
-    public static final int T__101=101;
-    public static final int T__90=90;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__99=99;
-    public static final int T__12=12;
-    public static final int T__13=13;
-    public static final int T__14=14;
-    public static final int T__95=95;
-    public static final int T__96=96;
-    public static final int T__97=97;
-    public static final int T__98=98;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
-    public static final int T__29=29;
-    public static final int T__22=22;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int T__122=122;
-    public static final int T__70=70;
-    public static final int T__121=121;
-    public static final int T__71=71;
-    public static final int T__124=124;
-    public static final int T__72=72;
-    public static final int T__123=123;
-    public static final int T__120=120;
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int T__77=77;
-    public static final int T__119=119;
-    public static final int T__78=78;
-    public static final int T__118=118;
-    public static final int T__79=79;
-    public static final int T__73=73;
-    public static final int T__115=115;
-    public static final int EOF=-1;
-    public static final int T__74=74;
-    public static final int T__114=114;
-    public static final int T__75=75;
-    public static final int T__117=117;
-    public static final int T__76=76;
-    public static final int T__116=116;
-    public static final int T__80=80;
-    public static final int T__111=111;
-    public static final int T__81=81;
-    public static final int T__110=110;
-    public static final int T__82=82;
-    public static final int T__113=113;
-    public static final int T__83=83;
-    public static final int T__112=112;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_NUMBER=6;
-    public static final int T__88=88;
-    public static final int T__108=108;
-    public static final int T__89=89;
-    public static final int T__107=107;
-    public static final int T__109=109;
-    public static final int T__84=84;
-    public static final int T__104=104;
-    public static final int T__85=85;
-    public static final int T__103=103;
-    public static final int T__86=86;
-    public static final int T__106=106;
-    public static final int T__87=87;
-    public static final int T__105=105;
 
     // delegates
     // delegators
@@ -13831,14 +13831,14 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
 
                 if ( (LA88_1==RULE_ID) ) {
                     switch ( input.LA(3) ) {
-                    case 110:
-                        {
-                        alt88=1;
-                        }
-                        break;
                     case 112:
                         {
                         alt88=2;
+                        }
+                        break;
+                    case 110:
+                        {
+                        alt88=1;
                         }
                         break;
                     case 115:
@@ -17845,21 +17845,20 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
     static final String DFA28_eotS =
         "\127\uffff";
     static final String DFA28_eofS =
-        "\1\uffff\1\3\1\44\1\uffff\1\5\122\uffff";
+        "\1\uffff\1\3\1\43\34\uffff\1\105\67\uffff";
     static final String DFA28_minS =
-        "\1\4\1\15\1\4\1\uffff\1\4\104\uffff\1\4\14\uffff\1\0";
+        "\1\4\1\15\1\4\34\uffff\1\4\46\uffff\1\4\17\uffff\1\0";
     static final String DFA28_maxS =
-        "\1\4\2\176\1\uffff\1\176\104\uffff\1\132\14\uffff\1\0";
+        "\1\4\2\176\34\uffff\1\176\46\uffff\1\132\17\uffff\1\0";
     static final String DFA28_acceptS =
-        "\3\uffff\1\3\1\uffff\1\2\103\1\1\uffff\14\1\1\uffff";
+        "\3\uffff\1\3\33\1\1\uffff\45\1\1\2\1\uffff\17\1\1\uffff";
     static final String DFA28_specialS =
-        "\2\uffff\1\0\1\uffff\1\1\121\uffff\1\2}>";
+        "\2\uffff\1\2\34\uffff\1\0\66\uffff\1\1}>";
     static final String[] DFA28_transitionS = {
             "\1\1",
             "\1\3\1\uffff\2\3\1\uffff\1\3\1\uffff\2\3\2\uffff\40\3\2\uffff\1\2\3\uffff\2\3\1\uffff\1\3\1\uffff\5\3\3\uffff\7\3\1\uffff\3\3\5\uffff\1\3\14\uffff\2\3\2\uffff\1\3\16\uffff\4\3",
-            "\1\5\10\uffff\1\55\1\uffff\1\50\1\45\1\uffff\1\63\1\uffff\1\56\1\41\2\uffff\1\4\1\62\1\104\1\43\1\42\1\37\1\40\1\33\1\34\1\35\1\36\1\27\1\30\1\31\1\32\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\12\1\11\1\6\1\7\1\10\6\uffff\1\53\1\47\1\uffff\1\51\1\uffff\1\46\1\52\1\72\1\73\1\54\3\uffff\1\76\1\64\1\65\1\74\1\75\1\77\1\100\1\uffff\1\101\1\102\1\103\5\uffff\1\57\14\uffff\1\105\1\60\2\uffff\1\61\16\uffff\1\66\1\67\1\70\1\71",
+            "\1\105\10\uffff\1\54\1\uffff\1\47\1\44\1\uffff\1\62\1\uffff\1\55\1\40\2\uffff\1\37\1\61\1\103\1\42\1\41\1\35\1\36\1\31\1\32\1\33\1\34\1\25\1\26\1\27\1\30\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\10\1\7\1\4\1\5\1\6\6\uffff\1\52\1\46\1\uffff\1\50\1\uffff\1\45\1\51\1\71\1\72\1\53\3\uffff\1\75\1\63\1\64\1\73\1\74\1\76\1\77\1\uffff\1\100\1\101\1\102\5\uffff\1\56\14\uffff\1\104\1\57\2\uffff\1\60\16\uffff\1\65\1\66\1\67\1\70",
             "",
-            "\1\110\1\113\1\112\6\uffff\1\5\1\120\2\5\1\uffff\1\5\1\uffff\2\5\2\uffff\6\5\1\111\31\5\1\106\1\107\1\uffff\1\121\1\122\1\123\2\5\1\124\1\5\1\125\5\5\3\uffff\7\5\1\uffff\3\5\1\uffff\1\114\1\115\1\116\1\117\1\5\14\uffff\2\5\2\uffff\1\5\16\uffff\4\5",
             "",
             "",
             "",
@@ -17887,6 +17886,7 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
+            "\1\111\1\113\1\112\6\uffff\1\105\1\120\2\105\1\uffff\1\105\1\uffff\2\105\2\uffff\6\105\1\106\31\105\1\107\1\110\1\uffff\1\121\1\122\1\123\2\105\1\124\1\105\1\125\5\105\3\uffff\7\105\1\uffff\3\105\1\uffff\1\114\1\115\1\116\1\117\1\105\14\uffff\2\105\2\uffff\1\105\16\uffff\4\105",
             "",
             "",
             "",
@@ -17925,10 +17925,10 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
+            "\2\105\1\126\7\uffff\1\105\17\uffff\1\105\31\uffff\2\105\1\uffff\3\105\2\uffff\1\105\1\uffff\1\105\24\uffff\4\105",
             "",
             "",
             "",
-            "\2\5\1\126\7\uffff\1\5\17\uffff\1\5\31\uffff\2\5\1\uffff\3\5\2\uffff\1\5\1\uffff\1\5\24\uffff\4\5",
             "",
             "",
             "",
@@ -17981,194 +17981,51 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA28_2 = input.LA(1);
+                        int LA28_31 = input.LA(1);
 
                          
-                        int index28_2 = input.index();
+                        int index28_31 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA28_2==24) ) {s = 4;}
+                        if ( (LA28_31==EOF||LA28_31==13||(LA28_31>=15 && LA28_31<=16)||LA28_31==18||(LA28_31>=20 && LA28_31<=21)||(LA28_31>=24 && LA28_31<=29)||(LA28_31>=31 && LA28_31<=55)||(LA28_31>=62 && LA28_31<=63)||LA28_31==65||(LA28_31>=67 && LA28_31<=71)||(LA28_31>=75 && LA28_31<=81)||(LA28_31>=83 && LA28_31<=85)||LA28_31==91||(LA28_31>=104 && LA28_31<=105)||LA28_31==108||(LA28_31>=123 && LA28_31<=126)) ) {s = 69;}
 
-                        else if ( (LA28_2==RULE_ID) ) {s = 5;}
+                        else if ( (LA28_31==30) ) {s = 70;}
 
-                        else if ( (LA28_2==53) && (synpred1_InternalMickeyLang())) {s = 6;}
+                        else if ( (LA28_31==56) && (synpred1_InternalMickeyLang())) {s = 71;}
 
-                        else if ( (LA28_2==54) && (synpred1_InternalMickeyLang())) {s = 7;}
+                        else if ( (LA28_31==57) && (synpred1_InternalMickeyLang())) {s = 72;}
 
-                        else if ( (LA28_2==55) && (synpred1_InternalMickeyLang())) {s = 8;}
+                        else if ( (LA28_31==RULE_ID) && (synpred1_InternalMickeyLang())) {s = 73;}
 
-                        else if ( (LA28_2==52) && (synpred1_InternalMickeyLang())) {s = 9;}
+                        else if ( (LA28_31==RULE_NUMBER) && (synpred1_InternalMickeyLang())) {s = 74;}
 
-                        else if ( (LA28_2==51) && (synpred1_InternalMickeyLang())) {s = 10;}
+                        else if ( (LA28_31==RULE_STRING) && (synpred1_InternalMickeyLang())) {s = 75;}
 
-                        else if ( (LA28_2==39) && (synpred1_InternalMickeyLang())) {s = 11;}
+                        else if ( (LA28_31==87) && (synpred1_InternalMickeyLang())) {s = 76;}
 
-                        else if ( (LA28_2==40) && (synpred1_InternalMickeyLang())) {s = 12;}
+                        else if ( (LA28_31==88) && (synpred1_InternalMickeyLang())) {s = 77;}
 
-                        else if ( (LA28_2==41) && (synpred1_InternalMickeyLang())) {s = 13;}
+                        else if ( (LA28_31==89) && (synpred1_InternalMickeyLang())) {s = 78;}
 
-                        else if ( (LA28_2==42) && (synpred1_InternalMickeyLang())) {s = 14;}
+                        else if ( (LA28_31==90) && (synpred1_InternalMickeyLang())) {s = 79;}
 
-                        else if ( (LA28_2==43) && (synpred1_InternalMickeyLang())) {s = 15;}
+                        else if ( (LA28_31==14) && (synpred1_InternalMickeyLang())) {s = 80;}
 
-                        else if ( (LA28_2==44) && (synpred1_InternalMickeyLang())) {s = 16;}
+                        else if ( (LA28_31==59) && (synpred1_InternalMickeyLang())) {s = 81;}
 
-                        else if ( (LA28_2==45) && (synpred1_InternalMickeyLang())) {s = 17;}
+                        else if ( (LA28_31==60) && (synpred1_InternalMickeyLang())) {s = 82;}
 
-                        else if ( (LA28_2==46) && (synpred1_InternalMickeyLang())) {s = 18;}
+                        else if ( (LA28_31==61) && (synpred1_InternalMickeyLang())) {s = 83;}
 
-                        else if ( (LA28_2==47) && (synpred1_InternalMickeyLang())) {s = 19;}
+                        else if ( (LA28_31==64) && (synpred1_InternalMickeyLang())) {s = 84;}
 
-                        else if ( (LA28_2==48) && (synpred1_InternalMickeyLang())) {s = 20;}
-
-                        else if ( (LA28_2==49) && (synpred1_InternalMickeyLang())) {s = 21;}
-
-                        else if ( (LA28_2==50) && (synpred1_InternalMickeyLang())) {s = 22;}
-
-                        else if ( (LA28_2==35) && (synpred1_InternalMickeyLang())) {s = 23;}
-
-                        else if ( (LA28_2==36) && (synpred1_InternalMickeyLang())) {s = 24;}
-
-                        else if ( (LA28_2==37) && (synpred1_InternalMickeyLang())) {s = 25;}
-
-                        else if ( (LA28_2==38) && (synpred1_InternalMickeyLang())) {s = 26;}
-
-                        else if ( (LA28_2==31) && (synpred1_InternalMickeyLang())) {s = 27;}
-
-                        else if ( (LA28_2==32) && (synpred1_InternalMickeyLang())) {s = 28;}
-
-                        else if ( (LA28_2==33) && (synpred1_InternalMickeyLang())) {s = 29;}
-
-                        else if ( (LA28_2==34) && (synpred1_InternalMickeyLang())) {s = 30;}
-
-                        else if ( (LA28_2==29) && (synpred1_InternalMickeyLang())) {s = 31;}
-
-                        else if ( (LA28_2==30) && (synpred1_InternalMickeyLang())) {s = 32;}
-
-                        else if ( (LA28_2==21) && (synpred1_InternalMickeyLang())) {s = 33;}
-
-                        else if ( (LA28_2==28) && (synpred1_InternalMickeyLang())) {s = 34;}
-
-                        else if ( (LA28_2==27) && (synpred1_InternalMickeyLang())) {s = 35;}
-
-                        else if ( (LA28_2==EOF) && (synpred1_InternalMickeyLang())) {s = 36;}
-
-                        else if ( (LA28_2==16) && (synpred1_InternalMickeyLang())) {s = 37;}
-
-                        else if ( (LA28_2==67) && (synpred1_InternalMickeyLang())) {s = 38;}
-
-                        else if ( (LA28_2==63) && (synpred1_InternalMickeyLang())) {s = 39;}
-
-                        else if ( (LA28_2==15) && (synpred1_InternalMickeyLang())) {s = 40;}
-
-                        else if ( (LA28_2==65) && (synpred1_InternalMickeyLang())) {s = 41;}
-
-                        else if ( (LA28_2==68) && (synpred1_InternalMickeyLang())) {s = 42;}
-
-                        else if ( (LA28_2==62) && (synpred1_InternalMickeyLang())) {s = 43;}
-
-                        else if ( (LA28_2==71) && (synpred1_InternalMickeyLang())) {s = 44;}
-
-                        else if ( (LA28_2==13) && (synpred1_InternalMickeyLang())) {s = 45;}
-
-                        else if ( (LA28_2==20) && (synpred1_InternalMickeyLang())) {s = 46;}
-
-                        else if ( (LA28_2==91) && (synpred1_InternalMickeyLang())) {s = 47;}
-
-                        else if ( (LA28_2==105) && (synpred1_InternalMickeyLang())) {s = 48;}
-
-                        else if ( (LA28_2==108) && (synpred1_InternalMickeyLang())) {s = 49;}
-
-                        else if ( (LA28_2==25) && (synpred1_InternalMickeyLang())) {s = 50;}
-
-                        else if ( (LA28_2==18) && (synpred1_InternalMickeyLang())) {s = 51;}
-
-                        else if ( (LA28_2==76) && (synpred1_InternalMickeyLang())) {s = 52;}
-
-                        else if ( (LA28_2==77) && (synpred1_InternalMickeyLang())) {s = 53;}
-
-                        else if ( (LA28_2==123) && (synpred1_InternalMickeyLang())) {s = 54;}
-
-                        else if ( (LA28_2==124) && (synpred1_InternalMickeyLang())) {s = 55;}
-
-                        else if ( (LA28_2==125) && (synpred1_InternalMickeyLang())) {s = 56;}
-
-                        else if ( (LA28_2==126) && (synpred1_InternalMickeyLang())) {s = 57;}
-
-                        else if ( (LA28_2==69) && (synpred1_InternalMickeyLang())) {s = 58;}
-
-                        else if ( (LA28_2==70) && (synpred1_InternalMickeyLang())) {s = 59;}
-
-                        else if ( (LA28_2==78) && (synpred1_InternalMickeyLang())) {s = 60;}
-
-                        else if ( (LA28_2==79) && (synpred1_InternalMickeyLang())) {s = 61;}
-
-                        else if ( (LA28_2==75) && (synpred1_InternalMickeyLang())) {s = 62;}
-
-                        else if ( (LA28_2==80) && (synpred1_InternalMickeyLang())) {s = 63;}
-
-                        else if ( (LA28_2==81) && (synpred1_InternalMickeyLang())) {s = 64;}
-
-                        else if ( (LA28_2==83) && (synpred1_InternalMickeyLang())) {s = 65;}
-
-                        else if ( (LA28_2==84) && (synpred1_InternalMickeyLang())) {s = 66;}
-
-                        else if ( (LA28_2==85) && (synpred1_InternalMickeyLang())) {s = 67;}
-
-                        else if ( (LA28_2==26) && (synpred1_InternalMickeyLang())) {s = 68;}
-
-                        else if ( (LA28_2==104) && (synpred1_InternalMickeyLang())) {s = 69;}
+                        else if ( (LA28_31==66) && (synpred1_InternalMickeyLang())) {s = 85;}
 
                          
-                        input.seek(index28_2);
+                        input.seek(index28_31);
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA28_4 = input.LA(1);
-
-                         
-                        int index28_4 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (LA28_4==56) && (synpred1_InternalMickeyLang())) {s = 70;}
-
-                        else if ( (LA28_4==57) && (synpred1_InternalMickeyLang())) {s = 71;}
-
-                        else if ( (LA28_4==RULE_ID) && (synpred1_InternalMickeyLang())) {s = 72;}
-
-                        else if ( (LA28_4==30) ) {s = 73;}
-
-                        else if ( (LA28_4==RULE_NUMBER) && (synpred1_InternalMickeyLang())) {s = 74;}
-
-                        else if ( (LA28_4==RULE_STRING) && (synpred1_InternalMickeyLang())) {s = 75;}
-
-                        else if ( (LA28_4==87) && (synpred1_InternalMickeyLang())) {s = 76;}
-
-                        else if ( (LA28_4==88) && (synpred1_InternalMickeyLang())) {s = 77;}
-
-                        else if ( (LA28_4==89) && (synpred1_InternalMickeyLang())) {s = 78;}
-
-                        else if ( (LA28_4==90) && (synpred1_InternalMickeyLang())) {s = 79;}
-
-                        else if ( (LA28_4==14) && (synpred1_InternalMickeyLang())) {s = 80;}
-
-                        else if ( (LA28_4==59) && (synpred1_InternalMickeyLang())) {s = 81;}
-
-                        else if ( (LA28_4==60) && (synpred1_InternalMickeyLang())) {s = 82;}
-
-                        else if ( (LA28_4==61) && (synpred1_InternalMickeyLang())) {s = 83;}
-
-                        else if ( (LA28_4==64) && (synpred1_InternalMickeyLang())) {s = 84;}
-
-                        else if ( (LA28_4==66) && (synpred1_InternalMickeyLang())) {s = 85;}
-
-                        else if ( (LA28_4==EOF||LA28_4==13||(LA28_4>=15 && LA28_4<=16)||LA28_4==18||(LA28_4>=20 && LA28_4<=21)||(LA28_4>=24 && LA28_4<=29)||(LA28_4>=31 && LA28_4<=55)||(LA28_4>=62 && LA28_4<=63)||LA28_4==65||(LA28_4>=67 && LA28_4<=71)||(LA28_4>=75 && LA28_4<=81)||(LA28_4>=83 && LA28_4<=85)||LA28_4==91||(LA28_4>=104 && LA28_4<=105)||LA28_4==108||(LA28_4>=123 && LA28_4<=126)) ) {s = 5;}
-
-                         
-                        input.seek(index28_4);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA28_86 = input.LA(1);
 
                          
@@ -18177,10 +18034,153 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
                         s = -1;
                         if ( (synpred1_InternalMickeyLang()) ) {s = 85;}
 
-                        else if ( (true) ) {s = 5;}
+                        else if ( (true) ) {s = 69;}
 
                          
                         input.seek(index28_86);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA28_2 = input.LA(1);
+
+                         
+                        int index28_2 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (LA28_2==53) && (synpred1_InternalMickeyLang())) {s = 4;}
+
+                        else if ( (LA28_2==54) && (synpred1_InternalMickeyLang())) {s = 5;}
+
+                        else if ( (LA28_2==55) && (synpred1_InternalMickeyLang())) {s = 6;}
+
+                        else if ( (LA28_2==52) && (synpred1_InternalMickeyLang())) {s = 7;}
+
+                        else if ( (LA28_2==51) && (synpred1_InternalMickeyLang())) {s = 8;}
+
+                        else if ( (LA28_2==39) && (synpred1_InternalMickeyLang())) {s = 9;}
+
+                        else if ( (LA28_2==40) && (synpred1_InternalMickeyLang())) {s = 10;}
+
+                        else if ( (LA28_2==41) && (synpred1_InternalMickeyLang())) {s = 11;}
+
+                        else if ( (LA28_2==42) && (synpred1_InternalMickeyLang())) {s = 12;}
+
+                        else if ( (LA28_2==43) && (synpred1_InternalMickeyLang())) {s = 13;}
+
+                        else if ( (LA28_2==44) && (synpred1_InternalMickeyLang())) {s = 14;}
+
+                        else if ( (LA28_2==45) && (synpred1_InternalMickeyLang())) {s = 15;}
+
+                        else if ( (LA28_2==46) && (synpred1_InternalMickeyLang())) {s = 16;}
+
+                        else if ( (LA28_2==47) && (synpred1_InternalMickeyLang())) {s = 17;}
+
+                        else if ( (LA28_2==48) && (synpred1_InternalMickeyLang())) {s = 18;}
+
+                        else if ( (LA28_2==49) && (synpred1_InternalMickeyLang())) {s = 19;}
+
+                        else if ( (LA28_2==50) && (synpred1_InternalMickeyLang())) {s = 20;}
+
+                        else if ( (LA28_2==35) && (synpred1_InternalMickeyLang())) {s = 21;}
+
+                        else if ( (LA28_2==36) && (synpred1_InternalMickeyLang())) {s = 22;}
+
+                        else if ( (LA28_2==37) && (synpred1_InternalMickeyLang())) {s = 23;}
+
+                        else if ( (LA28_2==38) && (synpred1_InternalMickeyLang())) {s = 24;}
+
+                        else if ( (LA28_2==31) && (synpred1_InternalMickeyLang())) {s = 25;}
+
+                        else if ( (LA28_2==32) && (synpred1_InternalMickeyLang())) {s = 26;}
+
+                        else if ( (LA28_2==33) && (synpred1_InternalMickeyLang())) {s = 27;}
+
+                        else if ( (LA28_2==34) && (synpred1_InternalMickeyLang())) {s = 28;}
+
+                        else if ( (LA28_2==29) && (synpred1_InternalMickeyLang())) {s = 29;}
+
+                        else if ( (LA28_2==30) && (synpred1_InternalMickeyLang())) {s = 30;}
+
+                        else if ( (LA28_2==24) ) {s = 31;}
+
+                        else if ( (LA28_2==21) && (synpred1_InternalMickeyLang())) {s = 32;}
+
+                        else if ( (LA28_2==28) && (synpred1_InternalMickeyLang())) {s = 33;}
+
+                        else if ( (LA28_2==27) && (synpred1_InternalMickeyLang())) {s = 34;}
+
+                        else if ( (LA28_2==EOF) && (synpred1_InternalMickeyLang())) {s = 35;}
+
+                        else if ( (LA28_2==16) && (synpred1_InternalMickeyLang())) {s = 36;}
+
+                        else if ( (LA28_2==67) && (synpred1_InternalMickeyLang())) {s = 37;}
+
+                        else if ( (LA28_2==63) && (synpred1_InternalMickeyLang())) {s = 38;}
+
+                        else if ( (LA28_2==15) && (synpred1_InternalMickeyLang())) {s = 39;}
+
+                        else if ( (LA28_2==65) && (synpred1_InternalMickeyLang())) {s = 40;}
+
+                        else if ( (LA28_2==68) && (synpred1_InternalMickeyLang())) {s = 41;}
+
+                        else if ( (LA28_2==62) && (synpred1_InternalMickeyLang())) {s = 42;}
+
+                        else if ( (LA28_2==71) && (synpred1_InternalMickeyLang())) {s = 43;}
+
+                        else if ( (LA28_2==13) && (synpred1_InternalMickeyLang())) {s = 44;}
+
+                        else if ( (LA28_2==20) && (synpred1_InternalMickeyLang())) {s = 45;}
+
+                        else if ( (LA28_2==91) && (synpred1_InternalMickeyLang())) {s = 46;}
+
+                        else if ( (LA28_2==105) && (synpred1_InternalMickeyLang())) {s = 47;}
+
+                        else if ( (LA28_2==108) && (synpred1_InternalMickeyLang())) {s = 48;}
+
+                        else if ( (LA28_2==25) && (synpred1_InternalMickeyLang())) {s = 49;}
+
+                        else if ( (LA28_2==18) && (synpred1_InternalMickeyLang())) {s = 50;}
+
+                        else if ( (LA28_2==76) && (synpred1_InternalMickeyLang())) {s = 51;}
+
+                        else if ( (LA28_2==77) && (synpred1_InternalMickeyLang())) {s = 52;}
+
+                        else if ( (LA28_2==123) && (synpred1_InternalMickeyLang())) {s = 53;}
+
+                        else if ( (LA28_2==124) && (synpred1_InternalMickeyLang())) {s = 54;}
+
+                        else if ( (LA28_2==125) && (synpred1_InternalMickeyLang())) {s = 55;}
+
+                        else if ( (LA28_2==126) && (synpred1_InternalMickeyLang())) {s = 56;}
+
+                        else if ( (LA28_2==69) && (synpred1_InternalMickeyLang())) {s = 57;}
+
+                        else if ( (LA28_2==70) && (synpred1_InternalMickeyLang())) {s = 58;}
+
+                        else if ( (LA28_2==78) && (synpred1_InternalMickeyLang())) {s = 59;}
+
+                        else if ( (LA28_2==79) && (synpred1_InternalMickeyLang())) {s = 60;}
+
+                        else if ( (LA28_2==75) && (synpred1_InternalMickeyLang())) {s = 61;}
+
+                        else if ( (LA28_2==80) && (synpred1_InternalMickeyLang())) {s = 62;}
+
+                        else if ( (LA28_2==81) && (synpred1_InternalMickeyLang())) {s = 63;}
+
+                        else if ( (LA28_2==83) && (synpred1_InternalMickeyLang())) {s = 64;}
+
+                        else if ( (LA28_2==84) && (synpred1_InternalMickeyLang())) {s = 65;}
+
+                        else if ( (LA28_2==85) && (synpred1_InternalMickeyLang())) {s = 66;}
+
+                        else if ( (LA28_2==26) && (synpred1_InternalMickeyLang())) {s = 67;}
+
+                        else if ( (LA28_2==104) && (synpred1_InternalMickeyLang())) {s = 68;}
+
+                        else if ( (LA28_2==RULE_ID) ) {s = 69;}
+
+                         
+                        input.seek(index28_2);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -18200,15 +18200,15 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
     static final String DFA61_maxS =
         "\1\154\1\157\1\135\1\157\1\137\4\uffff\1\4\4\uffff\1\153\2\uffff";
     static final String DFA61_acceptS =
-        "\5\uffff\1\1\1\2\1\4\1\3\1\uffff\1\11\1\12\1\10\1\7\1\uffff\1\6\1\5";
+        "\5\uffff\1\3\1\4\1\2\1\1\1\uffff\1\10\1\11\1\12\1\7\1\uffff\1\5\1\6";
     static final String DFA61_specialS =
         "\21\uffff}>";
     static final String[] DFA61_transitionS = {
             "\1\1\15\uffff\1\2\2\uffff\1\3",
-            "\1\4\1\5\1\6\1\10\16\uffff\2\7",
+            "\1\4\1\10\1\7\1\5\16\uffff\2\6",
             "\1\11",
-            "\1\15\1\12\1\14\17\uffff\1\13",
-            "\1\5\1\6\1\10",
+            "\1\15\1\13\1\12\17\uffff\1\14",
+            "\1\10\1\7\1\5",
             "",
             "",
             "",
@@ -18218,7 +18218,7 @@ public class InternalMickeyLangParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
-            "\1\20\1\17",
+            "\1\17\1\20",
             "",
             ""
     };

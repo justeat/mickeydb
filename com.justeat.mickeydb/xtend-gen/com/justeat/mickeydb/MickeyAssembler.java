@@ -18,7 +18,6 @@ import com.justeat.mickeydb.mickeyLang.MigrationBlock;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.function.Consumer;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
@@ -28,6 +27,7 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.ListExtensions;
+import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
 @SuppressWarnings("all")
 public class MickeyAssembler {
@@ -68,15 +68,15 @@ public class MickeyAssembler {
   
   public MickeyModel assemble(final List<MickeyFile> files, final MigrationBlock upToMigration) {
     final MickeyModel mickeyModel = new MickeyModel();
-    final Consumer<MickeyFile> _function = new Consumer<MickeyFile>() {
-      public void accept(final MickeyFile file) {
+    final Procedure1<MickeyFile> _function = new Procedure1<MickeyFile>() {
+      public void apply(final MickeyFile file) {
         MickeyAssembler.this.registerFile(mickeyModel, file);
       }
     };
-    files.forEach(_function);
+    IterableExtensions.<MickeyFile>forEach(files, _function);
     Collection<MickeyDatabaseModel> _values = mickeyModel.databases.values();
-    final Consumer<MickeyDatabaseModel> _function_1 = new Consumer<MickeyDatabaseModel>() {
-      public void accept(final MickeyDatabaseModel db) {
+    final Procedure1<MickeyDatabaseModel> _function_1 = new Procedure1<MickeyDatabaseModel>() {
+      public void apply(final MickeyDatabaseModel db) {
         MickeyAssembler.this.sortMigrations(db, upToMigration);
         final Function1<CreateTableStatement, String> _function = new Function1<CreateTableStatement, String>() {
           public String apply(final CreateTableStatement x) {
@@ -119,7 +119,7 @@ public class MickeyAssembler {
         ListExtensions.<CreateTriggerStatement, String>sortInplaceBy(_triggers, _function_4);
       }
     };
-    _values.forEach(_function_1);
+    IterableExtensions.<MickeyDatabaseModel>forEach(_values, _function_1);
     return mickeyModel;
   }
   
@@ -185,15 +185,15 @@ public class MickeyAssembler {
     Iterables.<CreateViewStatement>addAll(db.initViews, _filter_3);
     EList<MickeyBlock> _blocks_4 = file.getBlocks();
     Iterable<MigrationBlock> migrations = Iterables.<MigrationBlock>filter(_blocks_4, MigrationBlock.class);
-    final Consumer<MigrationBlock> _function = new Consumer<MigrationBlock>() {
-      public void accept(final MigrationBlock it) {
+    final Procedure1<MigrationBlock> _function = new Procedure1<MigrationBlock>() {
+      public void apply(final MigrationBlock it) {
         String _name = it.getName();
         db.migrationsByName.put(_name, it);
       }
     };
-    migrations.forEach(_function);
-    final Consumer<MigrationBlock> _function_1 = new Consumer<MigrationBlock>() {
-      public void accept(final MigrationBlock it) {
+    IterableExtensions.<MigrationBlock>forEach(migrations, _function);
+    final Procedure1<MigrationBlock> _function_1 = new Procedure1<MigrationBlock>() {
+      public void apply(final MigrationBlock it) {
         MigrationBlock _from = it.getFrom();
         boolean _notEquals = (!Objects.equal(_from, null));
         if (_notEquals) {
@@ -203,7 +203,7 @@ public class MickeyAssembler {
         }
       }
     };
-    migrations.forEach(_function_1);
+    IterableExtensions.<MigrationBlock>forEach(migrations, _function_1);
     return db;
   }
 }

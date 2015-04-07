@@ -12,141 +12,141 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalMickeyLangLexer extends Lexer {
-    public static final int T__50=50;
-    public static final int T__59=59;
+    public static final int RULE_ID=5;
+    public static final int T__29=29;
+    public static final int T__28=28;
+    public static final int T__27=27;
+    public static final int T__26=26;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int EOF=-1;
+    public static final int T__93=93;
+    public static final int T__19=19;
+    public static final int T__94=94;
+    public static final int T__91=91;
+    public static final int T__92=92;
+    public static final int T__16=16;
+    public static final int T__90=90;
+    public static final int T__15=15;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int T__12=12;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int T__99=99;
+    public static final int T__98=98;
+    public static final int T__97=97;
+    public static final int T__96=96;
+    public static final int T__95=95;
+    public static final int T__137=137;
+    public static final int T__136=136;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
+    public static final int T__85=85;
+    public static final int T__84=84;
+    public static final int T__87=87;
+    public static final int T__86=86;
+    public static final int T__89=89;
+    public static final int T__88=88;
+    public static final int RULE_ML_COMMENT=8;
+    public static final int T__126=126;
+    public static final int T__125=125;
+    public static final int T__128=128;
+    public static final int RULE_STRING=6;
+    public static final int T__127=127;
+    public static final int T__71=71;
+    public static final int T__129=129;
+    public static final int T__72=72;
+    public static final int T__70=70;
+    public static final int T__76=76;
+    public static final int T__75=75;
+    public static final int T__130=130;
+    public static final int T__74=74;
+    public static final int T__131=131;
+    public static final int T__73=73;
+    public static final int T__132=132;
+    public static final int T__133=133;
+    public static final int T__79=79;
+    public static final int T__134=134;
+    public static final int T__78=78;
+    public static final int T__135=135;
+    public static final int T__77=77;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int T__66=66;
+    public static final int T__67=67;
+    public static final int T__64=64;
+    public static final int T__65=65;
+    public static final int T__62=62;
+    public static final int T__63=63;
+    public static final int T__118=118;
+    public static final int T__119=119;
+    public static final int T__116=116;
+    public static final int T__117=117;
+    public static final int T__114=114;
+    public static final int T__115=115;
+    public static final int T__124=124;
+    public static final int T__123=123;
+    public static final int T__122=122;
+    public static final int T__121=121;
+    public static final int T__120=120;
+    public static final int T__61=61;
+    public static final int T__60=60;
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
     public static final int T__51=51;
-    public static final int T__137=137;
     public static final int T__52=52;
-    public static final int T__136=136;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int T__133=133;
-    public static final int T__132=132;
-    public static final int T__60=60;
-    public static final int T__135=135;
-    public static final int T__61=61;
-    public static final int T__134=134;
-    public static final int RULE_ID=5;
-    public static final int T__131=131;
-    public static final int T__130=130;
+    public static final int T__107=107;
+    public static final int RULE_NUMBER=4;
+    public static final int T__108=108;
+    public static final int T__109=109;
+    public static final int T__59=59;
+    public static final int T__103=103;
+    public static final int T__104=104;
+    public static final int T__105=105;
+    public static final int T__106=106;
+    public static final int T__111=111;
+    public static final int T__110=110;
+    public static final int T__113=113;
     public static final int RULE_INT=7;
-    public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=8;
-    public static final int T__67=67;
-    public static final int T__129=129;
-    public static final int T__68=68;
-    public static final int T__69=69;
-    public static final int T__62=62;
-    public static final int T__126=126;
-    public static final int T__63=63;
-    public static final int T__125=125;
-    public static final int T__64=64;
-    public static final int T__128=128;
-    public static final int T__65=65;
-    public static final int T__127=127;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int T__112=112;
+    public static final int T__50=50;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__102=102;
+    public static final int T__101=101;
+    public static final int T__100=100;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__91=91;
-    public static final int T__100=100;
-    public static final int T__92=92;
-    public static final int T__93=93;
-    public static final int T__102=102;
-    public static final int T__94=94;
-    public static final int T__101=101;
-    public static final int T__90=90;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__99=99;
-    public static final int T__12=12;
-    public static final int T__13=13;
-    public static final int T__14=14;
-    public static final int T__95=95;
-    public static final int T__96=96;
-    public static final int T__97=97;
-    public static final int T__98=98;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
-    public static final int T__29=29;
-    public static final int T__22=22;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int T__122=122;
-    public static final int T__70=70;
-    public static final int T__121=121;
-    public static final int T__71=71;
-    public static final int T__124=124;
-    public static final int T__72=72;
-    public static final int T__123=123;
-    public static final int T__120=120;
-    public static final int RULE_STRING=6;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int T__77=77;
-    public static final int T__119=119;
-    public static final int T__78=78;
-    public static final int T__118=118;
-    public static final int T__79=79;
-    public static final int T__73=73;
-    public static final int T__115=115;
-    public static final int EOF=-1;
-    public static final int T__74=74;
-    public static final int T__114=114;
-    public static final int T__75=75;
-    public static final int T__117=117;
-    public static final int T__76=76;
-    public static final int T__116=116;
-    public static final int T__80=80;
-    public static final int T__111=111;
-    public static final int T__81=81;
-    public static final int T__110=110;
-    public static final int T__82=82;
-    public static final int T__113=113;
-    public static final int T__83=83;
-    public static final int T__112=112;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_NUMBER=4;
-    public static final int T__88=88;
-    public static final int T__108=108;
-    public static final int T__89=89;
-    public static final int T__107=107;
-    public static final int T__109=109;
-    public static final int T__84=84;
-    public static final int T__104=104;
-    public static final int T__85=85;
-    public static final int T__103=103;
-    public static final int T__86=86;
-    public static final int T__106=106;
-    public static final int T__87=87;
-    public static final int T__105=105;
 
     // delegates
     // delegators
@@ -4326,7 +4326,7 @@ public class InternalMickeyLangLexer extends Lexer {
     static final String DFA14_acceptS =
         "\1\uffff\1\1\1\uffff\1\3\1\4\1\5\2\uffff\1\10\12\uffff\1\35\7\uffff\1\63\1\64\1\65\1\66\1\67\1\71\11\uffff\1\151\2\177\3\uffff\1\u0082\1\u0085\1\u0086\1\1\1\u0083\1\u0084\1\2\1\3\1\4\1\5\1\6\1\13\1\21\1\12\1\7\1\15\1\14\1\10\1\152\1\11\1\17\1\16\1\20\4\uffff\1\u0082\21\uffff\1\35\34\uffff\1\63\1\64\1\65\1\66\1\67\1\71\1\77\5\uffff\1\u0080\1\105\7\uffff\1\151\1\u0081\1\u0085\1\uffff\1\22\4\uffff\1\24\1\uffff\1\175\23\uffff\1\125\2\uffff\1\145\1\117\11\uffff\1\104\63\uffff\1\154\3\uffff\1\75\16\uffff\1\76\11\uffff\1\160\1\uffff\1\157\1\130\1\153\6\uffff\1\101\11\uffff\1\174\22\uffff\1\150\5\uffff\1\23\1\74\4\uffff\1\143\3\uffff\1\25\1\32\1\uffff\1\52\1\uffff\1\167\1\uffff\1\26\1\uffff\1\163\1\27\5\uffff\1\50\7\uffff\1\51\13\uffff\1\102\1\46\1\173\1\107\2\uffff\1\57\1\uffff\1\73\1\uffff\1\131\2\uffff\1\161\1\uffff\1\100\1\103\7\uffff\1\106\3\uffff\1\116\1\122\6\uffff\1\132\1\165\4\uffff\1\111\1\114\1\30\6\uffff\1\110\1\164\1\uffff\1\124\1\uffff\1\37\1\56\1\uffff\1\126\1\uffff\1\42\1\43\4\uffff\1\121\7\uffff\1\166\1\136\4\uffff\1\113\5\uffff\1\144\2\uffff\1\60\4\uffff\1\31\1\uffff\1\127\1\uffff\1\34\1\36\1\uffff\1\70\1\uffff\1\134\1\147\1\45\1\155\4\uffff\1\142\1\uffff\1\120\4\uffff\1\112\1\115\1\146\1\uffff\1\40\1\uffff\1\47\1\33\1\53\1\162\1\72\1\41\1\uffff\1\54\1\uffff\1\123\2\uffff\1\135\3\uffff\1\140\1\uffff\1\133\1\uffff\1\55\1\uffff\1\62\1\61\1\156\1\uffff\1\141\2\uffff\1\44\5\uffff\1\137\7\uffff\1\170\1\171\1\176\4\uffff\1\172";
     static final String DFA14_specialS =
-        "\1\0\54\uffff\1\1\1\2\u01ea\uffff}>";
+        "\1\2\54\uffff\1\1\1\0\u01ea\uffff}>";
     static final String[] DFA14_transitionS = {
             "\11\62\2\61\2\62\1\61\22\62\1\61\1\13\1\55\1\52\1\43\1\3\1\10\1\56\1\33\1\34\1\1\1\4\1\23\1\5\1\41\1\2\12\53\1\40\1\37\1\6\1\12\1\7\2\62\32\60\3\62\1\57\1\60\1\62\1\25\1\24\1\42\1\32\1\27\1\31\1\17\1\46\1\14\1\47\1\60\1\16\1\20\1\15\1\22\1\51\1\60\1\21\1\45\1\30\1\26\1\50\1\44\3\60\1\35\1\11\1\36\uff82\62",
             "",
@@ -4904,6 +4904,26 @@ public class InternalMickeyLangLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA14_46 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_46>='\u0000' && LA14_46<='\uFFFF')) ) {s = 144;}
+
+                        else s = 50;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA14_45 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_45>='\u0000' && LA14_45<='\uFFFF')) ) {s = 144;}
+
+                        else s = 50;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA14_0 = input.LA(1);
 
                         s = -1;
@@ -5006,26 +5026,6 @@ public class InternalMickeyLangLexer extends Lexer {
                         else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||(LA14_0>='?' && LA14_0<='@')||(LA14_0>='[' && LA14_0<=']')||LA14_0=='`'||(LA14_0>='~' && LA14_0<='\uFFFF')) ) {s = 50;}
 
                         else s = 44;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA14_45 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA14_45>='\u0000' && LA14_45<='\uFFFF')) ) {s = 144;}
-
-                        else s = 50;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA14_46 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA14_46>='\u0000' && LA14_46<='\uFFFF')) ) {s = 144;}
-
-                        else s = 50;
 
                         if ( s>=0 ) return s;
                         break;

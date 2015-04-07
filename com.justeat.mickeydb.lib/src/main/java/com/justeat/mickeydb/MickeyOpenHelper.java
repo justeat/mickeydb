@@ -30,18 +30,6 @@ public abstract class MickeyOpenHelper extends SQLiteOpenHelper {
 	}
 	
 	@Override
-    	public void onConfigure(SQLiteDatabase db) {
-        	// Enable foreign key constraints
-        	if (db.isReadOnly() || !shouldEnableForeignKeyConstraints())
-        		return;
-		
-    		if (Build.VERSION.SDK_INT >= 16)
-    			db.setForeignKeyConstraintsEnabled(true);
-    		else if (Build.VERSION.SDK_INT >= 8)
-    			db.execSQL("PRAGMA foreign_keys=ON;");
-    	}
-
-	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		applyMigrations(db, oldVersion, newVersion);
 	}

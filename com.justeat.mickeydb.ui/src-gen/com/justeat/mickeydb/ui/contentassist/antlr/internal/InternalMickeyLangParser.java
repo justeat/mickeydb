@@ -25,141 +25,141 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_NUMBER", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'*'", "'/'", "'%'", "'+'", "'-'", "'<<'", "'>>'", "'&'", "'|'", "'<'", "'<='", "'>'", "'>='", "'='", "'=='", "'!='", "'<>'", "'is'", "'is not'", "'in'", "'not in'", "'like'", "'glob'", "'match'", "'regexp'", "'not null'", "'notnull'", "'offset'", "','", "'before'", "'after'", "'instead of'", "'replace'", "'union all'", "'union'", "'intersect'", "'except'", "'text'", "'integer'", "'real'", "'blob'", "'none'", "'numeric'", "'boolean'", "'rollback'", "'abort'", "'fail'", "'ignore'", "'database'", "'function'", "'('", "')'", "'{'", "'}'", "';'", "'action'", "':'", "'migrate'", "'from'", "'is null'", "'new.'", "'old.'", "'.'", "'case'", "'end'", "'else'", "'cast'", "'as'", "'$'", "'when'", "'then'", "'order by'", "'limit'", "'select'", "'where'", "'group by'", "'having'", "'join'", "'on'", "'create'", "'table'", "'view'", "'trigger'", "'begin'", "'of'", "'alter'", "'rename to'", "'add column'", "'drop'", "'index'", "'primary key'", "'unique'", "'default'", "'check'", "'constraint'", "'collate'", "'conflict'", "'delete'", "'into'", "'insert'", "'or'", "'values'", "'update'", "'set'", "'#'", "'||'", "'and'", "'not'", "'exists'", "'distinct'", "'all'", "'asc'", "'desc'", "'natural'", "'left'", "'outer'", "'inner'", "'cross'", "'null'", "'current_time'", "'current_date'", "'current_timestamp'", "'temp'", "'for each row'", "'if exists'", "'autoincrement'"
     };
-    public static final int T__50=50;
-    public static final int T__59=59;
+    public static final int RULE_ID=5;
+    public static final int T__29=29;
+    public static final int T__28=28;
+    public static final int T__27=27;
+    public static final int T__26=26;
+    public static final int T__25=25;
+    public static final int T__24=24;
+    public static final int T__23=23;
+    public static final int T__22=22;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int EOF=-1;
+    public static final int T__93=93;
+    public static final int T__19=19;
+    public static final int T__94=94;
+    public static final int T__91=91;
+    public static final int T__92=92;
+    public static final int T__16=16;
+    public static final int T__15=15;
+    public static final int T__90=90;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int T__12=12;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int T__99=99;
+    public static final int T__98=98;
+    public static final int T__97=97;
+    public static final int T__96=96;
+    public static final int T__95=95;
+    public static final int T__137=137;
+    public static final int T__136=136;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
+    public static final int T__85=85;
+    public static final int T__84=84;
+    public static final int T__87=87;
+    public static final int T__86=86;
+    public static final int T__89=89;
+    public static final int T__88=88;
+    public static final int RULE_ML_COMMENT=8;
+    public static final int T__126=126;
+    public static final int T__125=125;
+    public static final int T__128=128;
+    public static final int RULE_STRING=6;
+    public static final int T__127=127;
+    public static final int T__71=71;
+    public static final int T__129=129;
+    public static final int T__72=72;
+    public static final int T__70=70;
+    public static final int T__76=76;
+    public static final int T__75=75;
+    public static final int T__130=130;
+    public static final int T__74=74;
+    public static final int T__131=131;
+    public static final int T__73=73;
+    public static final int T__132=132;
+    public static final int T__133=133;
+    public static final int T__79=79;
+    public static final int T__134=134;
+    public static final int T__78=78;
+    public static final int T__135=135;
+    public static final int T__77=77;
+    public static final int T__68=68;
+    public static final int T__69=69;
+    public static final int T__66=66;
+    public static final int T__67=67;
+    public static final int T__64=64;
+    public static final int T__65=65;
+    public static final int T__62=62;
+    public static final int T__63=63;
+    public static final int T__118=118;
+    public static final int T__119=119;
+    public static final int T__116=116;
+    public static final int T__117=117;
+    public static final int T__114=114;
+    public static final int T__115=115;
+    public static final int T__124=124;
+    public static final int T__123=123;
+    public static final int T__122=122;
+    public static final int T__121=121;
+    public static final int T__120=120;
+    public static final int T__61=61;
+    public static final int T__60=60;
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
     public static final int T__51=51;
-    public static final int T__137=137;
     public static final int T__52=52;
-    public static final int T__136=136;
     public static final int T__53=53;
     public static final int T__54=54;
-    public static final int T__133=133;
-    public static final int T__132=132;
-    public static final int T__60=60;
-    public static final int T__135=135;
-    public static final int T__61=61;
-    public static final int T__134=134;
-    public static final int RULE_ID=5;
-    public static final int T__131=131;
-    public static final int T__130=130;
+    public static final int RULE_NUMBER=4;
+    public static final int T__107=107;
+    public static final int T__108=108;
+    public static final int T__109=109;
+    public static final int T__103=103;
+    public static final int T__59=59;
+    public static final int T__104=104;
+    public static final int T__105=105;
+    public static final int T__106=106;
+    public static final int T__111=111;
+    public static final int T__110=110;
     public static final int RULE_INT=7;
-    public static final int T__66=66;
-    public static final int RULE_ML_COMMENT=8;
-    public static final int T__67=67;
-    public static final int T__129=129;
-    public static final int T__68=68;
-    public static final int T__69=69;
-    public static final int T__62=62;
-    public static final int T__126=126;
-    public static final int T__63=63;
-    public static final int T__125=125;
-    public static final int T__64=64;
-    public static final int T__128=128;
-    public static final int T__65=65;
-    public static final int T__127=127;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int T__113=113;
+    public static final int T__112=112;
+    public static final int T__50=50;
+    public static final int T__42=42;
+    public static final int T__43=43;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__46=46;
+    public static final int T__47=47;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int T__49=49;
+    public static final int T__102=102;
+    public static final int T__101=101;
+    public static final int T__100=100;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int T__48=48;
-    public static final int T__49=49;
-    public static final int T__44=44;
-    public static final int T__45=45;
-    public static final int T__46=46;
-    public static final int T__47=47;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__91=91;
-    public static final int T__100=100;
-    public static final int T__92=92;
-    public static final int T__93=93;
-    public static final int T__102=102;
-    public static final int T__94=94;
-    public static final int T__101=101;
-    public static final int T__90=90;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__99=99;
-    public static final int T__12=12;
-    public static final int T__13=13;
-    public static final int T__14=14;
-    public static final int T__95=95;
-    public static final int T__96=96;
-    public static final int T__97=97;
-    public static final int T__98=98;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
-    public static final int T__29=29;
-    public static final int T__22=22;
-    public static final int T__23=23;
-    public static final int T__24=24;
-    public static final int T__25=25;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int T__122=122;
-    public static final int T__70=70;
-    public static final int T__121=121;
-    public static final int T__71=71;
-    public static final int T__124=124;
-    public static final int T__72=72;
-    public static final int T__123=123;
-    public static final int T__120=120;
-    public static final int RULE_STRING=6;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int T__77=77;
-    public static final int T__119=119;
-    public static final int T__78=78;
-    public static final int T__118=118;
-    public static final int T__79=79;
-    public static final int T__73=73;
-    public static final int T__115=115;
-    public static final int EOF=-1;
-    public static final int T__74=74;
-    public static final int T__114=114;
-    public static final int T__75=75;
-    public static final int T__117=117;
-    public static final int T__76=76;
-    public static final int T__116=116;
-    public static final int T__80=80;
-    public static final int T__111=111;
-    public static final int T__81=81;
-    public static final int T__110=110;
-    public static final int T__82=82;
-    public static final int T__113=113;
-    public static final int T__83=83;
-    public static final int T__112=112;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_NUMBER=4;
-    public static final int T__88=88;
-    public static final int T__108=108;
-    public static final int T__89=89;
-    public static final int T__107=107;
-    public static final int T__109=109;
-    public static final int T__84=84;
-    public static final int T__104=104;
-    public static final int T__85=85;
-    public static final int T__103=103;
-    public static final int T__86=86;
-    public static final int T__106=106;
-    public static final int T__87=87;
-    public static final int T__105=105;
 
     // delegates
     // delegators
@@ -7559,10 +7559,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             if ( (LA12_0==RULE_ID) ) {
                 int LA12_1 = input.LA(2);
 
-                if ( (LA12_1==EOF||(LA12_1>=12 && LA12_1<=40)||(LA12_1>=45 && LA12_1<=48)||LA12_1==61||LA12_1==63||(LA12_1>=66 && LA12_1<=67)||(LA12_1>=69 && LA12_1<=71)||(LA12_1>=76 && LA12_1<=77)||LA12_1==79||(LA12_1>=81 && LA12_1<=84)||(LA12_1>=86 && LA12_1<=89)||LA12_1==91||LA12_1==95||LA12_1==97||LA12_1==100||LA12_1==112||(LA12_1>=117 && LA12_1<=118)||(LA12_1>=123 && LA12_1<=126)||(LA12_1>=128 && LA12_1<=129)) ) {
-                    alt12=3;
-                }
-                else if ( (LA12_1==74) ) {
+                if ( (LA12_1==74) ) {
                     switch ( input.LA(3) ) {
                     case EOF:
                     case 13:
@@ -7658,10 +7655,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
                             {
                             int LA12_7 = input.LA(5);
 
-                            if ( ((LA12_7>=RULE_ID && LA12_7<=RULE_STRING)||LA12_7==16||LA12_7==62||(LA12_7>=72 && LA12_7<=73)||LA12_7==75||LA12_7==78||LA12_7==80||(LA12_7>=119 && LA12_7<=120)||(LA12_7>=130 && LA12_7<=133)) ) {
-                                alt12=2;
-                            }
-                            else if ( (LA12_7==RULE_NUMBER) ) {
+                            if ( (LA12_7==RULE_NUMBER) ) {
                                 int LA12_8 = input.LA(6);
 
                                 if ( (synpred37_InternalMickeyLang()) ) {
@@ -7677,6 +7671,9 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
                                     throw nvae;
                                 }
+                            }
+                            else if ( ((LA12_7>=RULE_ID && LA12_7<=RULE_STRING)||LA12_7==16||LA12_7==62||(LA12_7>=72 && LA12_7<=73)||LA12_7==75||LA12_7==78||LA12_7==80||(LA12_7>=119 && LA12_7<=120)||(LA12_7>=130 && LA12_7<=133)) ) {
+                                alt12=2;
                             }
                             else {
                                 if (state.backtracking>0) {state.failed=true; return ;}
@@ -7773,11 +7770,14 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
                     default:
                         if (state.backtracking>0) {state.failed=true; return ;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 12, 3, input);
+                            new NoViableAltException("", 12, 2, input);
 
                         throw nvae;
                     }
 
+                }
+                else if ( (LA12_1==EOF||(LA12_1>=12 && LA12_1<=40)||(LA12_1>=45 && LA12_1<=48)||LA12_1==61||LA12_1==63||(LA12_1>=66 && LA12_1<=67)||(LA12_1>=69 && LA12_1<=71)||(LA12_1>=76 && LA12_1<=77)||LA12_1==79||(LA12_1>=81 && LA12_1<=84)||(LA12_1>=86 && LA12_1<=89)||LA12_1==91||LA12_1==95||LA12_1==97||LA12_1==100||LA12_1==112||(LA12_1>=117 && LA12_1<=118)||(LA12_1>=123 && LA12_1<=126)||(LA12_1>=128 && LA12_1<=129)) ) {
+                    alt12=3;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -8496,11 +8496,11 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             else if ( (LA19_0==62) ) {
                 int LA19_2 = input.LA(2);
 
-                if ( (LA19_2==85) ) {
-                    alt19=2;
-                }
-                else if ( (LA19_2==RULE_ID||LA19_2==62) ) {
+                if ( (LA19_2==RULE_ID||LA19_2==62) ) {
                     alt19=3;
+                }
+                else if ( (LA19_2==85) ) {
+                    alt19=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -9809,9 +9809,9 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
                 if ( (LA27_1==RULE_ID) ) {
                     switch ( input.LA(3) ) {
-                    case 102:
+                    case 103:
                         {
-                        alt27=2;
+                        alt27=1;
                         }
                         break;
                     case 105:
@@ -9819,9 +9819,9 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
                         alt27=3;
                         }
                         break;
-                    case 103:
+                    case 102:
                         {
-                        alt27=1;
+                        alt27=2;
                         }
                         break;
                     default:
@@ -57918,11 +57918,11 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
     // Delegated rules
 
-    public final boolean synpred37_InternalMickeyLang() {
+    public final boolean synpred38_InternalMickeyLang() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred37_InternalMickeyLang_fragment(); // can never throw exception
+            synpred38_InternalMickeyLang_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -57932,11 +57932,11 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         state.failed=false;
         return success;
     }
-    public final boolean synpred38_InternalMickeyLang() {
+    public final boolean synpred37_InternalMickeyLang() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred38_InternalMickeyLang_fragment(); // can never throw exception
+            synpred37_InternalMickeyLang_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -58016,20 +58016,20 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     static final String DFA22_eofS =
         "\21\uffff";
     static final String DFA22_minS =
-        "\1\133\4\134\4\uffff\1\5\4\uffff\1\142\2\uffff";
+        "\1\133\3\134\1\uffff\1\134\3\uffff\1\5\4\uffff\1\142\2\uffff";
     static final String DFA22_maxS =
-        "\1\144\1\u0086\1\134\1\145\1\136\4\uffff\1\5\4\uffff\1\143\2\uffff";
+        "\1\144\1\u0086\1\134\1\145\1\uffff\1\136\3\uffff\1\5\4\uffff\1\143\2\uffff";
     static final String DFA22_acceptS =
-        "\5\uffff\1\2\1\1\1\4\1\3\1\uffff\1\10\1\7\1\12\1\11\1\uffff\1\6\1\5";
+        "\4\uffff\1\4\1\uffff\1\3\1\1\1\2\1\uffff\1\10\1\7\1\12\1\11\1\uffff\1\5\1\6";
     static final String DFA22_specialS =
         "\21\uffff}>";
     static final String[] DFA22_transitionS = {
             "\1\1\5\uffff\1\2\2\uffff\1\3",
-            "\1\6\1\5\1\10\6\uffff\1\7\1\uffff\1\7\36\uffff\1\4",
+            "\1\7\1\10\1\6\6\uffff\1\4\1\uffff\1\4\36\uffff\1\5",
             "\1\11",
             "\1\13\1\15\1\12\6\uffff\1\14",
-            "\1\6\1\5\1\10",
             "",
+            "\1\7\1\10\1\6",
             "",
             "",
             "",
@@ -58038,7 +58038,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             "",
             "",
             "",
-            "\1\20\1\17",
+            "\1\17\1\20",
             "",
             ""
     };
