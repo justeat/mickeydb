@@ -2,12 +2,7 @@ database com.justeat.example.db.TakeawaysDB
 
 migrate initial {
     create table takeaways (
-        _id integer primary key autoincrement
-    );
-}
-
-migrate initial_2 from initial {
-    create table takeaways2 (
-        _id integer primary key autoincrement
+        _id integer primary key autoincrement,
+        name text
     );
 }

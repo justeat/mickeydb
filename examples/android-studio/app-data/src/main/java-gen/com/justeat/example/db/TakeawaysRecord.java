@@ -52,17 +52,30 @@ public static ActiveRecordFactory<TakeawaysRecord> getFactory() {
     };
     
     public static String[] PROJECTION = {
-    	Takeaways._ID
+    	Takeaways._ID,
+    	Takeaways.NAME
     };
     
     public interface Indices {
     	int _ID = 0;
+    	int NAME = 1;
     }
     
+    private String mName;
+    private boolean mNameDirty;
     
     @Override
     protected String[] _getProjection() {
     	return PROJECTION;
+    }
+    
+    public void setName(String name) {
+    	mName = name;
+    	mNameDirty = true;
+    }
+    
+    public String getName() {
+    	return mName;
     }
     
     
@@ -75,9 +88,11 @@ public static ActiveRecordFactory<TakeawaysRecord> getFactory() {
     	
 		setId(in.readLong());
 		
+		mName = in.readString();
 		
-		boolean[] dirtyFlags = new boolean[0];
+		boolean[] dirtyFlags = new boolean[1];
 		in.readBooleanArray(dirtyFlags);
+		mNameDirty = dirtyFlags[0];
 	}
 	
 	@Override
@@ -88,7 +103,9 @@ public static ActiveRecordFactory<TakeawaysRecord> getFactory() {
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeLong(getId());
+		dest.writeString(mName);
 		dest.writeBooleanArray(new boolean[] {
+			mNameDirty
 		});
 	}
 	
@@ -96,17 +113,22 @@ public static ActiveRecordFactory<TakeawaysRecord> getFactory() {
 	protected AbstractValuesBuilder createBuilder() {
 		Builder builder = Takeaways.newBuilder();
 
+		if(mNameDirty) {
+			builder.setName(mName);
+		}
 		
 		return builder;
 	}
 	
     @Override
 	public void makeDirty(boolean dirty){
+		mNameDirty = dirty;
 	}
 
 	@Override
 	protected void setPropertiesFromCursor(Cursor c) {
 		setId(c.getLong(Indices._ID));
+		setName(c.getString(Indices.NAME));
 	}
 	
 	public static TakeawaysRecord fromCursor(Cursor c) {

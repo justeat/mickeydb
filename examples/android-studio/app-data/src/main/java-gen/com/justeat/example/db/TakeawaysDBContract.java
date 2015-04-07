@@ -40,6 +40,7 @@ public class TakeawaysDBContract  {
     private static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 
 	interface TakeawaysColumns {
+		String NAME = "name";
 	}
 	
 			
@@ -94,6 +95,10 @@ public class TakeawaysDBContract  {
 				super(Mickey.getApplicationContext(), Takeaways.CONTENT_URI);
 			}
 			
+			public Builder setName(String value) {
+				mValues.put(Takeaways.NAME, value);
+				return this;
+			}
 		}
 		
 		static final Set<Uri> VIEW_URIS;
