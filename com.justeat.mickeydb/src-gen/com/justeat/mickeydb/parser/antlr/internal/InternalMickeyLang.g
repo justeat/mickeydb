@@ -269,35 +269,54 @@ ruleMickeyFunction returns [EObject current=null]
     {
     	newLeafNode(otherlv_6, grammarAccess.getMickeyFunctionAccess().getRightParenthesisKeyword_4());
     }
-	otherlv_7='{' 
+(	otherlv_7=':' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getMickeyFunctionAccess().getLeftCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_7, grammarAccess.getMickeyFunctionAccess().getColonKeyword_5_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMickeyFunctionRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getMickeyFunctionAccess().getTypeTableDefinitionCrossReference_5_1_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?	otherlv_9='{' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getMickeyFunctionAccess().getLeftCurlyBracketKeyword_6());
     }
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMickeyFunctionAccess().getStatementsDMLStatementParserRuleCall_6_0_0()); 
+	        newCompositeNode(grammarAccess.getMickeyFunctionAccess().getStatementsDMLStatementParserRuleCall_7_0_0()); 
 	    }
-		lv_statements_8_0=ruleDMLStatement		{
+		lv_statements_10_0=ruleDMLStatement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMickeyFunctionRule());
 	        }
        		add(
        			$current, 
        			"statements",
-        		lv_statements_8_0, 
+        		lv_statements_10_0, 
         		"DMLStatement");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_9=';' 
+)	otherlv_11=';' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getMickeyFunctionAccess().getSemicolonKeyword_6_1());
+    	newLeafNode(otherlv_11, grammarAccess.getMickeyFunctionAccess().getSemicolonKeyword_7_1());
     }
-)*	otherlv_10='}' 
+)*	otherlv_12='}' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getMickeyFunctionAccess().getRightCurlyBracketKeyword_7());
+    	newLeafNode(otherlv_12, grammarAccess.getMickeyFunctionAccess().getRightCurlyBracketKeyword_8());
     }
 )
 ;

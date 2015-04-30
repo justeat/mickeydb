@@ -78,7 +78,8 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMickeyFunctionAccess().getGroup(), "rule__MickeyFunction__Group__0");
 					put(grammarAccess.getMickeyFunctionAccess().getGroup_3(), "rule__MickeyFunction__Group_3__0");
 					put(grammarAccess.getMickeyFunctionAccess().getGroup_3_1(), "rule__MickeyFunction__Group_3_1__0");
-					put(grammarAccess.getMickeyFunctionAccess().getGroup_6(), "rule__MickeyFunction__Group_6__0");
+					put(grammarAccess.getMickeyFunctionAccess().getGroup_5(), "rule__MickeyFunction__Group_5__0");
+					put(grammarAccess.getMickeyFunctionAccess().getGroup_7(), "rule__MickeyFunction__Group_7__0");
 					put(grammarAccess.getActionStatementAccess().getGroup(), "rule__ActionStatement__Group__0");
 					put(grammarAccess.getFunctionArgAccess().getGroup(), "rule__FunctionArg__Group__0");
 					put(grammarAccess.getContentUriAccess().getGroup(), "rule__ContentUri__Group__0");
@@ -218,7 +219,8 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMickeyFunctionAccess().getNameAssignment_1(), "rule__MickeyFunction__NameAssignment_1");
 					put(grammarAccess.getMickeyFunctionAccess().getArgsAssignment_3_0(), "rule__MickeyFunction__ArgsAssignment_3_0");
 					put(grammarAccess.getMickeyFunctionAccess().getArgsAssignment_3_1_1(), "rule__MickeyFunction__ArgsAssignment_3_1_1");
-					put(grammarAccess.getMickeyFunctionAccess().getStatementsAssignment_6_0(), "rule__MickeyFunction__StatementsAssignment_6_0");
+					put(grammarAccess.getMickeyFunctionAccess().getTypeAssignment_5_1(), "rule__MickeyFunction__TypeAssignment_5_1");
+					put(grammarAccess.getMickeyFunctionAccess().getStatementsAssignment_7_0(), "rule__MickeyFunction__StatementsAssignment_7_0");
 					put(grammarAccess.getActionStatementAccess().getNameAssignment_1(), "rule__ActionStatement__NameAssignment_1");
 					put(grammarAccess.getActionStatementAccess().getUriAssignment_2(), "rule__ActionStatement__UriAssignment_2");
 					put(grammarAccess.getFunctionArgAccess().getTypeAssignment_0(), "rule__FunctionArg__TypeAssignment_0");

@@ -12,6 +12,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//FunctionArg"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//TableDefinition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
         eType="#//DMLStatement" containment="true"/>
   </eClassifiers>

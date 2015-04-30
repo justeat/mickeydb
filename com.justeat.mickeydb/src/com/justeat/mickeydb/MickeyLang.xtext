@@ -16,7 +16,7 @@ MickeyBlock:
 	MickeyFunction | ActionStatement | DDLStatement | MigrationBlock
 ;
 
-MickeyFunction: 'function' name=ID '(' (args+=FunctionArg (',' args+=FunctionArg)*)? ')' '{'
+MickeyFunction: 'function' name=ID '(' (args+=FunctionArg (',' args+=FunctionArg)*)? ')' (':' type=[TableDefinition|QualifiedName])? '{'
 	(statements+=DMLStatement ';')*
 '}' ;
 

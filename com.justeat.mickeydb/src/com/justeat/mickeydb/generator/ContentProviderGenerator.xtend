@@ -63,6 +63,9 @@ class ContentProviderGenerator {
 				«FOR a : model.actions»
 				public static final int «(a as ActionStatement).uri.type.underscore.toUpperCase»_«(a as ActionStatement).name.underscore.toUpperCase» = «counter=counter+1»;
 				«ENDFOR»		
+				«FOR f : model.functions»
+				public static final int «f.name.underscore.toUpperCase» = «counter=counter+1»;
+				«ENDFOR»	
 				public static final int NUM_URI_MATCHERS = «counter + 1»;
 			
 				@Override
@@ -95,10 +98,16 @@ class ContentProviderGenerator {
 					«ENDIF»
 					«ENDFOR»
 
-					// User Actions
+					// actions
 					«FOR a : model.actions»
 					matcher.addURI(authority, "«a.uri.asString»", «a.uri.type.underscore.toUpperCase»_«a.name.underscore.toUpperCase»); 
 					«ENDFOR»
+					
+					// functions
+					«FOR f : model.functions»
+					matcher.addURI(authority, "_func/«f.name»", «f.name.underscore.toUpperCase»);
+					«ENDFOR»
+					
 			        return matcher;
 			    }
 			    
@@ -133,6 +142,13 @@ class ContentProviderGenerator {
 					«FOR a : model.actions»
 					contentTypes[«a.uri.type.underscore.toUpperCase»_«a.name.underscore.toUpperCase»] = «a.generateContentTypeConstantReference(model.databaseName)»;
 					«ENDFOR»
+					«FOR f : model.functions»
+					«IF f.type != null»
+					contentTypes[«f.name.underscore.toUpperCase»] = «model.databaseName.pascalize»Contract.«f.type.name.pascalize».CONTENT_TYPE;
+					«ELSE»
+					contentTypes[«f.name.underscore.toUpperCase»] = "vnd.android.cursor.dir/vnd.«model.databaseName.toLowerCase».«f.name»";
+					«ENDIF»
+					«ENDFOR»	
 					
 					return contentTypes;
 			    }

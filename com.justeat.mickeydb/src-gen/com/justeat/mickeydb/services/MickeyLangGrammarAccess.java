@@ -97,18 +97,25 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cArgsAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
 		private final RuleCall cArgsFunctionArgParserRuleCall_3_1_1_0 = (RuleCall)cArgsAssignment_3_1_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Assignment cStatementsAssignment_6_0 = (Assignment)cGroup_6.eContents().get(0);
-		private final RuleCall cStatementsDMLStatementParserRuleCall_6_0_0 = (RuleCall)cStatementsAssignment_6_0.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cColonKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cTypeAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final CrossReference cTypeTableDefinitionCrossReference_5_1_0 = (CrossReference)cTypeAssignment_5_1.eContents().get(0);
+		private final RuleCall cTypeTableDefinitionQualifiedNameParserRuleCall_5_1_0_1 = (RuleCall)cTypeTableDefinitionCrossReference_5_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Assignment cStatementsAssignment_7_0 = (Assignment)cGroup_7.eContents().get(0);
+		private final RuleCall cStatementsDMLStatementParserRuleCall_7_0_0 = (RuleCall)cStatementsAssignment_7_0.eContents().get(0);
+		private final Keyword cSemicolonKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//MickeyFunction:
-		//	"function" name=ID "(" (args+=FunctionArg ("," args+=FunctionArg)*)? ")" "{" (statements+=DMLStatement ";")* "}";
+		//	"function" name=ID "(" (args+=FunctionArg ("," args+=FunctionArg)*)? ")" (":" type=[TableDefinition|QualifiedName])?
+		//	"{" (statements+=DMLStatement ";")* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"function" name=ID "(" (args+=FunctionArg ("," args+=FunctionArg)*)? ")" "{" (statements+=DMLStatement ";")* "}"
+		//"function" name=ID "(" (args+=FunctionArg ("," args+=FunctionArg)*)? ")" (":" type=[TableDefinition|QualifiedName])? "{"
+		//(statements+=DMLStatement ";")* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"function"
@@ -147,23 +154,38 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 
+		//(":" type=[TableDefinition|QualifiedName])?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//":"
+		public Keyword getColonKeyword_5_0() { return cColonKeyword_5_0; }
+
+		//type=[TableDefinition|QualifiedName]
+		public Assignment getTypeAssignment_5_1() { return cTypeAssignment_5_1; }
+
+		//[TableDefinition|QualifiedName]
+		public CrossReference getTypeTableDefinitionCrossReference_5_1_0() { return cTypeTableDefinitionCrossReference_5_1_0; }
+
+		//QualifiedName
+		public RuleCall getTypeTableDefinitionQualifiedNameParserRuleCall_5_1_0_1() { return cTypeTableDefinitionQualifiedNameParserRuleCall_5_1_0_1; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
+		public Keyword getLeftCurlyBracketKeyword_6() { return cLeftCurlyBracketKeyword_6; }
 
 		//(statements+=DMLStatement ";")*
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 
 		//statements+=DMLStatement
-		public Assignment getStatementsAssignment_6_0() { return cStatementsAssignment_6_0; }
+		public Assignment getStatementsAssignment_7_0() { return cStatementsAssignment_7_0; }
 
 		//DMLStatement
-		public RuleCall getStatementsDMLStatementParserRuleCall_6_0_0() { return cStatementsDMLStatementParserRuleCall_6_0_0; }
+		public RuleCall getStatementsDMLStatementParserRuleCall_7_0_0() { return cStatementsDMLStatementParserRuleCall_7_0_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_6_1() { return cSemicolonKeyword_6_1; }
+		public Keyword getSemicolonKeyword_7_1() { return cSemicolonKeyword_7_1; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class ActionStatementElements extends AbstractParserRuleElementFinder {
@@ -4359,7 +4381,8 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MickeyFunction:
-	//	"function" name=ID "(" (args+=FunctionArg ("," args+=FunctionArg)*)? ")" "{" (statements+=DMLStatement ";")* "}";
+	//	"function" name=ID "(" (args+=FunctionArg ("," args+=FunctionArg)*)? ")" (":" type=[TableDefinition|QualifiedName])?
+	//	"{" (statements+=DMLStatement ";")* "}";
 	public MickeyFunctionElements getMickeyFunctionAccess() {
 		return pMickeyFunction;
 	}

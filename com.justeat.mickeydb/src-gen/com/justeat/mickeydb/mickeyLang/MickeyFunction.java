@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.MickeyFunction#getName <em>Name</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.MickeyFunction#getArgs <em>Args</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.MickeyFunction#getType <em>Type</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.MickeyFunction#getStatements <em>Statements</em>}</li>
  * </ul>
  *
@@ -65,6 +66,32 @@ public interface MickeyFunction extends MickeyBlock
    * @generated
    */
   EList<FunctionArg> getArgs();
+
+  /**
+   * Returns the value of the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type</em>' reference.
+   * @see #setType(TableDefinition)
+   * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getMickeyFunction_Type()
+   * @model
+   * @generated
+   */
+  TableDefinition getType();
+
+  /**
+   * Sets the value of the '{@link com.justeat.mickeydb.mickeyLang.MickeyFunction#getType <em>Type</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type</em>' reference.
+   * @see #getType()
+   * @generated
+   */
+  void setType(TableDefinition value);
 
   /**
    * Returns the value of the '<em><b>Statements</b></em>' containment reference list.

@@ -52,7 +52,7 @@ public class DefaultContentProviderActions extends ContentProviderActions {
 	 * <p>Create new default actions</p>
 	 * @param source The source table or view name
 	 * @param forUrisWithId Wether expected URI's have appended id's, if so
-	 * then ids will be parsed and used in all CRUD actions
+	 * then id's will be parsed and used in all CRUD actions
 	 */
 	public DefaultContentProviderActions(String source, boolean forUrisWithId) {
 		this(source, forUrisWithId, null);
@@ -62,7 +62,7 @@ public class DefaultContentProviderActions extends ContentProviderActions {
 	 * <p>Create new default actions</p>
 	 * @param source The source table or view name
 	 * @param forUrisWithId Whether expected URI's have appended id's, if so
-	 * then ids will be parsed and used in all CRUD actions
+	 * then id's will be parsed and used in all CRUD actions
 	 * @param recordFactory A factory for creating ActiveRecord's, factories will be generated for
 	 * each generated ActiveRecord
 	 */
@@ -209,9 +209,11 @@ public class DefaultContentProviderActions extends ContentProviderActions {
 		try {
 			c = db.query(mSource, mRecordFactory.getProjection(), sQuery.toString(), sQuery.getArgsArray(), TextUtils.isEmpty(groupBy) ? null : groupBy, null, sortOrder);
 		    
-		    while(c.moveToNext()) {
-		        items.add((T)mRecordFactory.create(c));
-	        }
+			if(c.getCount() > 0) {
+			    while(c.moveToNext()) {
+			        items.add((T)mRecordFactory.create(c));
+		        }
+			}
 	    } finally {
 	        Closeables.closeSilently(c);
 	    }
@@ -238,9 +240,11 @@ public class DefaultContentProviderActions extends ContentProviderActions {
 			c = db.query(mSource, mRecordFactory.getProjection(), sQuery.toString(), sQuery.getArgsArray(), TextUtils.isEmpty(groupBy) ? null : groupBy, null, null);
 		    int keyColumnIndex = c.getColumnIndexOrThrow(keyColumnName);
 		    
-		    while(c.moveToNext()) {
-		        items.put(c.getString(keyColumnIndex), (T)mRecordFactory.create(c));
-	        }
+		    if(c.getCount() > 0) {
+			    while(c.moveToNext()) {
+			        items.put(c.getString(keyColumnIndex), (T)mRecordFactory.create(c));
+		        }
+		    }
 	    } finally {
 	        Closeables.closeSilently(c);
 	    }

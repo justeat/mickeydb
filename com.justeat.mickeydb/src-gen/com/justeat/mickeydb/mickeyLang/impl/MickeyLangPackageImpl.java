@@ -919,9 +919,19 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getMickeyFunction_Statements()
+  public EReference getMickeyFunction_Type()
   {
     return (EReference)mickeyFunctionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMickeyFunction_Statements()
+  {
+    return (EReference)mickeyFunctionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -3563,6 +3573,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     mickeyFunctionEClass = createEClass(MICKEY_FUNCTION);
     createEAttribute(mickeyFunctionEClass, MICKEY_FUNCTION__NAME);
     createEReference(mickeyFunctionEClass, MICKEY_FUNCTION__ARGS);
+    createEReference(mickeyFunctionEClass, MICKEY_FUNCTION__TYPE);
     createEReference(mickeyFunctionEClass, MICKEY_FUNCTION__STATEMENTS);
 
     actionStatementEClass = createEClass(ACTION_STATEMENT);
@@ -4021,6 +4032,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEClass(mickeyFunctionEClass, MickeyFunction.class, "MickeyFunction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMickeyFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, MickeyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMickeyFunction_Args(), this.getFunctionArg(), null, "args", null, 0, -1, MickeyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMickeyFunction_Type(), this.getTableDefinition(), null, "type", null, 0, 1, MickeyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMickeyFunction_Statements(), this.getDMLStatement(), null, "statements", null, 0, -1, MickeyFunction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(actionStatementEClass, ActionStatement.class, "ActionStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

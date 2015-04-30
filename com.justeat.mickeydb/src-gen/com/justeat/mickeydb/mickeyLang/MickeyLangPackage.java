@@ -142,13 +142,22 @@ public interface MickeyLangPackage extends EPackage
   int MICKEY_FUNCTION__ARGS = MICKEY_BLOCK_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MICKEY_FUNCTION__TYPE = MICKEY_BLOCK_FEATURE_COUNT + 2;
+
+  /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MICKEY_FUNCTION__STATEMENTS = MICKEY_BLOCK_FEATURE_COUNT + 2;
+  int MICKEY_FUNCTION__STATEMENTS = MICKEY_BLOCK_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Mickey Function</em>' class.
@@ -157,7 +166,7 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MICKEY_FUNCTION_FEATURE_COUNT = MICKEY_BLOCK_FEATURE_COUNT + 3;
+  int MICKEY_FUNCTION_FEATURE_COUNT = MICKEY_BLOCK_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl <em>Action Statement</em>}' class.
@@ -3558,6 +3567,17 @@ public interface MickeyLangPackage extends EPackage
   EReference getMickeyFunction_Args();
 
   /**
+   * Returns the meta object for the reference '{@link com.justeat.mickeydb.mickeyLang.MickeyFunction#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.MickeyFunction#getType()
+   * @see #getMickeyFunction()
+   * @generated
+   */
+  EReference getMickeyFunction_Type();
+
+  /**
    * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.MickeyFunction#getStatements <em>Statements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6420,6 +6440,14 @@ public interface MickeyLangPackage extends EPackage
      * @generated
      */
     EReference MICKEY_FUNCTION__ARGS = eINSTANCE.getMickeyFunction_Args();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MICKEY_FUNCTION__TYPE = eINSTANCE.getMickeyFunction_Type();
 
     /**
      * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.

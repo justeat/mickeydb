@@ -1534,7 +1534,7 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (args+=FunctionArg args+=FunctionArg*)? statements+=DMLStatement*)
+	 *     (name=ID (args+=FunctionArg args+=FunctionArg*)? type=[TableDefinition|QualifiedName]? statements+=DMLStatement*)
 	 */
 	protected void sequence_MickeyFunction(EObject context, MickeyFunction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

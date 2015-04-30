@@ -6,6 +6,7 @@ import com.justeat.mickeydb.mickeyLang.DMLStatement;
 import com.justeat.mickeydb.mickeyLang.FunctionArg;
 import com.justeat.mickeydb.mickeyLang.MickeyFunction;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
+import com.justeat.mickeydb.mickeyLang.TableDefinition;
 
 import java.util.Collection;
 
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFunctionImpl#getArgs <em>Args</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFunctionImpl#getType <em>Type</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.MickeyFunctionImpl#getStatements <em>Statements</em>}</li>
  * </ul>
  *
@@ -68,6 +70,16 @@ public class MickeyFunctionImpl extends MickeyBlockImpl implements MickeyFunctio
    * @ordered
    */
   protected EList<FunctionArg> args;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected TableDefinition type;
 
   /**
    * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
@@ -142,6 +154,49 @@ public class MickeyFunctionImpl extends MickeyBlockImpl implements MickeyFunctio
    * <!-- end-user-doc -->
    * @generated
    */
+  public TableDefinition getType()
+  {
+    if (type != null && type.eIsProxy())
+    {
+      InternalEObject oldType = (InternalEObject)type;
+      type = (TableDefinition)eResolveProxy(oldType);
+      if (type != oldType)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MickeyLangPackage.MICKEY_FUNCTION__TYPE, oldType, type));
+      }
+    }
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableDefinition basicGetType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(TableDefinition newType)
+  {
+    TableDefinition oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.MICKEY_FUNCTION__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<DMLStatement> getStatements()
   {
     if (statements == null)
@@ -183,6 +238,9 @@ public class MickeyFunctionImpl extends MickeyBlockImpl implements MickeyFunctio
         return getName();
       case MickeyLangPackage.MICKEY_FUNCTION__ARGS:
         return getArgs();
+      case MickeyLangPackage.MICKEY_FUNCTION__TYPE:
+        if (resolve) return getType();
+        return basicGetType();
       case MickeyLangPackage.MICKEY_FUNCTION__STATEMENTS:
         return getStatements();
     }
@@ -206,6 +264,9 @@ public class MickeyFunctionImpl extends MickeyBlockImpl implements MickeyFunctio
       case MickeyLangPackage.MICKEY_FUNCTION__ARGS:
         getArgs().clear();
         getArgs().addAll((Collection<? extends FunctionArg>)newValue);
+        return;
+      case MickeyLangPackage.MICKEY_FUNCTION__TYPE:
+        setType((TableDefinition)newValue);
         return;
       case MickeyLangPackage.MICKEY_FUNCTION__STATEMENTS:
         getStatements().clear();
@@ -231,6 +292,9 @@ public class MickeyFunctionImpl extends MickeyBlockImpl implements MickeyFunctio
       case MickeyLangPackage.MICKEY_FUNCTION__ARGS:
         getArgs().clear();
         return;
+      case MickeyLangPackage.MICKEY_FUNCTION__TYPE:
+        setType((TableDefinition)null);
+        return;
       case MickeyLangPackage.MICKEY_FUNCTION__STATEMENTS:
         getStatements().clear();
         return;
@@ -252,6 +316,8 @@ public class MickeyFunctionImpl extends MickeyBlockImpl implements MickeyFunctio
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case MickeyLangPackage.MICKEY_FUNCTION__ARGS:
         return args != null && !args.isEmpty();
+      case MickeyLangPackage.MICKEY_FUNCTION__TYPE:
+        return type != null;
       case MickeyLangPackage.MICKEY_FUNCTION__STATEMENTS:
         return statements != null && !statements.isEmpty();
     }

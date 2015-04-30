@@ -43,6 +43,7 @@
     <genClasses ecoreClass="MickeyLang.ecore#//MickeyFunction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//MickeyFunction/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MickeyFunction/args"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MickeyFunction/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//MickeyFunction/statements"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//ActionStatement">
