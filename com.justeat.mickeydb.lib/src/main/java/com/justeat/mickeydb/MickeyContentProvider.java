@@ -29,6 +29,7 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.util.LruCache;
 
 
 /**
@@ -46,6 +47,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 
 	private UriMatcher mUriMatcher;
     private String[] mContentTypes;
+    private LruCache<Integer, ContentProviderActions> mActionCache = new LruCache<>(10);
     
     public MickeyOpenHelper getOpenHelper() {
 		return mOpenHelper;
@@ -69,6 +71,15 @@ public abstract class MickeyContentProvider extends ContentProvider {
 	protected abstract String[] createContentTypes();
 	
 	protected abstract ContentProviderActions createActions(int id);
+	
+	private ContentProviderActions getActions(int id) {
+		ContentProviderActions actions = mActionCache.get(id);
+		if(actions == null) {
+			actions = createActions(id);
+			mActionCache.put(id, actions);
+		}
+		return actions;
+	}
 
 	protected abstract MickeyOpenHelper createOpenHelper(Context context);
 	
@@ -154,7 +165,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		int affected = createActions(match).delete(this, uri, selection, selectionArgs);
+		int affected = getActions(match).delete(this, uri, selection, selectionArgs);
 		
 		if(affected > 0) {
 			tryNotifyChange(uri);
@@ -172,7 +183,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		Uri newUri = createActions(match).insert(this, uri, values);
+		Uri newUri = getActions(match).insert(this, uri, values);
 		
 		if(newUri != null) {
 			tryNotifyChange(uri);
@@ -190,7 +201,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		int affected = createActions(match).bulkInsert(this, uri, values);
+		int affected = getActions(match).bulkInsert(this, uri, values);
 		
 		if(affected > 0) {
 			tryNotifyChange(uri);
@@ -207,7 +218,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		Cursor cursor = createActions(match).query(this, uri, projection, selection, selectionArgs, sortOrder);
+		Cursor cursor = getActions(match).query(this, uri, projection, selection, selectionArgs, sortOrder);
 
 		trySetNotificationUri(cursor, uri);
 		
@@ -222,7 +233,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		int affected = createActions(match).update(this, uri, values, selection, selectionArgs);
+		int affected = getActions(match).update(this, uri, values, selection, selectionArgs);
 
 		if(affected > 0) {
 			tryNotifyChange(uri);
@@ -238,7 +249,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
             throw new UnsupportedOperationException("Unknown uri: " + uri);
         }
         
-        return createActions(match).selectRecords(this, uri, sQuery, sortOrder);
+        return getActions(match).selectRecords(this, uri, sQuery, sortOrder);
     }
     
     public <T extends ActiveRecord> Map<String, T> selectRecordMap(Uri uri, Query sQuery, String keyColumnName) {
@@ -248,7 +259,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
     		throw new UnsupportedOperationException("Unknown uri: " + uri);
     	}
     	
-    	return createActions(match).selectRecordMap(this, uri, sQuery, keyColumnName);
+    	return getActions(match).selectRecordMap(this, uri, sQuery, keyColumnName);
     }
     
     @Override

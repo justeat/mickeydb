@@ -16,9 +16,9 @@ package com.justeat.mickeydb;
 import java.util.List;
 import java.util.Map;
 
-
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.net.Uri;
 
 public class ContentProviderActions {

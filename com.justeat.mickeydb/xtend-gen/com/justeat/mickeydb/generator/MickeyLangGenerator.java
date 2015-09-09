@@ -5,6 +5,8 @@ package com.justeat.mickeydb.generator;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import com.justeat.mickeydb.ContentUriInfo;
+import com.justeat.mickeydb.ContentUris;
 import com.justeat.mickeydb.MickeyAssembler;
 import com.justeat.mickeydb.MickeyDatabaseModel;
 import com.justeat.mickeydb.MickeyModel;
@@ -13,6 +15,7 @@ import com.justeat.mickeydb.Strings;
 import com.justeat.mickeydb.generator.ActiveRecordGenerator;
 import com.justeat.mickeydb.generator.ContentProviderContractGenerator;
 import com.justeat.mickeydb.generator.ContentProviderGenerator;
+import com.justeat.mickeydb.generator.CustomActionsGenerator;
 import com.justeat.mickeydb.generator.MickeyOutputConfigurationProvider;
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot;
 import com.justeat.mickeydb.generator.SqliteMigrationGenerator;
@@ -29,6 +32,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
@@ -56,6 +60,9 @@ public class MickeyLangGenerator implements IGenerator {
   private ActiveRecordGenerator mActiveRecordGenerator;
   
   @Inject
+  private CustomActionsGenerator mCustomActionsGenerator;
+  
+  @Inject
   private MickeyAssembler assembler;
   
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
@@ -71,6 +78,8 @@ public class MickeyLangGenerator implements IGenerator {
     Collection<MickeyDatabaseModel> _values = mickeyModel.databases.values();
     final Procedure1<MickeyDatabaseModel> _function = new Procedure1<MickeyDatabaseModel>() {
       public void apply(final MickeyDatabaseModel it) {
+        ContentUris content = new ContentUris();
+        content.init(it);
         String _packageName = it.getPackageName();
         String _databaseName = it.getDatabaseName();
         String _pascalize = Strings.pascalize(_databaseName);
@@ -100,7 +109,7 @@ public class MickeyLangGenerator implements IGenerator {
         String _concat_4 = "Abstract".concat(_pascalize_3);
         String _concat_5 = _concat_4.concat("ContentProvider");
         String _resolveFileName_3 = Strings.resolveFileName(_packageName_3, _concat_5);
-        CharSequence _generate_2 = MickeyLangGenerator.this.mContentProviderGenerator.generate(it);
+        CharSequence _generate_2 = MickeyLangGenerator.this.mContentProviderGenerator.generate(it, content);
         fsa.generateFile(_resolveFileName_3, _generate_2);
         String _packageName_4 = it.getPackageName();
         String _databaseName_4 = it.getDatabaseName();
@@ -146,6 +155,26 @@ public class MickeyLangGenerator implements IGenerator {
           }
         };
         IterableExtensions.<MigrationBlock>forEach(it.migrations, _function_4);
+        final Function1<ContentUriInfo, Boolean> _function_5 = new Function1<ContentUriInfo, Boolean>() {
+          public Boolean apply(final ContentUriInfo p1) {
+            boolean _isUserDefined = p1.isUserDefined();
+            return Boolean.valueOf((!_isUserDefined));
+          }
+        };
+        Iterable<ContentUriInfo> _dropWhile = IterableExtensions.<ContentUriInfo>dropWhile(content.uris, _function_5);
+        final Procedure1<ContentUriInfo> _function_6 = new Procedure1<ContentUriInfo>() {
+          public void apply(final ContentUriInfo p1) {
+            String _packageName = it.getPackageName();
+            String _concat = _packageName.concat(".actions");
+            String _name = p1.getName();
+            String _pascalize = Strings.pascalize(_name);
+            String _concat_1 = _pascalize.concat("Actions");
+            String _resolveFileName = Strings.resolveFileName(_concat, _concat_1);
+            CharSequence _generate = MickeyLangGenerator.this.mCustomActionsGenerator.generate(it, p1);
+            fsa.generateFile(_resolveFileName, _generate);
+          }
+        };
+        IterableExtensions.<ContentUriInfo>forEach(_dropWhile, _function_6);
       }
     };
     IterableExtensions.<MickeyDatabaseModel>forEach(_values, _function);

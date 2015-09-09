@@ -490,8 +490,9 @@ public class ContentProviderContractGenerator {
       final Function1<ActionStatement, Boolean> _function = new Function1<ActionStatement, Boolean>() {
         public Boolean apply(final ActionStatement it) {
           ContentUri _uri = it.getUri();
-          String _type = _uri.getType();
-          boolean _containsDefinition = snapshot.containsDefinition(_type);
+          TableDefinition _type = _uri.getType();
+          String _name = _type.getName();
+          boolean _containsDefinition = snapshot.containsDefinition(_name);
           return Boolean.valueOf((!_containsDefinition));
         }
       };
@@ -499,8 +500,9 @@ public class ContentProviderContractGenerator {
       for(final ActionStatement action : _filter) {
         _builder.append("public static class ");
         ContentUri _uri = action.getUri();
-        String _type = _uri.getType();
-        String _pascalize = Strings.pascalize(_type);
+        TableDefinition _type = _uri.getType();
+        String _name = _type.getName();
+        String _pascalize = Strings.pascalize(_name);
         _builder.append(_pascalize, "");
         _builder.append(" {");
         _builder.newLineIfNotEmpty();
@@ -518,7 +520,7 @@ public class ContentProviderContractGenerator {
         _builder.append(_lowerCase, "\t        ");
         _builder.append(".");
         ContentUri _uri_1 = action.getUri();
-        String _type_1 = _uri_1.getType();
+        TableDefinition _type_1 = _uri_1.getType();
         _builder.append(_type_1, "\t        ");
         _builder.append("\";");
         _builder.newLineIfNotEmpty();
@@ -548,16 +550,9 @@ public class ContentProviderContractGenerator {
     _builder.append("\t\t");
     _builder.append(".buildUpon()");
     _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append(".appendPath(\"");
-    ContentUri _uri_1 = action.getUri();
-    String _type = _uri_1.getType();
-    _builder.append(_type, "\t\t");
-    _builder.append("\")");
-    _builder.newLineIfNotEmpty();
     {
-      ContentUri _uri_2 = action.getUri();
-      EList<ContentUriSegment> _segments = _uri_2.getSegments();
+      ContentUri _uri_1 = action.getUri();
+      EList<ContentUriSegment> _segments = _uri_1.getSegments();
       for(final ContentUriSegment seg : _segments) {
         {
           if ((seg instanceof ContentUriParamSegment)) {
@@ -611,8 +606,9 @@ public class ContentProviderContractGenerator {
     final Function1<ActionStatement, Boolean> _function = new Function1<ActionStatement, Boolean>() {
       public Boolean apply(final ActionStatement action) {
         ContentUri _uri = action.getUri();
-        String _type = _uri.getType();
-        return Boolean.valueOf(_type.equals(defName));
+        TableDefinition _type = _uri.getType();
+        String _name = _type.getName();
+        return Boolean.valueOf(_name.equals(defName));
       }
     };
     return IterableExtensions.<ActionStatement>filter(model.actions, _function);

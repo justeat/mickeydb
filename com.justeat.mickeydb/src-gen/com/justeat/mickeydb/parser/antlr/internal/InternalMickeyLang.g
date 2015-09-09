@@ -457,51 +457,63 @@ ruleContentUri returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='/' 
+((	otherlv_0='/' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getContentUriAccess().getSolidusKeyword_0());
-    }
-(
-(
-		lv_type_1_0=RULE_ID
-		{
-			newLeafNode(lv_type_1_0, grammarAccess.getContentUriAccess().getTypeIDTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getContentUriRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"type",
-        		lv_type_1_0, 
-        		"ID");
-	    }
-
-)
-)(	otherlv_2='/' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getContentUriAccess().getSolidusKeyword_2_0());
+    	newLeafNode(otherlv_0, grammarAccess.getContentUriAccess().getSolidusKeyword_0_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getContentUriAccess().getSegmentsContentUriSegmentParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getContentUriAccess().getSegmentsContentUriSegmentParserRuleCall_0_1_0()); 
 	    }
-		lv_segments_3_0=ruleContentUriSegment		{
+		lv_segments_1_0=ruleContentUriSegment		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getContentUriRule());
 	        }
        		add(
        			$current, 
        			"segments",
-        		lv_segments_3_0, 
+        		lv_segments_1_0, 
         		"ContentUriSegment");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*)
+))*	otherlv_2='as' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getContentUriAccess().getAsKeyword_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getContentUriRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getContentUriAccess().getTypeTableDefinitionCrossReference_2_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		lv_unique_4_0=	'unique' 
+    {
+        newLeafNode(lv_unique_4_0, grammarAccess.getContentUriAccess().getUniqueUniqueKeyword_3_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getContentUriRule());
+	        }
+       		setWithLastConsumed($current, "unique", true, "unique");
+	    }
+
+)
+)?)
 ;
 
 

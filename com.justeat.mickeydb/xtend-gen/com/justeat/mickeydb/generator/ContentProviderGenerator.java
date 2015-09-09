@@ -1,6 +1,7 @@
 package com.justeat.mickeydb.generator;
 
-import com.google.common.base.Objects;
+import com.justeat.mickeydb.ContentUriInfo;
+import com.justeat.mickeydb.ContentUris;
 import com.justeat.mickeydb.MickeyDatabaseModel;
 import com.justeat.mickeydb.ModelUtil;
 import com.justeat.mickeydb.Strings;
@@ -10,8 +11,6 @@ import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
-import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
-import com.justeat.mickeydb.mickeyLang.MickeyFunction;
 import com.justeat.mickeydb.mickeyLang.TableDefinition;
 import java.util.ArrayList;
 import org.eclipse.emf.common.util.EList;
@@ -21,7 +20,7 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
 public class ContentProviderGenerator {
-  public CharSequence generate(final MickeyDatabaseModel model) {
+  public CharSequence generate(final MickeyDatabaseModel model, final ContentUris content) {
     StringConcatenation _builder = new StringConcatenation();
     SqliteDatabaseSnapshot snapshot = model.getSnapshot();
     _builder.newLineIfNotEmpty();
@@ -55,13 +54,33 @@ public class ContentProviderGenerator {
     _builder.newLine();
     _builder.append("import com.justeat.mickeydb.ContentProviderActions;");
     _builder.newLine();
+    {
+      for(final ContentUriInfo uri : content.uris) {
+        {
+          boolean _isUserDefined = uri.isUserDefined();
+          if (_isUserDefined) {
+            _builder.append("import ");
+            String _packageName_1 = model.getPackageName();
+            _builder.append(_packageName_1, "");
+            _builder.append(".actions.");
+            String _name = uri.getName();
+            String _pascalize = Strings.pascalize(_name);
+            _builder.append(_pascalize, "");
+            _builder.append("Actions;");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+      }
+    }
+    _builder.append("\t");
+    _builder.newLine();
     _builder.append("import ");
-    String _packageName_1 = model.getPackageName();
-    _builder.append(_packageName_1, "");
+    String _packageName_2 = model.getPackageName();
+    _builder.append(_packageName_2, "");
     _builder.append(".Abstract");
     String _databaseName = model.getDatabaseName();
-    String _pascalize = Strings.pascalize(_databaseName);
-    _builder.append(_pascalize, "");
+    String _pascalize_1 = Strings.pascalize(_databaseName);
+    _builder.append(_pascalize_1, "");
     _builder.append("OpenHelper.Sources;");
     _builder.newLineIfNotEmpty();
     {
@@ -74,12 +93,12 @@ public class ContentProviderGenerator {
       Iterable<CreateTableStatement> _filter = IterableExtensions.<CreateTableStatement>filter(_tables, _function);
       for(final CreateTableStatement tbl : _filter) {
         _builder.append("import ");
-        String _packageName_2 = model.getPackageName();
-        _builder.append(_packageName_2, "");
+        String _packageName_3 = model.getPackageName();
+        _builder.append(_packageName_3, "");
         _builder.append(".");
-        String _name = tbl.getName();
-        String _pascalize_1 = Strings.pascalize(_name);
-        _builder.append(_pascalize_1, "");
+        String _name_1 = tbl.getName();
+        String _pascalize_2 = Strings.pascalize(_name_1);
+        _builder.append(_pascalize_2, "");
         _builder.append("Record;");
         _builder.newLineIfNotEmpty();
       }
@@ -87,8 +106,8 @@ public class ContentProviderGenerator {
     _builder.newLine();
     _builder.append("public abstract class Abstract");
     String _databaseName_1 = model.getDatabaseName();
-    String _pascalize_2 = Strings.pascalize(_databaseName_1);
-    _builder.append(_pascalize_2, "");
+    String _pascalize_3 = Strings.pascalize(_databaseName_1);
+    _builder.append(_pascalize_3, "");
     _builder.append("ContentProvider extends MickeyContentProvider {");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -96,154 +115,11 @@ public class ContentProviderGenerator {
     int counter = (-1);
     _builder.newLineIfNotEmpty();
     {
-      ArrayList<CreateTableStatement> _tables_1 = snapshot.getTables();
-      for(final CreateTableStatement tbl_1 : _tables_1) {
+      for(final ContentUriInfo uri_1 : content.uris) {
         _builder.append("\t");
         _builder.append("public static final int ");
-        String _name_1 = tbl_1.getName();
-        String _underscore = Strings.underscore(_name_1);
-        String _upperCase = _underscore.toUpperCase();
-        _builder.append(_upperCase, "\t");
-        _builder.append(" = ");
-        _builder.append(counter = (counter + 1), "\t");
-        _builder.append(";");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey = ModelUtil.hasAndroidPrimaryKey(tbl_1);
-          if (_hasAndroidPrimaryKey) {
-            _builder.append("\t");
-            _builder.append("public static final int ");
-            String _name_2 = tbl_1.getName();
-            String _underscore_1 = Strings.underscore(_name_2);
-            String _upperCase_1 = _underscore_1.toUpperCase();
-            _builder.append(_upperCase_1, "\t");
-            _builder.append("_ID = ");
-            _builder.append(counter = (counter + 1), "\t");
-            _builder.append(";");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    _builder.newLine();
-    {
-      ArrayList<CreateViewStatement> _views = snapshot.getViews();
-      for(final CreateViewStatement vw : _views) {
-        _builder.append("\t");
-        _builder.append("public static final int ");
-        String _name_3 = vw.getName();
-        String _underscore_2 = Strings.underscore(_name_3);
-        String _upperCase_2 = _underscore_2.toUpperCase();
-        _builder.append(_upperCase_2, "\t");
-        _builder.append(" = ");
-        _builder.append(counter = (counter + 1), "\t");
-        _builder.append(";");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_1 = ModelUtil.hasAndroidPrimaryKey(vw);
-          if (_hasAndroidPrimaryKey_1) {
-            _builder.append("\t");
-            _builder.append("public static final int ");
-            String _name_4 = vw.getName();
-            String _underscore_3 = Strings.underscore(_name_4);
-            String _upperCase_3 = _underscore_3.toUpperCase();
-            _builder.append(_upperCase_3, "\t");
-            _builder.append("_ID = ");
-            _builder.append(counter = (counter + 1), "\t");
-            _builder.append(";");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    _builder.append("\t");
-    _builder.newLine();
-    {
-      for(final CreateTableStatement tbl_2 : model.initTables) {
-        _builder.append("\t");
-        _builder.append("public static final int ");
-        String _name_5 = tbl_2.getName();
-        String _underscore_4 = Strings.underscore(_name_5);
-        String _upperCase_4 = _underscore_4.toUpperCase();
-        _builder.append(_upperCase_4, "\t");
-        _builder.append(" = ");
-        _builder.append(counter = (counter + 1), "\t");
-        _builder.append(";");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_2 = ModelUtil.hasAndroidPrimaryKey(tbl_2);
-          if (_hasAndroidPrimaryKey_2) {
-            _builder.append("\t");
-            _builder.append("public static final int ");
-            String _name_6 = tbl_2.getName();
-            String _underscore_5 = Strings.underscore(_name_6);
-            String _upperCase_5 = _underscore_5.toUpperCase();
-            _builder.append(_upperCase_5, "\t");
-            _builder.append("_ID = ");
-            _builder.append(counter = (counter + 1), "\t");
-            _builder.append(";");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final CreateViewStatement vw_1 : model.initViews) {
-        _builder.append("\t");
-        _builder.append("public static final int ");
-        String _name_7 = vw_1.getName();
-        String _underscore_6 = Strings.underscore(_name_7);
-        String _upperCase_6 = _underscore_6.toUpperCase();
-        _builder.append(_upperCase_6, "\t");
-        _builder.append(" = ");
-        _builder.append(counter = (counter + 1), "\t");
-        _builder.append(";");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_3 = ModelUtil.hasAndroidPrimaryKey(vw_1);
-          if (_hasAndroidPrimaryKey_3) {
-            _builder.append("\t");
-            _builder.append("public static final int ");
-            String _name_8 = vw_1.getName();
-            String _underscore_7 = Strings.underscore(_name_8);
-            String _upperCase_7 = _underscore_7.toUpperCase();
-            _builder.append(_upperCase_7, "\t");
-            _builder.append("_ID = ");
-            _builder.append(counter = (counter + 1), "\t");
-            _builder.append(";");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final ActionStatement a : model.actions) {
-        _builder.append("\t");
-        _builder.append("public static final int ");
-        ContentUri _uri = ((ActionStatement) a).getUri();
-        String _type = _uri.getType();
-        String _underscore_8 = Strings.underscore(_type);
-        String _upperCase_8 = _underscore_8.toUpperCase();
-        _builder.append(_upperCase_8, "\t");
-        _builder.append("_");
-        String _name_9 = ((ActionStatement) a).getName();
-        String _underscore_9 = Strings.underscore(_name_9);
-        String _upperCase_9 = _underscore_9.toUpperCase();
-        _builder.append(_upperCase_9, "\t");
-        _builder.append(" = ");
-        _builder.append(counter = (counter + 1), "\t");
-        _builder.append(";");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    {
-      for(final MickeyFunction f : model.functions) {
-        _builder.append("\t");
-        _builder.append("public static final int ");
-        String _name_10 = f.getName();
-        String _underscore_10 = Strings.underscore(_name_10);
-        String _upperCase_10 = _underscore_10.toUpperCase();
-        _builder.append(_upperCase_10, "\t");
+        String _id = uri_1.getId();
+        _builder.append(_id, "\t");
         _builder.append(" = ");
         _builder.append(counter = (counter + 1), "\t");
         _builder.append(";");
@@ -252,7 +128,8 @@ public class ContentProviderGenerator {
     }
     _builder.append("\t");
     _builder.append("public static final int NUM_URI_MATCHERS = ");
-    _builder.append((counter + 1), "\t");
+    int _size = content.uris.size();
+    _builder.append(_size, "\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -268,184 +145,24 @@ public class ContentProviderGenerator {
     _builder.append("        ");
     _builder.append("final String authority = ");
     String _databaseName_2 = model.getDatabaseName();
-    String _pascalize_3 = Strings.pascalize(_databaseName_2);
-    _builder.append(_pascalize_3, "        ");
+    String _pascalize_4 = Strings.pascalize(_databaseName_2);
+    _builder.append(_pascalize_4, "        ");
     _builder.append("Contract.CONTENT_AUTHORITY;");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
     {
-      ArrayList<CreateTableStatement> _tables_2 = snapshot.getTables();
-      for(final CreateTableStatement tbl_3 : _tables_2) {
+      for(final ContentUriInfo uri_2 : content.uris) {
         _builder.append("\t\t");
         _builder.append("matcher.addURI(authority, \"");
-        String _name_11 = tbl_3.getName();
-        _builder.append(_name_11, "\t\t");
+        String _pathPattern = uri_2.getPathPattern();
+        _builder.append(_pathPattern, "\t\t");
         _builder.append("\", ");
-        String _name_12 = tbl_3.getName();
-        String _underscore_11 = Strings.underscore(_name_12);
-        String _upperCase_11 = _underscore_11.toUpperCase();
-        _builder.append(_upperCase_11, "\t\t");
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_4 = ModelUtil.hasAndroidPrimaryKey(tbl_3);
-          if (_hasAndroidPrimaryKey_4) {
-            _builder.append("\t\t");
-            _builder.append("matcher.addURI(authority, \"");
-            String _name_13 = tbl_3.getName();
-            _builder.append(_name_13, "\t\t");
-            _builder.append("/#\", ");
-            String _name_14 = tbl_3.getName();
-            String _underscore_12 = Strings.underscore(_name_14);
-            String _upperCase_12 = _underscore_12.toUpperCase();
-            _builder.append(_upperCase_12, "\t\t");
-            _builder.append("_ID);");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      ArrayList<CreateViewStatement> _views_1 = snapshot.getViews();
-      for(final CreateViewStatement vw_2 : _views_1) {
-        _builder.append("\t\t");
-        _builder.append("matcher.addURI(authority, \"");
-        String _name_15 = vw_2.getName();
-        _builder.append(_name_15, "\t\t");
-        _builder.append("\", ");
-        String _name_16 = vw_2.getName();
-        String _underscore_13 = Strings.underscore(_name_16);
-        String _upperCase_13 = _underscore_13.toUpperCase();
-        _builder.append(_upperCase_13, "\t\t");
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_5 = ModelUtil.hasAndroidPrimaryKey(vw_2);
-          if (_hasAndroidPrimaryKey_5) {
-            _builder.append("\t\t");
-            _builder.append("matcher.addURI(authority, \"");
-            String _name_17 = vw_2.getName();
-            _builder.append(_name_17, "\t\t");
-            _builder.append("/#\", ");
-            String _name_18 = vw_2.getName();
-            String _underscore_14 = Strings.underscore(_name_18);
-            String _upperCase_14 = _underscore_14.toUpperCase();
-            _builder.append(_upperCase_14, "\t\t");
-            _builder.append("_ID);");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final CreateTableStatement tbl_4 : model.initTables) {
-        _builder.append("\t\t");
-        _builder.append("matcher.addURI(authority, \"");
-        String _name_19 = tbl_4.getName();
-        _builder.append(_name_19, "\t\t");
-        _builder.append("\", ");
-        String _name_20 = tbl_4.getName();
-        String _underscore_15 = Strings.underscore(_name_20);
-        String _upperCase_15 = _underscore_15.toUpperCase();
-        _builder.append(_upperCase_15, "\t\t");
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_6 = ModelUtil.hasAndroidPrimaryKey(tbl_4);
-          if (_hasAndroidPrimaryKey_6) {
-            _builder.append("\t\t");
-            _builder.append("matcher.addURI(authority, \"");
-            String _name_21 = tbl_4.getName();
-            _builder.append(_name_21, "\t\t");
-            _builder.append("/#\", ");
-            String _name_22 = tbl_4.getName();
-            String _underscore_16 = Strings.underscore(_name_22);
-            String _upperCase_16 = _underscore_16.toUpperCase();
-            _builder.append(_upperCase_16, "\t\t");
-            _builder.append("_ID);");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final CreateViewStatement vw_3 : model.initViews) {
-        _builder.append("\t\t");
-        _builder.append("matcher.addURI(authority, \"");
-        String _name_23 = vw_3.getName();
-        _builder.append(_name_23, "\t\t");
-        _builder.append("\", ");
-        String _name_24 = vw_3.getName();
-        String _underscore_17 = Strings.underscore(_name_24);
-        String _upperCase_17 = _underscore_17.toUpperCase();
-        _builder.append(_upperCase_17, "\t\t");
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_7 = ModelUtil.hasAndroidPrimaryKey(vw_3);
-          if (_hasAndroidPrimaryKey_7) {
-            _builder.append("\t\t");
-            _builder.append("matcher.addURI(authority, \"");
-            String _name_25 = vw_3.getName();
-            _builder.append(_name_25, "\t\t");
-            _builder.append("/#\", ");
-            String _name_26 = vw_3.getName();
-            String _underscore_18 = Strings.underscore(_name_26);
-            String _upperCase_18 = _underscore_18.toUpperCase();
-            _builder.append(_upperCase_18, "\t\t");
-            _builder.append("_ID);");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("// actions");
-    _builder.newLine();
-    {
-      for(final ActionStatement a_1 : model.actions) {
-        _builder.append("\t\t");
-        _builder.append("matcher.addURI(authority, \"");
-        ContentUri _uri_1 = a_1.getUri();
-        String _asString = this.asString(_uri_1);
-        _builder.append(_asString, "\t\t");
-        _builder.append("\", ");
-        ContentUri _uri_2 = a_1.getUri();
-        String _type_1 = _uri_2.getType();
-        String _underscore_19 = Strings.underscore(_type_1);
-        String _upperCase_19 = _underscore_19.toUpperCase();
-        _builder.append(_upperCase_19, "\t\t");
-        _builder.append("_");
-        String _name_27 = a_1.getName();
-        String _underscore_20 = Strings.underscore(_name_27);
-        String _upperCase_20 = _underscore_20.toUpperCase();
-        _builder.append(_upperCase_20, "\t\t");
-        _builder.append("); ");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    _builder.append("\t\t");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("// functions");
-    _builder.newLine();
-    {
-      for(final MickeyFunction f_1 : model.functions) {
-        _builder.append("\t\t");
-        _builder.append("matcher.addURI(authority, \"_func/");
-        String _name_28 = f_1.getName();
-        _builder.append(_name_28, "\t\t");
-        _builder.append("\", ");
-        String _name_29 = f_1.getName();
-        String _underscore_21 = Strings.underscore(_name_29);
-        String _upperCase_21 = _underscore_21.toUpperCase();
-        _builder.append(_upperCase_21, "\t\t");
+        String _id_1 = uri_2.getId();
+        _builder.append(_id_1, "\t\t");
         _builder.append(");");
         _builder.newLineIfNotEmpty();
       }
     }
-    _builder.append("\t\t");
     _builder.newLine();
     _builder.append("        ");
     _builder.append("return matcher;");
@@ -466,237 +183,43 @@ public class ContentProviderGenerator {
     _builder.newLine();
     _builder.newLine();
     {
-      ArrayList<CreateTableStatement> _tables_3 = snapshot.getTables();
-      for(final CreateTableStatement tbl_5 : _tables_3) {
-        _builder.append("\t\t");
-        _builder.append("contentTypes[");
-        String _name_30 = tbl_5.getName();
-        String _underscore_22 = Strings.underscore(_name_30);
-        String _upperCase_22 = _underscore_22.toUpperCase();
-        _builder.append(_upperCase_22, "\t\t");
-        _builder.append("] = ");
-        String _databaseName_3 = model.getDatabaseName();
-        String _pascalize_4 = Strings.pascalize(_databaseName_3);
-        _builder.append(_pascalize_4, "\t\t");
-        _builder.append("Contract.");
-        String _name_31 = tbl_5.getName();
-        String _pascalize_5 = Strings.pascalize(_name_31);
-        _builder.append(_pascalize_5, "\t\t");
-        _builder.append(".CONTENT_TYPE;");
-        _builder.newLineIfNotEmpty();
+      for(final ContentUriInfo uri_3 : content.uris) {
         {
-          boolean _hasAndroidPrimaryKey_8 = ModelUtil.hasAndroidPrimaryKey(tbl_5);
-          if (_hasAndroidPrimaryKey_8) {
+          boolean _isDirectory = uri_3.isDirectory();
+          if (_isDirectory) {
             _builder.append("\t\t");
             _builder.append("contentTypes[");
-            String _name_32 = tbl_5.getName();
-            String _underscore_23 = Strings.underscore(_name_32);
-            String _upperCase_23 = _underscore_23.toUpperCase();
-            _builder.append(_upperCase_23, "\t\t");
-            _builder.append("_ID] = ");
-            String _databaseName_4 = model.getDatabaseName();
-            String _pascalize_6 = Strings.pascalize(_databaseName_4);
-            _builder.append(_pascalize_6, "\t\t");
-            _builder.append("Contract.");
-            String _name_33 = tbl_5.getName();
-            String _pascalize_7 = Strings.pascalize(_name_33);
-            _builder.append(_pascalize_7, "\t\t");
-            _builder.append(".ITEM_CONTENT_TYPE;");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      ArrayList<CreateViewStatement> _views_2 = snapshot.getViews();
-      for(final CreateViewStatement vw_4 : _views_2) {
-        _builder.append("\t\t");
-        _builder.append("contentTypes[");
-        String _name_34 = vw_4.getName();
-        String _underscore_24 = Strings.underscore(_name_34);
-        String _upperCase_24 = _underscore_24.toUpperCase();
-        _builder.append(_upperCase_24, "\t\t");
-        _builder.append("] = ");
-        String _databaseName_5 = model.getDatabaseName();
-        String _pascalize_8 = Strings.pascalize(_databaseName_5);
-        _builder.append(_pascalize_8, "\t\t");
-        _builder.append("Contract.");
-        String _name_35 = vw_4.getName();
-        String _pascalize_9 = Strings.pascalize(_name_35);
-        _builder.append(_pascalize_9, "\t\t");
-        _builder.append(".CONTENT_TYPE;");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_9 = ModelUtil.hasAndroidPrimaryKey(vw_4);
-          if (_hasAndroidPrimaryKey_9) {
-            _builder.append("\t\t");
-            _builder.append("contentTypes[");
-            String _name_36 = vw_4.getName();
-            String _underscore_25 = Strings.underscore(_name_36);
-            String _upperCase_25 = _underscore_25.toUpperCase();
-            _builder.append(_upperCase_25, "\t\t");
-            _builder.append("_ID] = ");
-            String _databaseName_6 = model.getDatabaseName();
-            String _pascalize_10 = Strings.pascalize(_databaseName_6);
-            _builder.append(_pascalize_10, "\t\t");
-            _builder.append("Contract.");
-            String _name_37 = vw_4.getName();
-            String _pascalize_11 = Strings.pascalize(_name_37);
-            _builder.append(_pascalize_11, "\t\t");
-            _builder.append(".ITEM_CONTENT_TYPE;");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final CreateTableStatement tbl_6 : model.initTables) {
-        _builder.append("\t\t");
-        _builder.append("contentTypes[");
-        String _name_38 = tbl_6.getName();
-        String _underscore_26 = Strings.underscore(_name_38);
-        String _upperCase_26 = _underscore_26.toUpperCase();
-        _builder.append(_upperCase_26, "\t\t");
-        _builder.append("] = ");
-        String _databaseName_7 = model.getDatabaseName();
-        String _pascalize_12 = Strings.pascalize(_databaseName_7);
-        _builder.append(_pascalize_12, "\t\t");
-        _builder.append("Contract.");
-        String _name_39 = tbl_6.getName();
-        String _pascalize_13 = Strings.pascalize(_name_39);
-        _builder.append(_pascalize_13, "\t\t");
-        _builder.append(".CONTENT_TYPE;");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_10 = ModelUtil.hasAndroidPrimaryKey(tbl_6);
-          if (_hasAndroidPrimaryKey_10) {
-            _builder.append("\t\t");
-            _builder.append("contentTypes[");
-            String _name_40 = tbl_6.getName();
-            String _underscore_27 = Strings.underscore(_name_40);
-            String _upperCase_27 = _underscore_27.toUpperCase();
-            _builder.append(_upperCase_27, "\t\t");
-            _builder.append("_ID] = ");
-            String _databaseName_8 = model.getDatabaseName();
-            String _pascalize_14 = Strings.pascalize(_databaseName_8);
-            _builder.append(_pascalize_14, "\t\t");
-            _builder.append("Contract.");
-            String _name_41 = tbl_6.getName();
-            String _pascalize_15 = Strings.pascalize(_name_41);
-            _builder.append(_pascalize_15, "\t\t");
-            _builder.append(".ITEM_CONTENT_TYPE;");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final CreateViewStatement vw_5 : model.initViews) {
-        _builder.append("\t\t");
-        _builder.append("contentTypes[");
-        String _name_42 = vw_5.getName();
-        String _underscore_28 = Strings.underscore(_name_42);
-        String _upperCase_28 = _underscore_28.toUpperCase();
-        _builder.append(_upperCase_28, "\t\t");
-        _builder.append("] = ");
-        String _databaseName_9 = model.getDatabaseName();
-        String _pascalize_16 = Strings.pascalize(_databaseName_9);
-        _builder.append(_pascalize_16, "\t\t");
-        _builder.append("Contract.");
-        String _name_43 = vw_5.getName();
-        String _pascalize_17 = Strings.pascalize(_name_43);
-        _builder.append(_pascalize_17, "\t\t");
-        _builder.append(".CONTENT_TYPE;");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_11 = ModelUtil.hasAndroidPrimaryKey(vw_5);
-          if (_hasAndroidPrimaryKey_11) {
-            _builder.append("\t\t");
-            _builder.append("contentTypes[");
-            String _name_44 = vw_5.getName();
-            String _underscore_29 = Strings.underscore(_name_44);
-            String _upperCase_29 = _underscore_29.toUpperCase();
-            _builder.append(_upperCase_29, "\t\t");
-            _builder.append("_ID] = ");
-            String _databaseName_10 = model.getDatabaseName();
-            String _pascalize_18 = Strings.pascalize(_databaseName_10);
-            _builder.append(_pascalize_18, "\t\t");
-            _builder.append("Contract.");
-            String _name_45 = vw_5.getName();
-            String _pascalize_19 = Strings.pascalize(_name_45);
-            _builder.append(_pascalize_19, "\t\t");
-            _builder.append(".ITEM_CONTENT_TYPE;");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final ActionStatement a_2 : model.actions) {
-        _builder.append("\t\t");
-        _builder.append("contentTypes[");
-        ContentUri _uri_3 = a_2.getUri();
-        String _type_2 = _uri_3.getType();
-        String _underscore_30 = Strings.underscore(_type_2);
-        String _upperCase_30 = _underscore_30.toUpperCase();
-        _builder.append(_upperCase_30, "\t\t");
-        _builder.append("_");
-        String _name_46 = a_2.getName();
-        String _underscore_31 = Strings.underscore(_name_46);
-        String _upperCase_31 = _underscore_31.toUpperCase();
-        _builder.append(_upperCase_31, "\t\t");
-        _builder.append("] = ");
-        String _databaseName_11 = model.getDatabaseName();
-        String _generateContentTypeConstantReference = this.generateContentTypeConstantReference(a_2, _databaseName_11);
-        _builder.append(_generateContentTypeConstantReference, "\t\t");
-        _builder.append(";");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    {
-      for(final MickeyFunction f_2 : model.functions) {
-        {
-          TableDefinition _type_3 = f_2.getType();
-          boolean _notEquals = (!Objects.equal(_type_3, null));
-          if (_notEquals) {
-            _builder.append("\t\t");
-            _builder.append("contentTypes[");
-            String _name_47 = f_2.getName();
-            String _underscore_32 = Strings.underscore(_name_47);
-            String _upperCase_32 = _underscore_32.toUpperCase();
-            _builder.append(_upperCase_32, "\t\t");
+            String _id_2 = uri_3.getId();
+            _builder.append(_id_2, "\t\t");
             _builder.append("] = ");
-            String _databaseName_12 = model.getDatabaseName();
-            String _pascalize_20 = Strings.pascalize(_databaseName_12);
-            _builder.append(_pascalize_20, "\t\t");
+            String _databaseName_3 = model.getDatabaseName();
+            String _pascalize_5 = Strings.pascalize(_databaseName_3);
+            _builder.append(_pascalize_5, "\t\t");
             _builder.append("Contract.");
-            TableDefinition _type_4 = f_2.getType();
-            String _name_48 = _type_4.getName();
-            String _pascalize_21 = Strings.pascalize(_name_48);
-            _builder.append(_pascalize_21, "\t\t");
+            String _type = uri_3.getType();
+            String _pascalize_6 = Strings.pascalize(_type);
+            _builder.append(_pascalize_6, "\t\t");
             _builder.append(".CONTENT_TYPE;");
             _builder.newLineIfNotEmpty();
           } else {
             _builder.append("\t\t");
             _builder.append("contentTypes[");
-            String _name_49 = f_2.getName();
-            String _underscore_33 = Strings.underscore(_name_49);
-            String _upperCase_33 = _underscore_33.toUpperCase();
-            _builder.append(_upperCase_33, "\t\t");
-            _builder.append("] = \"vnd.android.cursor.dir/vnd.");
-            String _databaseName_13 = model.getDatabaseName();
-            String _lowerCase = _databaseName_13.toLowerCase();
-            _builder.append(_lowerCase, "\t\t");
-            _builder.append(".");
-            String _name_50 = f_2.getName();
-            _builder.append(_name_50, "\t\t");
-            _builder.append("\";");
+            String _id_3 = uri_3.getId();
+            _builder.append(_id_3, "\t\t");
+            _builder.append("] = ");
+            String _databaseName_4 = model.getDatabaseName();
+            String _pascalize_7 = Strings.pascalize(_databaseName_4);
+            _builder.append(_pascalize_7, "\t\t");
+            _builder.append("Contract.");
+            String _type_1 = uri_3.getType();
+            String _pascalize_8 = Strings.pascalize(_type_1);
+            _builder.append(_pascalize_8, "\t\t");
+            _builder.append(".ITEM_CONTENT_TYPE;");
             _builder.newLineIfNotEmpty();
           }
         }
       }
     }
-    _builder.append("\t\t");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("return contentTypes;");
@@ -713,9 +236,9 @@ public class ContentProviderGenerator {
     _builder.newLine();
     _builder.append("        ");
     _builder.append("return new ");
-    String _databaseName_14 = model.getDatabaseName();
-    String _pascalize_22 = Strings.pascalize(_databaseName_14);
-    _builder.append(_pascalize_22, "        ");
+    String _databaseName_5 = model.getDatabaseName();
+    String _pascalize_9 = Strings.pascalize(_databaseName_5);
+    _builder.append(_pascalize_9, "        ");
     _builder.append("OpenHelper(context);");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -731,9 +254,9 @@ public class ContentProviderGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("return ");
-    String _databaseName_15 = model.getDatabaseName();
-    String _pascalize_23 = Strings.pascalize(_databaseName_15);
-    _builder.append(_pascalize_23, "\t\t");
+    String _databaseName_6 = model.getDatabaseName();
+    String _pascalize_10 = Strings.pascalize(_databaseName_6);
+    _builder.append(_pascalize_10, "\t\t");
     _builder.append("Contract.REFERENCING_VIEWS.get(uri);");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -751,195 +274,41 @@ public class ContentProviderGenerator {
     _builder.append("switch(id) {");
     _builder.newLine();
     {
-      ArrayList<CreateTableStatement> _tables_4 = snapshot.getTables();
-      for(final CreateTableStatement tbl_7 : _tables_4) {
-        _builder.append("\t\t\t");
+      for(final ContentUriInfo uri_4 : content.uris) {
+        _builder.append("    \t\t");
         _builder.append("case ");
-        String _name_51 = tbl_7.getName();
-        String _underscore_34 = Strings.underscore(_name_51);
-        String _upperCase_34 = _underscore_34.toUpperCase();
-        _builder.append(_upperCase_34, "\t\t\t");
-        _builder.append(": ");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
-        _builder.append("\t");
-        _builder.append("return create");
-        String _name_52 = tbl_7.getName();
-        String _pascalize_24 = Strings.pascalize(_name_52);
-        _builder.append(_pascalize_24, "\t\t\t\t");
-        _builder.append("Actions();");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_12 = ModelUtil.hasAndroidPrimaryKey(tbl_7);
-          if (_hasAndroidPrimaryKey_12) {
-            _builder.append("\t\t\t");
-            _builder.append("case ");
-            String _name_53 = tbl_7.getName();
-            String _underscore_35 = Strings.underscore(_name_53);
-            String _upperCase_35 = _underscore_35.toUpperCase();
-            _builder.append(_upperCase_35, "\t\t\t");
-            _builder.append("_ID:");
-            _builder.newLineIfNotEmpty();
-            _builder.append("\t\t\t");
-            _builder.append("\t");
-            _builder.append("return create");
-            String _name_54 = tbl_7.getName();
-            String _pascalize_25 = Strings.pascalize(_name_54);
-            _builder.append(_pascalize_25, "\t\t\t\t");
-            _builder.append("ByIdActions();");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      ArrayList<CreateViewStatement> _views_3 = snapshot.getViews();
-      for(final CreateViewStatement vw_6 : _views_3) {
-        _builder.append("\t\t\t");
-        _builder.append("case ");
-        String _name_55 = vw_6.getName();
-        String _underscore_36 = Strings.underscore(_name_55);
-        String _upperCase_36 = _underscore_36.toUpperCase();
-        _builder.append(_upperCase_36, "\t\t\t");
+        String _id_4 = uri_4.getId();
+        _builder.append(_id_4, "    \t\t");
         _builder.append(":");
         _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
-        _builder.append("\t");
-        _builder.append("return create");
-        String _name_56 = vw_6.getName();
-        String _pascalize_26 = Strings.pascalize(_name_56);
-        _builder.append(_pascalize_26, "\t\t\t\t");
-        _builder.append("Actions();");
-        _builder.newLineIfNotEmpty();
         {
-          boolean _hasAndroidPrimaryKey_13 = ModelUtil.hasAndroidPrimaryKey(vw_6);
-          if (_hasAndroidPrimaryKey_13) {
-            _builder.append("\t\t\t");
-            _builder.append("case ");
-            String _name_57 = vw_6.getName();
-            String _underscore_37 = Strings.underscore(_name_57);
-            String _upperCase_37 = _underscore_37.toUpperCase();
-            _builder.append(_upperCase_37, "\t\t\t");
-            _builder.append("_ID: ");
-            _builder.newLineIfNotEmpty();
-            _builder.append("\t\t\t");
-            _builder.append("\t");
+          boolean _isUserDefined_1 = uri_4.isUserDefined();
+          boolean _not = (!_isUserDefined_1);
+          if (_not) {
+            _builder.append("    \t\t");
             _builder.append("return create");
-            String _name_58 = vw_6.getName();
-            String _pascalize_27 = Strings.pascalize(_name_58);
-            _builder.append(_pascalize_27, "\t\t\t\t");
-            _builder.append("ByIdActions();");
+            String _type_2 = uri_4.getType();
+            String _pascalize_11 = Strings.pascalize(_type_2);
+            _builder.append(_pascalize_11, "    \t\t");
+            {
+              boolean _isDirectory_1 = uri_4.isDirectory();
+              boolean _not_1 = (!_isDirectory_1);
+              if (_not_1) {
+                _builder.append("ById");
+              }
+            }
+            _builder.append("Actions();");
+            _builder.newLineIfNotEmpty();
+          } else {
+            _builder.append("    \t\t");
+            _builder.append("return create");
+            String _name_2 = uri_4.getName();
+            String _pascalize_12 = Strings.pascalize(_name_2);
+            _builder.append(_pascalize_12, "    \t\t");
+            _builder.append("Actions();");
             _builder.newLineIfNotEmpty();
           }
         }
-      }
-    }
-    {
-      for(final CreateTableStatement tbl_8 : model.initTables) {
-        _builder.append("\t\t\t");
-        _builder.append("case ");
-        String _name_59 = tbl_8.getName();
-        String _underscore_38 = Strings.underscore(_name_59);
-        String _upperCase_38 = _underscore_38.toUpperCase();
-        _builder.append(_upperCase_38, "\t\t\t");
-        _builder.append(": ");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
-        _builder.append("\t");
-        _builder.append("return create");
-        String _name_60 = tbl_8.getName();
-        String _pascalize_28 = Strings.pascalize(_name_60);
-        _builder.append(_pascalize_28, "\t\t\t\t");
-        _builder.append("Actions();");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_14 = ModelUtil.hasAndroidPrimaryKey(tbl_8);
-          if (_hasAndroidPrimaryKey_14) {
-            _builder.append("\t\t\t");
-            _builder.append("case ");
-            String _name_61 = tbl_8.getName();
-            String _underscore_39 = Strings.underscore(_name_61);
-            String _upperCase_39 = _underscore_39.toUpperCase();
-            _builder.append(_upperCase_39, "\t\t\t");
-            _builder.append("_ID:");
-            _builder.newLineIfNotEmpty();
-            _builder.append("\t\t\t");
-            _builder.append("\t");
-            _builder.append("return create");
-            String _name_62 = tbl_8.getName();
-            String _pascalize_29 = Strings.pascalize(_name_62);
-            _builder.append(_pascalize_29, "\t\t\t\t");
-            _builder.append("ByIdActions();");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final CreateViewStatement vw_7 : model.initViews) {
-        _builder.append("\t\t\t");
-        _builder.append("case ");
-        String _name_63 = vw_7.getName();
-        String _underscore_40 = Strings.underscore(_name_63);
-        String _upperCase_40 = _underscore_40.toUpperCase();
-        _builder.append(_upperCase_40, "\t\t\t");
-        _builder.append(":");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
-        _builder.append("\t");
-        _builder.append("return create");
-        String _name_64 = vw_7.getName();
-        String _pascalize_30 = Strings.pascalize(_name_64);
-        _builder.append(_pascalize_30, "\t\t\t\t");
-        _builder.append("Actions();");
-        _builder.newLineIfNotEmpty();
-        {
-          boolean _hasAndroidPrimaryKey_15 = ModelUtil.hasAndroidPrimaryKey(vw_7);
-          if (_hasAndroidPrimaryKey_15) {
-            _builder.append("\t\t\t");
-            _builder.append("case ");
-            String _name_65 = vw_7.getName();
-            String _underscore_41 = Strings.underscore(_name_65);
-            String _upperCase_41 = _underscore_41.toUpperCase();
-            _builder.append(_upperCase_41, "\t\t\t");
-            _builder.append("_ID: ");
-            _builder.newLineIfNotEmpty();
-            _builder.append("\t\t\t");
-            _builder.append("\t");
-            _builder.append("return create");
-            String _name_66 = vw_7.getName();
-            String _pascalize_31 = Strings.pascalize(_name_66);
-            _builder.append(_pascalize_31, "\t\t\t\t");
-            _builder.append("ByIdActions();");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    {
-      for(final ActionStatement a_3 : model.actions) {
-        _builder.append("\t\t\t");
-        _builder.append("case ");
-        ContentUri _uri_4 = a_3.getUri();
-        String _type_5 = _uri_4.getType();
-        String _underscore_42 = Strings.underscore(_type_5);
-        String _upperCase_42 = _underscore_42.toUpperCase();
-        _builder.append(_upperCase_42, "\t\t\t");
-        _builder.append("_");
-        String _name_67 = a_3.getName();
-        String _underscore_43 = Strings.underscore(_name_67);
-        String _upperCase_43 = _underscore_43.toUpperCase();
-        _builder.append(_upperCase_43, "\t\t\t");
-        _builder.append(":");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t\t\t");
-        _builder.append("\t");
-        _builder.append("return create");
-        String _name_68 = a_3.getName();
-        String _pascalize_32 = Strings.pascalize(_name_68);
-        _builder.append(_pascalize_32, "\t\t\t\t");
-        _builder.append("Actions();");
-        _builder.newLineIfNotEmpty();
       }
     }
     _builder.append("\t\t\t");
@@ -957,32 +326,49 @@ public class ContentProviderGenerator {
     _builder.append("    ");
     _builder.newLine();
     {
-      ArrayList<CreateTableStatement> _tables_5 = snapshot.getTables();
-      for(final CreateTableStatement tbl_9 : _tables_5) {
+      for(final ContentUriInfo uri_5 : content.uris) {
         {
-          boolean _hasAndroidPrimaryKey_16 = ModelUtil.hasAndroidPrimaryKey(tbl_9);
-          if (_hasAndroidPrimaryKey_16) {
-            _builder.append("    ");
+          boolean _isUserDefined_2 = uri_5.isUserDefined();
+          boolean _not_2 = (!_isUserDefined_2);
+          if (_not_2) {
+            _builder.append("\t");
             _builder.append("protected ContentProviderActions create");
-            String _name_69 = tbl_9.getName();
-            String _pascalize_33 = Strings.pascalize(_name_69);
-            _builder.append(_pascalize_33, "    ");
-            _builder.append("ByIdActions() {");
+            String _type_3 = uri_5.getType();
+            String _pascalize_13 = Strings.pascalize(_type_3);
+            _builder.append(_pascalize_13, "\t");
+            {
+              boolean _isDirectory_2 = uri_5.isDirectory();
+              boolean _not_3 = (!_isDirectory_2);
+              if (_not_3) {
+                _builder.append("ById");
+              }
+            }
+            _builder.append("Actions() {");
             _builder.newLineIfNotEmpty();
-            _builder.append("    ");
+            _builder.append("\t");
             _builder.append("\t");
             _builder.append("return new DefaultContentProviderActions(Sources.");
-            String _name_70 = tbl_9.getName();
-            String _underscore_44 = Strings.underscore(_name_70);
-            String _upperCase_44 = _underscore_44.toUpperCase();
-            _builder.append(_upperCase_44, "    \t");
-            _builder.append(", true, ");
+            String _type_4 = uri_5.getType();
+            String _underscore = Strings.underscore(_type_4);
+            String _upperCase = _underscore.toUpperCase();
+            _builder.append(_upperCase, "\t\t");
+            _builder.append(", ");
             {
-              boolean _hasAndroidPrimaryKey_17 = ModelUtil.hasAndroidPrimaryKey(tbl_9);
-              if (_hasAndroidPrimaryKey_17) {
-                String _name_71 = tbl_9.getName();
-                String _pascalize_34 = Strings.pascalize(_name_71);
-                _builder.append(_pascalize_34, "    \t");
+              boolean _isDirectory_3 = uri_5.isDirectory();
+              boolean _not_4 = (!_isDirectory_3);
+              if (_not_4) {
+                _builder.append("true");
+              } else {
+                _builder.append("false");
+              }
+            }
+            _builder.append(", ");
+            {
+              boolean _isSupportsActiveRecord = uri_5.isSupportsActiveRecord();
+              if (_isSupportsActiveRecord) {
+                String _type_5 = uri_5.getType();
+                String _pascalize_14 = Strings.pascalize(_type_5);
+                _builder.append(_pascalize_14, "\t\t");
                 _builder.append("Record.getFactory()");
               } else {
                 _builder.append("null");
@@ -990,292 +376,30 @@ public class ContentProviderGenerator {
             }
             _builder.append(");");
             _builder.newLineIfNotEmpty();
-            _builder.append("    ");
-            _builder.append("}");
-            _builder.newLine();
-            _builder.append("    ");
-            _builder.newLine();
-          }
-        }
-        _builder.append("    ");
-        _builder.append("protected ContentProviderActions create");
-        String _name_72 = tbl_9.getName();
-        String _pascalize_35 = Strings.pascalize(_name_72);
-        _builder.append(_pascalize_35, "    ");
-        _builder.append("Actions() {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("\t");
-        _builder.append("return new DefaultContentProviderActions(Sources.");
-        String _name_73 = tbl_9.getName();
-        String _underscore_45 = Strings.underscore(_name_73);
-        String _upperCase_45 = _underscore_45.toUpperCase();
-        _builder.append(_upperCase_45, "    \t");
-        _builder.append(", false, ");
-        {
-          boolean _hasAndroidPrimaryKey_18 = ModelUtil.hasAndroidPrimaryKey(tbl_9);
-          if (_hasAndroidPrimaryKey_18) {
-            String _name_74 = tbl_9.getName();
-            String _pascalize_36 = Strings.pascalize(_name_74);
-            _builder.append(_pascalize_36, "    \t");
-            _builder.append("Record.getFactory()");
-          } else {
-            _builder.append("null");
-          }
-        }
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("}");
-        _builder.newLine();
-        _builder.append("    ");
-        _builder.newLine();
-      }
-    }
-    {
-      ArrayList<CreateViewStatement> _views_4 = snapshot.getViews();
-      for(final CreateViewStatement view : _views_4) {
-        {
-          boolean _hasAndroidPrimaryKey_19 = ModelUtil.hasAndroidPrimaryKey(view);
-          if (_hasAndroidPrimaryKey_19) {
-            _builder.append("    ");
-            _builder.append("protected ContentProviderActions create");
-            String _name_75 = view.getName();
-            String _pascalize_37 = Strings.pascalize(_name_75);
-            _builder.append(_pascalize_37, "    ");
-            _builder.append("ByIdActions() {");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
             _builder.append("\t");
-            _builder.append("return new DefaultContentProviderActions(Sources.");
-            String _name_76 = view.getName();
-            String _underscore_46 = Strings.underscore(_name_76);
-            String _upperCase_46 = _underscore_46.toUpperCase();
-            _builder.append(_upperCase_46, "    \t");
-            _builder.append(", true, ");
-            {
-              boolean _hasAndroidPrimaryKey_20 = ModelUtil.hasAndroidPrimaryKey(view);
-              if (_hasAndroidPrimaryKey_20) {
-                String _name_77 = view.getName();
-                String _pascalize_38 = Strings.pascalize(_name_77);
-                _builder.append(_pascalize_38, "    \t");
-                _builder.append("Record.getFactory()");
-              } else {
-                _builder.append("null");
-              }
-            }
-            _builder.append(");");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
             _builder.append("}");
             _builder.newLine();
-            _builder.append("    ");
-            _builder.newLine();
-          }
-        }
-        _builder.append("    ");
-        _builder.append("protected ContentProviderActions create");
-        String _name_78 = view.getName();
-        String _pascalize_39 = Strings.pascalize(_name_78);
-        _builder.append(_pascalize_39, "    ");
-        _builder.append("Actions() {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("\t");
-        _builder.append("return new DefaultContentProviderActions(Sources.");
-        String _name_79 = view.getName();
-        String _underscore_47 = Strings.underscore(_name_79);
-        String _upperCase_47 = _underscore_47.toUpperCase();
-        _builder.append(_upperCase_47, "    \t");
-        _builder.append(", false, ");
-        {
-          boolean _hasAndroidPrimaryKey_21 = ModelUtil.hasAndroidPrimaryKey(view);
-          if (_hasAndroidPrimaryKey_21) {
-            String _name_80 = view.getName();
-            String _pascalize_40 = Strings.pascalize(_name_80);
-            _builder.append(_pascalize_40, "    \t");
-            _builder.append("Record.getFactory()");
           } else {
-            _builder.append("null");
-          }
-        }
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("}");
-        _builder.newLine();
-        _builder.append("    ");
-        _builder.newLine();
-      }
-    }
-    {
-      for(final CreateTableStatement tbl_10 : model.initTables) {
-        {
-          boolean _hasAndroidPrimaryKey_22 = ModelUtil.hasAndroidPrimaryKey(tbl_10);
-          if (_hasAndroidPrimaryKey_22) {
-            _builder.append("    ");
-            _builder.append("protected ContentProviderActions create");
-            String _name_81 = tbl_10.getName();
-            String _pascalize_41 = Strings.pascalize(_name_81);
-            _builder.append(_pascalize_41, "    ");
-            _builder.append("ByIdActions() {");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
             _builder.append("\t");
-            _builder.append("return new DefaultContentProviderActions(Sources.");
-            String _name_82 = tbl_10.getName();
-            String _underscore_48 = Strings.underscore(_name_82);
-            String _upperCase_48 = _underscore_48.toUpperCase();
-            _builder.append(_upperCase_48, "    \t");
-            _builder.append(", true, ");
-            {
-              boolean _hasAndroidPrimaryKey_23 = ModelUtil.hasAndroidPrimaryKey(tbl_10);
-              if (_hasAndroidPrimaryKey_23) {
-                String _name_83 = tbl_10.getName();
-                String _pascalize_42 = Strings.pascalize(_name_83);
-                _builder.append(_pascalize_42, "    \t");
-                _builder.append("Record.getFactory()");
-              } else {
-                _builder.append("null");
-              }
-            }
-            _builder.append(");");
-            _builder.newLineIfNotEmpty();
-            _builder.append("    ");
-            _builder.append("}");
-            _builder.newLine();
-            _builder.append("    ");
-            _builder.newLine();
-          }
-        }
-        _builder.append("    ");
-        _builder.append("protected ContentProviderActions create");
-        String _name_84 = tbl_10.getName();
-        String _pascalize_43 = Strings.pascalize(_name_84);
-        _builder.append(_pascalize_43, "    ");
-        _builder.append("Actions() {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("\t");
-        _builder.append("return new DefaultContentProviderActions(Sources.");
-        String _name_85 = tbl_10.getName();
-        String _underscore_49 = Strings.underscore(_name_85);
-        String _upperCase_49 = _underscore_49.toUpperCase();
-        _builder.append(_upperCase_49, "    \t");
-        _builder.append(", false, ");
-        {
-          boolean _hasAndroidPrimaryKey_24 = ModelUtil.hasAndroidPrimaryKey(tbl_10);
-          if (_hasAndroidPrimaryKey_24) {
-            String _name_86 = tbl_10.getName();
-            String _pascalize_44 = Strings.pascalize(_name_86);
-            _builder.append(_pascalize_44, "    \t");
-            _builder.append("Record.getFactory()");
-          } else {
-            _builder.append("null");
-          }
-        }
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("}");
-        _builder.newLine();
-        _builder.append("    ");
-        _builder.newLine();
-      }
-    }
-    {
-      for(final CreateViewStatement view_1 : model.initViews) {
-        {
-          boolean _hasAndroidPrimaryKey_25 = ModelUtil.hasAndroidPrimaryKey(view_1);
-          if (_hasAndroidPrimaryKey_25) {
-            _builder.append("    ");
             _builder.append("protected ContentProviderActions create");
-            String _name_87 = view_1.getName();
-            String _pascalize_45 = Strings.pascalize(_name_87);
-            _builder.append(_pascalize_45, "    ");
-            _builder.append("ByIdActions() {");
+            String _name_3 = uri_5.getName();
+            String _pascalize_15 = Strings.pascalize(_name_3);
+            _builder.append(_pascalize_15, "\t");
+            _builder.append("Actions() {");
             _builder.newLineIfNotEmpty();
-            _builder.append("    ");
             _builder.append("\t");
-            _builder.append("return new DefaultContentProviderActions(Sources.");
-            String _name_88 = view_1.getName();
-            String _underscore_50 = Strings.underscore(_name_88);
-            String _upperCase_50 = _underscore_50.toUpperCase();
-            _builder.append(_upperCase_50, "    \t");
-            _builder.append(", true, ");
-            {
-              boolean _hasAndroidPrimaryKey_26 = ModelUtil.hasAndroidPrimaryKey(view_1);
-              if (_hasAndroidPrimaryKey_26) {
-                String _name_89 = view_1.getName();
-                String _pascalize_46 = Strings.pascalize(_name_89);
-                _builder.append(_pascalize_46, "    \t");
-                _builder.append("Record.getFactory()");
-              } else {
-                _builder.append("null");
-              }
-            }
-            _builder.append(");");
+            _builder.append("\t");
+            _builder.append("return new ");
+            String _name_4 = uri_5.getName();
+            String _pascalize_16 = Strings.pascalize(_name_4);
+            _builder.append(_pascalize_16, "\t\t");
+            _builder.append("Actions();");
             _builder.newLineIfNotEmpty();
-            _builder.append("    ");
+            _builder.append("\t");
             _builder.append("}");
             _builder.newLine();
-            _builder.append("    ");
-            _builder.newLine();
           }
         }
-        _builder.append("    ");
-        _builder.append("protected ContentProviderActions create");
-        String _name_90 = view_1.getName();
-        String _pascalize_47 = Strings.pascalize(_name_90);
-        _builder.append(_pascalize_47, "    ");
-        _builder.append("Actions() {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("\t");
-        _builder.append("return new DefaultContentProviderActions(Sources.");
-        String _name_91 = view_1.getName();
-        String _underscore_51 = Strings.underscore(_name_91);
-        String _upperCase_51 = _underscore_51.toUpperCase();
-        _builder.append(_upperCase_51, "    \t");
-        _builder.append(", false, ");
-        {
-          boolean _hasAndroidPrimaryKey_27 = ModelUtil.hasAndroidPrimaryKey(view_1);
-          if (_hasAndroidPrimaryKey_27) {
-            String _name_92 = view_1.getName();
-            String _pascalize_48 = Strings.pascalize(_name_92);
-            _builder.append(_pascalize_48, "    \t");
-            _builder.append("Record.getFactory()");
-          } else {
-            _builder.append("null");
-          }
-        }
-        _builder.append(");");
-        _builder.newLineIfNotEmpty();
-        _builder.append("    ");
-        _builder.append("}");
-        _builder.newLine();
-        _builder.append("    ");
-        _builder.newLine();
-      }
-    }
-    {
-      for(final ActionStatement a_4 : model.actions) {
-        _builder.append("\t");
-        _builder.append("protected ContentProviderActions create");
-        String _name_93 = a_4.getName();
-        String _pascalize_49 = Strings.pascalize(_name_93);
-        _builder.append(_pascalize_49, "\t");
-        _builder.append("Actions() {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("return new ContentProviderActions();");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("}");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.newLine();
       }
     }
     _builder.append("}");
@@ -1285,7 +409,7 @@ public class ContentProviderGenerator {
   
   public String asString(final ContentUri uri) {
     StringBuilder builder = new StringBuilder();
-    String _type = uri.getType();
+    TableDefinition _type = uri.getType();
     builder.append(_type);
     EList<ContentUriSegment> _segments = uri.getSegments();
     for (final ContentUriSegment seg : _segments) {
@@ -1309,13 +433,27 @@ public class ContentProviderGenerator {
   }
   
   public String generateContentTypeConstantReference(final ActionStatement action, final String databaseName) {
-    String _pascalize = Strings.pascalize(databaseName);
-    String _plus = (_pascalize + "Contract.");
     ContentUri _uri = action.getUri();
-    String _type = _uri.getType();
-    String _pascalize_1 = Strings.pascalize(_type);
-    String _plus_1 = (_plus + _pascalize_1);
-    return (_plus_1 + ".CONTENT_TYPE");
+    boolean _isUnique = _uri.isUnique();
+    if (_isUnique) {
+      String _pascalize = Strings.pascalize(databaseName);
+      String _plus = (_pascalize + "Contract.");
+      ContentUri _uri_1 = action.getUri();
+      TableDefinition _type = _uri_1.getType();
+      String _name = _type.getName();
+      String _pascalize_1 = Strings.pascalize(_name);
+      String _plus_1 = (_plus + _pascalize_1);
+      return (_plus_1 + ".ITEM_CONTENT_TYPE");
+    } else {
+      String _pascalize_2 = Strings.pascalize(databaseName);
+      String _plus_2 = (_pascalize_2 + "Contract.");
+      ContentUri _uri_2 = action.getUri();
+      TableDefinition _type_1 = _uri_2.getType();
+      String _name_1 = _type_1.getName();
+      String _pascalize_3 = Strings.pascalize(_name_1);
+      String _plus_3 = (_plus_2 + _pascalize_3);
+      return (_plus_3 + ".CONTENT_TYPE");
+    }
   }
   
   public CharSequence generateStub(final MickeyDatabaseModel model, final SqliteDatabaseSnapshot snapshot) {

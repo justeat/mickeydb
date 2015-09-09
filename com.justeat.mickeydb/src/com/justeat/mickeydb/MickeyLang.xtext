@@ -27,7 +27,7 @@ FunctionArg:
 ;
 
 ContentUri:
-	'/' type=ID ('/' segments+=ContentUriSegment)*
+	('/' segments+=ContentUriSegment)* 'as' type=[TableDefinition|QualifiedName] unique?='unique'?
 ;
 
 ContentUriSegment:

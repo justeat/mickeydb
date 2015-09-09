@@ -148,7 +148,7 @@ public class DefaultContentProviderActions extends ContentProviderActions {
 		}
 	}
 	
-	private String buildSortAndClause(String sortOrder, String limit, String offset) {
+	public static String buildSortAndClause(String sortOrder, String limit, String offset) {
 		
 		String limitClause = null;
 		

@@ -387,11 +387,11 @@ class ModelUtil {
 		]
 	}
 	
-	def static hasAndroidPrimaryKey(CreateTableStatement stmt) {
+	def dispatch static hasAndroidPrimaryKey(CreateTableStatement stmt) {
 		return stmt.getColumnDefs().exists([it.getName().equals("_id")])
 	}
 	
-	def static hasAndroidPrimaryKey(CreateViewStatement stmt) {
+	def dispatch static hasAndroidPrimaryKey(CreateViewStatement stmt) {
 		return getViewResultColumns(stmt).exists([
 			!Strings::isEmpty(it.getName()) && it.getName().equals("_id")
 		]);

@@ -21,6 +21,7 @@ import java.math.BigDecimal
 import org.eclipse.xtext.scoping.IScopeProvider
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage
 import org.eclipse.emf.ecore.EReference
+import com.justeat.mickeydb.ContentUris
 
 /**
  * Generates code from your model files on save.
@@ -34,7 +35,7 @@ class MickeyLangGenerator implements IGenerator {
 	@Inject ContentProviderGenerator mContentProviderGenerator
 	@Inject Provider<SqliteMigrationGenerator> mMigrationGenerator
 	@Inject ActiveRecordGenerator mActiveRecordGenerator
-	
+	@Inject CustomActionsGenerator mCustomActionsGenerator
 	@Inject MickeyAssembler assembler;
 
 	
@@ -48,7 +49,10 @@ class MickeyLangGenerator implements IGenerator {
 		
 		val stubOutput = MickeyOutputConfigurationProvider.DEFAULT_STUB_OUTPUT
 		
-		 mickeyModel.databases.values.forEach[				
+		 mickeyModel.databases.values.forEach[	
+		 	
+		 		var content = new ContentUris
+		 		content.init(it)			
 				fsa.generateFile(
 					packageName.resolveFileName("Abstract".concat(databaseName.pascalize).concat("OpenHelper")), 
 					mOpenHelperGenerator.generate(it)
@@ -65,7 +69,7 @@ class MickeyLangGenerator implements IGenerator {
 				
 				fsa.generateFile(
 					packageName.resolveFileName("Abstract".concat(databaseName.pascalize).concat("ContentProvider")), 
-					mContentProviderGenerator.generate(it)
+					mContentProviderGenerator.generate(it, content)
 				);
 				
 				fsa.generateFile(
@@ -96,7 +100,14 @@ class MickeyLangGenerator implements IGenerator {
 				
 				it.migrations.forEach[
 					item,index|generateMigration(packageName, databaseName, resource, fsa, item)
-				];			 	
+				];	
+				
+				content.uris.dropWhile[p1|!p1.userDefined].forEach[p1|
+					fsa.generateFile(
+						packageName.concat('.actions').resolveFileName(p1.name.pascalize.concat("Actions")), 
+						mCustomActionsGenerator.generate(it, p1)
+					);
+				]
 		 ]
 	}
 	

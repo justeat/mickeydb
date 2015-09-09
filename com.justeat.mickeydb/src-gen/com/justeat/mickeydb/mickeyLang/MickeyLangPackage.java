@@ -253,22 +253,31 @@ public interface MickeyLangPackage extends EPackage
   int CONTENT_URI = 5;
 
   /**
-   * The feature id for the '<em><b>Type</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONTENT_URI__TYPE = 0;
-
-  /**
    * The feature id for the '<em><b>Segments</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTENT_URI__SEGMENTS = 1;
+  int CONTENT_URI__SEGMENTS = 0;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT_URI__TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Unique</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT_URI__UNIQUE = 2;
 
   /**
    * The number of structural features of the '<em>Content Uri</em>' class.
@@ -277,7 +286,7 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTENT_URI_FEATURE_COUNT = 2;
+  int CONTENT_URI_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriSegmentImpl <em>Content Uri Segment</em>}' class.
@@ -3663,17 +3672,6 @@ public interface MickeyLangPackage extends EPackage
   EClass getContentUri();
 
   /**
-   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.ContentUri#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Type</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.ContentUri#getType()
-   * @see #getContentUri()
-   * @generated
-   */
-  EAttribute getContentUri_Type();
-
-  /**
    * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.ContentUri#getSegments <em>Segments</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3683,6 +3681,28 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    */
   EReference getContentUri_Segments();
+
+  /**
+   * Returns the meta object for the reference '{@link com.justeat.mickeydb.mickeyLang.ContentUri#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentUri#getType()
+   * @see #getContentUri()
+   * @generated
+   */
+  EReference getContentUri_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.ContentUri#isUnique <em>Unique</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Unique</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentUri#isUnique()
+   * @see #getContentUri()
+   * @generated
+   */
+  EAttribute getContentUri_Unique();
 
   /**
    * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ContentUriSegment <em>Content Uri Segment</em>}'.
@@ -6520,20 +6540,28 @@ public interface MickeyLangPackage extends EPackage
     EClass CONTENT_URI = eINSTANCE.getContentUri();
 
     /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONTENT_URI__TYPE = eINSTANCE.getContentUri_Type();
-
-    /**
      * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference CONTENT_URI__SEGMENTS = eINSTANCE.getContentUri_Segments();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTENT_URI__TYPE = eINSTANCE.getContentUri_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Unique</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONTENT_URI__UNIQUE = eINSTANCE.getContentUri_Unique();
 
     /**
      * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriSegmentImpl <em>Content Uri Segment</em>}' class.

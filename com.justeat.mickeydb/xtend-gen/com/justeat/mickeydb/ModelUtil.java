@@ -38,6 +38,7 @@ import com.justeat.mickeydb.mickeyLang.SqliteDataType;
 import com.justeat.mickeydb.mickeyLang.TableDefinition;
 import com.justeat.mickeydb.mickeyLang.UpdateStatement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -541,7 +542,7 @@ public class ModelUtil {
     return IteratorExtensions.<EObject>exists(_eAllContents, _function);
   }
   
-  public static boolean hasAndroidPrimaryKey(final CreateTableStatement stmt) {
+  protected static boolean _hasAndroidPrimaryKey(final CreateTableStatement stmt) {
     EList<ColumnSource> _columnDefs = stmt.getColumnDefs();
     final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
       public Boolean apply(final ColumnSource it) {
@@ -552,7 +553,7 @@ public class ModelUtil {
     return IterableExtensions.<ColumnSource>exists(_columnDefs, _function);
   }
   
-  public static boolean hasAndroidPrimaryKey(final CreateViewStatement stmt) {
+  protected static boolean _hasAndroidPrimaryKey(final CreateViewStatement stmt) {
     ArrayList<ColumnSource> _viewResultColumns = ModelUtil.getViewResultColumns(stmt);
     final Function1<ColumnSource, Boolean> _function = new Function1<ColumnSource, Boolean>() {
       public Boolean apply(final ColumnSource it) {
@@ -659,5 +660,16 @@ public class ModelUtil {
       }
     }
     return _switchResult;
+  }
+  
+  public static boolean hasAndroidPrimaryKey(final TableDefinition stmt) {
+    if (stmt instanceof CreateTableStatement) {
+      return _hasAndroidPrimaryKey((CreateTableStatement)stmt);
+    } else if (stmt instanceof CreateViewStatement) {
+      return _hasAndroidPrimaryKey((CreateViewStatement)stmt);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(stmt).toString());
+    }
   }
 }

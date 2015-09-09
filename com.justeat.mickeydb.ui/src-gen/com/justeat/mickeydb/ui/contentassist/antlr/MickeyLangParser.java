@@ -83,7 +83,7 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionStatementAccess().getGroup(), "rule__ActionStatement__Group__0");
 					put(grammarAccess.getFunctionArgAccess().getGroup(), "rule__FunctionArg__Group__0");
 					put(grammarAccess.getContentUriAccess().getGroup(), "rule__ContentUri__Group__0");
-					put(grammarAccess.getContentUriAccess().getGroup_2(), "rule__ContentUri__Group_2__0");
+					put(grammarAccess.getContentUriAccess().getGroup_0(), "rule__ContentUri__Group_0__0");
 					put(grammarAccess.getContentUriSegmentAccess().getGroup_1(), "rule__ContentUriSegment__Group_1__0");
 					put(grammarAccess.getMigrationBlockAccess().getGroup(), "rule__MigrationBlock__Group__0");
 					put(grammarAccess.getMigrationBlockAccess().getGroup_3(), "rule__MigrationBlock__Group_3__0");
@@ -225,8 +225,9 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionStatementAccess().getUriAssignment_2(), "rule__ActionStatement__UriAssignment_2");
 					put(grammarAccess.getFunctionArgAccess().getTypeAssignment_0(), "rule__FunctionArg__TypeAssignment_0");
 					put(grammarAccess.getFunctionArgAccess().getNameAssignment_1(), "rule__FunctionArg__NameAssignment_1");
-					put(grammarAccess.getContentUriAccess().getTypeAssignment_1(), "rule__ContentUri__TypeAssignment_1");
-					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_2_1(), "rule__ContentUri__SegmentsAssignment_2_1");
+					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_0_1(), "rule__ContentUri__SegmentsAssignment_0_1");
+					put(grammarAccess.getContentUriAccess().getTypeAssignment_2(), "rule__ContentUri__TypeAssignment_2");
+					put(grammarAccess.getContentUriAccess().getUniqueAssignment_3(), "rule__ContentUri__UniqueAssignment_3");
 					put(grammarAccess.getContentUriSegmentAccess().getNameAssignment_0(), "rule__ContentUriSegment__NameAssignment_0");
 					put(grammarAccess.getContentUriSegmentAccess().getNameAssignment_1_2(), "rule__ContentUriSegment__NameAssignment_1_2");
 					put(grammarAccess.getContentUriSegmentAccess().getNumAssignment_1_4_0(), "rule__ContentUriSegment__NumAssignment_1_4_0");

@@ -32,6 +32,7 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
 import static extension com.justeat.mickeydb.ModelUtil.*
 import org.apache.log4j.Logger
 import java.util.List
+import com.justeat.mickeydb.mickeyLang.ContentUri
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
@@ -59,6 +60,17 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 	
 	def IScope scope_AlterTableRenameStatement_table(AlterTableRenameStatement context, EReference ref) {
+		var scope = delegateGetScope(context, ref)
+		var model = context.model
+		var tableName = context.getFeatureNodeText(ref)
+		var scopedElements = 
+					scope.getElements(QualifiedName.create(model.databaseName, tableName))
+					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
+
+		Scopes.scopeFor(scopedElements, scope)
+	}
+		
+	def IScope scope_ContentUri_type(ContentUri context, EReference ref) {
 		var scope = delegateGetScope(context, ref)
 		var model = context.model
 		var tableName = context.getFeatureNodeText(ref)

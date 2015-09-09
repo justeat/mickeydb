@@ -1,7 +1,7 @@
 package com.justeat.mickeydb.generator
 
+import com.justeat.mickeydb.MickeyDatabaseModel
 import com.justeat.mickeydb.ModelUtil
-import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot
 import com.justeat.mickeydb.mickeyLang.ActionStatement
 import com.justeat.mickeydb.mickeyLang.ColumnDef
 import com.justeat.mickeydb.mickeyLang.ColumnSource
@@ -9,14 +9,11 @@ import com.justeat.mickeydb.mickeyLang.ContentUri
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement
-import com.justeat.mickeydb.mickeyLang.MickeyFile
 import com.justeat.mickeydb.mickeyLang.ResultColumn
 import com.justeat.mickeydb.mickeyLang.TableDefinition
-import java.util.ArrayList
 
 import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*
-import com.justeat.mickeydb.MickeyDatabaseModel
 
 class ContentProviderContractGenerator {
 		def CharSequence generate(MickeyDatabaseModel model) 				
@@ -152,9 +149,9 @@ class ContentProviderContractGenerator {
 	
 	def generateContractItemsForActions(MickeyDatabaseModel model, SqliteDatabaseSnapshot snapshot) '''
 		«FOR action : model.actions
-			.filter([!snapshot.containsDefinition(it.uri.type)])
+			.filter([!snapshot.containsDefinition(it.uri.type.name)])
 		»
-		public static class «action.uri.type.pascalize» {
+		public static class «action.uri.type.name.pascalize» {
 			«createActionUriBuilderMethod(action)»
 			public static final String CONTENT_TYPE =
 			        "vnd.android.cursor.dir/vnd.«model.databaseName.toLowerCase».«action.uri.type»";
@@ -167,7 +164,6 @@ class ContentProviderContractGenerator {
 		public static Uri build«action.name.pascalize»Uri(«action.uri.toMethodArgs») {
 			return BASE_CONTENT_URI
 				.buildUpon()
-				.appendPath("«action.uri.type»")
 				«FOR seg : action.uri.segments»
 				«IF seg instanceof ContentUriParamSegment»
 				«IF (seg as ContentUriParamSegment).num»
@@ -192,7 +188,7 @@ class ContentProviderContractGenerator {
 	 */
 	def Iterable<ActionStatement> findActionsForDefinition(MickeyDatabaseModel model, String defName) {		
 		return model.actions
-			.filter([action|action.uri.type.equals(defName)])
+			.filter([action|action.uri.type.name.equals(defName)])
 	}
 	
 	

@@ -251,41 +251,53 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	public class ContentUriElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContentUri");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSolidusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTypeIDTerminalRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cSolidusKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cSegmentsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cSegmentsContentUriSegmentParserRuleCall_2_1_0 = (RuleCall)cSegmentsAssignment_2_1.eContents().get(0);
+		private final Group cGroup_0 = (Group)cGroup.eContents().get(0);
+		private final Keyword cSolidusKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cSegmentsAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cSegmentsContentUriSegmentParserRuleCall_0_1_0 = (RuleCall)cSegmentsAssignment_0_1.eContents().get(0);
+		private final Keyword cAsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTypeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTypeTableDefinitionCrossReference_2_0 = (CrossReference)cTypeAssignment_2.eContents().get(0);
+		private final RuleCall cTypeTableDefinitionQualifiedNameParserRuleCall_2_0_1 = (RuleCall)cTypeTableDefinitionCrossReference_2_0.eContents().get(1);
+		private final Assignment cUniqueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final Keyword cUniqueUniqueKeyword_3_0 = (Keyword)cUniqueAssignment_3.eContents().get(0);
 		
 		//ContentUri:
-		//	"/" type=ID ("/" segments+=ContentUriSegment)*;
+		//	("/" segments+=ContentUriSegment)* "as" type=[TableDefinition|QualifiedName] unique?="unique"?;
 		public ParserRule getRule() { return rule; }
 
-		//"/" type=ID ("/" segments+=ContentUriSegment)*
+		//("/" segments+=ContentUriSegment)* "as" type=[TableDefinition|QualifiedName] unique?="unique"?
 		public Group getGroup() { return cGroup; }
 
-		//"/"
-		public Keyword getSolidusKeyword_0() { return cSolidusKeyword_0; }
-
-		//type=ID
-		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
-
-		//ID
-		public RuleCall getTypeIDTerminalRuleCall_1_0() { return cTypeIDTerminalRuleCall_1_0; }
-
 		//("/" segments+=ContentUriSegment)*
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_0() { return cGroup_0; }
 
 		//"/"
-		public Keyword getSolidusKeyword_2_0() { return cSolidusKeyword_2_0; }
+		public Keyword getSolidusKeyword_0_0() { return cSolidusKeyword_0_0; }
 
 		//segments+=ContentUriSegment
-		public Assignment getSegmentsAssignment_2_1() { return cSegmentsAssignment_2_1; }
+		public Assignment getSegmentsAssignment_0_1() { return cSegmentsAssignment_0_1; }
 
 		//ContentUriSegment
-		public RuleCall getSegmentsContentUriSegmentParserRuleCall_2_1_0() { return cSegmentsContentUriSegmentParserRuleCall_2_1_0; }
+		public RuleCall getSegmentsContentUriSegmentParserRuleCall_0_1_0() { return cSegmentsContentUriSegmentParserRuleCall_0_1_0; }
+
+		//"as"
+		public Keyword getAsKeyword_1() { return cAsKeyword_1; }
+
+		//type=[TableDefinition|QualifiedName]
+		public Assignment getTypeAssignment_2() { return cTypeAssignment_2; }
+
+		//[TableDefinition|QualifiedName]
+		public CrossReference getTypeTableDefinitionCrossReference_2_0() { return cTypeTableDefinitionCrossReference_2_0; }
+
+		//QualifiedName
+		public RuleCall getTypeTableDefinitionQualifiedNameParserRuleCall_2_0_1() { return cTypeTableDefinitionQualifiedNameParserRuleCall_2_0_1; }
+
+		//unique?="unique"?
+		public Assignment getUniqueAssignment_3() { return cUniqueAssignment_3; }
+
+		//"unique"
+		public Keyword getUniqueUniqueKeyword_3_0() { return cUniqueUniqueKeyword_3_0; }
 	}
 
 	public class ContentUriSegmentElements extends AbstractParserRuleElementFinder {
@@ -4412,7 +4424,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContentUri:
-	//	"/" type=ID ("/" segments+=ContentUriSegment)*;
+	//	("/" segments+=ContentUriSegment)* "as" type=[TableDefinition|QualifiedName] unique?="unique"?;
 	public ContentUriElements getContentUriAccess() {
 		return pContentUri;
 	}

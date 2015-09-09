@@ -12,6 +12,7 @@ import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement;
 import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement;
 import com.justeat.mickeydb.mickeyLang.ColumnSource;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
+import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
@@ -95,6 +96,27 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public IScope scope_AlterTableRenameStatement_table(final AlterTableRenameStatement context, final EReference ref) {
+    IScope _xblockexpression = null;
+    {
+      IScope scope = this.delegateGetScope(context, ref);
+      MickeyFile model = ModelUtil.getModel(context);
+      String tableName = ModelUtil.getFeatureNodeText(context, ref);
+      String _databaseName = model.getDatabaseName();
+      QualifiedName _create = QualifiedName.create(_databaseName, tableName);
+      Iterable<IEObjectDescription> _elements = scope.getElements(_create);
+      final Function1<IEObjectDescription, EObject> _function = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
+      };
+      Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_elements, _function);
+      _xblockexpression = Scopes.scopeFor(scopedElements, scope);
+    }
+    return _xblockexpression;
+  }
+  
+  public IScope scope_ContentUri_type(final ContentUri context, final EReference ref) {
     IScope _xblockexpression = null;
     {
       IScope scope = this.delegateGetScope(context, ref);
