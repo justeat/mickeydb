@@ -14,6 +14,7 @@ import com.justeat.mickeydb.mickeyLang.TableDefinition
 
 import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*
+import com.justeat.mickeydb.mickeyLang.ColumnType
 
 class ContentProviderContractGenerator {
 		def CharSequence generate(MickeyDatabaseModel model) 				
@@ -152,10 +153,10 @@ class ContentProviderContractGenerator {
 				.buildUpon()
 				«FOR seg : action.uri.segments»
 				«IF seg instanceof ContentUriParamSegment»
-				«IF (seg as ContentUriParamSegment).num»
-				.appendPath(String.valueOf(«seg.name.camelize»))
+				«IF (seg as ContentUriParamSegment).param.inferredColumnType != ColumnType::TEXT»
+				.appendPath(String.valueOf(«seg.param.name.camelize»))
 				«ELSE»
-				.appendPath(«seg.name.camelize»)
+				.appendPath(«seg.param.name.camelize»)
 				«ENDIF»
 				«ELSE»
 				.appendPath("«seg.name»")
@@ -174,10 +175,10 @@ class ContentProviderContractGenerator {
 				.buildUpon()
 				«FOR seg : action.uri.segments»
 				«IF seg instanceof ContentUriParamSegment»
-				«IF (seg as ContentUriParamSegment).num»
-				.appendPath(String.valueOf(«seg.name.camelize»))
+				«IF (seg as ContentUriParamSegment).param.inferredColumnType != ColumnType::TEXT»
+				.appendPath(String.valueOf(«seg.param.name.camelize»))
 				«ELSE»
-				.appendPath(«seg.name.camelize»)
+				.appendPath(«seg.param.name.camelize»)
 				«ENDIF»
 				«ELSE»
 				.appendPath("«seg.name»")
@@ -211,10 +212,10 @@ class ContentProviderContractGenerator {
 		uri.segments
 			.filter(typeof(ContentUriParamSegment))
 			.join(", ", [seg|(
-				if(seg.num) {
-					return "long " + seg.name.camelize
+				if(seg.param.inferredColumnType != ColumnType::TEXT) {
+					return "long " + seg.param.name.camelize
 				} else {
-					return "String " + seg.name.camelize
+					return "String " + seg.param.name.camelize
 				})])
 	}
 	
@@ -222,10 +223,10 @@ class ContentProviderContractGenerator {
 		uri.segments
 			.filter(typeof(ContentUriParamSegment))
 			.join(", ", [seg|(
-				if(seg.num) {
-					return seg.name.camelize
+				if(seg.param.inferredColumnType != ColumnType::TEXT) {
+					return seg.param.name.camelize
 				} else {
-					return seg.name.camelize
+					return seg.param.name.camelize
 				})])
 	}
 	

@@ -640,60 +640,20 @@ ruleContentUriSegment returns [EObject current=null]
     }
 (
 (
-		lv_name_3_0=RULE_ID
 		{
-			newLeafNode(lv_name_3_0, grammarAccess.getContentUriSegmentAccess().getNameIDTerminalRuleCall_1_2_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getContentUriSegmentRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_3_0, 
-        		"ID");
-	    }
+        }
+	otherlv_3=RULE_ID
+	{
+		newLeafNode(otherlv_3, grammarAccess.getContentUriSegmentAccess().getParamColumnSourceCrossReference_1_2_0()); 
+	}
 
 )
-)	otherlv_4=':' 
+)	otherlv_4='}' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getContentUriSegmentAccess().getColonKeyword_1_3());
-    }
-((
-(
-		lv_num_5_0=	'#' 
-    {
-        newLeafNode(lv_num_5_0, grammarAccess.getContentUriSegmentAccess().getNumNumberSignKeyword_1_4_0_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getContentUriSegmentRule());
-	        }
-       		setWithLastConsumed($current, "num", true, "#");
-	    }
-
-)
-)
-    |(
-(
-		lv_text_6_0=	'*' 
-    {
-        newLeafNode(lv_text_6_0, grammarAccess.getContentUriSegmentAccess().getTextAsteriskKeyword_1_4_1_0());
-    }
- 
-	    {
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getContentUriSegmentRule());
-	        }
-       		setWithLastConsumed($current, "text", true, "*");
-	    }
-
-)
-))	otherlv_7='}' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getContentUriSegmentAccess().getRightCurlyBracketKeyword_1_5());
+    	newLeafNode(otherlv_4, grammarAccess.getContentUriSegmentAccess().getRightCurlyBracketKeyword_1_3());
     }
 ))
 ;

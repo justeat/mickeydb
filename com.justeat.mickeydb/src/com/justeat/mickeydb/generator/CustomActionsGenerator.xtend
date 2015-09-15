@@ -1,12 +1,11 @@
 package com.justeat.mickeydb.generator
 
 import com.justeat.mickeydb.MickeyDatabaseModel
-import com.justeat.mickeydb.ContentUris
-import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*
-import java.util.List
 import com.justeat.mickeydb.ContentUriInfo
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
+import com.justeat.mickeydb.mickeyLang.ColumnType
+import static extension com.justeat.mickeydb.ModelUtil.*
 
 class CustomActionsGenerator {
 	def CharSequence generate(MickeyDatabaseModel model, ContentUriInfo content) '''
@@ -37,10 +36,10 @@ class CustomActionsGenerator {
 			«FOR entry : content.action.uri.segments.indexed»
 			«IF entry.value instanceof ContentUriParamSegment»
 			«var param = entry.value as ContentUriParamSegment»
-			«IF param.num»
-			long «param.name»Slug = Long.parseLong(segments.get(«entry.key»));
+			«IF param.param.inferredColumnType != ColumnType::TEXT»
+			long «param.param.name»Slug = Long.parseLong(segments.get(«entry.key»));
 			«ELSE»
-			String «param.name»Slug = segments.get(«entry.key»);
+			String «param.param.name»Slug = segments.get(«entry.key»);
 			«ENDIF» 
 			«ENDIF»
 			«ENDFOR»
@@ -48,10 +47,10 @@ class CustomActionsGenerator {
 			«FOR entry : content.action.uri.segments.indexed»
 			«IF entry.value instanceof ContentUriParamSegment»
 			«var param = entry.value as ContentUriParamSegment»
-			«IF param.num»
-			query.expr(«content.type.pascalize».«param.name.underscore.toUpperCase», Query.Op.EQ, «param.name»Slug);
+			«IF param.param.inferredColumnType != ColumnType::TEXT»
+			query.expr(«content.type.pascalize».«param.param.name.underscore.toUpperCase», Query.Op.EQ, «param.param.name»Slug);
 			«ELSE»
-			query.expr("cast(" + «content.type.pascalize».«param.name.underscore.toUpperCase» + " as text)", Query.Op.EQ, «param.name»Slug);
+			query.expr("cast(" + «content.type.pascalize».«param.param.name.underscore.toUpperCase» + " as text)", Query.Op.EQ, «param.param.name»Slug);
 			«ENDIF» 
 			
 			«ENDIF» 

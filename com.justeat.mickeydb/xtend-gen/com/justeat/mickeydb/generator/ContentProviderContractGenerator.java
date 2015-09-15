@@ -505,11 +505,14 @@ public class ContentProviderContractGenerator {
         {
           if ((seg instanceof ContentUriParamSegment)) {
             {
-              boolean _isNum = ((ContentUriParamSegment) seg).isNum();
-              if (_isNum) {
+              ColumnSource _param = ((ContentUriParamSegment) seg).getParam();
+              ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_param);
+              boolean _notEquals = (!Objects.equal(_inferredColumnType, ColumnType.TEXT));
+              if (_notEquals) {
                 _builder.append("\t\t");
                 _builder.append(".appendPath(String.valueOf(");
-                String _name_1 = ((ContentUriParamSegment)seg).getName();
+                ColumnSource _param_1 = ((ContentUriParamSegment)seg).getParam();
+                String _name_1 = _param_1.getName();
                 String _camelize = Strings.camelize(_name_1);
                 _builder.append(_camelize, "\t\t");
                 _builder.append("))");
@@ -517,7 +520,8 @@ public class ContentProviderContractGenerator {
               } else {
                 _builder.append("\t\t");
                 _builder.append(".appendPath(");
-                String _name_2 = ((ContentUriParamSegment)seg).getName();
+                ColumnSource _param_2 = ((ContentUriParamSegment)seg).getParam();
+                String _name_2 = _param_2.getName();
                 String _camelize_1 = Strings.camelize(_name_2);
                 _builder.append(_camelize_1, "\t\t");
                 _builder.append(")");
@@ -579,11 +583,14 @@ public class ContentProviderContractGenerator {
         {
           if ((seg instanceof ContentUriParamSegment)) {
             {
-              boolean _isNum = ((ContentUriParamSegment) seg).isNum();
-              if (_isNum) {
+              ColumnSource _param = ((ContentUriParamSegment) seg).getParam();
+              ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_param);
+              boolean _notEquals = (!Objects.equal(_inferredColumnType, ColumnType.TEXT));
+              if (_notEquals) {
                 _builder.append("\t\t");
                 _builder.append(".appendPath(String.valueOf(");
-                String _name_2 = ((ContentUriParamSegment)seg).getName();
+                ColumnSource _param_1 = ((ContentUriParamSegment)seg).getParam();
+                String _name_2 = _param_1.getName();
                 String _camelize = Strings.camelize(_name_2);
                 _builder.append(_camelize, "\t\t");
                 _builder.append("))");
@@ -591,7 +598,8 @@ public class ContentProviderContractGenerator {
               } else {
                 _builder.append("\t\t");
                 _builder.append(".appendPath(");
-                String _name_3 = ((ContentUriParamSegment)seg).getName();
+                ColumnSource _param_2 = ((ContentUriParamSegment)seg).getParam();
+                String _name_3 = _param_2.getName();
                 String _camelize_1 = Strings.camelize(_name_3);
                 _builder.append(_camelize_1, "\t\t");
                 _builder.append(")");
@@ -681,13 +689,17 @@ public class ContentProviderContractGenerator {
     Iterable<ContentUriParamSegment> _filter = Iterables.<ContentUriParamSegment>filter(_segments, ContentUriParamSegment.class);
     final Function1<ContentUriParamSegment, CharSequence> _function = new Function1<ContentUriParamSegment, CharSequence>() {
       public CharSequence apply(final ContentUriParamSegment seg) {
-        boolean _isNum = seg.isNum();
-        if (_isNum) {
-          String _name = seg.getName();
+        ColumnSource _param = seg.getParam();
+        ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_param);
+        boolean _notEquals = (!Objects.equal(_inferredColumnType, ColumnType.TEXT));
+        if (_notEquals) {
+          ColumnSource _param_1 = seg.getParam();
+          String _name = _param_1.getName();
           String _camelize = Strings.camelize(_name);
           return ("long " + _camelize);
         } else {
-          String _name_1 = seg.getName();
+          ColumnSource _param_2 = seg.getParam();
+          String _name_1 = _param_2.getName();
           String _camelize_1 = Strings.camelize(_name_1);
           return ("String " + _camelize_1);
         }
@@ -701,12 +713,16 @@ public class ContentProviderContractGenerator {
     Iterable<ContentUriParamSegment> _filter = Iterables.<ContentUriParamSegment>filter(_segments, ContentUriParamSegment.class);
     final Function1<ContentUriParamSegment, CharSequence> _function = new Function1<ContentUriParamSegment, CharSequence>() {
       public CharSequence apply(final ContentUriParamSegment seg) {
-        boolean _isNum = seg.isNum();
-        if (_isNum) {
-          String _name = seg.getName();
+        ColumnSource _param = seg.getParam();
+        ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_param);
+        boolean _notEquals = (!Objects.equal(_inferredColumnType, ColumnType.TEXT));
+        if (_notEquals) {
+          ColumnSource _param_1 = seg.getParam();
+          String _name = _param_1.getName();
           return Strings.camelize(_name);
         } else {
-          String _name_1 = seg.getName();
+          ColumnSource _param_2 = seg.getParam();
+          String _name_1 = _param_2.getName();
           return Strings.camelize(_name_1);
         }
       }

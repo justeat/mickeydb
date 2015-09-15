@@ -1073,7 +1073,7 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (name=ID (num?='#' | text?='*'))
+	 *     param=[ColumnSource|ID]
 	 */
 	protected void sequence_ContentUriSegment(EObject context, ContentUriParamSegment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

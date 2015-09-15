@@ -2,12 +2,14 @@
  */
 package com.justeat.mickeydb.mickeyLang.impl;
 
+import com.justeat.mickeydb.mickeyLang.ColumnSource;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -19,8 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamSegmentImpl#isNum <em>Num</em>}</li>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamSegmentImpl#isText <em>Text</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamSegmentImpl#getParam <em>Param</em>}</li>
  * </ul>
  *
  * @generated
@@ -28,44 +29,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ContentUriParamSegmentImpl extends ContentUriSegmentImpl implements ContentUriParamSegment
 {
   /**
-   * The default value of the '{@link #isNum() <em>Num</em>}' attribute.
+   * The cached value of the '{@link #getParam() <em>Param</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isNum()
+   * @see #getParam()
    * @generated
    * @ordered
    */
-  protected static final boolean NUM_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isNum() <em>Num</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isNum()
-   * @generated
-   * @ordered
-   */
-  protected boolean num = NUM_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isText() <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isText()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean TEXT_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isText() <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isText()
-   * @generated
-   * @ordered
-   */
-  protected boolean text = TEXT_EDEFAULT;
+  protected ColumnSource param;
 
   /**
    * <!-- begin-user-doc -->
@@ -93,9 +64,19 @@ public class ContentUriParamSegmentImpl extends ContentUriSegmentImpl implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isNum()
+  public ColumnSource getParam()
   {
-    return num;
+    if (param != null && param.eIsProxy())
+    {
+      InternalEObject oldParam = (InternalEObject)param;
+      param = (ColumnSource)eResolveProxy(oldParam);
+      if (param != oldParam)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__PARAM, oldParam, param));
+      }
+    }
+    return param;
   }
 
   /**
@@ -103,35 +84,22 @@ public class ContentUriParamSegmentImpl extends ContentUriSegmentImpl implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNum(boolean newNum)
+  public ColumnSource basicGetParam()
   {
-    boolean oldNum = num;
-    num = newNum;
+    return param;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setParam(ColumnSource newParam)
+  {
+    ColumnSource oldParam = param;
+    param = newParam;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__NUM, oldNum, num));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isText()
-  {
-    return text;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setText(boolean newText)
-  {
-    boolean oldText = text;
-    text = newText;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__TEXT, oldText, text));
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__PARAM, oldParam, param));
   }
 
   /**
@@ -144,10 +112,9 @@ public class ContentUriParamSegmentImpl extends ContentUriSegmentImpl implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__NUM:
-        return isNum();
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__TEXT:
-        return isText();
+      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__PARAM:
+        if (resolve) return getParam();
+        return basicGetParam();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -162,11 +129,8 @@ public class ContentUriParamSegmentImpl extends ContentUriSegmentImpl implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__NUM:
-        setNum((Boolean)newValue);
-        return;
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__TEXT:
-        setText((Boolean)newValue);
+      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__PARAM:
+        setParam((ColumnSource)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -182,11 +146,8 @@ public class ContentUriParamSegmentImpl extends ContentUriSegmentImpl implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__NUM:
-        setNum(NUM_EDEFAULT);
-        return;
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__TEXT:
-        setText(TEXT_EDEFAULT);
+      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__PARAM:
+        setParam((ColumnSource)null);
         return;
     }
     super.eUnset(featureID);
@@ -202,31 +163,10 @@ public class ContentUriParamSegmentImpl extends ContentUriSegmentImpl implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__NUM:
-        return num != NUM_EDEFAULT;
-      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__TEXT:
-        return text != TEXT_EDEFAULT;
+      case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT__PARAM:
+        return param != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (num: ");
-    result.append(num);
-    result.append(", text: ");
-    result.append(text);
-    result.append(')');
-    return result.toString();
   }
 
 } //ContentUriParamSegmentImpl

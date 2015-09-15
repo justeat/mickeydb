@@ -39,7 +39,6 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getMickeyBlockAccess().getAlternatives(), "rule__MickeyBlock__Alternatives");
 					put(grammarAccess.getContentUriSegmentAccess().getAlternatives(), "rule__ContentUriSegment__Alternatives");
-					put(grammarAccess.getContentUriSegmentAccess().getAlternatives_1_4(), "rule__ContentUriSegment__Alternatives_1_4");
 					put(grammarAccess.getExprMultAccess().getOpAlternatives_1_1_0(), "rule__ExprMult__OpAlternatives_1_1_0");
 					put(grammarAccess.getExprAddAccess().getOpAlternatives_1_1_0(), "rule__ExprAdd__OpAlternatives_1_1_0");
 					put(grammarAccess.getExprBitAccess().getOpAlternatives_1_1_0(), "rule__ExprBit__OpAlternatives_1_1_0");
@@ -233,9 +232,7 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_1_1(), "rule__ContentUri__SegmentsAssignment_1_1");
 					put(grammarAccess.getContentUriParamAccess().getNameAssignment_1(), "rule__ContentUriParam__NameAssignment_1");
 					put(grammarAccess.getContentUriSegmentAccess().getNameAssignment_0(), "rule__ContentUriSegment__NameAssignment_0");
-					put(grammarAccess.getContentUriSegmentAccess().getNameAssignment_1_2(), "rule__ContentUriSegment__NameAssignment_1_2");
-					put(grammarAccess.getContentUriSegmentAccess().getNumAssignment_1_4_0(), "rule__ContentUriSegment__NumAssignment_1_4_0");
-					put(grammarAccess.getContentUriSegmentAccess().getTextAssignment_1_4_1(), "rule__ContentUriSegment__TextAssignment_1_4_1");
+					put(grammarAccess.getContentUriSegmentAccess().getParamAssignment_1_2(), "rule__ContentUriSegment__ParamAssignment_1_2");
 					put(grammarAccess.getMigrationBlockAccess().getNameAssignment_2(), "rule__MigrationBlock__NameAssignment_2");
 					put(grammarAccess.getMigrationBlockAccess().getFromAssignment_3_1(), "rule__MigrationBlock__FromAssignment_3_1");
 					put(grammarAccess.getMigrationBlockAccess().getStatementsAssignment_5_0(), "rule__MigrationBlock__StatementsAssignment_5_0");

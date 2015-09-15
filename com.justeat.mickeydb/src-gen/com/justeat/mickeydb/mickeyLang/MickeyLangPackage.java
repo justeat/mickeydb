@@ -1853,22 +1853,13 @@ public interface MickeyLangPackage extends EPackage
   int CONTENT_URI_PARAM_SEGMENT__NAME = CONTENT_URI_SEGMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Num</b></em>' attribute.
+   * The feature id for the '<em><b>Param</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTENT_URI_PARAM_SEGMENT__NUM = CONTENT_URI_SEGMENT_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Text</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONTENT_URI_PARAM_SEGMENT__TEXT = CONTENT_URI_SEGMENT_FEATURE_COUNT + 1;
+  int CONTENT_URI_PARAM_SEGMENT__PARAM = CONTENT_URI_SEGMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Content Uri Param Segment</em>' class.
@@ -1877,7 +1868,7 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTENT_URI_PARAM_SEGMENT_FEATURE_COUNT = CONTENT_URI_SEGMENT_FEATURE_COUNT + 2;
+  int CONTENT_URI_PARAM_SEGMENT_FEATURE_COUNT = CONTENT_URI_SEGMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ExprConcatImpl <em>Expr Concat</em>}' class.
@@ -5052,26 +5043,15 @@ public interface MickeyLangPackage extends EPackage
   EClass getContentUriParamSegment();
 
   /**
-   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isNum <em>Num</em>}'.
+   * Returns the meta object for the reference '{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Num</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isNum()
+   * @return the meta object for the reference '<em>Param</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#getParam()
    * @see #getContentUriParamSegment()
    * @generated
    */
-  EAttribute getContentUriParamSegment_Num();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isText <em>Text</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Text</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isText()
-   * @see #getContentUriParamSegment()
-   * @generated
-   */
-  EAttribute getContentUriParamSegment_Text();
+  EReference getContentUriParamSegment_Param();
 
   /**
    * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ExprConcat <em>Expr Concat</em>}'.
@@ -7703,20 +7683,12 @@ public interface MickeyLangPackage extends EPackage
     EClass CONTENT_URI_PARAM_SEGMENT = eINSTANCE.getContentUriParamSegment();
 
     /**
-     * The meta object literal for the '<em><b>Num</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Param</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONTENT_URI_PARAM_SEGMENT__NUM = eINSTANCE.getContentUriParamSegment_Num();
-
-    /**
-     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONTENT_URI_PARAM_SEGMENT__TEXT = eINSTANCE.getContentUriParamSegment_Text();
+    EReference CONTENT_URI_PARAM_SEGMENT__PARAM = eINSTANCE.getContentUriParamSegment_Param();
 
     /**
      * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ExprConcatImpl <em>Expr Concat</em>}' class.

@@ -2277,19 +2277,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContentUriParamSegment_Num()
+  public EReference getContentUriParamSegment_Param()
   {
-    return (EAttribute)contentUriParamSegmentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getContentUriParamSegment_Text()
-  {
-    return (EAttribute)contentUriParamSegmentEClass.getEStructuralFeatures().get(1);
+    return (EReference)contentUriParamSegmentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3802,8 +3792,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     createEReference(updateColumnExpressionEClass, UPDATE_COLUMN_EXPRESSION__EXPRESSION);
 
     contentUriParamSegmentEClass = createEClass(CONTENT_URI_PARAM_SEGMENT);
-    createEAttribute(contentUriParamSegmentEClass, CONTENT_URI_PARAM_SEGMENT__NUM);
-    createEAttribute(contentUriParamSegmentEClass, CONTENT_URI_PARAM_SEGMENT__TEXT);
+    createEReference(contentUriParamSegmentEClass, CONTENT_URI_PARAM_SEGMENT__PARAM);
 
     exprConcatEClass = createEClass(EXPR_CONCAT);
     createEReference(exprConcatEClass, EXPR_CONCAT__LEFT);
@@ -4266,8 +4255,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEReference(getUpdateColumnExpression_Expression(), this.getExpression(), null, "expression", null, 0, 1, UpdateColumnExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contentUriParamSegmentEClass, ContentUriParamSegment.class, "ContentUriParamSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getContentUriParamSegment_Num(), ecorePackage.getEBoolean(), "num", null, 0, 1, ContentUriParamSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getContentUriParamSegment_Text(), ecorePackage.getEBoolean(), "text", null, 0, 1, ContentUriParamSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getContentUriParamSegment_Param(), this.getColumnSource(), null, "param", null, 0, 1, ContentUriParamSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(exprConcatEClass, ExprConcat.class, "ExprConcat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExprConcat_Left(), this.getExpression(), null, "left", null, 0, 1, ExprConcat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

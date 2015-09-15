@@ -34,6 +34,7 @@ import org.apache.log4j.Logger
 import java.util.List
 import com.justeat.mickeydb.mickeyLang.ContentUri
 import com.justeat.mickeydb.mickeyLang.ActionStatement
+import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
@@ -217,5 +218,14 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 			    }
 			    
 			   	return IScope.NULLSCOPE
+	}
+	
+	def IScope scope_ContentUriParamSegment_param(ContentUriParamSegment context, EReference ref) {
+		var dbName = context.model.databaseName
+		
+		var tableName = "";
+		var action = context.getAncestorOfType(typeof(ActionStatement));
+		tableName = action.getFeatureNodeText(MickeyLangPackage.Literals.ACTION_STATEMENT__TYPE)
+	    scopeTableColumns(context, dbName, tableName)	
 	}
 }

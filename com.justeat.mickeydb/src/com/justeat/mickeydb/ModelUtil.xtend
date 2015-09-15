@@ -270,6 +270,17 @@ class ModelUtil {
 		return getInferredColumnType(expr)
 	}
 	
+	def static ColumnType getInferredColumnType(ColumnSource col) {
+		switch(col) {
+			ColumnDef:
+				return col.type
+			ResultColumn:
+				return getInferredColumnType(col.expression) as ColumnType 
+		}
+		
+		return ColumnType::TEXT
+	}
+	
 	def static ColumnType getInferredColumnType(Expression expr) {
 		switch expr {
 			CastExpression: {

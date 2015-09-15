@@ -358,21 +358,16 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Action cContentUriParamSegmentAction_1_0 = (Action)cGroup_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cNameAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_1_2_0 = (RuleCall)cNameAssignment_1_2.eContents().get(0);
-		private final Keyword cColonKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
-		private final Alternatives cAlternatives_1_4 = (Alternatives)cGroup_1.eContents().get(4);
-		private final Assignment cNumAssignment_1_4_0 = (Assignment)cAlternatives_1_4.eContents().get(0);
-		private final Keyword cNumNumberSignKeyword_1_4_0_0 = (Keyword)cNumAssignment_1_4_0.eContents().get(0);
-		private final Assignment cTextAssignment_1_4_1 = (Assignment)cAlternatives_1_4.eContents().get(1);
-		private final Keyword cTextAsteriskKeyword_1_4_1_0 = (Keyword)cTextAssignment_1_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_1_5 = (Keyword)cGroup_1.eContents().get(5);
+		private final Assignment cParamAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final CrossReference cParamColumnSourceCrossReference_1_2_0 = (CrossReference)cParamAssignment_1_2.eContents().get(0);
+		private final RuleCall cParamColumnSourceIDTerminalRuleCall_1_2_0_1 = (RuleCall)cParamColumnSourceCrossReference_1_2_0.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//ContentUriSegment:
-		//	name=ID | {ContentUriParamSegment} "{" name=ID ":" (num?="#" | text?="*") "}";
+		//	name=ID | {ContentUriParamSegment} "{" param=[ColumnSource] "}";
 		public ParserRule getRule() { return rule; }
 
-		//name=ID | {ContentUriParamSegment} "{" name=ID ":" (num?="#" | text?="*") "}"
+		//name=ID | {ContentUriParamSegment} "{" param=[ColumnSource] "}"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name=ID
@@ -381,7 +376,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 
-		//{ContentUriParamSegment} "{" name=ID ":" (num?="#" | text?="*") "}"
+		//{ContentUriParamSegment} "{" param=[ColumnSource] "}"
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{ContentUriParamSegment}
@@ -390,32 +385,17 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
 
-		//name=ID
-		public Assignment getNameAssignment_1_2() { return cNameAssignment_1_2; }
+		//param=[ColumnSource]
+		public Assignment getParamAssignment_1_2() { return cParamAssignment_1_2; }
+
+		//[ColumnSource]
+		public CrossReference getParamColumnSourceCrossReference_1_2_0() { return cParamColumnSourceCrossReference_1_2_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_2_0() { return cNameIDTerminalRuleCall_1_2_0; }
-
-		//":"
-		public Keyword getColonKeyword_1_3() { return cColonKeyword_1_3; }
-
-		//num?="#" | text?="*"
-		public Alternatives getAlternatives_1_4() { return cAlternatives_1_4; }
-
-		//num?="#"
-		public Assignment getNumAssignment_1_4_0() { return cNumAssignment_1_4_0; }
-
-		//"#"
-		public Keyword getNumNumberSignKeyword_1_4_0_0() { return cNumNumberSignKeyword_1_4_0_0; }
-
-		//text?="*"
-		public Assignment getTextAssignment_1_4_1() { return cTextAssignment_1_4_1; }
-
-		//"*"
-		public Keyword getTextAsteriskKeyword_1_4_1_0() { return cTextAsteriskKeyword_1_4_1_0; }
+		public RuleCall getParamColumnSourceIDTerminalRuleCall_1_2_0_1() { return cParamColumnSourceIDTerminalRuleCall_1_2_0_1; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_5() { return cRightCurlyBracketKeyword_1_5; }
+		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
 	}
 
 	public class MigrationBlockElements extends AbstractParserRuleElementFinder {
@@ -4497,7 +4477,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContentUriSegment:
-	//	name=ID | {ContentUriParamSegment} "{" name=ID ":" (num?="#" | text?="*") "}";
+	//	name=ID | {ContentUriParamSegment} "{" param=[ColumnSource] "}";
 	public ContentUriSegmentElements getContentUriSegmentAccess() {
 		return pContentUriSegment;
 	}

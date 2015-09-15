@@ -12,8 +12,7 @@ package com.justeat.mickeydb.mickeyLang;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isNum <em>Num</em>}</li>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isText <em>Text</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#getParam <em>Param</em>}</li>
  * </ul>
  *
  * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getContentUriParamSegment()
@@ -23,55 +22,29 @@ package com.justeat.mickeydb.mickeyLang;
 public interface ContentUriParamSegment extends ContentUriSegment
 {
   /**
-   * Returns the value of the '<em><b>Num</b></em>' attribute.
+   * Returns the value of the '<em><b>Param</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Num</em>' attribute isn't clear,
+   * If the meaning of the '<em>Param</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Num</em>' attribute.
-   * @see #setNum(boolean)
-   * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getContentUriParamSegment_Num()
+   * @return the value of the '<em>Param</em>' reference.
+   * @see #setParam(ColumnSource)
+   * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getContentUriParamSegment_Param()
    * @model
    * @generated
    */
-  boolean isNum();
+  ColumnSource getParam();
 
   /**
-   * Sets the value of the '{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isNum <em>Num</em>}' attribute.
+   * Sets the value of the '{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#getParam <em>Param</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Num</em>' attribute.
-   * @see #isNum()
+   * @param value the new value of the '<em>Param</em>' reference.
+   * @see #getParam()
    * @generated
    */
-  void setNum(boolean value);
-
-  /**
-   * Returns the value of the '<em><b>Text</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Text</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Text</em>' attribute.
-   * @see #setText(boolean)
-   * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getContentUriParamSegment_Text()
-   * @model
-   * @generated
-   */
-  boolean isText();
-
-  /**
-   * Sets the value of the '{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment#isText <em>Text</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Text</em>' attribute.
-   * @see #isText()
-   * @generated
-   */
-  void setText(boolean value);
+  void setParam(ColumnSource value);
 
 } // ContentUriParamSegment

@@ -5,6 +5,7 @@ import static extension com.justeat.mickeydb.Strings.*
 import java.util.ArrayList
 import com.justeat.mickeydb.mickeyLang.ContentUri
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
+import com.justeat.mickeydb.mickeyLang.ColumnType
 
 class ContentUris {
 	public var ArrayList<ContentUriInfo> uris = new ArrayList<ContentUriInfo>
@@ -138,10 +139,10 @@ class ContentUris {
 			if(seg instanceof ContentUriParamSegment) {
 				var paramSeg = seg as ContentUriParamSegment
 				
-				if(paramSeg.num) {
-					builder.append("#")
-				} else {
+				if(paramSeg.param.inferredColumnType == ColumnType::TEXT) {
 					builder.append("*")
+				} else {
+					builder.append("#")
 				}
 				
 			} else {

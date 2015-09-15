@@ -8,6 +8,7 @@ import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*
 import com.justeat.mickeydb.MickeyDatabaseModel
 import com.justeat.mickeydb.ContentUris
+import com.justeat.mickeydb.mickeyLang.ColumnType
 
 class ContentProviderGenerator {
 		def CharSequence generate(MickeyDatabaseModel model, ContentUris content) '''
@@ -119,12 +120,10 @@ class ContentProviderGenerator {
 			for(seg : action.uri.segments) {
 				builder.append("/")
 				if(seg instanceof ContentUriParamSegment) {
-					var paramSeg = seg as ContentUriParamSegment
-					
-					if(paramSeg.num) {
-						builder.append("#")
-					} else {
+					if(seg.param.inferredColumnType == ColumnType::TEXT) {
 						builder.append("*")
+					} else {
+						builder.append("#")
 					}
 					
 				} else {

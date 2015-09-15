@@ -1,11 +1,14 @@
 package com.justeat.mickeydb;
 
+import com.google.common.base.Objects;
 import com.justeat.mickeydb.ContentUriInfo;
 import com.justeat.mickeydb.MickeyDatabaseModel;
 import com.justeat.mickeydb.ModelUtil;
 import com.justeat.mickeydb.Strings;
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot;
 import com.justeat.mickeydb.mickeyLang.ActionStatement;
+import com.justeat.mickeydb.mickeyLang.ColumnSource;
+import com.justeat.mickeydb.mickeyLang.ColumnType;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
@@ -247,11 +250,13 @@ public class ContentUris {
         builder.append("/");
         if ((seg instanceof ContentUriParamSegment)) {
           ContentUriParamSegment paramSeg = ((ContentUriParamSegment) seg);
-          boolean _isNum = paramSeg.isNum();
-          if (_isNum) {
-            builder.append("#");
-          } else {
+          ColumnSource _param = paramSeg.getParam();
+          ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_param);
+          boolean _equals = Objects.equal(_inferredColumnType, ColumnType.TEXT);
+          if (_equals) {
             builder.append("*");
+          } else {
+            builder.append("#");
           }
         } else {
           String _name = seg.getName();

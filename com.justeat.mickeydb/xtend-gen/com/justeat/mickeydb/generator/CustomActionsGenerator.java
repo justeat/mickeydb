@@ -1,10 +1,14 @@
 package com.justeat.mickeydb.generator;
 
+import com.google.common.base.Objects;
 import com.justeat.mickeydb.ContentUriInfo;
 import com.justeat.mickeydb.MickeyDatabaseModel;
+import com.justeat.mickeydb.ModelUtil;
 import com.justeat.mickeydb.Strings;
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot;
 import com.justeat.mickeydb.mickeyLang.ActionStatement;
+import com.justeat.mickeydb.mickeyLang.ColumnSource;
+import com.justeat.mickeydb.mickeyLang.ColumnType;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
@@ -111,11 +115,14 @@ public class CustomActionsGenerator {
             ContentUriParamSegment param = ((ContentUriParamSegment) _value_1);
             _builder.newLineIfNotEmpty();
             {
-              boolean _isNum = param.isNum();
-              if (_isNum) {
+              ColumnSource _param = param.getParam();
+              ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_param);
+              boolean _notEquals = (!Objects.equal(_inferredColumnType, ColumnType.TEXT));
+              if (_notEquals) {
                 _builder.append("\t\t");
                 _builder.append("long ");
-                String _name_1 = param.getName();
+                ColumnSource _param_1 = param.getParam();
+                String _name_1 = _param_1.getName();
                 _builder.append(_name_1, "\t\t");
                 _builder.append("Slug = Long.parseLong(segments.get(");
                 Integer _key = entry.getKey();
@@ -125,7 +132,8 @@ public class CustomActionsGenerator {
               } else {
                 _builder.append("\t\t");
                 _builder.append("String ");
-                String _name_2 = param.getName();
+                ColumnSource _param_2 = param.getParam();
+                String _name_2 = _param_2.getName();
                 _builder.append(_name_2, "\t\t");
                 _builder.append("Slug = segments.get(");
                 Integer _key_1 = entry.getKey();
@@ -154,20 +162,24 @@ public class CustomActionsGenerator {
             ContentUriParamSegment param_1 = ((ContentUriParamSegment) _value_3);
             _builder.newLineIfNotEmpty();
             {
-              boolean _isNum_1 = param_1.isNum();
-              if (_isNum_1) {
+              ColumnSource _param_3 = param_1.getParam();
+              ColumnType _inferredColumnType_1 = ModelUtil.getInferredColumnType(_param_3);
+              boolean _notEquals_1 = (!Objects.equal(_inferredColumnType_1, ColumnType.TEXT));
+              if (_notEquals_1) {
                 _builder.append("\t\t");
                 _builder.append("query.expr(");
                 String _type_2 = content.getType();
                 String _pascalize_3 = Strings.pascalize(_type_2);
                 _builder.append(_pascalize_3, "\t\t");
                 _builder.append(".");
-                String _name_3 = param_1.getName();
+                ColumnSource _param_4 = param_1.getParam();
+                String _name_3 = _param_4.getName();
                 String _underscore = Strings.underscore(_name_3);
                 String _upperCase = _underscore.toUpperCase();
                 _builder.append(_upperCase, "\t\t");
                 _builder.append(", Query.Op.EQ, ");
-                String _name_4 = param_1.getName();
+                ColumnSource _param_5 = param_1.getParam();
+                String _name_4 = _param_5.getName();
                 _builder.append(_name_4, "\t\t");
                 _builder.append("Slug);");
                 _builder.newLineIfNotEmpty();
@@ -178,12 +190,14 @@ public class CustomActionsGenerator {
                 String _pascalize_4 = Strings.pascalize(_type_3);
                 _builder.append(_pascalize_4, "\t\t");
                 _builder.append(".");
-                String _name_5 = param_1.getName();
+                ColumnSource _param_6 = param_1.getParam();
+                String _name_5 = _param_6.getName();
                 String _underscore_1 = Strings.underscore(_name_5);
                 String _upperCase_1 = _underscore_1.toUpperCase();
                 _builder.append(_upperCase_1, "\t\t");
                 _builder.append(" + \" as text)\", Query.Op.EQ, ");
-                String _name_6 = param_1.getName();
+                ColumnSource _param_7 = param_1.getParam();
+                String _name_6 = _param_7.getName();
                 _builder.append(_name_6, "\t\t");
                 _builder.append("Slug);");
                 _builder.newLineIfNotEmpty();

@@ -216,8 +216,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateColumnExpression/expression"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//ContentUriParamSegment">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUriParamSegment/num"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUriParamSegment/text"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ContentUriParamSegment/param"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//ExprConcat">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ExprConcat/left"/>

@@ -39,7 +39,7 @@ ContentUriParam:
 
 ContentUriSegment:
 	name=ID |
-	{ContentUriParamSegment} '{'name=ID':'(num?="#"|text?="*")'}'
+	{ContentUriParamSegment} '{'param=[ColumnSource]'}'
 ;
 
 MigrationBlock:

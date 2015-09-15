@@ -286,6 +286,25 @@ public class ModelUtil {
     return ModelUtil.getInferredColumnType(expr);
   }
   
+  public static ColumnType getInferredColumnType(final ColumnSource col) {
+    boolean _matched = false;
+    if (!_matched) {
+      if (col instanceof ColumnDef) {
+        _matched=true;
+        return ((ColumnDef)col).getType();
+      }
+    }
+    if (!_matched) {
+      if (col instanceof ResultColumn) {
+        _matched=true;
+        Expression _expression = ((ResultColumn)col).getExpression();
+        ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_expression);
+        return ((ColumnType) _inferredColumnType);
+      }
+    }
+    return ColumnType.TEXT;
+  }
+  
   public static ColumnType getInferredColumnType(final Expression expr) {
     boolean _matched = false;
     if (!_matched) {
