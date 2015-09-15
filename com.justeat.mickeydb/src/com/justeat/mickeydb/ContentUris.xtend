@@ -101,7 +101,7 @@ class ContentUris {
 		
 		// Prune automagic actions if they exist
 		for(a : model.actions) {
-			var toRemove = uris.filter[item | item.type.equals(a.uri.type.name)]
+			var toRemove = uris.filter[item | item.type.equals(a.type.name)]
 			uris.removeAll(toRemove)
 		}
 		
@@ -111,11 +111,11 @@ class ContentUris {
 			info.id = a.name.underscore.toUpperCase
 			info.name = a.name
 			info.pathPattern = a.uri.asString
-			info.directory = !a.uri.unique
-			info.type = a.uri.type.name
-			info.typeRef = a.uri.type
+			info.directory = !a.unique
+			info.type = a.type.name
+			info.typeRef = a.type
 			info.userDefined = true
-			info.supportsActiveRecord = a.uri.type.hasAndroidPrimaryKey
+			info.supportsActiveRecord = a.type.hasAndroidPrimaryKey
 			uris.add(info)			
 		}
 		

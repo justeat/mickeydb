@@ -4,15 +4,24 @@ package com.justeat.mickeydb.mickeyLang.impl;
 
 import com.justeat.mickeydb.mickeyLang.ActionStatement;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
+import com.justeat.mickeydb.mickeyLang.ContentUriParam;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
+import com.justeat.mickeydb.mickeyLang.TableDefinition;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +33,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#getUri <em>Uri</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#getType <em>Type</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#isUnique <em>Unique</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#getParams <em>Params</em>}</li>
  * </ul>
  *
  * @generated
@@ -59,6 +71,46 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
    * @ordered
    */
   protected ContentUri uri;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected TableDefinition type;
+
+  /**
+   * The default value of the '{@link #isUnique() <em>Unique</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isUnique()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean UNIQUE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isUnique() <em>Unique</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isUnique()
+   * @generated
+   * @ordered
+   */
+  protected boolean unique = UNIQUE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getParams() <em>Params</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParams()
+   * @generated
+   * @ordered
+   */
+  protected EList<ContentUriParam> params;
 
   /**
    * <!-- begin-user-doc -->
@@ -157,6 +209,86 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
    * <!-- end-user-doc -->
    * @generated
    */
+  public TableDefinition getType()
+  {
+    if (type != null && type.eIsProxy())
+    {
+      InternalEObject oldType = (InternalEObject)type;
+      type = (TableDefinition)eResolveProxy(oldType);
+      if (type != oldType)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MickeyLangPackage.ACTION_STATEMENT__TYPE, oldType, type));
+      }
+    }
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TableDefinition basicGetType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(TableDefinition newType)
+  {
+    TableDefinition oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.ACTION_STATEMENT__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isUnique()
+  {
+    return unique;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setUnique(boolean newUnique)
+  {
+    boolean oldUnique = unique;
+    unique = newUnique;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.ACTION_STATEMENT__UNIQUE, oldUnique, unique));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<ContentUriParam> getParams()
+  {
+    if (params == null)
+    {
+      params = new EObjectContainmentEList<ContentUriParam>(ContentUriParam.class, this, MickeyLangPackage.ACTION_STATEMENT__PARAMS);
+    }
+    return params;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -164,6 +296,8 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
     {
       case MickeyLangPackage.ACTION_STATEMENT__URI:
         return basicSetUri(null, msgs);
+      case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
+        return ((InternalEList<?>)getParams()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -182,6 +316,13 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         return getName();
       case MickeyLangPackage.ACTION_STATEMENT__URI:
         return getUri();
+      case MickeyLangPackage.ACTION_STATEMENT__TYPE:
+        if (resolve) return getType();
+        return basicGetType();
+      case MickeyLangPackage.ACTION_STATEMENT__UNIQUE:
+        return isUnique();
+      case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
+        return getParams();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -191,6 +332,7 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -201,6 +343,16 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         return;
       case MickeyLangPackage.ACTION_STATEMENT__URI:
         setUri((ContentUri)newValue);
+        return;
+      case MickeyLangPackage.ACTION_STATEMENT__TYPE:
+        setType((TableDefinition)newValue);
+        return;
+      case MickeyLangPackage.ACTION_STATEMENT__UNIQUE:
+        setUnique((Boolean)newValue);
+        return;
+      case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
+        getParams().clear();
+        getParams().addAll((Collection<? extends ContentUriParam>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -222,6 +374,15 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
       case MickeyLangPackage.ACTION_STATEMENT__URI:
         setUri((ContentUri)null);
         return;
+      case MickeyLangPackage.ACTION_STATEMENT__TYPE:
+        setType((TableDefinition)null);
+        return;
+      case MickeyLangPackage.ACTION_STATEMENT__UNIQUE:
+        setUnique(UNIQUE_EDEFAULT);
+        return;
+      case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
+        getParams().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -240,6 +401,12 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case MickeyLangPackage.ACTION_STATEMENT__URI:
         return uri != null;
+      case MickeyLangPackage.ACTION_STATEMENT__TYPE:
+        return type != null;
+      case MickeyLangPackage.ACTION_STATEMENT__UNIQUE:
+        return unique != UNIQUE_EDEFAULT;
+      case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
+        return params != null && !params.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -257,6 +424,8 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", unique: ");
+    result.append(unique);
     result.append(')');
     return result.toString();
   }

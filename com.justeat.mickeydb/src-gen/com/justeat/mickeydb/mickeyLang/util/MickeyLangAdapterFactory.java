@@ -105,6 +105,11 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
         return createContentUriAdapter();
       }
       @Override
+      public Adapter caseContentUriParam(ContentUriParam object)
+      {
+        return createContentUriParamAdapter();
+      }
+      @Override
       public Adapter caseContentUriSegment(ContentUriSegment object)
       {
         return createContentUriSegmentAdapter();
@@ -637,6 +642,21 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createContentUriAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.ContentUriParam <em>Content Uri Param</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.justeat.mickeydb.mickeyLang.ContentUriParam
+   * @generated
+   */
+  public Adapter createContentUriParamAdapter()
   {
     return null;
   }

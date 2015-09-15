@@ -111,12 +111,12 @@ class ContentProviderGenerator {
 			}
 		'''
 		
-		def asString(ContentUri uri) {
+		def asString(ActionStatement action) {
 			var builder = new StringBuilder()
 			
-			builder.append(uri.type)
+			builder.append(action.type)
 			
-			for(seg : uri.segments) {
+			for(seg : action.uri.segments) {
 				builder.append("/")
 				if(seg instanceof ContentUriParamSegment) {
 					var paramSeg = seg as ContentUriParamSegment
@@ -137,10 +137,10 @@ class ContentProviderGenerator {
 
 	
 		def generateContentTypeConstantReference(ActionStatement action, String databaseName) {
-			if(action.uri.unique) {
-				return databaseName.pascalize + "Contract." + action.uri.type.name.pascalize + ".ITEM_CONTENT_TYPE";
+			if(action.unique) {
+				return databaseName.pascalize + "Contract." + action.type.name.pascalize + ".ITEM_CONTENT_TYPE";
 			} else {
-				return databaseName.pascalize + "Contract." + action.uri.type.name.pascalize + ".CONTENT_TYPE";
+				return databaseName.pascalize + "Contract." + action.type.name.pascalize + ".CONTENT_TYPE";
 			}
 		}
 

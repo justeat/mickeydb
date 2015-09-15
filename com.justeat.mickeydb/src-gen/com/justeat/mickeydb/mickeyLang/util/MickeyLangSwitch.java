@@ -116,6 +116,13 @@ public class MickeyLangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MickeyLangPackage.CONTENT_URI_PARAM:
+      {
+        ContentUriParam contentUriParam = (ContentUriParam)theEObject;
+        T result = caseContentUriParam(contentUriParam);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MickeyLangPackage.CONTENT_URI_SEGMENT:
       {
         ContentUriSegment contentUriSegment = (ContentUriSegment)theEObject;
@@ -886,6 +893,22 @@ public class MickeyLangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseContentUri(ContentUri object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Content Uri Param</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Content Uri Param</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContentUriParam(ContentUriParam object)
   {
     return null;
   }

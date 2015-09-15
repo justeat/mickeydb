@@ -181,8 +181,7 @@ public class ContentUris {
         final Function1<ContentUriInfo, Boolean> _function = new Function1<ContentUriInfo, Boolean>() {
           public Boolean apply(final ContentUriInfo item) {
             String _type = item.getType();
-            ContentUri _uri = a.getUri();
-            TableDefinition _type_1 = _uri.getType();
+            TableDefinition _type_1 = a.getType();
             String _name = _type_1.getName();
             return Boolean.valueOf(_type.equals(_name));
           }
@@ -204,20 +203,16 @@ public class ContentUris {
         ContentUri _uri = a_1.getUri();
         String _asString = this.asString(_uri);
         info.setPathPattern(_asString);
-        ContentUri _uri_1 = a_1.getUri();
-        boolean _isUnique = _uri_1.isUnique();
+        boolean _isUnique = a_1.isUnique();
         boolean _not = (!_isUnique);
         info.setDirectory(_not);
-        ContentUri _uri_2 = a_1.getUri();
-        TableDefinition _type = _uri_2.getType();
+        TableDefinition _type = a_1.getType();
         String _name_2 = _type.getName();
         info.setType(_name_2);
-        ContentUri _uri_3 = a_1.getUri();
-        TableDefinition _type_1 = _uri_3.getType();
+        TableDefinition _type_1 = a_1.getType();
         info.setTypeRef(_type_1);
         info.setUserDefined(true);
-        ContentUri _uri_4 = a_1.getUri();
-        TableDefinition _type_2 = _uri_4.getType();
+        TableDefinition _type_2 = a_1.getType();
         boolean _hasAndroidPrimaryKey = ModelUtil.hasAndroidPrimaryKey(_type_2);
         info.setSupportsActiveRecord(_hasAndroidPrimaryKey);
         this.uris.add(info);

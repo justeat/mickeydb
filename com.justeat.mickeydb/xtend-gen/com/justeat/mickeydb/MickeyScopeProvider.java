@@ -8,11 +8,11 @@ import com.justeat.mickeydb.MickeyEnvironment;
 import com.justeat.mickeydb.MickeyModel;
 import com.justeat.mickeydb.ModelUtil;
 import com.justeat.mickeydb.generator.SqliteDatabaseSnapshot;
+import com.justeat.mickeydb.mickeyLang.ActionStatement;
 import com.justeat.mickeydb.mickeyLang.AlterTableAddColumnStatement;
 import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement;
 import com.justeat.mickeydb.mickeyLang.ColumnSource;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
-import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
@@ -116,7 +116,7 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
     return _xblockexpression;
   }
   
-  public IScope scope_ContentUri_type(final ContentUri context, final EReference ref) {
+  public IScope scope_ActionStatement_type(final ActionStatement context, final EReference ref) {
     IScope _xblockexpression = null;
     {
       IScope scope = this.delegateGetScope(context, ref);

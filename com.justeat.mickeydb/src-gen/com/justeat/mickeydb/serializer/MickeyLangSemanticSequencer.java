@@ -14,6 +14,7 @@ import com.justeat.mickeydb.mickeyLang.ColumnDef;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
 import com.justeat.mickeydb.mickeyLang.ConflictClause;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
+import com.justeat.mickeydb.mickeyLang.ContentUriParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
 import com.justeat.mickeydb.mickeyLang.CreateIndexStatement;
@@ -234,6 +235,12 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case MickeyLangPackage.CONTENT_URI:
 				if(context == grammarAccess.getContentUriRule()) {
 					sequence_ContentUri(context, (ContentUri) semanticObject); 
+					return; 
+				}
+				else break;
+			case MickeyLangPackage.CONTENT_URI_PARAM:
+				if(context == grammarAccess.getContentUriParamRule()) {
+					sequence_ContentUriParam(context, (ContentUriParam) semanticObject); 
 					return; 
 				}
 				else break;
@@ -891,20 +898,10 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (name=ID uri=ContentUri)
+	 *     (name=ID uri=ContentUri type=[TableDefinition|QualifiedName] unique?='unique'? params+=ContentUriParam*)
 	 */
 	protected void sequence_ActionStatement(EObject context, ActionStatement semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.ACTION_STATEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.ACTION_STATEMENT__NAME));
-			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.ACTION_STATEMENT__URI) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.ACTION_STATEMENT__URI));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getActionStatementAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getActionStatementAccess().getUriContentUriParserRuleCall_2_0(), semanticObject.getUri());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1060,6 +1057,22 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_ContentUriParam(EObject context, ContentUriParam semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_PARAM__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_PARAM__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=ID (num?='#' | text?='*'))
 	 */
 	protected void sequence_ContentUriSegment(EObject context, ContentUriParamSegment semanticObject) {
@@ -1085,7 +1098,7 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (segments+=ContentUriSegment* type=[TableDefinition|QualifiedName] unique?='unique'?)
+	 *     (segments+=ContentUriSegment*)
 	 */
 	protected void sequence_ContentUri(EObject context, ContentUri semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

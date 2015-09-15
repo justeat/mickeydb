@@ -130,7 +130,6 @@ class ContentProviderContractGenerator {
 					
 				}
 				
-				«generateContractItemsForActions(model, snapshot)»
 				private «model.databaseName.pascalize»Contract(){}
 				
 				/**
@@ -146,22 +145,9 @@ class ContentProviderContractGenerator {
 				}
 			}
 	'''
-	
-	def generateContractItemsForActions(MickeyDatabaseModel model, SqliteDatabaseSnapshot snapshot) '''
-		«FOR action : model.actions
-			.filter([!snapshot.containsDefinition(it.uri.type.name)])
-		»
-		public static class «action.uri.type.name.pascalize» {
-			«createActionUriBuilderMethod(action)»
-			public static final String CONTENT_TYPE =
-			        "vnd.android.cursor.dir/vnd.«model.databaseName.toLowerCase».«action.uri.type»";
-		}
-
-		«ENDFOR»
-	'''
-	
+		
 	def createActionUriBuilderMethod(ActionStatement action) '''
-		public static Uri build«action.name.pascalize»Uri(«action.uri.toMethodArgs») {
+		public static Uri build«action.name.pascalize»Uri(«action.uri.toMethodArgsSig») {
 			return BASE_CONTENT_URI
 				.buildUpon()
 				«FOR seg : action.uri.segments»
@@ -180,6 +166,35 @@ class ContentProviderContractGenerator {
 		
 	'''
 	
+	def createActionUriBuilder(ActionStatement action) '''
+		public static class «action.name.pascalize»UriBuilder {
+			private Uri.Builder mUriBuilder;
+			public «action.name.pascalize»UriBuilder(«action.uri.toMethodArgsSig») {
+				mUriBuilder = BASE_CONTENT_URI
+				.buildUpon()
+				«FOR seg : action.uri.segments»
+				«IF seg instanceof ContentUriParamSegment»
+				«IF (seg as ContentUriParamSegment).num»
+				.appendPath(String.valueOf(«seg.name.camelize»))
+				«ELSE»
+				.appendPath(«seg.name.camelize»)
+				«ENDIF»
+				«ELSE»
+				.appendPath("«seg.name»")
+				«ENDIF»
+				«ENDFOR»;
+			}
+			
+			public Uri build() {
+				return mUriBuilder.build();
+			}
+		}
+		
+		public static «action.name.pascalize»UriBuilder new«action.name.pascalize»UriBuilder(«action.uri.toMethodArgsSig») {
+			return new «action.name.pascalize»UriBuilder(«action.uri.toMethodArgs»);
+		}
+	'''
+	
 	/*
 	 * Find all actions associated to the given definition,
 	 * actions are associated to the definition via the first
@@ -188,11 +203,11 @@ class ContentProviderContractGenerator {
 	 */
 	def Iterable<ActionStatement> findActionsForDefinition(MickeyDatabaseModel model, String defName) {		
 		return model.actions
-			.filter([action|action.uri.type.name.equals(defName)])
+			.filter([action|action.type.name.equals(defName)])
 	}
 	
 	
-	def toMethodArgs(ContentUri uri) {
+	def toMethodArgsSig(ContentUri uri) {
 		uri.segments
 			.filter(typeof(ContentUriParamSegment))
 			.join(", ", [seg|(
@@ -200,6 +215,17 @@ class ContentProviderContractGenerator {
 					return "long " + seg.name.camelize
 				} else {
 					return "String " + seg.name.camelize
+				})])
+	}
+	
+	def toMethodArgs(ContentUri uri) {
+		uri.segments
+			.filter(typeof(ContentUriParamSegment))
+			.join(", ", [seg|(
+				if(seg.num) {
+					return seg.name.camelize
+				} else {
+					return seg.name.camelize
 				})])
 	}
 	
@@ -242,6 +268,7 @@ class ContentProviderContractGenerator {
 			«IF actions != null»
 			«FOR action : actions»
 			«action.createActionUriBuilderMethod»
+			«action.createActionUriBuilder»
 			
 			«ENDFOR»
 			«ENDIF»

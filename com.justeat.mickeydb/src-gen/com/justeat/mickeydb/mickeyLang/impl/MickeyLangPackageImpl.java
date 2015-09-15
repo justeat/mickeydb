@@ -19,6 +19,7 @@ import com.justeat.mickeydb.mickeyLang.CompoundOperator;
 import com.justeat.mickeydb.mickeyLang.ConflictClause;
 import com.justeat.mickeydb.mickeyLang.ConflictResolution;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
+import com.justeat.mickeydb.mickeyLang.ContentUriParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
 import com.justeat.mickeydb.mickeyLang.CreateIndexStatement;
@@ -157,6 +158,13 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * @generated
    */
   private EClass contentUriEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass contentUriParamEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -969,6 +977,36 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getActionStatement_Type()
+  {
+    return (EReference)actionStatementEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getActionStatement_Unique()
+  {
+    return (EAttribute)actionStatementEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getActionStatement_Params()
+  {
+    return (EReference)actionStatementEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getFunctionArg()
   {
     return functionArgEClass;
@@ -1019,9 +1057,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getContentUri_Type()
+  public EClass getContentUriParam()
   {
-    return (EReference)contentUriEClass.getEStructuralFeatures().get(1);
+    return contentUriParamEClass;
   }
 
   /**
@@ -1029,9 +1067,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContentUri_Unique()
+  public EAttribute getContentUriParam_Name()
   {
-    return (EAttribute)contentUriEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)contentUriParamEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3589,6 +3627,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     actionStatementEClass = createEClass(ACTION_STATEMENT);
     createEAttribute(actionStatementEClass, ACTION_STATEMENT__NAME);
     createEReference(actionStatementEClass, ACTION_STATEMENT__URI);
+    createEReference(actionStatementEClass, ACTION_STATEMENT__TYPE);
+    createEAttribute(actionStatementEClass, ACTION_STATEMENT__UNIQUE);
+    createEReference(actionStatementEClass, ACTION_STATEMENT__PARAMS);
 
     functionArgEClass = createEClass(FUNCTION_ARG);
     createEAttribute(functionArgEClass, FUNCTION_ARG__TYPE);
@@ -3596,8 +3637,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
 
     contentUriEClass = createEClass(CONTENT_URI);
     createEReference(contentUriEClass, CONTENT_URI__SEGMENTS);
-    createEReference(contentUriEClass, CONTENT_URI__TYPE);
-    createEAttribute(contentUriEClass, CONTENT_URI__UNIQUE);
+
+    contentUriParamEClass = createEClass(CONTENT_URI_PARAM);
+    createEAttribute(contentUriParamEClass, CONTENT_URI_PARAM__NAME);
 
     contentUriSegmentEClass = createEClass(CONTENT_URI_SEGMENT);
     createEAttribute(contentUriSegmentEClass, CONTENT_URI_SEGMENT__NAME);
@@ -4049,6 +4091,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEClass(actionStatementEClass, ActionStatement.class, "ActionStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getActionStatement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActionStatement_Uri(), this.getContentUri(), null, "uri", null, 0, 1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActionStatement_Type(), this.getTableDefinition(), null, "type", null, 0, 1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getActionStatement_Unique(), ecorePackage.getEBoolean(), "unique", null, 0, 1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActionStatement_Params(), this.getContentUriParam(), null, "params", null, 0, -1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(functionArgEClass, FunctionArg.class, "FunctionArg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFunctionArg_Type(), this.getColumnType(), "type", null, 0, 1, FunctionArg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4056,8 +4101,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
 
     initEClass(contentUriEClass, ContentUri.class, "ContentUri", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getContentUri_Segments(), this.getContentUriSegment(), null, "segments", null, 0, -1, ContentUri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getContentUri_Type(), this.getTableDefinition(), null, "type", null, 0, 1, ContentUri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getContentUri_Unique(), ecorePackage.getEBoolean(), "unique", null, 0, 1, ContentUri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(contentUriParamEClass, ContentUriParam.class, "ContentUriParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContentUriParam_Name(), ecorePackage.getEString(), "name", null, 0, 1, ContentUriParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contentUriSegmentEClass, ContentUriSegment.class, "ContentUriSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getContentUriSegment_Name(), ecorePackage.getEString(), "name", null, 0, 1, ContentUriSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

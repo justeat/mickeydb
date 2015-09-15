@@ -16,8 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.ContentUri#getSegments <em>Segments</em>}</li>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.ContentUri#getType <em>Type</em>}</li>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.ContentUri#isUnique <em>Unique</em>}</li>
  * </ul>
  *
  * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getContentUri()
@@ -41,57 +39,5 @@ public interface ContentUri extends EObject
    * @generated
    */
   EList<ContentUriSegment> getSegments();
-
-  /**
-   * Returns the value of the '<em><b>Type</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Type</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Type</em>' reference.
-   * @see #setType(TableDefinition)
-   * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getContentUri_Type()
-   * @model
-   * @generated
-   */
-  TableDefinition getType();
-
-  /**
-   * Sets the value of the '{@link com.justeat.mickeydb.mickeyLang.ContentUri#getType <em>Type</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Type</em>' reference.
-   * @see #getType()
-   * @generated
-   */
-  void setType(TableDefinition value);
-
-  /**
-   * Returns the value of the '<em><b>Unique</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Unique</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Unique</em>' attribute.
-   * @see #setUnique(boolean)
-   * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getContentUri_Unique()
-   * @model
-   * @generated
-   */
-  boolean isUnique();
-
-  /**
-   * Sets the value of the '{@link com.justeat.mickeydb.mickeyLang.ContentUri#isUnique <em>Unique</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Unique</em>' attribute.
-   * @see #isUnique()
-   * @generated
-   */
-  void setUnique(boolean value);
 
 } // ContentUri

@@ -379,7 +379,67 @@ ruleActionStatement returns [EObject current=null]
 	    }
 
 )
-))
+)	otherlv_3='as' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getActionStatementAccess().getAsKeyword_3());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionStatementRule());
+	        }
+        }
+		{ 
+	        newCompositeNode(grammarAccess.getActionStatementAccess().getTypeTableDefinitionCrossReference_4_0()); 
+	    }
+		ruleQualifiedName		{ 
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(
+(
+		lv_unique_5_0=	'unique' 
+    {
+        newLeafNode(lv_unique_5_0, grammarAccess.getActionStatementAccess().getUniqueUniqueKeyword_5_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getActionStatementRule());
+	        }
+       		setWithLastConsumed($current, "unique", true, "unique");
+	    }
+
+)
+)?(	otherlv_6='{' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getActionStatementAccess().getLeftCurlyBracketKeyword_6_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getActionStatementAccess().getParamsContentUriParamParserRuleCall_6_1_0()); 
+	    }
+		lv_params_7_0=ruleContentUriParam		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getActionStatementRule());
+	        }
+       		add(
+       			$current, 
+       			"params",
+        		lv_params_7_0, 
+        		"ContentUriParam");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_8='}' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getActionStatementAccess().getRightCurlyBracketKeyword_6_2());
+    }
+)?)
 ;
 
 
@@ -457,63 +517,78 @@ ruleContentUri returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((	otherlv_0='/' 
+((
     {
-    	newLeafNode(otherlv_0, grammarAccess.getContentUriAccess().getSolidusKeyword_0_0());
+        $current = forceCreateModelElement(
+            grammarAccess.getContentUriAccess().getContentUriAction_0(),
+            $current);
+    }
+)(	otherlv_1='/' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getContentUriAccess().getSolidusKeyword_1_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getContentUriAccess().getSegmentsContentUriSegmentParserRuleCall_0_1_0()); 
+	        newCompositeNode(grammarAccess.getContentUriAccess().getSegmentsContentUriSegmentParserRuleCall_1_1_0()); 
 	    }
-		lv_segments_1_0=ruleContentUriSegment		{
+		lv_segments_2_0=ruleContentUriSegment		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getContentUriRule());
 	        }
        		add(
        			$current, 
        			"segments",
-        		lv_segments_1_0, 
+        		lv_segments_2_0, 
         		"ContentUriSegment");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_2='as' 
+))*)
+;
+
+
+
+
+
+// Entry rule entryRuleContentUriParam
+entryRuleContentUriParam returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getContentUriParamRule()); }
+	 iv_ruleContentUriParam=ruleContentUriParam 
+	 { $current=$iv_ruleContentUriParam.current; } 
+	 EOF 
+;
+
+// Rule ContentUriParam
+ruleContentUriParam returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='param' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getContentUriAccess().getAsKeyword_1());
+    	newLeafNode(otherlv_0, grammarAccess.getContentUriParamAccess().getParamKeyword_0());
     }
 (
 (
+		lv_name_1_0=RULE_ID
 		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getContentUriRule());
-	        }
-        }
-		{ 
-	        newCompositeNode(grammarAccess.getContentUriAccess().getTypeTableDefinitionCrossReference_2_0()); 
-	    }
-		ruleQualifiedName		{ 
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)(
-(
-		lv_unique_4_0=	'unique' 
-    {
-        newLeafNode(lv_unique_4_0, grammarAccess.getContentUriAccess().getUniqueUniqueKeyword_3_0());
-    }
- 
-	    {
+			newLeafNode(lv_name_1_0, grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getContentUriRule());
+	            $current = createModelElement(grammarAccess.getContentUriParamRule());
 	        }
-       		setWithLastConsumed($current, "unique", true, "unique");
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
 	    }
 
 )
-)?)
+))
 ;
 
 

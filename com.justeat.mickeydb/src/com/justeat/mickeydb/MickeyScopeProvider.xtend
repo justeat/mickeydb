@@ -33,6 +33,7 @@ import static extension com.justeat.mickeydb.ModelUtil.*
 import org.apache.log4j.Logger
 import java.util.List
 import com.justeat.mickeydb.mickeyLang.ContentUri
+import com.justeat.mickeydb.mickeyLang.ActionStatement
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
@@ -70,7 +71,7 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 		Scopes.scopeFor(scopedElements, scope)
 	}
 		
-	def IScope scope_ContentUri_type(ContentUri context, EReference ref) {
+	def IScope scope_ActionStatement_type(ActionStatement context, EReference ref) {
 		var scope = delegateGetScope(context, ref)
 		var model = context.model
 		var tableName = context.getFeatureNodeText(ref)

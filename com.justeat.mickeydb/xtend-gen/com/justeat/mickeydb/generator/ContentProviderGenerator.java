@@ -407,11 +407,12 @@ public class ContentProviderGenerator {
     return _builder;
   }
   
-  public String asString(final ContentUri uri) {
+  public String asString(final ActionStatement action) {
     StringBuilder builder = new StringBuilder();
-    TableDefinition _type = uri.getType();
+    TableDefinition _type = action.getType();
     builder.append(_type);
-    EList<ContentUriSegment> _segments = uri.getSegments();
+    ContentUri _uri = action.getUri();
+    EList<ContentUriSegment> _segments = _uri.getSegments();
     for (final ContentUriSegment seg : _segments) {
       {
         builder.append("/");
@@ -433,13 +434,11 @@ public class ContentProviderGenerator {
   }
   
   public String generateContentTypeConstantReference(final ActionStatement action, final String databaseName) {
-    ContentUri _uri = action.getUri();
-    boolean _isUnique = _uri.isUnique();
+    boolean _isUnique = action.isUnique();
     if (_isUnique) {
       String _pascalize = Strings.pascalize(databaseName);
       String _plus = (_pascalize + "Contract.");
-      ContentUri _uri_1 = action.getUri();
-      TableDefinition _type = _uri_1.getType();
+      TableDefinition _type = action.getType();
       String _name = _type.getName();
       String _pascalize_1 = Strings.pascalize(_name);
       String _plus_1 = (_plus + _pascalize_1);
@@ -447,8 +446,7 @@ public class ContentProviderGenerator {
     } else {
       String _pascalize_2 = Strings.pascalize(databaseName);
       String _plus_2 = (_pascalize_2 + "Contract.");
-      ContentUri _uri_2 = action.getUri();
-      TableDefinition _type_1 = _uri_2.getType();
+      TableDefinition _type_1 = action.getType();
       String _name_1 = _type_1.getName();
       String _pascalize_3 = Strings.pascalize(_name_1);
       String _plus_3 = (_plus_2 + _pascalize_3);

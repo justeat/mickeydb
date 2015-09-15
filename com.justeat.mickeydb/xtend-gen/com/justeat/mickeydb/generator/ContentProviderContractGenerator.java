@@ -431,10 +431,6 @@ public class ContentProviderContractGenerator {
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
-    CharSequence _generateContractItemsForActions = this.generateContractItemsForActions(model, snapshot);
-    _builder.append(_generateContractItemsForActions, "\t");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
     _builder.append("private ");
     String _databaseName_4 = model.getDatabaseName();
     String _pascalize_14 = Strings.pascalize(_databaseName_4);
@@ -484,54 +480,6 @@ public class ContentProviderContractGenerator {
     return _builder;
   }
   
-  public CharSequence generateContractItemsForActions(final MickeyDatabaseModel model, final SqliteDatabaseSnapshot snapshot) {
-    StringConcatenation _builder = new StringConcatenation();
-    {
-      final Function1<ActionStatement, Boolean> _function = new Function1<ActionStatement, Boolean>() {
-        public Boolean apply(final ActionStatement it) {
-          ContentUri _uri = it.getUri();
-          TableDefinition _type = _uri.getType();
-          String _name = _type.getName();
-          boolean _containsDefinition = snapshot.containsDefinition(_name);
-          return Boolean.valueOf((!_containsDefinition));
-        }
-      };
-      Iterable<ActionStatement> _filter = IterableExtensions.<ActionStatement>filter(model.actions, _function);
-      for(final ActionStatement action : _filter) {
-        _builder.append("public static class ");
-        ContentUri _uri = action.getUri();
-        TableDefinition _type = _uri.getType();
-        String _name = _type.getName();
-        String _pascalize = Strings.pascalize(_name);
-        _builder.append(_pascalize, "");
-        _builder.append(" {");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        CharSequence _createActionUriBuilderMethod = this.createActionUriBuilderMethod(action);
-        _builder.append(_createActionUriBuilderMethod, "\t");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append("public static final String CONTENT_TYPE =");
-        _builder.newLine();
-        _builder.append("\t        ");
-        _builder.append("\"vnd.android.cursor.dir/vnd.");
-        String _databaseName = model.getDatabaseName();
-        String _lowerCase = _databaseName.toLowerCase();
-        _builder.append(_lowerCase, "\t        ");
-        _builder.append(".");
-        ContentUri _uri_1 = action.getUri();
-        TableDefinition _type_1 = _uri_1.getType();
-        _builder.append(_type_1, "\t        ");
-        _builder.append("\";");
-        _builder.newLineIfNotEmpty();
-        _builder.append("}");
-        _builder.newLine();
-        _builder.newLine();
-      }
-    }
-    return _builder;
-  }
-  
   public CharSequence createActionUriBuilderMethod(final ActionStatement action) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("public static Uri build");
@@ -540,8 +488,8 @@ public class ContentProviderContractGenerator {
     _builder.append(_pascalize, "");
     _builder.append("Uri(");
     ContentUri _uri = action.getUri();
-    String _methodArgs = this.toMethodArgs(_uri);
-    _builder.append(_methodArgs, "");
+    String _methodArgsSig = this.toMethodArgsSig(_uri);
+    _builder.append(_methodArgsSig, "");
     _builder.append(") {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -596,6 +544,121 @@ public class ContentProviderContractGenerator {
     return _builder;
   }
   
+  public CharSequence createActionUriBuilder(final ActionStatement action) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("public static class ");
+    String _name = action.getName();
+    String _pascalize = Strings.pascalize(_name);
+    _builder.append(_pascalize, "");
+    _builder.append("UriBuilder {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("private Uri.Builder mUriBuilder;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public ");
+    String _name_1 = action.getName();
+    String _pascalize_1 = Strings.pascalize(_name_1);
+    _builder.append(_pascalize_1, "\t");
+    _builder.append("UriBuilder(");
+    ContentUri _uri = action.getUri();
+    String _methodArgsSig = this.toMethodArgsSig(_uri);
+    _builder.append(_methodArgsSig, "\t");
+    _builder.append(") {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    _builder.append("mUriBuilder = BASE_CONTENT_URI");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append(".buildUpon()");
+    _builder.newLine();
+    {
+      ContentUri _uri_1 = action.getUri();
+      EList<ContentUriSegment> _segments = _uri_1.getSegments();
+      for(final ContentUriSegment seg : _segments) {
+        {
+          if ((seg instanceof ContentUriParamSegment)) {
+            {
+              boolean _isNum = ((ContentUriParamSegment) seg).isNum();
+              if (_isNum) {
+                _builder.append("\t\t");
+                _builder.append(".appendPath(String.valueOf(");
+                String _name_2 = ((ContentUriParamSegment)seg).getName();
+                String _camelize = Strings.camelize(_name_2);
+                _builder.append(_camelize, "\t\t");
+                _builder.append("))");
+                _builder.newLineIfNotEmpty();
+              } else {
+                _builder.append("\t\t");
+                _builder.append(".appendPath(");
+                String _name_3 = ((ContentUriParamSegment)seg).getName();
+                String _camelize_1 = Strings.camelize(_name_3);
+                _builder.append(_camelize_1, "\t\t");
+                _builder.append(")");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+          } else {
+            _builder.append("\t\t");
+            _builder.append(".appendPath(\"");
+            String _name_4 = seg.getName();
+            _builder.append(_name_4, "\t\t");
+            _builder.append("\")");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        _builder.append("\t\t");
+      }
+    }
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public Uri build() {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return mUriBuilder.build();");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("public static ");
+    String _name_5 = action.getName();
+    String _pascalize_2 = Strings.pascalize(_name_5);
+    _builder.append(_pascalize_2, "");
+    _builder.append("UriBuilder new");
+    String _name_6 = action.getName();
+    String _pascalize_3 = Strings.pascalize(_name_6);
+    _builder.append(_pascalize_3, "");
+    _builder.append("UriBuilder(");
+    ContentUri _uri_2 = action.getUri();
+    String _methodArgsSig_1 = this.toMethodArgsSig(_uri_2);
+    _builder.append(_methodArgsSig_1, "");
+    _builder.append(") {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("return new ");
+    String _name_7 = action.getName();
+    String _pascalize_4 = Strings.pascalize(_name_7);
+    _builder.append(_pascalize_4, "\t");
+    _builder.append("UriBuilder(");
+    ContentUri _uri_3 = action.getUri();
+    String _methodArgs = this.toMethodArgs(_uri_3);
+    _builder.append(_methodArgs, "\t");
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
   /**
    * Find all actions associated to the given definition,
    * actions are associated to the definition via the first
@@ -605,8 +668,7 @@ public class ContentProviderContractGenerator {
   public Iterable<ActionStatement> findActionsForDefinition(final MickeyDatabaseModel model, final String defName) {
     final Function1<ActionStatement, Boolean> _function = new Function1<ActionStatement, Boolean>() {
       public Boolean apply(final ActionStatement action) {
-        ContentUri _uri = action.getUri();
-        TableDefinition _type = _uri.getType();
+        TableDefinition _type = action.getType();
         String _name = _type.getName();
         return Boolean.valueOf(_name.equals(defName));
       }
@@ -614,7 +676,7 @@ public class ContentProviderContractGenerator {
     return IterableExtensions.<ActionStatement>filter(model.actions, _function);
   }
   
-  public String toMethodArgs(final ContentUri uri) {
+  public String toMethodArgsSig(final ContentUri uri) {
     EList<ContentUriSegment> _segments = uri.getSegments();
     Iterable<ContentUriParamSegment> _filter = Iterables.<ContentUriParamSegment>filter(_segments, ContentUriParamSegment.class);
     final Function1<ContentUriParamSegment, CharSequence> _function = new Function1<ContentUriParamSegment, CharSequence>() {
@@ -628,6 +690,24 @@ public class ContentProviderContractGenerator {
           String _name_1 = seg.getName();
           String _camelize_1 = Strings.camelize(_name_1);
           return ("String " + _camelize_1);
+        }
+      }
+    };
+    return IterableExtensions.<ContentUriParamSegment>join(_filter, ", ", _function);
+  }
+  
+  public String toMethodArgs(final ContentUri uri) {
+    EList<ContentUriSegment> _segments = uri.getSegments();
+    Iterable<ContentUriParamSegment> _filter = Iterables.<ContentUriParamSegment>filter(_segments, ContentUriParamSegment.class);
+    final Function1<ContentUriParamSegment, CharSequence> _function = new Function1<ContentUriParamSegment, CharSequence>() {
+      public CharSequence apply(final ContentUriParamSegment seg) {
+        boolean _isNum = seg.isNum();
+        if (_isNum) {
+          String _name = seg.getName();
+          return Strings.camelize(_name);
+        } else {
+          String _name_1 = seg.getName();
+          return Strings.camelize(_name_1);
         }
       }
     };
@@ -792,6 +872,10 @@ public class ContentProviderContractGenerator {
             _builder.append("\t");
             CharSequence _createActionUriBuilderMethod = this.createActionUriBuilderMethod(action);
             _builder.append(_createActionUriBuilderMethod, "\t");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            CharSequence _createActionUriBuilder = this.createActionUriBuilder(action);
+            _builder.append(_createActionUriBuilder, "\t");
             _builder.newLineIfNotEmpty();
             _builder.append("\t");
             _builder.newLine();

@@ -71,6 +71,7 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
       case MickeyLangPackage.ACTION_STATEMENT: return createActionStatement();
       case MickeyLangPackage.FUNCTION_ARG: return createFunctionArg();
       case MickeyLangPackage.CONTENT_URI: return createContentUri();
+      case MickeyLangPackage.CONTENT_URI_PARAM: return createContentUriParam();
       case MickeyLangPackage.CONTENT_URI_SEGMENT: return createContentUriSegment();
       case MickeyLangPackage.MIGRATION_BLOCK: return createMigrationBlock();
       case MickeyLangPackage.EXPRESSION: return createExpression();
@@ -271,6 +272,17 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
   {
     ContentUriImpl contentUri = new ContentUriImpl();
     return contentUri;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ContentUriParam createContentUriParam()
+  {
+    ContentUriParamImpl contentUriParam = new ContentUriParamImpl();
+    return contentUriParam;
   }
 
   /**
