@@ -420,9 +420,9 @@ ruleActionStatement returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getActionStatementAccess().getParamsContentUriParamParserRuleCall_6_1_0()); 
+	        newCompositeNode(grammarAccess.getActionStatementAccess().getParamsContentUriQueryParamParserRuleCall_6_1_0()); 
 	    }
-		lv_params_7_0=ruleContentUriParam		{
+		lv_params_7_0=ruleContentUriQueryParam		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getActionStatementRule());
 	        }
@@ -430,7 +430,7 @@ ruleActionStatement returns [EObject current=null]
        			$current, 
        			"params",
         		lv_params_7_0, 
-        		"ContentUriParam");
+        		"ContentUriQueryParam");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -552,40 +552,35 @@ ruleContentUri returns [EObject current=null]
 
 
 
-// Entry rule entryRuleContentUriParam
-entryRuleContentUriParam returns [EObject current=null] 
+// Entry rule entryRuleContentUriQueryParam
+entryRuleContentUriQueryParam returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getContentUriParamRule()); }
-	 iv_ruleContentUriParam=ruleContentUriParam 
-	 { $current=$iv_ruleContentUriParam.current; } 
+	{ newCompositeNode(grammarAccess.getContentUriQueryParamRule()); }
+	 iv_ruleContentUriQueryParam=ruleContentUriQueryParam 
+	 { $current=$iv_ruleContentUriQueryParam.current; } 
 	 EOF 
 ;
 
-// Rule ContentUriParam
-ruleContentUriParam returns [EObject current=null] 
+// Rule ContentUriQueryParam
+ruleContentUriQueryParam returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (	otherlv_0='param' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getContentUriParamAccess().getParamKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getContentUriQueryParamAccess().getParamKeyword_0());
     }
 (
 (
-		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getContentUriParamRule());
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getContentUriQueryParamRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_1_0, 
-        		"ID");
-	    }
+        }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceCrossReference_1_0()); 
+	}
 
 )
 ))

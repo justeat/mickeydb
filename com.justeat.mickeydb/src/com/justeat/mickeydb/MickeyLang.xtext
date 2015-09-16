@@ -21,7 +21,7 @@ MickeyFunction: 'function' name=ID '(' (args+=FunctionArg (',' args+=FunctionArg
 '}' ;
 
 ActionStatement: 'action' name=ID uri=ContentUri 'as' type=[TableDefinition|QualifiedName] unique?='unique'?
-		('{' params+=ContentUriParam* '}')?
+		('{' params+=ContentUriQueryParam* '}')?
 ;
 
 FunctionArg:
@@ -33,8 +33,8 @@ ContentUri:
 	('/' segments+=ContentUriSegment)*
 ;
 
-ContentUriParam:
-	'param' name=ID
+ContentUriQueryParam:
+	'param' column=[ColumnSource]
 ;
 
 ContentUriSegment:

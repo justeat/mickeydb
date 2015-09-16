@@ -132,7 +132,7 @@ public interface ActionStatement extends MickeyBlock
 
   /**
    * Returns the value of the '<em><b>Params</b></em>' containment reference list.
-   * The list contents are of type {@link com.justeat.mickeydb.mickeyLang.ContentUriParam}.
+   * The list contents are of type {@link com.justeat.mickeydb.mickeyLang.ContentUriQueryParam}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Params</em>' containment reference list isn't clear,
@@ -144,6 +144,6 @@ public interface ActionStatement extends MickeyBlock
    * @model containment="true"
    * @generated
    */
-  EList<ContentUriParam> getParams();
+  EList<ContentUriQueryParam> getParams();
 
 } // ActionStatement

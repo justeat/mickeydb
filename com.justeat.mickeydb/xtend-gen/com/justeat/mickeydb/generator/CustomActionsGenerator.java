@@ -11,6 +11,7 @@ import com.justeat.mickeydb.mickeyLang.ColumnSource;
 import com.justeat.mickeydb.mickeyLang.ColumnType;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -83,6 +84,10 @@ public class CustomActionsGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("import java.util.List;");
     _builder.newLine();
+    _builder.append("import java.util.Set;");
+    _builder.newLine();
+    _builder.append("import com.justeat.mickeydb.util.Uris;");
+    _builder.newLine();
     _builder.newLine();
     _builder.append("public class ");
     String _name = content.getName();
@@ -100,6 +105,9 @@ public class CustomActionsGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("List<String> segments = uri.getPathSegments();");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("Set<String> queryKeys = Uris.getQueryParameterNames(uri);");
     _builder.newLine();
     {
       ActionStatement _action = content.getAction();
@@ -123,7 +131,8 @@ public class CustomActionsGenerator {
                 _builder.append("long ");
                 ColumnSource _param_1 = param.getParam();
                 String _name_1 = _param_1.getName();
-                _builder.append(_name_1, "\t\t");
+                String _camelize = Strings.camelize(_name_1);
+                _builder.append(_camelize, "\t\t");
                 _builder.append("Slug = Long.parseLong(segments.get(");
                 Integer _key = entry.getKey();
                 _builder.append(_key, "\t\t");
@@ -134,7 +143,8 @@ public class CustomActionsGenerator {
                 _builder.append("String ");
                 ColumnSource _param_2 = param.getParam();
                 String _name_2 = _param_2.getName();
-                _builder.append(_name_2, "\t\t");
+                String _camelize_1 = Strings.camelize(_name_2);
+                _builder.append(_camelize_1, "\t\t");
                 _builder.append("Slug = segments.get(");
                 Integer _key_1 = entry.getKey();
                 _builder.append(_key_1, "\t\t");
@@ -150,7 +160,121 @@ public class CustomActionsGenerator {
     _builder.newLine();
     {
       ActionStatement _action_1 = content.getAction();
-      ContentUri _uri_1 = _action_1.getUri();
+      EList<ContentUriQueryParam> _params = _action_1.getParams();
+      for(final ContentUriQueryParam queryParam : _params) {
+        _builder.append("\t\t");
+        ColumnSource _column = queryParam.getColumn();
+        ColumnType columnType = ModelUtil.getInferredColumnType(_column);
+        _builder.newLineIfNotEmpty();
+        {
+          boolean _equals = Objects.equal(columnType, ColumnType.BOOLEAN);
+          if (_equals) {
+            _builder.append("\t\t");
+            ColumnSource _column_1 = queryParam.getColumn();
+            ColumnType _inferredColumnType_1 = ModelUtil.getInferredColumnType(_column_1);
+            String _javaTypeName = ModelUtil.toJavaTypeName(_inferredColumnType_1);
+            _builder.append(_javaTypeName, "\t\t");
+            _builder.append(" ");
+            ColumnSource _column_2 = queryParam.getColumn();
+            String _name_3 = _column_2.getName();
+            String _camelize_2 = Strings.camelize(_name_3);
+            _builder.append(_camelize_2, "\t\t");
+            _builder.append("QueryParam = Uris.getBooleanQueryParamOrDefault(uri, queryKeys, ");
+            String _type_2 = content.getType();
+            String _pascalize_3 = Strings.pascalize(_type_2);
+            _builder.append(_pascalize_3, "\t\t");
+            _builder.append(".");
+            ColumnSource _column_3 = queryParam.getColumn();
+            String _name_4 = _column_3.getName();
+            String _underscore = Strings.underscore(_name_4);
+            String _upperCase = _underscore.toUpperCase();
+            _builder.append(_upperCase, "\t\t");
+            _builder.append(");");
+            _builder.newLineIfNotEmpty();
+          } else {
+            boolean _equals_1 = Objects.equal(columnType, ColumnType.INTEGER);
+            if (_equals_1) {
+              _builder.append("\t\t");
+              ColumnSource _column_4 = queryParam.getColumn();
+              ColumnType _inferredColumnType_2 = ModelUtil.getInferredColumnType(_column_4);
+              String _javaTypeName_1 = ModelUtil.toJavaTypeName(_inferredColumnType_2);
+              _builder.append(_javaTypeName_1, "\t\t");
+              _builder.append(" ");
+              ColumnSource _column_5 = queryParam.getColumn();
+              String _name_5 = _column_5.getName();
+              String _camelize_3 = Strings.camelize(_name_5);
+              _builder.append(_camelize_3, "\t\t");
+              _builder.append("QueryParam = Uris.getIntQueryParamOrDefault(uri, queryKeys, ");
+              String _type_3 = content.getType();
+              String _pascalize_4 = Strings.pascalize(_type_3);
+              _builder.append(_pascalize_4, "\t\t");
+              _builder.append(".");
+              ColumnSource _column_6 = queryParam.getColumn();
+              String _name_6 = _column_6.getName();
+              String _underscore_1 = Strings.underscore(_name_6);
+              String _upperCase_1 = _underscore_1.toUpperCase();
+              _builder.append(_upperCase_1, "\t\t");
+              _builder.append(");");
+              _builder.newLineIfNotEmpty();
+            } else {
+              boolean _equals_2 = Objects.equal(columnType, ColumnType.REAL);
+              if (_equals_2) {
+                _builder.append("\t\t");
+                ColumnSource _column_7 = queryParam.getColumn();
+                ColumnType _inferredColumnType_3 = ModelUtil.getInferredColumnType(_column_7);
+                String _javaTypeName_2 = ModelUtil.toJavaTypeName(_inferredColumnType_3);
+                _builder.append(_javaTypeName_2, "\t\t");
+                _builder.append(" ");
+                ColumnSource _column_8 = queryParam.getColumn();
+                String _name_7 = _column_8.getName();
+                String _camelize_4 = Strings.camelize(_name_7);
+                _builder.append(_camelize_4, "\t\t");
+                _builder.append("QueryParam = Uris.getDoubleQueryParamOrDefault(uri, queryKeys, ");
+                String _type_4 = content.getType();
+                String _pascalize_5 = Strings.pascalize(_type_4);
+                _builder.append(_pascalize_5, "\t\t");
+                _builder.append(".");
+                ColumnSource _column_9 = queryParam.getColumn();
+                String _name_8 = _column_9.getName();
+                String _underscore_2 = Strings.underscore(_name_8);
+                String _upperCase_2 = _underscore_2.toUpperCase();
+                _builder.append(_upperCase_2, "\t\t");
+                _builder.append(");");
+                _builder.newLineIfNotEmpty();
+              } else {
+                _builder.append("\t\t");
+                ColumnSource _column_10 = queryParam.getColumn();
+                ColumnType _inferredColumnType_4 = ModelUtil.getInferredColumnType(_column_10);
+                String _javaTypeName_3 = ModelUtil.toJavaTypeName(_inferredColumnType_4);
+                _builder.append(_javaTypeName_3, "\t\t");
+                _builder.append(" ");
+                ColumnSource _column_11 = queryParam.getColumn();
+                String _name_9 = _column_11.getName();
+                String _camelize_5 = Strings.camelize(_name_9);
+                _builder.append(_camelize_5, "\t\t");
+                _builder.append("QueryParam = Uris.getStringQueryParamOrDefault(uri, queryKeys, ");
+                String _type_5 = content.getType();
+                String _pascalize_6 = Strings.pascalize(_type_5);
+                _builder.append(_pascalize_6, "\t\t");
+                _builder.append(".");
+                ColumnSource _column_12 = queryParam.getColumn();
+                String _name_10 = _column_12.getName();
+                String _underscore_3 = Strings.underscore(_name_10);
+                String _upperCase_3 = _underscore_3.toUpperCase();
+                _builder.append(_upperCase_3, "\t\t");
+                _builder.append(");");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+          }
+        }
+      }
+    }
+    _builder.append("\t\t");
+    _builder.newLine();
+    {
+      ActionStatement _action_2 = content.getAction();
+      ContentUri _uri_1 = _action_2.getUri();
       EList<ContentUriSegment> _segments_1 = _uri_1.getSegments();
       Iterable<Pair<Integer, ContentUriSegment>> _indexed_1 = IterableExtensions.<ContentUriSegment>indexed(_segments_1);
       for(final Pair<Integer, ContentUriSegment> entry_1 : _indexed_1) {
@@ -163,50 +287,93 @@ public class CustomActionsGenerator {
             _builder.newLineIfNotEmpty();
             {
               ColumnSource _param_3 = param_1.getParam();
-              ColumnType _inferredColumnType_1 = ModelUtil.getInferredColumnType(_param_3);
-              boolean _notEquals_1 = (!Objects.equal(_inferredColumnType_1, ColumnType.TEXT));
+              ColumnType _inferredColumnType_5 = ModelUtil.getInferredColumnType(_param_3);
+              boolean _notEquals_1 = (!Objects.equal(_inferredColumnType_5, ColumnType.TEXT));
               if (_notEquals_1) {
                 _builder.append("\t\t");
                 _builder.append("query.expr(");
-                String _type_2 = content.getType();
-                String _pascalize_3 = Strings.pascalize(_type_2);
-                _builder.append(_pascalize_3, "\t\t");
+                String _type_6 = content.getType();
+                String _pascalize_7 = Strings.pascalize(_type_6);
+                _builder.append(_pascalize_7, "\t\t");
                 _builder.append(".");
                 ColumnSource _param_4 = param_1.getParam();
-                String _name_3 = _param_4.getName();
-                String _underscore = Strings.underscore(_name_3);
-                String _upperCase = _underscore.toUpperCase();
-                _builder.append(_upperCase, "\t\t");
+                String _name_11 = _param_4.getName();
+                String _underscore_4 = Strings.underscore(_name_11);
+                String _upperCase_4 = _underscore_4.toUpperCase();
+                _builder.append(_upperCase_4, "\t\t");
                 _builder.append(", Query.Op.EQ, ");
                 ColumnSource _param_5 = param_1.getParam();
-                String _name_4 = _param_5.getName();
-                _builder.append(_name_4, "\t\t");
+                String _name_12 = _param_5.getName();
+                String _camelize_6 = Strings.camelize(_name_12);
+                _builder.append(_camelize_6, "\t\t");
                 _builder.append("Slug);");
                 _builder.newLineIfNotEmpty();
               } else {
                 _builder.append("\t\t");
                 _builder.append("query.expr(\"cast(\" + ");
-                String _type_3 = content.getType();
-                String _pascalize_4 = Strings.pascalize(_type_3);
-                _builder.append(_pascalize_4, "\t\t");
+                String _type_7 = content.getType();
+                String _pascalize_8 = Strings.pascalize(_type_7);
+                _builder.append(_pascalize_8, "\t\t");
                 _builder.append(".");
                 ColumnSource _param_6 = param_1.getParam();
-                String _name_5 = _param_6.getName();
-                String _underscore_1 = Strings.underscore(_name_5);
-                String _upperCase_1 = _underscore_1.toUpperCase();
-                _builder.append(_upperCase_1, "\t\t");
+                String _name_13 = _param_6.getName();
+                String _underscore_5 = Strings.underscore(_name_13);
+                String _upperCase_5 = _underscore_5.toUpperCase();
+                _builder.append(_upperCase_5, "\t\t");
                 _builder.append(" + \" as text)\", Query.Op.EQ, ");
                 ColumnSource _param_7 = param_1.getParam();
-                String _name_6 = _param_7.getName();
-                _builder.append(_name_6, "\t\t");
+                String _name_14 = _param_7.getName();
+                String _camelize_7 = Strings.camelize(_name_14);
+                _builder.append(_camelize_7, "\t\t");
                 _builder.append("Slug);");
                 _builder.newLineIfNotEmpty();
               }
             }
-            _builder.append("\t\t");
-            _builder.newLine();
           }
         }
+      }
+    }
+    {
+      ActionStatement _action_3 = content.getAction();
+      EList<ContentUriQueryParam> _params_1 = _action_3.getParams();
+      for(final ContentUriQueryParam queryParam_1 : _params_1) {
+        _builder.append("\t\t");
+        _builder.append("if(queryKeys.contains(");
+        String _type_8 = content.getType();
+        String _pascalize_9 = Strings.pascalize(_type_8);
+        _builder.append(_pascalize_9, "\t\t");
+        _builder.append(".");
+        ColumnSource _column_13 = queryParam_1.getColumn();
+        String _name_15 = _column_13.getName();
+        String _underscore_6 = Strings.underscore(_name_15);
+        String _upperCase_6 = _underscore_6.toUpperCase();
+        _builder.append(_upperCase_6, "\t\t");
+        _builder.append(")) {");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
+        _builder.append("\t");
+        _builder.append("query.expr(");
+        String _type_9 = content.getType();
+        String _pascalize_10 = Strings.pascalize(_type_9);
+        _builder.append(_pascalize_10, "\t\t\t");
+        _builder.append(".");
+        ColumnSource _column_14 = queryParam_1.getColumn();
+        String _name_16 = _column_14.getName();
+        String _underscore_7 = Strings.underscore(_name_16);
+        String _upperCase_7 = _underscore_7.toUpperCase();
+        _builder.append(_upperCase_7, "\t\t\t");
+        _builder.append(", Query.Op.EQ, ");
+        ColumnSource _column_15 = queryParam_1.getColumn();
+        String _name_17 = _column_15.getName();
+        String _camelize_8 = Strings.camelize(_name_17);
+        _builder.append(_camelize_8, "\t\t\t");
+        _builder.append("QueryParam);");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
+        _builder.append("}");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.newLine();
       }
     }
     _builder.append("\t");
@@ -222,10 +389,10 @@ public class CustomActionsGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("return Sources.");
-    String _type_4 = content.getType();
-    String _underscore_2 = Strings.underscore(_type_4);
-    String _upperCase_2 = _underscore_2.toUpperCase();
-    _builder.append(_upperCase_2, "\t\t");
+    String _type_10 = content.getType();
+    String _underscore_8 = Strings.underscore(_type_10);
+    String _upperCase_8 = _underscore_8.toUpperCase();
+    _builder.append(_upperCase_8, "\t\t");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -241,9 +408,9 @@ public class CustomActionsGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("return ");
-    String _type_5 = content.getType();
-    String _pascalize_5 = Strings.pascalize(_type_5);
-    _builder.append(_pascalize_5, "\t\t");
+    String _type_11 = content.getType();
+    String _pascalize_11 = Strings.pascalize(_type_11);
+    _builder.append(_pascalize_11, "\t\t");
     _builder.append("Record.getFactory();");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");

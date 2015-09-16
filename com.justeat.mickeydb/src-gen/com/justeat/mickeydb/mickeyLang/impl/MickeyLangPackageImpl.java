@@ -19,8 +19,8 @@ import com.justeat.mickeydb.mickeyLang.CompoundOperator;
 import com.justeat.mickeydb.mickeyLang.ConflictClause;
 import com.justeat.mickeydb.mickeyLang.ConflictResolution;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
-import com.justeat.mickeydb.mickeyLang.ContentUriParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
 import com.justeat.mickeydb.mickeyLang.CreateIndexStatement;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
@@ -164,7 +164,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass contentUriParamEClass = null;
+  private EClass contentUriQueryParamEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1057,9 +1057,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getContentUriParam()
+  public EClass getContentUriQueryParam()
   {
-    return contentUriParamEClass;
+    return contentUriQueryParamEClass;
   }
 
   /**
@@ -1067,9 +1067,9 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getContentUriParam_Name()
+  public EReference getContentUriQueryParam_Column()
   {
-    return (EAttribute)contentUriParamEClass.getEStructuralFeatures().get(0);
+    return (EReference)contentUriQueryParamEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -3628,8 +3628,8 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     contentUriEClass = createEClass(CONTENT_URI);
     createEReference(contentUriEClass, CONTENT_URI__SEGMENTS);
 
-    contentUriParamEClass = createEClass(CONTENT_URI_PARAM);
-    createEAttribute(contentUriParamEClass, CONTENT_URI_PARAM__NAME);
+    contentUriQueryParamEClass = createEClass(CONTENT_URI_QUERY_PARAM);
+    createEReference(contentUriQueryParamEClass, CONTENT_URI_QUERY_PARAM__COLUMN);
 
     contentUriSegmentEClass = createEClass(CONTENT_URI_SEGMENT);
     createEAttribute(contentUriSegmentEClass, CONTENT_URI_SEGMENT__NAME);
@@ -4082,7 +4082,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEReference(getActionStatement_Uri(), this.getContentUri(), null, "uri", null, 0, 1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getActionStatement_Type(), this.getTableDefinition(), null, "type", null, 0, 1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getActionStatement_Unique(), ecorePackage.getEBoolean(), "unique", null, 0, 1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getActionStatement_Params(), this.getContentUriParam(), null, "params", null, 0, -1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getActionStatement_Params(), this.getContentUriQueryParam(), null, "params", null, 0, -1, ActionStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(functionArgEClass, FunctionArg.class, "FunctionArg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFunctionArg_Type(), this.getColumnType(), "type", null, 0, 1, FunctionArg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4091,8 +4091,8 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEClass(contentUriEClass, ContentUri.class, "ContentUri", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getContentUri_Segments(), this.getContentUriSegment(), null, "segments", null, 0, -1, ContentUri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(contentUriParamEClass, ContentUriParam.class, "ContentUriParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getContentUriParam_Name(), ecorePackage.getEString(), "name", null, 0, 1, ContentUriParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(contentUriQueryParamEClass, ContentUriQueryParam.class, "ContentUriQueryParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getContentUriQueryParam_Column(), this.getColumnSource(), null, "column", null, 0, 1, ContentUriQueryParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contentUriSegmentEClass, ContentUriSegment.class, "ContentUriSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getContentUriSegment_Name(), ecorePackage.getEString(), "name", null, 0, 1, ContentUriSegment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -298,32 +298,32 @@ public interface MickeyLangPackage extends EPackage
   int CONTENT_URI_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamImpl <em>Content Uri Param</em>}' class.
+   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriQueryParamImpl <em>Content Uri Query Param</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.justeat.mickeydb.mickeyLang.impl.ContentUriParamImpl
-   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUriParam()
+   * @see com.justeat.mickeydb.mickeyLang.impl.ContentUriQueryParamImpl
+   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUriQueryParam()
    * @generated
    */
-  int CONTENT_URI_PARAM = 6;
+  int CONTENT_URI_QUERY_PARAM = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Column</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTENT_URI_PARAM__NAME = 0;
+  int CONTENT_URI_QUERY_PARAM__COLUMN = 0;
 
   /**
-   * The number of structural features of the '<em>Content Uri Param</em>' class.
+   * The number of structural features of the '<em>Content Uri Query Param</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTENT_URI_PARAM_FEATURE_COUNT = 1;
+  int CONTENT_URI_QUERY_PARAM_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriSegmentImpl <em>Content Uri Segment</em>}' class.
@@ -3744,25 +3744,25 @@ public interface MickeyLangPackage extends EPackage
   EReference getContentUri_Segments();
 
   /**
-   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ContentUriParam <em>Content Uri Param</em>}'.
+   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ContentUriQueryParam <em>Content Uri Query Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Content Uri Param</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.ContentUriParam
+   * @return the meta object for class '<em>Content Uri Query Param</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentUriQueryParam
    * @generated
    */
-  EClass getContentUriParam();
+  EClass getContentUriQueryParam();
 
   /**
-   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.ContentUriParam#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link com.justeat.mickeydb.mickeyLang.ContentUriQueryParam#getColumn <em>Column</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see com.justeat.mickeydb.mickeyLang.ContentUriParam#getName()
-   * @see #getContentUriParam()
+   * @return the meta object for the reference '<em>Column</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentUriQueryParam#getColumn()
+   * @see #getContentUriQueryParam()
    * @generated
    */
-  EAttribute getContentUriParam_Name();
+  EReference getContentUriQueryParam_Column();
 
   /**
    * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ContentUriSegment <em>Content Uri Segment</em>}'.
@@ -6621,22 +6621,22 @@ public interface MickeyLangPackage extends EPackage
     EReference CONTENT_URI__SEGMENTS = eINSTANCE.getContentUri_Segments();
 
     /**
-     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamImpl <em>Content Uri Param</em>}' class.
+     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriQueryParamImpl <em>Content Uri Query Param</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.justeat.mickeydb.mickeyLang.impl.ContentUriParamImpl
-     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUriParam()
+     * @see com.justeat.mickeydb.mickeyLang.impl.ContentUriQueryParamImpl
+     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUriQueryParam()
      * @generated
      */
-    EClass CONTENT_URI_PARAM = eINSTANCE.getContentUriParam();
+    EClass CONTENT_URI_QUERY_PARAM = eINSTANCE.getContentUriQueryParam();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Column</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CONTENT_URI_PARAM__NAME = eINSTANCE.getContentUriParam_Name();
+    EReference CONTENT_URI_QUERY_PARAM__COLUMN = eINSTANCE.getContentUriQueryParam_Column();
 
     /**
      * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriSegmentImpl <em>Content Uri Segment</em>}' class.

@@ -27,20 +27,36 @@ class CustomActionsGenerator {
 	import «model.packageName».Abstract«model.databaseName»OpenHelper.Sources;
 	import «model.packageName».«content.type.pascalize»Record;
 	import java.util.List;
+	import java.util.Set;
+	import com.justeat.mickeydb.util.Uris;
 	
 	public class «content.name.pascalize»Actions extends CustomActions {
 		
 		@Override
 		public void addQueryExpressionsFromUriSegmentParams(Uri uri, Query query) {
 			List<String> segments = uri.getPathSegments();
+			Set<String> queryKeys = Uris.getQueryParameterNames(uri);
 			«FOR entry : content.action.uri.segments.indexed»
 			«IF entry.value instanceof ContentUriParamSegment»
 			«var param = entry.value as ContentUriParamSegment»
 			«IF param.param.inferredColumnType != ColumnType::TEXT»
-			long «param.param.name»Slug = Long.parseLong(segments.get(«entry.key»));
+			long «param.param.name.camelize»Slug = Long.parseLong(segments.get(«entry.key»));
 			«ELSE»
-			String «param.param.name»Slug = segments.get(«entry.key»);
+			String «param.param.name.camelize»Slug = segments.get(«entry.key»);
 			«ENDIF» 
+			«ENDIF»
+			«ENDFOR»
+			
+			«FOR queryParam : content.action.params»
+			«var columnType = queryParam.column.inferredColumnType»
+			«IF columnType == ColumnType::BOOLEAN»
+			«queryParam.column.inferredColumnType.toJavaTypeName» «queryParam.column.name.camelize»QueryParam = Uris.getBooleanQueryParamOrDefault(uri, queryKeys, «content.type.pascalize».«queryParam.column.name.underscore.toUpperCase»);
+			«ELSEIF columnType == ColumnType::INTEGER»
+			«queryParam.column.inferredColumnType.toJavaTypeName» «queryParam.column.name.camelize»QueryParam = Uris.getIntQueryParamOrDefault(uri, queryKeys, «content.type.pascalize».«queryParam.column.name.underscore.toUpperCase»);
+			«ELSEIF columnType == ColumnType::REAL»
+			«queryParam.column.inferredColumnType.toJavaTypeName» «queryParam.column.name.camelize»QueryParam = Uris.getDoubleQueryParamOrDefault(uri, queryKeys, «content.type.pascalize».«queryParam.column.name.underscore.toUpperCase»);
+			«ELSE»
+			«queryParam.column.inferredColumnType.toJavaTypeName» «queryParam.column.name.camelize»QueryParam = Uris.getStringQueryParamOrDefault(uri, queryKeys, «content.type.pascalize».«queryParam.column.name.underscore.toUpperCase»);
 			«ENDIF»
 			«ENDFOR»
 			
@@ -48,12 +64,17 @@ class CustomActionsGenerator {
 			«IF entry.value instanceof ContentUriParamSegment»
 			«var param = entry.value as ContentUriParamSegment»
 			«IF param.param.inferredColumnType != ColumnType::TEXT»
-			query.expr(«content.type.pascalize».«param.param.name.underscore.toUpperCase», Query.Op.EQ, «param.param.name»Slug);
+			query.expr(«content.type.pascalize».«param.param.name.underscore.toUpperCase», Query.Op.EQ, «param.param.name.camelize»Slug);
 			«ELSE»
-			query.expr("cast(" + «content.type.pascalize».«param.param.name.underscore.toUpperCase» + " as text)", Query.Op.EQ, «param.param.name»Slug);
+			query.expr("cast(" + «content.type.pascalize».«param.param.name.underscore.toUpperCase» + " as text)", Query.Op.EQ, «param.param.name.camelize»Slug);
 			«ENDIF» 
+			«ENDIF» 
+			«ENDFOR»
+			«FOR queryParam : content.action.params»
+			if(queryKeys.contains(«content.type.pascalize».«queryParam.column.name.underscore.toUpperCase»)) {
+				query.expr(«content.type.pascalize».«queryParam.column.name.underscore.toUpperCase», Query.Op.EQ, «queryParam.column.name.camelize»QueryParam);
+			}
 			
-			«ENDIF» 
 			«ENDFOR»
 		}
 		

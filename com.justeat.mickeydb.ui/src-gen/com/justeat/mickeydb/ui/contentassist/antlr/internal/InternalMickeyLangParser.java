@@ -708,25 +708,25 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleContentUri"
 
 
-    // $ANTLR start "entryRuleContentUriParam"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:229:1: entryRuleContentUriParam : ruleContentUriParam EOF ;
-    public final void entryRuleContentUriParam() throws RecognitionException {
+    // $ANTLR start "entryRuleContentUriQueryParam"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:229:1: entryRuleContentUriQueryParam : ruleContentUriQueryParam EOF ;
+    public final void entryRuleContentUriQueryParam() throws RecognitionException {
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:230:1: ( ruleContentUriParam EOF )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:231:1: ruleContentUriParam EOF
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:230:1: ( ruleContentUriQueryParam EOF )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:231:1: ruleContentUriQueryParam EOF
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getContentUriParamRule()); 
+               before(grammarAccess.getContentUriQueryParamRule()); 
             }
-            pushFollow(FOLLOW_ruleContentUriParam_in_entryRuleContentUriParam427);
-            ruleContentUriParam();
+            pushFollow(FOLLOW_ruleContentUriQueryParam_in_entryRuleContentUriQueryParam427);
+            ruleContentUriQueryParam();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getContentUriParamRule()); 
+               after(grammarAccess.getContentUriQueryParamRule()); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContentUriParam434); if (state.failed) return ;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContentUriQueryParam434); if (state.failed) return ;
 
             }
 
@@ -739,30 +739,30 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "entryRuleContentUriParam"
+    // $ANTLR end "entryRuleContentUriQueryParam"
 
 
-    // $ANTLR start "ruleContentUriParam"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:238:1: ruleContentUriParam : ( ( rule__ContentUriParam__Group__0 ) ) ;
-    public final void ruleContentUriParam() throws RecognitionException {
+    // $ANTLR start "ruleContentUriQueryParam"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:238:1: ruleContentUriQueryParam : ( ( rule__ContentUriQueryParam__Group__0 ) ) ;
+    public final void ruleContentUriQueryParam() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:242:2: ( ( ( rule__ContentUriParam__Group__0 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:243:1: ( ( rule__ContentUriParam__Group__0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:242:2: ( ( ( rule__ContentUriQueryParam__Group__0 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:243:1: ( ( rule__ContentUriQueryParam__Group__0 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:243:1: ( ( rule__ContentUriParam__Group__0 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:244:1: ( rule__ContentUriParam__Group__0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:243:1: ( ( rule__ContentUriQueryParam__Group__0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:244:1: ( rule__ContentUriQueryParam__Group__0 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getContentUriParamAccess().getGroup()); 
+               before(grammarAccess.getContentUriQueryParamAccess().getGroup()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:245:1: ( rule__ContentUriParam__Group__0 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:245:2: rule__ContentUriParam__Group__0
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:245:1: ( rule__ContentUriQueryParam__Group__0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:245:2: rule__ContentUriQueryParam__Group__0
             {
-            pushFollow(FOLLOW_rule__ContentUriParam__Group__0_in_ruleContentUriParam460);
-            rule__ContentUriParam__Group__0();
+            pushFollow(FOLLOW_rule__ContentUriQueryParam__Group__0_in_ruleContentUriQueryParam460);
+            rule__ContentUriQueryParam__Group__0();
 
             state._fsp--;
             if (state.failed) return ;
@@ -770,7 +770,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getContentUriParamAccess().getGroup()); 
+               after(grammarAccess.getContentUriQueryParamAccess().getGroup()); 
             }
 
             }
@@ -790,7 +790,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "ruleContentUriParam"
+    // $ANTLR end "ruleContentUriQueryParam"
 
 
     // $ANTLR start "entryRuleContentUriSegment"
@@ -7617,6 +7617,58 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
                     case 12:
                         {
                         switch ( input.LA(4) ) {
+                        case RULE_NUMBER:
+                        case RULE_ID:
+                        case RULE_STRING:
+                        case 62:
+                        case 74:
+                        case 75:
+                        case 77:
+                        case 80:
+                        case 81:
+                        case 119:
+                        case 120:
+                        case 130:
+                        case 131:
+                        case 132:
+                        case 133:
+                            {
+                            alt11=1;
+                            }
+                            break;
+                        case 16:
+                            {
+                            int LA11_7 = input.LA(5);
+
+                            if ( ((LA11_7>=RULE_ID && LA11_7<=RULE_STRING)||LA11_7==16||LA11_7==62||(LA11_7>=74 && LA11_7<=75)||LA11_7==77||(LA11_7>=80 && LA11_7<=81)||(LA11_7>=119 && LA11_7<=120)||(LA11_7>=130 && LA11_7<=133)) ) {
+                                alt11=2;
+                            }
+                            else if ( (LA11_7==RULE_NUMBER) ) {
+                                int LA11_8 = input.LA(6);
+
+                                if ( (synpred36_InternalMickeyLang()) ) {
+                                    alt11=1;
+                                }
+                                else if ( (synpred37_InternalMickeyLang()) ) {
+                                    alt11=2;
+                                }
+                                else {
+                                    if (state.backtracking>0) {state.failed=true; return ;}
+                                    NoViableAltException nvae =
+                                        new NoViableAltException("", 11, 8, input);
+
+                                    throw nvae;
+                                }
+                            }
+                            else {
+                                if (state.backtracking>0) {state.failed=true; return ;}
+                                NoViableAltException nvae =
+                                    new NoViableAltException("", 11, 7, input);
+
+                                throw nvae;
+                            }
+                            }
+                            break;
                         case EOF:
                         case 12:
                         case 13:
@@ -7683,58 +7735,6 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
                         case 129:
                             {
                             alt11=2;
-                            }
-                            break;
-                        case 16:
-                            {
-                            int LA11_7 = input.LA(5);
-
-                            if ( (LA11_7==RULE_NUMBER) ) {
-                                int LA11_8 = input.LA(6);
-
-                                if ( (synpred36_InternalMickeyLang()) ) {
-                                    alt11=1;
-                                }
-                                else if ( (synpred37_InternalMickeyLang()) ) {
-                                    alt11=2;
-                                }
-                                else {
-                                    if (state.backtracking>0) {state.failed=true; return ;}
-                                    NoViableAltException nvae =
-                                        new NoViableAltException("", 11, 8, input);
-
-                                    throw nvae;
-                                }
-                            }
-                            else if ( ((LA11_7>=RULE_ID && LA11_7<=RULE_STRING)||LA11_7==16||LA11_7==62||(LA11_7>=74 && LA11_7<=75)||LA11_7==77||(LA11_7>=80 && LA11_7<=81)||(LA11_7>=119 && LA11_7<=120)||(LA11_7>=130 && LA11_7<=133)) ) {
-                                alt11=2;
-                            }
-                            else {
-                                if (state.backtracking>0) {state.failed=true; return ;}
-                                NoViableAltException nvae =
-                                    new NoViableAltException("", 11, 7, input);
-
-                                throw nvae;
-                            }
-                            }
-                            break;
-                        case RULE_NUMBER:
-                        case RULE_ID:
-                        case RULE_STRING:
-                        case 62:
-                        case 74:
-                        case 75:
-                        case 77:
-                        case 80:
-                        case 81:
-                        case 119:
-                        case 120:
-                        case 130:
-                        case 131:
-                        case 132:
-                        case 133:
-                            {
-                            alt11=1;
                             }
                             break;
                         default:
@@ -9799,14 +9799,14 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
                         alt26=3;
                         }
                         break;
-                    case 103:
-                        {
-                        alt26=2;
-                        }
-                        break;
                     case 104:
                         {
                         alt26=1;
+                        }
+                        break;
+                    case 103:
+                        {
+                        alt26=2;
                         }
                         break;
                     default:
@@ -14453,23 +14453,23 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__ContentUri__Group_1__1__Impl"
 
 
-    // $ANTLR start "rule__ContentUriParam__Group__0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4360:1: rule__ContentUriParam__Group__0 : rule__ContentUriParam__Group__0__Impl rule__ContentUriParam__Group__1 ;
-    public final void rule__ContentUriParam__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__ContentUriQueryParam__Group__0"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4360:1: rule__ContentUriQueryParam__Group__0 : rule__ContentUriQueryParam__Group__0__Impl rule__ContentUriQueryParam__Group__1 ;
+    public final void rule__ContentUriQueryParam__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4364:1: ( rule__ContentUriParam__Group__0__Impl rule__ContentUriParam__Group__1 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4365:2: rule__ContentUriParam__Group__0__Impl rule__ContentUriParam__Group__1
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4364:1: ( rule__ContentUriQueryParam__Group__0__Impl rule__ContentUriQueryParam__Group__1 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4365:2: rule__ContentUriQueryParam__Group__0__Impl rule__ContentUriQueryParam__Group__1
             {
-            pushFollow(FOLLOW_rule__ContentUriParam__Group__0__Impl_in_rule__ContentUriParam__Group__09432);
-            rule__ContentUriParam__Group__0__Impl();
+            pushFollow(FOLLOW_rule__ContentUriQueryParam__Group__0__Impl_in_rule__ContentUriQueryParam__Group__09432);
+            rule__ContentUriQueryParam__Group__0__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            pushFollow(FOLLOW_rule__ContentUriParam__Group__1_in_rule__ContentUriParam__Group__09435);
-            rule__ContentUriParam__Group__1();
+            pushFollow(FOLLOW_rule__ContentUriQueryParam__Group__1_in_rule__ContentUriQueryParam__Group__09435);
+            rule__ContentUriQueryParam__Group__1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14488,12 +14488,12 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ContentUriParam__Group__0"
+    // $ANTLR end "rule__ContentUriQueryParam__Group__0"
 
 
-    // $ANTLR start "rule__ContentUriParam__Group__0__Impl"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4372:1: rule__ContentUriParam__Group__0__Impl : ( 'param' ) ;
-    public final void rule__ContentUriParam__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ContentUriQueryParam__Group__0__Impl"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4372:1: rule__ContentUriQueryParam__Group__0__Impl : ( 'param' ) ;
+    public final void rule__ContentUriQueryParam__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -14505,11 +14505,11 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4378:1: 'param'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getContentUriParamAccess().getParamKeyword_0()); 
+               before(grammarAccess.getContentUriQueryParamAccess().getParamKeyword_0()); 
             }
-            match(input,70,FOLLOW_70_in_rule__ContentUriParam__Group__0__Impl9463); if (state.failed) return ;
+            match(input,70,FOLLOW_70_in_rule__ContentUriQueryParam__Group__0__Impl9463); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getContentUriParamAccess().getParamKeyword_0()); 
+               after(grammarAccess.getContentUriQueryParamAccess().getParamKeyword_0()); 
             }
 
             }
@@ -14529,21 +14529,21 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ContentUriParam__Group__0__Impl"
+    // $ANTLR end "rule__ContentUriQueryParam__Group__0__Impl"
 
 
-    // $ANTLR start "rule__ContentUriParam__Group__1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4391:1: rule__ContentUriParam__Group__1 : rule__ContentUriParam__Group__1__Impl ;
-    public final void rule__ContentUriParam__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__ContentUriQueryParam__Group__1"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4391:1: rule__ContentUriQueryParam__Group__1 : rule__ContentUriQueryParam__Group__1__Impl ;
+    public final void rule__ContentUriQueryParam__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4395:1: ( rule__ContentUriParam__Group__1__Impl )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4396:2: rule__ContentUriParam__Group__1__Impl
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4395:1: ( rule__ContentUriQueryParam__Group__1__Impl )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4396:2: rule__ContentUriQueryParam__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ContentUriParam__Group__1__Impl_in_rule__ContentUriParam__Group__19494);
-            rule__ContentUriParam__Group__1__Impl();
+            pushFollow(FOLLOW_rule__ContentUriQueryParam__Group__1__Impl_in_rule__ContentUriQueryParam__Group__19494);
+            rule__ContentUriQueryParam__Group__1__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14562,30 +14562,30 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ContentUriParam__Group__1"
+    // $ANTLR end "rule__ContentUriQueryParam__Group__1"
 
 
-    // $ANTLR start "rule__ContentUriParam__Group__1__Impl"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4402:1: rule__ContentUriParam__Group__1__Impl : ( ( rule__ContentUriParam__NameAssignment_1 ) ) ;
-    public final void rule__ContentUriParam__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ContentUriQueryParam__Group__1__Impl"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4402:1: rule__ContentUriQueryParam__Group__1__Impl : ( ( rule__ContentUriQueryParam__ColumnAssignment_1 ) ) ;
+    public final void rule__ContentUriQueryParam__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4406:1: ( ( ( rule__ContentUriParam__NameAssignment_1 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4407:1: ( ( rule__ContentUriParam__NameAssignment_1 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4406:1: ( ( ( rule__ContentUriQueryParam__ColumnAssignment_1 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4407:1: ( ( rule__ContentUriQueryParam__ColumnAssignment_1 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4407:1: ( ( rule__ContentUriParam__NameAssignment_1 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4408:1: ( rule__ContentUriParam__NameAssignment_1 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4407:1: ( ( rule__ContentUriQueryParam__ColumnAssignment_1 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4408:1: ( rule__ContentUriQueryParam__ColumnAssignment_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getContentUriParamAccess().getNameAssignment_1()); 
+               before(grammarAccess.getContentUriQueryParamAccess().getColumnAssignment_1()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4409:1: ( rule__ContentUriParam__NameAssignment_1 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4409:2: rule__ContentUriParam__NameAssignment_1
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4409:1: ( rule__ContentUriQueryParam__ColumnAssignment_1 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:4409:2: rule__ContentUriQueryParam__ColumnAssignment_1
             {
-            pushFollow(FOLLOW_rule__ContentUriParam__NameAssignment_1_in_rule__ContentUriParam__Group__1__Impl9521);
-            rule__ContentUriParam__NameAssignment_1();
+            pushFollow(FOLLOW_rule__ContentUriQueryParam__ColumnAssignment_1_in_rule__ContentUriQueryParam__Group__1__Impl9521);
+            rule__ContentUriQueryParam__ColumnAssignment_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -14593,7 +14593,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getContentUriParamAccess().getNameAssignment_1()); 
+               after(grammarAccess.getContentUriQueryParamAccess().getColumnAssignment_1()); 
             }
 
             }
@@ -14613,7 +14613,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ContentUriParam__Group__1__Impl"
+    // $ANTLR end "rule__ContentUriQueryParam__Group__1__Impl"
 
 
     // $ANTLR start "rule__ContentUriSegment__Group_1__0"
@@ -50239,28 +50239,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionStatement__ParamsAssignment_6_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17587:1: rule__ActionStatement__ParamsAssignment_6_1 : ( ruleContentUriParam ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17587:1: rule__ActionStatement__ParamsAssignment_6_1 : ( ruleContentUriQueryParam ) ;
     public final void rule__ActionStatement__ParamsAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17591:1: ( ( ruleContentUriParam ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17592:1: ( ruleContentUriParam )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17591:1: ( ( ruleContentUriQueryParam ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17592:1: ( ruleContentUriQueryParam )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17592:1: ( ruleContentUriParam )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17593:1: ruleContentUriParam
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17592:1: ( ruleContentUriQueryParam )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17593:1: ruleContentUriQueryParam
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getActionStatementAccess().getParamsContentUriParamParserRuleCall_6_1_0()); 
+               before(grammarAccess.getActionStatementAccess().getParamsContentUriQueryParamParserRuleCall_6_1_0()); 
             }
-            pushFollow(FOLLOW_ruleContentUriParam_in_rule__ActionStatement__ParamsAssignment_6_135422);
-            ruleContentUriParam();
+            pushFollow(FOLLOW_ruleContentUriQueryParam_in_rule__ActionStatement__ParamsAssignment_6_135422);
+            ruleContentUriQueryParam();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getActionStatementAccess().getParamsContentUriParamParserRuleCall_6_1_0()); 
+               after(grammarAccess.getActionStatementAccess().getParamsContentUriQueryParamParserRuleCall_6_1_0()); 
             }
 
             }
@@ -50414,25 +50414,37 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__ContentUri__SegmentsAssignment_1_1"
 
 
-    // $ANTLR start "rule__ContentUriParam__NameAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17647:1: rule__ContentUriParam__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__ContentUriParam__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__ContentUriQueryParam__ColumnAssignment_1"
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17647:1: rule__ContentUriQueryParam__ColumnAssignment_1 : ( ( RULE_ID ) ) ;
+    public final void rule__ContentUriQueryParam__ColumnAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17651:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17652:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17651:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17652:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17652:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17653:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17652:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17653:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0()); 
+               before(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceCrossReference_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ContentUriParam__NameAssignment_135546); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17654:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17655:1: RULE_ID
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0()); 
+               before(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceIDTerminalRuleCall_1_0_1()); 
+            }
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ContentUriQueryParam__ColumnAssignment_135550); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceIDTerminalRuleCall_1_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceCrossReference_1_0()); 
             }
 
             }
@@ -50452,26 +50464,26 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__ContentUriParam__NameAssignment_1"
+    // $ANTLR end "rule__ContentUriQueryParam__ColumnAssignment_1"
 
 
     // $ANTLR start "rule__ContentUriSegment__NameAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17662:1: rule__ContentUriSegment__NameAssignment_0 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17666:1: rule__ContentUriSegment__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__ContentUriSegment__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17666:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17667:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17670:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17671:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17667:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17668:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17671:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17672:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getContentUriSegmentAccess().getNameIDTerminalRuleCall_0_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ContentUriSegment__NameAssignment_035577); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ContentUriSegment__NameAssignment_035585); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getContentUriSegmentAccess().getNameIDTerminalRuleCall_0_0()); 
             }
@@ -50497,28 +50509,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ContentUriSegment__ParamAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17677:1: rule__ContentUriSegment__ParamAssignment_1_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17681:1: rule__ContentUriSegment__ParamAssignment_1_2 : ( ( RULE_ID ) ) ;
     public final void rule__ContentUriSegment__ParamAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17681:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17682:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17685:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17686:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17682:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17683:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17686:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17687:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getContentUriSegmentAccess().getParamColumnSourceCrossReference_1_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17684:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17685:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17688:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17689:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getContentUriSegmentAccess().getParamColumnSourceIDTerminalRuleCall_1_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ContentUriSegment__ParamAssignment_1_235612); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ContentUriSegment__ParamAssignment_1_235620); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getContentUriSegmentAccess().getParamColumnSourceIDTerminalRuleCall_1_2_0_1()); 
             }
@@ -50550,22 +50562,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MigrationBlock__NameAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17696:1: rule__MigrationBlock__NameAssignment_2 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17700:1: rule__MigrationBlock__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__MigrationBlock__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17700:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17701:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17704:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17705:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17701:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17702:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17705:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17706:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMigrationBlockAccess().getNameIDTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MigrationBlock__NameAssignment_235647); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__MigrationBlock__NameAssignment_235655); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getMigrationBlockAccess().getNameIDTerminalRuleCall_2_0()); 
             }
@@ -50591,28 +50603,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MigrationBlock__FromAssignment_3_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17711:1: rule__MigrationBlock__FromAssignment_3_1 : ( ( ruleQualifiedName ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17715:1: rule__MigrationBlock__FromAssignment_3_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__MigrationBlock__FromAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17715:1: ( ( ( ruleQualifiedName ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17716:1: ( ( ruleQualifiedName ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17719:1: ( ( ( ruleQualifiedName ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17720:1: ( ( ruleQualifiedName ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17716:1: ( ( ruleQualifiedName ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17717:1: ( ruleQualifiedName )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17720:1: ( ( ruleQualifiedName ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17721:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMigrationBlockAccess().getFromMigrationBlockCrossReference_3_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17718:1: ( ruleQualifiedName )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17719:1: ruleQualifiedName
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17722:1: ( ruleQualifiedName )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17723:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMigrationBlockAccess().getFromMigrationBlockQualifiedNameParserRuleCall_3_1_0_1()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__MigrationBlock__FromAssignment_3_135682);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__MigrationBlock__FromAssignment_3_135690);
             ruleQualifiedName();
 
             state._fsp--;
@@ -50648,22 +50660,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MigrationBlock__StatementsAssignment_5_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17730:1: rule__MigrationBlock__StatementsAssignment_5_0 : ( ruleDDLStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17734:1: rule__MigrationBlock__StatementsAssignment_5_0 : ( ruleDDLStatement ) ;
     public final void rule__MigrationBlock__StatementsAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17734:1: ( ( ruleDDLStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17735:1: ( ruleDDLStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17738:1: ( ( ruleDDLStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17739:1: ( ruleDDLStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17735:1: ( ruleDDLStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17736:1: ruleDDLStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17739:1: ( ruleDDLStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17740:1: ruleDDLStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getMigrationBlockAccess().getStatementsDDLStatementParserRuleCall_5_0_0()); 
             }
-            pushFollow(FOLLOW_ruleDDLStatement_in_rule__MigrationBlock__StatementsAssignment_5_035717);
+            pushFollow(FOLLOW_ruleDDLStatement_in_rule__MigrationBlock__StatementsAssignment_5_035725);
             ruleDDLStatement();
 
             state._fsp--;
@@ -50693,28 +50705,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprConcat__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17745:1: rule__ExprConcat__OpAssignment_1_1 : ( ( '||' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17749:1: rule__ExprConcat__OpAssignment_1_1 : ( ( '||' ) ) ;
     public final void rule__ExprConcat__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17749:1: ( ( ( '||' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17750:1: ( ( '||' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17753:1: ( ( ( '||' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17754:1: ( ( '||' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17750:1: ( ( '||' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17751:1: ( '||' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExprConcatAccess().getOpVerticalLineVerticalLineKeyword_1_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17752:1: ( '||' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17753:1: '||'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17754:1: ( ( '||' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17755:1: ( '||' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprConcatAccess().getOpVerticalLineVerticalLineKeyword_1_1_0()); 
             }
-            match(input,117,FOLLOW_117_in_rule__ExprConcat__OpAssignment_1_135753); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17756:1: ( '||' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17757:1: '||'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExprConcatAccess().getOpVerticalLineVerticalLineKeyword_1_1_0()); 
+            }
+            match(input,117,FOLLOW_117_in_rule__ExprConcat__OpAssignment_1_135761); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExprConcatAccess().getOpVerticalLineVerticalLineKeyword_1_1_0()); 
             }
@@ -50746,22 +50758,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprConcat__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17768:1: rule__ExprConcat__RightAssignment_1_2 : ( ruleExprMult ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17772:1: rule__ExprConcat__RightAssignment_1_2 : ( ruleExprMult ) ;
     public final void rule__ExprConcat__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17772:1: ( ( ruleExprMult ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17773:1: ( ruleExprMult )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17776:1: ( ( ruleExprMult ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17777:1: ( ruleExprMult )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17773:1: ( ruleExprMult )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17774:1: ruleExprMult
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17777:1: ( ruleExprMult )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17778:1: ruleExprMult
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprConcatAccess().getRightExprMultParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExprMult_in_rule__ExprConcat__RightAssignment_1_235792);
+            pushFollow(FOLLOW_ruleExprMult_in_rule__ExprConcat__RightAssignment_1_235800);
             ruleExprMult();
 
             state._fsp--;
@@ -50791,25 +50803,25 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprMult__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17783:1: rule__ExprMult__OpAssignment_1_1 : ( ( rule__ExprMult__OpAlternatives_1_1_0 ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17787:1: rule__ExprMult__OpAssignment_1_1 : ( ( rule__ExprMult__OpAlternatives_1_1_0 ) ) ;
     public final void rule__ExprMult__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17787:1: ( ( ( rule__ExprMult__OpAlternatives_1_1_0 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17788:1: ( ( rule__ExprMult__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17791:1: ( ( ( rule__ExprMult__OpAlternatives_1_1_0 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17792:1: ( ( rule__ExprMult__OpAlternatives_1_1_0 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17788:1: ( ( rule__ExprMult__OpAlternatives_1_1_0 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17789:1: ( rule__ExprMult__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17792:1: ( ( rule__ExprMult__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17793:1: ( rule__ExprMult__OpAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprMultAccess().getOpAlternatives_1_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17790:1: ( rule__ExprMult__OpAlternatives_1_1_0 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17790:2: rule__ExprMult__OpAlternatives_1_1_0
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17794:1: ( rule__ExprMult__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17794:2: rule__ExprMult__OpAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__ExprMult__OpAlternatives_1_1_0_in_rule__ExprMult__OpAssignment_1_135823);
+            pushFollow(FOLLOW_rule__ExprMult__OpAlternatives_1_1_0_in_rule__ExprMult__OpAssignment_1_135831);
             rule__ExprMult__OpAlternatives_1_1_0();
 
             state._fsp--;
@@ -50842,22 +50854,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprMult__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17799:1: rule__ExprMult__RightAssignment_1_2 : ( ruleExprAdd ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17803:1: rule__ExprMult__RightAssignment_1_2 : ( ruleExprAdd ) ;
     public final void rule__ExprMult__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17803:1: ( ( ruleExprAdd ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17804:1: ( ruleExprAdd )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17807:1: ( ( ruleExprAdd ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17808:1: ( ruleExprAdd )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17804:1: ( ruleExprAdd )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17805:1: ruleExprAdd
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17808:1: ( ruleExprAdd )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17809:1: ruleExprAdd
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprMultAccess().getRightExprAddParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExprAdd_in_rule__ExprMult__RightAssignment_1_235856);
+            pushFollow(FOLLOW_ruleExprAdd_in_rule__ExprMult__RightAssignment_1_235864);
             ruleExprAdd();
 
             state._fsp--;
@@ -50887,25 +50899,25 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprAdd__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17814:1: rule__ExprAdd__OpAssignment_1_1 : ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17818:1: rule__ExprAdd__OpAssignment_1_1 : ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) ) ;
     public final void rule__ExprAdd__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17818:1: ( ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17819:1: ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17822:1: ( ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17823:1: ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17819:1: ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17820:1: ( rule__ExprAdd__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17823:1: ( ( rule__ExprAdd__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17824:1: ( rule__ExprAdd__OpAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprAddAccess().getOpAlternatives_1_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17821:1: ( rule__ExprAdd__OpAlternatives_1_1_0 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17821:2: rule__ExprAdd__OpAlternatives_1_1_0
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17825:1: ( rule__ExprAdd__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17825:2: rule__ExprAdd__OpAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__ExprAdd__OpAlternatives_1_1_0_in_rule__ExprAdd__OpAssignment_1_135887);
+            pushFollow(FOLLOW_rule__ExprAdd__OpAlternatives_1_1_0_in_rule__ExprAdd__OpAssignment_1_135895);
             rule__ExprAdd__OpAlternatives_1_1_0();
 
             state._fsp--;
@@ -50938,22 +50950,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprAdd__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17830:1: rule__ExprAdd__RightAssignment_1_2 : ( ruleExprBit ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17834:1: rule__ExprAdd__RightAssignment_1_2 : ( ruleExprBit ) ;
     public final void rule__ExprAdd__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17834:1: ( ( ruleExprBit ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17835:1: ( ruleExprBit )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17838:1: ( ( ruleExprBit ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17839:1: ( ruleExprBit )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17835:1: ( ruleExprBit )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17836:1: ruleExprBit
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17839:1: ( ruleExprBit )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17840:1: ruleExprBit
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprAddAccess().getRightExprBitParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExprBit_in_rule__ExprAdd__RightAssignment_1_235920);
+            pushFollow(FOLLOW_ruleExprBit_in_rule__ExprAdd__RightAssignment_1_235928);
             ruleExprBit();
 
             state._fsp--;
@@ -50983,25 +50995,25 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprBit__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17845:1: rule__ExprBit__OpAssignment_1_1 : ( ( rule__ExprBit__OpAlternatives_1_1_0 ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17849:1: rule__ExprBit__OpAssignment_1_1 : ( ( rule__ExprBit__OpAlternatives_1_1_0 ) ) ;
     public final void rule__ExprBit__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17849:1: ( ( ( rule__ExprBit__OpAlternatives_1_1_0 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17850:1: ( ( rule__ExprBit__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17853:1: ( ( ( rule__ExprBit__OpAlternatives_1_1_0 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17854:1: ( ( rule__ExprBit__OpAlternatives_1_1_0 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17850:1: ( ( rule__ExprBit__OpAlternatives_1_1_0 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17851:1: ( rule__ExprBit__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17854:1: ( ( rule__ExprBit__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17855:1: ( rule__ExprBit__OpAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprBitAccess().getOpAlternatives_1_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17852:1: ( rule__ExprBit__OpAlternatives_1_1_0 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17852:2: rule__ExprBit__OpAlternatives_1_1_0
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17856:1: ( rule__ExprBit__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17856:2: rule__ExprBit__OpAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__ExprBit__OpAlternatives_1_1_0_in_rule__ExprBit__OpAssignment_1_135951);
+            pushFollow(FOLLOW_rule__ExprBit__OpAlternatives_1_1_0_in_rule__ExprBit__OpAssignment_1_135959);
             rule__ExprBit__OpAlternatives_1_1_0();
 
             state._fsp--;
@@ -51034,22 +51046,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprBit__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17861:1: rule__ExprBit__RightAssignment_1_2 : ( ruleExprRelate ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17865:1: rule__ExprBit__RightAssignment_1_2 : ( ruleExprRelate ) ;
     public final void rule__ExprBit__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17865:1: ( ( ruleExprRelate ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17866:1: ( ruleExprRelate )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17869:1: ( ( ruleExprRelate ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17870:1: ( ruleExprRelate )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17866:1: ( ruleExprRelate )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17867:1: ruleExprRelate
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17870:1: ( ruleExprRelate )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17871:1: ruleExprRelate
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprBitAccess().getRightExprRelateParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExprRelate_in_rule__ExprBit__RightAssignment_1_235984);
+            pushFollow(FOLLOW_ruleExprRelate_in_rule__ExprBit__RightAssignment_1_235992);
             ruleExprRelate();
 
             state._fsp--;
@@ -51079,25 +51091,25 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprRelate__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17876:1: rule__ExprRelate__OpAssignment_1_1 : ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17880:1: rule__ExprRelate__OpAssignment_1_1 : ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) ) ;
     public final void rule__ExprRelate__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17880:1: ( ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17881:1: ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17884:1: ( ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17885:1: ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17881:1: ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17882:1: ( rule__ExprRelate__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17885:1: ( ( rule__ExprRelate__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17886:1: ( rule__ExprRelate__OpAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprRelateAccess().getOpAlternatives_1_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17883:1: ( rule__ExprRelate__OpAlternatives_1_1_0 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17883:2: rule__ExprRelate__OpAlternatives_1_1_0
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17887:1: ( rule__ExprRelate__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17887:2: rule__ExprRelate__OpAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__ExprRelate__OpAlternatives_1_1_0_in_rule__ExprRelate__OpAssignment_1_136015);
+            pushFollow(FOLLOW_rule__ExprRelate__OpAlternatives_1_1_0_in_rule__ExprRelate__OpAssignment_1_136023);
             rule__ExprRelate__OpAlternatives_1_1_0();
 
             state._fsp--;
@@ -51130,22 +51142,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprRelate__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17892:1: rule__ExprRelate__RightAssignment_1_2 : ( ruleExprEqual ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17896:1: rule__ExprRelate__RightAssignment_1_2 : ( ruleExprEqual ) ;
     public final void rule__ExprRelate__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17896:1: ( ( ruleExprEqual ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17897:1: ( ruleExprEqual )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17900:1: ( ( ruleExprEqual ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17901:1: ( ruleExprEqual )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17897:1: ( ruleExprEqual )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17898:1: ruleExprEqual
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17901:1: ( ruleExprEqual )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17902:1: ruleExprEqual
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprRelateAccess().getRightExprEqualParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExprEqual_in_rule__ExprRelate__RightAssignment_1_236048);
+            pushFollow(FOLLOW_ruleExprEqual_in_rule__ExprRelate__RightAssignment_1_236056);
             ruleExprEqual();
 
             state._fsp--;
@@ -51175,25 +51187,25 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprEqual__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17907:1: rule__ExprEqual__OpAssignment_1_1 : ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17911:1: rule__ExprEqual__OpAssignment_1_1 : ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) ) ;
     public final void rule__ExprEqual__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17911:1: ( ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17912:1: ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17915:1: ( ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17916:1: ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17912:1: ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17913:1: ( rule__ExprEqual__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17916:1: ( ( rule__ExprEqual__OpAlternatives_1_1_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17917:1: ( rule__ExprEqual__OpAlternatives_1_1_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprEqualAccess().getOpAlternatives_1_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17914:1: ( rule__ExprEqual__OpAlternatives_1_1_0 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17914:2: rule__ExprEqual__OpAlternatives_1_1_0
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17918:1: ( rule__ExprEqual__OpAlternatives_1_1_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17918:2: rule__ExprEqual__OpAlternatives_1_1_0
             {
-            pushFollow(FOLLOW_rule__ExprEqual__OpAlternatives_1_1_0_in_rule__ExprEqual__OpAssignment_1_136079);
+            pushFollow(FOLLOW_rule__ExprEqual__OpAlternatives_1_1_0_in_rule__ExprEqual__OpAssignment_1_136087);
             rule__ExprEqual__OpAlternatives_1_1_0();
 
             state._fsp--;
@@ -51226,22 +51238,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprEqual__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17923:1: rule__ExprEqual__RightAssignment_1_2 : ( ruleExprAnd ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17927:1: rule__ExprEqual__RightAssignment_1_2 : ( ruleExprAnd ) ;
     public final void rule__ExprEqual__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17927:1: ( ( ruleExprAnd ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17928:1: ( ruleExprAnd )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17931:1: ( ( ruleExprAnd ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17932:1: ( ruleExprAnd )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17928:1: ( ruleExprAnd )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17929:1: ruleExprAnd
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17932:1: ( ruleExprAnd )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17933:1: ruleExprAnd
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprEqualAccess().getRightExprAndParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExprAnd_in_rule__ExprEqual__RightAssignment_1_236112);
+            pushFollow(FOLLOW_ruleExprAnd_in_rule__ExprEqual__RightAssignment_1_236120);
             ruleExprAnd();
 
             state._fsp--;
@@ -51271,28 +51283,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprAnd__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17938:1: rule__ExprAnd__OpAssignment_1_1 : ( ( 'and' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17942:1: rule__ExprAnd__OpAssignment_1_1 : ( ( 'and' ) ) ;
     public final void rule__ExprAnd__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17942:1: ( ( ( 'and' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17943:1: ( ( 'and' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17946:1: ( ( ( 'and' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17947:1: ( ( 'and' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17943:1: ( ( 'and' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17944:1: ( 'and' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExprAndAccess().getOpAndKeyword_1_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17945:1: ( 'and' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17946:1: 'and'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17947:1: ( ( 'and' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17948:1: ( 'and' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprAndAccess().getOpAndKeyword_1_1_0()); 
             }
-            match(input,118,FOLLOW_118_in_rule__ExprAnd__OpAssignment_1_136148); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17949:1: ( 'and' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17950:1: 'and'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExprAndAccess().getOpAndKeyword_1_1_0()); 
+            }
+            match(input,118,FOLLOW_118_in_rule__ExprAnd__OpAssignment_1_136156); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExprAndAccess().getOpAndKeyword_1_1_0()); 
             }
@@ -51324,22 +51336,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprAnd__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17961:1: rule__ExprAnd__RightAssignment_1_2 : ( ruleExprOr ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17965:1: rule__ExprAnd__RightAssignment_1_2 : ( ruleExprOr ) ;
     public final void rule__ExprAnd__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17965:1: ( ( ruleExprOr ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17966:1: ( ruleExprOr )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17969:1: ( ( ruleExprOr ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17970:1: ( ruleExprOr )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17966:1: ( ruleExprOr )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17967:1: ruleExprOr
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17970:1: ( ruleExprOr )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17971:1: ruleExprOr
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprAndAccess().getRightExprOrParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExprOr_in_rule__ExprAnd__RightAssignment_1_236187);
+            pushFollow(FOLLOW_ruleExprOr_in_rule__ExprAnd__RightAssignment_1_236195);
             ruleExprOr();
 
             state._fsp--;
@@ -51369,28 +51381,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprOr__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17976:1: rule__ExprOr__OpAssignment_1_1 : ( ( 'or' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17980:1: rule__ExprOr__OpAssignment_1_1 : ( ( 'or' ) ) ;
     public final void rule__ExprOr__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17980:1: ( ( ( 'or' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17981:1: ( ( 'or' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17984:1: ( ( ( 'or' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17985:1: ( ( 'or' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17981:1: ( ( 'or' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17982:1: ( 'or' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getExprOrAccess().getOpOrKeyword_1_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17983:1: ( 'or' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17984:1: 'or'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17985:1: ( ( 'or' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17986:1: ( 'or' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprOrAccess().getOpOrKeyword_1_1_0()); 
             }
-            match(input,113,FOLLOW_113_in_rule__ExprOr__OpAssignment_1_136223); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17987:1: ( 'or' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17988:1: 'or'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getExprOrAccess().getOpOrKeyword_1_1_0()); 
+            }
+            match(input,113,FOLLOW_113_in_rule__ExprOr__OpAssignment_1_136231); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getExprOrAccess().getOpOrKeyword_1_1_0()); 
             }
@@ -51422,22 +51434,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ExprOr__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:17999:1: rule__ExprOr__RightAssignment_1_2 : ( ruleNullCheckExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18003:1: rule__ExprOr__RightAssignment_1_2 : ( ruleNullCheckExpression ) ;
     public final void rule__ExprOr__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18003:1: ( ( ruleNullCheckExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18004:1: ( ruleNullCheckExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18007:1: ( ( ruleNullCheckExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18008:1: ( ruleNullCheckExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18004:1: ( ruleNullCheckExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18005:1: ruleNullCheckExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18008:1: ( ruleNullCheckExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18009:1: ruleNullCheckExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getExprOrAccess().getRightNullCheckExpressionParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleNullCheckExpression_in_rule__ExprOr__RightAssignment_1_236262);
+            pushFollow(FOLLOW_ruleNullCheckExpression_in_rule__ExprOr__RightAssignment_1_236270);
             ruleNullCheckExpression();
 
             state._fsp--;
@@ -51467,22 +51479,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NullCheckExpression__RightAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18014:1: rule__NullCheckExpression__RightAssignment_1_1 : ( ruleNullExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18018:1: rule__NullCheckExpression__RightAssignment_1_1 : ( ruleNullExpression ) ;
     public final void rule__NullCheckExpression__RightAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18018:1: ( ( ruleNullExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18019:1: ( ruleNullExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18022:1: ( ( ruleNullExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18023:1: ( ruleNullExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18019:1: ( ruleNullExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18020:1: ruleNullExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18023:1: ( ruleNullExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18024:1: ruleNullExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getNullCheckExpressionAccess().getRightNullExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleNullExpression_in_rule__NullCheckExpression__RightAssignment_1_136293);
+            pushFollow(FOLLOW_ruleNullExpression_in_rule__NullCheckExpression__RightAssignment_1_136301);
             ruleNullExpression();
 
             state._fsp--;
@@ -51512,28 +51524,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ColumnAssignment_0_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18029:1: rule__PrimaryExpression__ColumnAssignment_0_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18033:1: rule__PrimaryExpression__ColumnAssignment_0_2 : ( ( RULE_ID ) ) ;
     public final void rule__PrimaryExpression__ColumnAssignment_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18033:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18034:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18037:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18038:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18034:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18035:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18038:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18039:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceCrossReference_0_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18036:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18037:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18040:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18041:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_0_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_0_236328); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_0_236336); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_0_2_0_1()); 
             }
@@ -51565,28 +51577,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ColumnAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18048:1: rule__PrimaryExpression__ColumnAssignment_1_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18052:1: rule__PrimaryExpression__ColumnAssignment_1_2 : ( ( RULE_ID ) ) ;
     public final void rule__PrimaryExpression__ColumnAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18052:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18053:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18056:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18057:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18053:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18054:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18057:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18058:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceCrossReference_1_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18055:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18056:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18059:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18060:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_1_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_1_236367); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_1_236375); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_1_2_0_1()); 
             }
@@ -51618,28 +51630,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__SourceAssignment_2_1_0_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18067:1: rule__PrimaryExpression__SourceAssignment_2_1_0_0 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18071:1: rule__PrimaryExpression__SourceAssignment_2_1_0_0 : ( ( RULE_ID ) ) ;
     public final void rule__PrimaryExpression__SourceAssignment_2_1_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18071:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18072:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18075:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18076:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18072:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18073:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18076:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18077:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getSourceSelectSourceCrossReference_2_1_0_0_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18074:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18075:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18078:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18079:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getSourceSelectSourceIDTerminalRuleCall_2_1_0_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_0_036406); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_0_036414); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getSourceSelectSourceIDTerminalRuleCall_2_1_0_0_0_1()); 
             }
@@ -51671,28 +51683,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__SourceAssignment_2_1_1_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18086:1: rule__PrimaryExpression__SourceAssignment_2_1_1_0 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18090:1: rule__PrimaryExpression__SourceAssignment_2_1_1_0 : ( ( RULE_ID ) ) ;
     public final void rule__PrimaryExpression__SourceAssignment_2_1_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18090:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18091:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18094:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18095:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18091:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18092:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18095:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18096:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getSourceSelectSourceCrossReference_2_1_1_0_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18093:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18094:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18097:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18098:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getSourceSelectSourceIDTerminalRuleCall_2_1_1_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_1_036445); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_1_036453); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getSourceSelectSourceIDTerminalRuleCall_2_1_1_0_0_1()); 
             }
@@ -51724,28 +51736,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__AllAssignment_2_1_1_2_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18105:1: rule__PrimaryExpression__AllAssignment_2_1_1_2_0 : ( ( '*' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18109:1: rule__PrimaryExpression__AllAssignment_2_1_1_2_0 : ( ( '*' ) ) ;
     public final void rule__PrimaryExpression__AllAssignment_2_1_1_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18109:1: ( ( ( '*' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18110:1: ( ( '*' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18113:1: ( ( ( '*' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18114:1: ( ( '*' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18110:1: ( ( '*' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18111:1: ( '*' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_2_1_1_2_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18112:1: ( '*' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18113:1: '*'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18114:1: ( ( '*' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18115:1: ( '*' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_2_1_1_2_0_0()); 
             }
-            match(input,12,FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_2_1_1_2_036485); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18116:1: ( '*' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18117:1: '*'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_2_1_1_2_0_0()); 
+            }
+            match(input,12,FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_2_1_1_2_036493); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_2_1_1_2_0_0()); 
             }
@@ -51777,28 +51789,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ColumnAssignment_2_1_1_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18128:1: rule__PrimaryExpression__ColumnAssignment_2_1_1_2_1 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18132:1: rule__PrimaryExpression__ColumnAssignment_2_1_1_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__PrimaryExpression__ColumnAssignment_2_1_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18132:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18133:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18136:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18137:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18133:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18134:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18137:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18138:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceCrossReference_2_1_1_2_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18135:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18136:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18139:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18140:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_2_1_1_2_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_1_2_136528); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_1_2_136536); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_2_1_1_2_1_0_1()); 
             }
@@ -51830,28 +51842,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ColumnAssignment_2_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18147:1: rule__PrimaryExpression__ColumnAssignment_2_1_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18151:1: rule__PrimaryExpression__ColumnAssignment_2_1_2 : ( ( RULE_ID ) ) ;
     public final void rule__PrimaryExpression__ColumnAssignment_2_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18151:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18152:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18155:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18156:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18152:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18153:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18156:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18157:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceCrossReference_2_1_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18154:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18155:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18158:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18159:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_2_1_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_236567); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_236575); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getColumnColumnSourceIDTerminalRuleCall_2_1_2_0_1()); 
             }
@@ -51883,22 +51895,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__LiteralValueAssignment_3_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18166:1: rule__PrimaryExpression__LiteralValueAssignment_3_1 : ( ruleLiteralValue ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18170:1: rule__PrimaryExpression__LiteralValueAssignment_3_1 : ( ruleLiteralValue ) ;
     public final void rule__PrimaryExpression__LiteralValueAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18170:1: ( ( ruleLiteralValue ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18171:1: ( ruleLiteralValue )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18174:1: ( ( ruleLiteralValue ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18175:1: ( ruleLiteralValue )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18171:1: ( ruleLiteralValue )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18172:1: ruleLiteralValue
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18175:1: ( ruleLiteralValue )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18176:1: ruleLiteralValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getLiteralValueLiteralValueParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_rule__PrimaryExpression__LiteralValueAssignment_3_136602);
+            pushFollow(FOLLOW_ruleLiteralValue_in_rule__PrimaryExpression__LiteralValueAssignment_3_136610);
             ruleLiteralValue();
 
             state._fsp--;
@@ -51928,22 +51940,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ExpressionAssignment_4_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18181:1: rule__PrimaryExpression__ExpressionAssignment_4_2 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18185:1: rule__PrimaryExpression__ExpressionAssignment_4_2 : ( ruleSqlExpression ) ;
     public final void rule__PrimaryExpression__ExpressionAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18185:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18186:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18189:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18190:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18186:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18187:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18190:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18191:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getExpressionSqlExpressionParserRuleCall_4_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_4_236633);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_4_236641);
             ruleSqlExpression();
 
             state._fsp--;
@@ -51973,28 +51985,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__NotAssignment_5_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18196:1: rule__PrimaryExpression__NotAssignment_5_1 : ( ( 'not' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18200:1: rule__PrimaryExpression__NotAssignment_5_1 : ( ( 'not' ) ) ;
     public final void rule__PrimaryExpression__NotAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18200:1: ( ( ( 'not' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18201:1: ( ( 'not' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18204:1: ( ( ( 'not' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18205:1: ( ( 'not' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18201:1: ( ( 'not' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18202:1: ( 'not' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPrimaryExpressionAccess().getNotNotKeyword_5_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18203:1: ( 'not' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18204:1: 'not'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18205:1: ( ( 'not' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18206:1: ( 'not' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getNotNotKeyword_5_1_0()); 
             }
-            match(input,119,FOLLOW_119_in_rule__PrimaryExpression__NotAssignment_5_136669); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18207:1: ( 'not' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18208:1: 'not'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getPrimaryExpressionAccess().getNotNotKeyword_5_1_0()); 
+            }
+            match(input,119,FOLLOW_119_in_rule__PrimaryExpression__NotAssignment_5_136677); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getNotNotKeyword_5_1_0()); 
             }
@@ -52026,28 +52038,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ExistsAssignment_5_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18219:1: rule__PrimaryExpression__ExistsAssignment_5_2 : ( ( 'exists' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18223:1: rule__PrimaryExpression__ExistsAssignment_5_2 : ( ( 'exists' ) ) ;
     public final void rule__PrimaryExpression__ExistsAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18223:1: ( ( ( 'exists' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18224:1: ( ( 'exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18227:1: ( ( ( 'exists' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18228:1: ( ( 'exists' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18224:1: ( ( 'exists' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18225:1: ( 'exists' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPrimaryExpressionAccess().getExistsExistsKeyword_5_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18226:1: ( 'exists' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18227:1: 'exists'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18228:1: ( ( 'exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18229:1: ( 'exists' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getExistsExistsKeyword_5_2_0()); 
             }
-            match(input,120,FOLLOW_120_in_rule__PrimaryExpression__ExistsAssignment_5_236713); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18230:1: ( 'exists' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18231:1: 'exists'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getPrimaryExpressionAccess().getExistsExistsKeyword_5_2_0()); 
+            }
+            match(input,120,FOLLOW_120_in_rule__PrimaryExpression__ExistsAssignment_5_236721); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getExistsExistsKeyword_5_2_0()); 
             }
@@ -52079,22 +52091,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__SelectAssignment_5_4"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18242:1: rule__PrimaryExpression__SelectAssignment_5_4 : ( ruleSelectStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18246:1: rule__PrimaryExpression__SelectAssignment_5_4 : ( ruleSelectStatement ) ;
     public final void rule__PrimaryExpression__SelectAssignment_5_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18246:1: ( ( ruleSelectStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18247:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18250:1: ( ( ruleSelectStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18251:1: ( ruleSelectStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18247:1: ( ruleSelectStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18248:1: ruleSelectStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18251:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18252:1: ruleSelectStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getSelectSelectStatementParserRuleCall_5_4_0()); 
             }
-            pushFollow(FOLLOW_ruleSelectStatement_in_rule__PrimaryExpression__SelectAssignment_5_436752);
+            pushFollow(FOLLOW_ruleSelectStatement_in_rule__PrimaryExpression__SelectAssignment_5_436760);
             ruleSelectStatement();
 
             state._fsp--;
@@ -52124,22 +52136,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__CaseExpressionAssignment_6_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18257:1: rule__PrimaryExpression__CaseExpressionAssignment_6_2 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18261:1: rule__PrimaryExpression__CaseExpressionAssignment_6_2 : ( ruleSqlExpression ) ;
     public final void rule__PrimaryExpression__CaseExpressionAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18261:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18262:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18265:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18266:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18262:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18263:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18266:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18267:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getCaseExpressionSqlExpressionParserRuleCall_6_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__CaseExpressionAssignment_6_236783);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__CaseExpressionAssignment_6_236791);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52169,22 +52181,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__CasesAssignment_6_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18272:1: rule__PrimaryExpression__CasesAssignment_6_3 : ( ruleCase ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18276:1: rule__PrimaryExpression__CasesAssignment_6_3 : ( ruleCase ) ;
     public final void rule__PrimaryExpression__CasesAssignment_6_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18276:1: ( ( ruleCase ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18277:1: ( ruleCase )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18280:1: ( ( ruleCase ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18281:1: ( ruleCase )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18277:1: ( ruleCase )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18278:1: ruleCase
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18281:1: ( ruleCase )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18282:1: ruleCase
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getCasesCaseParserRuleCall_6_3_0()); 
             }
-            pushFollow(FOLLOW_ruleCase_in_rule__PrimaryExpression__CasesAssignment_6_336814);
+            pushFollow(FOLLOW_ruleCase_in_rule__PrimaryExpression__CasesAssignment_6_336822);
             ruleCase();
 
             state._fsp--;
@@ -52214,22 +52226,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ElseExpressionAssignment_6_4_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18287:1: rule__PrimaryExpression__ElseExpressionAssignment_6_4_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18291:1: rule__PrimaryExpression__ElseExpressionAssignment_6_4_1 : ( ruleSqlExpression ) ;
     public final void rule__PrimaryExpression__ElseExpressionAssignment_6_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18291:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18292:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18295:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18296:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18292:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18293:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18296:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18297:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getElseExpressionSqlExpressionParserRuleCall_6_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ElseExpressionAssignment_6_4_136845);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ElseExpressionAssignment_6_4_136853);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52259,22 +52271,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__NameAssignment_7_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18302:1: rule__PrimaryExpression__NameAssignment_7_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18306:1: rule__PrimaryExpression__NameAssignment_7_1 : ( RULE_ID ) ;
     public final void rule__PrimaryExpression__NameAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18306:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18307:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18310:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18311:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18307:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18308:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18311:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18312:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getNameIDTerminalRuleCall_7_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__NameAssignment_7_136876); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__NameAssignment_7_136884); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getNameIDTerminalRuleCall_7_1_0()); 
             }
@@ -52300,28 +52312,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__AllAssignment_7_3_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18317:1: rule__PrimaryExpression__AllAssignment_7_3_0 : ( ( '*' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18321:1: rule__PrimaryExpression__AllAssignment_7_3_0 : ( ( '*' ) ) ;
     public final void rule__PrimaryExpression__AllAssignment_7_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18321:1: ( ( ( '*' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18322:1: ( ( '*' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18325:1: ( ( ( '*' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18326:1: ( ( '*' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18322:1: ( ( '*' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18323:1: ( '*' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_7_3_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18324:1: ( '*' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18325:1: '*'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18326:1: ( ( '*' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18327:1: ( '*' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_7_3_0_0()); 
             }
-            match(input,12,FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_7_3_036912); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18328:1: ( '*' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18329:1: '*'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_7_3_0_0()); 
+            }
+            match(input,12,FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_7_3_036920); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getAllAsteriskKeyword_7_3_0_0()); 
             }
@@ -52353,22 +52365,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ArgumentsAssignment_7_3_1_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18340:1: rule__PrimaryExpression__ArgumentsAssignment_7_3_1_0 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18344:1: rule__PrimaryExpression__ArgumentsAssignment_7_3_1_0 : ( ruleSqlExpression ) ;
     public final void rule__PrimaryExpression__ArgumentsAssignment_7_3_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18344:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18345:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18348:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18349:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18345:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18346:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18349:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18350:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getArgumentsSqlExpressionParserRuleCall_7_3_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_036951);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_036959);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52398,22 +52410,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18355:1: rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18359:1: rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_1 : ( ruleSqlExpression ) ;
     public final void rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18359:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18360:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18363:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18364:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18360:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18361:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18364:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18365:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getArgumentsSqlExpressionParserRuleCall_7_3_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_136982);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_136990);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52443,22 +52455,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ExpressionAssignment_8_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18370:1: rule__PrimaryExpression__ExpressionAssignment_8_3 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18374:1: rule__PrimaryExpression__ExpressionAssignment_8_3 : ( ruleSqlExpression ) ;
     public final void rule__PrimaryExpression__ExpressionAssignment_8_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18374:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18375:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18378:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18379:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18375:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18376:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18379:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18380:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getExpressionSqlExpressionParserRuleCall_8_3_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_8_337013);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_8_337021);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52488,22 +52500,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__TypeAssignment_8_5"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18385:1: rule__PrimaryExpression__TypeAssignment_8_5 : ( ruleSqliteDataType ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18389:1: rule__PrimaryExpression__TypeAssignment_8_5 : ( ruleSqliteDataType ) ;
     public final void rule__PrimaryExpression__TypeAssignment_8_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18389:1: ( ( ruleSqliteDataType ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18390:1: ( ruleSqliteDataType )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18393:1: ( ( ruleSqliteDataType ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18394:1: ( ruleSqliteDataType )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18390:1: ( ruleSqliteDataType )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18391:1: ruleSqliteDataType
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18394:1: ( ruleSqliteDataType )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18395:1: ruleSqliteDataType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getTypeSqliteDataTypeEnumRuleCall_8_5_0()); 
             }
-            pushFollow(FOLLOW_ruleSqliteDataType_in_rule__PrimaryExpression__TypeAssignment_8_537044);
+            pushFollow(FOLLOW_ruleSqliteDataType_in_rule__PrimaryExpression__TypeAssignment_8_537052);
             ruleSqliteDataType();
 
             state._fsp--;
@@ -52533,28 +52545,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryExpression__ArgAssignment_9_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18400:1: rule__PrimaryExpression__ArgAssignment_9_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18404:1: rule__PrimaryExpression__ArgAssignment_9_2 : ( ( RULE_ID ) ) ;
     public final void rule__PrimaryExpression__ArgAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18404:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18405:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18408:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18409:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18405:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18406:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18409:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18410:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getArgFunctionArgCrossReference_9_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18407:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18408:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18411:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18412:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryExpressionAccess().getArgFunctionArgIDTerminalRuleCall_9_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ArgAssignment_9_237079); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryExpression__ArgAssignment_9_237087); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryExpressionAccess().getArgFunctionArgIDTerminalRuleCall_9_2_0_1()); 
             }
@@ -52586,22 +52598,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Case__WhenExpressionAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18419:1: rule__Case__WhenExpressionAssignment_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18423:1: rule__Case__WhenExpressionAssignment_1 : ( ruleSqlExpression ) ;
     public final void rule__Case__WhenExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18423:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18424:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18427:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18428:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18424:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18425:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18428:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18429:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getWhenExpressionSqlExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__Case__WhenExpressionAssignment_137114);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__Case__WhenExpressionAssignment_137122);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52631,22 +52643,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Case__ThenExpressionAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18434:1: rule__Case__ThenExpressionAssignment_3 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18438:1: rule__Case__ThenExpressionAssignment_3 : ( ruleSqlExpression ) ;
     public final void rule__Case__ThenExpressionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18438:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18439:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18442:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18443:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18439:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18440:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18443:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18444:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getThenExpressionSqlExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__Case__ThenExpressionAssignment_337145);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__Case__ThenExpressionAssignment_337153);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52676,22 +52688,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectStatement__CoreAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18449:1: rule__SelectStatement__CoreAssignment_0 : ( ruleSelectCore ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18453:1: rule__SelectStatement__CoreAssignment_0 : ( ruleSelectCore ) ;
     public final void rule__SelectStatement__CoreAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18453:1: ( ( ruleSelectCore ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18454:1: ( ruleSelectCore )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18457:1: ( ( ruleSelectCore ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18458:1: ( ruleSelectCore )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18454:1: ( ruleSelectCore )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18455:1: ruleSelectCore
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18458:1: ( ruleSelectCore )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18459:1: ruleSelectCore
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectStatementAccess().getCoreSelectCoreParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSelectCore_in_rule__SelectStatement__CoreAssignment_037176);
+            pushFollow(FOLLOW_ruleSelectCore_in_rule__SelectStatement__CoreAssignment_037184);
             ruleSelectCore();
 
             state._fsp--;
@@ -52721,22 +52733,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectStatement__OrderbyAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18464:1: rule__SelectStatement__OrderbyAssignment_1_1 : ( ruleOrderingTermList ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18468:1: rule__SelectStatement__OrderbyAssignment_1_1 : ( ruleOrderingTermList ) ;
     public final void rule__SelectStatement__OrderbyAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18468:1: ( ( ruleOrderingTermList ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18469:1: ( ruleOrderingTermList )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18472:1: ( ( ruleOrderingTermList ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18473:1: ( ruleOrderingTermList )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18469:1: ( ruleOrderingTermList )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18470:1: ruleOrderingTermList
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18473:1: ( ruleOrderingTermList )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18474:1: ruleOrderingTermList
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectStatementAccess().getOrderbyOrderingTermListParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleOrderingTermList_in_rule__SelectStatement__OrderbyAssignment_1_137207);
+            pushFollow(FOLLOW_ruleOrderingTermList_in_rule__SelectStatement__OrderbyAssignment_1_137215);
             ruleOrderingTermList();
 
             state._fsp--;
@@ -52766,22 +52778,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectStatement__LimitAssignment_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18479:1: rule__SelectStatement__LimitAssignment_2_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18483:1: rule__SelectStatement__LimitAssignment_2_1 : ( ruleSqlExpression ) ;
     public final void rule__SelectStatement__LimitAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18483:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18484:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18487:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18488:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18484:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18485:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18488:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18489:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectStatementAccess().getLimitSqlExpressionParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitAssignment_2_137238);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitAssignment_2_137246);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52811,22 +52823,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectStatement__LimitOffsetAssignment_2_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18494:1: rule__SelectStatement__LimitOffsetAssignment_2_2_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18498:1: rule__SelectStatement__LimitOffsetAssignment_2_2_1 : ( ruleSqlExpression ) ;
     public final void rule__SelectStatement__LimitOffsetAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18498:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18499:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18502:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18503:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18499:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18500:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18503:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18504:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectStatementAccess().getLimitOffsetSqlExpressionParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitOffsetAssignment_2_2_137269);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitOffsetAssignment_2_2_137277);
             ruleSqlExpression();
 
             state._fsp--;
@@ -52856,22 +52868,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__OrderingTermList__OrderingTermsAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18509:1: rule__OrderingTermList__OrderingTermsAssignment_0 : ( ruleOrderingTerm ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18513:1: rule__OrderingTermList__OrderingTermsAssignment_0 : ( ruleOrderingTerm ) ;
     public final void rule__OrderingTermList__OrderingTermsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18513:1: ( ( ruleOrderingTerm ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18514:1: ( ruleOrderingTerm )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18517:1: ( ( ruleOrderingTerm ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18518:1: ( ruleOrderingTerm )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18514:1: ( ruleOrderingTerm )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18515:1: ruleOrderingTerm
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18518:1: ( ruleOrderingTerm )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18519:1: ruleOrderingTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrderingTermListAccess().getOrderingTermsOrderingTermParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_037300);
+            pushFollow(FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_037308);
             ruleOrderingTerm();
 
             state._fsp--;
@@ -52901,22 +52913,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__OrderingTermList__OrderingTermsAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18524:1: rule__OrderingTermList__OrderingTermsAssignment_1_1 : ( ruleOrderingTerm ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18528:1: rule__OrderingTermList__OrderingTermsAssignment_1_1 : ( ruleOrderingTerm ) ;
     public final void rule__OrderingTermList__OrderingTermsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18528:1: ( ( ruleOrderingTerm ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18529:1: ( ruleOrderingTerm )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18532:1: ( ( ruleOrderingTerm ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18533:1: ( ruleOrderingTerm )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18529:1: ( ruleOrderingTerm )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18530:1: ruleOrderingTerm
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18533:1: ( ruleOrderingTerm )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18534:1: ruleOrderingTerm
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrderingTermListAccess().getOrderingTermsOrderingTermParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_1_137331);
+            pushFollow(FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_1_137339);
             ruleOrderingTerm();
 
             state._fsp--;
@@ -52946,22 +52958,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectCore__OpAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18539:1: rule__SelectCore__OpAssignment_1_1 : ( ruleCompoundOperator ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18543:1: rule__SelectCore__OpAssignment_1_1 : ( ruleCompoundOperator ) ;
     public final void rule__SelectCore__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18543:1: ( ( ruleCompoundOperator ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18544:1: ( ruleCompoundOperator )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18547:1: ( ( ruleCompoundOperator ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18548:1: ( ruleCompoundOperator )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18544:1: ( ruleCompoundOperator )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18545:1: ruleCompoundOperator
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18548:1: ( ruleCompoundOperator )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18549:1: ruleCompoundOperator
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectCoreAccess().getOpCompoundOperatorEnumRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleCompoundOperator_in_rule__SelectCore__OpAssignment_1_137362);
+            pushFollow(FOLLOW_ruleCompoundOperator_in_rule__SelectCore__OpAssignment_1_137370);
             ruleCompoundOperator();
 
             state._fsp--;
@@ -52991,22 +53003,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectCore__RightAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18554:1: rule__SelectCore__RightAssignment_1_2 : ( ruleSelectExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18558:1: rule__SelectCore__RightAssignment_1_2 : ( ruleSelectExpression ) ;
     public final void rule__SelectCore__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18558:1: ( ( ruleSelectExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18559:1: ( ruleSelectExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18562:1: ( ( ruleSelectExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18563:1: ( ruleSelectExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18559:1: ( ruleSelectExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18560:1: ruleSelectExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18563:1: ( ruleSelectExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18564:1: ruleSelectExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectCoreAccess().getRightSelectExpressionParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSelectExpression_in_rule__SelectCore__RightAssignment_1_237393);
+            pushFollow(FOLLOW_ruleSelectExpression_in_rule__SelectCore__RightAssignment_1_237401);
             ruleSelectExpression();
 
             state._fsp--;
@@ -53036,28 +53048,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__DistinctAssignment_2_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18569:1: rule__SelectExpression__DistinctAssignment_2_0 : ( ( 'distinct' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18573:1: rule__SelectExpression__DistinctAssignment_2_0 : ( ( 'distinct' ) ) ;
     public final void rule__SelectExpression__DistinctAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18573:1: ( ( ( 'distinct' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18574:1: ( ( 'distinct' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18577:1: ( ( ( 'distinct' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18578:1: ( ( 'distinct' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18574:1: ( ( 'distinct' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18575:1: ( 'distinct' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectExpressionAccess().getDistinctDistinctKeyword_2_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18576:1: ( 'distinct' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18577:1: 'distinct'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18578:1: ( ( 'distinct' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18579:1: ( 'distinct' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getDistinctDistinctKeyword_2_0_0()); 
             }
-            match(input,121,FOLLOW_121_in_rule__SelectExpression__DistinctAssignment_2_037429); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18580:1: ( 'distinct' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18581:1: 'distinct'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getSelectExpressionAccess().getDistinctDistinctKeyword_2_0_0()); 
+            }
+            match(input,121,FOLLOW_121_in_rule__SelectExpression__DistinctAssignment_2_037437); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelectExpressionAccess().getDistinctDistinctKeyword_2_0_0()); 
             }
@@ -53089,28 +53101,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__AllAssignment_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18592:1: rule__SelectExpression__AllAssignment_2_1 : ( ( 'all' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18596:1: rule__SelectExpression__AllAssignment_2_1 : ( ( 'all' ) ) ;
     public final void rule__SelectExpression__AllAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18596:1: ( ( ( 'all' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18597:1: ( ( 'all' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18600:1: ( ( ( 'all' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18601:1: ( ( 'all' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18597:1: ( ( 'all' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18598:1: ( 'all' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectExpressionAccess().getAllAllKeyword_2_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18599:1: ( 'all' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18600:1: 'all'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18601:1: ( ( 'all' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18602:1: ( 'all' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getAllAllKeyword_2_1_0()); 
             }
-            match(input,122,FOLLOW_122_in_rule__SelectExpression__AllAssignment_2_137473); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18603:1: ( 'all' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18604:1: 'all'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getSelectExpressionAccess().getAllAllKeyword_2_1_0()); 
+            }
+            match(input,122,FOLLOW_122_in_rule__SelectExpression__AllAssignment_2_137481); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelectExpressionAccess().getAllAllKeyword_2_1_0()); 
             }
@@ -53142,28 +53154,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__AllColumnsAssignment_3_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18615:1: rule__SelectExpression__AllColumnsAssignment_3_0 : ( ( '*' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18619:1: rule__SelectExpression__AllColumnsAssignment_3_0 : ( ( '*' ) ) ;
     public final void rule__SelectExpression__AllColumnsAssignment_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18619:1: ( ( ( '*' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18620:1: ( ( '*' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18623:1: ( ( ( '*' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18624:1: ( ( '*' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18620:1: ( ( '*' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18621:1: ( '*' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectExpressionAccess().getAllColumnsAsteriskKeyword_3_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18622:1: ( '*' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18623:1: '*'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18624:1: ( ( '*' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18625:1: ( '*' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getAllColumnsAsteriskKeyword_3_0_0()); 
             }
-            match(input,12,FOLLOW_12_in_rule__SelectExpression__AllColumnsAssignment_3_037517); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18626:1: ( '*' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18627:1: '*'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getSelectExpressionAccess().getAllColumnsAsteriskKeyword_3_0_0()); 
+            }
+            match(input,12,FOLLOW_12_in_rule__SelectExpression__AllColumnsAssignment_3_037525); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSelectExpressionAccess().getAllColumnsAsteriskKeyword_3_0_0()); 
             }
@@ -53195,22 +53207,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__SelectListAssignment_3_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18638:1: rule__SelectExpression__SelectListAssignment_3_1 : ( ruleSelectList ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18642:1: rule__SelectExpression__SelectListAssignment_3_1 : ( ruleSelectList ) ;
     public final void rule__SelectExpression__SelectListAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18642:1: ( ( ruleSelectList ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18643:1: ( ruleSelectList )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18646:1: ( ( ruleSelectList ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18647:1: ( ruleSelectList )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18643:1: ( ruleSelectList )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18644:1: ruleSelectList
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18647:1: ( ruleSelectList )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18648:1: ruleSelectList
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getSelectListSelectListParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSelectList_in_rule__SelectExpression__SelectListAssignment_3_137556);
+            pushFollow(FOLLOW_ruleSelectList_in_rule__SelectExpression__SelectListAssignment_3_137564);
             ruleSelectList();
 
             state._fsp--;
@@ -53240,22 +53252,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__SourceAssignment_4_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18653:1: rule__SelectExpression__SourceAssignment_4_1 : ( ruleJoinSource ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18657:1: rule__SelectExpression__SourceAssignment_4_1 : ( ruleJoinSource ) ;
     public final void rule__SelectExpression__SourceAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18657:1: ( ( ruleJoinSource ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18658:1: ( ruleJoinSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18661:1: ( ( ruleJoinSource ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18662:1: ( ruleJoinSource )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18658:1: ( ruleJoinSource )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18659:1: ruleJoinSource
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18662:1: ( ruleJoinSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18663:1: ruleJoinSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getSourceJoinSourceParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleJoinSource_in_rule__SelectExpression__SourceAssignment_4_137587);
+            pushFollow(FOLLOW_ruleJoinSource_in_rule__SelectExpression__SourceAssignment_4_137595);
             ruleJoinSource();
 
             state._fsp--;
@@ -53285,22 +53297,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__WhereAssignment_5_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18668:1: rule__SelectExpression__WhereAssignment_5_1 : ( ruleWhereExpressions ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18672:1: rule__SelectExpression__WhereAssignment_5_1 : ( ruleWhereExpressions ) ;
     public final void rule__SelectExpression__WhereAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18672:1: ( ( ruleWhereExpressions ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18673:1: ( ruleWhereExpressions )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18676:1: ( ( ruleWhereExpressions ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18677:1: ( ruleWhereExpressions )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18673:1: ( ruleWhereExpressions )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18674:1: ruleWhereExpressions
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18677:1: ( ruleWhereExpressions )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18678:1: ruleWhereExpressions
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getWhereWhereExpressionsParserRuleCall_5_1_0()); 
             }
-            pushFollow(FOLLOW_ruleWhereExpressions_in_rule__SelectExpression__WhereAssignment_5_137618);
+            pushFollow(FOLLOW_ruleWhereExpressions_in_rule__SelectExpression__WhereAssignment_5_137626);
             ruleWhereExpressions();
 
             state._fsp--;
@@ -53330,22 +53342,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__GroupByAssignment_6_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18683:1: rule__SelectExpression__GroupByAssignment_6_1 : ( ruleGroupByExpressions ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18687:1: rule__SelectExpression__GroupByAssignment_6_1 : ( ruleGroupByExpressions ) ;
     public final void rule__SelectExpression__GroupByAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18687:1: ( ( ruleGroupByExpressions ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18688:1: ( ruleGroupByExpressions )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18691:1: ( ( ruleGroupByExpressions ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18692:1: ( ruleGroupByExpressions )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18688:1: ( ruleGroupByExpressions )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18689:1: ruleGroupByExpressions
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18692:1: ( ruleGroupByExpressions )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18693:1: ruleGroupByExpressions
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getGroupByGroupByExpressionsParserRuleCall_6_1_0()); 
             }
-            pushFollow(FOLLOW_ruleGroupByExpressions_in_rule__SelectExpression__GroupByAssignment_6_137649);
+            pushFollow(FOLLOW_ruleGroupByExpressions_in_rule__SelectExpression__GroupByAssignment_6_137657);
             ruleGroupByExpressions();
 
             state._fsp--;
@@ -53375,22 +53387,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectExpression__HavingAssignment_7_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18698:1: rule__SelectExpression__HavingAssignment_7_1 : ( ruleHavingExpressions ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18702:1: rule__SelectExpression__HavingAssignment_7_1 : ( ruleHavingExpressions ) ;
     public final void rule__SelectExpression__HavingAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18702:1: ( ( ruleHavingExpressions ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18703:1: ( ruleHavingExpressions )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18706:1: ( ( ruleHavingExpressions ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18707:1: ( ruleHavingExpressions )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18703:1: ( ruleHavingExpressions )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18704:1: ruleHavingExpressions
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18707:1: ( ruleHavingExpressions )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18708:1: ruleHavingExpressions
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectExpressionAccess().getHavingHavingExpressionsParserRuleCall_7_1_0()); 
             }
-            pushFollow(FOLLOW_ruleHavingExpressions_in_rule__SelectExpression__HavingAssignment_7_137680);
+            pushFollow(FOLLOW_ruleHavingExpressions_in_rule__SelectExpression__HavingAssignment_7_137688);
             ruleHavingExpressions();
 
             state._fsp--;
@@ -53420,22 +53432,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectList__ResultColumnsAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18713:1: rule__SelectList__ResultColumnsAssignment_0 : ( ruleResultColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18717:1: rule__SelectList__ResultColumnsAssignment_0 : ( ruleResultColumn ) ;
     public final void rule__SelectList__ResultColumnsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18717:1: ( ( ruleResultColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18718:1: ( ruleResultColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18721:1: ( ( ruleResultColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18722:1: ( ruleResultColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18718:1: ( ruleResultColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18719:1: ruleResultColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18722:1: ( ruleResultColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18723:1: ruleResultColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectListAccess().getResultColumnsResultColumnParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_037711);
+            pushFollow(FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_037719);
             ruleResultColumn();
 
             state._fsp--;
@@ -53465,22 +53477,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SelectList__ResultColumnsAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18728:1: rule__SelectList__ResultColumnsAssignment_1_1 : ( ruleResultColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18732:1: rule__SelectList__ResultColumnsAssignment_1_1 : ( ruleResultColumn ) ;
     public final void rule__SelectList__ResultColumnsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18732:1: ( ( ruleResultColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18733:1: ( ruleResultColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18736:1: ( ( ruleResultColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18737:1: ( ruleResultColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18733:1: ( ruleResultColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18734:1: ruleResultColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18737:1: ( ruleResultColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18738:1: ruleResultColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSelectListAccess().getResultColumnsResultColumnParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_1_137742);
+            pushFollow(FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_1_137750);
             ruleResultColumn();
 
             state._fsp--;
@@ -53510,22 +53522,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__WhereExpressions__ExpressionAssignment"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18743:1: rule__WhereExpressions__ExpressionAssignment : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18747:1: rule__WhereExpressions__ExpressionAssignment : ( ruleSqlExpression ) ;
     public final void rule__WhereExpressions__ExpressionAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18747:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18748:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18751:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18752:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18748:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18749:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18752:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18753:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getWhereExpressionsAccess().getExpressionSqlExpressionParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__WhereExpressions__ExpressionAssignment37773);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__WhereExpressions__ExpressionAssignment37781);
             ruleSqlExpression();
 
             state._fsp--;
@@ -53555,22 +53567,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GroupByExpressions__GroupByExpressionsAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18758:1: rule__GroupByExpressions__GroupByExpressionsAssignment_0 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18762:1: rule__GroupByExpressions__GroupByExpressionsAssignment_0 : ( ruleSqlExpression ) ;
     public final void rule__GroupByExpressions__GroupByExpressionsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18762:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18763:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18766:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18767:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18763:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18764:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18767:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18768:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroupByExpressionsAccess().getGroupByExpressionsSqlExpressionParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_037804);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_037812);
             ruleSqlExpression();
 
             state._fsp--;
@@ -53600,22 +53612,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__GroupByExpressions__GroupByExpressionsAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18773:1: rule__GroupByExpressions__GroupByExpressionsAssignment_1_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18777:1: rule__GroupByExpressions__GroupByExpressionsAssignment_1_1 : ( ruleSqlExpression ) ;
     public final void rule__GroupByExpressions__GroupByExpressionsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18777:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18778:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18781:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18782:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18778:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18779:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18782:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18783:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGroupByExpressionsAccess().getGroupByExpressionsSqlExpressionParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_1_137835);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_1_137843);
             ruleSqlExpression();
 
             state._fsp--;
@@ -53645,22 +53657,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__HavingExpressions__ExpressionAssignment"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18788:1: rule__HavingExpressions__ExpressionAssignment : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18792:1: rule__HavingExpressions__ExpressionAssignment : ( ruleSqlExpression ) ;
     public final void rule__HavingExpressions__ExpressionAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18792:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18793:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18796:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18797:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18793:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18794:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18797:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18798:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getHavingExpressionsAccess().getExpressionSqlExpressionParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__HavingExpressions__ExpressionAssignment37866);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__HavingExpressions__ExpressionAssignment37874);
             ruleSqlExpression();
 
             state._fsp--;
@@ -53690,22 +53702,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__OrderingTerm__ExpressionAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18803:1: rule__OrderingTerm__ExpressionAssignment_0 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18807:1: rule__OrderingTerm__ExpressionAssignment_0 : ( ruleSqlExpression ) ;
     public final void rule__OrderingTerm__ExpressionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18807:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18808:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18811:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18812:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18808:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18809:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18812:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18813:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrderingTermAccess().getExpressionSqlExpressionParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__OrderingTerm__ExpressionAssignment_037897);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__OrderingTerm__ExpressionAssignment_037905);
             ruleSqlExpression();
 
             state._fsp--;
@@ -53735,28 +53747,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__OrderingTerm__AscAssignment_1_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18818:1: rule__OrderingTerm__AscAssignment_1_0 : ( ( 'asc' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18822:1: rule__OrderingTerm__AscAssignment_1_0 : ( ( 'asc' ) ) ;
     public final void rule__OrderingTerm__AscAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18822:1: ( ( ( 'asc' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18823:1: ( ( 'asc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18826:1: ( ( ( 'asc' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18827:1: ( ( 'asc' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18823:1: ( ( 'asc' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18824:1: ( 'asc' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getOrderingTermAccess().getAscAscKeyword_1_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18825:1: ( 'asc' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18826:1: 'asc'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18827:1: ( ( 'asc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18828:1: ( 'asc' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrderingTermAccess().getAscAscKeyword_1_0_0()); 
             }
-            match(input,123,FOLLOW_123_in_rule__OrderingTerm__AscAssignment_1_037933); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18829:1: ( 'asc' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18830:1: 'asc'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getOrderingTermAccess().getAscAscKeyword_1_0_0()); 
+            }
+            match(input,123,FOLLOW_123_in_rule__OrderingTerm__AscAssignment_1_037941); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOrderingTermAccess().getAscAscKeyword_1_0_0()); 
             }
@@ -53788,28 +53800,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__OrderingTerm__DescAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18841:1: rule__OrderingTerm__DescAssignment_1_1 : ( ( 'desc' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18845:1: rule__OrderingTerm__DescAssignment_1_1 : ( ( 'desc' ) ) ;
     public final void rule__OrderingTerm__DescAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18845:1: ( ( ( 'desc' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18846:1: ( ( 'desc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18849:1: ( ( ( 'desc' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18850:1: ( ( 'desc' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18846:1: ( ( 'desc' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18847:1: ( 'desc' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getOrderingTermAccess().getDescDescKeyword_1_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18848:1: ( 'desc' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18849:1: 'desc'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18850:1: ( ( 'desc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18851:1: ( 'desc' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getOrderingTermAccess().getDescDescKeyword_1_1_0()); 
             }
-            match(input,124,FOLLOW_124_in_rule__OrderingTerm__DescAssignment_1_137977); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18852:1: ( 'desc' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18853:1: 'desc'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getOrderingTermAccess().getDescDescKeyword_1_1_0()); 
+            }
+            match(input,124,FOLLOW_124_in_rule__OrderingTerm__DescAssignment_1_137985); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getOrderingTermAccess().getDescDescKeyword_1_1_0()); 
             }
@@ -53841,22 +53853,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinSource__SourceAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18864:1: rule__JoinSource__SourceAssignment_0 : ( ruleSingleSource ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18868:1: rule__JoinSource__SourceAssignment_0 : ( ruleSingleSource ) ;
     public final void rule__JoinSource__SourceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18868:1: ( ( ruleSingleSource ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18869:1: ( ruleSingleSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18872:1: ( ( ruleSingleSource ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18873:1: ( ruleSingleSource )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18869:1: ( ruleSingleSource )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18870:1: ruleSingleSource
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18873:1: ( ruleSingleSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18874:1: ruleSingleSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinSourceAccess().getSourceSingleSourceParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleSingleSource_in_rule__JoinSource__SourceAssignment_038016);
+            pushFollow(FOLLOW_ruleSingleSource_in_rule__JoinSource__SourceAssignment_038024);
             ruleSingleSource();
 
             state._fsp--;
@@ -53886,22 +53898,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinSource__JoinStatementsAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18879:1: rule__JoinSource__JoinStatementsAssignment_1 : ( ruleJoinStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18883:1: rule__JoinSource__JoinStatementsAssignment_1 : ( ruleJoinStatement ) ;
     public final void rule__JoinSource__JoinStatementsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18883:1: ( ( ruleJoinStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18884:1: ( ruleJoinStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18887:1: ( ( ruleJoinStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18888:1: ( ruleJoinStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18884:1: ( ruleJoinStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18885:1: ruleJoinStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18888:1: ( ruleJoinStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18889:1: ruleJoinStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinSourceAccess().getJoinStatementsJoinStatementParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleJoinStatement_in_rule__JoinSource__JoinStatementsAssignment_138047);
+            pushFollow(FOLLOW_ruleJoinStatement_in_rule__JoinSource__JoinStatementsAssignment_138055);
             ruleJoinStatement();
 
             state._fsp--;
@@ -53931,28 +53943,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleSourceTable__TableReferenceAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18894:1: rule__SingleSourceTable__TableReferenceAssignment_1 : ( ( ruleQualifiedName ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18898:1: rule__SingleSourceTable__TableReferenceAssignment_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__SingleSourceTable__TableReferenceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18898:1: ( ( ( ruleQualifiedName ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18899:1: ( ( ruleQualifiedName ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18902:1: ( ( ( ruleQualifiedName ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18903:1: ( ( ruleQualifiedName ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18899:1: ( ( ruleQualifiedName ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18900:1: ( ruleQualifiedName )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18903:1: ( ( ruleQualifiedName ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18904:1: ( ruleQualifiedName )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSingleSourceTableAccess().getTableReferenceTableDefinitionCrossReference_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18901:1: ( ruleQualifiedName )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18902:1: ruleQualifiedName
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18905:1: ( ruleQualifiedName )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18906:1: ruleQualifiedName
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSingleSourceTableAccess().getTableReferenceTableDefinitionQualifiedNameParserRuleCall_1_0_1()); 
             }
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__SingleSourceTable__TableReferenceAssignment_138082);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__SingleSourceTable__TableReferenceAssignment_138090);
             ruleQualifiedName();
 
             state._fsp--;
@@ -53988,22 +54000,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleSourceTable__NameAssignment_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18913:1: rule__SingleSourceTable__NameAssignment_2_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18917:1: rule__SingleSourceTable__NameAssignment_2_1 : ( RULE_ID ) ;
     public final void rule__SingleSourceTable__NameAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18917:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18918:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18921:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18922:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18918:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18919:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18922:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18923:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSingleSourceTableAccess().getNameIDTerminalRuleCall_2_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SingleSourceTable__NameAssignment_2_138117); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SingleSourceTable__NameAssignment_2_138125); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSingleSourceTableAccess().getNameIDTerminalRuleCall_2_1_0()); 
             }
@@ -54029,22 +54041,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleSourceSelectStatement__SelectStatementAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18928:1: rule__SingleSourceSelectStatement__SelectStatementAssignment_2 : ( ruleSelectStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18932:1: rule__SingleSourceSelectStatement__SelectStatementAssignment_2 : ( ruleSelectStatement ) ;
     public final void rule__SingleSourceSelectStatement__SelectStatementAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18932:1: ( ( ruleSelectStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18933:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18936:1: ( ( ruleSelectStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18937:1: ( ruleSelectStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18933:1: ( ruleSelectStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18934:1: ruleSelectStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18937:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18938:1: ruleSelectStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSingleSourceSelectStatementAccess().getSelectStatementSelectStatementParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSelectStatement_in_rule__SingleSourceSelectStatement__SelectStatementAssignment_238148);
+            pushFollow(FOLLOW_ruleSelectStatement_in_rule__SingleSourceSelectStatement__SelectStatementAssignment_238156);
             ruleSelectStatement();
 
             state._fsp--;
@@ -54074,22 +54086,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleSourceSelectStatement__NameAssignment_4_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18943:1: rule__SingleSourceSelectStatement__NameAssignment_4_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18947:1: rule__SingleSourceSelectStatement__NameAssignment_4_1 : ( RULE_ID ) ;
     public final void rule__SingleSourceSelectStatement__NameAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18947:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18948:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18951:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18952:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18948:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18949:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18952:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18953:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSingleSourceSelectStatementAccess().getNameIDTerminalRuleCall_4_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SingleSourceSelectStatement__NameAssignment_4_138179); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__SingleSourceSelectStatement__NameAssignment_4_138187); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getSingleSourceSelectStatementAccess().getNameIDTerminalRuleCall_4_1_0()); 
             }
@@ -54115,22 +54127,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleSourceJoin__JoinSourceAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18958:1: rule__SingleSourceJoin__JoinSourceAssignment_1 : ( ruleJoinSource ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18962:1: rule__SingleSourceJoin__JoinSourceAssignment_1 : ( ruleJoinSource ) ;
     public final void rule__SingleSourceJoin__JoinSourceAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18962:1: ( ( ruleJoinSource ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18963:1: ( ruleJoinSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18966:1: ( ( ruleJoinSource ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18967:1: ( ruleJoinSource )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18963:1: ( ruleJoinSource )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18964:1: ruleJoinSource
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18967:1: ( ruleJoinSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18968:1: ruleJoinSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getSingleSourceJoinAccess().getJoinSourceJoinSourceParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleJoinSource_in_rule__SingleSourceJoin__JoinSourceAssignment_138210);
+            pushFollow(FOLLOW_ruleJoinSource_in_rule__SingleSourceJoin__JoinSourceAssignment_138218);
             ruleJoinSource();
 
             state._fsp--;
@@ -54160,28 +54172,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinStatement__NaturalAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18973:1: rule__JoinStatement__NaturalAssignment_1 : ( ( 'natural' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18977:1: rule__JoinStatement__NaturalAssignment_1 : ( ( 'natural' ) ) ;
     public final void rule__JoinStatement__NaturalAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18977:1: ( ( ( 'natural' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18978:1: ( ( 'natural' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18981:1: ( ( ( 'natural' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18982:1: ( ( 'natural' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18978:1: ( ( 'natural' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18979:1: ( 'natural' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getJoinStatementAccess().getNaturalNaturalKeyword_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18980:1: ( 'natural' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18981:1: 'natural'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18982:1: ( ( 'natural' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18983:1: ( 'natural' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinStatementAccess().getNaturalNaturalKeyword_1_0()); 
             }
-            match(input,125,FOLLOW_125_in_rule__JoinStatement__NaturalAssignment_138246); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18984:1: ( 'natural' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18985:1: 'natural'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJoinStatementAccess().getNaturalNaturalKeyword_1_0()); 
+            }
+            match(input,125,FOLLOW_125_in_rule__JoinStatement__NaturalAssignment_138254); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getJoinStatementAccess().getNaturalNaturalKeyword_1_0()); 
             }
@@ -54213,28 +54225,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinStatement__LeftAssignment_2_0_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:18996:1: rule__JoinStatement__LeftAssignment_2_0_0 : ( ( 'left' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19000:1: rule__JoinStatement__LeftAssignment_2_0_0 : ( ( 'left' ) ) ;
     public final void rule__JoinStatement__LeftAssignment_2_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19000:1: ( ( ( 'left' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19001:1: ( ( 'left' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19004:1: ( ( ( 'left' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19005:1: ( ( 'left' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19001:1: ( ( 'left' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19002:1: ( 'left' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getJoinStatementAccess().getLeftLeftKeyword_2_0_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19003:1: ( 'left' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19004:1: 'left'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19005:1: ( ( 'left' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19006:1: ( 'left' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinStatementAccess().getLeftLeftKeyword_2_0_0_0()); 
             }
-            match(input,126,FOLLOW_126_in_rule__JoinStatement__LeftAssignment_2_0_038290); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19007:1: ( 'left' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19008:1: 'left'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJoinStatementAccess().getLeftLeftKeyword_2_0_0_0()); 
+            }
+            match(input,126,FOLLOW_126_in_rule__JoinStatement__LeftAssignment_2_0_038298); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getJoinStatementAccess().getLeftLeftKeyword_2_0_0_0()); 
             }
@@ -54266,28 +54278,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinStatement__OuterAssignment_2_0_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19019:1: rule__JoinStatement__OuterAssignment_2_0_1 : ( ( 'outer' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19023:1: rule__JoinStatement__OuterAssignment_2_0_1 : ( ( 'outer' ) ) ;
     public final void rule__JoinStatement__OuterAssignment_2_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19023:1: ( ( ( 'outer' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19024:1: ( ( 'outer' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19027:1: ( ( ( 'outer' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19028:1: ( ( 'outer' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19024:1: ( ( 'outer' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19025:1: ( 'outer' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getJoinStatementAccess().getOuterOuterKeyword_2_0_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19026:1: ( 'outer' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19027:1: 'outer'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19028:1: ( ( 'outer' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19029:1: ( 'outer' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinStatementAccess().getOuterOuterKeyword_2_0_1_0()); 
             }
-            match(input,127,FOLLOW_127_in_rule__JoinStatement__OuterAssignment_2_0_138334); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19030:1: ( 'outer' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19031:1: 'outer'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJoinStatementAccess().getOuterOuterKeyword_2_0_1_0()); 
+            }
+            match(input,127,FOLLOW_127_in_rule__JoinStatement__OuterAssignment_2_0_138342); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getJoinStatementAccess().getOuterOuterKeyword_2_0_1_0()); 
             }
@@ -54319,28 +54331,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinStatement__InnerAssignment_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19042:1: rule__JoinStatement__InnerAssignment_2_1 : ( ( 'inner' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19046:1: rule__JoinStatement__InnerAssignment_2_1 : ( ( 'inner' ) ) ;
     public final void rule__JoinStatement__InnerAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19046:1: ( ( ( 'inner' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19047:1: ( ( 'inner' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19050:1: ( ( ( 'inner' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19051:1: ( ( 'inner' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19047:1: ( ( 'inner' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19048:1: ( 'inner' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getJoinStatementAccess().getInnerInnerKeyword_2_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19049:1: ( 'inner' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19050:1: 'inner'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19051:1: ( ( 'inner' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19052:1: ( 'inner' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinStatementAccess().getInnerInnerKeyword_2_1_0()); 
             }
-            match(input,128,FOLLOW_128_in_rule__JoinStatement__InnerAssignment_2_138378); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19053:1: ( 'inner' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19054:1: 'inner'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJoinStatementAccess().getInnerInnerKeyword_2_1_0()); 
+            }
+            match(input,128,FOLLOW_128_in_rule__JoinStatement__InnerAssignment_2_138386); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getJoinStatementAccess().getInnerInnerKeyword_2_1_0()); 
             }
@@ -54372,28 +54384,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinStatement__CrossAssignment_2_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19065:1: rule__JoinStatement__CrossAssignment_2_2 : ( ( 'cross' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19069:1: rule__JoinStatement__CrossAssignment_2_2 : ( ( 'cross' ) ) ;
     public final void rule__JoinStatement__CrossAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19069:1: ( ( ( 'cross' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19070:1: ( ( 'cross' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19073:1: ( ( ( 'cross' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19074:1: ( ( 'cross' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19070:1: ( ( 'cross' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19071:1: ( 'cross' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getJoinStatementAccess().getCrossCrossKeyword_2_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19072:1: ( 'cross' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19073:1: 'cross'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19074:1: ( ( 'cross' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19075:1: ( 'cross' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinStatementAccess().getCrossCrossKeyword_2_2_0()); 
             }
-            match(input,129,FOLLOW_129_in_rule__JoinStatement__CrossAssignment_2_238422); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19076:1: ( 'cross' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19077:1: 'cross'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getJoinStatementAccess().getCrossCrossKeyword_2_2_0()); 
+            }
+            match(input,129,FOLLOW_129_in_rule__JoinStatement__CrossAssignment_2_238430); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getJoinStatementAccess().getCrossCrossKeyword_2_2_0()); 
             }
@@ -54425,22 +54437,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinStatement__SingleSourceAssignment_4"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19088:1: rule__JoinStatement__SingleSourceAssignment_4 : ( ruleSingleSource ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19092:1: rule__JoinStatement__SingleSourceAssignment_4 : ( ruleSingleSource ) ;
     public final void rule__JoinStatement__SingleSourceAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19092:1: ( ( ruleSingleSource ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19093:1: ( ruleSingleSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19096:1: ( ( ruleSingleSource ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19097:1: ( ruleSingleSource )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19093:1: ( ruleSingleSource )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19094:1: ruleSingleSource
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19097:1: ( ruleSingleSource )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19098:1: ruleSingleSource
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinStatementAccess().getSingleSourceSingleSourceParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleSingleSource_in_rule__JoinStatement__SingleSourceAssignment_438461);
+            pushFollow(FOLLOW_ruleSingleSource_in_rule__JoinStatement__SingleSourceAssignment_438469);
             ruleSingleSource();
 
             state._fsp--;
@@ -54470,22 +54482,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__JoinStatement__ExpressionAssignment_6"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19103:1: rule__JoinStatement__ExpressionAssignment_6 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19107:1: rule__JoinStatement__ExpressionAssignment_6 : ( ruleSqlExpression ) ;
     public final void rule__JoinStatement__ExpressionAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19107:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19108:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19111:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19112:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19108:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19109:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19112:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19113:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getJoinStatementAccess().getExpressionSqlExpressionParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__JoinStatement__ExpressionAssignment_638492);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__JoinStatement__ExpressionAssignment_638500);
             ruleSqlExpression();
 
             state._fsp--;
@@ -54515,22 +54527,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ResultColumn__ExpressionAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19118:1: rule__ResultColumn__ExpressionAssignment_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19122:1: rule__ResultColumn__ExpressionAssignment_1 : ( ruleSqlExpression ) ;
     public final void rule__ResultColumn__ExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19122:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19123:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19126:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19127:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19123:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19124:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19127:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19128:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResultColumnAccess().getExpressionSqlExpressionParserRuleCall_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__ResultColumn__ExpressionAssignment_138523);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__ResultColumn__ExpressionAssignment_138531);
             ruleSqlExpression();
 
             state._fsp--;
@@ -54560,22 +54572,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ResultColumn__NameAssignment_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19133:1: rule__ResultColumn__NameAssignment_2_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19137:1: rule__ResultColumn__NameAssignment_2_1 : ( RULE_ID ) ;
     public final void rule__ResultColumn__NameAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19137:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19138:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19141:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19142:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19138:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19139:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19142:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19143:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getResultColumnAccess().getNameIDTerminalRuleCall_2_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ResultColumn__NameAssignment_2_138554); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ResultColumn__NameAssignment_2_138562); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getResultColumnAccess().getNameIDTerminalRuleCall_2_1_0()); 
             }
@@ -54601,22 +54613,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LiteralValue__NumberAssignment_0_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19148:1: rule__LiteralValue__NumberAssignment_0_1 : ( ruleSignedNumber ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19152:1: rule__LiteralValue__NumberAssignment_0_1 : ( ruleSignedNumber ) ;
     public final void rule__LiteralValue__NumberAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19152:1: ( ( ruleSignedNumber ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19153:1: ( ruleSignedNumber )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19156:1: ( ( ruleSignedNumber ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19157:1: ( ruleSignedNumber )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19153:1: ( ruleSignedNumber )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19154:1: ruleSignedNumber
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19157:1: ( ruleSignedNumber )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19158:1: ruleSignedNumber
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralValueAccess().getNumberSignedNumberParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSignedNumber_in_rule__LiteralValue__NumberAssignment_0_138585);
+            pushFollow(FOLLOW_ruleSignedNumber_in_rule__LiteralValue__NumberAssignment_0_138593);
             ruleSignedNumber();
 
             state._fsp--;
@@ -54646,22 +54658,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LiteralValue__LiteralAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19163:1: rule__LiteralValue__LiteralAssignment_1_1 : ( RULE_STRING ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19167:1: rule__LiteralValue__LiteralAssignment_1_1 : ( RULE_STRING ) ;
     public final void rule__LiteralValue__LiteralAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19167:1: ( ( RULE_STRING ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19168:1: ( RULE_STRING )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19171:1: ( ( RULE_STRING ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19172:1: ( RULE_STRING )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19168:1: ( RULE_STRING )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19169:1: RULE_STRING
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19172:1: ( RULE_STRING )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19173:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralValueAccess().getLiteralSTRINGTerminalRuleCall_1_1_0()); 
             }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LiteralValue__LiteralAssignment_1_138616); if (state.failed) return ;
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__LiteralValue__LiteralAssignment_1_138624); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralValueAccess().getLiteralSTRINGTerminalRuleCall_1_1_0()); 
             }
@@ -54687,28 +54699,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LiteralValue__LiteralAssignment_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19178:1: rule__LiteralValue__LiteralAssignment_2_1 : ( ( 'null' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19182:1: rule__LiteralValue__LiteralAssignment_2_1 : ( ( 'null' ) ) ;
     public final void rule__LiteralValue__LiteralAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19182:1: ( ( ( 'null' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19183:1: ( ( 'null' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19186:1: ( ( ( 'null' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19187:1: ( ( 'null' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19183:1: ( ( 'null' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19184:1: ( 'null' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getLiteralNullKeyword_2_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19185:1: ( 'null' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19186:1: 'null'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19187:1: ( ( 'null' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19188:1: ( 'null' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralValueAccess().getLiteralNullKeyword_2_1_0()); 
             }
-            match(input,130,FOLLOW_130_in_rule__LiteralValue__LiteralAssignment_2_138652); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19189:1: ( 'null' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19190:1: 'null'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getLiteralValueAccess().getLiteralNullKeyword_2_1_0()); 
+            }
+            match(input,130,FOLLOW_130_in_rule__LiteralValue__LiteralAssignment_2_138660); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralValueAccess().getLiteralNullKeyword_2_1_0()); 
             }
@@ -54740,28 +54752,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LiteralValue__LiteralAssignment_3_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19201:1: rule__LiteralValue__LiteralAssignment_3_1 : ( ( 'current_time' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19205:1: rule__LiteralValue__LiteralAssignment_3_1 : ( ( 'current_time' ) ) ;
     public final void rule__LiteralValue__LiteralAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19205:1: ( ( ( 'current_time' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19206:1: ( ( 'current_time' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19209:1: ( ( ( 'current_time' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19210:1: ( ( 'current_time' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19206:1: ( ( 'current_time' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19207:1: ( 'current_time' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timeKeyword_3_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19208:1: ( 'current_time' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19209:1: 'current_time'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19210:1: ( ( 'current_time' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19211:1: ( 'current_time' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timeKeyword_3_1_0()); 
             }
-            match(input,131,FOLLOW_131_in_rule__LiteralValue__LiteralAssignment_3_138696); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19212:1: ( 'current_time' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19213:1: 'current_time'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timeKeyword_3_1_0()); 
+            }
+            match(input,131,FOLLOW_131_in_rule__LiteralValue__LiteralAssignment_3_138704); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timeKeyword_3_1_0()); 
             }
@@ -54793,28 +54805,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LiteralValue__LiteralAssignment_4_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19224:1: rule__LiteralValue__LiteralAssignment_4_1 : ( ( 'current_date' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19228:1: rule__LiteralValue__LiteralAssignment_4_1 : ( ( 'current_date' ) ) ;
     public final void rule__LiteralValue__LiteralAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19228:1: ( ( ( 'current_date' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19229:1: ( ( 'current_date' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19232:1: ( ( ( 'current_date' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19233:1: ( ( 'current_date' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19229:1: ( ( 'current_date' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19230:1: ( 'current_date' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_dateKeyword_4_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19231:1: ( 'current_date' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19232:1: 'current_date'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19233:1: ( ( 'current_date' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19234:1: ( 'current_date' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_dateKeyword_4_1_0()); 
             }
-            match(input,132,FOLLOW_132_in_rule__LiteralValue__LiteralAssignment_4_138740); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19235:1: ( 'current_date' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19236:1: 'current_date'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_dateKeyword_4_1_0()); 
+            }
+            match(input,132,FOLLOW_132_in_rule__LiteralValue__LiteralAssignment_4_138748); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralValueAccess().getLiteralCurrent_dateKeyword_4_1_0()); 
             }
@@ -54846,28 +54858,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__LiteralValue__LiteralAssignment_5_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19247:1: rule__LiteralValue__LiteralAssignment_5_1 : ( ( 'current_timestamp' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19251:1: rule__LiteralValue__LiteralAssignment_5_1 : ( ( 'current_timestamp' ) ) ;
     public final void rule__LiteralValue__LiteralAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19251:1: ( ( ( 'current_timestamp' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19252:1: ( ( 'current_timestamp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19255:1: ( ( ( 'current_timestamp' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19256:1: ( ( 'current_timestamp' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19252:1: ( ( 'current_timestamp' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19253:1: ( 'current_timestamp' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timestampKeyword_5_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19254:1: ( 'current_timestamp' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19255:1: 'current_timestamp'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19256:1: ( ( 'current_timestamp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19257:1: ( 'current_timestamp' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timestampKeyword_5_1_0()); 
             }
-            match(input,133,FOLLOW_133_in_rule__LiteralValue__LiteralAssignment_5_138784); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19258:1: ( 'current_timestamp' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19259:1: 'current_timestamp'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timestampKeyword_5_1_0()); 
+            }
+            match(input,133,FOLLOW_133_in_rule__LiteralValue__LiteralAssignment_5_138792); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLiteralValueAccess().getLiteralCurrent_timestampKeyword_5_1_0()); 
             }
@@ -54899,28 +54911,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTableStatement__TemporaryAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19270:1: rule__CreateTableStatement__TemporaryAssignment_2 : ( ( 'temp' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19274:1: rule__CreateTableStatement__TemporaryAssignment_2 : ( ( 'temp' ) ) ;
     public final void rule__CreateTableStatement__TemporaryAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19274:1: ( ( ( 'temp' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19275:1: ( ( 'temp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19278:1: ( ( ( 'temp' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19279:1: ( ( 'temp' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19275:1: ( ( 'temp' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19276:1: ( 'temp' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateTableStatementAccess().getTemporaryTempKeyword_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19277:1: ( 'temp' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19278:1: 'temp'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19279:1: ( ( 'temp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19280:1: ( 'temp' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTableStatementAccess().getTemporaryTempKeyword_2_0()); 
             }
-            match(input,134,FOLLOW_134_in_rule__CreateTableStatement__TemporaryAssignment_238828); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19281:1: ( 'temp' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19282:1: 'temp'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateTableStatementAccess().getTemporaryTempKeyword_2_0()); 
+            }
+            match(input,134,FOLLOW_134_in_rule__CreateTableStatement__TemporaryAssignment_238836); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTableStatementAccess().getTemporaryTempKeyword_2_0()); 
             }
@@ -54952,22 +54964,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTableStatement__NameAssignment_4"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19293:1: rule__CreateTableStatement__NameAssignment_4 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19297:1: rule__CreateTableStatement__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__CreateTableStatement__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19297:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19298:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19301:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19302:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19298:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19299:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19302:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19303:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTableStatementAccess().getNameIDTerminalRuleCall_4_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTableStatement__NameAssignment_438867); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTableStatement__NameAssignment_438875); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTableStatementAccess().getNameIDTerminalRuleCall_4_0()); 
             }
@@ -54993,22 +55005,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTableStatement__ColumnDefsAssignment_6"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19308:1: rule__CreateTableStatement__ColumnDefsAssignment_6 : ( ruleColumnDef ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19312:1: rule__CreateTableStatement__ColumnDefsAssignment_6 : ( ruleColumnDef ) ;
     public final void rule__CreateTableStatement__ColumnDefsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19312:1: ( ( ruleColumnDef ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19313:1: ( ruleColumnDef )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19316:1: ( ( ruleColumnDef ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19317:1: ( ruleColumnDef )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19313:1: ( ruleColumnDef )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19314:1: ruleColumnDef
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19317:1: ( ruleColumnDef )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19318:1: ruleColumnDef
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTableStatementAccess().getColumnDefsColumnDefParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_638898);
+            pushFollow(FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_638906);
             ruleColumnDef();
 
             state._fsp--;
@@ -55038,22 +55050,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTableStatement__ColumnDefsAssignment_7_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19323:1: rule__CreateTableStatement__ColumnDefsAssignment_7_1 : ( ruleColumnDef ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19327:1: rule__CreateTableStatement__ColumnDefsAssignment_7_1 : ( ruleColumnDef ) ;
     public final void rule__CreateTableStatement__ColumnDefsAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19327:1: ( ( ruleColumnDef ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19328:1: ( ruleColumnDef )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19331:1: ( ( ruleColumnDef ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19332:1: ( ruleColumnDef )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19328:1: ( ruleColumnDef )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19329:1: ruleColumnDef
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19332:1: ( ruleColumnDef )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19333:1: ruleColumnDef
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTableStatementAccess().getColumnDefsColumnDefParserRuleCall_7_1_0()); 
             }
-            pushFollow(FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_7_138929);
+            pushFollow(FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_7_138937);
             ruleColumnDef();
 
             state._fsp--;
@@ -55083,22 +55095,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTableStatement__ConstraintsAssignment_8_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19338:1: rule__CreateTableStatement__ConstraintsAssignment_8_1 : ( ruleTableConstraint ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19342:1: rule__CreateTableStatement__ConstraintsAssignment_8_1 : ( ruleTableConstraint ) ;
     public final void rule__CreateTableStatement__ConstraintsAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19342:1: ( ( ruleTableConstraint ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19343:1: ( ruleTableConstraint )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19346:1: ( ( ruleTableConstraint ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19347:1: ( ruleTableConstraint )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19343:1: ( ruleTableConstraint )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19344:1: ruleTableConstraint
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19347:1: ( ruleTableConstraint )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19348:1: ruleTableConstraint
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTableStatementAccess().getConstraintsTableConstraintParserRuleCall_8_1_0()); 
             }
-            pushFollow(FOLLOW_ruleTableConstraint_in_rule__CreateTableStatement__ConstraintsAssignment_8_138960);
+            pushFollow(FOLLOW_ruleTableConstraint_in_rule__CreateTableStatement__ConstraintsAssignment_8_138968);
             ruleTableConstraint();
 
             state._fsp--;
@@ -55128,28 +55140,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateViewStatement__TemporaryAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19353:1: rule__CreateViewStatement__TemporaryAssignment_2 : ( ( 'temp' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19357:1: rule__CreateViewStatement__TemporaryAssignment_2 : ( ( 'temp' ) ) ;
     public final void rule__CreateViewStatement__TemporaryAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19357:1: ( ( ( 'temp' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19358:1: ( ( 'temp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19361:1: ( ( ( 'temp' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19362:1: ( ( 'temp' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19358:1: ( ( 'temp' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19359:1: ( 'temp' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateViewStatementAccess().getTemporaryTempKeyword_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19360:1: ( 'temp' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19361:1: 'temp'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19362:1: ( ( 'temp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19363:1: ( 'temp' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateViewStatementAccess().getTemporaryTempKeyword_2_0()); 
             }
-            match(input,134,FOLLOW_134_in_rule__CreateViewStatement__TemporaryAssignment_238996); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19364:1: ( 'temp' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19365:1: 'temp'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateViewStatementAccess().getTemporaryTempKeyword_2_0()); 
+            }
+            match(input,134,FOLLOW_134_in_rule__CreateViewStatement__TemporaryAssignment_239004); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateViewStatementAccess().getTemporaryTempKeyword_2_0()); 
             }
@@ -55181,22 +55193,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateViewStatement__NameAssignment_4"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19376:1: rule__CreateViewStatement__NameAssignment_4 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19380:1: rule__CreateViewStatement__NameAssignment_4 : ( RULE_ID ) ;
     public final void rule__CreateViewStatement__NameAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19380:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19381:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19384:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19385:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19381:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19382:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19385:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19386:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateViewStatementAccess().getNameIDTerminalRuleCall_4_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateViewStatement__NameAssignment_439035); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateViewStatement__NameAssignment_439043); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateViewStatementAccess().getNameIDTerminalRuleCall_4_0()); 
             }
@@ -55222,22 +55234,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateViewStatement__SelectStatementAssignment_6"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19391:1: rule__CreateViewStatement__SelectStatementAssignment_6 : ( ruleSelectStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19395:1: rule__CreateViewStatement__SelectStatementAssignment_6 : ( ruleSelectStatement ) ;
     public final void rule__CreateViewStatement__SelectStatementAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19395:1: ( ( ruleSelectStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19396:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19399:1: ( ( ruleSelectStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19400:1: ( ruleSelectStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19396:1: ( ruleSelectStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19397:1: ruleSelectStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19400:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19401:1: ruleSelectStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateViewStatementAccess().getSelectStatementSelectStatementParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleSelectStatement_in_rule__CreateViewStatement__SelectStatementAssignment_639066);
+            pushFollow(FOLLOW_ruleSelectStatement_in_rule__CreateViewStatement__SelectStatementAssignment_639074);
             ruleSelectStatement();
 
             state._fsp--;
@@ -55267,28 +55279,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__TemporaryAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19406:1: rule__CreateTriggerStatement__TemporaryAssignment_1 : ( ( 'temp' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19410:1: rule__CreateTriggerStatement__TemporaryAssignment_1 : ( ( 'temp' ) ) ;
     public final void rule__CreateTriggerStatement__TemporaryAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19410:1: ( ( ( 'temp' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19411:1: ( ( 'temp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19414:1: ( ( ( 'temp' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19415:1: ( ( 'temp' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19411:1: ( ( 'temp' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19412:1: ( 'temp' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateTriggerStatementAccess().getTemporaryTempKeyword_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19413:1: ( 'temp' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19414:1: 'temp'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19415:1: ( ( 'temp' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19416:1: ( 'temp' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getTemporaryTempKeyword_1_0()); 
             }
-            match(input,134,FOLLOW_134_in_rule__CreateTriggerStatement__TemporaryAssignment_139102); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19417:1: ( 'temp' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19418:1: 'temp'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateTriggerStatementAccess().getTemporaryTempKeyword_1_0()); 
+            }
+            match(input,134,FOLLOW_134_in_rule__CreateTriggerStatement__TemporaryAssignment_139110); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getTemporaryTempKeyword_1_0()); 
             }
@@ -55320,22 +55332,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__NameAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19429:1: rule__CreateTriggerStatement__NameAssignment_3 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19433:1: rule__CreateTriggerStatement__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__CreateTriggerStatement__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19433:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19434:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19437:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19438:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19434:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19435:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19438:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19439:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getNameIDTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__NameAssignment_339141); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__NameAssignment_339149); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getNameIDTerminalRuleCall_3_0()); 
             }
@@ -55361,25 +55373,25 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__WhenAssignment_4"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19444:1: rule__CreateTriggerStatement__WhenAssignment_4 : ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19448:1: rule__CreateTriggerStatement__WhenAssignment_4 : ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) ) ;
     public final void rule__CreateTriggerStatement__WhenAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19448:1: ( ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19449:1: ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19452:1: ( ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19453:1: ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19449:1: ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19450:1: ( rule__CreateTriggerStatement__WhenAlternatives_4_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19453:1: ( ( rule__CreateTriggerStatement__WhenAlternatives_4_0 ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19454:1: ( rule__CreateTriggerStatement__WhenAlternatives_4_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getWhenAlternatives_4_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19451:1: ( rule__CreateTriggerStatement__WhenAlternatives_4_0 )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19451:2: rule__CreateTriggerStatement__WhenAlternatives_4_0
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19455:1: ( rule__CreateTriggerStatement__WhenAlternatives_4_0 )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19455:2: rule__CreateTriggerStatement__WhenAlternatives_4_0
             {
-            pushFollow(FOLLOW_rule__CreateTriggerStatement__WhenAlternatives_4_0_in_rule__CreateTriggerStatement__WhenAssignment_439172);
+            pushFollow(FOLLOW_rule__CreateTriggerStatement__WhenAlternatives_4_0_in_rule__CreateTriggerStatement__WhenAssignment_439180);
             rule__CreateTriggerStatement__WhenAlternatives_4_0();
 
             state._fsp--;
@@ -55412,28 +55424,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__EventTypeAssignment_5_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19460:1: rule__CreateTriggerStatement__EventTypeAssignment_5_0 : ( ( 'delete' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19464:1: rule__CreateTriggerStatement__EventTypeAssignment_5_0 : ( ( 'delete' ) ) ;
     public final void rule__CreateTriggerStatement__EventTypeAssignment_5_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19464:1: ( ( ( 'delete' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19465:1: ( ( 'delete' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19468:1: ( ( ( 'delete' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19469:1: ( ( 'delete' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19465:1: ( ( 'delete' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19466:1: ( 'delete' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeDeleteKeyword_5_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19467:1: ( 'delete' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19468:1: 'delete'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19469:1: ( ( 'delete' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19470:1: ( 'delete' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeDeleteKeyword_5_0_0()); 
             }
-            match(input,110,FOLLOW_110_in_rule__CreateTriggerStatement__EventTypeAssignment_5_039210); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19471:1: ( 'delete' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19472:1: 'delete'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeDeleteKeyword_5_0_0()); 
+            }
+            match(input,110,FOLLOW_110_in_rule__CreateTriggerStatement__EventTypeAssignment_5_039218); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getEventTypeDeleteKeyword_5_0_0()); 
             }
@@ -55465,28 +55477,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__EventTypeAssignment_5_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19483:1: rule__CreateTriggerStatement__EventTypeAssignment_5_1 : ( ( 'insert' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19487:1: rule__CreateTriggerStatement__EventTypeAssignment_5_1 : ( ( 'insert' ) ) ;
     public final void rule__CreateTriggerStatement__EventTypeAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19487:1: ( ( ( 'insert' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19488:1: ( ( 'insert' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19491:1: ( ( ( 'insert' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19492:1: ( ( 'insert' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19488:1: ( ( 'insert' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19489:1: ( 'insert' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeInsertKeyword_5_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19490:1: ( 'insert' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19491:1: 'insert'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19492:1: ( ( 'insert' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19493:1: ( 'insert' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeInsertKeyword_5_1_0()); 
             }
-            match(input,112,FOLLOW_112_in_rule__CreateTriggerStatement__EventTypeAssignment_5_139254); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19494:1: ( 'insert' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19495:1: 'insert'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeInsertKeyword_5_1_0()); 
+            }
+            match(input,112,FOLLOW_112_in_rule__CreateTriggerStatement__EventTypeAssignment_5_139262); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getEventTypeInsertKeyword_5_1_0()); 
             }
@@ -55518,28 +55530,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__EventTypeAssignment_5_2_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19506:1: rule__CreateTriggerStatement__EventTypeAssignment_5_2_0 : ( ( 'update' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19510:1: rule__CreateTriggerStatement__EventTypeAssignment_5_2_0 : ( ( 'update' ) ) ;
     public final void rule__CreateTriggerStatement__EventTypeAssignment_5_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19510:1: ( ( ( 'update' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19511:1: ( ( 'update' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19514:1: ( ( ( 'update' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19515:1: ( ( 'update' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19511:1: ( ( 'update' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19512:1: ( 'update' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeUpdateKeyword_5_2_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19513:1: ( 'update' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19514:1: 'update'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19515:1: ( ( 'update' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19516:1: ( 'update' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeUpdateKeyword_5_2_0_0()); 
             }
-            match(input,115,FOLLOW_115_in_rule__CreateTriggerStatement__EventTypeAssignment_5_2_039298); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19517:1: ( 'update' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19518:1: 'update'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateTriggerStatementAccess().getEventTypeUpdateKeyword_5_2_0_0()); 
+            }
+            match(input,115,FOLLOW_115_in_rule__CreateTriggerStatement__EventTypeAssignment_5_2_039306); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getEventTypeUpdateKeyword_5_2_0_0()); 
             }
@@ -55571,22 +55583,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19529:1: rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19533:1: rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_1 : ( RULE_ID ) ;
     public final void rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19533:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19534:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19537:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19538:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19534:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19535:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19538:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19539:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getUpdateColumnNamesIDTerminalRuleCall_5_2_1_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_139337); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_139345); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getUpdateColumnNamesIDTerminalRuleCall_5_2_1_1_0()); 
             }
@@ -55612,22 +55624,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19544:1: rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19548:1: rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_1 : ( RULE_ID ) ;
     public final void rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19548:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19549:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19552:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19553:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19549:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19550:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19553:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19554:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getUpdateColumnNamesIDTerminalRuleCall_5_2_1_2_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_139368); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_139376); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getUpdateColumnNamesIDTerminalRuleCall_5_2_1_2_1_0()); 
             }
@@ -55653,28 +55665,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__TableAssignment_7"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19559:1: rule__CreateTriggerStatement__TableAssignment_7 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19563:1: rule__CreateTriggerStatement__TableAssignment_7 : ( ( RULE_ID ) ) ;
     public final void rule__CreateTriggerStatement__TableAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19563:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19564:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19567:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19568:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19564:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19565:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19568:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19569:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getTableTableDefinitionCrossReference_7_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19566:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19567:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19570:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19571:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getTableTableDefinitionIDTerminalRuleCall_7_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__TableAssignment_739403); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__TableAssignment_739411); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getTableTableDefinitionIDTerminalRuleCall_7_0_1()); 
             }
@@ -55706,28 +55718,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__ForEachRowAssignment_8"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19578:1: rule__CreateTriggerStatement__ForEachRowAssignment_8 : ( ( 'for each row' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19582:1: rule__CreateTriggerStatement__ForEachRowAssignment_8 : ( ( 'for each row' ) ) ;
     public final void rule__CreateTriggerStatement__ForEachRowAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19582:1: ( ( ( 'for each row' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19583:1: ( ( 'for each row' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19586:1: ( ( ( 'for each row' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19587:1: ( ( 'for each row' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19583:1: ( ( 'for each row' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19584:1: ( 'for each row' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateTriggerStatementAccess().getForEachRowForEachRowKeyword_8_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19585:1: ( 'for each row' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19586:1: 'for each row'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19587:1: ( ( 'for each row' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19588:1: ( 'for each row' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getForEachRowForEachRowKeyword_8_0()); 
             }
-            match(input,135,FOLLOW_135_in_rule__CreateTriggerStatement__ForEachRowAssignment_839443); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19589:1: ( 'for each row' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19590:1: 'for each row'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateTriggerStatementAccess().getForEachRowForEachRowKeyword_8_0()); 
+            }
+            match(input,135,FOLLOW_135_in_rule__CreateTriggerStatement__ForEachRowAssignment_839451); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateTriggerStatementAccess().getForEachRowForEachRowKeyword_8_0()); 
             }
@@ -55759,22 +55771,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__WhenExpressionAssignment_9_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19601:1: rule__CreateTriggerStatement__WhenExpressionAssignment_9_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19605:1: rule__CreateTriggerStatement__WhenExpressionAssignment_9_1 : ( ruleSqlExpression ) ;
     public final void rule__CreateTriggerStatement__WhenExpressionAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19605:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19606:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19609:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19610:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19606:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19607:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19610:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19611:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getWhenExpressionSqlExpressionParserRuleCall_9_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__CreateTriggerStatement__WhenExpressionAssignment_9_139482);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__CreateTriggerStatement__WhenExpressionAssignment_9_139490);
             ruleSqlExpression();
 
             state._fsp--;
@@ -55804,22 +55816,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__StatementsAssignment_11_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19616:1: rule__CreateTriggerStatement__StatementsAssignment_11_0 : ( ruleDMLStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19620:1: rule__CreateTriggerStatement__StatementsAssignment_11_0 : ( ruleDMLStatement ) ;
     public final void rule__CreateTriggerStatement__StatementsAssignment_11_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19620:1: ( ( ruleDMLStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19621:1: ( ruleDMLStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19624:1: ( ( ruleDMLStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19625:1: ( ruleDMLStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19621:1: ( ruleDMLStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19622:1: ruleDMLStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19625:1: ( ruleDMLStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19626:1: ruleDMLStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getStatementsDMLStatementParserRuleCall_11_0_0()); 
             }
-            pushFollow(FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_039513);
+            pushFollow(FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_039521);
             ruleDMLStatement();
 
             state._fsp--;
@@ -55849,22 +55861,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateTriggerStatement__StatementsAssignment_11_2_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19631:1: rule__CreateTriggerStatement__StatementsAssignment_11_2_0 : ( ruleDMLStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19635:1: rule__CreateTriggerStatement__StatementsAssignment_11_2_0 : ( ruleDMLStatement ) ;
     public final void rule__CreateTriggerStatement__StatementsAssignment_11_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19635:1: ( ( ruleDMLStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19636:1: ( ruleDMLStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19639:1: ( ( ruleDMLStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19640:1: ( ruleDMLStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19636:1: ( ruleDMLStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19637:1: ruleDMLStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19640:1: ( ruleDMLStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19641:1: ruleDMLStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateTriggerStatementAccess().getStatementsDMLStatementParserRuleCall_11_2_0_0()); 
             }
-            pushFollow(FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_2_039544);
+            pushFollow(FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_2_039552);
             ruleDMLStatement();
 
             state._fsp--;
@@ -55894,28 +55906,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AlterTableRenameStatement__TableAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19646:1: rule__AlterTableRenameStatement__TableAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19650:1: rule__AlterTableRenameStatement__TableAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__AlterTableRenameStatement__TableAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19650:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19651:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19654:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19655:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19651:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19652:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19655:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19656:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlterTableRenameStatementAccess().getTableTableDefinitionCrossReference_3_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19653:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19654:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19657:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19658:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlterTableRenameStatementAccess().getTableTableDefinitionIDTerminalRuleCall_3_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__TableAssignment_339579); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__TableAssignment_339587); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAlterTableRenameStatementAccess().getTableTableDefinitionIDTerminalRuleCall_3_0_1()); 
             }
@@ -55947,22 +55959,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AlterTableRenameStatement__NameAssignment_5"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19665:1: rule__AlterTableRenameStatement__NameAssignment_5 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19669:1: rule__AlterTableRenameStatement__NameAssignment_5 : ( RULE_ID ) ;
     public final void rule__AlterTableRenameStatement__NameAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19669:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19670:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19673:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19674:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19670:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19671:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19674:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19675:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlterTableRenameStatementAccess().getNameIDTerminalRuleCall_5_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__NameAssignment_539614); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__NameAssignment_539622); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAlterTableRenameStatementAccess().getNameIDTerminalRuleCall_5_0()); 
             }
@@ -55988,28 +56000,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AlterTableAddColumnStatement__TableAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19680:1: rule__AlterTableAddColumnStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19684:1: rule__AlterTableAddColumnStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__AlterTableAddColumnStatement__TableAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19684:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19685:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19688:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19689:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19685:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19686:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19689:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19690:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlterTableAddColumnStatementAccess().getTableTableDefinitionCrossReference_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19687:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19688:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19691:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19692:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlterTableAddColumnStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AlterTableAddColumnStatement__TableAssignment_239649); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__AlterTableAddColumnStatement__TableAssignment_239657); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getAlterTableAddColumnStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
@@ -56041,22 +56053,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AlterTableAddColumnStatement__ColumnDefAssignment_4"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19699:1: rule__AlterTableAddColumnStatement__ColumnDefAssignment_4 : ( ruleColumnDef ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19703:1: rule__AlterTableAddColumnStatement__ColumnDefAssignment_4 : ( ruleColumnDef ) ;
     public final void rule__AlterTableAddColumnStatement__ColumnDefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19703:1: ( ( ruleColumnDef ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19704:1: ( ruleColumnDef )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19707:1: ( ( ruleColumnDef ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19708:1: ( ruleColumnDef )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19704:1: ( ruleColumnDef )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19705:1: ruleColumnDef
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19708:1: ( ruleColumnDef )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19709:1: ruleColumnDef
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlterTableAddColumnStatementAccess().getColumnDefColumnDefParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleColumnDef_in_rule__AlterTableAddColumnStatement__ColumnDefAssignment_439684);
+            pushFollow(FOLLOW_ruleColumnDef_in_rule__AlterTableAddColumnStatement__ColumnDefAssignment_439692);
             ruleColumnDef();
 
             state._fsp--;
@@ -56086,28 +56098,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropTableStatement__IfExistsAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19714:1: rule__DropTableStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19718:1: rule__DropTableStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
     public final void rule__DropTableStatement__IfExistsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19718:1: ( ( ( 'if exists' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19719:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19722:1: ( ( ( 'if exists' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19723:1: ( ( 'if exists' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19719:1: ( ( 'if exists' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19720:1: ( 'if exists' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDropTableStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19721:1: ( 'if exists' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19722:1: 'if exists'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19723:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19724:1: ( 'if exists' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropTableStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
-            match(input,136,FOLLOW_136_in_rule__DropTableStatement__IfExistsAssignment_239720); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19725:1: ( 'if exists' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19726:1: 'if exists'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDropTableStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
+            }
+            match(input,136,FOLLOW_136_in_rule__DropTableStatement__IfExistsAssignment_239728); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropTableStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
@@ -56139,28 +56151,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropTableStatement__TableAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19737:1: rule__DropTableStatement__TableAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19741:1: rule__DropTableStatement__TableAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__DropTableStatement__TableAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19741:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19742:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19745:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19746:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19742:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19743:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19746:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19747:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropTableStatementAccess().getTableTableDefinitionCrossReference_3_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19744:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19745:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19748:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19749:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropTableStatementAccess().getTableTableDefinitionIDTerminalRuleCall_3_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropTableStatement__TableAssignment_339763); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropTableStatement__TableAssignment_339771); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropTableStatementAccess().getTableTableDefinitionIDTerminalRuleCall_3_0_1()); 
             }
@@ -56192,28 +56204,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropTriggerStatement__IfExistsAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19756:1: rule__DropTriggerStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19760:1: rule__DropTriggerStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
     public final void rule__DropTriggerStatement__IfExistsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19760:1: ( ( ( 'if exists' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19761:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19764:1: ( ( ( 'if exists' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19765:1: ( ( 'if exists' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19761:1: ( ( 'if exists' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19762:1: ( 'if exists' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDropTriggerStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19763:1: ( 'if exists' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19764:1: 'if exists'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19765:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19766:1: ( 'if exists' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropTriggerStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
-            match(input,136,FOLLOW_136_in_rule__DropTriggerStatement__IfExistsAssignment_239803); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19767:1: ( 'if exists' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19768:1: 'if exists'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDropTriggerStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
+            }
+            match(input,136,FOLLOW_136_in_rule__DropTriggerStatement__IfExistsAssignment_239811); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropTriggerStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
@@ -56245,28 +56257,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropTriggerStatement__TriggerAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19779:1: rule__DropTriggerStatement__TriggerAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19783:1: rule__DropTriggerStatement__TriggerAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__DropTriggerStatement__TriggerAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19783:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19784:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19787:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19788:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19784:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19785:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19788:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19789:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropTriggerStatementAccess().getTriggerCreateTriggerStatementCrossReference_3_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19786:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19787:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19790:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19791:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropTriggerStatementAccess().getTriggerCreateTriggerStatementIDTerminalRuleCall_3_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropTriggerStatement__TriggerAssignment_339846); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropTriggerStatement__TriggerAssignment_339854); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropTriggerStatementAccess().getTriggerCreateTriggerStatementIDTerminalRuleCall_3_0_1()); 
             }
@@ -56298,28 +56310,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropViewStatement__IfExistsAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19798:1: rule__DropViewStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19802:1: rule__DropViewStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
     public final void rule__DropViewStatement__IfExistsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19802:1: ( ( ( 'if exists' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19803:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19806:1: ( ( ( 'if exists' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19807:1: ( ( 'if exists' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19803:1: ( ( 'if exists' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19804:1: ( 'if exists' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDropViewStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19805:1: ( 'if exists' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19806:1: 'if exists'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19807:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19808:1: ( 'if exists' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropViewStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
-            match(input,136,FOLLOW_136_in_rule__DropViewStatement__IfExistsAssignment_239886); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19809:1: ( 'if exists' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19810:1: 'if exists'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDropViewStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
+            }
+            match(input,136,FOLLOW_136_in_rule__DropViewStatement__IfExistsAssignment_239894); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropViewStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
@@ -56351,28 +56363,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropViewStatement__ViewAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19821:1: rule__DropViewStatement__ViewAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19825:1: rule__DropViewStatement__ViewAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__DropViewStatement__ViewAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19825:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19826:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19829:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19830:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19826:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19827:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19830:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19831:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropViewStatementAccess().getViewCreateViewStatementCrossReference_3_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19828:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19829:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19832:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19833:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropViewStatementAccess().getViewCreateViewStatementIDTerminalRuleCall_3_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropViewStatement__ViewAssignment_339929); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropViewStatement__ViewAssignment_339937); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropViewStatementAccess().getViewCreateViewStatementIDTerminalRuleCall_3_0_1()); 
             }
@@ -56404,28 +56416,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateIndexStatement__UniqueAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19840:1: rule__CreateIndexStatement__UniqueAssignment_1 : ( ( 'unique' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19844:1: rule__CreateIndexStatement__UniqueAssignment_1 : ( ( 'unique' ) ) ;
     public final void rule__CreateIndexStatement__UniqueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19844:1: ( ( ( 'unique' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19845:1: ( ( 'unique' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19848:1: ( ( ( 'unique' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19849:1: ( ( 'unique' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19845:1: ( ( 'unique' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19846:1: ( 'unique' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getCreateIndexStatementAccess().getUniqueUniqueKeyword_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19847:1: ( 'unique' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19848:1: 'unique'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19849:1: ( ( 'unique' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19850:1: ( 'unique' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateIndexStatementAccess().getUniqueUniqueKeyword_1_0()); 
             }
-            match(input,104,FOLLOW_104_in_rule__CreateIndexStatement__UniqueAssignment_139969); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19851:1: ( 'unique' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19852:1: 'unique'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getCreateIndexStatementAccess().getUniqueUniqueKeyword_1_0()); 
+            }
+            match(input,104,FOLLOW_104_in_rule__CreateIndexStatement__UniqueAssignment_139977); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateIndexStatementAccess().getUniqueUniqueKeyword_1_0()); 
             }
@@ -56457,22 +56469,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateIndexStatement__NameAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19863:1: rule__CreateIndexStatement__NameAssignment_3 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19867:1: rule__CreateIndexStatement__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__CreateIndexStatement__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19867:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19868:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19871:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19872:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19868:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19869:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19872:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19873:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateIndexStatementAccess().getNameIDTerminalRuleCall_3_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateIndexStatement__NameAssignment_340008); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateIndexStatement__NameAssignment_340016); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateIndexStatementAccess().getNameIDTerminalRuleCall_3_0()); 
             }
@@ -56498,28 +56510,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateIndexStatement__TableAssignment_5"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19878:1: rule__CreateIndexStatement__TableAssignment_5 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19882:1: rule__CreateIndexStatement__TableAssignment_5 : ( ( RULE_ID ) ) ;
     public final void rule__CreateIndexStatement__TableAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19882:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19883:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19886:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19887:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19883:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19884:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19887:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19888:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateIndexStatementAccess().getTableTableDefinitionCrossReference_5_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19885:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19886:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19889:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19890:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateIndexStatementAccess().getTableTableDefinitionIDTerminalRuleCall_5_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateIndexStatement__TableAssignment_540043); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateIndexStatement__TableAssignment_540051); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCreateIndexStatementAccess().getTableTableDefinitionIDTerminalRuleCall_5_0_1()); 
             }
@@ -56551,22 +56563,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateIndexStatement__ColumnsAssignment_7"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19897:1: rule__CreateIndexStatement__ColumnsAssignment_7 : ( ruleIndexedColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19901:1: rule__CreateIndexStatement__ColumnsAssignment_7 : ( ruleIndexedColumn ) ;
     public final void rule__CreateIndexStatement__ColumnsAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19901:1: ( ( ruleIndexedColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19902:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19905:1: ( ( ruleIndexedColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19906:1: ( ruleIndexedColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19902:1: ( ruleIndexedColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19903:1: ruleIndexedColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19906:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19907:1: ruleIndexedColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateIndexStatementAccess().getColumnsIndexedColumnParserRuleCall_7_0()); 
             }
-            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_740078);
+            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_740086);
             ruleIndexedColumn();
 
             state._fsp--;
@@ -56596,22 +56608,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CreateIndexStatement__ColumnsAssignment_8_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19912:1: rule__CreateIndexStatement__ColumnsAssignment_8_1 : ( ruleIndexedColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19916:1: rule__CreateIndexStatement__ColumnsAssignment_8_1 : ( ruleIndexedColumn ) ;
     public final void rule__CreateIndexStatement__ColumnsAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19916:1: ( ( ruleIndexedColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19917:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19920:1: ( ( ruleIndexedColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19921:1: ( ruleIndexedColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19917:1: ( ruleIndexedColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19918:1: ruleIndexedColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19921:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19922:1: ruleIndexedColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCreateIndexStatementAccess().getColumnsIndexedColumnParserRuleCall_8_1_0()); 
             }
-            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_8_140109);
+            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_8_140117);
             ruleIndexedColumn();
 
             state._fsp--;
@@ -56641,28 +56653,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropIndexStatement__IfExistsAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19927:1: rule__DropIndexStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19931:1: rule__DropIndexStatement__IfExistsAssignment_2 : ( ( 'if exists' ) ) ;
     public final void rule__DropIndexStatement__IfExistsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19931:1: ( ( ( 'if exists' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19932:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19935:1: ( ( ( 'if exists' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19936:1: ( ( 'if exists' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19932:1: ( ( 'if exists' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19933:1: ( 'if exists' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getDropIndexStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19934:1: ( 'if exists' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19935:1: 'if exists'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19936:1: ( ( 'if exists' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19937:1: ( 'if exists' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropIndexStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
-            match(input,136,FOLLOW_136_in_rule__DropIndexStatement__IfExistsAssignment_240145); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19938:1: ( 'if exists' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19939:1: 'if exists'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getDropIndexStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
+            }
+            match(input,136,FOLLOW_136_in_rule__DropIndexStatement__IfExistsAssignment_240153); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropIndexStatementAccess().getIfExistsIfExistsKeyword_2_0()); 
             }
@@ -56694,28 +56706,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DropIndexStatement__IndexAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19950:1: rule__DropIndexStatement__IndexAssignment_3 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19954:1: rule__DropIndexStatement__IndexAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__DropIndexStatement__IndexAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19954:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19955:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19958:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19959:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19955:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19956:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19959:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19960:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropIndexStatementAccess().getIndexCreateIndexStatementCrossReference_3_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19957:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19958:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19961:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19962:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDropIndexStatementAccess().getIndexCreateIndexStatementIDTerminalRuleCall_3_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropIndexStatement__IndexAssignment_340188); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DropIndexStatement__IndexAssignment_340196); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDropIndexStatementAccess().getIndexCreateIndexStatementIDTerminalRuleCall_3_0_1()); 
             }
@@ -56747,22 +56759,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnDef__NameAssignment_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19969:1: rule__ColumnDef__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19973:1: rule__ColumnDef__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__ColumnDef__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19973:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19974:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19977:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19978:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19974:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19975:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19978:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19979:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnDefAccess().getNameIDTerminalRuleCall_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ColumnDef__NameAssignment_140223); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__ColumnDef__NameAssignment_140231); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getColumnDefAccess().getNameIDTerminalRuleCall_1_0()); 
             }
@@ -56788,22 +56800,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnDef__TypeAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19984:1: rule__ColumnDef__TypeAssignment_2 : ( ruleColumnType ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19988:1: rule__ColumnDef__TypeAssignment_2 : ( ruleColumnType ) ;
     public final void rule__ColumnDef__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19988:1: ( ( ruleColumnType ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19989:1: ( ruleColumnType )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19992:1: ( ( ruleColumnType ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19993:1: ( ruleColumnType )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19989:1: ( ruleColumnType )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19990:1: ruleColumnType
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19993:1: ( ruleColumnType )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19994:1: ruleColumnType
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnDefAccess().getTypeColumnTypeEnumRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleColumnType_in_rule__ColumnDef__TypeAssignment_240254);
+            pushFollow(FOLLOW_ruleColumnType_in_rule__ColumnDef__TypeAssignment_240262);
             ruleColumnType();
 
             state._fsp--;
@@ -56833,22 +56845,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnDef__ConstraintsAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:19999:1: rule__ColumnDef__ConstraintsAssignment_3 : ( ruleColumnConstraint ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20003:1: rule__ColumnDef__ConstraintsAssignment_3 : ( ruleColumnConstraint ) ;
     public final void rule__ColumnDef__ConstraintsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20003:1: ( ( ruleColumnConstraint ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20004:1: ( ruleColumnConstraint )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20007:1: ( ( ruleColumnConstraint ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20008:1: ( ruleColumnConstraint )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20004:1: ( ruleColumnConstraint )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20005:1: ruleColumnConstraint
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20008:1: ( ruleColumnConstraint )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20009:1: ruleColumnConstraint
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnDefAccess().getConstraintsColumnConstraintParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleColumnConstraint_in_rule__ColumnDef__ConstraintsAssignment_340285);
+            pushFollow(FOLLOW_ruleColumnConstraint_in_rule__ColumnDef__ConstraintsAssignment_340293);
             ruleColumnConstraint();
 
             state._fsp--;
@@ -56878,28 +56890,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnConstraint__AscAssignment_0_2_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20014:1: rule__ColumnConstraint__AscAssignment_0_2_0 : ( ( 'asc' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20018:1: rule__ColumnConstraint__AscAssignment_0_2_0 : ( ( 'asc' ) ) ;
     public final void rule__ColumnConstraint__AscAssignment_0_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20018:1: ( ( ( 'asc' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20019:1: ( ( 'asc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20022:1: ( ( ( 'asc' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20023:1: ( ( 'asc' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20019:1: ( ( 'asc' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20020:1: ( 'asc' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getColumnConstraintAccess().getAscAscKeyword_0_2_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20021:1: ( 'asc' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20022:1: 'asc'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20023:1: ( ( 'asc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20024:1: ( 'asc' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnConstraintAccess().getAscAscKeyword_0_2_0_0()); 
             }
-            match(input,123,FOLLOW_123_in_rule__ColumnConstraint__AscAssignment_0_2_040321); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20025:1: ( 'asc' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20026:1: 'asc'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getColumnConstraintAccess().getAscAscKeyword_0_2_0_0()); 
+            }
+            match(input,123,FOLLOW_123_in_rule__ColumnConstraint__AscAssignment_0_2_040329); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getColumnConstraintAccess().getAscAscKeyword_0_2_0_0()); 
             }
@@ -56931,28 +56943,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnConstraint__DescAssignment_0_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20037:1: rule__ColumnConstraint__DescAssignment_0_2_1 : ( ( 'desc' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20041:1: rule__ColumnConstraint__DescAssignment_0_2_1 : ( ( 'desc' ) ) ;
     public final void rule__ColumnConstraint__DescAssignment_0_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20041:1: ( ( ( 'desc' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20042:1: ( ( 'desc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20045:1: ( ( ( 'desc' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20046:1: ( ( 'desc' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20042:1: ( ( 'desc' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20043:1: ( 'desc' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getColumnConstraintAccess().getDescDescKeyword_0_2_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20044:1: ( 'desc' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20045:1: 'desc'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20046:1: ( ( 'desc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20047:1: ( 'desc' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnConstraintAccess().getDescDescKeyword_0_2_1_0()); 
             }
-            match(input,124,FOLLOW_124_in_rule__ColumnConstraint__DescAssignment_0_2_140365); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20048:1: ( 'desc' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20049:1: 'desc'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getColumnConstraintAccess().getDescDescKeyword_0_2_1_0()); 
+            }
+            match(input,124,FOLLOW_124_in_rule__ColumnConstraint__DescAssignment_0_2_140373); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getColumnConstraintAccess().getDescDescKeyword_0_2_1_0()); 
             }
@@ -56984,28 +56996,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnConstraint__AutoincrementAssignment_0_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20060:1: rule__ColumnConstraint__AutoincrementAssignment_0_3 : ( ( 'autoincrement' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20064:1: rule__ColumnConstraint__AutoincrementAssignment_0_3 : ( ( 'autoincrement' ) ) ;
     public final void rule__ColumnConstraint__AutoincrementAssignment_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20064:1: ( ( ( 'autoincrement' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20065:1: ( ( 'autoincrement' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20068:1: ( ( ( 'autoincrement' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20069:1: ( ( 'autoincrement' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20065:1: ( ( 'autoincrement' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20066:1: ( 'autoincrement' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getColumnConstraintAccess().getAutoincrementAutoincrementKeyword_0_3_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20067:1: ( 'autoincrement' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20068:1: 'autoincrement'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20069:1: ( ( 'autoincrement' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20070:1: ( 'autoincrement' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnConstraintAccess().getAutoincrementAutoincrementKeyword_0_3_0()); 
             }
-            match(input,137,FOLLOW_137_in_rule__ColumnConstraint__AutoincrementAssignment_0_340409); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20071:1: ( 'autoincrement' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20072:1: 'autoincrement'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getColumnConstraintAccess().getAutoincrementAutoincrementKeyword_0_3_0()); 
+            }
+            match(input,137,FOLLOW_137_in_rule__ColumnConstraint__AutoincrementAssignment_0_340417); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getColumnConstraintAccess().getAutoincrementAutoincrementKeyword_0_3_0()); 
             }
@@ -57037,22 +57049,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnConstraint__ConflictClauseAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20083:1: rule__ColumnConstraint__ConflictClauseAssignment_1_2 : ( ruleConflictClause ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20087:1: rule__ColumnConstraint__ConflictClauseAssignment_1_2 : ( ruleConflictClause ) ;
     public final void rule__ColumnConstraint__ConflictClauseAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20087:1: ( ( ruleConflictClause ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20088:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20091:1: ( ( ruleConflictClause ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20092:1: ( ruleConflictClause )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20088:1: ( ruleConflictClause )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20089:1: ruleConflictClause
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20092:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20093:1: ruleConflictClause
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnConstraintAccess().getConflictClauseConflictClauseParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_1_240448);
+            pushFollow(FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_1_240456);
             ruleConflictClause();
 
             state._fsp--;
@@ -57082,22 +57094,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnConstraint__ConflictClauseAssignment_2_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20098:1: rule__ColumnConstraint__ConflictClauseAssignment_2_2 : ( ruleConflictClause ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20102:1: rule__ColumnConstraint__ConflictClauseAssignment_2_2 : ( ruleConflictClause ) ;
     public final void rule__ColumnConstraint__ConflictClauseAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20102:1: ( ( ruleConflictClause ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20103:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20106:1: ( ( ruleConflictClause ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20107:1: ( ruleConflictClause )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20103:1: ( ruleConflictClause )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20104:1: ruleConflictClause
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20107:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20108:1: ruleConflictClause
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnConstraintAccess().getConflictClauseConflictClauseParserRuleCall_2_2_0()); 
             }
-            pushFollow(FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_2_240479);
+            pushFollow(FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_2_240487);
             ruleConflictClause();
 
             state._fsp--;
@@ -57127,22 +57139,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnConstraint__DefaultValueAssignment_3_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20113:1: rule__ColumnConstraint__DefaultValueAssignment_3_2 : ( ruleDefaultValue ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20117:1: rule__ColumnConstraint__DefaultValueAssignment_3_2 : ( ruleDefaultValue ) ;
     public final void rule__ColumnConstraint__DefaultValueAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20117:1: ( ( ruleDefaultValue ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20118:1: ( ruleDefaultValue )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20121:1: ( ( ruleDefaultValue ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20122:1: ( ruleDefaultValue )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20118:1: ( ruleDefaultValue )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20119:1: ruleDefaultValue
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20122:1: ( ruleDefaultValue )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20123:1: ruleDefaultValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnConstraintAccess().getDefaultValueDefaultValueParserRuleCall_3_2_0()); 
             }
-            pushFollow(FOLLOW_ruleDefaultValue_in_rule__ColumnConstraint__DefaultValueAssignment_3_240510);
+            pushFollow(FOLLOW_ruleDefaultValue_in_rule__ColumnConstraint__DefaultValueAssignment_3_240518);
             ruleDefaultValue();
 
             state._fsp--;
@@ -57172,22 +57184,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ColumnConstraint__ExpressionAssignment_4_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20128:1: rule__ColumnConstraint__ExpressionAssignment_4_3 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20132:1: rule__ColumnConstraint__ExpressionAssignment_4_3 : ( ruleSqlExpression ) ;
     public final void rule__ColumnConstraint__ExpressionAssignment_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20132:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20133:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20136:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20137:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20133:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20134:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20137:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20138:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getColumnConstraintAccess().getExpressionSqlExpressionParserRuleCall_4_3_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__ColumnConstraint__ExpressionAssignment_4_340541);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__ColumnConstraint__ExpressionAssignment_4_340549);
             ruleSqlExpression();
 
             state._fsp--;
@@ -57217,22 +57229,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UniqueTableConstraint__NameAssignment_0_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20143:1: rule__UniqueTableConstraint__NameAssignment_0_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20147:1: rule__UniqueTableConstraint__NameAssignment_0_1 : ( RULE_ID ) ;
     public final void rule__UniqueTableConstraint__NameAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20147:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20148:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20151:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20152:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20148:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20149:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20152:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20153:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUniqueTableConstraintAccess().getNameIDTerminalRuleCall_0_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UniqueTableConstraint__NameAssignment_0_140572); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UniqueTableConstraint__NameAssignment_0_140580); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUniqueTableConstraintAccess().getNameIDTerminalRuleCall_0_1_0()); 
             }
@@ -57258,22 +57270,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UniqueTableConstraint__ColumnsAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20158:1: rule__UniqueTableConstraint__ColumnsAssignment_3 : ( ruleIndexedColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20162:1: rule__UniqueTableConstraint__ColumnsAssignment_3 : ( ruleIndexedColumn ) ;
     public final void rule__UniqueTableConstraint__ColumnsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20162:1: ( ( ruleIndexedColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20163:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20166:1: ( ( ruleIndexedColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20167:1: ( ruleIndexedColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20163:1: ( ruleIndexedColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20164:1: ruleIndexedColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20167:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20168:1: ruleIndexedColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUniqueTableConstraintAccess().getColumnsIndexedColumnParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_340603);
+            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_340611);
             ruleIndexedColumn();
 
             state._fsp--;
@@ -57303,22 +57315,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UniqueTableConstraint__ColumnsAssignment_4_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20173:1: rule__UniqueTableConstraint__ColumnsAssignment_4_1 : ( ruleIndexedColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20177:1: rule__UniqueTableConstraint__ColumnsAssignment_4_1 : ( ruleIndexedColumn ) ;
     public final void rule__UniqueTableConstraint__ColumnsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20177:1: ( ( ruleIndexedColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20178:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20181:1: ( ( ruleIndexedColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20182:1: ( ruleIndexedColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20178:1: ( ruleIndexedColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20179:1: ruleIndexedColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20182:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20183:1: ruleIndexedColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUniqueTableConstraintAccess().getColumnsIndexedColumnParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_4_140634);
+            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_4_140642);
             ruleIndexedColumn();
 
             state._fsp--;
@@ -57348,22 +57360,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UniqueTableConstraint__ConflictClauseAssignment_6"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20188:1: rule__UniqueTableConstraint__ConflictClauseAssignment_6 : ( ruleConflictClause ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20192:1: rule__UniqueTableConstraint__ConflictClauseAssignment_6 : ( ruleConflictClause ) ;
     public final void rule__UniqueTableConstraint__ConflictClauseAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20192:1: ( ( ruleConflictClause ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20193:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20196:1: ( ( ruleConflictClause ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20197:1: ( ruleConflictClause )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20193:1: ( ruleConflictClause )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20194:1: ruleConflictClause
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20197:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20198:1: ruleConflictClause
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUniqueTableConstraintAccess().getConflictClauseConflictClauseParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleConflictClause_in_rule__UniqueTableConstraint__ConflictClauseAssignment_640665);
+            pushFollow(FOLLOW_ruleConflictClause_in_rule__UniqueTableConstraint__ConflictClauseAssignment_640673);
             ruleConflictClause();
 
             state._fsp--;
@@ -57393,22 +57405,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryConstraint__NameAssignment_0_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20203:1: rule__PrimaryConstraint__NameAssignment_0_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20207:1: rule__PrimaryConstraint__NameAssignment_0_1 : ( RULE_ID ) ;
     public final void rule__PrimaryConstraint__NameAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20207:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20208:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20211:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20212:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20208:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20209:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20212:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20213:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryConstraintAccess().getNameIDTerminalRuleCall_0_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryConstraint__NameAssignment_0_140696); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__PrimaryConstraint__NameAssignment_0_140704); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getPrimaryConstraintAccess().getNameIDTerminalRuleCall_0_1_0()); 
             }
@@ -57434,22 +57446,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryConstraint__ColumnsAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20218:1: rule__PrimaryConstraint__ColumnsAssignment_3 : ( ruleIndexedColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20222:1: rule__PrimaryConstraint__ColumnsAssignment_3 : ( ruleIndexedColumn ) ;
     public final void rule__PrimaryConstraint__ColumnsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20222:1: ( ( ruleIndexedColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20223:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20226:1: ( ( ruleIndexedColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20227:1: ( ruleIndexedColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20223:1: ( ruleIndexedColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20224:1: ruleIndexedColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20227:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20228:1: ruleIndexedColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryConstraintAccess().getColumnsIndexedColumnParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_340727);
+            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_340735);
             ruleIndexedColumn();
 
             state._fsp--;
@@ -57479,22 +57491,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryConstraint__ColumnsAssignment_4_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20233:1: rule__PrimaryConstraint__ColumnsAssignment_4_1 : ( ruleIndexedColumn ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20237:1: rule__PrimaryConstraint__ColumnsAssignment_4_1 : ( ruleIndexedColumn ) ;
     public final void rule__PrimaryConstraint__ColumnsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20237:1: ( ( ruleIndexedColumn ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20238:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20241:1: ( ( ruleIndexedColumn ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20242:1: ( ruleIndexedColumn )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20238:1: ( ruleIndexedColumn )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20239:1: ruleIndexedColumn
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20242:1: ( ruleIndexedColumn )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20243:1: ruleIndexedColumn
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryConstraintAccess().getColumnsIndexedColumnParserRuleCall_4_1_0()); 
             }
-            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_4_140758);
+            pushFollow(FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_4_140766);
             ruleIndexedColumn();
 
             state._fsp--;
@@ -57524,22 +57536,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PrimaryConstraint__ConflictClauseAssignment_6"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20248:1: rule__PrimaryConstraint__ConflictClauseAssignment_6 : ( ruleConflictClause ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20252:1: rule__PrimaryConstraint__ConflictClauseAssignment_6 : ( ruleConflictClause ) ;
     public final void rule__PrimaryConstraint__ConflictClauseAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20252:1: ( ( ruleConflictClause ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20253:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20256:1: ( ( ruleConflictClause ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20257:1: ( ruleConflictClause )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20253:1: ( ruleConflictClause )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20254:1: ruleConflictClause
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20257:1: ( ruleConflictClause )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20258:1: ruleConflictClause
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getPrimaryConstraintAccess().getConflictClauseConflictClauseParserRuleCall_6_0()); 
             }
-            pushFollow(FOLLOW_ruleConflictClause_in_rule__PrimaryConstraint__ConflictClauseAssignment_640789);
+            pushFollow(FOLLOW_ruleConflictClause_in_rule__PrimaryConstraint__ConflictClauseAssignment_640797);
             ruleConflictClause();
 
             state._fsp--;
@@ -57569,22 +57581,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CheckTableConstraint__NameAssignment_0_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20263:1: rule__CheckTableConstraint__NameAssignment_0_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20267:1: rule__CheckTableConstraint__NameAssignment_0_1 : ( RULE_ID ) ;
     public final void rule__CheckTableConstraint__NameAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20267:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20268:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20271:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20272:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20268:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20269:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20272:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20273:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCheckTableConstraintAccess().getNameIDTerminalRuleCall_0_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CheckTableConstraint__NameAssignment_0_140820); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CheckTableConstraint__NameAssignment_0_140828); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getCheckTableConstraintAccess().getNameIDTerminalRuleCall_0_1_0()); 
             }
@@ -57610,22 +57622,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__CheckTableConstraint__ExpressionAssignment_3"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20278:1: rule__CheckTableConstraint__ExpressionAssignment_3 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20282:1: rule__CheckTableConstraint__ExpressionAssignment_3 : ( ruleSqlExpression ) ;
     public final void rule__CheckTableConstraint__ExpressionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20282:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20283:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20286:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20287:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20283:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20284:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20287:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20288:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCheckTableConstraintAccess().getExpressionSqlExpressionParserRuleCall_3_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__CheckTableConstraint__ExpressionAssignment_340851);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__CheckTableConstraint__ExpressionAssignment_340859);
             ruleSqlExpression();
 
             state._fsp--;
@@ -57655,28 +57667,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexedColumn__ColumnReferenceAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20293:1: rule__IndexedColumn__ColumnReferenceAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20297:1: rule__IndexedColumn__ColumnReferenceAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__IndexedColumn__ColumnReferenceAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20297:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20298:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20301:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20302:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20298:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20299:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20302:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20303:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIndexedColumnAccess().getColumnReferenceColumnDefCrossReference_0_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20300:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20301:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20304:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20305:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIndexedColumnAccess().getColumnReferenceColumnDefIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__IndexedColumn__ColumnReferenceAssignment_040886); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__IndexedColumn__ColumnReferenceAssignment_040894); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIndexedColumnAccess().getColumnReferenceColumnDefIDTerminalRuleCall_0_0_1()); 
             }
@@ -57708,22 +57720,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexedColumn__CollationNameAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20312:1: rule__IndexedColumn__CollationNameAssignment_1_1 : ( RULE_ID ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20316:1: rule__IndexedColumn__CollationNameAssignment_1_1 : ( RULE_ID ) ;
     public final void rule__IndexedColumn__CollationNameAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20316:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20317:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20320:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20321:1: ( RULE_ID )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20317:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20318:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20321:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20322:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIndexedColumnAccess().getCollationNameIDTerminalRuleCall_1_1_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__IndexedColumn__CollationNameAssignment_1_140921); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__IndexedColumn__CollationNameAssignment_1_140929); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIndexedColumnAccess().getCollationNameIDTerminalRuleCall_1_1_0()); 
             }
@@ -57749,28 +57761,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexedColumn__AscAssignment_2_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20327:1: rule__IndexedColumn__AscAssignment_2_0 : ( ( 'asc' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20331:1: rule__IndexedColumn__AscAssignment_2_0 : ( ( 'asc' ) ) ;
     public final void rule__IndexedColumn__AscAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20331:1: ( ( ( 'asc' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20332:1: ( ( 'asc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20335:1: ( ( ( 'asc' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20336:1: ( ( 'asc' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20332:1: ( ( 'asc' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20333:1: ( 'asc' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIndexedColumnAccess().getAscAscKeyword_2_0_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20334:1: ( 'asc' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20335:1: 'asc'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20336:1: ( ( 'asc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20337:1: ( 'asc' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIndexedColumnAccess().getAscAscKeyword_2_0_0()); 
             }
-            match(input,123,FOLLOW_123_in_rule__IndexedColumn__AscAssignment_2_040957); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20338:1: ( 'asc' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20339:1: 'asc'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIndexedColumnAccess().getAscAscKeyword_2_0_0()); 
+            }
+            match(input,123,FOLLOW_123_in_rule__IndexedColumn__AscAssignment_2_040965); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIndexedColumnAccess().getAscAscKeyword_2_0_0()); 
             }
@@ -57802,28 +57814,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexedColumn__DescAssignment_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20350:1: rule__IndexedColumn__DescAssignment_2_1 : ( ( 'desc' ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20354:1: rule__IndexedColumn__DescAssignment_2_1 : ( ( 'desc' ) ) ;
     public final void rule__IndexedColumn__DescAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20354:1: ( ( ( 'desc' ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20355:1: ( ( 'desc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20358:1: ( ( ( 'desc' ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20359:1: ( ( 'desc' ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20355:1: ( ( 'desc' ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20356:1: ( 'desc' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIndexedColumnAccess().getDescDescKeyword_2_1_0()); 
-            }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20357:1: ( 'desc' )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20358:1: 'desc'
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20359:1: ( ( 'desc' ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20360:1: ( 'desc' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIndexedColumnAccess().getDescDescKeyword_2_1_0()); 
             }
-            match(input,124,FOLLOW_124_in_rule__IndexedColumn__DescAssignment_2_141001); if (state.failed) return ;
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20361:1: ( 'desc' )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20362:1: 'desc'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getIndexedColumnAccess().getDescDescKeyword_2_1_0()); 
+            }
+            match(input,124,FOLLOW_124_in_rule__IndexedColumn__DescAssignment_2_141009); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIndexedColumnAccess().getDescDescKeyword_2_1_0()); 
             }
@@ -57855,22 +57867,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DefaultValue__LiteralAssignment_0_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20373:1: rule__DefaultValue__LiteralAssignment_0_1 : ( ruleLiteralValue ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20377:1: rule__DefaultValue__LiteralAssignment_0_1 : ( ruleLiteralValue ) ;
     public final void rule__DefaultValue__LiteralAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20377:1: ( ( ruleLiteralValue ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20378:1: ( ruleLiteralValue )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20381:1: ( ( ruleLiteralValue ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20382:1: ( ruleLiteralValue )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20378:1: ( ruleLiteralValue )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20379:1: ruleLiteralValue
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20382:1: ( ruleLiteralValue )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20383:1: ruleLiteralValue
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDefaultValueAccess().getLiteralLiteralValueParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleLiteralValue_in_rule__DefaultValue__LiteralAssignment_0_141040);
+            pushFollow(FOLLOW_ruleLiteralValue_in_rule__DefaultValue__LiteralAssignment_0_141048);
             ruleLiteralValue();
 
             state._fsp--;
@@ -57900,22 +57912,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DefaultValue__ExpressionAssignment_1_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20388:1: rule__DefaultValue__ExpressionAssignment_1_2 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20392:1: rule__DefaultValue__ExpressionAssignment_1_2 : ( ruleSqlExpression ) ;
     public final void rule__DefaultValue__ExpressionAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20392:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20393:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20396:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20397:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20393:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20394:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20397:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20398:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDefaultValueAccess().getExpressionSqlExpressionParserRuleCall_1_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__DefaultValue__ExpressionAssignment_1_241071);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__DefaultValue__ExpressionAssignment_1_241079);
             ruleSqlExpression();
 
             state._fsp--;
@@ -57945,22 +57957,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ConflictClause__ResolutionAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20403:1: rule__ConflictClause__ResolutionAssignment_2 : ( ruleConflictResolution ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20407:1: rule__ConflictClause__ResolutionAssignment_2 : ( ruleConflictResolution ) ;
     public final void rule__ConflictClause__ResolutionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20407:1: ( ( ruleConflictResolution ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20408:1: ( ruleConflictResolution )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20411:1: ( ( ruleConflictResolution ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20412:1: ( ruleConflictResolution )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20408:1: ( ruleConflictResolution )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20409:1: ruleConflictResolution
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20412:1: ( ruleConflictResolution )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20413:1: ruleConflictResolution
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getConflictClauseAccess().getResolutionConflictResolutionEnumRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleConflictResolution_in_rule__ConflictClause__ResolutionAssignment_241102);
+            pushFollow(FOLLOW_ruleConflictResolution_in_rule__ConflictClause__ResolutionAssignment_241110);
             ruleConflictResolution();
 
             state._fsp--;
@@ -57990,28 +58002,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DeleteStatement__TableAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20418:1: rule__DeleteStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20422:1: rule__DeleteStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__DeleteStatement__TableAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20422:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20423:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20426:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20427:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20423:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20424:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20427:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20428:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeleteStatementAccess().getTableTableDefinitionCrossReference_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20425:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20426:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20429:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20430:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeleteStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DeleteStatement__TableAssignment_241137); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__DeleteStatement__TableAssignment_241145); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDeleteStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
@@ -58043,22 +58055,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DeleteStatement__ExpressionAssignment_3_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20437:1: rule__DeleteStatement__ExpressionAssignment_3_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20441:1: rule__DeleteStatement__ExpressionAssignment_3_1 : ( ruleSqlExpression ) ;
     public final void rule__DeleteStatement__ExpressionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20441:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20442:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20445:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20446:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20442:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20443:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20446:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20447:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDeleteStatementAccess().getExpressionSqlExpressionParserRuleCall_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__DeleteStatement__ExpressionAssignment_3_141172);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__DeleteStatement__ExpressionAssignment_3_141180);
             ruleSqlExpression();
 
             state._fsp--;
@@ -58088,22 +58100,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InsertStatement__ConflictResolutionAssignment_0_0_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20452:1: rule__InsertStatement__ConflictResolutionAssignment_0_0_1_1 : ( ruleConflictResolution ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20456:1: rule__InsertStatement__ConflictResolutionAssignment_0_0_1_1 : ( ruleConflictResolution ) ;
     public final void rule__InsertStatement__ConflictResolutionAssignment_0_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20456:1: ( ( ruleConflictResolution ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20457:1: ( ruleConflictResolution )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20460:1: ( ( ruleConflictResolution ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20461:1: ( ruleConflictResolution )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20457:1: ( ruleConflictResolution )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20458:1: ruleConflictResolution
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20461:1: ( ruleConflictResolution )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20462:1: ruleConflictResolution
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getConflictResolutionConflictResolutionEnumRuleCall_0_0_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleConflictResolution_in_rule__InsertStatement__ConflictResolutionAssignment_0_0_1_141203);
+            pushFollow(FOLLOW_ruleConflictResolution_in_rule__InsertStatement__ConflictResolutionAssignment_0_0_1_141211);
             ruleConflictResolution();
 
             state._fsp--;
@@ -58133,28 +58145,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InsertStatement__TableAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20467:1: rule__InsertStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20471:1: rule__InsertStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__InsertStatement__TableAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20471:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20472:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20475:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20476:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20472:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20473:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20476:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20477:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getTableTableDefinitionCrossReference_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20474:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20475:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20478:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20479:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InsertStatement__TableAssignment_241238); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InsertStatement__TableAssignment_241246); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInsertStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
@@ -58186,28 +58198,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InsertStatement__ColumnNamesAssignment_3_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20486:1: rule__InsertStatement__ColumnNamesAssignment_3_1 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20490:1: rule__InsertStatement__ColumnNamesAssignment_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__InsertStatement__ColumnNamesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20490:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20491:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20494:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20495:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20491:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20492:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20495:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20496:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getColumnNamesColumnDefCrossReference_3_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20493:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20494:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20497:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20498:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getColumnNamesColumnDefIDTerminalRuleCall_3_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_141277); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_141285); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInsertStatementAccess().getColumnNamesColumnDefIDTerminalRuleCall_3_1_0_1()); 
             }
@@ -58239,28 +58251,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InsertStatement__ColumnNamesAssignment_3_2_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20505:1: rule__InsertStatement__ColumnNamesAssignment_3_2_1 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20509:1: rule__InsertStatement__ColumnNamesAssignment_3_2_1 : ( ( RULE_ID ) ) ;
     public final void rule__InsertStatement__ColumnNamesAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20509:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20510:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20513:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20514:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20510:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20511:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20514:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20515:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getColumnNamesColumnDefCrossReference_3_2_1_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20512:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20513:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20516:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20517:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getColumnNamesColumnDefIDTerminalRuleCall_3_2_1_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_2_141316); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_2_141324); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getInsertStatementAccess().getColumnNamesColumnDefIDTerminalRuleCall_3_2_1_0_1()); 
             }
@@ -58292,22 +58304,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InsertStatement__ExpressionsAssignment_4_0_0_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20524:1: rule__InsertStatement__ExpressionsAssignment_4_0_0_2 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20528:1: rule__InsertStatement__ExpressionsAssignment_4_0_0_2 : ( ruleSqlExpression ) ;
     public final void rule__InsertStatement__ExpressionsAssignment_4_0_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20528:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20529:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20532:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20533:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20529:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20530:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20533:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20534:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getExpressionsSqlExpressionParserRuleCall_4_0_0_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_241351);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_241359);
             ruleSqlExpression();
 
             state._fsp--;
@@ -58337,22 +58349,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InsertStatement__ExpressionsAssignment_4_0_0_3_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20539:1: rule__InsertStatement__ExpressionsAssignment_4_0_0_3_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20543:1: rule__InsertStatement__ExpressionsAssignment_4_0_0_3_1 : ( ruleSqlExpression ) ;
     public final void rule__InsertStatement__ExpressionsAssignment_4_0_0_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20543:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20544:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20547:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20548:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20544:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20545:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20548:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20549:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getExpressionsSqlExpressionParserRuleCall_4_0_0_3_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_3_141382);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_3_141390);
             ruleSqlExpression();
 
             state._fsp--;
@@ -58382,22 +58394,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InsertStatement__SelectStatementAssignment_4_0_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20554:1: rule__InsertStatement__SelectStatementAssignment_4_0_1 : ( ruleSelectStatement ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20558:1: rule__InsertStatement__SelectStatementAssignment_4_0_1 : ( ruleSelectStatement ) ;
     public final void rule__InsertStatement__SelectStatementAssignment_4_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20558:1: ( ( ruleSelectStatement ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20559:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20562:1: ( ( ruleSelectStatement ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20563:1: ( ruleSelectStatement )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20559:1: ( ruleSelectStatement )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20560:1: ruleSelectStatement
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20563:1: ( ruleSelectStatement )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20564:1: ruleSelectStatement
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInsertStatementAccess().getSelectStatementSelectStatementParserRuleCall_4_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSelectStatement_in_rule__InsertStatement__SelectStatementAssignment_4_0_141413);
+            pushFollow(FOLLOW_ruleSelectStatement_in_rule__InsertStatement__SelectStatementAssignment_4_0_141421);
             ruleSelectStatement();
 
             state._fsp--;
@@ -58427,22 +58439,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UpdateStatement__ConflictResolutionAssignment_1_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20569:1: rule__UpdateStatement__ConflictResolutionAssignment_1_1 : ( ruleConflictResolution ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20573:1: rule__UpdateStatement__ConflictResolutionAssignment_1_1 : ( ruleConflictResolution ) ;
     public final void rule__UpdateStatement__ConflictResolutionAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20573:1: ( ( ruleConflictResolution ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20574:1: ( ruleConflictResolution )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20577:1: ( ( ruleConflictResolution ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20578:1: ( ruleConflictResolution )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20574:1: ( ruleConflictResolution )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20575:1: ruleConflictResolution
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20578:1: ( ruleConflictResolution )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20579:1: ruleConflictResolution
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateStatementAccess().getConflictResolutionConflictResolutionEnumRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleConflictResolution_in_rule__UpdateStatement__ConflictResolutionAssignment_1_141444);
+            pushFollow(FOLLOW_ruleConflictResolution_in_rule__UpdateStatement__ConflictResolutionAssignment_1_141452);
             ruleConflictResolution();
 
             state._fsp--;
@@ -58472,28 +58484,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UpdateStatement__TableAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20584:1: rule__UpdateStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20588:1: rule__UpdateStatement__TableAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__UpdateStatement__TableAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20588:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20589:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20592:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20593:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20589:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20590:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20593:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20594:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateStatementAccess().getTableTableDefinitionCrossReference_2_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20591:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20592:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20595:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20596:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UpdateStatement__TableAssignment_241479); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UpdateStatement__TableAssignment_241487); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUpdateStatementAccess().getTableTableDefinitionIDTerminalRuleCall_2_0_1()); 
             }
@@ -58525,22 +58537,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UpdateStatement__UpdateColumnExpressionsAssignment_4"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20603:1: rule__UpdateStatement__UpdateColumnExpressionsAssignment_4 : ( ruleUpdateColumnExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20607:1: rule__UpdateStatement__UpdateColumnExpressionsAssignment_4 : ( ruleUpdateColumnExpression ) ;
     public final void rule__UpdateStatement__UpdateColumnExpressionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20607:1: ( ( ruleUpdateColumnExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20608:1: ( ruleUpdateColumnExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20611:1: ( ( ruleUpdateColumnExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20612:1: ( ruleUpdateColumnExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20608:1: ( ruleUpdateColumnExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20609:1: ruleUpdateColumnExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20612:1: ( ruleUpdateColumnExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20613:1: ruleUpdateColumnExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateStatementAccess().getUpdateColumnExpressionsUpdateColumnExpressionParserRuleCall_4_0()); 
             }
-            pushFollow(FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_441514);
+            pushFollow(FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_441522);
             ruleUpdateColumnExpression();
 
             state._fsp--;
@@ -58570,22 +58582,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20618:1: rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_1 : ( ruleUpdateColumnExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20622:1: rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_1 : ( ruleUpdateColumnExpression ) ;
     public final void rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20622:1: ( ( ruleUpdateColumnExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20623:1: ( ruleUpdateColumnExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20626:1: ( ( ruleUpdateColumnExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20627:1: ( ruleUpdateColumnExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20623:1: ( ruleUpdateColumnExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20624:1: ruleUpdateColumnExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20627:1: ( ruleUpdateColumnExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20628:1: ruleUpdateColumnExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateStatementAccess().getUpdateColumnExpressionsUpdateColumnExpressionParserRuleCall_5_1_0()); 
             }
-            pushFollow(FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_141545);
+            pushFollow(FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_141553);
             ruleUpdateColumnExpression();
 
             state._fsp--;
@@ -58615,22 +58627,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UpdateStatement__WhereExpressionAssignment_6_1"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20633:1: rule__UpdateStatement__WhereExpressionAssignment_6_1 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20637:1: rule__UpdateStatement__WhereExpressionAssignment_6_1 : ( ruleSqlExpression ) ;
     public final void rule__UpdateStatement__WhereExpressionAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20637:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20638:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20641:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20642:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20638:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20639:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20642:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20643:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateStatementAccess().getWhereExpressionSqlExpressionParserRuleCall_6_1_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__UpdateStatement__WhereExpressionAssignment_6_141576);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__UpdateStatement__WhereExpressionAssignment_6_141584);
             ruleSqlExpression();
 
             state._fsp--;
@@ -58660,28 +58672,28 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UpdateColumnExpression__ColumnNameAssignment_0"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20648:1: rule__UpdateColumnExpression__ColumnNameAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20652:1: rule__UpdateColumnExpression__ColumnNameAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__UpdateColumnExpression__ColumnNameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20652:1: ( ( ( RULE_ID ) ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20653:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20656:1: ( ( ( RULE_ID ) ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20657:1: ( ( RULE_ID ) )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20653:1: ( ( RULE_ID ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20654:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20657:1: ( ( RULE_ID ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20658:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateColumnExpressionAccess().getColumnNameColumnDefCrossReference_0_0()); 
             }
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20655:1: ( RULE_ID )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20656:1: RULE_ID
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20659:1: ( RULE_ID )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20660:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateColumnExpressionAccess().getColumnNameColumnDefIDTerminalRuleCall_0_0_1()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UpdateColumnExpression__ColumnNameAssignment_041611); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UpdateColumnExpression__ColumnNameAssignment_041619); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getUpdateColumnExpressionAccess().getColumnNameColumnDefIDTerminalRuleCall_0_0_1()); 
             }
@@ -58713,22 +58725,22 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__UpdateColumnExpression__ExpressionAssignment_2"
-    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20667:1: rule__UpdateColumnExpression__ExpressionAssignment_2 : ( ruleSqlExpression ) ;
+    // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20671:1: rule__UpdateColumnExpression__ExpressionAssignment_2 : ( ruleSqlExpression ) ;
     public final void rule__UpdateColumnExpression__ExpressionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20671:1: ( ( ruleSqlExpression ) )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20672:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20675:1: ( ( ruleSqlExpression ) )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20676:1: ( ruleSqlExpression )
             {
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20672:1: ( ruleSqlExpression )
-            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20673:1: ruleSqlExpression
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20676:1: ( ruleSqlExpression )
+            // ../com.justeat.mickeydb.ui/src-gen/com/justeat/mickeydb/ui/contentassist/antlr/internal/InternalMickeyLang.g:20677:1: ruleSqlExpression
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getUpdateColumnExpressionAccess().getExpressionSqlExpressionParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleSqlExpression_in_rule__UpdateColumnExpression__ExpressionAssignment_241646);
+            pushFollow(FOLLOW_ruleSqlExpression_in_rule__UpdateColumnExpression__ExpressionAssignment_241654);
             ruleSqlExpression();
 
             state._fsp--;
@@ -58853,20 +58865,20 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     static final String DFA10_eotS =
         "\15\uffff";
     static final String DFA10_eofS =
-        "\3\uffff\1\13\11\uffff";
+        "\3\uffff\1\12\11\uffff";
     static final String DFA10_minS =
         "\1\4\2\uffff\1\14\1\uffff\1\4\7\uffff";
     static final String DFA10_maxS =
         "\1\u0085\2\uffff\1\u0081\1\uffff\1\u0085\7\uffff";
     static final String DFA10_acceptS =
-        "\1\uffff\1\1\1\2\1\uffff\1\4\1\uffff\1\6\1\7\1\11\1\12\1\10\1\3\1\5";
+        "\1\uffff\1\1\1\2\1\uffff\1\4\1\uffff\1\6\1\7\1\11\1\12\1\3\1\10\1\5";
     static final String DFA10_specialS =
         "\15\uffff}>";
     static final String[] DFA10_transitionS = {
             "\1\4\1\3\1\4\11\uffff\1\4\55\uffff\1\5\13\uffff\1\1\1\2\1\uffff\1\7\2\uffff\1\10\1\11\45\uffff\2\6\11\uffff\4\4",
             "",
             "",
-            "\35\13\4\uffff\4\13\14\uffff\1\13\1\12\1\13\3\uffff\3\13\1\uffff\3\13\2\uffff\1\13\1\uffff\2\13\2\uffff\4\13\1\uffff\4\13\1\uffff\1\13\3\uffff\1\13\1\uffff\1\13\2\uffff\1\13\13\uffff\1\13\3\uffff\2\13\4\uffff\4\13\1\uffff\2\13",
+            "\35\12\4\uffff\4\12\14\uffff\1\12\1\13\1\12\3\uffff\3\12\1\uffff\3\12\2\uffff\1\12\1\uffff\2\12\2\uffff\4\12\1\uffff\4\12\1\uffff\1\12\3\uffff\1\12\1\uffff\1\12\2\uffff\1\12\13\uffff\1\12\3\uffff\2\12\4\uffff\4\12\1\uffff\2\12",
             "",
             "\3\14\11\uffff\1\14\55\uffff\1\14\13\uffff\2\14\1\uffff\1\14\2\uffff\2\14\4\uffff\1\6\40\uffff\2\14\11\uffff\4\14",
             "",
@@ -58920,7 +58932,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     static final String DFA21_maxS =
         "\1\145\1\u0086\1\135\1\146\1\uffff\1\137\3\uffff\1\5\4\uffff\1\144\2\uffff";
     static final String DFA21_acceptS =
-        "\4\uffff\1\4\1\uffff\1\2\1\3\1\1\1\uffff\1\12\1\11\1\10\1\7\1\uffff\1\5\1\6";
+        "\4\uffff\1\4\1\uffff\1\2\1\3\1\1\1\uffff\1\12\1\11\1\10\1\7\1\uffff\1\6\1\5";
     static final String DFA21_specialS =
         "\21\uffff}>";
     static final String[] DFA21_transitionS = {
@@ -58938,7 +58950,7 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
             "",
             "",
             "",
-            "\1\17\1\20",
+            "\1\20\1\17",
             "",
             ""
     };
@@ -58996,9 +59008,9 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleContentUri_in_entryRuleContentUri367 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleContentUri374 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContentUri__Group__0_in_ruleContentUri400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContentUriParam_in_entryRuleContentUriParam427 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContentUriParam434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContentUriParam__Group__0_in_ruleContentUriParam460 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContentUriQueryParam_in_entryRuleContentUriQueryParam427 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContentUriQueryParam434 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContentUriQueryParam__Group__0_in_ruleContentUriQueryParam460 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleContentUriSegment_in_entryRuleContentUriSegment487 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleContentUriSegment494 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContentUriSegment__Alternatives_in_ruleContentUriSegment520 = new BitSet(new long[]{0x0000000000000002L});
@@ -59408,11 +59420,11 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_13_in_rule__ContentUri__Group_1__0__Impl9340 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContentUri__Group_1__1__Impl_in_rule__ContentUri__Group_1__19371 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContentUri__SegmentsAssignment_1_1_in_rule__ContentUri__Group_1__1__Impl9398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContentUriParam__Group__0__Impl_in_rule__ContentUriParam__Group__09432 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__ContentUriParam__Group__1_in_rule__ContentUriParam__Group__09435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_rule__ContentUriParam__Group__0__Impl9463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContentUriParam__Group__1__Impl_in_rule__ContentUriParam__Group__19494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ContentUriParam__NameAssignment_1_in_rule__ContentUriParam__Group__1__Impl9521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContentUriQueryParam__Group__0__Impl_in_rule__ContentUriQueryParam__Group__09432 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__ContentUriQueryParam__Group__1_in_rule__ContentUriQueryParam__Group__09435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_rule__ContentUriQueryParam__Group__0__Impl9463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContentUriQueryParam__Group__1__Impl_in_rule__ContentUriQueryParam__Group__19494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ContentUriQueryParam__ColumnAssignment_1_in_rule__ContentUriQueryParam__Group__1__Impl9521 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContentUriSegment__Group_1__0__Impl_in_rule__ContentUriSegment__Group_1__09555 = new BitSet(new long[]{0x0000000000000020L,0x0000000000000001L});
     public static final BitSet FOLLOW_rule__ContentUriSegment__Group_1__1_in_rule__ContentUriSegment__Group_1__09558 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ContentUriSegment__Group_1__1__Impl_in_rule__ContentUriSegment__Group_1__19616 = new BitSet(new long[]{0x0000000000000020L});
@@ -60482,185 +60494,185 @@ public class InternalMickeyLangParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_ruleContentUri_in_rule__ActionStatement__UriAssignment_235308 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_rule__ActionStatement__TypeAssignment_435343 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_104_in_rule__ActionStatement__UniqueAssignment_535383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContentUriParam_in_rule__ActionStatement__ParamsAssignment_6_135422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContentUriQueryParam_in_rule__ActionStatement__ParamsAssignment_6_135422 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleColumnType_in_rule__FunctionArg__TypeAssignment_035453 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__FunctionArg__NameAssignment_135484 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleContentUriSegment_in_rule__ContentUri__SegmentsAssignment_1_135515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ContentUriParam__NameAssignment_135546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ContentUriSegment__NameAssignment_035577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ContentUriSegment__ParamAssignment_1_235612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__MigrationBlock__NameAssignment_235647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__MigrationBlock__FromAssignment_3_135682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDDLStatement_in_rule__MigrationBlock__StatementsAssignment_5_035717 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_117_in_rule__ExprConcat__OpAssignment_1_135753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExprMult_in_rule__ExprConcat__RightAssignment_1_235792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExprMult__OpAlternatives_1_1_0_in_rule__ExprMult__OpAssignment_1_135823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExprAdd_in_rule__ExprMult__RightAssignment_1_235856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExprAdd__OpAlternatives_1_1_0_in_rule__ExprAdd__OpAssignment_1_135887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExprBit_in_rule__ExprAdd__RightAssignment_1_235920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExprBit__OpAlternatives_1_1_0_in_rule__ExprBit__OpAssignment_1_135951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExprRelate_in_rule__ExprBit__RightAssignment_1_235984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExprRelate__OpAlternatives_1_1_0_in_rule__ExprRelate__OpAssignment_1_136015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExprEqual_in_rule__ExprRelate__RightAssignment_1_236048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExprEqual__OpAlternatives_1_1_0_in_rule__ExprEqual__OpAssignment_1_136079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExprAnd_in_rule__ExprEqual__RightAssignment_1_236112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_118_in_rule__ExprAnd__OpAssignment_1_136148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExprOr_in_rule__ExprAnd__RightAssignment_1_236187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_113_in_rule__ExprOr__OpAssignment_1_136223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullCheckExpression_in_rule__ExprOr__RightAssignment_1_236262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullExpression_in_rule__NullCheckExpression__RightAssignment_1_136293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_0_236328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_1_236367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_0_036406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_1_036445 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_2_1_1_2_036485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_1_2_136528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_236567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_rule__PrimaryExpression__LiteralValueAssignment_3_136602 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_4_236633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_119_in_rule__PrimaryExpression__NotAssignment_5_136669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_120_in_rule__PrimaryExpression__ExistsAssignment_5_236713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__PrimaryExpression__SelectAssignment_5_436752 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__CaseExpressionAssignment_6_236783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_rule__PrimaryExpression__CasesAssignment_6_336814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ElseExpressionAssignment_6_4_136845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__NameAssignment_7_136876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_7_3_036912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_036951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_136982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_8_337013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqliteDataType_in_rule__PrimaryExpression__TypeAssignment_8_537044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ArgAssignment_9_237079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__Case__WhenExpressionAssignment_137114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__Case__ThenExpressionAssignment_337145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectCore_in_rule__SelectStatement__CoreAssignment_037176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrderingTermList_in_rule__SelectStatement__OrderbyAssignment_1_137207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitAssignment_2_137238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitOffsetAssignment_2_2_137269 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_037300 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_1_137331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCompoundOperator_in_rule__SelectCore__OpAssignment_1_137362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectExpression_in_rule__SelectCore__RightAssignment_1_237393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_121_in_rule__SelectExpression__DistinctAssignment_2_037429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_122_in_rule__SelectExpression__AllAssignment_2_137473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__SelectExpression__AllColumnsAssignment_3_037517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectList_in_rule__SelectExpression__SelectListAssignment_3_137556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJoinSource_in_rule__SelectExpression__SourceAssignment_4_137587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWhereExpressions_in_rule__SelectExpression__WhereAssignment_5_137618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGroupByExpressions_in_rule__SelectExpression__GroupByAssignment_6_137649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHavingExpressions_in_rule__SelectExpression__HavingAssignment_7_137680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_037711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_1_137742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__WhereExpressions__ExpressionAssignment37773 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_037804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_1_137835 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__HavingExpressions__ExpressionAssignment37866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__OrderingTerm__ExpressionAssignment_037897 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_123_in_rule__OrderingTerm__AscAssignment_1_037933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_124_in_rule__OrderingTerm__DescAssignment_1_137977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleSource_in_rule__JoinSource__SourceAssignment_038016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJoinStatement_in_rule__JoinSource__JoinStatementsAssignment_138047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__SingleSourceTable__TableReferenceAssignment_138082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SingleSourceTable__NameAssignment_2_138117 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__SingleSourceSelectStatement__SelectStatementAssignment_238148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__SingleSourceSelectStatement__NameAssignment_4_138179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleJoinSource_in_rule__SingleSourceJoin__JoinSourceAssignment_138210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_125_in_rule__JoinStatement__NaturalAssignment_138246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_126_in_rule__JoinStatement__LeftAssignment_2_0_038290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_127_in_rule__JoinStatement__OuterAssignment_2_0_138334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_128_in_rule__JoinStatement__InnerAssignment_2_138378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_129_in_rule__JoinStatement__CrossAssignment_2_238422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleSource_in_rule__JoinStatement__SingleSourceAssignment_438461 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__JoinStatement__ExpressionAssignment_638492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__ResultColumn__ExpressionAssignment_138523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ResultColumn__NameAssignment_2_138554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSignedNumber_in_rule__LiteralValue__NumberAssignment_0_138585 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__LiteralValue__LiteralAssignment_1_138616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_130_in_rule__LiteralValue__LiteralAssignment_2_138652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_131_in_rule__LiteralValue__LiteralAssignment_3_138696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_132_in_rule__LiteralValue__LiteralAssignment_4_138740 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_133_in_rule__LiteralValue__LiteralAssignment_5_138784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_134_in_rule__CreateTableStatement__TemporaryAssignment_238828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTableStatement__NameAssignment_438867 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_638898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_7_138929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTableConstraint_in_rule__CreateTableStatement__ConstraintsAssignment_8_138960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_134_in_rule__CreateViewStatement__TemporaryAssignment_238996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateViewStatement__NameAssignment_439035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__CreateViewStatement__SelectStatementAssignment_639066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_134_in_rule__CreateTriggerStatement__TemporaryAssignment_139102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__NameAssignment_339141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateTriggerStatement__WhenAlternatives_4_0_in_rule__CreateTriggerStatement__WhenAssignment_439172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_110_in_rule__CreateTriggerStatement__EventTypeAssignment_5_039210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_112_in_rule__CreateTriggerStatement__EventTypeAssignment_5_139254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_115_in_rule__CreateTriggerStatement__EventTypeAssignment_5_2_039298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_139337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_139368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__TableAssignment_739403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_135_in_rule__CreateTriggerStatement__ForEachRowAssignment_839443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__CreateTriggerStatement__WhenExpressionAssignment_9_139482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_039513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_2_039544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__TableAssignment_339579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__NameAssignment_539614 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__AlterTableAddColumnStatement__TableAssignment_239649 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnDef_in_rule__AlterTableAddColumnStatement__ColumnDefAssignment_439684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_136_in_rule__DropTableStatement__IfExistsAssignment_239720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DropTableStatement__TableAssignment_339763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_136_in_rule__DropTriggerStatement__IfExistsAssignment_239803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DropTriggerStatement__TriggerAssignment_339846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_136_in_rule__DropViewStatement__IfExistsAssignment_239886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DropViewStatement__ViewAssignment_339929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_104_in_rule__CreateIndexStatement__UniqueAssignment_139969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateIndexStatement__NameAssignment_340008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateIndexStatement__TableAssignment_540043 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_740078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_8_140109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_136_in_rule__DropIndexStatement__IfExistsAssignment_240145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DropIndexStatement__IndexAssignment_340188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__ColumnDef__NameAssignment_140223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnType_in_rule__ColumnDef__TypeAssignment_240254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnConstraint_in_rule__ColumnDef__ConstraintsAssignment_340285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_123_in_rule__ColumnConstraint__AscAssignment_0_2_040321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_124_in_rule__ColumnConstraint__DescAssignment_0_2_140365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_137_in_rule__ColumnConstraint__AutoincrementAssignment_0_340409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_1_240448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_2_240479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefaultValue_in_rule__ColumnConstraint__DefaultValueAssignment_3_240510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__ColumnConstraint__ExpressionAssignment_4_340541 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__UniqueTableConstraint__NameAssignment_0_140572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_340603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_4_140634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConflictClause_in_rule__UniqueTableConstraint__ConflictClauseAssignment_640665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryConstraint__NameAssignment_0_140696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_340727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_4_140758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConflictClause_in_rule__PrimaryConstraint__ConflictClauseAssignment_640789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CheckTableConstraint__NameAssignment_0_140820 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__CheckTableConstraint__ExpressionAssignment_340851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__IndexedColumn__ColumnReferenceAssignment_040886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__IndexedColumn__CollationNameAssignment_1_140921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_123_in_rule__IndexedColumn__AscAssignment_2_040957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_124_in_rule__IndexedColumn__DescAssignment_2_141001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteralValue_in_rule__DefaultValue__LiteralAssignment_0_141040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__DefaultValue__ExpressionAssignment_1_241071 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConflictResolution_in_rule__ConflictClause__ResolutionAssignment_241102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__DeleteStatement__TableAssignment_241137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__DeleteStatement__ExpressionAssignment_3_141172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConflictResolution_in_rule__InsertStatement__ConflictResolutionAssignment_0_0_1_141203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__InsertStatement__TableAssignment_241238 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_141277 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_2_141316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_241351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_3_141382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__InsertStatement__SelectStatementAssignment_4_0_141413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConflictResolution_in_rule__UpdateStatement__ConflictResolutionAssignment_1_141444 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__UpdateStatement__TableAssignment_241479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_441514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_141545 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__UpdateStatement__WhereExpressionAssignment_6_141576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__UpdateColumnExpression__ColumnNameAssignment_041611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__UpdateColumnExpression__ExpressionAssignment_241646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ContentUriQueryParam__ColumnAssignment_135550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ContentUriSegment__NameAssignment_035585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ContentUriSegment__ParamAssignment_1_235620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__MigrationBlock__NameAssignment_235655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__MigrationBlock__FromAssignment_3_135690 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDDLStatement_in_rule__MigrationBlock__StatementsAssignment_5_035725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_117_in_rule__ExprConcat__OpAssignment_1_135761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExprMult_in_rule__ExprConcat__RightAssignment_1_235800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExprMult__OpAlternatives_1_1_0_in_rule__ExprMult__OpAssignment_1_135831 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExprAdd_in_rule__ExprMult__RightAssignment_1_235864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExprAdd__OpAlternatives_1_1_0_in_rule__ExprAdd__OpAssignment_1_135895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExprBit_in_rule__ExprAdd__RightAssignment_1_235928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExprBit__OpAlternatives_1_1_0_in_rule__ExprBit__OpAssignment_1_135959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExprRelate_in_rule__ExprBit__RightAssignment_1_235992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExprRelate__OpAlternatives_1_1_0_in_rule__ExprRelate__OpAssignment_1_136023 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExprEqual_in_rule__ExprRelate__RightAssignment_1_236056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExprEqual__OpAlternatives_1_1_0_in_rule__ExprEqual__OpAssignment_1_136087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExprAnd_in_rule__ExprEqual__RightAssignment_1_236120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_118_in_rule__ExprAnd__OpAssignment_1_136156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExprOr_in_rule__ExprAnd__RightAssignment_1_236195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_113_in_rule__ExprOr__OpAssignment_1_136231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullCheckExpression_in_rule__ExprOr__RightAssignment_1_236270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullExpression_in_rule__NullCheckExpression__RightAssignment_1_136301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_0_236336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_1_236375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_0_036414 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__SourceAssignment_2_1_1_036453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_2_1_1_2_036493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_1_2_136536 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ColumnAssignment_2_1_236575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralValue_in_rule__PrimaryExpression__LiteralValueAssignment_3_136610 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_4_236641 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_119_in_rule__PrimaryExpression__NotAssignment_5_136677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_120_in_rule__PrimaryExpression__ExistsAssignment_5_236721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__PrimaryExpression__SelectAssignment_5_436760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__CaseExpressionAssignment_6_236791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCase_in_rule__PrimaryExpression__CasesAssignment_6_336822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ElseExpressionAssignment_6_4_136853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__NameAssignment_7_136884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__PrimaryExpression__AllAssignment_7_3_036920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_036959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ArgumentsAssignment_7_3_1_1_136990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__PrimaryExpression__ExpressionAssignment_8_337021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqliteDataType_in_rule__PrimaryExpression__TypeAssignment_8_537052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryExpression__ArgAssignment_9_237087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__Case__WhenExpressionAssignment_137122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__Case__ThenExpressionAssignment_337153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectCore_in_rule__SelectStatement__CoreAssignment_037184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrderingTermList_in_rule__SelectStatement__OrderbyAssignment_1_137215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitAssignment_2_137246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__SelectStatement__LimitOffsetAssignment_2_2_137277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_037308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrderingTerm_in_rule__OrderingTermList__OrderingTermsAssignment_1_137339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCompoundOperator_in_rule__SelectCore__OpAssignment_1_137370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectExpression_in_rule__SelectCore__RightAssignment_1_237401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_121_in_rule__SelectExpression__DistinctAssignment_2_037437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_122_in_rule__SelectExpression__AllAssignment_2_137481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__SelectExpression__AllColumnsAssignment_3_037525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectList_in_rule__SelectExpression__SelectListAssignment_3_137564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJoinSource_in_rule__SelectExpression__SourceAssignment_4_137595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWhereExpressions_in_rule__SelectExpression__WhereAssignment_5_137626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGroupByExpressions_in_rule__SelectExpression__GroupByAssignment_6_137657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHavingExpressions_in_rule__SelectExpression__HavingAssignment_7_137688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_037719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleResultColumn_in_rule__SelectList__ResultColumnsAssignment_1_137750 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__WhereExpressions__ExpressionAssignment37781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_037812 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__GroupByExpressions__GroupByExpressionsAssignment_1_137843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__HavingExpressions__ExpressionAssignment37874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__OrderingTerm__ExpressionAssignment_037905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_123_in_rule__OrderingTerm__AscAssignment_1_037941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_124_in_rule__OrderingTerm__DescAssignment_1_137985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleSource_in_rule__JoinSource__SourceAssignment_038024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJoinStatement_in_rule__JoinSource__JoinStatementsAssignment_138055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__SingleSourceTable__TableReferenceAssignment_138090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SingleSourceTable__NameAssignment_2_138125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__SingleSourceSelectStatement__SelectStatementAssignment_238156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__SingleSourceSelectStatement__NameAssignment_4_138187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJoinSource_in_rule__SingleSourceJoin__JoinSourceAssignment_138218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_125_in_rule__JoinStatement__NaturalAssignment_138254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_126_in_rule__JoinStatement__LeftAssignment_2_0_038298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_127_in_rule__JoinStatement__OuterAssignment_2_0_138342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_128_in_rule__JoinStatement__InnerAssignment_2_138386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_129_in_rule__JoinStatement__CrossAssignment_2_238430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleSource_in_rule__JoinStatement__SingleSourceAssignment_438469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__JoinStatement__ExpressionAssignment_638500 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__ResultColumn__ExpressionAssignment_138531 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ResultColumn__NameAssignment_2_138562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSignedNumber_in_rule__LiteralValue__NumberAssignment_0_138593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__LiteralValue__LiteralAssignment_1_138624 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_130_in_rule__LiteralValue__LiteralAssignment_2_138660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_131_in_rule__LiteralValue__LiteralAssignment_3_138704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_132_in_rule__LiteralValue__LiteralAssignment_4_138748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_133_in_rule__LiteralValue__LiteralAssignment_5_138792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_134_in_rule__CreateTableStatement__TemporaryAssignment_238836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTableStatement__NameAssignment_438875 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_638906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnDef_in_rule__CreateTableStatement__ColumnDefsAssignment_7_138937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTableConstraint_in_rule__CreateTableStatement__ConstraintsAssignment_8_138968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_134_in_rule__CreateViewStatement__TemporaryAssignment_239004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateViewStatement__NameAssignment_439043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__CreateViewStatement__SelectStatementAssignment_639074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_134_in_rule__CreateTriggerStatement__TemporaryAssignment_139110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__NameAssignment_339149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateTriggerStatement__WhenAlternatives_4_0_in_rule__CreateTriggerStatement__WhenAssignment_439180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_110_in_rule__CreateTriggerStatement__EventTypeAssignment_5_039218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_112_in_rule__CreateTriggerStatement__EventTypeAssignment_5_139262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_115_in_rule__CreateTriggerStatement__EventTypeAssignment_5_2_039306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_139345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__UpdateColumnNamesAssignment_5_2_1_2_139376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateTriggerStatement__TableAssignment_739411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_135_in_rule__CreateTriggerStatement__ForEachRowAssignment_839451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__CreateTriggerStatement__WhenExpressionAssignment_9_139490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_039521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDMLStatement_in_rule__CreateTriggerStatement__StatementsAssignment_11_2_039552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__TableAssignment_339587 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AlterTableRenameStatement__NameAssignment_539622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__AlterTableAddColumnStatement__TableAssignment_239657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnDef_in_rule__AlterTableAddColumnStatement__ColumnDefAssignment_439692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_136_in_rule__DropTableStatement__IfExistsAssignment_239728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DropTableStatement__TableAssignment_339771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_136_in_rule__DropTriggerStatement__IfExistsAssignment_239811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DropTriggerStatement__TriggerAssignment_339854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_136_in_rule__DropViewStatement__IfExistsAssignment_239894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DropViewStatement__ViewAssignment_339937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_104_in_rule__CreateIndexStatement__UniqueAssignment_139977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateIndexStatement__NameAssignment_340016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateIndexStatement__TableAssignment_540051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_740086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__CreateIndexStatement__ColumnsAssignment_8_140117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_136_in_rule__DropIndexStatement__IfExistsAssignment_240153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DropIndexStatement__IndexAssignment_340196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__ColumnDef__NameAssignment_140231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnType_in_rule__ColumnDef__TypeAssignment_240262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnConstraint_in_rule__ColumnDef__ConstraintsAssignment_340293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_123_in_rule__ColumnConstraint__AscAssignment_0_2_040329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_124_in_rule__ColumnConstraint__DescAssignment_0_2_140373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_137_in_rule__ColumnConstraint__AutoincrementAssignment_0_340417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_1_240456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConflictClause_in_rule__ColumnConstraint__ConflictClauseAssignment_2_240487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDefaultValue_in_rule__ColumnConstraint__DefaultValueAssignment_3_240518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__ColumnConstraint__ExpressionAssignment_4_340549 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__UniqueTableConstraint__NameAssignment_0_140580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_340611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__UniqueTableConstraint__ColumnsAssignment_4_140642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConflictClause_in_rule__UniqueTableConstraint__ConflictClauseAssignment_640673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__PrimaryConstraint__NameAssignment_0_140704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_340735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIndexedColumn_in_rule__PrimaryConstraint__ColumnsAssignment_4_140766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConflictClause_in_rule__PrimaryConstraint__ConflictClauseAssignment_640797 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CheckTableConstraint__NameAssignment_0_140828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__CheckTableConstraint__ExpressionAssignment_340859 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__IndexedColumn__ColumnReferenceAssignment_040894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__IndexedColumn__CollationNameAssignment_1_140929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_123_in_rule__IndexedColumn__AscAssignment_2_040965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_124_in_rule__IndexedColumn__DescAssignment_2_141009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteralValue_in_rule__DefaultValue__LiteralAssignment_0_141048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__DefaultValue__ExpressionAssignment_1_241079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConflictResolution_in_rule__ConflictClause__ResolutionAssignment_241110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__DeleteStatement__TableAssignment_241145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__DeleteStatement__ExpressionAssignment_3_141180 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConflictResolution_in_rule__InsertStatement__ConflictResolutionAssignment_0_0_1_141211 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__InsertStatement__TableAssignment_241246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_141285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__InsertStatement__ColumnNamesAssignment_3_2_141324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_241359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__InsertStatement__ExpressionsAssignment_4_0_0_3_141390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectStatement_in_rule__InsertStatement__SelectStatementAssignment_4_0_141421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConflictResolution_in_rule__UpdateStatement__ConflictResolutionAssignment_1_141452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__UpdateStatement__TableAssignment_241487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_441522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateColumnExpression_in_rule__UpdateStatement__UpdateColumnExpressionsAssignment_5_141553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__UpdateStatement__WhereExpressionAssignment_6_141584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__UpdateColumnExpression__ColumnNameAssignment_041619 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSqlExpression_in_rule__UpdateColumnExpression__ExpressionAssignment_241654 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PrimaryExpression__Group_2_1_0__0_in_synpred36_InternalMickeyLang5189 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__PrimaryExpression__Group_2_1_1__0_in_synpred37_InternalMickeyLang5207 = new BitSet(new long[]{0x0000000000000002L});
 

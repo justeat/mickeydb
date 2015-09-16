@@ -12,6 +12,7 @@ import com.justeat.mickeydb.mickeyLang.ColumnSource;
 import com.justeat.mickeydb.mickeyLang.ColumnType;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
@@ -625,6 +626,63 @@ public class ContentProviderContractGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.newLine();
+    {
+      EList<ContentUriQueryParam> _params = action.getParams();
+      for(final ContentUriQueryParam queryParam : _params) {
+        _builder.append("\t");
+        _builder.append("public ");
+        String _name_5 = action.getName();
+        String _pascalize_2 = Strings.pascalize(_name_5);
+        _builder.append(_pascalize_2, "\t");
+        _builder.append("UriBuilder set");
+        ColumnSource _column = queryParam.getColumn();
+        String _name_6 = _column.getName();
+        String _pascalize_3 = Strings.pascalize(_name_6);
+        _builder.append(_pascalize_3, "\t");
+        _builder.append("Param(");
+        ColumnSource _column_1 = queryParam.getColumn();
+        ColumnType _inferredColumnType_1 = ModelUtil.getInferredColumnType(_column_1);
+        String _javaTypeName = ModelUtil.toJavaTypeName(_inferredColumnType_1);
+        _builder.append(_javaTypeName, "\t");
+        _builder.append(" value) {");
+        _builder.newLineIfNotEmpty();
+        {
+          ColumnSource _column_2 = queryParam.getColumn();
+          ColumnType _inferredColumnType_2 = ModelUtil.getInferredColumnType(_column_2);
+          boolean _equals = Objects.equal(_inferredColumnType_2, ColumnType.TEXT);
+          if (_equals) {
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, value);");
+            _builder.newLine();
+          } else {
+            ColumnSource _column_3 = queryParam.getColumn();
+            ColumnType _inferredColumnType_3 = ModelUtil.getInferredColumnType(_column_3);
+            boolean _equals_1 = Objects.equal(_inferredColumnType_3, ColumnType.BOOLEAN);
+            if (_equals_1) {
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, value ? \"1\" : \"0\");");
+              _builder.newLine();
+            } else {
+              _builder.append("\t");
+              _builder.append("\t");
+              _builder.append("mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, String.valueOf(value));");
+              _builder.newLine();
+            }
+          }
+        }
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("return this;");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("}");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t");
+    _builder.newLine();
     _builder.append("\t");
     _builder.append("public Uri build() {");
     _builder.newLine();
@@ -638,13 +696,13 @@ public class ContentProviderContractGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("public static ");
-    String _name_5 = action.getName();
-    String _pascalize_2 = Strings.pascalize(_name_5);
-    _builder.append(_pascalize_2, "");
+    String _name_7 = action.getName();
+    String _pascalize_4 = Strings.pascalize(_name_7);
+    _builder.append(_pascalize_4, "");
     _builder.append("UriBuilder new");
-    String _name_6 = action.getName();
-    String _pascalize_3 = Strings.pascalize(_name_6);
-    _builder.append(_pascalize_3, "");
+    String _name_8 = action.getName();
+    String _pascalize_5 = Strings.pascalize(_name_8);
+    _builder.append(_pascalize_5, "");
     _builder.append("UriBuilder(");
     ContentUri _uri_2 = action.getUri();
     String _methodArgsSig_1 = this.toMethodArgsSig(_uri_2);
@@ -653,9 +711,9 @@ public class ContentProviderContractGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("return new ");
-    String _name_7 = action.getName();
-    String _pascalize_4 = Strings.pascalize(_name_7);
-    _builder.append(_pascalize_4, "\t");
+    String _name_9 = action.getName();
+    String _pascalize_6 = Strings.pascalize(_name_9);
+    _builder.append(_pascalize_6, "\t");
     _builder.append("UriBuilder(");
     ContentUri _uri_3 = action.getUri();
     String _methodArgs = this.toMethodArgs(_uri_3);

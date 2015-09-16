@@ -35,6 +35,7 @@ import java.util.List
 import com.justeat.mickeydb.mickeyLang.ContentUri
 import com.justeat.mickeydb.mickeyLang.ActionStatement
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
@@ -221,6 +222,15 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 	
 	def IScope scope_ContentUriParamSegment_param(ContentUriParamSegment context, EReference ref) {
+		var dbName = context.model.databaseName
+		
+		var tableName = "";
+		var action = context.getAncestorOfType(typeof(ActionStatement));
+		tableName = action.getFeatureNodeText(MickeyLangPackage.Literals.ACTION_STATEMENT__TYPE)
+	    scopeTableColumns(context, dbName, tableName)	
+	}
+	
+	def IScope scope_ContentUriQueryParam_column(ContentUriQueryParam context, EReference ref) {
 		var dbName = context.model.databaseName
 		
 		var tableName = "";

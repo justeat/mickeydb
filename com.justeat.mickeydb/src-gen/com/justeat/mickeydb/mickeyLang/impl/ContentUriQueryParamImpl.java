@@ -2,57 +2,49 @@
  */
 package com.justeat.mickeydb.mickeyLang.impl;
 
-import com.justeat.mickeydb.mickeyLang.ContentUriParam;
+import com.justeat.mickeydb.mickeyLang.ColumnSource;
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Content Uri Param</b></em>'.
+ * An implementation of the model object '<em><b>Content Uri Query Param</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriQueryParamImpl#getColumn <em>Column</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements ContentUriParam
+public class ContentUriQueryParamImpl extends MinimalEObjectImpl.Container implements ContentUriQueryParam
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getColumn() <em>Column</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getColumn()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected ColumnSource column;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ContentUriParamImpl()
+  protected ContentUriQueryParamImpl()
   {
     super();
   }
@@ -65,7 +57,7 @@ public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return MickeyLangPackage.Literals.CONTENT_URI_PARAM;
+    return MickeyLangPackage.Literals.CONTENT_URI_QUERY_PARAM;
   }
 
   /**
@@ -73,9 +65,19 @@ public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public ColumnSource getColumn()
   {
-    return name;
+    if (column != null && column.eIsProxy())
+    {
+      InternalEObject oldColumn = (InternalEObject)column;
+      column = (ColumnSource)eResolveProxy(oldColumn);
+      if (column != oldColumn)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN, oldColumn, column));
+      }
+    }
+    return column;
   }
 
   /**
@@ -83,12 +85,22 @@ public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public ColumnSource basicGetColumn()
   {
-    String oldName = name;
-    name = newName;
+    return column;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setColumn(ColumnSource newColumn)
+  {
+    ColumnSource oldColumn = column;
+    column = newColumn;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.CONTENT_URI_PARAM__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN, oldColumn, column));
   }
 
   /**
@@ -101,8 +113,9 @@ public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM__NAME:
-        return getName();
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
+        if (resolve) return getColumn();
+        return basicGetColumn();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +130,8 @@ public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM__NAME:
-        setName((String)newValue);
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
+        setColumn((ColumnSource)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +147,8 @@ public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM__NAME:
-        setName(NAME_EDEFAULT);
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
+        setColumn((ColumnSource)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,27 +164,10 @@ public class ContentUriParamImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case MickeyLangPackage.CONTENT_URI_PARAM__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
+        return column != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
-
-} //ContentUriParamImpl
+} //ContentUriQueryParamImpl

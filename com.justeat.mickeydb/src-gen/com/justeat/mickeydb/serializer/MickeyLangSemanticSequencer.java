@@ -14,8 +14,8 @@ import com.justeat.mickeydb.mickeyLang.ColumnDef;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
 import com.justeat.mickeydb.mickeyLang.ConflictClause;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
-import com.justeat.mickeydb.mickeyLang.ContentUriParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.ContentUriSegment;
 import com.justeat.mickeydb.mickeyLang.CreateIndexStatement;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
@@ -238,15 +238,15 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
-			case MickeyLangPackage.CONTENT_URI_PARAM:
-				if(context == grammarAccess.getContentUriParamRule()) {
-					sequence_ContentUriParam(context, (ContentUriParam) semanticObject); 
-					return; 
-				}
-				else break;
 			case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT:
 				if(context == grammarAccess.getContentUriSegmentRule()) {
 					sequence_ContentUriSegment(context, (ContentUriParamSegment) semanticObject); 
+					return; 
+				}
+				else break;
+			case MickeyLangPackage.CONTENT_URI_QUERY_PARAM:
+				if(context == grammarAccess.getContentUriQueryParamRule()) {
+					sequence_ContentUriQueryParam(context, (ContentUriQueryParam) semanticObject); 
 					return; 
 				}
 				else break;
@@ -898,7 +898,7 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (name=ID uri=ContentUri type=[TableDefinition|QualifiedName] unique?='unique'? params+=ContentUriParam*)
+	 *     (name=ID uri=ContentUri type=[TableDefinition|QualifiedName] unique?='unique'? params+=ContentUriQueryParam*)
 	 */
 	protected void sequence_ActionStatement(EObject context, ActionStatement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1057,16 +1057,16 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     column=[ColumnSource|ID]
 	 */
-	protected void sequence_ContentUriParam(EObject context, ContentUriParam semanticObject) {
+	protected void sequence_ContentUriQueryParam(EObject context, ContentUriQueryParam semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_PARAM__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_PARAM__NAME));
+			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_QUERY_PARAM__COLUMN) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_QUERY_PARAM__COLUMN));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceIDTerminalRuleCall_1_0_1(), semanticObject.getColumn());
 		feeder.finish();
 	}
 	

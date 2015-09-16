@@ -116,10 +116,10 @@ public class MickeyLangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MickeyLangPackage.CONTENT_URI_PARAM:
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM:
       {
-        ContentUriParam contentUriParam = (ContentUriParam)theEObject;
-        T result = caseContentUriParam(contentUriParam);
+        ContentUriQueryParam contentUriQueryParam = (ContentUriQueryParam)theEObject;
+        T result = caseContentUriQueryParam(contentUriQueryParam);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -898,17 +898,17 @@ public class MickeyLangSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Content Uri Param</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Content Uri Query Param</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Content Uri Param</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Content Uri Query Param</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseContentUriParam(ContentUriParam object)
+  public T caseContentUriQueryParam(ContentUriQueryParam object)
   {
     return null;
   }

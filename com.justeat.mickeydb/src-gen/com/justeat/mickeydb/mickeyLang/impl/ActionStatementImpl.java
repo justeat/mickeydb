@@ -4,7 +4,7 @@ package com.justeat.mickeydb.mickeyLang.impl;
 
 import com.justeat.mickeydb.mickeyLang.ActionStatement;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
-import com.justeat.mickeydb.mickeyLang.ContentUriParam;
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
 import com.justeat.mickeydb.mickeyLang.TableDefinition;
 
@@ -110,7 +110,7 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
    * @generated
    * @ordered
    */
-  protected EList<ContentUriParam> params;
+  protected EList<ContentUriQueryParam> params;
 
   /**
    * <!-- begin-user-doc -->
@@ -275,11 +275,11 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ContentUriParam> getParams()
+  public EList<ContentUriQueryParam> getParams()
   {
     if (params == null)
     {
-      params = new EObjectContainmentEList<ContentUriParam>(ContentUriParam.class, this, MickeyLangPackage.ACTION_STATEMENT__PARAMS);
+      params = new EObjectContainmentEList<ContentUriQueryParam>(ContentUriQueryParam.class, this, MickeyLangPackage.ACTION_STATEMENT__PARAMS);
     }
     return params;
   }
@@ -352,7 +352,7 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         return;
       case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
         getParams().clear();
-        getParams().addAll((Collection<? extends ContentUriParam>)newValue);
+        getParams().addAll((Collection<? extends ContentUriQueryParam>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

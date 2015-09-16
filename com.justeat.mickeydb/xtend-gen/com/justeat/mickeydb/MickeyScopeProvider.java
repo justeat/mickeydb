@@ -14,6 +14,7 @@ import com.justeat.mickeydb.mickeyLang.AlterTableRenameStatement;
 import com.justeat.mickeydb.mickeyLang.ColumnSource;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
@@ -371,6 +372,20 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public IScope scope_ContentUriParamSegment_param(final ContentUriParamSegment context, final EReference ref) {
+    IScope _xblockexpression = null;
+    {
+      MickeyFile _model = ModelUtil.getModel(context);
+      String dbName = _model.getDatabaseName();
+      String tableName = "";
+      ActionStatement action = ModelUtil.<ActionStatement>getAncestorOfType(context, ActionStatement.class);
+      String _featureNodeText = ModelUtil.getFeatureNodeText(action, MickeyLangPackage.Literals.ACTION_STATEMENT__TYPE);
+      tableName = _featureNodeText;
+      _xblockexpression = this.scopeTableColumns(context, dbName, tableName);
+    }
+    return _xblockexpression;
+  }
+  
+  public IScope scope_ContentUriQueryParam_column(final ContentUriQueryParam context, final EReference ref) {
     IScope _xblockexpression = null;
     {
       MickeyFile _model = ModelUtil.getModel(context);

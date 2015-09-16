@@ -186,6 +186,19 @@ class ContentProviderContractGenerator {
 				«ENDFOR»;
 			}
 			
+			«FOR queryParam : action.params»
+			public «action.name.pascalize»UriBuilder set«queryParam.column.name.pascalize»Param(«queryParam.column.inferredColumnType.toJavaTypeName» value) {
+				«IF queryParam.column.inferredColumnType == ColumnType::TEXT»
+				mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, value);
+				«ELSEIF queryParam.column.inferredColumnType == ColumnType::BOOLEAN»
+				mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, value ? "1" : "0");
+				«ELSE»
+				mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, String.valueOf(value));
+				«ENDIF»
+				return this;
+			}
+			«ENDFOR»
+			
 			public Uri build() {
 				return mUriBuilder.build();
 			}

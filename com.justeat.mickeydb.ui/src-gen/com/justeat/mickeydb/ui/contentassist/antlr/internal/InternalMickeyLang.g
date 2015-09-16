@@ -225,25 +225,25 @@ finally {
 
 
 
-// Entry rule entryRuleContentUriParam
-entryRuleContentUriParam 
+// Entry rule entryRuleContentUriQueryParam
+entryRuleContentUriQueryParam 
 :
-{ before(grammarAccess.getContentUriParamRule()); }
-	 ruleContentUriParam
-{ after(grammarAccess.getContentUriParamRule()); } 
+{ before(grammarAccess.getContentUriQueryParamRule()); }
+	 ruleContentUriQueryParam
+{ after(grammarAccess.getContentUriQueryParamRule()); } 
 	 EOF 
 ;
 
-// Rule ContentUriParam
-ruleContentUriParam
+// Rule ContentUriQueryParam
+ruleContentUriQueryParam
     @init {
 		int stackSize = keepStackSize();
     }
 	:
 (
-{ before(grammarAccess.getContentUriParamAccess().getGroup()); }
-(rule__ContentUriParam__Group__0)
-{ after(grammarAccess.getContentUriParamAccess().getGroup()); }
+{ before(grammarAccess.getContentUriQueryParamAccess().getGroup()); }
+(rule__ContentUriQueryParam__Group__0)
+{ after(grammarAccess.getContentUriQueryParamAccess().getGroup()); }
 )
 
 ;
@@ -4357,29 +4357,29 @@ finally {
 
 
 
-rule__ContentUriParam__Group__0
+rule__ContentUriQueryParam__Group__0
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__ContentUriParam__Group__0__Impl
-	rule__ContentUriParam__Group__1
+	rule__ContentUriQueryParam__Group__0__Impl
+	rule__ContentUriQueryParam__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContentUriParam__Group__0__Impl
+rule__ContentUriQueryParam__Group__0__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getContentUriParamAccess().getParamKeyword_0()); }
+{ before(grammarAccess.getContentUriQueryParamAccess().getParamKeyword_0()); }
 
 	'param' 
 
-{ after(grammarAccess.getContentUriParamAccess().getParamKeyword_0()); }
+{ after(grammarAccess.getContentUriQueryParamAccess().getParamKeyword_0()); }
 )
 
 ;
@@ -4388,26 +4388,26 @@ finally {
 }
 
 
-rule__ContentUriParam__Group__1
+rule__ContentUriQueryParam__Group__1
     @init {
 		int stackSize = keepStackSize();
     }
 :
-	rule__ContentUriParam__Group__1__Impl
+	rule__ContentUriQueryParam__Group__1__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContentUriParam__Group__1__Impl
+rule__ContentUriQueryParam__Group__1__Impl
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getContentUriParamAccess().getNameAssignment_1()); }
-(rule__ContentUriParam__NameAssignment_1)
-{ after(grammarAccess.getContentUriParamAccess().getNameAssignment_1()); }
+{ before(grammarAccess.getContentUriQueryParamAccess().getColumnAssignment_1()); }
+(rule__ContentUriQueryParam__ColumnAssignment_1)
+{ after(grammarAccess.getContentUriQueryParamAccess().getColumnAssignment_1()); }
 )
 
 ;
@@ -17590,8 +17590,8 @@ rule__ActionStatement__ParamsAssignment_6_1
     }
 :
 (
-{ before(grammarAccess.getActionStatementAccess().getParamsContentUriParamParserRuleCall_6_1_0()); }
-	ruleContentUriParam{ after(grammarAccess.getActionStatementAccess().getParamsContentUriParamParserRuleCall_6_1_0()); }
+{ before(grammarAccess.getActionStatementAccess().getParamsContentUriQueryParamParserRuleCall_6_1_0()); }
+	ruleContentUriQueryParam{ after(grammarAccess.getActionStatementAccess().getParamsContentUriQueryParamParserRuleCall_6_1_0()); }
 )
 
 ;
@@ -17644,14 +17644,18 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__ContentUriParam__NameAssignment_1
+rule__ContentUriQueryParam__ColumnAssignment_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0()); }
-	RULE_ID{ after(grammarAccess.getContentUriParamAccess().getNameIDTerminalRuleCall_1_0()); }
+{ before(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceCrossReference_1_0()); }
+(
+{ before(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceIDTerminalRuleCall_1_0_1()); }
+	RULE_ID{ after(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceIDTerminalRuleCall_1_0_1()); }
+)
+{ after(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceCrossReference_1_0()); }
 )
 
 ;

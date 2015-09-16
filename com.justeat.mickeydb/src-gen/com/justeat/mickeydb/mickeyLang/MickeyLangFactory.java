@@ -77,13 +77,13 @@ public interface MickeyLangFactory extends EFactory
   ContentUri createContentUri();
 
   /**
-   * Returns a new object of class '<em>Content Uri Param</em>'.
+   * Returns a new object of class '<em>Content Uri Query Param</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Content Uri Param</em>'.
+   * @return a new object of class '<em>Content Uri Query Param</em>'.
    * @generated
    */
-  ContentUriParam createContentUriParam();
+  ContentUriQueryParam createContentUriQueryParam();
 
   /**
    * Returns a new object of class '<em>Content Uri Segment</em>'.
