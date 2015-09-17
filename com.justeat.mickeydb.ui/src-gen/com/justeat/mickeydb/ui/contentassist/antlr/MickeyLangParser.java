@@ -230,7 +230,8 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionArgAccess().getTypeAssignment_0(), "rule__FunctionArg__TypeAssignment_0");
 					put(grammarAccess.getFunctionArgAccess().getNameAssignment_1(), "rule__FunctionArg__NameAssignment_1");
 					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_1_1(), "rule__ContentUri__SegmentsAssignment_1_1");
-					put(grammarAccess.getContentUriQueryParamAccess().getColumnAssignment_1(), "rule__ContentUriQueryParam__ColumnAssignment_1");
+					put(grammarAccess.getContentUriQueryParamAccess().getLikeAssignment_1(), "rule__ContentUriQueryParam__LikeAssignment_1");
+					put(grammarAccess.getContentUriQueryParamAccess().getColumnAssignment_2(), "rule__ContentUriQueryParam__ColumnAssignment_2");
 					put(grammarAccess.getContentUriSegmentAccess().getNameAssignment_0(), "rule__ContentUriSegment__NameAssignment_0");
 					put(grammarAccess.getContentUriSegmentAccess().getParamAssignment_1_2(), "rule__ContentUriSegment__ParamAssignment_1_2");
 					put(grammarAccess.getMigrationBlockAccess().getNameAssignment_2(), "rule__MigrationBlock__NameAssignment_2");

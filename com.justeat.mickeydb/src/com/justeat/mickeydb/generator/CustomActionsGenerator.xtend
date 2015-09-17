@@ -6,6 +6,7 @@ import com.justeat.mickeydb.ContentUriInfo
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
 import com.justeat.mickeydb.mickeyLang.ColumnType
 import static extension com.justeat.mickeydb.ModelUtil.*
+import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam
 
 class CustomActionsGenerator {
 	def CharSequence generate(MickeyDatabaseModel model, ContentUriInfo content) '''
@@ -72,7 +73,7 @@ class CustomActionsGenerator {
 			«ENDFOR»
 			«FOR queryParam : content.action.params»
 			if(queryKeys.contains(«content.type.pascalize».«queryParam.column.name.underscore.toUpperCase»)) {
-				query.expr(«content.type.pascalize».«queryParam.column.name.underscore.toUpperCase», Query.Op.EQ, «queryParam.column.name.camelize»QueryParam);
+				query.expr(«content.type.pascalize».«queryParam.column.name.underscore.toUpperCase», «queryParam.generateOperator», «queryParam.column.name.camelize»QueryParam);
 			}
 			
 			«ENDFOR»
@@ -89,4 +90,13 @@ class CustomActionsGenerator {
 		}
 	}
 	'''
+	
+	def CharSequence generateOperator(ContentUriQueryParam param) {
+		if(param.like) {
+			return "Query.Op.LIKE"
+		} else {
+			return "Query.Op.EQ"
+		}
+	}
+	
 }

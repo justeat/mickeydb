@@ -362,7 +362,10 @@ public class CustomActionsGenerator {
         String _underscore_7 = Strings.underscore(_name_16);
         String _upperCase_7 = _underscore_7.toUpperCase();
         _builder.append(_upperCase_7, "\t\t\t");
-        _builder.append(", Query.Op.EQ, ");
+        _builder.append(", ");
+        CharSequence _generateOperator = this.generateOperator(queryParam_1);
+        _builder.append(_generateOperator, "\t\t\t");
+        _builder.append(", ");
         ColumnSource _column_15 = queryParam_1.getColumn();
         String _name_17 = _column_15.getName();
         String _camelize_8 = Strings.camelize(_name_17);
@@ -419,5 +422,14 @@ public class CustomActionsGenerator {
     _builder.append("}");
     _builder.newLine();
     return _builder;
+  }
+  
+  public CharSequence generateOperator(final ContentUriQueryParam param) {
+    boolean _isLike = param.isLike();
+    if (_isLike) {
+      return "Query.Op.LIKE";
+    } else {
+      return "Query.Op.EQ";
+    }
   }
 }

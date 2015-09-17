@@ -1067,9 +1067,19 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getContentUriQueryParam_Like()
+  {
+    return (EAttribute)contentUriQueryParamEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getContentUriQueryParam_Column()
   {
-    return (EReference)contentUriQueryParamEClass.getEStructuralFeatures().get(0);
+    return (EReference)contentUriQueryParamEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3629,6 +3639,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     createEReference(contentUriEClass, CONTENT_URI__SEGMENTS);
 
     contentUriQueryParamEClass = createEClass(CONTENT_URI_QUERY_PARAM);
+    createEAttribute(contentUriQueryParamEClass, CONTENT_URI_QUERY_PARAM__LIKE);
     createEReference(contentUriQueryParamEClass, CONTENT_URI_QUERY_PARAM__COLUMN);
 
     contentUriSegmentEClass = createEClass(CONTENT_URI_SEGMENT);
@@ -4092,6 +4103,7 @@ public class MickeyLangPackageImpl extends EPackageImpl implements MickeyLangPac
     initEReference(getContentUri_Segments(), this.getContentUriSegment(), null, "segments", null, 0, -1, ContentUri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contentUriQueryParamEClass, ContentUriQueryParam.class, "ContentUriQueryParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContentUriQueryParam_Like(), ecorePackage.getEBoolean(), "like", null, 0, 1, ContentUriQueryParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getContentUriQueryParam_Column(), this.getColumnSource(), null, "column", null, 0, 1, ContentUriQueryParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(contentUriSegmentEClass, ContentUriSegment.class, "ContentUriSegment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

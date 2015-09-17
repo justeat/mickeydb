@@ -1057,17 +1057,10 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     column=[ColumnSource|ID]
+	 *     (like?='like'? column=[ColumnSource|ID])
 	 */
 	protected void sequence_ContentUriQueryParam(EObject context, ContentUriQueryParam semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_QUERY_PARAM__COLUMN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.CONTENT_URI_QUERY_PARAM__COLUMN));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceIDTerminalRuleCall_1_0_1(), semanticObject.getColumn());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

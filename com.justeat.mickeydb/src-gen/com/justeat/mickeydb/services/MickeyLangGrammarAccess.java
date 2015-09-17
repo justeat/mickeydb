@@ -330,28 +330,36 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContentUriQueryParam");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cParamKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cColumnAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cColumnColumnSourceCrossReference_1_0 = (CrossReference)cColumnAssignment_1.eContents().get(0);
-		private final RuleCall cColumnColumnSourceIDTerminalRuleCall_1_0_1 = (RuleCall)cColumnColumnSourceCrossReference_1_0.eContents().get(1);
+		private final Assignment cLikeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cLikeLikeKeyword_1_0 = (Keyword)cLikeAssignment_1.eContents().get(0);
+		private final Assignment cColumnAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cColumnColumnSourceCrossReference_2_0 = (CrossReference)cColumnAssignment_2.eContents().get(0);
+		private final RuleCall cColumnColumnSourceIDTerminalRuleCall_2_0_1 = (RuleCall)cColumnColumnSourceCrossReference_2_0.eContents().get(1);
 		
 		//ContentUriQueryParam:
-		//	"param" column=[ColumnSource];
+		//	"param" like?="like"? column=[ColumnSource];
 		public ParserRule getRule() { return rule; }
 
-		//"param" column=[ColumnSource]
+		//"param" like?="like"? column=[ColumnSource]
 		public Group getGroup() { return cGroup; }
 
 		//"param"
 		public Keyword getParamKeyword_0() { return cParamKeyword_0; }
 
+		//like?="like"?
+		public Assignment getLikeAssignment_1() { return cLikeAssignment_1; }
+
+		//"like"
+		public Keyword getLikeLikeKeyword_1_0() { return cLikeLikeKeyword_1_0; }
+
 		//column=[ColumnSource]
-		public Assignment getColumnAssignment_1() { return cColumnAssignment_1; }
+		public Assignment getColumnAssignment_2() { return cColumnAssignment_2; }
 
 		//[ColumnSource]
-		public CrossReference getColumnColumnSourceCrossReference_1_0() { return cColumnColumnSourceCrossReference_1_0; }
+		public CrossReference getColumnColumnSourceCrossReference_2_0() { return cColumnColumnSourceCrossReference_2_0; }
 
 		//ID
-		public RuleCall getColumnColumnSourceIDTerminalRuleCall_1_0_1() { return cColumnColumnSourceIDTerminalRuleCall_1_0_1; }
+		public RuleCall getColumnColumnSourceIDTerminalRuleCall_2_0_1() { return cColumnColumnSourceIDTerminalRuleCall_2_0_1; }
 	}
 
 	public class ContentUriSegmentElements extends AbstractParserRuleElementFinder {
@@ -4471,7 +4479,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContentUriQueryParam:
-	//	"param" column=[ColumnSource];
+	//	"param" like?="like"? column=[ColumnSource];
 	public ContentUriQueryParamElements getContentUriQueryParamAccess() {
 		return pContentUriQueryParam;
 	}

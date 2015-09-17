@@ -308,13 +308,22 @@ public interface MickeyLangPackage extends EPackage
   int CONTENT_URI_QUERY_PARAM = 6;
 
   /**
+   * The feature id for the '<em><b>Like</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT_URI_QUERY_PARAM__LIKE = 0;
+
+  /**
    * The feature id for the '<em><b>Column</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONTENT_URI_QUERY_PARAM__COLUMN = 0;
+  int CONTENT_URI_QUERY_PARAM__COLUMN = 1;
 
   /**
    * The number of structural features of the '<em>Content Uri Query Param</em>' class.
@@ -323,7 +332,7 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONTENT_URI_QUERY_PARAM_FEATURE_COUNT = 1;
+  int CONTENT_URI_QUERY_PARAM_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriSegmentImpl <em>Content Uri Segment</em>}' class.
@@ -3754,6 +3763,17 @@ public interface MickeyLangPackage extends EPackage
   EClass getContentUriQueryParam();
 
   /**
+   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.ContentUriQueryParam#isLike <em>Like</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Like</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentUriQueryParam#isLike()
+   * @see #getContentUriQueryParam()
+   * @generated
+   */
+  EAttribute getContentUriQueryParam_Like();
+
+  /**
    * Returns the meta object for the reference '{@link com.justeat.mickeydb.mickeyLang.ContentUriQueryParam#getColumn <em>Column</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -6629,6 +6649,14 @@ public interface MickeyLangPackage extends EPackage
      * @generated
      */
     EClass CONTENT_URI_QUERY_PARAM = eINSTANCE.getContentUriQueryParam();
+
+    /**
+     * The meta object literal for the '<em><b>Like</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONTENT_URI_QUERY_PARAM__LIKE = eINSTANCE.getContentUriQueryParam_Like();
 
     /**
      * The meta object literal for the '<em><b>Column</b></em>' reference feature.

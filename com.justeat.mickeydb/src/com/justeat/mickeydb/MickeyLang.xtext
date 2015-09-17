@@ -34,7 +34,7 @@ ContentUri:
 ;
 
 ContentUriQueryParam:
-	'param' column=[ColumnSource]
+	'param' like?='like'? column=[ColumnSource]
 ;
 
 ContentUriSegment:

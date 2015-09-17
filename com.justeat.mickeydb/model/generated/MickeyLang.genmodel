@@ -61,6 +61,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ContentUri/segments"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//ContentUriQueryParam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ContentUriQueryParam/like"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ContentUriQueryParam/column"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//ContentUriSegment">

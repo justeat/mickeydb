@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriQueryParamImpl#isLike <em>Like</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriQueryParamImpl#getColumn <em>Column</em>}</li>
  * </ul>
  *
@@ -29,6 +30,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ContentUriQueryParamImpl extends MinimalEObjectImpl.Container implements ContentUriQueryParam
 {
+  /**
+   * The default value of the '{@link #isLike() <em>Like</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isLike()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean LIKE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isLike() <em>Like</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isLike()
+   * @generated
+   * @ordered
+   */
+  protected boolean like = LIKE_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getColumn() <em>Column</em>}' reference.
    * <!-- begin-user-doc -->
@@ -58,6 +79,29 @@ public class ContentUriQueryParamImpl extends MinimalEObjectImpl.Container imple
   protected EClass eStaticClass()
   {
     return MickeyLangPackage.Literals.CONTENT_URI_QUERY_PARAM;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isLike()
+  {
+    return like;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLike(boolean newLike)
+  {
+    boolean oldLike = like;
+    like = newLike;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MickeyLangPackage.CONTENT_URI_QUERY_PARAM__LIKE, oldLike, like));
   }
 
   /**
@@ -113,6 +157,8 @@ public class ContentUriQueryParamImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__LIKE:
+        return isLike();
       case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
         if (resolve) return getColumn();
         return basicGetColumn();
@@ -130,6 +176,9 @@ public class ContentUriQueryParamImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__LIKE:
+        setLike((Boolean)newValue);
+        return;
       case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
         setColumn((ColumnSource)newValue);
         return;
@@ -147,6 +196,9 @@ public class ContentUriQueryParamImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__LIKE:
+        setLike(LIKE_EDEFAULT);
+        return;
       case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
         setColumn((ColumnSource)null);
         return;
@@ -164,10 +216,29 @@ public class ContentUriQueryParamImpl extends MinimalEObjectImpl.Container imple
   {
     switch (featureID)
     {
+      case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__LIKE:
+        return like != LIKE_EDEFAULT;
       case MickeyLangPackage.CONTENT_URI_QUERY_PARAM__COLUMN:
         return column != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (like: ");
+    result.append(like);
+    result.append(')');
+    return result.toString();
   }
 
 } //ContentUriQueryParamImpl

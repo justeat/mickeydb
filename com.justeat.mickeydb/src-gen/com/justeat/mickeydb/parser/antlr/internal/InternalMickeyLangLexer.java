@@ -452,10 +452,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:25:7: ( 'migrate' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:25:9: 'migrate'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:25:7: ( 'like' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:25:9: 'like'
             {
-            match("migrate"); 
+            match("like"); 
 
 
             }
@@ -473,10 +473,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:26:7: ( 'from' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:26:9: 'from'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:26:7: ( 'migrate' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:26:9: 'migrate'
             {
-            match("from"); 
+            match("migrate"); 
 
 
             }
@@ -494,10 +494,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:27:7: ( '||' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:27:9: '||'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:27:7: ( 'from' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:27:9: 'from'
             {
-            match("||"); 
+            match("from"); 
 
 
             }
@@ -515,10 +515,11 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:28:7: ( '*' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:28:9: '*'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:28:7: ( '||' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:28:9: '||'
             {
-            match('*'); 
+            match("||"); 
+
 
             }
 
@@ -535,10 +536,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:29:7: ( '%' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:29:9: '%'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:29:7: ( '*' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:29:9: '*'
             {
-            match('%'); 
+            match('*'); 
 
             }
 
@@ -555,10 +556,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:30:7: ( '+' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:30:9: '+'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:30:7: ( '%' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:30:9: '%'
             {
-            match('+'); 
+            match('%'); 
 
             }
 
@@ -575,10 +576,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:31:7: ( '-' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:31:9: '-'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:31:7: ( '+' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:31:9: '+'
             {
-            match('-'); 
+            match('+'); 
 
             }
 
@@ -595,11 +596,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:32:7: ( '<<' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:32:9: '<<'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:32:7: ( '-' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:32:9: '-'
             {
-            match("<<"); 
-
+            match('-'); 
 
             }
 
@@ -616,10 +616,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:33:7: ( '>>' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:33:9: '>>'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:33:7: ( '<<' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:33:9: '<<'
             {
-            match(">>"); 
+            match("<<"); 
 
 
             }
@@ -637,10 +637,11 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:34:7: ( '&' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:34:9: '&'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:34:7: ( '>>' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:34:9: '>>'
             {
-            match('&'); 
+            match(">>"); 
+
 
             }
 
@@ -657,10 +658,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:35:7: ( '|' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:35:9: '|'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:35:7: ( '&' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:35:9: '&'
             {
-            match('|'); 
+            match('&'); 
 
             }
 
@@ -677,10 +678,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:36:7: ( '<' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:36:9: '<'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:36:7: ( '|' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:36:9: '|'
             {
-            match('<'); 
+            match('|'); 
 
             }
 
@@ -697,11 +698,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:37:7: ( '<=' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:37:9: '<='
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:37:7: ( '<' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:37:9: '<'
             {
-            match("<="); 
-
+            match('<'); 
 
             }
 
@@ -718,10 +718,11 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:38:7: ( '>' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:38:9: '>'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:38:7: ( '<=' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:38:9: '<='
             {
-            match('>'); 
+            match("<="); 
+
 
             }
 
@@ -738,11 +739,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:39:7: ( '>=' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:39:9: '>='
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:39:7: ( '>' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:39:9: '>'
             {
-            match(">="); 
-
+            match('>'); 
 
             }
 
@@ -759,10 +759,11 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:40:7: ( '=' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:40:9: '='
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:40:7: ( '>=' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:40:9: '>='
             {
-            match('='); 
+            match(">="); 
+
 
             }
 
@@ -779,11 +780,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:41:7: ( '==' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:41:9: '=='
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:41:7: ( '=' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:41:9: '='
             {
-            match("=="); 
-
+            match('='); 
 
             }
 
@@ -800,10 +800,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:42:7: ( '!=' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:42:9: '!='
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:42:7: ( '==' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:42:9: '=='
             {
-            match("!="); 
+            match("=="); 
 
 
             }
@@ -821,10 +821,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:43:7: ( '<>' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:43:9: '<>'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:43:7: ( '!=' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:43:9: '!='
             {
-            match("<>"); 
+            match("!="); 
 
 
             }
@@ -842,10 +842,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:44:7: ( 'is' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:44:9: 'is'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:44:7: ( '<>' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:44:9: '<>'
             {
-            match("is"); 
+            match("<>"); 
 
 
             }
@@ -863,10 +863,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:45:7: ( 'is not' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:45:9: 'is not'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:45:7: ( 'is' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:45:9: 'is'
             {
-            match("is not"); 
+            match("is"); 
 
 
             }
@@ -884,10 +884,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:46:7: ( 'in' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:46:9: 'in'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:46:7: ( 'is not' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:46:9: 'is not'
             {
-            match("in"); 
+            match("is not"); 
 
 
             }
@@ -905,10 +905,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:47:7: ( 'not in' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:47:9: 'not in'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:47:7: ( 'in' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:47:9: 'in'
             {
-            match("not in"); 
+            match("in"); 
 
 
             }
@@ -926,10 +926,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:48:7: ( 'like' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:48:9: 'like'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:48:7: ( 'not in' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:48:9: 'not in'
             {
-            match("like"); 
+            match("not in"); 
 
 
             }
@@ -2793,10 +2793,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:13: ( ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:15: ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )?
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:13: ( ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:15: ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )?
             {
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:15: ( '0' .. '9' )*
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:15: ( '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -2809,7 +2809,7 @@ public class InternalMickeyLangLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:16: '0' .. '9'
+            	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:16: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2821,7 +2821,7 @@ public class InternalMickeyLangLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:27: ( '.' ( '0' .. '9' )+ )?
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:27: ( '.' ( '0' .. '9' )+ )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -2830,10 +2830,10 @@ public class InternalMickeyLangLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:28: '.' ( '0' .. '9' )+
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:28: '.' ( '0' .. '9' )+
                     {
                     match('.'); 
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:32: ( '0' .. '9' )+
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:32: ( '0' .. '9' )+
                     int cnt2=0;
                     loop2:
                     do {
@@ -2847,7 +2847,7 @@ public class InternalMickeyLangLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6345:33: '0' .. '9'
+                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6360:33: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -2885,8 +2885,8 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6347:10: ( '$$$don\\'t use this anymore$$$' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6347:12: '$$$don\\'t use this anymore$$$'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6362:10: ( '$$$don\\'t use this anymore$$$' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6362:12: '$$$don\\'t use this anymore$$$'
             {
             match("$$$don't use this anymore$$$"); 
 
@@ -2906,10 +2906,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -2927,10 +2927,10 @@ public class InternalMickeyLangLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -2946,7 +2946,7 @@ public class InternalMickeyLangLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2962,7 +2962,7 @@ public class InternalMickeyLangLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2987,10 +2987,10 @@ public class InternalMickeyLangLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -3006,7 +3006,7 @@ public class InternalMickeyLangLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -3022,7 +3022,7 @@ public class InternalMickeyLangLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6349:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6364:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3065,10 +3065,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6351:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6351:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6366:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6366:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6351:11: ( '^' )?
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6366:11: ( '^' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -3077,7 +3077,7 @@ public class InternalMickeyLangLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6351:11: '^'
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6366:11: '^'
                     {
                     match('^'); 
 
@@ -3095,7 +3095,7 @@ public class InternalMickeyLangLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6351:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6366:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop8:
             do {
                 int alt8=2;
@@ -3144,12 +3144,12 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6353:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6353:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6368:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6368:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6353:24: ( options {greedy=false; } : . )*
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6368:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -3174,7 +3174,7 @@ public class InternalMickeyLangLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6353:52: .
+            	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6368:52: .
             	    {
             	    matchAny(); 
 
@@ -3204,12 +3204,12 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -3222,7 +3222,7 @@ public class InternalMickeyLangLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3242,7 +3242,7 @@ public class InternalMickeyLangLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:40: ( ( '\\r' )? '\\n' )?
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -3251,9 +3251,9 @@ public class InternalMickeyLangLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:41: ( '\\r' )? '\\n'
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:41: ( '\\r' )?
+                    // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -3262,7 +3262,7 @@ public class InternalMickeyLangLexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6355:41: '\\r'
+                            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6370:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3294,10 +3294,10 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6357:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6357:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6372:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6372:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6357:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6372:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -3351,8 +3351,8 @@ public class InternalMickeyLangLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6359:16: ( . )
-            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6359:18: .
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6374:16: ( . )
+            // ../com.justeat.mickeydb/src-gen/com/justeat/mickeydb/parser/antlr/internal/InternalMickeyLang.g:6374:18: .
             {
             matchAny(); 
 
@@ -4317,19 +4317,19 @@ public class InternalMickeyLangLexer extends Lexer {
 
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
-        "\1\53\2\66\7\uffff\2\66\1\116\2\66\1\124\4\uffff\1\134\1\137\1\uffff\1\142\1\61\6\66\1\167\2\66\1\u0081\7\66\2\uffff\3\61\3\uffff\4\66\1\uffff\4\66\7\uffff\1\66\1\u009d\10\66\3\uffff\4\66\21\uffff\1\u00ac\1\u00b1\14\66\1\u00c5\1\66\1\u00c8\1\66\1\u00ca\1\uffff\10\66\2\uffff\15\66\2\uffff\13\66\1\u00f1\1\uffff\1\u00f2\1\u00f3\13\66\2\uffff\4\66\2\uffff\1\66\1\u010a\20\66\1\uffff\2\66\1\uffff\1\66\1\uffff\3\66\1\u0121\16\66\1\u0133\12\66\1\u013e\2\66\1\u0141\1\66\1\u0143\1\uffff\1\u0144\1\66\3\uffff\2\66\1\uffff\11\66\1\uffff\4\66\1\u0157\2\66\1\uffff\1\66\1\uffff\1\u015e\1\uffff\1\66\1\u0160\1\66\1\u0162\1\66\1\u0164\1\u0165\4\66\1\u016a\2\66\1\uffff\4\66\1\u0171\1\uffff\1\u0172\1\u0173\7\66\1\u017b\1\66\1\u017d\1\u017e\1\u017f\3\66\1\uffff\1\66\1\u0184\1\u0185\3\66\1\u0189\3\66\1\uffff\2\66\1\uffff\1\66\2\uffff\1\66\1\u0191\1\u0192\1\66\1\u0194\1\66\1\u0197\1\66\1\u0199\2\66\1\u019c\2\uffff\1\u019d\2\66\1\u01a0\1\uffff\3\66\2\uffff\1\66\1\uffff\1\66\1\uffff\1\66\1\uffff\1\u01a7\2\uffff\4\66\1\uffff\3\66\1\u01af\2\66\3\uffff\1\u01b2\2\66\1\u01b5\3\66\1\uffff\1\u01b9\3\uffff\1\u01ba\3\66\2\uffff\2\66\1\u01c0\1\uffff\3\66\1\u01c4\2\66\1\u01c7\2\uffff\1\66\1\uffff\1\u01c9\2\uffff\1\u01ca\1\uffff\2\66\2\uffff\1\66\1\u01ce\1\uffff\2\66\1\u01d1\3\66\2\uffff\1\u01d5\3\66\1\uffff\1\u01d9\1\uffff\1\u01da\1\u01db\1\uffff\1\u01dc\1\66\1\uffff\3\66\2\uffff\1\66\1\u01e2\1\u01e3\1\u01e4\1\u01e5\1\uffff\3\66\1\uffff\1\u01e9\1\66\1\uffff\1\66\2\uffff\1\66\1\u01ed\1\66\1\uffff\1\66\1\u01f0\1\uffff\1\u01f1\1\u01f2\1\u01f3\2\uffff\1\u01f4\1\66\4\uffff\3\66\1\u01f9\1\u01fa\4\uffff\1\u01fb\1\u01fc\1\u01fd\1\uffff\1\u01fe\1\66\3\uffff\1\66\5\uffff\1\u0201\2\66\1\u0205\6\uffff\1\66\1\u0207\1\uffff\3\66\1\uffff\1\66\1\uffff\2\66\1\u020e\3\66\1\uffff\1\66\1\u0214\1\u0215\1\u0216\1\66\3\uffff\3\66\1\u021b\1\uffff";
+        "\1\53\2\66\7\uffff\2\66\1\116\3\66\1\126\4\uffff\1\136\1\141\1\uffff\1\144\1\61\5\66\1\167\2\66\1\u0081\7\66\2\uffff\3\61\3\uffff\4\66\1\uffff\4\66\7\uffff\1\66\1\u009d\10\66\3\uffff\6\66\21\uffff\1\u00af\1\u00b4\12\66\1\u00c5\1\66\1\u00c8\1\66\1\u00ca\1\uffff\10\66\2\uffff\15\66\2\uffff\13\66\1\u00f1\1\uffff\1\u00f2\1\u00f3\16\66\2\uffff\4\66\2\uffff\1\66\1\u010d\15\66\1\uffff\2\66\1\uffff\1\66\1\uffff\3\66\1\u0121\16\66\1\u0133\12\66\1\u013e\2\66\1\u0141\1\66\1\u0143\1\uffff\1\u0144\1\66\3\uffff\2\66\1\uffff\7\66\1\u014f\1\66\1\u0151\2\66\1\uffff\4\66\1\u015a\2\66\1\uffff\1\66\1\uffff\1\u0161\1\uffff\1\66\1\u0163\1\66\1\u0165\4\66\1\u016a\2\66\1\uffff\4\66\1\u0171\1\uffff\1\u0172\1\u0173\7\66\1\u017b\1\66\1\u017d\1\u017e\1\u017f\3\66\1\uffff\1\66\1\u0184\1\u0185\3\66\1\u0189\3\66\1\uffff\2\66\1\uffff\1\66\2\uffff\1\66\1\u0191\1\u0192\1\66\1\u0194\1\66\1\u0197\1\66\1\u0199\1\66\1\uffff\1\u019b\1\uffff\1\66\1\u019d\2\uffff\1\u019e\2\66\1\u01a1\1\uffff\3\66\2\uffff\1\66\1\uffff\1\66\1\uffff\1\66\1\uffff\4\66\1\uffff\3\66\1\u01af\2\66\3\uffff\1\u01b2\2\66\1\u01b5\3\66\1\uffff\1\u01b9\3\uffff\1\u01ba\3\66\2\uffff\2\66\1\u01c0\1\uffff\3\66\1\u01c4\2\66\1\u01c7\2\uffff\1\66\1\uffff\1\u01c9\2\uffff\1\u01ca\1\uffff\1\66\1\uffff\1\66\2\uffff\1\66\1\u01ce\1\uffff\2\66\1\u01d1\3\66\1\uffff\1\u01d5\3\66\1\uffff\1\u01d9\1\uffff\1\u01da\1\u01db\1\uffff\1\u01dc\1\66\1\uffff\3\66\2\uffff\1\66\1\u01e2\1\u01e3\1\u01e4\1\u01e5\1\uffff\3\66\1\uffff\1\u01e9\1\66\1\uffff\1\66\2\uffff\1\66\1\u01ed\1\66\1\uffff\1\66\1\u01f0\1\uffff\1\u01f1\1\u01f2\1\u01f3\2\uffff\1\u01f4\1\66\4\uffff\3\66\1\u01f9\1\u01fa\4\uffff\1\u01fb\1\u01fc\1\u01fd\1\uffff\1\u01fe\1\66\3\uffff\1\66\5\uffff\1\u0201\2\66\1\u0205\6\uffff\1\66\1\u0207\1\uffff\3\66\1\uffff\1\66\1\uffff\2\66\1\u020e\3\66\1\uffff\1\66\1\u0214\1\u0215\1\u0216\1\66\3\uffff\3\66\1\u021b\1\uffff";
     static final String DFA14_eofS =
         "\u021c\uffff";
     static final String DFA14_minS =
-        "\1\0\2\141\7\uffff\1\142\1\156\1\52\2\141\1\174\4\uffff\1\74\1\75\1\uffff\2\75\1\146\1\141\1\145\1\154\1\145\1\146\1\60\1\154\1\141\1\44\1\150\1\141\1\145\1\141\1\157\1\141\1\145\2\uffff\2\0\1\101\3\uffff\1\164\1\163\1\146\1\157\1\uffff\1\156\1\157\1\162\1\151\7\uffff\1\164\1\60\1\144\1\154\1\164\1\144\1\164\1\157\1\151\1\144\3\uffff\1\162\1\151\1\147\1\164\21\uffff\1\40\1\60\1\40\2\156\1\167\1\164\1\154\1\153\1\146\2\157\1\141\1\154\1\60\1\144\1\60\1\164\1\60\1\uffff\1\143\1\163\1\144\1\163\1\145\1\162\1\145\1\154\2\uffff\2\145\1\155\1\142\1\151\1\154\1\166\1\151\1\145\1\154\1\146\2\157\2\uffff\1\141\1\164\1\143\1\145\1\141\1\160\1\143\1\155\1\40\1\154\1\151\1\60\1\uffff\2\60\2\145\1\40\1\157\1\162\1\157\2\141\1\155\1\162\1\143\1\156\1\uffff\4\145\2\uffff\1\157\1\40\1\145\1\56\1\165\1\154\2\145\1\151\1\164\1\142\1\165\1\145\1\141\3\154\1\145\1\uffff\1\56\1\163\1\uffff\1\145\1\uffff\1\163\2\145\1\60\1\145\1\163\1\141\1\162\1\143\1\146\1\154\2\156\1\160\1\164\1\154\1\147\1\145\1\60\1\151\1\156\1\167\1\165\1\157\1\151\1\142\1\154\1\142\1\151\1\60\1\164\1\165\1\60\1\164\1\60\1\uffff\1\60\1\157\3\uffff\2\162\1\uffff\1\151\1\164\1\165\1\156\1\164\1\155\2\141\1\150\1\157\1\162\1\145\1\162\1\170\1\60\1\147\1\162\1\151\1\165\1\uffff\1\60\1\uffff\1\162\1\60\1\162\1\60\1\164\2\60\1\160\1\170\1\155\1\141\1\60\1\142\1\162\1\uffff\1\145\1\162\1\164\1\160\1\60\1\uffff\2\60\1\163\1\164\1\145\1\153\1\164\1\154\1\141\1\60\1\145\3\60\1\145\1\147\1\143\1\uffff\1\156\2\60\1\145\1\162\1\156\1\60\1\145\1\141\1\156\1\uffff\1\145\1\154\1\uffff\1\151\2\uffff\1\156\2\60\1\156\1\60\1\145\1\40\1\145\1\60\1\162\1\164\1\60\2\uffff\1\60\1\141\1\164\1\60\1\uffff\1\163\2\145\2\uffff\1\154\1\uffff\1\141\1\uffff\1\151\1\uffff\1\60\2\uffff\1\40\1\160\1\145\1\143\1\uffff\1\141\1\40\1\164\1\60\1\163\1\164\3\uffff\1\60\1\145\1\156\1\60\1\162\1\151\1\164\1\uffff\1\60\3\uffff\1\60\1\145\1\164\1\147\2\uffff\1\163\1\145\1\60\1\uffff\1\141\1\163\1\143\1\60\1\164\1\157\1\60\2\uffff\1\143\1\uffff\1\60\2\uffff\1\60\1\uffff\1\171\1\145\2\uffff\1\144\1\60\1\uffff\1\145\1\162\1\60\2\154\1\143\2\uffff\1\60\1\40\1\145\1\143\1\uffff\1\60\1\uffff\2\60\1\uffff\1\60\1\164\1\uffff\1\141\1\143\1\145\2\uffff\1\162\4\60\1\uffff\1\156\1\145\1\164\1\uffff\1\60\1\156\1\uffff\1\162\2\uffff\1\40\1\60\1\40\1\uffff\1\143\1\60\1\uffff\3\60\2\uffff\1\60\1\153\4\uffff\1\137\1\151\1\164\2\60\4\uffff\3\60\1\uffff\1\60\1\145\3\uffff\1\164\5\uffff\1\60\1\144\1\156\1\60\6\uffff\1\155\1\60\1\uffff\1\151\1\141\1\164\1\uffff\1\145\1\uffff\1\155\1\164\1\60\1\156\2\145\1\uffff\1\164\3\60\1\164\3\uffff\1\141\1\155\1\160\1\60\1\uffff";
+        "\1\0\2\141\7\uffff\1\142\1\156\1\52\1\141\1\145\1\141\1\174\4\uffff\1\74\1\75\1\uffff\2\75\1\146\1\141\1\154\1\145\1\146\1\60\1\154\1\141\1\44\1\150\1\141\1\145\1\141\1\157\1\141\1\145\2\uffff\2\0\1\101\3\uffff\1\164\1\163\1\146\1\157\1\uffff\1\156\1\157\1\162\1\151\7\uffff\1\164\1\60\1\144\1\154\1\164\1\144\1\164\1\157\1\151\1\144\3\uffff\1\162\1\151\1\153\1\146\1\147\1\164\21\uffff\1\40\1\60\1\40\2\156\1\167\1\164\1\154\2\157\1\141\1\154\1\60\1\144\1\60\1\164\1\60\1\uffff\1\143\1\163\1\144\1\163\1\145\1\162\1\145\1\154\2\uffff\2\145\1\155\1\142\1\151\1\154\1\166\1\151\1\145\1\154\1\146\2\157\2\uffff\1\141\1\164\1\143\1\145\1\141\1\160\1\143\1\155\1\40\1\154\1\151\1\60\1\uffff\2\60\2\145\1\40\1\157\1\162\1\157\2\141\1\155\1\145\1\151\1\164\1\162\1\143\1\156\1\uffff\4\145\2\uffff\1\157\1\40\1\145\1\56\1\165\1\154\1\145\1\142\1\165\1\145\1\141\3\154\1\145\1\uffff\1\56\1\163\1\uffff\1\145\1\uffff\1\163\2\145\1\60\1\145\1\163\1\141\1\162\1\143\1\146\1\154\2\156\1\160\1\164\1\154\1\147\1\145\1\60\1\151\1\156\1\167\1\165\1\157\1\151\1\142\1\154\1\142\1\151\1\60\1\164\1\165\1\60\1\164\1\60\1\uffff\1\60\1\157\3\uffff\2\162\1\uffff\1\151\1\164\1\165\1\156\1\164\1\155\1\141\1\60\1\164\1\60\1\141\1\150\1\157\1\162\1\145\1\162\1\170\1\60\1\147\1\162\1\151\1\165\1\uffff\1\60\1\uffff\1\162\1\60\1\162\1\60\1\160\1\170\1\155\1\141\1\60\1\142\1\162\1\uffff\1\145\1\162\1\164\1\160\1\60\1\uffff\2\60\1\163\1\164\1\145\1\153\1\164\1\154\1\141\1\60\1\145\3\60\1\145\1\147\1\143\1\uffff\1\156\2\60\1\145\1\162\1\156\1\60\1\145\1\141\1\156\1\uffff\1\145\1\154\1\uffff\1\151\2\uffff\1\156\2\60\1\156\1\60\1\145\1\40\1\145\1\60\1\162\1\uffff\1\60\1\uffff\1\164\1\60\2\uffff\1\60\1\141\1\164\1\60\1\uffff\1\163\2\145\2\uffff\1\154\1\uffff\1\141\1\uffff\1\151\1\uffff\1\40\1\160\1\145\1\143\1\uffff\1\141\1\40\1\164\1\60\1\163\1\164\3\uffff\1\60\1\145\1\156\1\60\1\162\1\151\1\164\1\uffff\1\60\3\uffff\1\60\1\145\1\164\1\147\2\uffff\1\163\1\145\1\60\1\uffff\1\141\1\163\1\143\1\60\1\164\1\157\1\60\2\uffff\1\143\1\uffff\1\60\2\uffff\1\60\1\uffff\1\171\1\uffff\1\145\2\uffff\1\144\1\60\1\uffff\1\145\1\162\1\60\2\154\1\143\1\uffff\1\60\1\40\1\145\1\143\1\uffff\1\60\1\uffff\2\60\1\uffff\1\60\1\164\1\uffff\1\141\1\143\1\145\2\uffff\1\162\4\60\1\uffff\1\156\1\145\1\164\1\uffff\1\60\1\156\1\uffff\1\162\2\uffff\1\40\1\60\1\40\1\uffff\1\143\1\60\1\uffff\3\60\2\uffff\1\60\1\153\4\uffff\1\137\1\151\1\164\2\60\4\uffff\3\60\1\uffff\1\60\1\145\3\uffff\1\164\5\uffff\1\60\1\144\1\156\1\60\6\uffff\1\155\1\60\1\uffff\1\151\1\141\1\164\1\uffff\1\145\1\uffff\1\155\1\164\1\60\1\156\2\145\1\uffff\1\164\3\60\1\164\3\uffff\1\141\1\155\1\160\1\60\1\uffff";
     static final String DFA14_maxS =
-        "\1\uffff\1\162\1\165\7\uffff\1\165\1\160\1\57\1\162\1\151\1\174\4\uffff\2\76\1\uffff\2\75\1\163\1\165\1\151\1\162\1\157\1\165\1\71\1\170\1\165\1\44\1\150\1\162\1\145\1\141\1\157\1\151\1\157\2\uffff\2\uffff\1\172\3\uffff\1\164\2\163\1\157\1\uffff\1\156\1\157\1\162\1\151\7\uffff\1\164\1\172\1\144\2\164\1\144\1\164\1\157\1\151\1\144\3\uffff\1\162\1\151\1\147\1\164\21\uffff\2\172\1\40\1\156\1\164\1\167\1\164\2\155\1\146\2\157\1\160\1\154\1\172\1\144\1\172\1\164\1\172\1\uffff\1\151\1\163\1\144\1\163\1\157\1\162\1\145\1\156\2\uffff\2\145\1\170\1\142\1\151\1\164\1\166\1\151\1\145\1\154\1\147\2\157\2\uffff\1\141\1\164\1\143\1\145\1\141\1\160\1\143\1\155\1\40\1\154\1\151\1\172\1\uffff\2\172\2\145\1\40\1\157\1\162\1\161\2\141\1\155\1\162\1\143\1\156\1\uffff\1\145\1\164\1\145\1\157\2\uffff\1\157\1\172\1\145\1\56\1\165\1\154\2\145\1\151\1\164\1\142\1\165\1\145\1\141\3\154\1\145\1\uffff\1\56\1\163\1\uffff\1\145\1\uffff\1\163\2\145\1\172\1\164\1\163\1\141\1\162\1\143\1\163\1\154\1\162\1\156\1\160\1\164\1\154\1\147\1\145\1\172\1\151\1\156\1\167\1\165\1\157\1\151\1\142\1\154\1\142\1\151\1\172\1\164\1\165\1\172\1\164\1\172\1\uffff\1\172\1\157\3\uffff\2\162\1\uffff\1\151\1\164\1\165\1\156\1\164\1\155\2\141\1\150\1\165\1\162\1\145\1\162\1\170\1\172\2\162\1\156\1\165\1\uffff\1\172\1\uffff\1\162\1\172\1\162\1\172\1\164\2\172\1\160\1\170\1\155\1\141\1\172\1\142\1\162\1\uffff\1\145\1\162\1\164\1\160\1\172\1\uffff\2\172\1\163\1\164\1\145\1\153\1\164\1\154\1\141\1\172\1\145\3\172\1\145\1\147\1\143\1\uffff\1\156\2\172\1\145\1\162\1\156\1\172\1\145\1\141\1\156\1\uffff\1\145\1\154\1\uffff\1\151\2\uffff\1\156\2\172\1\156\1\172\1\145\1\172\1\145\1\172\1\162\1\164\1\172\2\uffff\1\172\1\141\1\164\1\172\1\uffff\1\163\2\145\2\uffff\1\154\1\uffff\1\141\1\uffff\1\151\1\uffff\1\172\2\uffff\1\40\1\160\1\145\1\143\1\uffff\1\141\1\40\1\164\1\172\1\163\1\164\3\uffff\1\172\1\145\1\156\1\172\1\162\1\151\1\164\1\uffff\1\172\3\uffff\1\172\1\145\1\164\1\147\2\uffff\1\163\1\145\1\172\1\uffff\1\141\1\163\1\143\1\172\1\164\1\157\1\172\2\uffff\1\143\1\uffff\1\172\2\uffff\1\172\1\uffff\1\171\1\145\2\uffff\1\144\1\172\1\uffff\1\145\1\162\1\172\2\154\1\143\2\uffff\1\172\1\40\1\145\1\143\1\uffff\1\172\1\uffff\2\172\1\uffff\1\172\1\164\1\uffff\1\141\1\143\1\145\2\uffff\1\162\4\172\1\uffff\1\156\1\145\1\164\1\uffff\1\172\1\156\1\uffff\1\162\2\uffff\1\40\1\172\1\40\1\uffff\1\143\1\172\1\uffff\3\172\2\uffff\1\172\1\153\4\uffff\1\137\1\151\1\164\2\172\4\uffff\3\172\1\uffff\1\172\1\145\3\uffff\1\164\5\uffff\1\172\1\164\1\156\1\172\6\uffff\1\155\1\172\1\uffff\1\151\1\141\1\164\1\uffff\1\145\1\uffff\1\155\1\164\1\172\1\156\2\145\1\uffff\1\164\3\172\1\164\3\uffff\1\141\1\155\1\160\1\172\1\uffff";
+        "\1\uffff\1\162\1\165\7\uffff\1\165\1\160\1\57\1\162\2\151\1\174\4\uffff\2\76\1\uffff\2\75\1\163\1\165\1\162\1\157\1\165\1\71\1\170\1\165\1\44\1\150\1\162\1\145\1\141\1\157\1\151\1\157\2\uffff\2\uffff\1\172\3\uffff\1\164\2\163\1\157\1\uffff\1\156\1\157\1\162\1\151\7\uffff\1\164\1\172\1\144\2\164\1\144\1\164\1\157\1\151\1\144\3\uffff\1\162\1\151\1\155\1\146\1\147\1\164\21\uffff\2\172\1\40\1\156\1\164\1\167\1\164\1\155\2\157\1\160\1\154\1\172\1\144\1\172\1\164\1\172\1\uffff\1\151\1\163\1\144\1\163\1\157\1\162\1\145\1\156\2\uffff\2\145\1\170\1\142\1\151\1\164\1\166\1\151\1\145\1\154\1\147\2\157\2\uffff\1\141\1\164\1\143\1\145\1\141\1\160\1\143\1\155\1\40\1\154\1\151\1\172\1\uffff\2\172\2\145\1\40\1\157\1\162\1\161\2\141\1\155\1\145\1\151\1\164\1\162\1\143\1\156\1\uffff\1\145\1\164\1\145\1\157\2\uffff\1\157\1\172\1\145\1\56\1\165\1\154\1\145\1\142\1\165\1\145\1\141\3\154\1\145\1\uffff\1\56\1\163\1\uffff\1\145\1\uffff\1\163\2\145\1\172\1\164\1\163\1\141\1\162\1\143\1\163\1\154\1\162\1\156\1\160\1\164\1\154\1\147\1\145\1\172\1\151\1\156\1\167\1\165\1\157\1\151\1\142\1\154\1\142\1\151\1\172\1\164\1\165\1\172\1\164\1\172\1\uffff\1\172\1\157\3\uffff\2\162\1\uffff\1\151\1\164\1\165\1\156\1\164\1\155\1\141\1\172\1\164\1\172\1\141\1\150\1\165\1\162\1\145\1\162\1\170\1\172\2\162\1\156\1\165\1\uffff\1\172\1\uffff\1\162\1\172\1\162\1\172\1\160\1\170\1\155\1\141\1\172\1\142\1\162\1\uffff\1\145\1\162\1\164\1\160\1\172\1\uffff\2\172\1\163\1\164\1\145\1\153\1\164\1\154\1\141\1\172\1\145\3\172\1\145\1\147\1\143\1\uffff\1\156\2\172\1\145\1\162\1\156\1\172\1\145\1\141\1\156\1\uffff\1\145\1\154\1\uffff\1\151\2\uffff\1\156\2\172\1\156\1\172\1\145\1\172\1\145\1\172\1\162\1\uffff\1\172\1\uffff\1\164\1\172\2\uffff\1\172\1\141\1\164\1\172\1\uffff\1\163\2\145\2\uffff\1\154\1\uffff\1\141\1\uffff\1\151\1\uffff\1\40\1\160\1\145\1\143\1\uffff\1\141\1\40\1\164\1\172\1\163\1\164\3\uffff\1\172\1\145\1\156\1\172\1\162\1\151\1\164\1\uffff\1\172\3\uffff\1\172\1\145\1\164\1\147\2\uffff\1\163\1\145\1\172\1\uffff\1\141\1\163\1\143\1\172\1\164\1\157\1\172\2\uffff\1\143\1\uffff\1\172\2\uffff\1\172\1\uffff\1\171\1\uffff\1\145\2\uffff\1\144\1\172\1\uffff\1\145\1\162\1\172\2\154\1\143\1\uffff\1\172\1\40\1\145\1\143\1\uffff\1\172\1\uffff\2\172\1\uffff\1\172\1\164\1\uffff\1\141\1\143\1\145\2\uffff\1\162\4\172\1\uffff\1\156\1\145\1\164\1\uffff\1\172\1\156\1\uffff\1\162\2\uffff\1\40\1\172\1\40\1\uffff\1\143\1\172\1\uffff\3\172\2\uffff\1\172\1\153\4\uffff\1\137\1\151\1\164\2\172\4\uffff\3\172\1\uffff\1\172\1\145\3\uffff\1\164\5\uffff\1\172\1\164\1\156\1\172\6\uffff\1\155\1\172\1\uffff\1\151\1\141\1\164\1\uffff\1\145\1\uffff\1\155\1\164\1\172\1\156\2\145\1\uffff\1\164\3\172\1\164\3\uffff\1\141\1\155\1\160\1\172\1\uffff";
     static final String DFA14_acceptS =
-        "\3\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\6\uffff\1\22\1\23\1\24\1\25\2\uffff\1\30\23\uffff\2\177\3\uffff\1\u0082\1\u0085\1\u0086\4\uffff\1\u0082\4\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\12\uffff\1\u0083\1\u0084\1\15\4\uffff\1\21\1\31\1\22\1\23\1\24\1\25\1\26\1\33\1\41\1\32\1\27\1\35\1\34\1\30\1\37\1\36\1\40\23\uffff\1\61\10\uffff\1\u0080\1\70\15\uffff\1\u0081\1\u0085\14\uffff\1\13\16\uffff\1\42\4\uffff\1\44\1\143\22\uffff\1\53\2\uffff\1\134\1\uffff\1\114\43\uffff\1\135\2\uffff\1\104\1\52\1\100\2\uffff\1\141\23\uffff\1\62\1\uffff\1\57\16\uffff\1\60\5\uffff\1\66\21\uffff\1\157\12\uffff\1\105\2\uffff\1\142\1\uffff\1\20\1\175\14\uffff\1\43\1\54\4\uffff\1\155\3\uffff\1\45\1\55\1\uffff\1\170\1\uffff\1\115\1\uffff\1\46\1\uffff\1\107\1\47\4\uffff\1\166\6\uffff\1\65\1\64\1\67\7\uffff\1\71\1\uffff\1\72\1\122\1\164\4\uffff\1\113\1\124\3\uffff\1\167\7\uffff\1\137\1\127\1\uffff\1\174\1\uffff\1\160\1\161\1\uffff\1\16\2\uffff\1\50\1\111\2\uffff\1\144\6\uffff\1\74\1\102\4\uffff\1\73\1\uffff\1\110\2\uffff\1\112\2\uffff\1\150\3\uffff\1\101\1\123\5\uffff\1\136\3\uffff\1\131\2\uffff\1\12\1\uffff\1\14\1\133\3\uffff\1\132\2\uffff\1\176\3\uffff\1\51\1\140\2\uffff\1\75\1\63\1\163\1\121\5\uffff\1\76\1\103\1\156\1\126\3\uffff\1\147\2\uffff\1\145\1\17\1\130\1\uffff\1\165\1\56\1\106\1\171\1\154\4\uffff\1\152\1\125\1\172\1\1\1\77\1\2\2\uffff\1\173\3\uffff\1\153\1\uffff\1\162\6\uffff\1\151\5\uffff\1\116\1\117\1\146\4\uffff\1\120";
+        "\3\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\7\uffff\1\23\1\24\1\25\1\26\2\uffff\1\31\22\uffff\2\177\3\uffff\1\u0082\1\u0085\1\u0086\4\uffff\1\u0082\4\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\12\uffff\1\u0083\1\u0084\1\15\6\uffff\1\22\1\32\1\23\1\24\1\25\1\26\1\27\1\34\1\42\1\33\1\30\1\36\1\35\1\31\1\40\1\37\1\41\21\uffff\1\61\10\uffff\1\u0080\1\70\15\uffff\1\u0081\1\u0085\14\uffff\1\13\21\uffff\1\43\4\uffff\1\45\1\143\17\uffff\1\53\2\uffff\1\134\1\uffff\1\114\43\uffff\1\135\2\uffff\1\104\1\52\1\100\2\uffff\1\141\26\uffff\1\62\1\uffff\1\57\13\uffff\1\60\5\uffff\1\66\21\uffff\1\157\12\uffff\1\105\2\uffff\1\142\1\uffff\1\21\1\175\12\uffff\1\17\1\uffff\1\107\2\uffff\1\44\1\54\4\uffff\1\155\3\uffff\1\46\1\55\1\uffff\1\170\1\uffff\1\115\1\uffff\1\47\4\uffff\1\166\6\uffff\1\65\1\64\1\67\7\uffff\1\71\1\uffff\1\72\1\122\1\164\4\uffff\1\113\1\124\3\uffff\1\167\7\uffff\1\137\1\127\1\uffff\1\174\1\uffff\1\160\1\161\1\uffff\1\16\1\uffff\1\74\1\uffff\1\50\1\111\2\uffff\1\144\6\uffff\1\102\4\uffff\1\73\1\uffff\1\110\2\uffff\1\112\2\uffff\1\150\3\uffff\1\101\1\123\5\uffff\1\136\3\uffff\1\131\2\uffff\1\12\1\uffff\1\14\1\133\3\uffff\1\132\2\uffff\1\176\3\uffff\1\51\1\140\2\uffff\1\75\1\63\1\163\1\121\5\uffff\1\76\1\103\1\156\1\126\3\uffff\1\147\2\uffff\1\145\1\20\1\130\1\uffff\1\165\1\56\1\106\1\171\1\154\4\uffff\1\152\1\125\1\172\1\1\1\77\1\2\2\uffff\1\173\3\uffff\1\153\1\uffff\1\162\6\uffff\1\151\5\uffff\1\116\1\117\1\146\4\uffff\1\120";
     static final String DFA14_specialS =
-        "\1\0\53\uffff\1\2\1\1\u01ee\uffff}>";
+        "\1\1\53\uffff\1\2\1\0\u01ee\uffff}>";
     static final String[] DFA14_transitionS = {
-            "\11\61\2\60\2\61\1\60\22\61\1\60\1\30\1\54\1\61\1\42\1\21\1\26\1\55\1\3\1\5\1\20\1\22\1\4\1\23\1\37\1\14\12\52\1\6\1\10\1\24\1\27\1\25\2\61\32\57\3\61\1\56\1\57\1\61\1\12\1\51\1\41\1\1\1\40\1\2\1\34\1\46\1\31\1\47\1\57\1\33\1\16\1\32\1\36\1\15\1\57\1\35\1\45\1\44\1\13\1\50\1\43\3\57\1\7\1\17\1\11\uff82\61",
+            "\11\61\2\60\2\61\1\60\22\61\1\60\1\31\1\54\1\61\1\42\1\22\1\27\1\55\1\3\1\5\1\21\1\23\1\4\1\24\1\37\1\14\12\52\1\6\1\10\1\25\1\30\1\26\2\61\32\57\3\61\1\56\1\57\1\61\1\12\1\51\1\41\1\1\1\40\1\2\1\34\1\46\1\32\1\47\1\57\1\16\1\17\1\33\1\36\1\15\1\57\1\35\1\45\1\44\1\13\1\50\1\43\3\57\1\7\1\20\1\11\uff82\61",
             "\1\62\3\uffff\1\64\3\uffff\1\63\10\uffff\1\65",
             "\1\72\15\uffff\1\71\2\uffff\1\70\2\uffff\1\67",
             "",
@@ -4343,20 +4343,20 @@ public class InternalMickeyLangLexer extends Lexer {
             "\1\112\1\uffff\1\113",
             "\1\114\4\uffff\1\115",
             "\1\117\20\uffff\1\120",
-            "\1\122\7\uffff\1\121",
-            "\1\123",
+            "\1\122\3\uffff\1\121",
+            "\1\124\7\uffff\1\123",
+            "\1\125",
             "",
             "",
             "",
             "",
-            "\1\131\1\132\1\133",
-            "\1\136\1\135",
+            "\1\133\1\134\1\135",
+            "\1\140\1\137",
             "",
-            "\1\141",
             "\1\143",
-            "\1\146\1\147\6\uffff\1\145\4\uffff\1\144",
-            "\1\152\3\uffff\1\151\11\uffff\1\150\5\uffff\1\153",
-            "\1\155\3\uffff\1\154",
+            "\1\145",
+            "\1\150\1\151\6\uffff\1\147\4\uffff\1\146",
+            "\1\154\3\uffff\1\153\11\uffff\1\152\5\uffff\1\155",
             "\1\156\5\uffff\1\157",
             "\1\160\11\uffff\1\161",
             "\1\164\5\uffff\1\163\1\uffff\1\166\3\uffff\1\162\2\uffff\1\165",
@@ -4410,8 +4410,10 @@ public class InternalMickeyLangLexer extends Lexer {
             "",
             "\1\u00a7",
             "\1\u00a8",
-            "\1\u00a9",
-            "\1\u00aa",
+            "\1\u00a9\1\uffff\1\u00aa",
+            "\1\u00ab",
+            "\1\u00ac",
+            "\1\u00ad",
             "",
             "",
             "",
@@ -4429,16 +4431,14 @@ public class InternalMickeyLangLexer extends Lexer {
             "",
             "",
             "",
-            "\1\u00ab\17\uffff\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
-            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\3\66\1\u00af\11\66\1\u00ad\4\66\1\u00ae\1\u00b0\6\66",
-            "\1\u00b2",
-            "\1\u00b3",
-            "\1\u00b5\5\uffff\1\u00b4",
+            "\1\u00ae\17\uffff\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
+            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\3\66\1\u00b2\11\66\1\u00b0\4\66\1\u00b1\1\u00b3\6\66",
+            "\1\u00b5",
             "\1\u00b6",
-            "\1\u00b7",
-            "\1\u00b8\1\u00b9",
-            "\1\u00ba\1\uffff\1\u00bb",
-            "\1\u00bc",
+            "\1\u00b8\5\uffff\1\u00b7",
+            "\1\u00b9",
+            "\1\u00ba",
+            "\1\u00bb\1\u00bc",
             "\1\u00bd",
             "\1\u00be",
             "\1\u00c2\5\uffff\1\u00bf\6\uffff\1\u00c0\1\uffff\1\u00c1",
@@ -4501,18 +4501,18 @@ public class InternalMickeyLangLexer extends Lexer {
             "\1\u00fe",
             "\1\u00ff",
             "\1\u0100",
-            "",
             "\1\u0101",
-            "\1\u0103\16\uffff\1\u0102",
+            "\1\u0102",
+            "\1\u0103",
+            "",
             "\1\u0104",
-            "\1\u0106\11\uffff\1\u0105",
-            "",
-            "",
+            "\1\u0106\16\uffff\1\u0105",
             "\1\u0107",
-            "\1\u0108\17\uffff\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\15\66\1\u0109\14\66",
-            "\1\u010b",
-            "\1\u010c",
-            "\1\u010d",
+            "\1\u0109\11\uffff\1\u0108",
+            "",
+            "",
+            "\1\u010a",
+            "\1\u010b\17\uffff\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\15\66\1\u010c\14\66",
             "\1\u010e",
             "\1\u010f",
             "\1\u0110",
@@ -4583,27 +4583,27 @@ public class InternalMickeyLangLexer extends Lexer {
             "\1\u014c",
             "\1\u014d",
             "\1\u014e",
-            "\1\u014f",
+            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "\1\u0150",
-            "\1\u0151\5\uffff\1\u0152",
+            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
+            "\1\u0152",
             "\1\u0153",
-            "\1\u0154",
-            "\1\u0155",
+            "\1\u0154\5\uffff\1\u0155",
             "\1\u0156",
+            "\1\u0157",
+            "\1\u0158",
+            "\1\u0159",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
-            "\1\u0159\12\uffff\1\u0158",
-            "\1\u015a",
-            "\1\u015b\4\uffff\1\u015c",
+            "\1\u015c\12\uffff\1\u015b",
             "\1\u015d",
+            "\1\u015e\4\uffff\1\u015f",
+            "\1\u0160",
             "",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "",
-            "\1\u015f",
+            "\1\u0162",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
-            "\1\u0161",
-            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
-            "\1\u0163",
-            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
+            "\1\u0164",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "\1\u0166",
             "\1\u0167",
@@ -4664,28 +4664,28 @@ public class InternalMickeyLangLexer extends Lexer {
             "\1\u0198",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "\1\u019a",
-            "\1\u019b",
+            "",
+            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
+            "",
+            "\1\u019c",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "",
             "",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
-            "\1\u019e",
             "\1\u019f",
+            "\1\u01a0",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "",
-            "\1\u01a1",
             "\1\u01a2",
             "\1\u01a3",
-            "",
-            "",
             "\1\u01a4",
+            "",
             "",
             "\1\u01a5",
             "",
             "\1\u01a6",
             "",
-            "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
-            "",
+            "\1\u01a7",
             "",
             "\1\u01a8",
             "\1\u01a9",
@@ -4740,6 +4740,7 @@ public class InternalMickeyLangLexer extends Lexer {
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "",
             "\1\u01cb",
+            "",
             "\1\u01cc",
             "",
             "",
@@ -4752,7 +4753,6 @@ public class InternalMickeyLangLexer extends Lexer {
             "\1\u01d2",
             "\1\u01d3",
             "\1\u01d4",
-            "",
             "",
             "\12\66\7\uffff\32\66\4\uffff\1\66\1\uffff\32\66",
             "\1\u01d6",
@@ -4908,6 +4908,16 @@ public class InternalMickeyLangLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA14_45 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA14_45>='\u0000' && LA14_45<='\uFFFF')) ) {s = 143;}
+
+                        else s = 49;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA14_0 = input.LA(1);
 
                         s = -1;
@@ -4937,33 +4947,33 @@ public class InternalMickeyLangLexer extends Lexer {
 
                         else if ( (LA14_0=='p') ) {s = 13;}
 
-                        else if ( (LA14_0=='m') ) {s = 14;}
+                        else if ( (LA14_0=='l') ) {s = 14;}
 
-                        else if ( (LA14_0=='|') ) {s = 15;}
+                        else if ( (LA14_0=='m') ) {s = 15;}
 
-                        else if ( (LA14_0=='*') ) {s = 16;}
+                        else if ( (LA14_0=='|') ) {s = 16;}
 
-                        else if ( (LA14_0=='%') ) {s = 17;}
+                        else if ( (LA14_0=='*') ) {s = 17;}
 
-                        else if ( (LA14_0=='+') ) {s = 18;}
+                        else if ( (LA14_0=='%') ) {s = 18;}
 
-                        else if ( (LA14_0=='-') ) {s = 19;}
+                        else if ( (LA14_0=='+') ) {s = 19;}
 
-                        else if ( (LA14_0=='<') ) {s = 20;}
+                        else if ( (LA14_0=='-') ) {s = 20;}
 
-                        else if ( (LA14_0=='>') ) {s = 21;}
+                        else if ( (LA14_0=='<') ) {s = 21;}
 
-                        else if ( (LA14_0=='&') ) {s = 22;}
+                        else if ( (LA14_0=='>') ) {s = 22;}
 
-                        else if ( (LA14_0=='=') ) {s = 23;}
+                        else if ( (LA14_0=='&') ) {s = 23;}
 
-                        else if ( (LA14_0=='!') ) {s = 24;}
+                        else if ( (LA14_0=='=') ) {s = 24;}
 
-                        else if ( (LA14_0=='i') ) {s = 25;}
+                        else if ( (LA14_0=='!') ) {s = 25;}
 
-                        else if ( (LA14_0=='n') ) {s = 26;}
+                        else if ( (LA14_0=='i') ) {s = 26;}
 
-                        else if ( (LA14_0=='l') ) {s = 27;}
+                        else if ( (LA14_0=='n') ) {s = 27;}
 
                         else if ( (LA14_0=='g') ) {s = 28;}
 
@@ -5008,16 +5018,6 @@ public class InternalMickeyLangLexer extends Lexer {
                         else if ( ((LA14_0>='\u0000' && LA14_0<='\b')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\u001F')||LA14_0=='#'||(LA14_0>='?' && LA14_0<='@')||(LA14_0>='[' && LA14_0<=']')||LA14_0=='`'||(LA14_0>='~' && LA14_0<='\uFFFF')) ) {s = 49;}
 
                         else s = 43;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA14_45 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA14_45>='\u0000' && LA14_45<='\uFFFF')) ) {s = 143;}
-
-                        else s = 49;
 
                         if ( s>=0 ) return s;
                         break;

@@ -572,14 +572,29 @@ ruleContentUriQueryParam returns [EObject current=null]
     }
 (
 (
+		lv_like_1_0=	'like' 
+    {
+        newLeafNode(lv_like_1_0, grammarAccess.getContentUriQueryParamAccess().getLikeLikeKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getContentUriQueryParamRule());
+	        }
+       		setWithLastConsumed($current, "like", true, "like");
+	    }
+
+)
+)?(
+(
 		{
 			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getContentUriQueryParamRule());
 	        }
         }
-	otherlv_1=RULE_ID
+	otherlv_2=RULE_ID
 	{
-		newLeafNode(otherlv_1, grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceCrossReference_1_0()); 
+		newLeafNode(otherlv_2, grammarAccess.getContentUriQueryParamAccess().getColumnColumnSourceCrossReference_2_0()); 
 	}
 
 )
