@@ -653,22 +653,55 @@ public class ContentProviderContractGenerator {
           if (_equals) {
             _builder.append("\t");
             _builder.append("\t");
-            _builder.append("mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, value);");
-            _builder.newLine();
-          } else {
+            _builder.append("mUriBuilder.appendQueryParameter(");
+            TableDefinition _type = action.getType();
+            String _name_7 = _type.getName();
+            String _pascalize_4 = Strings.pascalize(_name_7);
+            _builder.append(_pascalize_4, "\t\t");
+            _builder.append(".");
             ColumnSource _column_3 = queryParam.getColumn();
-            ColumnType _inferredColumnType_3 = ModelUtil.getInferredColumnType(_column_3);
+            String _name_8 = _column_3.getName();
+            String _underscore = Strings.underscore(_name_8);
+            String _upperCase = _underscore.toUpperCase();
+            _builder.append(_upperCase, "\t\t");
+            _builder.append(", value);");
+            _builder.newLineIfNotEmpty();
+          } else {
+            ColumnSource _column_4 = queryParam.getColumn();
+            ColumnType _inferredColumnType_3 = ModelUtil.getInferredColumnType(_column_4);
             boolean _equals_1 = Objects.equal(_inferredColumnType_3, ColumnType.BOOLEAN);
             if (_equals_1) {
               _builder.append("\t");
               _builder.append("\t");
-              _builder.append("mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, value ? \"1\" : \"0\");");
-              _builder.newLine();
+              _builder.append("mUriBuilder.appendQueryParameter(");
+              TableDefinition _type_1 = action.getType();
+              String _name_9 = _type_1.getName();
+              String _pascalize_5 = Strings.pascalize(_name_9);
+              _builder.append(_pascalize_5, "\t\t");
+              _builder.append(".");
+              ColumnSource _column_5 = queryParam.getColumn();
+              String _name_10 = _column_5.getName();
+              String _underscore_1 = Strings.underscore(_name_10);
+              String _upperCase_1 = _underscore_1.toUpperCase();
+              _builder.append(_upperCase_1, "\t\t");
+              _builder.append(", value ? \"1\" : \"0\");");
+              _builder.newLineIfNotEmpty();
             } else {
               _builder.append("\t");
               _builder.append("\t");
-              _builder.append("mUriBuilder.appendQueryParameter(Orders.ORDER_STATUS, String.valueOf(value));");
-              _builder.newLine();
+              _builder.append("mUriBuilder.appendQueryParameter(");
+              TableDefinition _type_2 = action.getType();
+              String _name_11 = _type_2.getName();
+              String _pascalize_6 = Strings.pascalize(_name_11);
+              _builder.append(_pascalize_6, "\t\t");
+              _builder.append(".");
+              ColumnSource _column_6 = queryParam.getColumn();
+              String _name_12 = _column_6.getName();
+              String _underscore_2 = Strings.underscore(_name_12);
+              String _upperCase_2 = _underscore_2.toUpperCase();
+              _builder.append(_upperCase_2, "\t\t");
+              _builder.append(", String.valueOf(value));");
+              _builder.newLineIfNotEmpty();
             }
           }
         }
@@ -696,13 +729,13 @@ public class ContentProviderContractGenerator {
     _builder.newLine();
     _builder.newLine();
     _builder.append("public static ");
-    String _name_7 = action.getName();
-    String _pascalize_4 = Strings.pascalize(_name_7);
-    _builder.append(_pascalize_4, "");
+    String _name_13 = action.getName();
+    String _pascalize_7 = Strings.pascalize(_name_13);
+    _builder.append(_pascalize_7, "");
     _builder.append("UriBuilder new");
-    String _name_8 = action.getName();
-    String _pascalize_5 = Strings.pascalize(_name_8);
-    _builder.append(_pascalize_5, "");
+    String _name_14 = action.getName();
+    String _pascalize_8 = Strings.pascalize(_name_14);
+    _builder.append(_pascalize_8, "");
     _builder.append("UriBuilder(");
     ContentUri _uri_2 = action.getUri();
     String _methodArgsSig_1 = this.toMethodArgsSig(_uri_2);
@@ -711,9 +744,9 @@ public class ContentProviderContractGenerator {
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("return new ");
-    String _name_9 = action.getName();
-    String _pascalize_6 = Strings.pascalize(_name_9);
-    _builder.append(_pascalize_6, "\t");
+    String _name_15 = action.getName();
+    String _pascalize_9 = Strings.pascalize(_name_15);
+    _builder.append(_pascalize_9, "\t");
     _builder.append("UriBuilder(");
     ContentUri _uri_3 = action.getUri();
     String _methodArgs = this.toMethodArgs(_uri_3);

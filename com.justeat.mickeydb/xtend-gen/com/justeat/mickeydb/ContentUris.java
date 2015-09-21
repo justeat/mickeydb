@@ -244,10 +244,13 @@ public class ContentUris {
   
   public String asString(final ContentUri uri) {
     StringBuilder builder = new StringBuilder();
+    boolean skipSlash = true;
     EList<ContentUriSegment> _segments = uri.getSegments();
     for (final ContentUriSegment seg : _segments) {
       {
-        builder.append("/");
+        if ((!skipSlash)) {
+          builder.append("/");
+        }
         if ((seg instanceof ContentUriParamSegment)) {
           ContentUriParamSegment paramSeg = ((ContentUriParamSegment) seg);
           ColumnSource _param = paramSeg.getParam();
@@ -262,6 +265,7 @@ public class ContentUris {
           String _name = seg.getName();
           builder.append(_name);
         }
+        skipSlash = false;
       }
     }
     return builder.toString();

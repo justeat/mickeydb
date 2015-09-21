@@ -523,23 +523,41 @@ ruleContentUri returns [EObject current=null]
             grammarAccess.getContentUriAccess().getContentUriAction_0(),
             $current);
     }
-)(	otherlv_1='/' 
-    {
-    	newLeafNode(otherlv_1, grammarAccess.getContentUriAccess().getSolidusKeyword_1_0());
-    }
-(
+)(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getContentUriAccess().getSegmentsContentUriSegmentParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getContentUriAccess().getSegmentsContentUriSegmentParserRuleCall_1_0()); 
 	    }
-		lv_segments_2_0=ruleContentUriSegment		{
+		lv_segments_1_0=ruleContentUriSegment		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getContentUriRule());
 	        }
        		add(
        			$current, 
        			"segments",
-        		lv_segments_2_0, 
+        		lv_segments_1_0, 
+        		"ContentUriSegment");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?(	otherlv_2='/' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getContentUriAccess().getSolidusKeyword_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getContentUriAccess().getSegmentsContentUriSegmentParserRuleCall_2_1_0()); 
+	    }
+		lv_segments_3_0=ruleContentUriSegment		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getContentUriRule());
+	        }
+       		add(
+       			$current, 
+       			"segments",
+        		lv_segments_3_0, 
         		"ContentUriSegment");
 	        afterParserOrEnumRuleCall();
 	    }

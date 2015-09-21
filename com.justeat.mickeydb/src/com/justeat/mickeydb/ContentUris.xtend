@@ -133,9 +133,9 @@ class ContentUris {
 	
 	def asString(ContentUri uri) {
 		var builder = new StringBuilder()
-		
+		var skipSlash = true
 		for(seg : uri.segments) {
-			builder.append("/")
+			if(!skipSlash) builder.append("/")
 			if(seg instanceof ContentUriParamSegment) {
 				var paramSeg = seg as ContentUriParamSegment
 				
@@ -148,6 +148,7 @@ class ContentUris {
 			} else {
 				builder.append(seg.name)
 			}
+			skipSlash = false
 		}
 		
 		return builder.toString

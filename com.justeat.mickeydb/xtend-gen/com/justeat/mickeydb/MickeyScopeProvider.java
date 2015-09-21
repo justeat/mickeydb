@@ -356,6 +356,30 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
       MickeyDatabaseModel _get = mickeyModel.databases.get(dbName);
       SqliteDatabaseSnapshot _snapshot = _get.getSnapshot();
       TableDefinition definition = _snapshot.getTableDefinition(tableName);
+      boolean _equals = Objects.equal(definition, null);
+      if (_equals) {
+        MickeyDatabaseModel _get_1 = mickeyModel.databases.get(dbName);
+        final Function1<CreateTableStatement, Boolean> _function = new Function1<CreateTableStatement, Boolean>() {
+          public Boolean apply(final CreateTableStatement it) {
+            String _name = it.getName();
+            return Boolean.valueOf(_name.equals(tableName));
+          }
+        };
+        CreateTableStatement _findFirst = IterableExtensions.<CreateTableStatement>findFirst(_get_1.initTables, _function);
+        definition = _findFirst;
+      }
+      boolean _equals_1 = Objects.equal(definition, null);
+      if (_equals_1) {
+        MickeyDatabaseModel _get_2 = mickeyModel.databases.get(dbName);
+        final Function1<CreateViewStatement, Boolean> _function_1 = new Function1<CreateViewStatement, Boolean>() {
+          public Boolean apply(final CreateViewStatement it) {
+            String _name = it.getName();
+            return Boolean.valueOf(_name.equals(tableName));
+          }
+        };
+        CreateViewStatement _findFirst_1 = IterableExtensions.<CreateViewStatement>findFirst(_get_2.initViews, _function_1);
+        definition = _findFirst_1;
+      }
       if ((definition instanceof CreateTableStatement)) {
         CreateTableStatement table = ((CreateTableStatement) definition);
         EList<ColumnSource> _columnDefs = table.getColumnDefs();

@@ -298,32 +298,40 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContentUri");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cContentUriAction_0 = (Action)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cSolidusKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cSegmentsAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cSegmentsContentUriSegmentParserRuleCall_1_1_0 = (RuleCall)cSegmentsAssignment_1_1.eContents().get(0);
+		private final Assignment cSegmentsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSegmentsContentUriSegmentParserRuleCall_1_0 = (RuleCall)cSegmentsAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cSolidusKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSegmentsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSegmentsContentUriSegmentParserRuleCall_2_1_0 = (RuleCall)cSegmentsAssignment_2_1.eContents().get(0);
 		
 		//ContentUri:
-		//	{ContentUri} ("/" segments+=ContentUriSegment)*;
+		//	{ContentUri} segments+=ContentUriSegment? ("/" segments+=ContentUriSegment)*;
 		public ParserRule getRule() { return rule; }
 
-		//{ContentUri} ("/" segments+=ContentUriSegment)*
+		//{ContentUri} segments+=ContentUriSegment? ("/" segments+=ContentUriSegment)*
 		public Group getGroup() { return cGroup; }
 
 		//{ContentUri}
 		public Action getContentUriAction_0() { return cContentUriAction_0; }
 
-		//("/" segments+=ContentUriSegment)*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"/"
-		public Keyword getSolidusKeyword_1_0() { return cSolidusKeyword_1_0; }
-
-		//segments+=ContentUriSegment
-		public Assignment getSegmentsAssignment_1_1() { return cSegmentsAssignment_1_1; }
+		//segments+=ContentUriSegment?
+		public Assignment getSegmentsAssignment_1() { return cSegmentsAssignment_1; }
 
 		//ContentUriSegment
-		public RuleCall getSegmentsContentUriSegmentParserRuleCall_1_1_0() { return cSegmentsContentUriSegmentParserRuleCall_1_1_0; }
+		public RuleCall getSegmentsContentUriSegmentParserRuleCall_1_0() { return cSegmentsContentUriSegmentParserRuleCall_1_0; }
+
+		//("/" segments+=ContentUriSegment)*
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"/"
+		public Keyword getSolidusKeyword_2_0() { return cSolidusKeyword_2_0; }
+
+		//segments+=ContentUriSegment
+		public Assignment getSegmentsAssignment_2_1() { return cSegmentsAssignment_2_1; }
+
+		//ContentUriSegment
+		public RuleCall getSegmentsContentUriSegmentParserRuleCall_2_1_0() { return cSegmentsContentUriSegmentParserRuleCall_2_1_0; }
 	}
 
 	public class ContentUriQueryParamElements extends AbstractParserRuleElementFinder {
@@ -4469,7 +4477,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ContentUri:
-	//	{ContentUri} ("/" segments+=ContentUriSegment)*;
+	//	{ContentUri} segments+=ContentUriSegment? ("/" segments+=ContentUriSegment)*;
 	public ContentUriElements getContentUriAccess() {
 		return pContentUri;
 	}

@@ -30,7 +30,7 @@ FunctionArg:
 
 ContentUri:
 	{ContentUri}
-	('/' segments+=ContentUriSegment)*
+	segments+=ContentUriSegment? ('/' segments+=ContentUriSegment)*
 ;
 
 ContentUriQueryParam:

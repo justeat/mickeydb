@@ -1091,7 +1091,7 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (segments+=ContentUriSegment*)
+	 *     (segments+=ContentUriSegment? segments+=ContentUriSegment*)
 	 */
 	protected void sequence_ContentUri(EObject context, ContentUri semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

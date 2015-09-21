@@ -4,6 +4,7 @@
  */
 package com.justeat.mickeydb;
 
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -48,6 +49,19 @@ public abstract class CustomActions extends ContentProviderActions {
 		int affected = query.update(db, getSourceName(), values);
 		
 		return affected;
+	}
+	
+	@Override
+	public Uri insert(MickeyContentProvider provider, Uri uri, ContentValues values) {
+		final SQLiteDatabase db = provider.getOpenHelper().getWritableDatabase();
+
+		long id = db.insertOrThrow(getSourceName(), null, values);
+		
+		if(id > -1) {
+			return ContentUris.withAppendedId(uri, id);
+		}
+		
+		return null;
 	}
 	
 	@Override

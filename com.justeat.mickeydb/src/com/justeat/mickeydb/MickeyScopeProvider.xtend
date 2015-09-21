@@ -207,6 +207,12 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 			    
 			    if(mickeyModel != null) {
 			    	var definition = mickeyModel.databases.get(dbName).snapshot.getTableDefinition(tableName)
+			    	if(definition == null) {
+			    		definition = mickeyModel.databases.get(dbName).initTables.findFirst[it.name.equals(tableName)]
+			    	}
+			    	if(definition == null) {
+			    		definition = mickeyModel.databases.get(dbName).initViews.findFirst[it.name.equals(tableName)]
+			    	}
 			    	if(definition instanceof CreateTableStatement) {
 			    		var table = definition as CreateTableStatement
 				    	var columnScope = Scopes.scopeFor(table.columnDefs, IScope.NULLSCOPE);

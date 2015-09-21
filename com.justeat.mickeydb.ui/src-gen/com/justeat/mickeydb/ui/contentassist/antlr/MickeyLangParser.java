@@ -83,7 +83,7 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionStatementAccess().getGroup_6(), "rule__ActionStatement__Group_6__0");
 					put(grammarAccess.getFunctionArgAccess().getGroup(), "rule__FunctionArg__Group__0");
 					put(grammarAccess.getContentUriAccess().getGroup(), "rule__ContentUri__Group__0");
-					put(grammarAccess.getContentUriAccess().getGroup_1(), "rule__ContentUri__Group_1__0");
+					put(grammarAccess.getContentUriAccess().getGroup_2(), "rule__ContentUri__Group_2__0");
 					put(grammarAccess.getContentUriQueryParamAccess().getGroup(), "rule__ContentUriQueryParam__Group__0");
 					put(grammarAccess.getContentUriSegmentAccess().getGroup_1(), "rule__ContentUriSegment__Group_1__0");
 					put(grammarAccess.getMigrationBlockAccess().getGroup(), "rule__MigrationBlock__Group__0");
@@ -229,7 +229,8 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionStatementAccess().getParamsAssignment_6_1(), "rule__ActionStatement__ParamsAssignment_6_1");
 					put(grammarAccess.getFunctionArgAccess().getTypeAssignment_0(), "rule__FunctionArg__TypeAssignment_0");
 					put(grammarAccess.getFunctionArgAccess().getNameAssignment_1(), "rule__FunctionArg__NameAssignment_1");
-					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_1_1(), "rule__ContentUri__SegmentsAssignment_1_1");
+					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_1(), "rule__ContentUri__SegmentsAssignment_1");
+					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_2_1(), "rule__ContentUri__SegmentsAssignment_2_1");
 					put(grammarAccess.getContentUriQueryParamAccess().getLikeAssignment_1(), "rule__ContentUriQueryParam__LikeAssignment_1");
 					put(grammarAccess.getContentUriQueryParamAccess().getColumnAssignment_2(), "rule__ContentUriQueryParam__ColumnAssignment_2");
 					put(grammarAccess.getContentUriSegmentAccess().getNameAssignment_0(), "rule__ContentUriSegment__NameAssignment_0");
