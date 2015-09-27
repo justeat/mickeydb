@@ -59,6 +59,15 @@ public interface MickeyLangFactory extends EFactory
   ActionStatement createActionStatement();
 
   /**
+   * Returns a new object of class '<em>Content Notification Uri</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Content Notification Uri</em>'.
+   * @generated
+   */
+  ContentNotificationUri createContentNotificationUri();
+
+  /**
    * Returns a new object of class '<em>Function Arg</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -66,6 +75,24 @@ public interface MickeyLangFactory extends EFactory
    * @generated
    */
   FunctionArg createFunctionArg();
+
+  /**
+   * Returns a new object of class '<em>Notify Content Uri</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Notify Content Uri</em>'.
+   * @generated
+   */
+  NotifyContentUri createNotifyContentUri();
+
+  /**
+   * Returns a new object of class '<em>Notify Content Uri Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Notify Content Uri Segment</em>'.
+   * @generated
+   */
+  NotifyContentUriSegment createNotifyContentUriSegment();
 
   /**
    * Returns a new object of class '<em>Content Uri</em>'.
@@ -453,6 +480,15 @@ public interface MickeyLangFactory extends EFactory
    * @generated
    */
   UpdateColumnExpression createUpdateColumnExpression();
+
+  /**
+   * Returns a new object of class '<em>Notify Content Uri Param Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Notify Content Uri Param Segment</em>'.
+   * @generated
+   */
+  NotifyContentUriParamSegment createNotifyContentUriParamSegment();
 
   /**
    * Returns a new object of class '<em>Content Uri Param Segment</em>'.

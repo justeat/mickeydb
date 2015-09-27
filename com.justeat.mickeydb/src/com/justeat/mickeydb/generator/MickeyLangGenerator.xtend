@@ -64,7 +64,7 @@ class MickeyLangGenerator implements IGenerator {
 				);
 				fsa.generateFile(
 					packageName.resolveFileName(databaseName.pascalize.concat("Contract")), 
-					mContentProviderContractGenerator.generate(it)
+					mContentProviderContractGenerator.generate(it, content)
 				);
 				
 				fsa.generateFile(
@@ -102,7 +102,7 @@ class MickeyLangGenerator implements IGenerator {
 					item,index|generateMigration(packageName, databaseName, resource, fsa, item)
 				];	
 				
-				content.uris.dropWhile[p1|!p1.userDefined].forEach[p1|
+				content.uris.forEach[p1|
 					fsa.generateFile(
 						packageName.concat('.actions').resolveFileName(p1.name.pascalize.concat("Actions")), 
 						mCustomActionsGenerator.generate(it, p1)

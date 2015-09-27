@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.justeat.mickeydb.mickeyLang.ActionStatement#getType <em>Type</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.ActionStatement#isUnique <em>Unique</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.ActionStatement#getParams <em>Params</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.ActionStatement#getNotifications <em>Notifications</em>}</li>
  * </ul>
  *
  * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getActionStatement()
@@ -145,5 +146,21 @@ public interface ActionStatement extends MickeyBlock
    * @generated
    */
   EList<ContentUriQueryParam> getParams();
+
+  /**
+   * Returns the value of the '<em><b>Notifications</b></em>' containment reference list.
+   * The list contents are of type {@link com.justeat.mickeydb.mickeyLang.ContentNotificationUri}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Notifications</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Notifications</em>' containment reference list.
+   * @see com.justeat.mickeydb.mickeyLang.MickeyLangPackage#getActionStatement_Notifications()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ContentNotificationUri> getNotifications();
 
 } // ActionStatement

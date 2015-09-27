@@ -15,9 +15,10 @@ import com.justeat.mickeydb.mickeyLang.TableDefinition
 import static extension com.justeat.mickeydb.ModelUtil.*
 import static extension com.justeat.mickeydb.Strings.*
 import com.justeat.mickeydb.mickeyLang.ColumnType
+import com.justeat.mickeydb.ContentUris
 
 class ContentProviderContractGenerator {
-		def CharSequence generate(MickeyDatabaseModel model) 				
+		def CharSequence generate(MickeyDatabaseModel model, ContentUris content) 				
 			'''	
 			«var snapshot = model.snapshot»
 			/*
@@ -29,6 +30,7 @@ class ContentProviderContractGenerator {
 			import android.provider.BaseColumns;
 			import com.justeat.mickeydb.AbstractValuesBuilder;
 			import com.justeat.mickeydb.Mickey;
+			import com.justeat.mickeydb.MickeyUriBuilder;
 			import java.lang.reflect.Field;			
 			import java.util.Collections;
 			import java.util.HashSet;
@@ -59,7 +61,7 @@ class ContentProviderContractGenerator {
 					return authority;
 				}
 				
-			    private static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
+			    public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 			
 				«FOR tbl : snapshot.tables»
 				interface «tbl.name.pascalize»Columns {
@@ -94,19 +96,19 @@ class ContentProviderContractGenerator {
 				«ENDFOR»
 						
 				«FOR tbl : snapshot.tables»
-				«generateContractItem(model, snapshot, tbl)»
+				«generateContractItem(model, snapshot, tbl, content)»
 				«ENDFOR»
 			
 				«FOR vw : snapshot.views»
-				«generateContractItem(model, snapshot, vw)»
+				«generateContractItem(model, snapshot, vw, content)»
 				«ENDFOR»
 				
 				«FOR tbl : model.initTables»
-				«generateContractItem(model, snapshot, tbl)»
+				«generateContractItem(model, snapshot, tbl, content)»
 				«ENDFOR»
 			
 				«FOR vw : model.initViews»
-				«generateContractItem(model, snapshot, vw)»
+				«generateContractItem(model, snapshot, vw, content)»
 				«ENDFOR»
 				
 				static Map<Uri, Set<Uri>> REFERENCING_VIEWS;
@@ -146,33 +148,12 @@ class ContentProviderContractGenerator {
 				}
 			}
 	'''
-		
-	def createActionUriBuilderMethod(ActionStatement action) '''
-		public static Uri build«action.name.pascalize»Uri(«action.uri.toMethodArgsSig») {
-			return BASE_CONTENT_URI
-				.buildUpon()
-				«FOR seg : action.uri.segments»
-				«IF seg instanceof ContentUriParamSegment»
-				«IF (seg as ContentUriParamSegment).param.inferredColumnType != ColumnType::TEXT»
-				.appendPath(String.valueOf(«seg.param.name.camelize»))
-				«ELSE»
-				.appendPath(«seg.param.name.camelize»)
-				«ENDIF»
-				«ELSE»
-				.appendPath("«seg.name»")
-				«ENDIF»
-				«ENDFOR»
-				.build();
-		}
-		
-	'''
 	
 	def createActionUriBuilder(ActionStatement action) '''
-		public static class «action.name.pascalize»UriBuilder {
-			private Uri.Builder mUriBuilder;
+		public static class «action.name.pascalize»UriBuilder extends MickeyUriBuilder {
 			public «action.name.pascalize»UriBuilder(«action.uri.toMethodArgsSig») {
-				mUriBuilder = BASE_CONTENT_URI
-				.buildUpon()
+				super(BASE_CONTENT_URI.buildUpon());
+				getUriBuilder()
 				«FOR seg : action.uri.segments»
 				«IF seg instanceof ContentUriParamSegment»
 				«IF (seg as ContentUriParamSegment).param.inferredColumnType != ColumnType::TEXT»
@@ -189,19 +170,15 @@ class ContentProviderContractGenerator {
 			«FOR queryParam : action.params»
 			public «action.name.pascalize»UriBuilder set«queryParam.column.name.pascalize»Param(«queryParam.column.inferredColumnType.toJavaTypeName» value) {
 				«IF queryParam.column.inferredColumnType == ColumnType::TEXT»
-				mUriBuilder.appendQueryParameter(«action.type.name.pascalize».«queryParam.column.name.underscore.toUpperCase», value);
+				getUriBuilder().appendQueryParameter(«action.type.name.pascalize».«queryParam.column.name.underscore.toUpperCase», value);
 				«ELSEIF queryParam.column.inferredColumnType == ColumnType::BOOLEAN»
-				mUriBuilder.appendQueryParameter(«action.type.name.pascalize».«queryParam.column.name.underscore.toUpperCase», value ? "1" : "0");
+				getUriBuilder().appendQueryParameter(«action.type.name.pascalize».«queryParam.column.name.underscore.toUpperCase», value ? "1" : "0");
 				«ELSE»
-				mUriBuilder.appendQueryParameter(«action.type.name.pascalize».«queryParam.column.name.underscore.toUpperCase», String.valueOf(value));
+				getUriBuilder().appendQueryParameter(«action.type.name.pascalize».«queryParam.column.name.underscore.toUpperCase», String.valueOf(value));
 				«ENDIF»
 				return this;
 			}
 			«ENDFOR»
-			
-			public Uri build() {
-				return mUriBuilder.build();
-			}
 		}
 		
 		public static «action.name.pascalize»UriBuilder new«action.name.pascalize»UriBuilder(«action.uri.toMethodArgsSig») {
@@ -249,7 +226,7 @@ class ContentProviderContractGenerator {
 	}
 
 	
-	def generateContractItem(MickeyDatabaseModel model, SqliteDatabaseSnapshot snapshot, TableDefinition stmt) '''
+	def generateContractItem(MickeyDatabaseModel model, SqliteDatabaseSnapshot snapshot, TableDefinition stmt, ContentUris content) '''
 		/**
 		 * <p>Column definitions and helper methods to work with the «stmt.name.pascalize».</p>
 		 */
@@ -257,23 +234,22 @@ class ContentProviderContractGenerator {
 		    public static final Uri CONTENT_URI = 
 					BASE_CONTENT_URI.buildUpon().appendPath("«stmt.name»").build();
 		
+		    
 			/**
 			 * <p>The content type for a cursor that contains many «stmt.name.pascalize» rows.</p>
 			 */
 		    public static final String CONTENT_TYPE =
 		            "vnd.android.cursor.dir/vnd.«model.databaseName.toLowerCase».«stmt.name»";
 
-			«IF stmt.hasAndroidPrimaryKey»
 			/**
 			 * <p>The content type for a cursor that contains a single «stmt.name.pascalize» row.</p>
 			 */
 			public static final String ITEM_CONTENT_TYPE =
 				"vnd.android.cursor.item/vnd.«model.databaseName.toLowerCase».«stmt.name»";
-		    «ENDIF»
 		
 			/**
 			 * <p>Builds a Uri with appended id for a row in «stmt.name.pascalize», 
-			 * eg:- content://«model.packageName».«model.databaseName.toLowerCase»/«stmt.name.toLowerCase»/123.</p>
+			 * eg:- content://«model.packageName».«model.databaseName.toLowerCase»»«stmt.name.toLowerCase»/123.</p>
 			 */
 		    public static Uri buildUriWithId(long id) {
 		        return CONTENT_URI.buildUpon().appendPath(String.valueOf(id)).build();
@@ -281,7 +257,6 @@ class ContentProviderContractGenerator {
 		    «var actions = model.findActionsForDefinition(stmt.name)»
 			«IF actions != null»
 			«FOR action : actions»
-			«action.createActionUriBuilderMethod»
 			«action.createActionUriBuilder»
 			
 			«ENDFOR»
@@ -318,14 +293,16 @@ class ContentProviderContractGenerator {
 			
 			static {
 				HashSet<Uri> viewUris =  new HashSet<Uri>();
-
-				«FOR ref : snapshot.getAllViewsReferencingTable(stmt).sortBy[x|x.name]»
-				viewUris.add(«ref.name.pascalize».CONTENT_URI);
-				«ENDFOR»
-				«FOR ref : model.getAllViewsInConfigInitReferencingTable(stmt).sortBy[x|x.name]»
-				viewUris.add(«ref.name.pascalize».CONTENT_URI);
-				«ENDFOR»
+				«var views = snapshot.getAllViewsReferencingTable(stmt).sortBy[x|x.name]»
+				«var initViews = model.getAllViewsInConfigInitReferencingTable(stmt).sortBy[x|x.name]»
 				
+				«FOR ref : views»
+				viewUris.add(«ref.name.pascalize».CONTENT_URI);
+				«ENDFOR»
+				«FOR ref : initViews»
+				viewUris.add(«ref.name.pascalize».CONTENT_URI);
+				«ENDFOR»
+
 				VIEW_URIS = Collections.unmodifiableSet(viewUris);
 			}
 		}

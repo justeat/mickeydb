@@ -52,10 +52,20 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ActionStatement/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//ActionStatement/unique"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ActionStatement/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ActionStatement/notifications"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//ContentNotificationUri">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ContentNotificationUri/uri"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//FunctionArg">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//FunctionArg/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//FunctionArg/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NotifyContentUri">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//NotifyContentUri/segments"/>
+    </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NotifyContentUriSegment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MickeyLang.ecore#//NotifyContentUriSegment/name"/>
     </genClasses>
     <genClasses ecoreClass="MickeyLang.ecore#//ContentUri">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ContentUri/segments"/>
@@ -216,6 +226,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateColumnExpression/columnName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//UpdateColumnExpression/expression"/>
     </genClasses>
+    <genClasses ecoreClass="MickeyLang.ecore#//NotifyContentUriParamSegment"/>
     <genClasses ecoreClass="MickeyLang.ecore#//ContentUriParamSegment">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MickeyLang.ecore#//ContentUriParamSegment/param"/>
     </genClasses>

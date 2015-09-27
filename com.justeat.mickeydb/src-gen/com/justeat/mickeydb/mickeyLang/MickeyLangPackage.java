@@ -224,13 +224,50 @@ public interface MickeyLangPackage extends EPackage
   int ACTION_STATEMENT__PARAMS = MICKEY_BLOCK_FEATURE_COUNT + 4;
 
   /**
+   * The feature id for the '<em><b>Notifications</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_STATEMENT__NOTIFICATIONS = MICKEY_BLOCK_FEATURE_COUNT + 5;
+
+  /**
    * The number of structural features of the '<em>Action Statement</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTION_STATEMENT_FEATURE_COUNT = MICKEY_BLOCK_FEATURE_COUNT + 5;
+  int ACTION_STATEMENT_FEATURE_COUNT = MICKEY_BLOCK_FEATURE_COUNT + 6;
+
+  /**
+   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentNotificationUriImpl <em>Content Notification Uri</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.justeat.mickeydb.mickeyLang.impl.ContentNotificationUriImpl
+   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentNotificationUri()
+   * @generated
+   */
+  int CONTENT_NOTIFICATION_URI = 4;
+
+  /**
+   * The feature id for the '<em><b>Uri</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT_NOTIFICATION_URI__URI = 0;
+
+  /**
+   * The number of structural features of the '<em>Content Notification Uri</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT_NOTIFICATION_URI_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.FunctionArgImpl <em>Function Arg</em>}' class.
@@ -240,7 +277,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getFunctionArg()
    * @generated
    */
-  int FUNCTION_ARG = 4;
+  int FUNCTION_ARG = 5;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -270,6 +307,62 @@ public interface MickeyLangPackage extends EPackage
   int FUNCTION_ARG_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriImpl <em>Notify Content Uri</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriImpl
+   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotifyContentUri()
+   * @generated
+   */
+  int NOTIFY_CONTENT_URI = 6;
+
+  /**
+   * The feature id for the '<em><b>Segments</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOTIFY_CONTENT_URI__SEGMENTS = 0;
+
+  /**
+   * The number of structural features of the '<em>Notify Content Uri</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOTIFY_CONTENT_URI_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriSegmentImpl <em>Notify Content Uri Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriSegmentImpl
+   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotifyContentUriSegment()
+   * @generated
+   */
+  int NOTIFY_CONTENT_URI_SEGMENT = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOTIFY_CONTENT_URI_SEGMENT__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Notify Content Uri Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOTIFY_CONTENT_URI_SEGMENT_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriImpl <em>Content Uri</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -277,7 +370,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUri()
    * @generated
    */
-  int CONTENT_URI = 5;
+  int CONTENT_URI = 8;
 
   /**
    * The feature id for the '<em><b>Segments</b></em>' containment reference list.
@@ -305,7 +398,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUriQueryParam()
    * @generated
    */
-  int CONTENT_URI_QUERY_PARAM = 6;
+  int CONTENT_URI_QUERY_PARAM = 9;
 
   /**
    * The feature id for the '<em><b>Like</b></em>' attribute.
@@ -342,7 +435,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUriSegment()
    * @generated
    */
-  int CONTENT_URI_SEGMENT = 7;
+  int CONTENT_URI_SEGMENT = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -370,7 +463,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getMigrationBlock()
    * @generated
    */
-  int MIGRATION_BLOCK = 8;
+  int MIGRATION_BLOCK = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -416,7 +509,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExpression()
    * @generated
    */
-  int EXPRESSION = 9;
+  int EXPRESSION = 12;
 
   /**
    * The number of structural features of the '<em>Expression</em>' class.
@@ -435,7 +528,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCase()
    * @generated
    */
-  int CASE = 10;
+  int CASE = 13;
 
   /**
    * The feature id for the '<em><b>When Expression</b></em>' containment reference.
@@ -472,7 +565,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDMLStatement()
    * @generated
    */
-  int DML_STATEMENT = 43;
+  int DML_STATEMENT = 46;
 
   /**
    * The number of structural features of the '<em>DML Statement</em>' class.
@@ -491,7 +584,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSelectStatement()
    * @generated
    */
-  int SELECT_STATEMENT = 11;
+  int SELECT_STATEMENT = 14;
 
   /**
    * The feature id for the '<em><b>Core</b></em>' containment reference.
@@ -546,7 +639,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getOrderingTermList()
    * @generated
    */
-  int ORDERING_TERM_LIST = 12;
+  int ORDERING_TERM_LIST = 15;
 
   /**
    * The feature id for the '<em><b>Ordering Terms</b></em>' containment reference list.
@@ -574,7 +667,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSelectCoreExpression()
    * @generated
    */
-  int SELECT_CORE_EXPRESSION = 13;
+  int SELECT_CORE_EXPRESSION = 16;
 
   /**
    * The number of structural features of the '<em>Select Core Expression</em>' class.
@@ -593,7 +686,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSelectList()
    * @generated
    */
-  int SELECT_LIST = 14;
+  int SELECT_LIST = 17;
 
   /**
    * The feature id for the '<em><b>Result Columns</b></em>' containment reference list.
@@ -621,7 +714,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getWhereExpressions()
    * @generated
    */
-  int WHERE_EXPRESSIONS = 15;
+  int WHERE_EXPRESSIONS = 18;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -649,7 +742,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getGroupByExpressions()
    * @generated
    */
-  int GROUP_BY_EXPRESSIONS = 16;
+  int GROUP_BY_EXPRESSIONS = 19;
 
   /**
    * The feature id for the '<em><b>Group By Expressions</b></em>' containment reference list.
@@ -677,7 +770,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getHavingExpressions()
    * @generated
    */
-  int HAVING_EXPRESSIONS = 17;
+  int HAVING_EXPRESSIONS = 20;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -705,7 +798,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getOrderingTerm()
    * @generated
    */
-  int ORDERING_TERM = 18;
+  int ORDERING_TERM = 21;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -751,7 +844,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getJoinSource()
    * @generated
    */
-  int JOIN_SOURCE = 19;
+  int JOIN_SOURCE = 22;
 
   /**
    * The feature id for the '<em><b>Source</b></em>' containment reference.
@@ -788,7 +881,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSingleSource()
    * @generated
    */
-  int SINGLE_SOURCE = 20;
+  int SINGLE_SOURCE = 23;
 
   /**
    * The number of structural features of the '<em>Single Source</em>' class.
@@ -807,7 +900,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSelectSource()
    * @generated
    */
-  int SELECT_SOURCE = 21;
+  int SELECT_SOURCE = 24;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -835,7 +928,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSingleSourceJoin()
    * @generated
    */
-  int SINGLE_SOURCE_JOIN = 22;
+  int SINGLE_SOURCE_JOIN = 25;
 
   /**
    * The feature id for the '<em><b>Join Source</b></em>' containment reference.
@@ -863,7 +956,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getJoinStatement()
    * @generated
    */
-  int JOIN_STATEMENT = 23;
+  int JOIN_STATEMENT = 26;
 
   /**
    * The feature id for the '<em><b>Natural</b></em>' attribute.
@@ -945,7 +1038,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getColumnSource()
    * @generated
    */
-  int COLUMN_SOURCE = 24;
+  int COLUMN_SOURCE = 27;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -973,7 +1066,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getLiteralValue()
    * @generated
    */
-  int LITERAL_VALUE = 25;
+  int LITERAL_VALUE = 28;
 
   /**
    * The number of structural features of the '<em>Literal Value</em>' class.
@@ -992,7 +1085,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDDLStatement()
    * @generated
    */
-  int DDL_STATEMENT = 26;
+  int DDL_STATEMENT = 29;
 
   /**
    * The number of structural features of the '<em>DDL Statement</em>' class.
@@ -1011,7 +1104,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getTableDefinition()
    * @generated
    */
-  int TABLE_DEFINITION = 27;
+  int TABLE_DEFINITION = 30;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1039,7 +1132,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCreateTriggerStatement()
    * @generated
    */
-  int CREATE_TRIGGER_STATEMENT = 28;
+  int CREATE_TRIGGER_STATEMENT = 31;
 
   /**
    * The feature id for the '<em><b>Temporary</b></em>' attribute.
@@ -1139,7 +1232,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getAlterTableAddColumnStatement()
    * @generated
    */
-  int ALTER_TABLE_ADD_COLUMN_STATEMENT = 29;
+  int ALTER_TABLE_ADD_COLUMN_STATEMENT = 32;
 
   /**
    * The feature id for the '<em><b>Table</b></em>' reference.
@@ -1176,7 +1269,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDropTableStatement()
    * @generated
    */
-  int DROP_TABLE_STATEMENT = 30;
+  int DROP_TABLE_STATEMENT = 33;
 
   /**
    * The feature id for the '<em><b>If Exists</b></em>' attribute.
@@ -1213,7 +1306,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDropTriggerStatement()
    * @generated
    */
-  int DROP_TRIGGER_STATEMENT = 31;
+  int DROP_TRIGGER_STATEMENT = 34;
 
   /**
    * The feature id for the '<em><b>If Exists</b></em>' attribute.
@@ -1250,7 +1343,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDropViewStatement()
    * @generated
    */
-  int DROP_VIEW_STATEMENT = 32;
+  int DROP_VIEW_STATEMENT = 35;
 
   /**
    * The feature id for the '<em><b>If Exists</b></em>' attribute.
@@ -1287,7 +1380,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCreateIndexStatement()
    * @generated
    */
-  int CREATE_INDEX_STATEMENT = 33;
+  int CREATE_INDEX_STATEMENT = 36;
 
   /**
    * The feature id for the '<em><b>Unique</b></em>' attribute.
@@ -1342,7 +1435,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDropIndexStatement()
    * @generated
    */
-  int DROP_INDEX_STATEMENT = 34;
+  int DROP_INDEX_STATEMENT = 37;
 
   /**
    * The feature id for the '<em><b>If Exists</b></em>' attribute.
@@ -1379,7 +1472,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getColumnConstraint()
    * @generated
    */
-  int COLUMN_CONSTRAINT = 35;
+  int COLUMN_CONSTRAINT = 38;
 
   /**
    * The number of structural features of the '<em>Column Constraint</em>' class.
@@ -1398,7 +1491,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getTableConstraint()
    * @generated
    */
-  int TABLE_CONSTRAINT = 36;
+  int TABLE_CONSTRAINT = 39;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1426,7 +1519,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getUniqueTableConstraint()
    * @generated
    */
-  int UNIQUE_TABLE_CONSTRAINT = 37;
+  int UNIQUE_TABLE_CONSTRAINT = 40;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1472,7 +1565,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getPrimaryConstraint()
    * @generated
    */
-  int PRIMARY_CONSTRAINT = 38;
+  int PRIMARY_CONSTRAINT = 41;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1518,7 +1611,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCheckTableConstraint()
    * @generated
    */
-  int CHECK_TABLE_CONSTRAINT = 39;
+  int CHECK_TABLE_CONSTRAINT = 42;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1555,7 +1648,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getIndexedColumn()
    * @generated
    */
-  int INDEXED_COLUMN = 40;
+  int INDEXED_COLUMN = 43;
 
   /**
    * The feature id for the '<em><b>Column Reference</b></em>' reference.
@@ -1610,7 +1703,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDefaultValue()
    * @generated
    */
-  int DEFAULT_VALUE = 41;
+  int DEFAULT_VALUE = 44;
 
   /**
    * The number of structural features of the '<em>Default Value</em>' class.
@@ -1629,7 +1722,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getConflictClause()
    * @generated
    */
-  int CONFLICT_CLAUSE = 42;
+  int CONFLICT_CLAUSE = 45;
 
   /**
    * The feature id for the '<em><b>Resolution</b></em>' attribute.
@@ -1657,7 +1750,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDeleteStatement()
    * @generated
    */
-  int DELETE_STATEMENT = 44;
+  int DELETE_STATEMENT = 47;
 
   /**
    * The feature id for the '<em><b>Table</b></em>' reference.
@@ -1694,7 +1787,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getInsertStatement()
    * @generated
    */
-  int INSERT_STATEMENT = 45;
+  int INSERT_STATEMENT = 48;
 
   /**
    * The feature id for the '<em><b>Conflict Resolution</b></em>' attribute.
@@ -1758,7 +1851,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getUpdateStatement()
    * @generated
    */
-  int UPDATE_STATEMENT = 46;
+  int UPDATE_STATEMENT = 49;
 
   /**
    * The feature id for the '<em><b>Conflict Resolution</b></em>' attribute.
@@ -1813,7 +1906,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getUpdateColumnExpression()
    * @generated
    */
-  int UPDATE_COLUMN_EXPRESSION = 47;
+  int UPDATE_COLUMN_EXPRESSION = 50;
 
   /**
    * The feature id for the '<em><b>Column Name</b></em>' reference.
@@ -1843,6 +1936,34 @@ public interface MickeyLangPackage extends EPackage
   int UPDATE_COLUMN_EXPRESSION_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriParamSegmentImpl <em>Notify Content Uri Param Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriParamSegmentImpl
+   * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotifyContentUriParamSegment()
+   * @generated
+   */
+  int NOTIFY_CONTENT_URI_PARAM_SEGMENT = 51;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOTIFY_CONTENT_URI_PARAM_SEGMENT__NAME = NOTIFY_CONTENT_URI_SEGMENT__NAME;
+
+  /**
+   * The number of structural features of the '<em>Notify Content Uri Param Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOTIFY_CONTENT_URI_PARAM_SEGMENT_FEATURE_COUNT = NOTIFY_CONTENT_URI_SEGMENT_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamSegmentImpl <em>Content Uri Param Segment</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1850,7 +1971,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentUriParamSegment()
    * @generated
    */
-  int CONTENT_URI_PARAM_SEGMENT = 48;
+  int CONTENT_URI_PARAM_SEGMENT = 52;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1887,7 +2008,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprConcat()
    * @generated
    */
-  int EXPR_CONCAT = 49;
+  int EXPR_CONCAT = 53;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1933,7 +2054,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprMult()
    * @generated
    */
-  int EXPR_MULT = 50;
+  int EXPR_MULT = 54;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -1979,7 +2100,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprAdd()
    * @generated
    */
-  int EXPR_ADD = 51;
+  int EXPR_ADD = 55;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2025,7 +2146,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprBit()
    * @generated
    */
-  int EXPR_BIT = 52;
+  int EXPR_BIT = 56;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2071,7 +2192,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprRelate()
    * @generated
    */
-  int EXPR_RELATE = 53;
+  int EXPR_RELATE = 57;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2117,7 +2238,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprEqual()
    * @generated
    */
-  int EXPR_EQUAL = 54;
+  int EXPR_EQUAL = 58;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2163,7 +2284,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprAnd()
    * @generated
    */
-  int EXPR_AND = 55;
+  int EXPR_AND = 59;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2209,7 +2330,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExprOr()
    * @generated
    */
-  int EXPR_OR = 56;
+  int EXPR_OR = 60;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2255,7 +2376,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNullCheckExpression()
    * @generated
    */
-  int NULL_CHECK_EXPRESSION = 57;
+  int NULL_CHECK_EXPRESSION = 61;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2292,7 +2413,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getIsNull()
    * @generated
    */
-  int IS_NULL = 58;
+  int IS_NULL = 62;
 
   /**
    * The number of structural features of the '<em>Is Null</em>' class.
@@ -2311,7 +2432,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotNull()
    * @generated
    */
-  int NOT_NULL = 59;
+  int NOT_NULL = 63;
 
   /**
    * The number of structural features of the '<em>Not Null</em>' class.
@@ -2330,7 +2451,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNewColumn()
    * @generated
    */
-  int NEW_COLUMN = 60;
+  int NEW_COLUMN = 64;
 
   /**
    * The feature id for the '<em><b>Column</b></em>' reference.
@@ -2358,7 +2479,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getOldColumn()
    * @generated
    */
-  int OLD_COLUMN = 61;
+  int OLD_COLUMN = 65;
 
   /**
    * The feature id for the '<em><b>Column</b></em>' reference.
@@ -2386,7 +2507,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getColumnSourceRef()
    * @generated
    */
-  int COLUMN_SOURCE_REF = 62;
+  int COLUMN_SOURCE_REF = 66;
 
   /**
    * The feature id for the '<em><b>Source</b></em>' reference.
@@ -2432,7 +2553,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 63;
+  int LITERAL = 67;
 
   /**
    * The feature id for the '<em><b>Literal Value</b></em>' containment reference.
@@ -2460,7 +2581,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNestedExpression()
    * @generated
    */
-  int NESTED_EXPRESSION = 64;
+  int NESTED_EXPRESSION = 68;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -2488,7 +2609,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSelectStatementExpression()
    * @generated
    */
-  int SELECT_STATEMENT_EXPRESSION = 65;
+  int SELECT_STATEMENT_EXPRESSION = 69;
 
   /**
    * The feature id for the '<em><b>Not</b></em>' attribute.
@@ -2534,7 +2655,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCaseExpression()
    * @generated
    */
-  int CASE_EXPRESSION = 66;
+  int CASE_EXPRESSION = 70;
 
   /**
    * The feature id for the '<em><b>Case Expression</b></em>' containment reference.
@@ -2580,7 +2701,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 67;
+  int FUNCTION = 71;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2626,7 +2747,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCastExpression()
    * @generated
    */
-  int CAST_EXPRESSION = 68;
+  int CAST_EXPRESSION = 72;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -2663,7 +2784,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getFunctionArgument()
    * @generated
    */
-  int FUNCTION_ARGUMENT = 69;
+  int FUNCTION_ARGUMENT = 73;
 
   /**
    * The feature id for the '<em><b>Arg</b></em>' reference.
@@ -2691,7 +2812,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSelectCore()
    * @generated
    */
-  int SELECT_CORE = 70;
+  int SELECT_CORE = 74;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -2737,7 +2858,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSelectExpression()
    * @generated
    */
-  int SELECT_EXPRESSION = 71;
+  int SELECT_EXPRESSION = 75;
 
   /**
    * The feature id for the '<em><b>Distinct</b></em>' attribute.
@@ -2828,7 +2949,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSingleSourceTable()
    * @generated
    */
-  int SINGLE_SOURCE_TABLE = 72;
+  int SINGLE_SOURCE_TABLE = 76;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2865,7 +2986,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSingleSourceSelectStatement()
    * @generated
    */
-  int SINGLE_SOURCE_SELECT_STATEMENT = 73;
+  int SINGLE_SOURCE_SELECT_STATEMENT = 77;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2902,7 +3023,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getResultColumn()
    * @generated
    */
-  int RESULT_COLUMN = 74;
+  int RESULT_COLUMN = 78;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2939,7 +3060,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNumericLiteral()
    * @generated
    */
-  int NUMERIC_LITERAL = 75;
+  int NUMERIC_LITERAL = 79;
 
   /**
    * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -2967,7 +3088,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 76;
+  int STRING_LITERAL = 80;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -2995,7 +3116,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNullLiteral()
    * @generated
    */
-  int NULL_LITERAL = 77;
+  int NULL_LITERAL = 81;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -3023,7 +3144,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCurrentTimeLiteral()
    * @generated
    */
-  int CURRENT_TIME_LITERAL = 78;
+  int CURRENT_TIME_LITERAL = 82;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -3051,7 +3172,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCurrentDateLiteral()
    * @generated
    */
-  int CURRENT_DATE_LITERAL = 79;
+  int CURRENT_DATE_LITERAL = 83;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -3079,7 +3200,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCurrentTimeStampLiteral()
    * @generated
    */
-  int CURRENT_TIME_STAMP_LITERAL = 80;
+  int CURRENT_TIME_STAMP_LITERAL = 84;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' attribute.
@@ -3107,7 +3228,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCreateTableStatement()
    * @generated
    */
-  int CREATE_TABLE_STATEMENT = 81;
+  int CREATE_TABLE_STATEMENT = 85;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3162,7 +3283,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCreateViewStatement()
    * @generated
    */
-  int CREATE_VIEW_STATEMENT = 82;
+  int CREATE_VIEW_STATEMENT = 86;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3208,7 +3329,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getAlterTableRenameStatement()
    * @generated
    */
-  int ALTER_TABLE_RENAME_STATEMENT = 83;
+  int ALTER_TABLE_RENAME_STATEMENT = 87;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3245,7 +3366,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getColumnDef()
    * @generated
    */
-  int COLUMN_DEF = 84;
+  int COLUMN_DEF = 88;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3291,7 +3412,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getPrimaryKeyColumnConstraint()
    * @generated
    */
-  int PRIMARY_KEY_COLUMN_CONSTRAINT = 85;
+  int PRIMARY_KEY_COLUMN_CONSTRAINT = 89;
 
   /**
    * The feature id for the '<em><b>Asc</b></em>' attribute.
@@ -3337,7 +3458,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotNullConstraint()
    * @generated
    */
-  int NOT_NULL_CONSTRAINT = 86;
+  int NOT_NULL_CONSTRAINT = 90;
 
   /**
    * The feature id for the '<em><b>Conflict Clause</b></em>' containment reference.
@@ -3365,7 +3486,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getUniqueConstraint()
    * @generated
    */
-  int UNIQUE_CONSTRAINT = 87;
+  int UNIQUE_CONSTRAINT = 91;
 
   /**
    * The feature id for the '<em><b>Conflict Clause</b></em>' containment reference.
@@ -3393,7 +3514,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getDefaultConstraint()
    * @generated
    */
-  int DEFAULT_CONSTRAINT = 88;
+  int DEFAULT_CONSTRAINT = 92;
 
   /**
    * The feature id for the '<em><b>Default Value</b></em>' containment reference.
@@ -3421,7 +3542,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCheckConstraint()
    * @generated
    */
-  int CHECK_CONSTRAINT = 89;
+  int CHECK_CONSTRAINT = 93;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -3449,7 +3570,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getLiteralDefaultValue()
    * @generated
    */
-  int LITERAL_DEFAULT_VALUE = 90;
+  int LITERAL_DEFAULT_VALUE = 94;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' containment reference.
@@ -3477,7 +3598,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getExpressionDefaultValue()
    * @generated
    */
-  int EXPRESSION_DEFAULT_VALUE = 91;
+  int EXPRESSION_DEFAULT_VALUE = 95;
 
   /**
    * The feature id for the '<em><b>Expression</b></em>' containment reference.
@@ -3505,7 +3626,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getCompoundOperator()
    * @generated
    */
-  int COMPOUND_OPERATOR = 92;
+  int COMPOUND_OPERATOR = 96;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.SqliteDataType <em>Sqlite Data Type</em>}' enum.
@@ -3515,7 +3636,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getSqliteDataType()
    * @generated
    */
-  int SQLITE_DATA_TYPE = 93;
+  int SQLITE_DATA_TYPE = 97;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.ColumnType <em>Column Type</em>}' enum.
@@ -3525,7 +3646,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getColumnType()
    * @generated
    */
-  int COLUMN_TYPE = 94;
+  int COLUMN_TYPE = 98;
 
   /**
    * The meta object id for the '{@link com.justeat.mickeydb.mickeyLang.ConflictResolution <em>Conflict Resolution</em>}' enum.
@@ -3535,7 +3656,7 @@ public interface MickeyLangPackage extends EPackage
    * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getConflictResolution()
    * @generated
    */
-  int CONFLICT_RESOLUTION = 95;
+  int CONFLICT_RESOLUTION = 99;
 
 
   /**
@@ -3700,6 +3821,38 @@ public interface MickeyLangPackage extends EPackage
   EReference getActionStatement_Params();
 
   /**
+   * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.ActionStatement#getNotifications <em>Notifications</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Notifications</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ActionStatement#getNotifications()
+   * @see #getActionStatement()
+   * @generated
+   */
+  EReference getActionStatement_Notifications();
+
+  /**
+   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ContentNotificationUri <em>Content Notification Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Content Notification Uri</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentNotificationUri
+   * @generated
+   */
+  EClass getContentNotificationUri();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.justeat.mickeydb.mickeyLang.ContentNotificationUri#getUri <em>Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Uri</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.ContentNotificationUri#getUri()
+   * @see #getContentNotificationUri()
+   * @generated
+   */
+  EReference getContentNotificationUri_Uri();
+
+  /**
    * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.FunctionArg <em>Function Arg</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3730,6 +3883,48 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    */
   EAttribute getFunctionArg_Name();
+
+  /**
+   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUri <em>Notify Content Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Notify Content Uri</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUri
+   * @generated
+   */
+  EClass getNotifyContentUri();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUri#getSegments <em>Segments</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Segments</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUri#getSegments()
+   * @see #getNotifyContentUri()
+   * @generated
+   */
+  EReference getNotifyContentUri_Segments();
+
+  /**
+   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment <em>Notify Content Uri Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Notify Content Uri Segment</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment
+   * @generated
+   */
+  EClass getNotifyContentUriSegment();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment#getName()
+   * @see #getNotifyContentUriSegment()
+   * @generated
+   */
+  EAttribute getNotifyContentUriSegment_Name();
 
   /**
    * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ContentUri <em>Content Uri</em>}'.
@@ -5051,6 +5246,16 @@ public interface MickeyLangPackage extends EPackage
    * @generated
    */
   EReference getUpdateColumnExpression_Expression();
+
+  /**
+   * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUriParamSegment <em>Notify Content Uri Param Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Notify Content Uri Param Segment</em>'.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUriParamSegment
+   * @generated
+   */
+  EClass getNotifyContentUriParamSegment();
 
   /**
    * Returns the meta object for class '{@link com.justeat.mickeydb.mickeyLang.ContentUriParamSegment <em>Content Uri Param Segment</em>}'.
@@ -6597,6 +6802,32 @@ public interface MickeyLangPackage extends EPackage
     EReference ACTION_STATEMENT__PARAMS = eINSTANCE.getActionStatement_Params();
 
     /**
+     * The meta object literal for the '<em><b>Notifications</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ACTION_STATEMENT__NOTIFICATIONS = eINSTANCE.getActionStatement_Notifications();
+
+    /**
+     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentNotificationUriImpl <em>Content Notification Uri</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.justeat.mickeydb.mickeyLang.impl.ContentNotificationUriImpl
+     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getContentNotificationUri()
+     * @generated
+     */
+    EClass CONTENT_NOTIFICATION_URI = eINSTANCE.getContentNotificationUri();
+
+    /**
+     * The meta object literal for the '<em><b>Uri</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONTENT_NOTIFICATION_URI__URI = eINSTANCE.getContentNotificationUri_Uri();
+
+    /**
      * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.FunctionArgImpl <em>Function Arg</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6621,6 +6852,42 @@ public interface MickeyLangPackage extends EPackage
      * @generated
      */
     EAttribute FUNCTION_ARG__NAME = eINSTANCE.getFunctionArg_Name();
+
+    /**
+     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriImpl <em>Notify Content Uri</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriImpl
+     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotifyContentUri()
+     * @generated
+     */
+    EClass NOTIFY_CONTENT_URI = eINSTANCE.getNotifyContentUri();
+
+    /**
+     * The meta object literal for the '<em><b>Segments</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NOTIFY_CONTENT_URI__SEGMENTS = eINSTANCE.getNotifyContentUri_Segments();
+
+    /**
+     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriSegmentImpl <em>Notify Content Uri Segment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriSegmentImpl
+     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotifyContentUriSegment()
+     * @generated
+     */
+    EClass NOTIFY_CONTENT_URI_SEGMENT = eINSTANCE.getNotifyContentUriSegment();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NOTIFY_CONTENT_URI_SEGMENT__NAME = eINSTANCE.getNotifyContentUriSegment_Name();
 
     /**
      * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriImpl <em>Content Uri</em>}' class.
@@ -7699,6 +7966,16 @@ public interface MickeyLangPackage extends EPackage
      * @generated
      */
     EReference UPDATE_COLUMN_EXPRESSION__EXPRESSION = eINSTANCE.getUpdateColumnExpression_Expression();
+
+    /**
+     * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriParamSegmentImpl <em>Notify Content Uri Param Segment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.justeat.mickeydb.mickeyLang.impl.NotifyContentUriParamSegmentImpl
+     * @see com.justeat.mickeydb.mickeyLang.impl.MickeyLangPackageImpl#getNotifyContentUriParamSegment()
+     * @generated
+     */
+    EClass NOTIFY_CONTENT_URI_PARAM_SEGMENT = eINSTANCE.getNotifyContentUriParamSegment();
 
     /**
      * The meta object literal for the '{@link com.justeat.mickeydb.mickeyLang.impl.ContentUriParamSegmentImpl <em>Content Uri Param Segment</em>}' class.

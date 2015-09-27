@@ -13,6 +13,7 @@ import com.justeat.mickeydb.mickeyLang.CheckTableConstraint;
 import com.justeat.mickeydb.mickeyLang.ColumnDef;
 import com.justeat.mickeydb.mickeyLang.ColumnSourceRef;
 import com.justeat.mickeydb.mickeyLang.ConflictClause;
+import com.justeat.mickeydb.mickeyLang.ContentNotificationUri;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment;
 import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
@@ -59,6 +60,9 @@ import com.justeat.mickeydb.mickeyLang.NestedExpression;
 import com.justeat.mickeydb.mickeyLang.NewColumn;
 import com.justeat.mickeydb.mickeyLang.NotNull;
 import com.justeat.mickeydb.mickeyLang.NotNullConstraint;
+import com.justeat.mickeydb.mickeyLang.NotifyContentUri;
+import com.justeat.mickeydb.mickeyLang.NotifyContentUriParamSegment;
+import com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment;
 import com.justeat.mickeydb.mickeyLang.NullCheckExpression;
 import com.justeat.mickeydb.mickeyLang.NullLiteral;
 import com.justeat.mickeydb.mickeyLang.NumericLiteral;
@@ -229,6 +233,12 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case MickeyLangPackage.CONFLICT_CLAUSE:
 				if(context == grammarAccess.getConflictClauseRule()) {
 					sequence_ConflictClause(context, (ConflictClause) semanticObject); 
+					return; 
+				}
+				else break;
+			case MickeyLangPackage.CONTENT_NOTIFICATION_URI:
+				if(context == grammarAccess.getContentNotificationUriRule()) {
+					sequence_ContentNotificationUri(context, (ContentNotificationUri) semanticObject); 
 					return; 
 				}
 				else break;
@@ -689,6 +699,24 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 					return; 
 				}
 				else break;
+			case MickeyLangPackage.NOTIFY_CONTENT_URI:
+				if(context == grammarAccess.getNotifyContentUriRule()) {
+					sequence_NotifyContentUri(context, (NotifyContentUri) semanticObject); 
+					return; 
+				}
+				else break;
+			case MickeyLangPackage.NOTIFY_CONTENT_URI_PARAM_SEGMENT:
+				if(context == grammarAccess.getNotifyContentUriSegmentRule()) {
+					sequence_NotifyContentUriSegment(context, (NotifyContentUriParamSegment) semanticObject); 
+					return; 
+				}
+				else break;
+			case MickeyLangPackage.NOTIFY_CONTENT_URI_SEGMENT:
+				if(context == grammarAccess.getNotifyContentUriSegmentRule()) {
+					sequence_NotifyContentUriSegment(context, (NotifyContentUriSegment) semanticObject); 
+					return; 
+				}
+				else break;
 			case MickeyLangPackage.NULL_CHECK_EXPRESSION:
 				if(context == grammarAccess.getExprAddRule() ||
 				   context == grammarAccess.getExprAddAccess().getExprAddLeftAction_1_0() ||
@@ -898,7 +926,13 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Constraint:
-	 *     (name=ID uri=ContentUri type=[TableDefinition|QualifiedName] unique?='unique'? params+=ContentUriQueryParam*)
+	 *     (
+	 *         name=ID 
+	 *         uri=ContentUri 
+	 *         type=[TableDefinition|QualifiedName] 
+	 *         unique?='unique'? 
+	 *         (params+=ContentUriQueryParam* notifications+=ContentNotificationUri*)?
+	 *     )
 	 */
 	protected void sequence_ActionStatement(EObject context, ActionStatement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1051,6 +1085,22 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getConflictClauseAccess().getResolutionConflictResolutionEnumRuleCall_2_0(), semanticObject.getResolution());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     uri=NotifyContentUri
+	 */
+	protected void sequence_ContentNotificationUri(EObject context, ContentNotificationUri semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.CONTENT_NOTIFICATION_URI__URI) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.CONTENT_NOTIFICATION_URI__URI));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getContentNotificationUriAccess().getUriNotifyContentUriParserRuleCall_1_0(), semanticObject.getUri());
 		feeder.finish();
 	}
 	
@@ -1552,6 +1602,47 @@ public class MickeyLangSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (name=ID from=[MigrationBlock|QualifiedName]? statements+=DDLStatement*)
 	 */
 	protected void sequence_MigrationBlock(EObject context, MigrationBlock semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_NotifyContentUriSegment(EObject context, NotifyContentUriParamSegment semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.NOTIFY_CONTENT_URI_SEGMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.NOTIFY_CONTENT_URI_SEGMENT__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNotifyContentUriSegmentAccess().getNameIDTerminalRuleCall_1_2_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_NotifyContentUriSegment(EObject context, NotifyContentUriSegment semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MickeyLangPackage.Literals.NOTIFY_CONTENT_URI_SEGMENT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MickeyLangPackage.Literals.NOTIFY_CONTENT_URI_SEGMENT__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getNotifyContentUriSegmentAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (segments+=NotifyContentUriSegment? segments+=NotifyContentUriSegment*)
+	 */
+	protected void sequence_NotifyContentUri(EObject context, NotifyContentUri semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

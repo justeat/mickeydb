@@ -27,16 +27,9 @@ class ContentProviderGenerator {
 			import com.justeat.mickeydb.DefaultContentProviderActions;
 			import com.justeat.mickeydb.ContentProviderActions;
 			«FOR uri : content.uris»
-			«IF uri.userDefined»
-			import «model.packageName».actions.«uri.name.pascalize»Actions;
-			«ENDIF»				
+			import «model.packageName».actions.«uri.name.pascalize»Actions;			
 			«ENDFOR»
-				
-			import «model.packageName».Abstract«model.databaseName.pascalize»OpenHelper.Sources;
-			«FOR tbl : snapshot.tables.filter([it.hasAndroidPrimaryKey])»
-			import «model.packageName».«tbl.name.pascalize»Record;
-			«ENDFOR»			
-			
+	
 			public abstract class Abstract«model.databaseName.pascalize»ContentProvider extends MickeyContentProvider {
 			
 				«var counter=-1»
@@ -87,11 +80,7 @@ class ContentProviderGenerator {
 			    	switch(id) {
 			    		«FOR uri : content.uris»
 			    		case «uri.id»:
-			    		«IF !uri.userDefined»
-			    			return create«uri.type.pascalize»«IF !uri.directory»ById«ENDIF»Actions();
-			    		«ELSE»
 			    			return create«uri.name.pascalize»Actions();
-			    		«ENDIF»
 						«ENDFOR»
 						default:
 							throw new UnsupportedOperationException("Unknown id: " + id);
@@ -99,15 +88,9 @@ class ContentProviderGenerator {
 			    }
 			    
 				«FOR uri : content.uris»
-				«IF !uri.userDefined»
-				protected ContentProviderActions create«uri.type.pascalize»«IF !uri.directory»ById«ENDIF»Actions() {
-					return new DefaultContentProviderActions(Sources.«uri.type.underscore.toUpperCase», «IF !uri.directory»true«ELSE»false«ENDIF», «IF uri.supportsActiveRecord»«uri.type.pascalize»Record.getFactory()«ELSE»null«ENDIF»);
-				}
-				«ELSE»
 				protected ContentProviderActions create«uri.name.pascalize»Actions() {
 					return new «uri.name.pascalize»Actions();
-				}
-				«ENDIF»				
+				}				
 				«ENDFOR»
 			}
 		'''

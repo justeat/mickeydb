@@ -9,11 +9,11 @@ import com.justeat.mickeydb.mickeyLang.ColumnType
 
 class ContentUris {
 	public var ArrayList<ContentUriInfo> uris = new ArrayList<ContentUriInfo>
-	
 	def init(MickeyDatabaseModel model) {
 		for(tbl : model.snapshot.tables) {
 			var info = new ContentUriInfo
-			info.id = tbl.name.underscore.toUpperCase
+			info.id = "DEFAULT_" + tbl.name.underscore.toUpperCase
+			info.name = "Default" + tbl.name.pascalize
 			info.pathPattern = tbl.name
 			info.directory = true
 			info.type = tbl.name
@@ -23,7 +23,8 @@ class ContentUris {
 			
 			if(tbl.hasAndroidPrimaryKey) {
 				var infoItem = new ContentUriInfo
-				infoItem.id = tbl.name.underscore.toUpperCase + "_ID"
+				infoItem.id = "DEFAULT_" +  tbl.name.underscore.toUpperCase + "_ID"
+				infoItem.name = "Default" + tbl.name.pascalize + "ById"
 				infoItem.pathPattern = tbl.name + "/#"
 				infoItem.directory = false
 				infoItem.type = tbl.name
@@ -35,7 +36,8 @@ class ContentUris {
 		
 		for(vw : model.snapshot.views) {
 			var info = new ContentUriInfo
-			info.id = vw.name.underscore.toUpperCase
+			info.id = "DEFAULT_" + vw.name.underscore.toUpperCase
+			info.name = "Default" + vw.name.pascalize
 			info.pathPattern = vw.name
 			info.directory = true
 			info.type = vw.name
@@ -45,7 +47,8 @@ class ContentUris {
 			
 			if(vw.hasAndroidPrimaryKey) {
 				var infoItem = new ContentUriInfo
-				infoItem.id = vw.name.underscore.toUpperCase + "_ID"
+				infoItem.id = "DEFAULT_" + vw.name.underscore.toUpperCase + "_ID"
+				infoItem.name = "Default" + vw.name.pascalize + "ById"
 				infoItem.pathPattern = vw.name + "/#"
 				infoItem.directory = false
 				infoItem.type = vw.name
@@ -57,7 +60,8 @@ class ContentUris {
 		
 		for(tbl : model.initTables) {
 			var info = new ContentUriInfo
-			info.id = tbl.name.underscore.toUpperCase
+			info.id = "DEFAULT_" + tbl.name.underscore.toUpperCase
+			info.name = "Default" + tbl.name.pascalize
 			info.pathPattern = tbl.name
 			info.directory = true
 			info.type = tbl.name
@@ -67,7 +71,8 @@ class ContentUris {
 			
 			if(tbl.hasAndroidPrimaryKey) {
 				var infoItem = new ContentUriInfo
-				infoItem.id = tbl.name.underscore.toUpperCase + "_ID"
+				infoItem.id = "DEFAULT_" + tbl.name.underscore.toUpperCase + "_ID"
+				infoItem.name = "Default" + tbl.name.pascalize + "ById"
 				infoItem.pathPattern = tbl.name + "/#"
 				infoItem.directory = false
 				infoItem.type = tbl.name
@@ -80,7 +85,8 @@ class ContentUris {
 		
 		for(vw : model.initViews) {
 			var info = new ContentUriInfo
-			info.id = vw.name.underscore.toUpperCase
+			info.id = "DEFAULT_" + vw.name.underscore.toUpperCase
+			info.name = "Default" + vw.name.pascalize
 			info.pathPattern = vw.name
 			info.directory = true
 			info.type = vw.name
@@ -90,7 +96,8 @@ class ContentUris {
 			
 			if(vw.hasAndroidPrimaryKey) {
 				var infoItem = new ContentUriInfo
-				infoItem.id = vw.name.underscore.toUpperCase + "_ID"
+				infoItem.id = "DEFAULT_" + vw.name.underscore.toUpperCase + "_ID"
+				infoItem.name = "Default" + vw.name.pascalize + "ById"
 				infoItem.pathPattern = vw.name + "/#"
 				infoItem.directory = false
 				infoItem.type = vw.name
@@ -102,9 +109,11 @@ class ContentUris {
 		
 		// Prune automagic actions if they exist
 		for(a : model.actions) {
-			var toRemove = uris.filter[item | item.type.equals(a.type.name)]
+			var toRemove = uris.filter[item | item.pathPattern.equals(a.uri.asString)]
 			uris.removeAll(toRemove)
 		}
+		
+		var actionUris = new ArrayList<ContentUriInfo>
 		
 		for(a : model.actions) {
 			var info = new ContentUriInfo
@@ -117,7 +126,7 @@ class ContentUris {
 			info.typeRef = a.type
 			info.userDefined = true
 			info.supportsActiveRecord = a.type.hasAndroidPrimaryKey
-			uris.add(info)			
+			actionUris.add(info)		
 		}
 		
 		for(f : model.functions) {
@@ -127,8 +136,10 @@ class ContentUris {
 			info.directory = true
 			info.type = f.type.name
 			info.typeRef = f.type
-			uris.add(info)			
+			actionUris.add(info)			
 		}
+		
+		uris.addAll(0, actionUris)
 	}
 	
 	def asString(ContentUri uri) {

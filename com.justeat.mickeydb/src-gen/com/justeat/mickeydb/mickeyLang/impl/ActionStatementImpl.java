@@ -3,6 +3,7 @@
 package com.justeat.mickeydb.mickeyLang.impl;
 
 import com.justeat.mickeydb.mickeyLang.ActionStatement;
+import com.justeat.mickeydb.mickeyLang.ContentNotificationUri;
 import com.justeat.mickeydb.mickeyLang.ContentUri;
 import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam;
 import com.justeat.mickeydb.mickeyLang.MickeyLangPackage;
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#getType <em>Type</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#isUnique <em>Unique</em>}</li>
  *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#getParams <em>Params</em>}</li>
+ *   <li>{@link com.justeat.mickeydb.mickeyLang.impl.ActionStatementImpl#getNotifications <em>Notifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -111,6 +113,16 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
    * @ordered
    */
   protected EList<ContentUriQueryParam> params;
+
+  /**
+   * The cached value of the '{@link #getNotifications() <em>Notifications</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNotifications()
+   * @generated
+   * @ordered
+   */
+  protected EList<ContentNotificationUri> notifications;
 
   /**
    * <!-- begin-user-doc -->
@@ -289,6 +301,20 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<ContentNotificationUri> getNotifications()
+  {
+    if (notifications == null)
+    {
+      notifications = new EObjectContainmentEList<ContentNotificationUri>(ContentNotificationUri.class, this, MickeyLangPackage.ACTION_STATEMENT__NOTIFICATIONS);
+    }
+    return notifications;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -298,6 +324,8 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         return basicSetUri(null, msgs);
       case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
         return ((InternalEList<?>)getParams()).basicRemove(otherEnd, msgs);
+      case MickeyLangPackage.ACTION_STATEMENT__NOTIFICATIONS:
+        return ((InternalEList<?>)getNotifications()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -323,6 +351,8 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         return isUnique();
       case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
         return getParams();
+      case MickeyLangPackage.ACTION_STATEMENT__NOTIFICATIONS:
+        return getNotifications();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -354,6 +384,10 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         getParams().clear();
         getParams().addAll((Collection<? extends ContentUriQueryParam>)newValue);
         return;
+      case MickeyLangPackage.ACTION_STATEMENT__NOTIFICATIONS:
+        getNotifications().clear();
+        getNotifications().addAll((Collection<? extends ContentNotificationUri>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -383,6 +417,9 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
       case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
         getParams().clear();
         return;
+      case MickeyLangPackage.ACTION_STATEMENT__NOTIFICATIONS:
+        getNotifications().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -407,6 +444,8 @@ public class ActionStatementImpl extends MickeyBlockImpl implements ActionStatem
         return unique != UNIQUE_EDEFAULT;
       case MickeyLangPackage.ACTION_STATEMENT__PARAMS:
         return params != null && !params.isEmpty();
+      case MickeyLangPackage.ACTION_STATEMENT__NOTIFICATIONS:
+        return notifications != null && !notifications.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -95,9 +95,24 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
         return createActionStatementAdapter();
       }
       @Override
+      public Adapter caseContentNotificationUri(ContentNotificationUri object)
+      {
+        return createContentNotificationUriAdapter();
+      }
+      @Override
       public Adapter caseFunctionArg(FunctionArg object)
       {
         return createFunctionArgAdapter();
+      }
+      @Override
+      public Adapter caseNotifyContentUri(NotifyContentUri object)
+      {
+        return createNotifyContentUriAdapter();
+      }
+      @Override
+      public Adapter caseNotifyContentUriSegment(NotifyContentUriSegment object)
+      {
+        return createNotifyContentUriSegmentAdapter();
       }
       @Override
       public Adapter caseContentUri(ContentUri object)
@@ -313,6 +328,11 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
       public Adapter caseUpdateColumnExpression(UpdateColumnExpression object)
       {
         return createUpdateColumnExpressionAdapter();
+      }
+      @Override
+      public Adapter caseNotifyContentUriParamSegment(NotifyContentUriParamSegment object)
+      {
+        return createNotifyContentUriParamSegmentAdapter();
       }
       @Override
       public Adapter caseContentUriParamSegment(ContentUriParamSegment object)
@@ -617,6 +637,21 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.ContentNotificationUri <em>Content Notification Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.justeat.mickeydb.mickeyLang.ContentNotificationUri
+   * @generated
+   */
+  public Adapter createContentNotificationUriAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.FunctionArg <em>Function Arg</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -627,6 +662,36 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFunctionArgAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUri <em>Notify Content Uri</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUri
+   * @generated
+   */
+  public Adapter createNotifyContentUriAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment <em>Notify Content Uri Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment
+   * @generated
+   */
+  public Adapter createNotifyContentUriSegmentAdapter()
   {
     return null;
   }
@@ -1272,6 +1337,21 @@ public class MickeyLangAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createUpdateColumnExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.justeat.mickeydb.mickeyLang.NotifyContentUriParamSegment <em>Notify Content Uri Param Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.justeat.mickeydb.mickeyLang.NotifyContentUriParamSegment
+   * @generated
+   */
+  public Adapter createNotifyContentUriParamSegmentAdapter()
   {
     return null;
   }

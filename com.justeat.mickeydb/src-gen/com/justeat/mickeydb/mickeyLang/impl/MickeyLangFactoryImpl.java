@@ -69,7 +69,10 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
       case MickeyLangPackage.MICKEY_BLOCK: return createMickeyBlock();
       case MickeyLangPackage.MICKEY_FUNCTION: return createMickeyFunction();
       case MickeyLangPackage.ACTION_STATEMENT: return createActionStatement();
+      case MickeyLangPackage.CONTENT_NOTIFICATION_URI: return createContentNotificationUri();
       case MickeyLangPackage.FUNCTION_ARG: return createFunctionArg();
+      case MickeyLangPackage.NOTIFY_CONTENT_URI: return createNotifyContentUri();
+      case MickeyLangPackage.NOTIFY_CONTENT_URI_SEGMENT: return createNotifyContentUriSegment();
       case MickeyLangPackage.CONTENT_URI: return createContentUri();
       case MickeyLangPackage.CONTENT_URI_QUERY_PARAM: return createContentUriQueryParam();
       case MickeyLangPackage.CONTENT_URI_SEGMENT: return createContentUriSegment();
@@ -113,6 +116,7 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
       case MickeyLangPackage.INSERT_STATEMENT: return createInsertStatement();
       case MickeyLangPackage.UPDATE_STATEMENT: return createUpdateStatement();
       case MickeyLangPackage.UPDATE_COLUMN_EXPRESSION: return createUpdateColumnExpression();
+      case MickeyLangPackage.NOTIFY_CONTENT_URI_PARAM_SEGMENT: return createNotifyContentUriParamSegment();
       case MickeyLangPackage.CONTENT_URI_PARAM_SEGMENT: return createContentUriParamSegment();
       case MickeyLangPackage.EXPR_CONCAT: return createExprConcat();
       case MickeyLangPackage.EXPR_MULT: return createExprMult();
@@ -257,10 +261,43 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public ContentNotificationUri createContentNotificationUri()
+  {
+    ContentNotificationUriImpl contentNotificationUri = new ContentNotificationUriImpl();
+    return contentNotificationUri;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public FunctionArg createFunctionArg()
   {
     FunctionArgImpl functionArg = new FunctionArgImpl();
     return functionArg;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotifyContentUri createNotifyContentUri()
+  {
+    NotifyContentUriImpl notifyContentUri = new NotifyContentUriImpl();
+    return notifyContentUri;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotifyContentUriSegment createNotifyContentUriSegment()
+  {
+    NotifyContentUriSegmentImpl notifyContentUriSegment = new NotifyContentUriSegmentImpl();
+    return notifyContentUriSegment;
   }
 
   /**
@@ -734,6 +771,17 @@ public class MickeyLangFactoryImpl extends EFactoryImpl implements MickeyLangFac
   {
     UpdateColumnExpressionImpl updateColumnExpression = new UpdateColumnExpressionImpl();
     return updateColumnExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotifyContentUriParamSegment createNotifyContentUriParamSegment()
+  {
+    NotifyContentUriParamSegmentImpl notifyContentUriParamSegment = new NotifyContentUriParamSegmentImpl();
+    return notifyContentUriParamSegment;
   }
 
   /**

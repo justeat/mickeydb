@@ -2,6 +2,7 @@ package com.justeat.mickeydb.generator;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
+import com.justeat.mickeydb.ContentUris;
 import com.justeat.mickeydb.MickeyDatabaseModel;
 import com.justeat.mickeydb.ModelUtil;
 import com.justeat.mickeydb.Strings;
@@ -29,7 +30,7 @@ import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
 public class ContentProviderContractGenerator {
-  public CharSequence generate(final MickeyDatabaseModel model) {
+  public CharSequence generate(final MickeyDatabaseModel model, final ContentUris content) {
     StringConcatenation _builder = new StringConcatenation();
     SqliteDatabaseSnapshot snapshot = model.getSnapshot();
     _builder.newLineIfNotEmpty();
@@ -54,6 +55,8 @@ public class ContentProviderContractGenerator {
     _builder.append("import com.justeat.mickeydb.AbstractValuesBuilder;");
     _builder.newLine();
     _builder.append("import com.justeat.mickeydb.Mickey;");
+    _builder.newLine();
+    _builder.append("import com.justeat.mickeydb.MickeyUriBuilder;");
     _builder.newLine();
     _builder.append("import java.lang.reflect.Field;\t\t\t");
     _builder.newLine();
@@ -149,7 +152,7 @@ public class ContentProviderContractGenerator {
     _builder.append("\t");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("private static final Uri BASE_CONTENT_URI = Uri.parse(\"content://\" + CONTENT_AUTHORITY);");
+    _builder.append("public static final Uri BASE_CONTENT_URI = Uri.parse(\"content://\" + CONTENT_AUTHORITY);");
     _builder.newLine();
     _builder.newLine();
     {
@@ -308,7 +311,7 @@ public class ContentProviderContractGenerator {
       ArrayList<CreateTableStatement> _tables_1 = snapshot.getTables();
       for(final CreateTableStatement tbl_2 : _tables_1) {
         _builder.append("\t");
-        CharSequence _generateContractItem = this.generateContractItem(model, snapshot, tbl_2);
+        CharSequence _generateContractItem = this.generateContractItem(model, snapshot, tbl_2, content);
         _builder.append(_generateContractItem, "\t");
         _builder.newLineIfNotEmpty();
       }
@@ -318,7 +321,7 @@ public class ContentProviderContractGenerator {
       ArrayList<CreateViewStatement> _views_1 = snapshot.getViews();
       for(final CreateViewStatement vw_2 : _views_1) {
         _builder.append("\t");
-        CharSequence _generateContractItem_1 = this.generateContractItem(model, snapshot, vw_2);
+        CharSequence _generateContractItem_1 = this.generateContractItem(model, snapshot, vw_2, content);
         _builder.append(_generateContractItem_1, "\t");
         _builder.newLineIfNotEmpty();
       }
@@ -328,7 +331,7 @@ public class ContentProviderContractGenerator {
     {
       for(final CreateTableStatement tbl_3 : model.initTables) {
         _builder.append("\t");
-        CharSequence _generateContractItem_2 = this.generateContractItem(model, snapshot, tbl_3);
+        CharSequence _generateContractItem_2 = this.generateContractItem(model, snapshot, tbl_3, content);
         _builder.append(_generateContractItem_2, "\t");
         _builder.newLineIfNotEmpty();
       }
@@ -337,7 +340,7 @@ public class ContentProviderContractGenerator {
     {
       for(final CreateViewStatement vw_3 : model.initViews) {
         _builder.append("\t");
-        CharSequence _generateContractItem_3 = this.generateContractItem(model, snapshot, vw_3);
+        CharSequence _generateContractItem_3 = this.generateContractItem(model, snapshot, vw_3, content);
         _builder.append(_generateContractItem_3, "\t");
         _builder.newLineIfNotEmpty();
       }
@@ -481,85 +484,14 @@ public class ContentProviderContractGenerator {
     return _builder;
   }
   
-  public CharSequence createActionUriBuilderMethod(final ActionStatement action) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("public static Uri build");
-    String _name = action.getName();
-    String _pascalize = Strings.pascalize(_name);
-    _builder.append(_pascalize, "");
-    _builder.append("Uri(");
-    ContentUri _uri = action.getUri();
-    String _methodArgsSig = this.toMethodArgsSig(_uri);
-    _builder.append(_methodArgsSig, "");
-    _builder.append(") {");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return BASE_CONTENT_URI");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append(".buildUpon()");
-    _builder.newLine();
-    {
-      ContentUri _uri_1 = action.getUri();
-      EList<ContentUriSegment> _segments = _uri_1.getSegments();
-      for(final ContentUriSegment seg : _segments) {
-        {
-          if ((seg instanceof ContentUriParamSegment)) {
-            {
-              ColumnSource _param = ((ContentUriParamSegment) seg).getParam();
-              ColumnType _inferredColumnType = ModelUtil.getInferredColumnType(_param);
-              boolean _notEquals = (!Objects.equal(_inferredColumnType, ColumnType.TEXT));
-              if (_notEquals) {
-                _builder.append("\t\t");
-                _builder.append(".appendPath(String.valueOf(");
-                ColumnSource _param_1 = ((ContentUriParamSegment)seg).getParam();
-                String _name_1 = _param_1.getName();
-                String _camelize = Strings.camelize(_name_1);
-                _builder.append(_camelize, "\t\t");
-                _builder.append("))");
-                _builder.newLineIfNotEmpty();
-              } else {
-                _builder.append("\t\t");
-                _builder.append(".appendPath(");
-                ColumnSource _param_2 = ((ContentUriParamSegment)seg).getParam();
-                String _name_2 = _param_2.getName();
-                String _camelize_1 = Strings.camelize(_name_2);
-                _builder.append(_camelize_1, "\t\t");
-                _builder.append(")");
-                _builder.newLineIfNotEmpty();
-              }
-            }
-          } else {
-            _builder.append("\t\t");
-            _builder.append(".appendPath(\"");
-            String _name_3 = seg.getName();
-            _builder.append(_name_3, "\t\t");
-            _builder.append("\")");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-      }
-    }
-    _builder.append("\t\t");
-    _builder.append(".build();");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    _builder.newLine();
-    return _builder;
-  }
-  
   public CharSequence createActionUriBuilder(final ActionStatement action) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("public static class ");
     String _name = action.getName();
     String _pascalize = Strings.pascalize(_name);
     _builder.append(_pascalize, "");
-    _builder.append("UriBuilder {");
+    _builder.append("UriBuilder extends MickeyUriBuilder {");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("private Uri.Builder mUriBuilder;");
-    _builder.newLine();
     _builder.append("\t");
     _builder.append("public ");
     String _name_1 = action.getName();
@@ -572,10 +504,10 @@ public class ContentProviderContractGenerator {
     _builder.append(") {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
-    _builder.append("mUriBuilder = BASE_CONTENT_URI");
+    _builder.append("super(BASE_CONTENT_URI.buildUpon());");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append(".buildUpon()");
+    _builder.append("getUriBuilder()");
     _builder.newLine();
     {
       ContentUri _uri_1 = action.getUri();
@@ -653,7 +585,7 @@ public class ContentProviderContractGenerator {
           if (_equals) {
             _builder.append("\t");
             _builder.append("\t");
-            _builder.append("mUriBuilder.appendQueryParameter(");
+            _builder.append("getUriBuilder().appendQueryParameter(");
             TableDefinition _type = action.getType();
             String _name_7 = _type.getName();
             String _pascalize_4 = Strings.pascalize(_name_7);
@@ -673,7 +605,7 @@ public class ContentProviderContractGenerator {
             if (_equals_1) {
               _builder.append("\t");
               _builder.append("\t");
-              _builder.append("mUriBuilder.appendQueryParameter(");
+              _builder.append("getUriBuilder().appendQueryParameter(");
               TableDefinition _type_1 = action.getType();
               String _name_9 = _type_1.getName();
               String _pascalize_5 = Strings.pascalize(_name_9);
@@ -689,7 +621,7 @@ public class ContentProviderContractGenerator {
             } else {
               _builder.append("\t");
               _builder.append("\t");
-              _builder.append("mUriBuilder.appendQueryParameter(");
+              _builder.append("getUriBuilder().appendQueryParameter(");
               TableDefinition _type_2 = action.getType();
               String _name_11 = _type_2.getName();
               String _pascalize_6 = Strings.pascalize(_name_11);
@@ -714,17 +646,6 @@ public class ContentProviderContractGenerator {
         _builder.newLine();
       }
     }
-    _builder.append("\t");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("public Uri build() {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return mUriBuilder.build();");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("}");
-    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
@@ -828,7 +749,7 @@ public class ContentProviderContractGenerator {
     return (_size > 0);
   }
   
-  public CharSequence generateContractItem(final MickeyDatabaseModel model, final SqliteDatabaseSnapshot snapshot, final TableDefinition stmt) {
+  public CharSequence generateContractItem(final MickeyDatabaseModel model, final SqliteDatabaseSnapshot snapshot, final TableDefinition stmt, final ContentUris content) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("/**");
     _builder.newLine();
@@ -869,6 +790,8 @@ public class ContentProviderContractGenerator {
     _builder.append("\").build();");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
+    _builder.append("    ");
+    _builder.newLine();
     _builder.append("\t");
     _builder.append("/**");
     _builder.newLine();
@@ -896,40 +819,32 @@ public class ContentProviderContractGenerator {
     _builder.append("\";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
-    {
-      boolean _hasAndroidPrimaryKey_1 = this.hasAndroidPrimaryKey(stmt);
-      if (_hasAndroidPrimaryKey_1) {
-        _builder.append("\t");
-        _builder.append("/**");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append(" ");
-        _builder.append("* <p>The content type for a cursor that contains a single ");
-        String _name_6 = stmt.getName();
-        String _pascalize_4 = Strings.pascalize(_name_6);
-        _builder.append(_pascalize_4, "\t ");
-        _builder.append(" row.</p>");
-        _builder.newLineIfNotEmpty();
-        _builder.append("\t");
-        _builder.append(" ");
-        _builder.append("*/");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("public static final String ITEM_CONTENT_TYPE =");
-        _builder.newLine();
-        _builder.append("\t");
-        _builder.append("\t");
-        _builder.append("\"vnd.android.cursor.item/vnd.");
-        String _databaseName_1 = model.getDatabaseName();
-        String _lowerCase_1 = _databaseName_1.toLowerCase();
-        _builder.append(_lowerCase_1, "\t\t");
-        _builder.append(".");
-        String _name_7 = stmt.getName();
-        _builder.append(_name_7, "\t\t");
-        _builder.append("\";");
-        _builder.newLineIfNotEmpty();
-      }
-    }
+    _builder.append("\t");
+    _builder.append("/**");
+    _builder.newLine();
+    _builder.append("\t ");
+    _builder.append("* <p>The content type for a cursor that contains a single ");
+    String _name_6 = stmt.getName();
+    String _pascalize_4 = Strings.pascalize(_name_6);
+    _builder.append(_pascalize_4, "\t ");
+    _builder.append(" row.</p>");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t ");
+    _builder.append("*/");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public static final String ITEM_CONTENT_TYPE =");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("\"vnd.android.cursor.item/vnd.");
+    String _databaseName_1 = model.getDatabaseName();
+    String _lowerCase_1 = _databaseName_1.toLowerCase();
+    _builder.append(_lowerCase_1, "\t\t");
+    _builder.append(".");
+    String _name_7 = stmt.getName();
+    _builder.append(_name_7, "\t\t");
+    _builder.append("\";");
+    _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("\t");
     _builder.append("/**");
@@ -949,7 +864,7 @@ public class ContentProviderContractGenerator {
     String _databaseName_2 = model.getDatabaseName();
     String _lowerCase_2 = _databaseName_2.toLowerCase();
     _builder.append(_lowerCase_2, "\t ");
-    _builder.append("/");
+    _builder.append("»");
     String _name_9 = stmt.getName();
     String _lowerCase_3 = _name_9.toLowerCase();
     _builder.append(_lowerCase_3, "\t ");
@@ -976,10 +891,6 @@ public class ContentProviderContractGenerator {
       if (_notEquals) {
         {
           for(final ActionStatement action : actions) {
-            _builder.append("\t");
-            CharSequence _createActionUriBuilderMethod = this.createActionUriBuilderMethod(action);
-            _builder.append(_createActionUriBuilderMethod, "\t");
-            _builder.newLineIfNotEmpty();
             _builder.append("\t");
             CharSequence _createActionUriBuilder = this.createActionUriBuilder(action);
             _builder.append(_createActionUriBuilder, "\t");
@@ -1105,16 +1016,28 @@ public class ContentProviderContractGenerator {
     _builder.append("\t\t");
     _builder.append("HashSet<Uri> viewUris =  new HashSet<Uri>();");
     _builder.newLine();
+    _builder.append("\t\t");
+    HashSet<CreateViewStatement> _allViewsReferencingTable = ModelUtil.getAllViewsReferencingTable(snapshot, stmt);
+    final Function1<CreateViewStatement, String> _function = new Function1<CreateViewStatement, String>() {
+      public String apply(final CreateViewStatement x) {
+        return x.getName();
+      }
+    };
+    List<CreateViewStatement> views = IterableExtensions.<CreateViewStatement, String>sortBy(_allViewsReferencingTable, _function);
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    HashSet<CreateViewStatement> _allViewsInConfigInitReferencingTable = ModelUtil.getAllViewsInConfigInitReferencingTable(model, stmt);
+    final Function1<CreateViewStatement, String> _function_1 = new Function1<CreateViewStatement, String>() {
+      public String apply(final CreateViewStatement x) {
+        return x.getName();
+      }
+    };
+    List<CreateViewStatement> initViews = IterableExtensions.<CreateViewStatement, String>sortBy(_allViewsInConfigInitReferencingTable, _function_1);
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
     _builder.newLine();
     {
-      HashSet<CreateViewStatement> _allViewsReferencingTable = ModelUtil.getAllViewsReferencingTable(snapshot, stmt);
-      final Function1<CreateViewStatement, String> _function = new Function1<CreateViewStatement, String>() {
-        public String apply(final CreateViewStatement x) {
-          return x.getName();
-        }
-      };
-      List<CreateViewStatement> _sortBy = IterableExtensions.<CreateViewStatement, String>sortBy(_allViewsReferencingTable, _function);
-      for(final CreateViewStatement ref : _sortBy) {
+      for(final CreateViewStatement ref : views) {
         _builder.append("\t\t");
         _builder.append("viewUris.add(");
         String _name_17 = ref.getName();
@@ -1125,14 +1048,7 @@ public class ContentProviderContractGenerator {
       }
     }
     {
-      HashSet<CreateViewStatement> _allViewsInConfigInitReferencingTable = ModelUtil.getAllViewsInConfigInitReferencingTable(model, stmt);
-      final Function1<CreateViewStatement, String> _function_1 = new Function1<CreateViewStatement, String>() {
-        public String apply(final CreateViewStatement x) {
-          return x.getName();
-        }
-      };
-      List<CreateViewStatement> _sortBy_1 = IterableExtensions.<CreateViewStatement, String>sortBy(_allViewsInConfigInitReferencingTable, _function_1);
-      for(final CreateViewStatement ref_1 : _sortBy_1) {
+      for(final CreateViewStatement ref_1 : initViews) {
         _builder.append("\t\t");
         _builder.append("viewUris.add(");
         String _name_18 = ref_1.getName();
@@ -1142,7 +1058,6 @@ public class ContentProviderContractGenerator {
         _builder.newLineIfNotEmpty();
       }
     }
-    _builder.append("\t\t");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("VIEW_URIS = Collections.unmodifiableSet(viewUris);");

@@ -20,12 +20,26 @@ MickeyFunction: 'function' name=ID '(' (args+=FunctionArg (',' args+=FunctionArg
 	(statements+=DMLStatement ';')*
 '}' ;
 
-ActionStatement: 'action' name=ID uri=ContentUri 'as' type=[TableDefinition|QualifiedName] unique?='unique'?
-		('{' params+=ContentUriQueryParam* '}')?
+ActionStatement: 'action' name=ID uri=ContentUri 'on' type=[TableDefinition|QualifiedName] unique?='unique'?
+		('{' params+=ContentUriQueryParam* notifications+=ContentNotificationUri* '}')?
+;
+
+ContentNotificationUri:
+	'notify' uri=NotifyContentUri
 ;
 
 FunctionArg:
 	type=ColumnType name=ID
+;
+
+NotifyContentUri:
+	{NotifyContentUri}
+	segments+=NotifyContentUriSegment? ('/' segments+=NotifyContentUriSegment)*
+;
+
+NotifyContentUriSegment:
+	name=ID |
+	{NotifyContentUriParamSegment} '{'name=ID'}'
 ;
 
 ContentUri:

@@ -44,6 +44,7 @@ public abstract class CustomActions extends ContentProviderActions {
 		Query query = new Query(provider.getContext(), null);
 		
 		addQueryExpressionsFromUriSegmentParams(uri, query);
+		addContentValuesFromUri(provider, uri, values);
 
 		query.append(selection, selectionArgs);
 		int affected = query.update(db, getSourceName(), values);
@@ -55,6 +56,8 @@ public abstract class CustomActions extends ContentProviderActions {
 	public Uri insert(MickeyContentProvider provider, Uri uri, ContentValues values) {
 		final SQLiteDatabase db = provider.getOpenHelper().getWritableDatabase();
 
+		addContentValuesFromUri(provider, uri, values);
+		
 		long id = db.insertOrThrow(getSourceName(), null, values);
 		
 		if(id > -1) {
@@ -179,8 +182,13 @@ public abstract class CustomActions extends ContentProviderActions {
 	    
 	    return items;
 	}
-	
-	public abstract void addQueryExpressionsFromUriSegmentParams(Uri uri, Query query);
+		
+	public void addContentValuesFromUri(MickeyContentProvider provider, Uri uir, ContentValues values) {
+		
+	}
+	public void addQueryExpressionsFromUriSegmentParams(Uri uri, Query query) {
+		
+	}
 	public abstract String getSourceName();
 	public abstract ActiveRecordFactory<?> getActiveRecordFactory();
 }

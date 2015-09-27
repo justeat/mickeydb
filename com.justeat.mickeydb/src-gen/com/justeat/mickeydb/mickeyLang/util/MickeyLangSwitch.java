@@ -102,10 +102,31 @@ public class MickeyLangSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MickeyLangPackage.CONTENT_NOTIFICATION_URI:
+      {
+        ContentNotificationUri contentNotificationUri = (ContentNotificationUri)theEObject;
+        T result = caseContentNotificationUri(contentNotificationUri);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MickeyLangPackage.FUNCTION_ARG:
       {
         FunctionArg functionArg = (FunctionArg)theEObject;
         T result = caseFunctionArg(functionArg);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MickeyLangPackage.NOTIFY_CONTENT_URI:
+      {
+        NotifyContentUri notifyContentUri = (NotifyContentUri)theEObject;
+        T result = caseNotifyContentUri(notifyContentUri);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MickeyLangPackage.NOTIFY_CONTENT_URI_SEGMENT:
+      {
+        NotifyContentUriSegment notifyContentUriSegment = (NotifyContentUriSegment)theEObject;
+        T result = caseNotifyContentUriSegment(notifyContentUriSegment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -434,6 +455,14 @@ public class MickeyLangSwitch<T> extends Switch<T>
       {
         UpdateColumnExpression updateColumnExpression = (UpdateColumnExpression)theEObject;
         T result = caseUpdateColumnExpression(updateColumnExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MickeyLangPackage.NOTIFY_CONTENT_URI_PARAM_SEGMENT:
+      {
+        NotifyContentUriParamSegment notifyContentUriParamSegment = (NotifyContentUriParamSegment)theEObject;
+        T result = caseNotifyContentUriParamSegment(notifyContentUriParamSegment);
+        if (result == null) result = caseNotifyContentUriSegment(notifyContentUriParamSegment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -866,6 +895,22 @@ public class MickeyLangSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Content Notification Uri</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Content Notification Uri</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContentNotificationUri(ContentNotificationUri object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Function Arg</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -877,6 +922,38 @@ public class MickeyLangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFunctionArg(FunctionArg object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Notify Content Uri</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Notify Content Uri</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNotifyContentUri(NotifyContentUri object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Notify Content Uri Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Notify Content Uri Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNotifyContentUriSegment(NotifyContentUriSegment object)
   {
     return null;
   }
@@ -1565,6 +1642,22 @@ public class MickeyLangSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseUpdateColumnExpression(UpdateColumnExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Notify Content Uri Param Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Notify Content Uri Param Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNotifyContentUriParamSegment(NotifyContentUriParamSegment object)
   {
     return null;
   }

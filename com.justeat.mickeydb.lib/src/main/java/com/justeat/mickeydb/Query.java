@@ -335,8 +335,10 @@ public class Query {
 	
 			mBuilder.append(query);
 	
-			for(String arg : args) {
-				mArgs.add(arg);
+			if(args != null) {
+				for(String arg : args) {
+					mArgs.add(arg);
+				}
 			}
 			
 			mNextOp = null;

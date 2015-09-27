@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
-import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure2;
@@ -101,7 +100,7 @@ public class MickeyLangGenerator implements IGenerator {
         String _pascalize_2 = Strings.pascalize(_databaseName_2);
         String _concat_3 = _pascalize_2.concat("Contract");
         String _resolveFileName_2 = Strings.resolveFileName(_packageName_2, _concat_3);
-        CharSequence _generate_1 = MickeyLangGenerator.this.mContentProviderContractGenerator.generate(it);
+        CharSequence _generate_1 = MickeyLangGenerator.this.mContentProviderContractGenerator.generate(it, content);
         fsa.generateFile(_resolveFileName_2, _generate_1);
         String _packageName_3 = it.getPackageName();
         String _databaseName_3 = it.getDatabaseName();
@@ -155,14 +154,7 @@ public class MickeyLangGenerator implements IGenerator {
           }
         };
         IterableExtensions.<MigrationBlock>forEach(it.migrations, _function_4);
-        final Function1<ContentUriInfo, Boolean> _function_5 = new Function1<ContentUriInfo, Boolean>() {
-          public Boolean apply(final ContentUriInfo p1) {
-            boolean _isUserDefined = p1.isUserDefined();
-            return Boolean.valueOf((!_isUserDefined));
-          }
-        };
-        Iterable<ContentUriInfo> _dropWhile = IterableExtensions.<ContentUriInfo>dropWhile(content.uris, _function_5);
-        final Procedure1<ContentUriInfo> _function_6 = new Procedure1<ContentUriInfo>() {
+        final Procedure1<ContentUriInfo> _function_5 = new Procedure1<ContentUriInfo>() {
           public void apply(final ContentUriInfo p1) {
             String _packageName = it.getPackageName();
             String _concat = _packageName.concat(".actions");
@@ -174,7 +166,7 @@ public class MickeyLangGenerator implements IGenerator {
             fsa.generateFile(_resolveFileName, _generate);
           }
         };
-        IterableExtensions.<ContentUriInfo>forEach(_dropWhile, _function_6);
+        IterableExtensions.<ContentUriInfo>forEach(content.uris, _function_5);
       }
     };
     IterableExtensions.<MickeyDatabaseModel>forEach(_values, _function);

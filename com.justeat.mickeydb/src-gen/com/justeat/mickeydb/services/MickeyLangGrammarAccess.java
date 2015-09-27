@@ -196,7 +196,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cUriAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cUriContentUriParserRuleCall_2_0 = (RuleCall)cUriAssignment_2.eContents().get(0);
-		private final Keyword cAsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cOnKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cTypeTableDefinitionCrossReference_4_0 = (CrossReference)cTypeAssignment_4.eContents().get(0);
 		private final RuleCall cTypeTableDefinitionQualifiedNameParserRuleCall_4_0_1 = (RuleCall)cTypeTableDefinitionCrossReference_4_0.eContents().get(1);
@@ -206,15 +206,17 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cParamsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cParamsContentUriQueryParamParserRuleCall_6_1_0 = (RuleCall)cParamsAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6_2 = (Keyword)cGroup_6.eContents().get(2);
+		private final Assignment cNotificationsAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cNotificationsContentNotificationUriParserRuleCall_6_2_0 = (RuleCall)cNotificationsAssignment_6_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
 		
 		//ActionStatement:
-		//	"action" name=ID uri=ContentUri "as" type=[TableDefinition|QualifiedName] unique?="unique"? ("{"
-		//	params+=ContentUriQueryParam* "}")?;
+		//	"action" name=ID uri=ContentUri "on" type=[TableDefinition|QualifiedName] unique?="unique"? ("{"
+		//	params+=ContentUriQueryParam* notifications+=ContentNotificationUri* "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//"action" name=ID uri=ContentUri "as" type=[TableDefinition|QualifiedName] unique?="unique"? ("{"
-		//params+=ContentUriQueryParam* "}")?
+		//"action" name=ID uri=ContentUri "on" type=[TableDefinition|QualifiedName] unique?="unique"? ("{"
+		//params+=ContentUriQueryParam* notifications+=ContentNotificationUri* "}")?
 		public Group getGroup() { return cGroup; }
 
 		//"action"
@@ -232,8 +234,8 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		//ContentUri
 		public RuleCall getUriContentUriParserRuleCall_2_0() { return cUriContentUriParserRuleCall_2_0; }
 
-		//"as"
-		public Keyword getAsKeyword_3() { return cAsKeyword_3; }
+		//"on"
+		public Keyword getOnKeyword_3() { return cOnKeyword_3; }
 
 		//type=[TableDefinition|QualifiedName]
 		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
@@ -250,7 +252,7 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		//"unique"
 		public Keyword getUniqueUniqueKeyword_5_0() { return cUniqueUniqueKeyword_5_0; }
 
-		//("{" params+=ContentUriQueryParam* "}")?
+		//("{" params+=ContentUriQueryParam* notifications+=ContentNotificationUri* "}")?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"{"
@@ -262,8 +264,38 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		//ContentUriQueryParam
 		public RuleCall getParamsContentUriQueryParamParserRuleCall_6_1_0() { return cParamsContentUriQueryParamParserRuleCall_6_1_0; }
 
+		//notifications+=ContentNotificationUri*
+		public Assignment getNotificationsAssignment_6_2() { return cNotificationsAssignment_6_2; }
+
+		//ContentNotificationUri
+		public RuleCall getNotificationsContentNotificationUriParserRuleCall_6_2_0() { return cNotificationsContentNotificationUriParserRuleCall_6_2_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6_2() { return cRightCurlyBracketKeyword_6_2; }
+		public Keyword getRightCurlyBracketKeyword_6_3() { return cRightCurlyBracketKeyword_6_3; }
+	}
+
+	public class ContentNotificationUriElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ContentNotificationUri");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cNotifyKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cUriAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cUriNotifyContentUriParserRuleCall_1_0 = (RuleCall)cUriAssignment_1.eContents().get(0);
+		
+		//ContentNotificationUri:
+		//	"notify" uri=NotifyContentUri;
+		public ParserRule getRule() { return rule; }
+
+		//"notify" uri=NotifyContentUri
+		public Group getGroup() { return cGroup; }
+
+		//"notify"
+		public Keyword getNotifyKeyword_0() { return cNotifyKeyword_0; }
+
+		//uri=NotifyContentUri
+		public Assignment getUriAssignment_1() { return cUriAssignment_1; }
+
+		//NotifyContentUri
+		public RuleCall getUriNotifyContentUriParserRuleCall_1_0() { return cUriNotifyContentUriParserRuleCall_1_0; }
 	}
 
 	public class FunctionArgElements extends AbstractParserRuleElementFinder {
@@ -292,6 +324,90 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+	}
+
+	public class NotifyContentUriElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NotifyContentUri");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cNotifyContentUriAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cSegmentsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSegmentsNotifyContentUriSegmentParserRuleCall_1_0 = (RuleCall)cSegmentsAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cSolidusKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSegmentsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSegmentsNotifyContentUriSegmentParserRuleCall_2_1_0 = (RuleCall)cSegmentsAssignment_2_1.eContents().get(0);
+		
+		//NotifyContentUri:
+		//	{NotifyContentUri} segments+=NotifyContentUriSegment? ("/" segments+=NotifyContentUriSegment)*;
+		public ParserRule getRule() { return rule; }
+
+		//{NotifyContentUri} segments+=NotifyContentUriSegment? ("/" segments+=NotifyContentUriSegment)*
+		public Group getGroup() { return cGroup; }
+
+		//{NotifyContentUri}
+		public Action getNotifyContentUriAction_0() { return cNotifyContentUriAction_0; }
+
+		//segments+=NotifyContentUriSegment?
+		public Assignment getSegmentsAssignment_1() { return cSegmentsAssignment_1; }
+
+		//NotifyContentUriSegment
+		public RuleCall getSegmentsNotifyContentUriSegmentParserRuleCall_1_0() { return cSegmentsNotifyContentUriSegmentParserRuleCall_1_0; }
+
+		//("/" segments+=NotifyContentUriSegment)*
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"/"
+		public Keyword getSolidusKeyword_2_0() { return cSolidusKeyword_2_0; }
+
+		//segments+=NotifyContentUriSegment
+		public Assignment getSegmentsAssignment_2_1() { return cSegmentsAssignment_2_1; }
+
+		//NotifyContentUriSegment
+		public RuleCall getSegmentsNotifyContentUriSegmentParserRuleCall_2_1_0() { return cSegmentsNotifyContentUriSegmentParserRuleCall_2_1_0; }
+	}
+
+	public class NotifyContentUriSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NotifyContentUriSegment");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Action cNotifyContentUriParamSegmentAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cNameAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_1_2_0 = (RuleCall)cNameAssignment_1_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
+		
+		//NotifyContentUriSegment:
+		//	name=ID | {NotifyContentUriParamSegment} "{" name=ID "}";
+		public ParserRule getRule() { return rule; }
+
+		//name=ID | {NotifyContentUriParamSegment} "{" name=ID "}"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+
+		//{NotifyContentUriParamSegment} "{" name=ID "}"
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{NotifyContentUriParamSegment}
+		public Action getNotifyContentUriParamSegmentAction_1_0() { return cNotifyContentUriParamSegmentAction_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
+
+		//name=ID
+		public Assignment getNameAssignment_1_2() { return cNameAssignment_1_2; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_2_0() { return cNameIDTerminalRuleCall_1_2_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
 	}
 
 	public class ContentUriElements extends AbstractParserRuleElementFinder {
@@ -4239,7 +4355,10 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	private final MickeyBlockElements pMickeyBlock;
 	private final MickeyFunctionElements pMickeyFunction;
 	private final ActionStatementElements pActionStatement;
+	private final ContentNotificationUriElements pContentNotificationUri;
 	private final FunctionArgElements pFunctionArg;
+	private final NotifyContentUriElements pNotifyContentUri;
+	private final NotifyContentUriSegmentElements pNotifyContentUriSegment;
 	private final ContentUriElements pContentUri;
 	private final ContentUriQueryParamElements pContentUriQueryParam;
 	private final ContentUriSegmentElements pContentUriSegment;
@@ -4322,7 +4441,10 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 		this.pMickeyBlock = new MickeyBlockElements();
 		this.pMickeyFunction = new MickeyFunctionElements();
 		this.pActionStatement = new ActionStatementElements();
+		this.pContentNotificationUri = new ContentNotificationUriElements();
 		this.pFunctionArg = new FunctionArgElements();
+		this.pNotifyContentUri = new NotifyContentUriElements();
+		this.pNotifyContentUriSegment = new NotifyContentUriSegmentElements();
 		this.pContentUri = new ContentUriElements();
 		this.pContentUriQueryParam = new ContentUriQueryParamElements();
 		this.pContentUriSegment = new ContentUriSegmentElements();
@@ -4456,14 +4578,24 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ActionStatement:
-	//	"action" name=ID uri=ContentUri "as" type=[TableDefinition|QualifiedName] unique?="unique"? ("{"
-	//	params+=ContentUriQueryParam* "}")?;
+	//	"action" name=ID uri=ContentUri "on" type=[TableDefinition|QualifiedName] unique?="unique"? ("{"
+	//	params+=ContentUriQueryParam* notifications+=ContentNotificationUri* "}")?;
 	public ActionStatementElements getActionStatementAccess() {
 		return pActionStatement;
 	}
 	
 	public ParserRule getActionStatementRule() {
 		return getActionStatementAccess().getRule();
+	}
+
+	//ContentNotificationUri:
+	//	"notify" uri=NotifyContentUri;
+	public ContentNotificationUriElements getContentNotificationUriAccess() {
+		return pContentNotificationUri;
+	}
+	
+	public ParserRule getContentNotificationUriRule() {
+		return getContentNotificationUriAccess().getRule();
 	}
 
 	//FunctionArg:
@@ -4474,6 +4606,26 @@ public class MickeyLangGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getFunctionArgRule() {
 		return getFunctionArgAccess().getRule();
+	}
+
+	//NotifyContentUri:
+	//	{NotifyContentUri} segments+=NotifyContentUriSegment? ("/" segments+=NotifyContentUriSegment)*;
+	public NotifyContentUriElements getNotifyContentUriAccess() {
+		return pNotifyContentUri;
+	}
+	
+	public ParserRule getNotifyContentUriRule() {
+		return getNotifyContentUriAccess().getRule();
+	}
+
+	//NotifyContentUriSegment:
+	//	name=ID | {NotifyContentUriParamSegment} "{" name=ID "}";
+	public NotifyContentUriSegmentElements getNotifyContentUriSegmentAccess() {
+		return pNotifyContentUriSegment;
+	}
+	
+	public ParserRule getNotifyContentUriSegmentRule() {
+		return getNotifyContentUriSegmentAccess().getRule();
 	}
 
 	//ContentUri:

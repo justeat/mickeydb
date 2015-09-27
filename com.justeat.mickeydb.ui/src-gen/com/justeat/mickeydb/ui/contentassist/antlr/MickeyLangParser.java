@@ -38,6 +38,7 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getMickeyBlockAccess().getAlternatives(), "rule__MickeyBlock__Alternatives");
+					put(grammarAccess.getNotifyContentUriSegmentAccess().getAlternatives(), "rule__NotifyContentUriSegment__Alternatives");
 					put(grammarAccess.getContentUriSegmentAccess().getAlternatives(), "rule__ContentUriSegment__Alternatives");
 					put(grammarAccess.getExprMultAccess().getOpAlternatives_1_1_0(), "rule__ExprMult__OpAlternatives_1_1_0");
 					put(grammarAccess.getExprAddAccess().getOpAlternatives_1_1_0(), "rule__ExprAdd__OpAlternatives_1_1_0");
@@ -81,7 +82,11 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getMickeyFunctionAccess().getGroup_7(), "rule__MickeyFunction__Group_7__0");
 					put(grammarAccess.getActionStatementAccess().getGroup(), "rule__ActionStatement__Group__0");
 					put(grammarAccess.getActionStatementAccess().getGroup_6(), "rule__ActionStatement__Group_6__0");
+					put(grammarAccess.getContentNotificationUriAccess().getGroup(), "rule__ContentNotificationUri__Group__0");
 					put(grammarAccess.getFunctionArgAccess().getGroup(), "rule__FunctionArg__Group__0");
+					put(grammarAccess.getNotifyContentUriAccess().getGroup(), "rule__NotifyContentUri__Group__0");
+					put(grammarAccess.getNotifyContentUriAccess().getGroup_2(), "rule__NotifyContentUri__Group_2__0");
+					put(grammarAccess.getNotifyContentUriSegmentAccess().getGroup_1(), "rule__NotifyContentUriSegment__Group_1__0");
 					put(grammarAccess.getContentUriAccess().getGroup(), "rule__ContentUri__Group__0");
 					put(grammarAccess.getContentUriAccess().getGroup_2(), "rule__ContentUri__Group_2__0");
 					put(grammarAccess.getContentUriQueryParamAccess().getGroup(), "rule__ContentUriQueryParam__Group__0");
@@ -227,8 +232,14 @@ public class MickeyLangParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionStatementAccess().getTypeAssignment_4(), "rule__ActionStatement__TypeAssignment_4");
 					put(grammarAccess.getActionStatementAccess().getUniqueAssignment_5(), "rule__ActionStatement__UniqueAssignment_5");
 					put(grammarAccess.getActionStatementAccess().getParamsAssignment_6_1(), "rule__ActionStatement__ParamsAssignment_6_1");
+					put(grammarAccess.getActionStatementAccess().getNotificationsAssignment_6_2(), "rule__ActionStatement__NotificationsAssignment_6_2");
+					put(grammarAccess.getContentNotificationUriAccess().getUriAssignment_1(), "rule__ContentNotificationUri__UriAssignment_1");
 					put(grammarAccess.getFunctionArgAccess().getTypeAssignment_0(), "rule__FunctionArg__TypeAssignment_0");
 					put(grammarAccess.getFunctionArgAccess().getNameAssignment_1(), "rule__FunctionArg__NameAssignment_1");
+					put(grammarAccess.getNotifyContentUriAccess().getSegmentsAssignment_1(), "rule__NotifyContentUri__SegmentsAssignment_1");
+					put(grammarAccess.getNotifyContentUriAccess().getSegmentsAssignment_2_1(), "rule__NotifyContentUri__SegmentsAssignment_2_1");
+					put(grammarAccess.getNotifyContentUriSegmentAccess().getNameAssignment_0(), "rule__NotifyContentUriSegment__NameAssignment_0");
+					put(grammarAccess.getNotifyContentUriSegmentAccess().getNameAssignment_1_2(), "rule__NotifyContentUriSegment__NameAssignment_1_2");
 					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_1(), "rule__ContentUri__SegmentsAssignment_1");
 					put(grammarAccess.getContentUriAccess().getSegmentsAssignment_2_1(), "rule__ContentUri__SegmentsAssignment_2_1");
 					put(grammarAccess.getContentUriQueryParamAccess().getLikeAssignment_1(), "rule__ContentUriQueryParam__LikeAssignment_1");

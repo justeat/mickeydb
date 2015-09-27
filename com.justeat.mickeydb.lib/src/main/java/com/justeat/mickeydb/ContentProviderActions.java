@@ -53,4 +53,8 @@ public class ContentProviderActions {
 	public <T extends ActiveRecord> Map<String, T> selectRecordMap(MickeyContentProvider provider, Uri uri, Query sQuery, String keyColumnName) {
 		return null;
 	}
+	
+	public boolean notifyForUri(MickeyContentProvider provider, Uri uri) {
+		return false;
+	}
 }

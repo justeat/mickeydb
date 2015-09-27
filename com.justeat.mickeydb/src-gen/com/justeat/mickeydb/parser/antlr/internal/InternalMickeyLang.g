@@ -379,9 +379,9 @@ ruleActionStatement returns [EObject current=null]
 	    }
 
 )
-)	otherlv_3='as' 
+)	otherlv_3='on' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getActionStatementAccess().getAsKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getActionStatementAccess().getOnKeyword_3());
     }
 (
 (
@@ -435,11 +435,72 @@ ruleActionStatement returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_8='}' 
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getActionStatementAccess().getNotificationsContentNotificationUriParserRuleCall_6_2_0()); 
+	    }
+		lv_notifications_8_0=ruleContentNotificationUri		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getActionStatementRule());
+	        }
+       		add(
+       			$current, 
+       			"notifications",
+        		lv_notifications_8_0, 
+        		"ContentNotificationUri");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_9='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getActionStatementAccess().getRightCurlyBracketKeyword_6_2());
+    	newLeafNode(otherlv_9, grammarAccess.getActionStatementAccess().getRightCurlyBracketKeyword_6_3());
     }
 )?)
+;
+
+
+
+
+
+// Entry rule entryRuleContentNotificationUri
+entryRuleContentNotificationUri returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getContentNotificationUriRule()); }
+	 iv_ruleContentNotificationUri=ruleContentNotificationUri 
+	 { $current=$iv_ruleContentNotificationUri.current; } 
+	 EOF 
+;
+
+// Rule ContentNotificationUri
+ruleContentNotificationUri returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='notify' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getContentNotificationUriAccess().getNotifyKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getContentNotificationUriAccess().getUriNotifyContentUriParserRuleCall_1_0()); 
+	    }
+		lv_uri_1_0=ruleNotifyContentUri		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getContentNotificationUriRule());
+	        }
+       		set(
+       			$current, 
+       			"uri",
+        		lv_uri_1_0, 
+        		"NotifyContentUri");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 
@@ -496,6 +557,145 @@ ruleFunctionArg returns [EObject current=null]
 	    }
 
 )
+))
+;
+
+
+
+
+
+// Entry rule entryRuleNotifyContentUri
+entryRuleNotifyContentUri returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getNotifyContentUriRule()); }
+	 iv_ruleNotifyContentUri=ruleNotifyContentUri 
+	 { $current=$iv_ruleNotifyContentUri.current; } 
+	 EOF 
+;
+
+// Rule NotifyContentUri
+ruleNotifyContentUri returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getNotifyContentUriAccess().getNotifyContentUriAction_0(),
+            $current);
+    }
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getNotifyContentUriAccess().getSegmentsNotifyContentUriSegmentParserRuleCall_1_0()); 
+	    }
+		lv_segments_1_0=ruleNotifyContentUriSegment		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getNotifyContentUriRule());
+	        }
+       		add(
+       			$current, 
+       			"segments",
+        		lv_segments_1_0, 
+        		"NotifyContentUriSegment");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?(	otherlv_2='/' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getNotifyContentUriAccess().getSolidusKeyword_2_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getNotifyContentUriAccess().getSegmentsNotifyContentUriSegmentParserRuleCall_2_1_0()); 
+	    }
+		lv_segments_3_0=ruleNotifyContentUriSegment		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getNotifyContentUriRule());
+	        }
+       		add(
+       			$current, 
+       			"segments",
+        		lv_segments_3_0, 
+        		"NotifyContentUriSegment");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*)
+;
+
+
+
+
+
+// Entry rule entryRuleNotifyContentUriSegment
+entryRuleNotifyContentUriSegment returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getNotifyContentUriSegmentRule()); }
+	 iv_ruleNotifyContentUriSegment=ruleNotifyContentUriSegment 
+	 { $current=$iv_ruleNotifyContentUriSegment.current; } 
+	 EOF 
+;
+
+// Rule NotifyContentUriSegment
+ruleNotifyContentUriSegment returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_name_0_0=RULE_ID
+		{
+			newLeafNode(lv_name_0_0, grammarAccess.getNotifyContentUriSegmentAccess().getNameIDTerminalRuleCall_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getNotifyContentUriSegmentRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"ID");
+	    }
+
+)
+)
+    |((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getNotifyContentUriSegmentAccess().getNotifyContentUriParamSegmentAction_1_0(),
+            $current);
+    }
+)	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getNotifyContentUriSegmentAccess().getLeftCurlyBracketKeyword_1_1());
+    }
+(
+(
+		lv_name_3_0=RULE_ID
+		{
+			newLeafNode(lv_name_3_0, grammarAccess.getNotifyContentUriSegmentAccess().getNameIDTerminalRuleCall_1_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getNotifyContentUriSegmentRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_3_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_4='}' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getNotifyContentUriSegmentAccess().getRightCurlyBracketKeyword_1_3());
+    }
 ))
 ;
 

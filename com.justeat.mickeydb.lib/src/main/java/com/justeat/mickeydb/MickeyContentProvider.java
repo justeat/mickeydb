@@ -38,21 +38,28 @@ import android.util.LruCache;
  */
 public abstract class MickeyContentProvider extends ContentProvider {
 	
-	public static final String PARAM_NOTIFY = "mechdb_notify";
-	public static final String PARAM_GROUP_BY = "mechdb_group_by";
-	public static final String PARAM_LIMIT = "mechdb_limit";
-	public static final String PARAM_OFFSET = "mechdb_offset";
+	private static final String TAG = MickeyContentProvider.class.getSimpleName();
+	
+	public static final String PARAM_NOTIFY = "mickey_notify";
+	public static final String PARAM_GROUP_BY = "mickey_group_by";
+	public static final String PARAM_LIMIT = "mickey_limit";
+	public static final String PARAM_OFFSET = "mickey_offset";
 	
     private MickeyOpenHelper mOpenHelper;
 
 	private UriMatcher mUriMatcher;
     private String[] mContentTypes;
     private LruCache<Integer, ContentProviderActions> mActionCache = new LruCache<>(10);
+    private MickeyLogger mLogger = createLogger();
     
     public MickeyOpenHelper getOpenHelper() {
 		return mOpenHelper;
 	}
     
+	protected MickeyLogger createLogger() {
+		return new MickeyLogger(true);
+	}
+
 	protected int matchUri(Uri uri) {
 		return mUriMatcher.match(uri);
 	}
@@ -92,13 +99,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
      * @param uri The uri to notify on.
      */
     protected void tryNotifyChange(Uri uri) {
-        boolean notify = true;
-		
-		String paramNotify = uri.getQueryParameter(PARAM_NOTIFY);
-		
-		if(paramNotify != null) {
-		    notify = Boolean.valueOf(paramNotify);
-		}
+        boolean notify = shouldNotify(uri);
 		
 		if(notify) {
 		    getContext().getContentResolver().notifyChange(uri, null);
@@ -120,6 +121,17 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		    }
 		}
     }
+
+	protected boolean shouldNotify(Uri uri) {
+		boolean notify = true;
+		
+		String paramNotify = uri.getQueryParameter(PARAM_NOTIFY);
+		
+		if(paramNotify != null) {
+		    notify = Boolean.valueOf(paramNotify);
+		}
+		return notify;
+	}
     
     /**
      * Sets the Uri as the notification Uri on the given Cursor if the Uri is not null, and
@@ -133,13 +145,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
     		return;
     	}
     	
-    	boolean notify = true;
-    	
-    	String paramNotify = uri.getQueryParameter(PARAM_NOTIFY);
-    	
-    	if(paramNotify != null) {
-    		notify = Boolean.valueOf(paramNotify);
-    	}
+    	boolean notify = shouldNotify(uri);
     	
     	if(notify) {
     		cursor.setNotificationUri(getContext().getContentResolver(), uri);
@@ -160,22 +166,27 @@ public abstract class MickeyContentProvider extends ContentProvider {
 	@Override
 	public int delete(Uri uri, String selection, String[] selectionArgs) {
 		final int match = matchUri(uri);
-
+		
 		if(match == UriMatcher.NO_MATCH) {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		int affected = getActions(match).delete(this, uri, selection, selectionArgs);
+		ContentProviderActions actions = getActions(match);
+		int affected = actions.delete(this, uri, selection, selectionArgs);
 		
-		if(affected > 0) {
-			tryNotifyChange(uri);
+		if(affected > 0 && shouldNotify(uri)) {
+			if(!actions.notifyForUri(this, uri)) {
+				tryNotifyChange(uri);
+			}
 		}
+
+		mLogger.logAction(TAG, "Delete", actions, uri);
 		
 		return affected;
 	}
 
 	@Override
-	public Uri insert(Uri uri, ContentValues values) {
+	public Uri insert(Uri uri, ContentValues values) {	
 
 		final int match = matchUri(uri);
 
@@ -183,29 +194,38 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		Uri newUri = getActions(match).insert(this, uri, values);
+		ContentProviderActions actions = getActions(match);
+		Uri newUri = actions.insert(this, uri, values);
 		
-		if(newUri != null) {
-			tryNotifyChange(uri);
+		if(newUri != null && shouldNotify(uri)) {
+			if(!actions.notifyForUri(this, uri)) {
+				tryNotifyChange(uri);
+			}
 		}
+		
+		mLogger.logAction(TAG, "Insert", actions, uri);
 		
 		return newUri;
 	}
 	
 	@Override
-    public int bulkInsert(Uri uri, ContentValues[] values) {
-    	
+    public int bulkInsert(Uri uri, ContentValues[] values) {    	
 		final int match = matchUri(uri);
 
 		if(match == UriMatcher.NO_MATCH) {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		int affected = getActions(match).bulkInsert(this, uri, values);
+		ContentProviderActions actions = getActions(match);
+		int affected = actions.bulkInsert(this, uri, values);
 		
-		if(affected > 0) {
-			tryNotifyChange(uri);
+		if(affected > 0 && shouldNotify(uri)) {
+			if(!actions.notifyForUri(this, uri)) {
+				tryNotifyChange(uri);
+			}
 		}
+		
+		mLogger.logAction(TAG, "Bulk Insert", actions, uri);
 		
 		return affected;
     }
@@ -218,9 +238,12 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		Cursor cursor = getActions(match).query(this, uri, projection, selection, selectionArgs, sortOrder);
+		ContentProviderActions actions = getActions(match);
+		Cursor cursor = actions.query(this, uri, projection, selection, selectionArgs, sortOrder);
 
 		trySetNotificationUri(cursor, uri);
+		
+		mLogger.logAction(TAG, "Query", actions, uri);
 		
 		return cursor;
 	}
@@ -233,11 +256,16 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			throw new UnsupportedOperationException("Unknown uri: " + uri);
 		}
 		
-		int affected = getActions(match).update(this, uri, values, selection, selectionArgs);
+		ContentProviderActions actions = getActions(match);
+		int affected = actions.update(this, uri, values, selection, selectionArgs);
 
-		if(affected > 0) {
-			tryNotifyChange(uri);
+		if(affected > 0 && shouldNotify(uri)) {
+			if(!actions.notifyForUri(this, uri)) {
+				tryNotifyChange(uri);
+			}
 		}
+		
+		mLogger.logAction(TAG, "Update", actions, uri);
 
 		return affected;
 	}
@@ -249,7 +277,11 @@ public abstract class MickeyContentProvider extends ContentProvider {
             throw new UnsupportedOperationException("Unknown uri: " + uri);
         }
         
-        return getActions(match).selectRecords(this, uri, sQuery, sortOrder);
+        ContentProviderActions actions = getActions(match);
+        
+        mLogger.logAction(TAG, "Select Records", actions, uri);
+        
+        return actions.selectRecords(this, uri, sQuery, sortOrder);
     }
     
     public <T extends ActiveRecord> Map<String, T> selectRecordMap(Uri uri, Query sQuery, String keyColumnName) {
@@ -259,7 +291,11 @@ public abstract class MickeyContentProvider extends ContentProvider {
     		throw new UnsupportedOperationException("Unknown uri: " + uri);
     	}
     	
-    	return getActions(match).selectRecordMap(this, uri, sQuery, keyColumnName);
+    	ContentProviderActions actions = getActions(match);
+    	
+    	mLogger.logAction(TAG, "Select Record Map", actions, uri);
+    	
+    	return actions.selectRecordMap(this, uri, sQuery, keyColumnName);
     }
     
     @Override
