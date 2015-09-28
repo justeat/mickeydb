@@ -150,6 +150,15 @@ class ContentProviderContractGenerator {
 	'''
 	
 	def createActionUriBuilder(ActionStatement action) '''
+		/**
+		 * Create a new URI for «action.uri.asString»
+		 «IF !action.params.empty»
+		 * <b>Query Params:</b>
+		 «FOR param : action.params»
+		 * «param.column.name»
+		 «ENDFOR»
+		 «ENDIF»
+		 */
 		public static class «action.name.pascalize»UriBuilder extends MickeyUriBuilder {
 			public «action.name.pascalize»UriBuilder(«action.uri.toMethodArgsSig») {
 				super(BASE_CONTENT_URI.buildUpon());
@@ -181,10 +190,35 @@ class ContentProviderContractGenerator {
 			«ENDFOR»
 		}
 		
+		/**
+		 * Create a new URI for «action.uri.asString»
+		 «IF !action.params.empty»
+		 * <b>Query Params:</b>
+		 «FOR param : action.params»
+		 * «param.column.name»
+		 «ENDFOR»
+		 «ENDIF»
+		 */
 		public static «action.name.pascalize»UriBuilder new«action.name.pascalize»UriBuilder(«action.uri.toMethodArgsSig») {
 			return new «action.name.pascalize»UriBuilder(«action.uri.toMethodArgs»);
 		}
 	'''
+	
+	def asString(ContentUri uri) {
+		var builder = new StringBuilder
+		for(seg : uri.segments) {
+			builder.append("/")
+			if(seg instanceof ContentUriParamSegment) {
+				var param = seg as ContentUriParamSegment
+				builder.append("{").append(param.param.name).append("}")
+			} else {
+				builder.append(seg.name)
+			}
+		}
+		
+		return builder.toString
+	}
+	
 	
 	/*
 	 * Find all actions associated to the given definition,
@@ -249,7 +283,7 @@ class ContentProviderContractGenerator {
 		
 			/**
 			 * <p>Builds a Uri with appended id for a row in «stmt.name.pascalize», 
-			 * eg:- content://«model.packageName».«model.databaseName.toLowerCase»»«stmt.name.toLowerCase»/123.</p>
+			 * eg:- «stmt.name.toLowerCase»/123.</p>
 			 */
 		    public static Uri buildUriWithId(long id) {
 		        return CONTENT_URI.buildUpon().appendPath(String.valueOf(id)).build();
@@ -277,11 +311,21 @@ class ContentProviderContractGenerator {
 			}
 			
 			/**
+			 * <p>Create a new Builder for «stmt.name.pascalize»</p>
+			 */
+			public static Builder newBuilder(Uri contentUri) {
+				return new Builder(contentUri);
+			}
+			
+			/**
 			 * <p>Build and execute insert or update statements for «stmt.name.pascalize».</p>
 			 *
 			 * <p>Use {@link «stmt.name.pascalize»#newBuilder()} to create new builder</p>
 			 */
 			public static class Builder extends AbstractValuesBuilder {
+				private Builder(Uri contentUri) {
+					super(Mickey.getApplicationContext(), contentUri);
+				}
 				private Builder() {
 					super(Mickey.getApplicationContext(), «stmt.name.pascalize».CONTENT_URI);
 				}
