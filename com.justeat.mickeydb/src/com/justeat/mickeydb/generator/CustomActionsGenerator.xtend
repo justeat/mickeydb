@@ -37,6 +37,7 @@ class CustomActionsGenerator {
 	import «model.packageName».«content.type.pascalize»Record;
 	«ENDIF»
 	import java.util.List;
+	import java.util.ArrayList;
 	import java.util.Set;
 	import com.justeat.mickeydb.util.Uris;
 	
@@ -79,18 +80,19 @@ class CustomActionsGenerator {
 		}
 		
 		@Override
-		public boolean notifyForUri(MickeyContentProvider provider, Uri uri) {
+		public List<Uri> getNotifyUris(MickeyContentProvider provider, Uri uri) {
 			«IF content.action?.notifications?.size > 0»
+			ArrayList<Uri> notifyUris = new ArrayList<Uri>();
 			«IF hasSlugParams»
 			List<String> segments = uri.getPathSegments();
 			«createStringSlugVariables(content)»
 			«ENDIF»
 			«FOR notificationUri : content.action.notifications»
-			provider.getContext().getContentResolver().notifyChange(«createNotifyStatement(model, content, notificationUri)», null);
+			notifyUris.add(«createNotifyStatement(model, content, notificationUri)»);
 			«ENDFOR»
-			return true;
+			return notifyUris;
 			«ELSE»
-			return false;
+			return null;
 			«ENDIF»
 		}
 		«IF hasSlugParams»

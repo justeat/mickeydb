@@ -50,14 +50,19 @@ public abstract class MickeyContentProvider extends ContentProvider {
 	private UriMatcher mUriMatcher;
     private String[] mContentTypes;
     private LruCache<Integer, ContentProviderActions> mActionCache = new LruCache<>(10);
-    private MickeyLogger mLogger = createLogger();
+
+	private boolean mDebug;
+    
+    public MickeyContentProvider(boolean debug) {
+		mDebug = true;
+	}
+    
+    public MickeyContentProvider() {
+		this(false);
+	}
     
     public MickeyOpenHelper getOpenHelper() {
 		return mOpenHelper;
-	}
-    
-	protected MickeyLogger createLogger() {
-		return new MickeyLogger(true);
 	}
 
 	protected int matchUri(Uri uri) {
@@ -102,7 +107,10 @@ public abstract class MickeyContentProvider extends ContentProvider {
         boolean notify = shouldNotify(uri);
 		
 		if(notify) {
-		    getContext().getContentResolver().notifyChange(uri, null);
+			if(mDebug) {
+				MickeyLogger.d(TAG, "Notify", "%s", uri);
+			}	
+		    getContext().getContentResolver().notifyChange(uri, null);	
 		    
 		    if(uri.getPathSegments().size() > 0) {
 			    Uri key = new Uri.Builder()
@@ -115,6 +123,9 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			    
 			    if(relatedUris != null) {
 				    for(Uri relatedUri : relatedUris) {
+						if(mDebug) {
+							MickeyLogger.d(TAG, "Notify","%s", relatedUri);
+						}
 				    	getContext().getContentResolver().notifyChange(relatedUri, null);
 				    }
 			    }
@@ -152,6 +163,22 @@ public abstract class MickeyContentProvider extends ContentProvider {
     	}
     }
     
+	private void tryNotifyForActions(Uri uri, ContentProviderActions actions) {
+		if(shouldNotify(uri)) {
+			List<Uri> notifyUris = actions.getNotifyUris(this, uri);
+			if(notifyUris == null || notifyUris.size() == 0) {
+				tryNotifyChange(uri);
+			} else {
+				for(Uri actionNotifyUri : notifyUris) {
+					if(mDebug) {
+						MickeyLogger.d(TAG, "Notify", "%s", actionNotifyUri);
+					}
+					getContext().getContentResolver().notifyChange(actionNotifyUri, null);
+				}
+			}
+		}
+	}
+	   
     @Override
     public String getType(Uri uri) {
         final int match = matchUri(uri);
@@ -174,13 +201,13 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		ContentProviderActions actions = getActions(match);
 		int affected = actions.delete(this, uri, selection, selectionArgs);
 		
-		if(affected > 0 && shouldNotify(uri)) {
-			if(!actions.notifyForUri(this, uri)) {
-				tryNotifyChange(uri);
-			}
+		if(mDebug) {
+			MickeyLogger.logAction(TAG, "Delete", actions, uri);
 		}
-
-		mLogger.logAction(TAG, "Delete", actions, uri);
+		
+		if(affected > 0) {
+			tryNotifyForActions(uri, actions);
+		}
 		
 		return affected;
 	}
@@ -197,14 +224,14 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		ContentProviderActions actions = getActions(match);
 		Uri newUri = actions.insert(this, uri, values);
 		
-		if(newUri != null && shouldNotify(uri)) {
-			if(!actions.notifyForUri(this, uri)) {
-				tryNotifyChange(uri);
-			}
+		if(mDebug) {
+			MickeyLogger.logAction(TAG, "Insert", actions, uri);
 		}
 		
-		mLogger.logAction(TAG, "Insert", actions, uri);
-		
+		if(newUri != null) {
+			tryNotifyForActions(uri, actions);
+		}
+				
 		return newUri;
 	}
 	
@@ -218,18 +245,18 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		
 		ContentProviderActions actions = getActions(match);
 		int affected = actions.bulkInsert(this, uri, values);
-		
-		if(affected > 0 && shouldNotify(uri)) {
-			if(!actions.notifyForUri(this, uri)) {
-				tryNotifyChange(uri);
-			}
+	
+		if(mDebug) {
+			MickeyLogger.logAction(TAG, "Bulk Insert", actions, uri);
 		}
 		
-		mLogger.logAction(TAG, "Bulk Insert", actions, uri);
-		
+		if(affected > 0) {
+			tryNotifyForActions(uri, actions);
+		}
+				
 		return affected;
     }
-	
+
 	@Override
 	public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
 		final int match = matchUri(uri);
@@ -243,8 +270,9 @@ public abstract class MickeyContentProvider extends ContentProvider {
 
 		trySetNotificationUri(cursor, uri);
 		
-		mLogger.logAction(TAG, "Query", actions, uri);
-		
+		if(mDebug) {
+			MickeyLogger.logAction(TAG, "Query", actions, uri);
+		}
 		return cursor;
 	}
 
@@ -259,14 +287,14 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		ContentProviderActions actions = getActions(match);
 		int affected = actions.update(this, uri, values, selection, selectionArgs);
 
-		if(affected > 0 && shouldNotify(uri)) {
-			if(!actions.notifyForUri(this, uri)) {
-				tryNotifyChange(uri);
-			}
+		if(mDebug) {
+			MickeyLogger.logAction(TAG, "Update", actions, uri);
 		}
 		
-		mLogger.logAction(TAG, "Update", actions, uri);
-
+		if(affected > 0) {
+			tryNotifyForActions(uri, actions);
+		}
+		
 		return affected;
 	}
 
@@ -279,7 +307,9 @@ public abstract class MickeyContentProvider extends ContentProvider {
         
         ContentProviderActions actions = getActions(match);
         
-        mLogger.logAction(TAG, "Select Records", actions, uri);
+        if(mDebug) {
+        	MickeyLogger.logAction(TAG, "Select Records", actions, uri);
+        }
         
         return actions.selectRecords(this, uri, sQuery, sortOrder);
     }
@@ -293,7 +323,9 @@ public abstract class MickeyContentProvider extends ContentProvider {
     	
     	ContentProviderActions actions = getActions(match);
     	
-    	mLogger.logAction(TAG, "Select Record Map", actions, uri);
+    	if(mDebug) {
+    		MickeyLogger.logAction(TAG, "Select Record Map", actions, uri);
+    	}
     	
     	return actions.selectRecordMap(this, uri, sQuery, keyColumnName);
     }

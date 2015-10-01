@@ -138,6 +138,8 @@ public class CustomActionsGenerator {
     }
     _builder.append("import java.util.List;");
     _builder.newLine();
+    _builder.append("import java.util.ArrayList;");
+    _builder.newLine();
     _builder.append("import java.util.Set;");
     _builder.newLine();
     _builder.append("import com.justeat.mickeydb.util.Uris;");
@@ -298,7 +300,7 @@ public class CustomActionsGenerator {
     _builder.append("@Override");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("public boolean notifyForUri(MickeyContentProvider provider, Uri uri) {");
+    _builder.append("public List<Uri> getNotifyUris(MickeyContentProvider provider, Uri uri) {");
     _builder.newLine();
     {
       ActionStatement _action_4 = content.getAction();
@@ -312,6 +314,9 @@ public class CustomActionsGenerator {
       }
       boolean _greaterThan = (_size > 0);
       if (_greaterThan) {
+        _builder.append("\t\t");
+        _builder.append("ArrayList<Uri> notifyUris = new ArrayList<Uri>();");
+        _builder.newLine();
         {
           if (hasSlugParams) {
             _builder.append("\t\t");
@@ -328,19 +333,19 @@ public class CustomActionsGenerator {
           EList<ContentNotificationUri> _notifications_1 = _action_5.getNotifications();
           for(final ContentNotificationUri notificationUri : _notifications_1) {
             _builder.append("\t\t");
-            _builder.append("provider.getContext().getContentResolver().notifyChange(");
+            _builder.append("notifyUris.add(");
             CharSequence _createNotifyStatement = this.createNotifyStatement(model, content, notificationUri);
             _builder.append(_createNotifyStatement, "\t\t");
-            _builder.append(", null);");
+            _builder.append(");");
             _builder.newLineIfNotEmpty();
           }
         }
         _builder.append("\t\t");
-        _builder.append("return true;");
+        _builder.append("return notifyUris;");
         _builder.newLine();
       } else {
         _builder.append("\t\t");
-        _builder.append("return false;");
+        _builder.append("return null;");
         _builder.newLine();
       }
     }

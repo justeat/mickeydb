@@ -54,7 +54,7 @@ public class ContentProviderActions {
 		return null;
 	}
 	
-	public boolean notifyForUri(MickeyContentProvider provider, Uri uri) {
-		return false;
+	public List<Uri> getNotifyUris(MickeyContentProvider provider, Uri uri) {
+		return null;
 	}
 }
