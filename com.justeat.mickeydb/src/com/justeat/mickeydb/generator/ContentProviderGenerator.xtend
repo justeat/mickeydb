@@ -38,6 +38,14 @@ class ContentProviderGenerator {
 				«ENDFOR»
 				public static final int NUM_URI_MATCHERS = «content.uris.size»;
 			
+				public Abstract«model.databaseName.pascalize»ContentProvider(boolean debug) {
+					super(debug);
+				}
+
+				public Abstract«model.databaseName.pascalize»ContentProvider() {
+					super(false);
+				}
+			
 				@Override
 			    protected UriMatcher createUriMatcher() {
 			        final UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
