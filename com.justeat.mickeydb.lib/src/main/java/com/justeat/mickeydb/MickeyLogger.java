@@ -9,6 +9,7 @@ public class MickeyLogger {
 	}
 
 	public static void logAction(String tag, String state, ContentProviderActions actions, Uri uri) {
-		d(tag, state, "%s (%s)", uri, actions.getClass().getSimpleName());
+		String shortUriString = uri.getPath() + (uri.getQuery() == null ? "" : "?" + uri.getQuery());
+		d(tag, state, "%s > %s", shortUriString, actions.getClass().getSimpleName());
 	}
 }

@@ -156,6 +156,8 @@ public class Query {
 	 * The OR operator
 	 */
 	private static final String OR = " OR ";
+
+	static final String COUNT_TOKEN = "count(*)";
 	
 	private StringBuilder mBuilder;
 	private List<String> mArgs;
@@ -1354,7 +1356,7 @@ public class Query {
 		uri = uri.buildUpon().appendQueryParameter(MickeyContentProvider.PARAM_NOTIFY, "false").build();
     	
     	try {
-    		c = mResolver.query(uri, new String[]{"count(*)"}, toString(), getArgsArray(), null);
+    		c = mResolver.query(uri, new String[]{COUNT_TOKEN}, toString(), getArgsArray(), null);
     		
     		int count = 0;
     		

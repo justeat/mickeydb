@@ -15,13 +15,19 @@ package com.justeat.mickeydb;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.database.ContentObserver;
+import android.net.Uri;
 
 public class Mickey {
+	
+	static final String TAG = Mickey.class.getSimpleName();
 	
 	private static Mickey sInstance;
 
 	private Context mApplicationContext;
 	private AsyncQueryManager mAsyncManager;
+
+	private boolean mDebug;
 		
 	public static Mickey get() {
 		if(sInstance == null) {
@@ -31,8 +37,13 @@ public class Mickey {
 	}
 	
 	private Mickey(Context context){
+		this(context, false);
+	}
+	
+	private Mickey(Context context, boolean debug){
 		mApplicationContext = context.getApplicationContext();
 		mAsyncManager = new AsyncQueryManager(mApplicationContext);
+		mDebug = debug;
 	}
 	
 	/**
@@ -44,6 +55,18 @@ public class Mickey {
 	public static void initMickey(Context context) {
 		if(sInstance == null) {
 			sInstance = new Mickey(context);
+		}
+	}
+
+	/**
+	 * <p>Initialize Mickey with debug logging, this should be the very first thing called in onCreate of an
+	 * Android application implementation.</p>
+	 * 
+	 * @param context
+	 */
+	public static void initMickey(Context context, boolean debug) {
+		if(sInstance == null) {
+			sInstance = new Mickey(context, debug);
 		}
 	}
 	
@@ -77,5 +100,20 @@ public class Mickey {
 	
 	public static AsyncQueryManager getAsyncQueryManager() {
 		return get()._getAsyncQueryManager();
+	}
+		
+	protected void _notifyContentChange(Uri uri, ContentObserver observer) {
+		if(mDebug) {
+			MickeyLogger.d(TAG, "Notify(User)", "%s", uri);
+			get()._getContentResolver().notifyChange(uri, observer);
+		}
+	}
+	
+	public static void notifyContentChange(Uri uri, ContentObserver observer) {
+		get()._notifyContentChange(uri, observer);
+	}
+
+	public static void notifyContentChange(Uri uri) {
+		get()._notifyContentChange(uri, null);
 	}
 }

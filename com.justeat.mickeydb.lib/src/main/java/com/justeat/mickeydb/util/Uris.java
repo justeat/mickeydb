@@ -65,4 +65,8 @@ public class Uris {
     	}
     	return 0;
     }
+    
+    public static String getPathAndQueryAsString(Uri uri) {
+    	return uri.getPath() + (uri.getQuery() == null ? "" : "?" + uri.getQuery());
+    }
 }
