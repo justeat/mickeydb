@@ -13,6 +13,8 @@
  */
 package com.justeat.mickeydb;
 
+import com.justeat.mickeydb.util.Uris;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.ContentObserver;
@@ -104,7 +106,7 @@ public class Mickey {
 		
 	protected void _notifyContentChange(Uri uri, ContentObserver observer) {
 		if(mDebug) {
-			MickeyLogger.d(TAG, "Notify(User)", "%s", uri);
+			MickeyLogger.d(TAG, "Notify(User)", "%s", Uris.getPathAndQueryAsString(uri));
 			get()._getContentResolver().notifyChange(uri, observer);
 		}
 	}

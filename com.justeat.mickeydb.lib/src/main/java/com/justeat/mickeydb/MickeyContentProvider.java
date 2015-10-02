@@ -203,6 +203,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		
 		if(mDebug) {
 			MickeyLogger.logAction(Mickey.TAG, "Delete", actions, uri);
+			MickeyLogger.d(Mickey.TAG, "Delete", "%s", selection);
 		}
 		
 		if(affected > 0) {
@@ -226,6 +227,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		
 		if(mDebug) {
 			MickeyLogger.logAction(Mickey.TAG, "Insert", actions, uri);
+			MickeyLogger.d(Mickey.TAG, "Insert", "%s", values);
 		}
 		
 		if(newUri != null) {
@@ -273,8 +275,10 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		if(mDebug) {
 			if(projection != null && projection.length > 0 && projection[0].equals(Query.COUNT_TOKEN)) {
 				MickeyLogger.logAction(Mickey.TAG, "Count", actions, uri);
+				MickeyLogger.d(Mickey.TAG, "Count", "%s", selection);
 			} else {
 				MickeyLogger.logAction(Mickey.TAG, "Query", actions, uri);
+				MickeyLogger.d(Mickey.TAG, "Query", "%s", selection);
 			}
 		}
 		return cursor;
@@ -293,6 +297,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 
 		if(mDebug) {
 			MickeyLogger.logAction(Mickey.TAG, "Update", actions, uri);
+			MickeyLogger.d(Mickey.TAG, "Update", "sel: %s, values: %s", selection, values);
 		}
 		
 		if(affected > 0) {
@@ -313,6 +318,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
         
         if(mDebug) {
         	MickeyLogger.logAction(Mickey.TAG, "Select Records", actions, uri);
+        	MickeyLogger.d(Mickey.TAG, "Select Records", "%s", sQuery.toString());
         }
         
         return actions.selectRecords(this, uri, sQuery, sortOrder);
@@ -329,6 +335,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
     	
     	if(mDebug) {
     		MickeyLogger.logAction(Mickey.TAG, "Select Record Map", actions, uri);
+    		MickeyLogger.d(Mickey.TAG, "Select Record Map", "%s", sQuery.toString());
     	}
     	
     	return actions.selectRecordMap(this, uri, sQuery, keyColumnName);

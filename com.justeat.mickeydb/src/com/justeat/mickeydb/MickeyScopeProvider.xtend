@@ -36,6 +36,8 @@ import com.justeat.mickeydb.mickeyLang.ContentUri
 import com.justeat.mickeydb.mickeyLang.ActionStatement
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
 import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam
+import com.justeat.mickeydb.mickeyLang.TableDefinition
+import com.justeat.mickeydb.mickeyLang.DropTableStatement
 
 class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	
@@ -142,6 +144,17 @@ class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
 	}
 	
 	def IScope scope_DropViewStatement_view(DropViewStatement context, EReference ref) {
+		var scope = delegateGetScope(context, ref)
+		var model = context.model
+		var viewName = context.getFeatureNodeText(ref)
+		var scopedElements = 
+					scope.getElements(QualifiedName.create(model.databaseName, viewName))
+					.map[e|EcoreUtil.resolve(e.EObjectOrProxy, context)]
+
+		Scopes.scopeFor(scopedElements, scope)
+	}
+	
+	def IScope scope_DropTableStatement_table(DropTableStatement context, EReference ref) {
 		var scope = delegateGetScope(context, ref)
 		var model = context.model
 		var viewName = context.getFeatureNodeText(ref)

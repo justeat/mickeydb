@@ -19,6 +19,7 @@ import com.justeat.mickeydb.mickeyLang.CreateTableStatement;
 import com.justeat.mickeydb.mickeyLang.CreateTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement;
 import com.justeat.mickeydb.mickeyLang.DMLStatement;
+import com.justeat.mickeydb.mickeyLang.DropTableStatement;
 import com.justeat.mickeydb.mickeyLang.DropTriggerStatement;
 import com.justeat.mickeydb.mickeyLang.DropViewStatement;
 import com.justeat.mickeydb.mickeyLang.MickeyFile;
@@ -233,6 +234,27 @@ public class MickeyScopeProvider extends AbstractDeclarativeScopeProvider {
   }
   
   public IScope scope_DropViewStatement_view(final DropViewStatement context, final EReference ref) {
+    IScope _xblockexpression = null;
+    {
+      IScope scope = this.delegateGetScope(context, ref);
+      MickeyFile model = ModelUtil.getModel(context);
+      String viewName = ModelUtil.getFeatureNodeText(context, ref);
+      String _databaseName = model.getDatabaseName();
+      QualifiedName _create = QualifiedName.create(_databaseName, viewName);
+      Iterable<IEObjectDescription> _elements = scope.getElements(_create);
+      final Function1<IEObjectDescription, EObject> _function = new Function1<IEObjectDescription, EObject>() {
+        public EObject apply(final IEObjectDescription e) {
+          EObject _eObjectOrProxy = e.getEObjectOrProxy();
+          return EcoreUtil.resolve(_eObjectOrProxy, context);
+        }
+      };
+      Iterable<EObject> scopedElements = IterableExtensions.<IEObjectDescription, EObject>map(_elements, _function);
+      _xblockexpression = Scopes.scopeFor(scopedElements, scope);
+    }
+    return _xblockexpression;
+  }
+  
+  public IScope scope_DropTableStatement_table(final DropTableStatement context, final EReference ref) {
     IScope _xblockexpression = null;
     {
       IScope scope = this.delegateGetScope(context, ref);
