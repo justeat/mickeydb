@@ -31,6 +31,7 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.text.TextUtils;
 import android.util.LruCache;
 
 
@@ -108,7 +109,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		
 		if(notify) {
 			if(mDebug) {
-				MickeyLogger.d(Mickey.TAG, "Notify", "%s", uri);
+				MickeyLogger.d(Mickey.TAG, "Notify", "%s", Uris.getPathAndQueryAsString(uri));
 			}	
 		    getContext().getContentResolver().notifyChange(uri, null);	
 		    
@@ -124,7 +125,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 			    if(relatedUris != null) {
 				    for(Uri relatedUri : relatedUris) {
 						if(mDebug) {
-							MickeyLogger.d(Mickey.TAG, "Notify","%s", relatedUri);
+							MickeyLogger.d(Mickey.TAG, "Notify","%s", Uris.getPathAndQueryAsString(relatedUri));
 						}
 				    	getContext().getContentResolver().notifyChange(relatedUri, null);
 				    }
@@ -203,7 +204,9 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		
 		if(mDebug) {
 			MickeyLogger.logAction(Mickey.TAG, "Delete", actions, uri);
-			MickeyLogger.d(Mickey.TAG, "Delete", "%s", selection);
+			if(!TextUtils.isEmpty(selection)) {
+				MickeyLogger.d(Mickey.TAG, "Delete", "%s", selection);
+			}
 		}
 		
 		if(affected > 0) {
@@ -249,7 +252,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		int affected = actions.bulkInsert(this, uri, values);
 	
 		if(mDebug) {
-			MickeyLogger.logAction(Mickey.TAG, "Bulk Insert", actions, uri);
+			MickeyLogger.logAction(Mickey.TAG, "Bulk", actions, uri);
 		}
 		
 		if(affected > 0) {
@@ -275,10 +278,14 @@ public abstract class MickeyContentProvider extends ContentProvider {
 		if(mDebug) {
 			if(projection != null && projection.length > 0 && projection[0].equals(Query.COUNT_TOKEN)) {
 				MickeyLogger.logAction(Mickey.TAG, "Count", actions, uri);
-				MickeyLogger.d(Mickey.TAG, "Count", "%s", selection);
+				if(!TextUtils.isEmpty(selection)) {
+					MickeyLogger.d(Mickey.TAG, "Count", "%s", selection);
+				}
 			} else {
 				MickeyLogger.logAction(Mickey.TAG, "Query", actions, uri);
-				MickeyLogger.d(Mickey.TAG, "Query", "%s", selection);
+				if(!TextUtils.isEmpty(selection)) {
+					MickeyLogger.d(Mickey.TAG, "Query", "%s", selection);
+				}
 			}
 		}
 		return cursor;
@@ -297,7 +304,10 @@ public abstract class MickeyContentProvider extends ContentProvider {
 
 		if(mDebug) {
 			MickeyLogger.logAction(Mickey.TAG, "Update", actions, uri);
-			MickeyLogger.d(Mickey.TAG, "Update", "sel: %s, values: %s", selection, values);
+			if(!TextUtils.isEmpty(selection)) {
+				MickeyLogger.d(Mickey.TAG, "Update", "%s", selection);
+			}
+			MickeyLogger.d(Mickey.TAG, "Update", "%s", values);
 		}
 		
 		if(affected > 0) {
@@ -317,8 +327,10 @@ public abstract class MickeyContentProvider extends ContentProvider {
         ContentProviderActions actions = getActions(match);
         
         if(mDebug) {
-        	MickeyLogger.logAction(Mickey.TAG, "Select Records", actions, uri);
-        	MickeyLogger.d(Mickey.TAG, "Select Records", "%s", sQuery.toString());
+        	MickeyLogger.logAction(Mickey.TAG, "Select", actions, uri);
+    		if(!TextUtils.isEmpty(sQuery.toString())) {
+    			MickeyLogger.d(Mickey.TAG, "Select", "%s", sQuery.toString());
+    		}
         }
         
         return actions.selectRecords(this, uri, sQuery, sortOrder);
@@ -334,8 +346,10 @@ public abstract class MickeyContentProvider extends ContentProvider {
     	ContentProviderActions actions = getActions(match);
     	
     	if(mDebug) {
-    		MickeyLogger.logAction(Mickey.TAG, "Select Record Map", actions, uri);
-    		MickeyLogger.d(Mickey.TAG, "Select Record Map", "%s", sQuery.toString());
+    		MickeyLogger.logAction(Mickey.TAG, "Select", actions, uri);
+    		if(!TextUtils.isEmpty(sQuery.toString())) {
+    			MickeyLogger.d(Mickey.TAG, "Select", "%s", sQuery.toString());
+    		}
     	}
     	
     	return actions.selectRecordMap(this, uri, sQuery, keyColumnName);
