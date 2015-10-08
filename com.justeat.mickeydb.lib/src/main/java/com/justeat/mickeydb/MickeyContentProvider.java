@@ -55,7 +55,7 @@ public abstract class MickeyContentProvider extends ContentProvider {
 	private boolean mDebug;
     
     public MickeyContentProvider(boolean debug) {
-		mDebug = true;
+		mDebug = debug;
 	}
     
     public MickeyContentProvider() {
