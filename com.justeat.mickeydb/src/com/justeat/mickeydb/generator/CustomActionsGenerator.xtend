@@ -37,8 +37,10 @@ class CustomActionsGenerator {
 	«IF content.supportsActiveRecord»
 	import «model.packageName».«content.type.pascalize»Record;
 	«ENDIF»
+	«IF content.action?.notifications?.size > 0»
 	import java.util.List;
 	import java.util.ArrayList;
+	«ENDIF»
 	import java.util.Set;
 	import com.justeat.mickeydb.util.Uris;
 	
@@ -173,22 +175,20 @@ class CustomActionsGenerator {
 	
 	
 	def createSlugVariables(ContentUriInfo content)
-		'''«FOR entry : content.action.uri.segments.indexed»
-		«IF entry.value instanceof ContentUriParamSegment»
+		'''«FOR entry : content.action.uri.segments.filter(ContentUriParamSegment).indexed»
 		«var param = entry.value as ContentUriParamSegment»
 		«IF param.param.inferredColumnType != ColumnType::TEXT»
 		long «param.param.name.camelize»Slug = Long.parseLong(segments.get(«entry.key»));
 		«ELSE»
 		String «param.param.name.camelize»Slug = segments.get(«entry.key»);
 		«ENDIF» 
-		«ENDIF»
 		«ENDFOR»'''
-		
+	
 	def createStringSlugVariables(ContentUriInfo content)
 		'''«FOR entry : content.action.uri.segments.filter(ContentUriParamSegment).indexed»
 		«var param = entry.value as ContentUriParamSegment»
 		«IF content.action.notifications.hasSegment(param.param.name.camelize)»
-		String «param.param.name.camelize»Slug = segments.get(«entry.key»);
+String «param.param.name.camelize»Slug = segments.get(«entry.key»);
 		«ENDIF»
 		«ENDFOR»'''
 	
