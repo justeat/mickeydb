@@ -106,9 +106,9 @@ class ContentProviderContractGenerator {
 			«FOR vw : model.initViews»
 				«generateContractItem(model, snapshot, vw, content)»
 			«ENDFOR»
-			
-			static Map<Uri, Set<Uri>> REFERENCING_VIEWS;
-			
+
+			static final Map<Uri, Set<Uri>> REFERENCING_VIEWS;
+
 			static {
 				Map<Uri, Set<Uri>> map = new HashMap<>();
 				
