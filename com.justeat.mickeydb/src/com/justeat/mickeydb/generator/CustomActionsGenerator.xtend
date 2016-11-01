@@ -11,6 +11,7 @@ import static extension com.justeat.mickeydb.Strings.*
 import com.justeat.mickeydb.mickeyLang.ContentNotificationUri
 import com.justeat.mickeydb.mickeyLang.NotifyContentUriParamSegment
 import com.justeat.mickeydb.mickeyLang.NotifyContentUriSegment
+import org.eclipse.emf.common.util.EList
 
 class CustomActionsGenerator {
 	def CharSequence generate(MickeyDatabaseModel model, ContentUriInfo content) '''
@@ -82,7 +83,7 @@ class CustomActionsGenerator {
 		@Override
 		public List<Uri> getNotifyUris(MickeyContentProvider provider, Uri uri) {
 			«IF content.action?.notifications?.size > 0»
-			ArrayList<Uri> notifyUris = new ArrayList<Uri>();
+			List<Uri> notifyUris = new ArrayList<>();
 			«IF hasSlugParams»
 			List<String> segments = uri.getPathSegments();
 			«createStringSlugVariables(content)»
@@ -184,13 +185,16 @@ class CustomActionsGenerator {
 		«ENDFOR»'''
 		
 	def createStringSlugVariables(ContentUriInfo content)
-		'''«FOR entry : content.action.uri.segments.indexed»
-		«IF entry.value instanceof ContentUriParamSegment»
+		'''«FOR entry : content.action.uri.segments.filter(ContentUriParamSegment).indexed»
 		«var param = entry.value as ContentUriParamSegment»
+		«IF content.action.notifications.hasSegment(param.param.name.camelize)»
 		String «param.param.name.camelize»Slug = segments.get(«entry.key»);
 		«ENDIF»
 		«ENDFOR»'''
 	
+	def boolean hasSegment(EList<ContentNotificationUri> notifications, String value) {
+		return notifications.exists[item|item.uri.segments.exists[segment|segment.name.camelize.equals(value)]]
+	}
 	
 	def CharSequence generateOperator(ContentUriQueryParam param) {
 		if(param.like) {
