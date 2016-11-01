@@ -110,7 +110,7 @@ class ContentProviderContractGenerator {
 			static Map<Uri, Set<Uri>> REFERENCING_VIEWS;
 			
 			static {
-				Map<Uri, Set<Uri>> map = new HashMap<Uri, Set<Uri>>();
+				Map<Uri, Set<Uri>> map = new HashMap<>();
 				
 				«FOR tbl : snapshot.tables»
 					map.put(«tbl.name.pascalize».CONTENT_URI, «tbl.name.pascalize».VIEW_URIS);
