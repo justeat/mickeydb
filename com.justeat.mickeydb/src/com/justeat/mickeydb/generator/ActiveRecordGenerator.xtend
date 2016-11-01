@@ -33,7 +33,7 @@ class ActiveRecordGenerator {
 			
 			public class «stmt.name.pascalize»Record extends ActiveRecord implements Parcelable {
 
-				private static ActiveRecordFactory<«stmt.name.pascalize»Record> sFactory = new ActiveRecordFactory<«stmt.name.pascalize»Record>() {
+				private static final ActiveRecordFactory<«stmt.name.pascalize»Record> sFactory = new ActiveRecordFactory<«stmt.name.pascalize»Record>() {
 					@Override
 					public «stmt.name.pascalize»Record create(Cursor c) {
 						return fromCursor(c);
