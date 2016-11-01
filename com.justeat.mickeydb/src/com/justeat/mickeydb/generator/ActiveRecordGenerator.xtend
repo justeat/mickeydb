@@ -65,7 +65,7 @@ class ActiveRecordGenerator {
 			        }
 			    };
 			    
-			    public static String[] PROJECTION = {
+			    public static final String[] PROJECTION = {
 			    	«generateProjectionArrayMembers(stmt)»
 			    };
 			    
