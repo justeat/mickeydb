@@ -24,7 +24,6 @@ class ContentProviderGenerator {
 			import java.util.Set;
 			import com.justeat.mickeydb.MickeyContentProvider;
 			import com.justeat.mickeydb.MickeyOpenHelper;
-			import com.justeat.mickeydb.DefaultContentProviderActions;
 			import com.justeat.mickeydb.ContentProviderActions;
 			«FOR uri : content.uris»
 			import «model.packageName».actions.«uri.name.pascalize»Actions;			
