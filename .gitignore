@@ -2,4 +2,3 @@
 bin
 target
 .gradle
-com.justeat.mickeydb/xtend-gen/
