@@ -27,7 +27,7 @@ Then later you might want to upgrade it
 
 **src/takaways2.mickey**
 ```
-database com.justeat.data.TakeawayDB
+database com.justeat.data.TakeawayDB version 1
 
 migrate add_cuisines from initial {
   alter table takeaways add column cuisine text;
@@ -38,7 +38,7 @@ You need to add a file ending in init.mickey to satisfy the mickey assembler, fo
 
 **src/takeaways.init.mickey**
 ```none
-database com.justeat.data.TakeawayDB
+database com.justeat.data.TakeawayDB version 1
 ```
 
 Note: the ``mickey`` files should be in an ``src`` folder by default from your root folder (you can change this in the gradle build file that follows).
@@ -47,41 +47,42 @@ With our mickey files we can use a gradle script to generate our code.
 
 **build.gradle**
 ```gradle
-buildscript {
-  repositories {
-      mavenCentral()
-  }
-  
-  dependencies {
-    classpath "org.xtext:xtext-gradle-plugin:0.1.1"
-  }
-}
+apply plugin: 'com.android.library'
+apply plugin: 'org.xtext.android.builder'
 
-apply plugin: "org.xtext.xtext"
-
-repositories {
-    mavenCentral()
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-    }
-}
-  
 dependencies {
-  xtextTooling 'com.justeat.mickeydb:com.justeat.mickeydb:1.0.0-SNAPSHOT'
+    xtextLanguages 'com.justeat.mickeydb:com.justeat.mickeydb:1.0.13'
+    compile ('com.justeat.mickeydb:com.justeat.mickeydb.lib:1.0.13')
 }
- 
-xtext {
-  version = '2.7.3'
-  sources {
-    srcDir 'src'
-  }
-  
-  languages{
-    mickey {
-      setup = 'com.justeat.mickeydb.MickeyLangStandaloneSetup'
-      output.dir = 'build/mickey'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
     }
-  }
+}
+
+xtext {
+
+    version = "2.11.0"
+
+    languages {
+        mickey {
+            setup = 'com.justeat.mickeydb.MickeyLangStandaloneSetup'
+        }
+    }
+
+    sourceSets {
+        debug {
+            srcDir 'src/main/model'
+        }
+        release {
+            srcDir 'src/main/model'
+        }
+    }
 }
 ```
 
