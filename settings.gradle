@@ -1,0 +1,4 @@
+include 'com.justeat.mickeydb'
+include 'com.justeat.mickeydb.ide'
+include 'com.justeat.mickeydb.tests'
+include 'com.justeat.mickeydb.lib'

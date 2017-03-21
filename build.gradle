@@ -1,0 +1,79 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath 'org.xtext:xtext-gradle-plugin:1.0.2'
+		classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+	}
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('gradle-local.properties').newDataInputStream())
+def bintrayUser = properties.getProperty('bintrayUser')
+def bintrayPassword = properties.getProperty('bintrayPassword')
+
+subprojects {
+
+    if (!it.name.endsWith('mickeydb.lib')) {
+   
+		ext.xtextVersion = '2.10.0'
+				
+		apply plugin: 'java'
+		apply plugin: 'org.xtext.xtend'
+		apply plugin: 'eclipse'
+		apply plugin: 'idea'
+		
+		apply from: "${rootDir}/gradle/source-layout.gradle"
+		apply from: "${rootDir}/gradle/maven-deployment.gradle"		
+		sourceCompatibility = '1.8'
+		targetCompatibility = '1.8'
+	}
+	
+	repositories {
+		jcenter()
+	}
+	
+	apply plugin: 'com.jfrog.bintray'
+	apply plugin: 'maven-publish'
+		
+	group = 'com.justeat.mickeydb'
+	version = '1.0.13'
+	
+	configurations.all {
+		exclude group: 'asm'
+	}
+		
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                if (plugins.hasPlugin('android-library')) {
+                	artifact bundleRelease
+                } else {
+                	from components.java
+                }
+
+//                artifact sourcesJar 
+//                artifact javadocJar
+            }
+        }
+    }
+	
+		
+	bintray {
+	    user = "${bintrayUser}"
+	    key = "${bintrayPassword}"
+		publications = ['mavenJava'] //When uploading Maven-based publication files
+		publish = true
+		pkg {
+			repo = 'mickeydb'
+			name = 'mickeydb'
+			userOrg = user
+			licenses = ['Apache-2.0']
+			vcsUrl = 'https://github.com/justeat/mickeydb.git'
+			version {
+				name = project.version
+			}	
+		}
+	}
+}

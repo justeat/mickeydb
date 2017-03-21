@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.justeat.mickeydb.ide
+Bundle-Vendor: Just Eat
+Bundle-Version: 1.0.3
+Bundle-SymbolicName: com.justeat.mickeydb.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.justeat.mickeydb,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: com.justeat.mickeydb.ide.contentassist.antlr.internal,
+ com.justeat.mickeydb.ide.contentassist.antlr
+
