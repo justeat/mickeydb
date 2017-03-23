@@ -1,7 +1,5 @@
 .gradle/
 build/
-src-gen/
-xtend-gen/
 bin/
 target/
 *._trace
