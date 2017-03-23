@@ -15,7 +15,6 @@ import org.eclipse.xtext.scoping.Scopes
 import com.justeat.mickeydb.mickeyLang.CreateViewStatement
 import com.justeat.mickeydb.MickeyModel
 import com.justeat.mickeydb.mickeyLang.MickeyFile
-import java.util.List
 import org.apache.log4j.Logger
 import com.google.inject.Inject
 import org.eclipse.xtext.resource.IResourceDescriptions
@@ -32,9 +31,6 @@ import com.justeat.mickeydb.mickeyLang.SingleSourceTable
 import org.eclipse.xtext.naming.QualifiedName
 import com.justeat.mickeydb.mickeyLang.SelectStatement
 import com.justeat.mickeydb.mickeyLang.SelectExpression
-import com.justeat.mickeydb.mickeyLang.SelectCoreExpression
-import com.justeat.mickeydb.mickeyLang.ColumnSource
-import org.eclipse.emf.common.util.EList
 import java.util.ArrayList
 import com.justeat.mickeydb.mickeyLang.ContentUriParamSegment
 import com.justeat.mickeydb.mickeyLang.ActionStatement
@@ -48,7 +44,7 @@ import com.justeat.mickeydb.mickeyLang.ContentUriQueryParam
  */
 class MickeyLangScopeProvider extends AbstractMickeyLangScopeProvider {
 
-	static final Logger LOG = Logger.getLogger(MickeyScopeProvider);
+	static final Logger LOG = Logger.getLogger(MickeyLangScopeProvider);
 	
 	@Inject IResourceDescriptions resourceDescriptions;
 	@Inject MickeyAssembler assembler
