@@ -8,10 +8,16 @@ buildscript {
 	}
 }
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('gradle-local.properties').newDataInputStream())
-def bintrayUser = properties.getProperty('bintrayUser')
-def bintrayPassword = properties.getProperty('bintrayPassword')
+File propertiesFile = project.rootProject.file('gradle-local.properties')
+def bintrayUser = ''
+def bintrayPassword = ''
+
+if (propertiesFile.exists()) {
+	Properties properties = new Properties()
+	properties.load(propertiesFile.newDataInputStream())
+	bintrayUser = properties.getProperty('bintrayUser')
+	bintrayPassword = properties.getProperty('bintrayPassword')
+}
 
 subprojects {
 
