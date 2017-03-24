@@ -6,3 +6,4 @@ target/
 *.xtendbin
 .DS_Store
 gradle-local.properties
+.settings/
