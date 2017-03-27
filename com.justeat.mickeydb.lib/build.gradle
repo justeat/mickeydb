@@ -3,7 +3,6 @@ apply plugin: 'com.github.dcendents.android-maven'
 	
 buildscript {
     repositories {
-		jcenter()
         maven { url 'http://jcenter.bintray.com/' }
     }
 
