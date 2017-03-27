@@ -9,6 +9,10 @@ android:
     - android-25
   licenses: 
     - android-sdk-license-.+
+addons:
+  apt:
+    packages:
+      - lynx
 
 before_script: 
   - "android update sdk --no-ui --filter build-tools-25.0.0,android-25"
@@ -18,6 +22,9 @@ script:
   
 after_success:
 #	TBD run deploy script
+
+after_failure:
+  - if [ -f ${TRAVIS_BUILD_DIR}/com.justeat.mickeydb.lib/build/reports/lint-results.html ]; then lynx -dump ${TRAVIS_BUILD_DIR}/com.justeat.mickeydb.lib/build/reports/lint-results.html; fi
 
 notifications:
   email: false
