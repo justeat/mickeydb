@@ -2,6 +2,10 @@ language: java
 
 jdk: oraclejdk8
 
+env:
+  global:
+    - ANDROID_HOME=${TRAVIS_BUILD_DIR}/android-sdk
+
 after_success:
 #	TBD run deploy script
 
@@ -16,6 +20,6 @@ before_cache:
 
 cache:
   directories:
-   - $HOME/.m2
-   - $HOME/.gradle/wrapper
-   - $HOME/.gradle/caches/
+     - $HOME/.m2
+     - $HOME/.gradle/wrapper
+     - $HOME/.gradle/caches/
